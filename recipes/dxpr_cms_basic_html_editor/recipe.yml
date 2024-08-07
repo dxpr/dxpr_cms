@@ -6,6 +6,7 @@ install:
   - linkit
   - media_library
   - user
+  - ai_ckeditor
 config:
   import:
     linkit:

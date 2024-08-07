@@ -5,6 +5,7 @@ install:
   - ckeditor5
   - linkit
   - media_library
+  - ai_ckeditor
 config:
   import:
     linkit:

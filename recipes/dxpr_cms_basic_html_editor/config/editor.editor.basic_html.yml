@@ -25,6 +25,7 @@ settings:
       - code
       - '|'
       - sourceEditing
+      - aickeditor
   plugins:
     ckeditor5_heading:
       enabled_headings:
