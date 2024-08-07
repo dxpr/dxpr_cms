@@ -1,0 +1,24 @@
+name: 'DXPR Builder AI'
+type: 'DXPR CMS'
+description: 'Adds the AI Assistant CKEditor button to the CKEditor toolbars.'
+install:
+  - ai_ckeditor
+config:
+  import:
+    editor.editor.basic_html:
+      - editor.editor.basic_html
+    editor.editor.full_html:
+      - editor.editor.full_html
+  actions:
+    editor.editor.basic_html:
+      setComponent:
+        name: toolbar
+        options:
+          items:
+            - aickeditor
+    editor.editor.full_html:
+      setComponent:
+        name: toolbar
+        options:
+          items:
+            - aickeditor

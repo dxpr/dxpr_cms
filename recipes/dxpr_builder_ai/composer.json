@@ -1,0 +1,10 @@
+{
+    "name": "drupal/dxpr_builder_ai",
+    "type": "drupal-recipe",
+    "description": "Adds the AI Assistant CKEditor button to the CKEditor toolbars.",
+    "version": "dev-main",
+    "require": {
+        "drupal/core": ">=10.3",
+        "drupal/ai": "^1"
+    }
+}
