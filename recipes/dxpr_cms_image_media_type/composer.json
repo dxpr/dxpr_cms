@@ -4,6 +4,8 @@
     "description": "Adds focal point-based cropping to the image media type.",
     "version": "dev-main",
     "require": {
+        "drupal/ai": "1.0.x-dev@dev",
+        "drupal/ai_image_alt_text": "1.0.x-dev@dev",
         "drupal/core": ">=10.3",
         "drupal/focal_point": "^2",
         "drupal/media_file_delete": "^1.3"

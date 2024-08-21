@@ -6,9 +6,15 @@ recipes:
 install:
   - focal_point
   - media_file_delete
+  - key
+  - ai
+  - provider_openai
+  - provider_anthropic
+  - ai_image_alt_text
 config:
   import:
     focal_point: '*'
+    ai_image_alt_text: '*'
   actions:
     core.entity_form_display.media.image.media_library:
       setComponent:
