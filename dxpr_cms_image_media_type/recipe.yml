@@ -31,3 +31,23 @@ config:
       simple_config_update:
         autogenerate: true
         hide_button: true
+    user.role.content_administrator:
+      ensure_exists:
+        id: content_administrator
+        label: 'Content Administrator'
+      grantPermission: 'generate ai alt tags'
+    user.role.content_editor:
+      ensure_exists:
+        id: content_editor
+        label: 'Content Editor'
+      grantPermission: 'generate ai alt tags'
+    user.role.marketer:
+      ensure_exists:
+        id: marketer
+        label: 'Marketer'
+      grantPermission: 'generate ai alt tags'
+    user.role.site_bui:
+      ensure_exists:
+        id: site_bui
+        label: 'Site Builder'
+      grantPermission: 'generate ai alt tags'

@@ -2,6 +2,9 @@
 
 namespace Drupal\dxpr_cms_installer\Form;
 
+use Drupal\ai\AiProviderPluginManager;
+use Drupal\ai\OperationType\Chat\ChatInput;
+use Drupal\ai\OperationType\Chat\ChatMessage;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Extension\InfoParserInterface;
@@ -10,9 +13,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\dxpr_builder\Service\DxprBuilderJWTDecoder;
 use Drupal\key\Entity\Key;
-use OpenAI;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use WpAi\Anthropic\AnthropicAPI;
 
 /**
  * Defines form for entering DXPR Builder product key and Google Cloud Translation API key.
@@ -55,6 +56,13 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
   protected $jwtDecoder;
 
   /**
+   * The AI provider plugin manager.
+   *
+   * @var \Drupal\ai\AiProviderPluginManager
+   */
+  protected $aiProviderPluginManager;
+
+  /**
    * Configure API Keys Form constructor.
    *
    * @param string $root
@@ -67,16 +75,23 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
    *   The config factory service.
    * @param \Drupal\dxpr_builder\Service\DxprBuilderJWTDecoder $jwtDecoder
    *   Parsing DXPR JWT token.
+   * @param \Drupal\ai\AiProviderPluginManager $aiProviderPluginManager
+   *   The AI provider plugin manager.
    */
-  public function __construct($root, InfoParserInterface $info_parser,
-  TranslationInterface $translator,
-  ConfigFactoryInterface $config_factory,
-  DxprBuilderJWTDecoder $jwtDecoder,) {
+  public function __construct(
+    $root,
+    InfoParserInterface $info_parser,
+    TranslationInterface $translator,
+    ConfigFactoryInterface $config_factory,
+    DxprBuilderJWTDecoder $jwtDecoder,
+    AiProviderPluginManager $aiProviderPluginManager
+  ) {
     $this->root = $root;
     $this->infoParser = $info_parser;
     $this->stringTranslation = $translator;
     $this->configFactory = $config_factory;
     $this->jwtDecoder = $jwtDecoder;
+    $this->aiProviderPluginManager = $aiProviderPluginManager;
   }
 
   /**
@@ -89,7 +104,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       $container->get('string_translation'),
       $container->get('config.factory'),
       $container->get('dxpr_builder.jwt_decoder'),
-      $container->get('module_installer')
+      $container->get('ai.provider')
     );
   }
 
@@ -201,7 +216,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       // Set the default provider.
       $this->configFactory->getEditable('ai.settings')->set('default_providers.chat', [
         'provider_id' => $ai_provider,
-        'model_id' => $ai_provider == 'openai' ? 'gpt-4o' : 'claude-3-5-sonnet-20240620',
+        'model_id' => $ai_provider == 'openai' ? 'gpt-4o' : $this->getFirstAiModelId($ai_provider),
       ])->save();
     }
   }
@@ -231,7 +246,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
         $form_state->setErrorByName('openai_key', $this->t('OpenAI API key is required, if you want to enable OpenAI.'));
       }
       // It has to be valid.
-      elseif ($errorMessage = $this->testOpenAIKey($form_state->getValue('openai_key'))) {
+      elseif ($errorMessage = $this->testAiProvider('openai', $form_state->getValue('openai_key'))) {
         $form_state->setErrorByName('openai_key', $this->t('Your OpenAI API key seems to be invalid with message %message.', [
           '%message' => $errorMessage,
         ]));
@@ -245,7 +260,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
         $form_state->setErrorByName('anthropic_key', $this->t('Anthropic API key is required, if you want to enable Anthropic.'));
       }
       // It has to be valid.
-      elseif ($errorMessage = $this->testAnthropicKey($form_state->getValue('anthropic_key'))) {
+      elseif ($errorMessage = $this->testAiProvider('anthropic', $form_state->getValue('anthropic_key'))) {
         $form_state->setErrorByName('anthropic_key', $this->t('Your Anthropic API key seems to be invalid with message %message.', [
           '%message' => $errorMessage,
         ]));
@@ -254,52 +269,49 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
   }
 
   /**
-   * Simple test of the OpenAI Key.
+   * Test the provider.
    *
-   * @param string $openai_key
-   *   The OpenAI key.
+   * @param string $provider_id
+   *   The provider ID.
+   * @param string $api_key
+   *   The API key.
    *
    * @return string
-   *   If the key is valid, the error message.
+   *  If the key is valid, the error message.
    */
-  protected function testOpenAIKey(string $openai_key): string {
-    $client = OpenAI::client($openai_key);
+  protected function testAiProvider(string $provider_id, string $api_key): string {
+    /** @var \Drupal\ai\AiProviderInterface|\Drupal\ai\OperationType\Chat\ChatInterface */
+    $provider = $this->aiProviderPluginManager->createInstance($provider_id);
     try {
-      $client->models()->list();
-    }
-    catch (\Exception $e) {
+      // Try to send a chat message.
+      $provider->setAuthentication($api_key);
+      $models = $provider->getConfiguredModels('chat');
+      $input = new ChatInput([
+        new ChatMessage('user', 'Hello'),
+      ]);
+      // We use the first model to test.
+      $provider->chat($input, key($models));
+    } catch (\Exception $e) {
       return $e->getMessage();
     }
     return '';
   }
 
   /**
-   * Simple test of the Anthropic Key.
+   * Get the latest model, will also work on future providers.
    *
-   * @param string $anthropic_key
-   *   The Anthropic key.
+   * @param string $provider_id
+   *   The provider ID.
    *
    * @return string
-   *   If the key is valid, the message.
+   *   The model ID.
    */
-  protected function testAnthropicKey(string $anthropic_key): string {
-    $client = new AnthropicAPI($anthropic_key);
-    $payload = [
-      'model' => 'claude-3-5-sonnet-20240620',
-      'messages' => [
-        [
-          'role' => 'user',
-          'content' => 'Say hello!',
-        ],
-      ],
-    ];
-    try {
-      $client->messages()->maxTokens(10)->create($payload);
-    }
-    catch (\Exception $e) {
-      return $e->getMessage();
-    }
-    return "";
+  protected function getFirstAiModelId(string $provider_id): string {
+    // We can assume this works, since validation works.
+    $provider = $this->aiProviderPluginManager->createInstance($provider_id);
+    // @todo Change to chat_with_image_vision when it is available.
+    $models = $provider->getConfiguredModels('chat');
+    return key($models);
   }
 
 }

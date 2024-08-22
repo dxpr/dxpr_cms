@@ -21,6 +21,9 @@ function dxpr_cms_installer_install_tasks(): array {
        'type' => 'form',
        'function' => ConfigureAPIKeysForm::class,
     ],
+    'dxpr_cms_uninstall_unused_ai_modules' => [
+      // Uninstall the unused AI provider module.
+    ],
     'dxpr_cms_installer_uninstall_myself' => [
       // As a final task, this profile should uninstall itself.
     ],
@@ -154,6 +157,32 @@ function dxpr_cms_installer_apply_recipes(array &$install_state): array {
     }
   }
   return $batch;
+}
+
+/**
+ * Uninstalls the unused AI provider module.
+ */
+function dxpr_cms_uninstall_unused_ai_modules(): void {
+  $providers = ['anthropic', 'openai'];
+  $provider_plugin = \Drupal::service('ai.provider');
+  $unusable_providers = [];
+  foreach ($providers as $provider) {
+    // Create an instance and check if its usable (setup).
+    $plugin = $provider_plugin->createInstance($provider);
+    if (!$plugin->isUsable()) {
+      $unusable_providers[] = $plugin;
+    }
+  }
+
+  // If one of the providers worked, uninstall the unused one(s), but if all
+  // failed, don't do anything.
+  if (count($unusable_providers) < count($providers)) {
+    foreach ($unusable_providers as $plugin) {
+      \Drupal::service(ModuleInstallerInterface::class)->uninstall([
+        $plugin->getModuleDataName(),
+      ]);
+    }
+  }
 }
 
 /**
