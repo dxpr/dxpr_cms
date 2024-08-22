@@ -127,9 +127,8 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       '#type' => 'select',
       '#title' => $this->t('Select AI Provider'),
       '#description' => $this->t('If you want to enable AI features like ai powered alt text generation, select the AI provider you want to use for AI features and fill in the API Key.'),
-      '#empty_option' => $this->t('-- Please choose --'),
+      '#empty_option' => $this->t('No AI'),
       '#options' => [
-        'none' => $this->t('No AI'),
         'openai' => $this->t('OpenAI'),
         'anthropic' => $this->t('Anthropic'),
       ],
@@ -186,26 +185,24 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
 
     // If the AI provider is set, enable the appropriate modules.
     if ($ai_provider = $form_state->getValue('ai_provider')) {
-      if ($ai_provider !== 'none') {
-        // Setup the key for the provider.
-        $key_id = $ai_provider . '_key';
-        $key = Key::create([
-          'id' => $key_id,
-          'label' => ucfirst($ai_provider) . ' API Key',
-          'description' => 'API Key for ' . ucfirst($ai_provider),
-          'key_type' => 'authentication',
-          'key_provider' => 'config',
-        ]);
-        $key->setKeyValue($form_state->getValue($key_id));
-        $key->save();
-        // Add the key to the config.
-        $this->configFactory->getEditable('provider_' . $ai_provider . '.settings')->set('api_key', $key_id)->save();
-        // Set the default provider.
-        $this->configFactory->getEditable('ai.settings')->set('default_providers.chat', [
-          'provider_id' => $ai_provider,
-          'model_id' => $ai_provider == 'openai' ? 'gpt-4o' : 'claude-3-5-sonnet-20240620',
-        ])->save();
-      }
+      // Setup the key for the provider.
+      $key_id = $ai_provider . '_key';
+      $key = Key::create([
+        'id' => $key_id,
+        'label' => ucfirst($ai_provider) . ' API Key',
+        'description' => 'API Key for ' . ucfirst($ai_provider),
+        'key_type' => 'authentication',
+        'key_provider' => 'config',
+      ]);
+      $key->setKeyValue($form_state->getValue($key_id));
+      $key->save();
+      // Add the key to the config.
+      $this->configFactory->getEditable('provider_' . $ai_provider . '.settings')->set('api_key', $key_id)->save();
+      // Set the default provider.
+      $this->configFactory->getEditable('ai.settings')->set('default_providers.chat', [
+        'provider_id' => $ai_provider,
+        'model_id' => $ai_provider == 'openai' ? 'gpt-4o' : 'claude-3-5-sonnet-20240620',
+      ])->save();
     }
   }
 
@@ -253,11 +250,6 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
           '%message' => $errorMessage,
         ]));
       }
-    }
-
-    // If its empty do a pseudo require.
-    if (empty($form_state->getValue('ai_provider'))) {
-      $form_state->setErrorByName($this->t('Please make a choice.'));
     }
   }
 
