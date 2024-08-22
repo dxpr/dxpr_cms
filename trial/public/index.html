@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" class="h-dvh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Try DXPR CMS</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-drupal-blue h-dvh">
+<trial-manager
+        flavor="cms"
+        artifact="https://git.drupalcode.org/api/v4/projects/157093/jobs/artifacts/0.x/raw/trial.zip?job=build+trial+artifact"
+        skip-install="true"
+        site-name="Try DXPR CMS"
+        profile="dxpr_cms_installer"
+        recipes="dxpr_cms_base,dxpr_cms_multilingual"
+        langcode="en"
+></trial-manager>
+<script src="main.mjs" type="module"></script>
+</body>
+</html>

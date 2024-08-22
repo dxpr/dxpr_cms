@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+## Description: Creates a new Dxpr CMS recipe stub and adds it to the project.
+## Usage: create-recipe NAME
+## Example: "ddev create-recipe dxpr_cms_power_tools"
+
+if [ -d $1 ]; then
+  echo "This recipe already exists, cowardly refusing to continue."
+  exit 1
+fi
+
+mkdir $1
+composer init --no-interaction --working-dir=$1 --name=drupal/$1 --type=drupal-recipe --require="drupal/core:>=10.3"
+composer config version dev-main --working-dir=$1
+
+$HOME/bin/refresh-components
+composer require --no-update --working-dir=dxpr_cms "drupal/$1:*"
+composer update drupal/dxpr_cms

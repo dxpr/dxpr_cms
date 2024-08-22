@@ -1,0 +1,11 @@
+# Contains project-wide configuration for Drush. These options are only used
+# for building the in-browser trial.
+# @see https://drush.org/latest/using-drush-configuration
+command:
+  site:
+    install:
+      options:
+        account-pass: admin
+        # SQLite is the only kind of database supported by the in-browser trial.
+        db-url: sqlite://db.sqlite
+        site-name: DXPR CMS

@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+## Description: Applies a recipe.
+## Usage: apply-recipe RELATIVE_PATH
+## Example: "ddev apply-recipe recipes/dxpr_cms_power_tools"
+## Example: "ddev apply-recipe core/recipes/editorial_workflow"
+
+cd $DDEV_DOCROOT && php core/scripts/drupal recipe $1

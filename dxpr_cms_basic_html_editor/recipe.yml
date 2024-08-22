@@ -1,0 +1,17 @@
+name: 'Basic HTML editor'
+type: 'DXPR CMS'
+description: 'Enhances the Basic HTML editor with better linking and media support.'
+install:
+  - ckeditor5
+  - linkit
+  - media_library
+  - user
+config:
+  import:
+    linkit:
+      - image.style.linkit_result_thumbnail
+    user:
+      - user.role.authenticated
+  actions:
+    user.role.authenticated:
+      grantPermission: 'use text format basic_html'

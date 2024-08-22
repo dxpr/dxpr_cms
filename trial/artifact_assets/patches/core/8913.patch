@@ -1,0 +1,34 @@
+diff --git a/core/includes/install.core.inc b/core/includes/install.core.inc
+index 68ef6a2c81a219cd465c6bb4d2ef0100adb7f61a..b724d9e9bda931be05d837a8b8c5a28a01a88305 100644
+--- a/core/includes/install.core.inc
++++ b/core/includes/install.core.inc
+@@ -17,6 +17,7 @@
+ use Drupal\Core\Database\Database;
+ use Drupal\Core\Database\DatabaseExceptionWrapper;
+ use Drupal\Core\Extension\Exception\UnknownExtensionException;
++use Drupal\Core\File\FileSystem;
+ use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\Form\FormState;
+ use Drupal\Core\Installer\Exception\AlreadyInstalledException;
+@@ -29,6 +30,7 @@
+ use Drupal\Core\Recipe\Recipe;
+ use Drupal\Core\Recipe\RecipeRunner;
+ use Drupal\Core\Site\Settings;
++use Drupal\Core\StreamWrapper\StreamWrapperManager;
+ use Drupal\Core\StringTranslation\Translator\FileTranslation;
+ use Drupal\Core\StackMiddleware\ReverseProxyMiddleware;
+ use Drupal\Core\Extension\ExtensionDiscovery;
+@@ -378,6 +380,13 @@ function install_begin_request($class_loader, &$install_state) {
+   // @see \Drupal\Core\Extension\DatabaseDriverList
+   $container->set('class_loader', $class_loader);
+ 
++  $container->set('settings', Settings::getInstance());
++  $container->register('stream_wrapper_manager', StreamWrapperManager::class)
++    ->addArgument($container);
++  $container->register('file_system', FileSystem::class)
++    ->addArgument(new Reference('stream_wrapper_manager'))
++    ->addArgument(new Reference('settings'));
++
+   \Drupal::setContainer($container);
+ 
+   // Determine whether base system services are ready to operate.

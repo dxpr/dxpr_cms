@@ -1,0 +1,242 @@
+name: "Locations"
+description: 'Provides a Location content type and related configuration.'
+type: 'DXPR CMS'
+install:
+  # Core
+  - node
+  - path
+  - telephone
+  # Contrib
+  - add_content_by_bundle
+  - address
+  - geofield
+  - geocoder
+  - geocoder_address
+  - geocoder_geofield
+  - leaflet_views
+  - metatag
+  - metatag_open_graph
+  - pathauto
+config:
+  import:
+    node:
+      - core.entity_view_mode.node.default
+      - core.entity_view_mode.node.teaser
+      - field.storage.node.body
+    geofield: "*"
+    pathauto: "*"
+  actions:
+    core.entity_form_display.node.location.default:
+      createIfNotExists:
+        targetEntityType: node
+        bundle: location
+        mode: default
+        status: true
+      setComponents:
+        - name: body
+          options:
+            type: text_textarea_with_summary
+            weight: 3
+            region: content
+        - name: created
+          options:
+            type: datetime_timestamp
+            weight: 5
+            region: content
+        - name: field_location_address
+          options:
+            type: address_default
+            weight: 1
+            region: content
+        - name: field_location_telephone
+          options:
+            type: telephone_default
+            weight: 2
+            region: content
+        - name: path
+          options:
+            type: path
+            weight: 6
+            region: content
+        - name: promote
+          options:
+            type: boolean_checkbox
+            weight: 3
+            region: content
+        - name: status
+          options:
+            type: boolean_checkbox
+            weight: 6
+            region: content
+        - name: sticky
+          options:
+            type: boolean_checkbox
+            weight: 4
+            region: content
+        - name: title
+          options:
+            type: string_textfield
+            weight: 0
+            region: content
+        - name: uid
+          options:
+            type: entity_reference_autocomplete
+            weight: 4
+            region: content
+    core.entity_view_display.node.location.default:
+      createIfNotExists:
+        targetEntityType: node
+        bundle: location
+        mode: default
+        status: true
+      setComponents:
+        - name: body
+          options:
+            type: text_default
+            label: hidden
+            weight: 1
+            region: content
+        - name: field_geofield
+          options:
+            type: leaflet_formatter_default
+            label: hidden
+            weight: 3
+            region: content
+            settings:
+              multiple_map: false
+              leaflet_map: 'OSM Mapnik'
+              height: 400
+              height_unit: px
+              hide_empty_map: false
+              disable_wheel: false
+              gesture_handling: false
+              fitbounds_options: '{"padding":[0,0]}'
+              reset_map:
+                control: false
+                options: '{"position":"topleft","title":"Reset View"}'
+              map_scale:
+                control: false
+                options: '{"position":"bottomright","maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":false}'
+              locate:
+                control: false
+                options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
+                automatic: false
+              leaflet_tooltip:
+                value: ''
+                options: '{"permanent":false,"direction":"center"}'
+              popup: false
+              popup_content: ''
+              leaflet_popup:
+                control: '0'
+                content: ''
+                options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
+              map_position:
+                force: false
+                center:
+                  lat: 0.0
+                  lon: 0.0
+                zoomControlPosition: topleft
+                zoom: 12
+                minZoom: 1
+                maxZoom: 20
+                zoomFiner: 0
+              icon:
+                iconType: marker
+                iconUrl: ''
+                shadowUrl: ''
+                className: ''
+                iconSize:
+                  x: ''
+                  'y': ''
+                iconAnchor:
+                  x: ''
+                  'y': ''
+                shadowSize:
+                  x: ''
+                  'y': ''
+                shadowAnchor:
+                  x: ''
+                  'y': ''
+                popupAnchor:
+                  x: ''
+                  'y': ''
+                html: '<div></div>'
+                html_class: leaflet-map-divicon
+                circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+              leaflet_markercluster:
+                control: false
+                options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
+                excluded: ''
+                include_path: false
+              fullscreen:
+                control: false
+                options: '{"position":"topleft","pseudoFullscreen":false}'
+              path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+              feature_properties:
+                values: ''
+              geocoder:
+                control: false
+                settings:
+                  autocomplete:
+                    placeholder: 'Search Address'
+                    title: 'Search an Address on the Map'
+                  position: topright
+                  input_size: 20
+                  providers:
+                    nominatim:
+                      weight: 0
+                      checked: false
+                  min_terms: 4
+                  delay: 800
+                  zoom: 16
+                  popup: false
+                  options: ''
+              map_lazy_load:
+                lazy_load: true
+        - name: field_location_address
+          options:
+            type: address_default
+            label: above
+            weight: 2
+            region: content
+        - name: field_location_telephone
+          options:
+            type: string
+            label: inline
+            weight: 3
+            region: content
+        - name: links
+          options:
+            weight: 100
+            region: content
+    core.entity_view_display.node.location.teaser:
+      createIfNotExists:
+        targetEntityType: node
+        bundle: location
+        mode: teaser
+        status: true
+        content:
+          links:
+            weight: 100
+            region: content
+      setComponents:
+        - name: body
+          options:
+            type: text_summary_or_trimmed
+            label: hidden
+            settings:
+              trim_length: 600
+            weight: 1
+            region: content
+        - name: field_location_address
+          options:
+            type: address_default
+            label: hidden
+            weight: 2
+            region: content
+        - name: field_location_telephone
+          options:
+            type: string
+            label: inline
+            weight: 3
+            region: content

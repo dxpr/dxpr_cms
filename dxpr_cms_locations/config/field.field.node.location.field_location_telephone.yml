@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_telephone
+    - node.type.location
+  module:
+    - telephone
+id: node.location.field_location_telephone
+field_name: field_location_telephone
+entity_type: node
+bundle: location
+label: Telephone
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

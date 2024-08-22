@@ -1,0 +1,10 @@
+#!/bin/bash
+
+## Description: Installs Dxpr CMS and opens it in a browser.
+
+set -e
+
+ddev start
+ddev composer install
+ddev drush site:install --yes
+test -n "$CI" || ddev launch

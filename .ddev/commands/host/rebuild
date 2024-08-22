@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+## Description: Destroys and rebuilds the DDEV environment. This will delete and reinstall all dependencies.
+## Usage: rebuild
+## Example: "ddev rebuild"
+
+ddev stop
+ddev delete --omit-snapshot --yes
+rm -r -f vendor $DDEV_DOCROOT composer.*
+ddev start

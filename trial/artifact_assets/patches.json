@@ -1,0 +1,8 @@
+{
+    "patches": {
+        "drupal/core": {
+            "Remove renderer support for fibers": "./patches/core/renderer-remove-fibers.patch",
+            "#3463572: SQLite install tasks requires the file_system service": "./patches/core/8913.patch"
+        }
+    }
+}

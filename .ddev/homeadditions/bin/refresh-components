@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+#
+# Adds all Dxpr CMS components as globally available path repositories.
+#
+composer config --global --unset repositories
+
+for path in $(find $PWD -maxdepth 1 -type d -name 'dxpr_cms*'); do
+  composer config --global repositories.$(basename $path) path $path
+done

@@ -1,0 +1,23 @@
+name: Forms
+type: DXPR CMS
+description: Provides a simple contact form, and tools for building more complex forms.
+recipes:
+  - dxpr_cms_anti_spam
+install:
+  - views
+  - webform
+  - webform_ui
+config:
+  import:
+    webform: '*'
+  actions:
+    webform.webform.contact:
+      setThirdPartySettings:
+        -
+          module: antibot
+          key: antibot
+          value: true
+        -
+          module: honeypot
+          key: honeypot
+          value: true

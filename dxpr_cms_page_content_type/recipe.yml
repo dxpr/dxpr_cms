@@ -1,0 +1,13 @@
+name: 'Basic Page'
+type: 'DXPR CMS'
+description: 'Provides a basic Page content type with pretty URLs, moderation, scheduling, translation, and meta tags.'
+recipes:
+  - dxpr_cms_content_type_base
+config:
+  actions:
+    metatag.settings:
+      simple_config_update:
+        entity_type_groups.node.page:
+          - basic
+          - advanced
+          - open_graph

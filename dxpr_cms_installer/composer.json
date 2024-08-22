@@ -1,0 +1,15 @@
+{
+    "name": "drupal/dxpr_cms_installer",
+    "type": "drupal-profile",
+    "description": "Provides install-time tweaks for DXPR CMS.",
+    "version": "dev-main",
+    "require": {
+        "drupal/core": ">=10.3",
+        "symfony/process": "^6.4 || ^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\dxpr_cms_installer\\": "src"
+        }
+    }
+}

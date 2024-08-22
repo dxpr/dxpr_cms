@@ -17,13 +17,16 @@ Follow these steps to install DXPR CMS:
 3. Run the following command:
 
     ```bash
-    $ ddev quick-start
+    $ ddev start
     ```
 
-4. Once the installation is complete, your browser will automatically open the DXPR CMS site.
-5. Log in with the following credentials:
-  - **Username**: admin
-  - **Password**: admin
+4. After running the command, click on the provided link to access the Drupal installation wizard. Follow the steps to set up your site.
+5. During the installation process, you have the option to select additional recipes to customize your site setup. These optional recipes can help tailor your Drupal installation to your specific needs.
+6. Run the following command, to destroy and rebuild the DDEV environment. This will delete and reinstall all dependencies.
+
+    ```bash
+    $ ddev rebuild
+    ```
 
 ## Support
 

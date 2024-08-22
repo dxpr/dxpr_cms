@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__location
+label: 'Content: location'
+tags:
+  description: '[node:summary]'
+  keywords: ''
+  og_description: '[node:summary]'
+  og_image: ''
+  og_title: '[node:title]'
+  og_type: location
+  og_url: '[node:url:absolute]'

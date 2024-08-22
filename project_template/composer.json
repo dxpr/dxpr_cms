@@ -1,0 +1,250 @@
+{
+    "name": "drupal/dxpr-cms-project",
+    "description": "Marketing CMS demo site with DXPR Builder no-code page builder.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/dxpr_cms",
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "dxpr_builder_base": {
+            "type": "path",
+            "url": "dxpr_builder_base",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_builder_drag_and_drop_block": {
+            "type": "path",
+            "url": "dxpr_builder_drag_and_drop_block",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_builder_drag_and_drop_page": {
+            "type": "path",
+            "url": "dxpr_builder_drag_and_drop_page",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_accessibility_tools": {
+            "type": "path",
+            "url": "dxpr_cms_accessibility_tools",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_admin_theme": {
+            "type": "path",
+            "url": "dxpr_cms_admin_theme",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_anti_spam": {
+            "type": "path",
+            "url": "dxpr_cms_anti_spam",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_base": {
+            "type": "path",
+            "url": "dxpr_cms_base",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_basic_html_editor": {
+            "type": "path",
+            "url": "dxpr_cms_basic_html_editor",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_blog": {
+            "type": "path",
+            "url": "dxpr_cms_blog",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_content_type_base": {
+            "type": "path",
+            "url": "dxpr_cms_content_type_base",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_events": {
+            "type": "path",
+            "url": "dxpr_cms_events",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_forms": {
+            "type": "path",
+            "url": "dxpr_cms_forms",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_full_html_editor": {
+            "type": "path",
+            "url": "dxpr_cms_full_html_editor",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_image_media_type": {
+            "type": "path",
+            "url": "dxpr_cms_image_media_type",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_installer": {
+            "type": "path",
+            "url": "dxpr_cms_installer",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_locations": {
+            "type": "path",
+            "url": "dxpr_cms_locations",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_maintenance": {
+            "type": "path",
+            "url": "dxpr_cms_maintenance",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_media_tools": {
+            "type": "path",
+            "url": "dxpr_cms_media_tools",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_multilingual": {
+            "type": "path",
+            "url": "dxpr_cms_multilingual",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_page_content_type": {
+            "type": "path",
+            "url": "dxpr_cms_page_content_type",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_patches": {
+            "type": "path",
+            "url": "dxpr_cms_patches",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_performance": {
+            "type": "path",
+            "url": "dxpr_cms_performance",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_cms_workflows": {
+            "type": "path",
+            "url": "dxpr_cms_workflows",
+            "options": {
+                "symlink": false
+            }
+        },
+        "dxpr_theme_base": {
+            "type": "path",
+            "url": "dxpr_theme_base",
+            "options": {
+                "symlink": false
+            }
+        }
+    },
+    "require": {
+        "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2",
+        "drupal/core-composer-scaffold": "^10.3",
+        "drupal/core-project-message": "^10.3",
+        "drupal/core-recommended": "^10.3",
+        "drupal/dxpr_cms_base": "dev-main",
+        "drupal/dxpr_cms_installer": "dev-main",
+        "drush/drush": "^12.5"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^10.3"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true,
+            "cweagans/composer-patches": true
+        },
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/recipes/{$name}": ["type:drupal-recipe"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                   </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed Dxpr CMS!    </>",
+                "<bg=blue;fg=white>                                                   </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Run <fg=yellow>composer quick-start</> to initialize Dxpr CMS and open it in a browser",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://drupal.org/support",
+                "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
+            ]
+        }
+    },
+    "scripts": {
+        "quick-start": [
+            "@php ./web/core/scripts/drupal quick-start dxpr_cms_installer"
+        ]
+    }
+}

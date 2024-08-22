@@ -1,0 +1,149 @@
+name: 'Events'
+description: 'A content type and view to help you manage events.'
+type: 'DXPR CMS'
+recipes:
+  - dxpr_cms_locations
+install:
+  # Core
+  - node
+  - user
+  # Contrib
+  - add_content_by_bundle
+  - smart_date
+  - pathauto
+config:
+  import:
+    node:
+      - core.entity_view_mode.node.default
+      - core.entity_view_mode.node.teaser
+      - field.storage.node.body
+    pathauto: "*"
+    smart_date: "*"
+  actions:
+    core.entity_form_display.node.event.default:
+      createIfNotExists:
+        targetEntityType: node
+        bundle: event
+        mode: default
+        status: true
+      setComponents:
+        - name: body
+          options:
+            type: text_textarea_with_summary
+            weight: 9
+            region: content
+        - name: created
+          options:
+            type: datetime_timestamp
+            weight: 2
+            region: content
+        - name: field_when
+          options:
+            type: smartdate_inline
+            weight: 7
+            region: content
+        - name: field_where
+          options:
+            type: entity_reference_autocomplete
+            settings:
+              match_operator: CONTAINS
+              match_limit: 10
+              size: 60
+              placeholder: 'Choose an existing location'
+            weight: 8
+            region: content
+        - name: path
+          options:
+            type: path
+            weight: 5
+            region: content
+        - name: promote
+          options:
+            type: boolean_checkbox
+            weight: 3
+            region: content
+        - name: status
+          options:
+            type: boolean_checkbox
+            weight: 6
+            region: content
+        - name: sticky
+          options:
+            type: boolean_checkbox
+            weight: 4
+            region: content
+        - name: title
+          options:
+            type: string_textfield
+            weight: 0
+            region: content
+        - name: uid
+          options:
+            type: entity_reference_autocomplete
+            weight: 1
+            region: content
+    core.entity_view_display.node.event.default:
+      createIfNotExists:
+        targetEntityType: node
+        bundle: event
+        mode: default
+        status: true
+      setComponents:
+        - name: body
+          options:
+            type: text_default
+            label: hidden
+            weight: 0
+            region: content
+        - name: field_when
+          options:
+            type: smartdate_default
+            label: above
+            weight: 1
+            region: content
+        - name: field_where
+          options:
+            type: entity_reference_entity_view
+            label: above
+            settings:
+              view_mode: teaser
+              link: false
+            weight: 2
+            region: content
+        - name: links
+          options:
+            weight: 100
+            region: content
+    core.entity_view_display.node.event.teaser:
+      createIfNotExists:
+        targetEntityType: node
+        bundle: event
+        mode: teaser
+        status: true
+        content:
+          links:
+            weight: 100
+            region: content
+      setComponents:
+        - name: body
+          options:
+            type: text_summary_or_trimmed
+            label: hidden
+            settings:
+              trim_length: 600
+            weight: 2
+            region: content
+        - name: field_when
+          options:
+            type: smartdate_default
+            label: inline
+            weight: 0
+            region: content
+        - name: field_where
+          options:
+            type: entity_reference_label
+            label: inline
+            settings:
+              link: true
+            weight: 1
+            region: content

@@ -32,9 +32,4 @@ jobs:
 
       - name: Install Starshot
         run: |
-          ddev quick-start
-
-      - name: Confirm that Starshot is running
-        run: |
-          ddev list -W
-          curl --location --silent http://dxpr-cms.ddev.site/node/1 | grep "<title>"
+          ddev start

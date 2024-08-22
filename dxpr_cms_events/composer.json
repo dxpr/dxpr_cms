@@ -1,0 +1,12 @@
+{
+  "name": "drupal/dxpr_cms_events",
+  "type": "drupal-recipe",
+  "description": "A content type and view to help you manage events.",
+  "require": {
+    "drupal/core": ">=10.3",
+    "drupal/dxpr_cms_locations": "*",
+    "drupal/add_content_by_bundle": "^1.2",
+    "drupal/smart_date": "^4.1",
+    "drupal/pathauto": "^1.13"
+  }
+}
