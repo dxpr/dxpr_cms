@@ -200,24 +200,29 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
 
     // If the AI provider is set, enable the appropriate modules.
     if ($ai_provider = $form_state->getValue('ai_provider')) {
-      // Setup the key for the provider.
-      $key_id = $ai_provider . '_key';
-      $key = Key::create([
-        'id' => $key_id,
-        'label' => ucfirst($ai_provider) . ' API Key',
-        'description' => 'API Key for ' . ucfirst($ai_provider),
-        'key_type' => 'authentication',
-        'key_provider' => 'config',
-      ]);
-      $key->setKeyValue($form_state->getValue($key_id));
-      $key->save();
-      // Add the key to the config.
-      $this->configFactory->getEditable('provider_' . $ai_provider . '.settings')->set('api_key', $key_id)->save();
-      // Set the default provider.
-      $this->configFactory->getEditable('ai.settings')->set('default_providers.chat', [
-        'provider_id' => $ai_provider,
-        'model_id' => $ai_provider == 'openai' ? 'gpt-4o' : $this->getFirstAiModelId($ai_provider),
-      ])->save();
+      try {
+        // Setup the key for the provider.
+        $key_id = $ai_provider . '_key';
+        $key = Key::create([
+          'id' => $key_id,
+          'label' => ucfirst($ai_provider) . ' API Key',
+          'description' => 'API Key for ' . ucfirst($ai_provider),
+          'key_type' => 'authentication',
+          'key_provider' => 'config',
+        ]);
+        $key->setKeyValue($form_state->getValue($key_id));
+        $key->save();
+        // Add the key to the config.
+        $this->configFactory->getEditable('provider_' . $ai_provider . '.settings')->set('api_key', $key_id)->save();
+        // Set the default provider.
+        $this->configFactory->getEditable('ai.settings')->set('default_providers.chat', [
+          'provider_id' => $ai_provider,
+          'model_id' => $ai_provider == 'openai' ? 'gpt-4o' : $this->getFirstAiModelId($ai_provider),
+        ])->save();
+      }
+      catch (\Exception $e) {
+        $this->messenger()->addError($this->t('An error occurred while saving the AI provider key: @error', ['@error' => $e->getMessage()]));
+      }
     }
   }
 
