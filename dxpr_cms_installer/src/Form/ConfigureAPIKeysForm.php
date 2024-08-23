@@ -153,6 +153,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       '#type' => 'password',
       '#title' => $this->t('OpenAI API key'),
       '#description' => $this->t('Get a key from <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a>.'),
+      '#maxlength' => 255,
       '#states' => [
         'visible' => [
           ':input[name="ai_provider"]' => ['value' => 'openai'],
@@ -164,6 +165,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       '#type' => 'password',
       '#title' => $this->t('Anthropic API key'),
       '#description' => $this->t('Get a key from <a href="https://console.anthropic.com/settings/keys" target="_blank">console.anthropic.com/settings/keys</a>.'),
+      '#maxlength' => 255,
       '#states' => [
         'visible' => [
           ':input[name="ai_provider"]' => ['value' => 'anthropic'],
