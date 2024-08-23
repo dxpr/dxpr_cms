@@ -247,62 +247,45 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       }
     }
 
-    // Test the OpenAI key if it is set.
-    if ($form_state->getValue('ai_provider') === 'openai') {
+    // If a provider is set we test it.
+    if ($provider = $form_state->getValue('ai_provider')) {
+      $key = $provider . '_key';
       // It has to be set.
-      if (empty($form_state->getValue('openai_key'))) {
-        $form_state->setErrorByName('openai_key', $this->t('OpenAI API key is required, if you want to enable OpenAI.'));
+      if (empty($form_state->getValue($key))) {
+        $form_state->setErrorByName($key, $this->t('API key is required, if you want to enable this provider.'));
       }
-      // It has to be valid.
-      elseif ($errorMessage = $this->testAiProvider('openai', $form_state->getValue('openai_key'))) {
-        $form_state->setErrorByName('openai_key', $this->t('Your OpenAI API key seems to be invalid with message %message.', [
-          '%message' => $errorMessage,
-        ]));
-      }
-    }
-
-    // Test the Anthropic key if it is set.
-    if ($form_state->getValue('ai_provider') === 'anthropic') {
-      // It has to be set.
-      if (empty($form_state->getValue('anthropic_key'))) {
-        $form_state->setErrorByName('anthropic_key', $this->t('Anthropic API key is required, if you want to enable Anthropic.'));
-      }
-      // It has to be valid.
-      elseif ($errorMessage = $this->testAiProvider('anthropic', $form_state->getValue('anthropic_key'))) {
-        $form_state->setErrorByName('anthropic_key', $this->t('Your Anthropic API key seems to be invalid with message %message.', [
-          '%message' => $errorMessage,
-        ]));
+      else {
+        // Try to send a message.
+        try {
+          $this->validateAiProvider($provider, $form_state->getValue($key));
+        } catch (\Exception $e) {
+          $form_state->setErrorByName($key, $this->t('Your API key seems to be invalid with message %message.', [
+            '%message' => $e->getMessage(),
+          ]));
+        }
       }
     }
   }
 
   /**
-   * Test the provider.
+   * Test the provider. Will throw an exception if it is invalid.
    *
    * @param string $provider_id
    *   The provider ID.
    * @param string $api_key
    *   The API key.
-   *
-   * @return string
-   *  If the key is valid, the error message.
    */
-  protected function testAiProvider(string $provider_id, string $api_key): string {
+  protected function validateAiProvider(string $provider_id, string $api_key) {
     /** @var \Drupal\ai\AiProviderInterface|\Drupal\ai\OperationType\Chat\ChatInterface */
     $provider = $this->aiProviderPluginManager->createInstance($provider_id);
-    try {
-      // Try to send a chat message.
-      $provider->setAuthentication($api_key);
-      $models = $provider->getConfiguredModels('chat');
-      $input = new ChatInput([
-        new ChatMessage('user', 'Hello'),
-      ]);
-      // We use the first model to test.
-      $provider->chat($input, key($models));
-    } catch (\Exception $e) {
-      return $e->getMessage();
-    }
-    return '';
+    // Try to send a chat message.
+    $provider->setAuthentication($api_key);
+    $models = $provider->getConfiguredModels('chat');
+    $input = new ChatInput([
+      new ChatMessage('user', 'Hello'),
+    ]);
+    // We use the first model to test.
+    $provider->chat($input, key($models));
   }
 
   /**
