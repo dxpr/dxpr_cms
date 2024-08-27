@@ -261,7 +261,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
         try {
           $this->validateAiProvider($provider, $form_state->getValue($key));
         } catch (\Exception $e) {
-          $form_state->setErrorByName($key, $this->t('Your API key seems to be invalid with message %message.', [
+          $form_state->setErrorByName($key, $this->t('Your API key seems to be invalid with message %message', [
             '%message' => $e->getMessage(),
           ]));
         }
