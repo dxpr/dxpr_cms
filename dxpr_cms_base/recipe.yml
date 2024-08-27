@@ -3,7 +3,6 @@ description: 'Applies all the DXPR CMS recipes.'
 type: Site
 recipes:
   - core/recipes/basic_block_type
-  - core/recipes/content_search
   - core/recipes/core_recommended_performance
   - dxpr_cms_admin_theme
   - core/recipes/core_recommended_front_end_theme
@@ -58,8 +57,6 @@ install:
   - views_ui
 config:
   import:
-    help:
-      - search.page.help_search
     image:
       - image.style.large
       - image.style.thumbnail
@@ -74,7 +71,6 @@ config:
       - shortcut.set.default
     user:
       - core.entity_view_mode.user.compact
-      - search.page.user_search
       - views.view.user_admin_people
       - views.view.who_s_new
       - views.view.who_s_online
@@ -127,12 +123,10 @@ config:
         - 'access shortcuts'
         - 'access user profiles'
         - 'delete own files'
-        - 'use advanced search'
         - 'view own unpublished content'
     user.role.anonymous:
       grantPermissions:
         - 'access content'
-        - 'use advanced search'
     user.settings:
       simple_config_update:
         verify_mail: true

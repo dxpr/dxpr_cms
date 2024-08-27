@@ -6,5 +6,5 @@
 
 ddev stop
 ddev delete --omit-snapshot --yes
-rm -r -f vendor $DDEV_DOCROOT composer.*
+rm -r -f vendor $DDEV_DOCROOT composer.* project_template/patches.lock.json
 ddev start

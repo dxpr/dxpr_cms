@@ -8,7 +8,7 @@
         "drupal/core": ">=10.3",
         "drupal/geocoder": "^4.10",
         "drupal/geofield": "^1.47",
-        "drupal/leaflet": "^10.2.24",
+        "drupal/leaflet": "^10.2.25",
         "drupal/metatag": "^2.0",
         "drupal/pathauto": "^1.13",
         "geocoder-php/nominatim-provider": "^5.7"
