@@ -1,0 +1,128 @@
+version: 2
+updates:
+  # Project template composer dependencies
+  - package-ecosystem: "composer"
+    directory: "/project_template"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  # Trial artifact dependencies
+  - package-ecosystem: "composer"
+    directory: "/trial/artifact_assets/drupal_cms_trial"
+    schedule:
+      interval: "weekly"
+
+  # Recipe composer dependencies
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_accessibility_tools"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_admin_ui"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_ai"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_analytics"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_anti_spam"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_authentication"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_blog"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_case_study"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_content_type_base"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_dxpr_builder"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_dxpr_theme"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_events"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_forms"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_image"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_multilingual"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_news"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_page"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_performance"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_person"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_privacy_basic"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_project"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_remote_video"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_search"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_seo_basic"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_seo_tools"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_starter"
+    schedule:
+      interval: "weekly"
+
+  # Development composer dependencies
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "development"
