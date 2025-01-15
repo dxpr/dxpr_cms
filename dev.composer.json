@@ -4,7 +4,7 @@
         "Do NOT use it to build a real site!"
     ],
     "require-dev": {
-        "drupal/core-dev": "^10.4",
+        "drupal/core-dev": "^11.1",
         "drupal/default_content": "^2"
     },
     "autoload-dev": {

@@ -3,13 +3,13 @@
     "type": "drupal-recipe",
     "description": "Provides basic infrastructure for moderation, meta tags, cloning, and scheduled publishing of content.",
     "require": {
-        "drupal/autosave_form": "^1.7",
-        "drupal/bpmn_io": "^2.0.2",
+        "drupal/autosave_form": "^1.8.0",
+        "drupal/bpmn_io": "^2.0.4",
         "drupal/core": ">=10.3",
         "drupal/dxpr_cms_image": "*",
-        "drupal/eca": "^2.1.0-beta1",
-        "drupal/linkit": "^7",
-        "drupal/token": "^1",
-        "drupal/trash": "^3"
+        "drupal/eca": "^2.1.0",
+        "drupal/linkit": "^7.0.2",
+        "drupal/token": "^1.15.0",
+        "drupal/trash": "^3.0.10"
     }
 }

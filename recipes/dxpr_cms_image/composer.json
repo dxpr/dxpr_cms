@@ -3,12 +3,12 @@
     "type": "drupal-recipe",
     "description": "Adds focal point-based cropping to the image media type.",
     "require": {
-        "drupal/ai": "^1.0@beta",
-        "drupal/ai_provider_openai": "^1.0@beta",
-        "drupal/ai_provider_anthropic" : "^1.0@beta",
-        "drupal/ai_image_alt_text": "1.0.x-dev@dev",
-        "drupal/core": ">=10.3",
-        "drupal/focal_point": "^2",
-        "drupal/svg_image": "^3.1"
+        "drupal/ai": "^1.0.1",
+        "drupal/ai_provider_openai": "^1.0.1",
+        "drupal/ai_provider_anthropic": "^1.0.0",
+        "drupal/ai_image_alt_text": "1.0.0",
+        "drupal/core": ">=11.1.1",
+        "drupal/focal_point": "^2.1.2",
+        "drupal/svg_image": "^3.2.1"
     }
 }
