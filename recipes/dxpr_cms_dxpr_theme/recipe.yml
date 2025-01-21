@@ -5,7 +5,9 @@ recipes:
   - core/recipes/basic_html_format_editor
 install:
   - dxpr_theme
+  - dxpr_theme_helper
   - block_content
+  - media_library_form_element
 config:
   import:
     system:
