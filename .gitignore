@@ -1,6 +1,7 @@
 /.cache
 /.phpunit.result.cache
 /composer.lock
+/composer.json
 /cypress
 node_modules
 patches.json
