@@ -18,6 +18,7 @@ install:
   - automatic_updates
   - automatic_updates_extensions
   - dashboard
+  - help
   - menu_link_content
   - package_manager
   - project_browser
