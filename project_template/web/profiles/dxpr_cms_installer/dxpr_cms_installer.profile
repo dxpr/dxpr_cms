@@ -333,9 +333,12 @@ function dxpr_cms_installer_rebuild_theme(): void {
  */
 function dxpr_cms_installer_theme_registry_alter(array &$hooks): void {
   global $install_state;
-  $installer_path = $install_state['profiles']['dxpr_cms_installer']->getPath();
-
-  $hooks['install_page']['path'] = $installer_path . '/templates';
+  
+  // Check if install_state and required keys exist before accessing
+  if (!empty($install_state['profiles']['dxpr_cms_installer'])) {
+    $installer_path = $install_state['profiles']['dxpr_cms_installer']->getPath();
+    $hooks['install_page']['path'] = $installer_path . '/templates';
+  }
 }
 
 /**
