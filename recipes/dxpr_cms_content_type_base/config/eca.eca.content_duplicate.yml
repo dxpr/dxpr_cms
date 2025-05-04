@@ -8,7 +8,7 @@ dependencies:
 id: content_duplicate
 modeller: bpmn_io
 label: 'Duplicate content'
-version: 0.0.0
+version: 1.0.0
 weight: 0
 events:
   Event_operations_link:

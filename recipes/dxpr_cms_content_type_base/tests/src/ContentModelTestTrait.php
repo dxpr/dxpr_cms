@@ -4,14 +4,97 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\dxpr_cms_content_type_base;
 
+use Drupal\Core\Entity\Display\EntityDisplayInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
-use Drupal\Core\Field\Entity\BaseFieldOverride;
-use Drupal\Core\Field\FieldDefinitionInterface;
-use Drupal\field\Entity\FieldConfig;
+use Drupal\Core\Entity\EntityRepositoryInterface;
+use Drupal\file\FileInterface;
+use Drupal\layout_builder\Entity\LayoutEntityDisplayInterface;
 use Drupal\Tests\BrowserTestBase;
 use PHPUnit\Framework\Assert;
 
 trait ContentModelTestTrait {
+
+  /**
+   * Ensures that the file associated with a file entity, actually exists.
+   *
+   * @param string $uuid
+   *   The UUID of a file entity.
+   */
+  protected function ensureFileExists(string $uuid): void {
+    $file = $this->container->get(EntityRepositoryInterface::class)
+      ->loadEntityByUuid('file', $uuid);
+    Assert::assertInstanceOf(FileInterface::class, $file, "There is no file with UUID '$uuid'.");
+    Assert::assertFileExists($file->getFileUri());
+  }
+
+  /**
+   * Returns the weights of all components in a display.
+   *
+   * @param \Drupal\Core\Entity\Display\EntityDisplayInterface $display
+   *   An entity display.
+   *
+   * @return int[]
+   *   The weights of the display's components, keyed by name, and sorted.
+   */
+  protected function getComponentsInOrder(EntityDisplayInterface $display): array {
+    if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {    $fields = [];
+      $components = [];
+
+      foreach ($display->getSections() as $index => $section) {
+        foreach ($section->getComponents() as $component) {
+          $plugin_id = $component->getPluginId();
+
+          if (str_starts_with($plugin_id, 'field_block:') || str_starts_with($plugin_id, 'extra_field_block:')) {
+            Assert::assertSame(3, substr_count($plugin_id, ':'), "Section component plugin ID '$plugin_id' should have exactly 4 parts.");
+            [,,, $name] = explode(':', $plugin_id);
+            $components[$name] = $component->getWeight() + ($index * 100);
+          }
+        }
+      }
+    }
+    else {
+      $components = $display->getComponents();
+      $components = array_combine(
+        array_keys($components),
+        array_column($components, 'weight'),
+      );
+    }
+    asort($components);
+    return $components;
+  }
+
+  /**
+   * Asserts that fields shared by multiple displays, are in the same order.
+   *
+   * @param \Drupal\Core\Entity\Display\EntityDisplayInterface ...$displays
+   *   A set of entity displays to compare.
+   */
+  protected function assertSharedFieldsInSameOrder(EntityDisplayInterface ...$displays): void {
+    $all_components = array_map($this->getComponentsInOrder(...), $displays);
+    $expected_order = array_keys(array_intersect_key(...$all_components));
+    foreach ($displays as $display) {
+      $this->assertFieldsInOrder($display, $expected_order);
+    }
+  }
+
+  /**
+   * Asserts relative order of the fields in an entity display.
+   *
+   * @param \Drupal\Core\Entity\Display\EntityDisplayInterface $display
+   *   An entity display.
+   * @param string[] $expected_order
+   *   The fields that should be in the display, in their expected order.
+   */
+  protected function assertFieldsInOrder(EntityDisplayInterface $display, array $expected_order): void {
+    $actual_order = array_keys($this->getComponentsInOrder($display));
+
+    $missing_fields = array_diff($expected_order, $actual_order);
+    Assert::assertEmpty($missing_fields, $display->getConfigDependencyName() . " is missing fields: " . implode(', ', $missing_fields));
+
+    $actual_order = array_intersect($actual_order, $expected_order);
+    $actual_order = array_values($actual_order);
+    Assert::assertSame($expected_order, $actual_order);
+  }
 
   protected function assertContentModel(array $content_model): void {
     assert($this instanceof BrowserTestBase);
@@ -44,6 +127,9 @@ trait ContentModelTestTrait {
         if (in_array($spec['input type'], ['text', 'email', 'tel', 'date'], TRUE)) {
           $selector = sprintf('input[name^="%s["]', $field_name);
           Assert::assertSame($spec['input type'], $assert_session->elementExists('css', $selector)->getAttribute('type'));
+        }
+        elseif ($spec['input type'] === 'tagify') {
+          $assert_session->elementExists('css', sprintf('input[name=%s]', $field_name));
         }
         elseif ($spec['input type'] === 'textarea') {
           $assert_session->elementExists('css', sprintf('textarea[name^="%s["]', $field_name));

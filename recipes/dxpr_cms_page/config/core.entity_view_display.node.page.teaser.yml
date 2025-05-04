@@ -3,25 +3,39 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.body
+    - field.field.node.page.field_content
+    - field.field.node.page.field_description
+    - field.field.node.page.field_featured_image
+    - field.field.node.page.field_tags
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
-    - text
     - user
 id: node.page.teaser
 targetEntityType: node
 bundle: page
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      trim_length: 600
+      view_mode: 4_3_medium
+      link: false
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
-  links:
-    weight: 101
-    region: content
-hidden: {  }
+hidden:
+  content_moderation_control: true
+  field_content: true
+  field_tags: true
+  langcode: true
+  layout_builder__layout: true
+  links: true

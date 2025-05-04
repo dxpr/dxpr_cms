@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\dxpr_cms_case_study\Functional;
 
+use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
@@ -14,6 +16,7 @@ use Drupal\Tests\dxpr_cms_content_type_base\ContentModelTestTrait;
  */
 class ComponentValidationTest extends BrowserTestBase {
 
+  use ArraySubsetAsserts;
   use ContentModelTestTrait;
   use RecipeTestTrait;
 
@@ -33,9 +36,61 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->applyRecipe($dir);
     // Apply it again to prove that it is idempotent.
     $this->applyRecipe($dir);
+
+    $this->ensureFileExists('47b880a9-c2a4-4ed6-844d-95c6d6677004');
+    $this->ensureFileExists('831ca26d-590c-4f34-8545-379e9d77106f');
   }
 
   public function testContentModel(): void {
+    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
+    $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
+
+    $form_display = $display_repository->getFormDisplay('node', 'case_study');
+    $this->assertFalse($form_display->isNew());
+    $this->assertNull($form_display->getComponent('url_redirects'));
+    $this->assertFieldsInOrder($form_display, [
+      'title',
+      'field_description',
+      'field_case_study__client_name',
+      'field_case_study__client_logo',
+      'field_featured_image',
+      'field_content',
+      'field_case_study__client_link',
+      'field_tags',
+    ]);
+
+    $default_display = $display_repository->getViewDisplay('node', 'case_study');
+    $this->assertNull($default_display->getComponent('links'));
+    $this->assertFieldsInOrder($default_display, [
+      'field_case_study__client_logo',
+      'field_featured_image',
+      'content_moderation_control',
+      'field_content',
+      'field_case_study__client_link',
+      'field_tags',
+    ]);
+    $this->assertSharedFieldsInSameOrder($form_display, $default_display);
+
+    $card_display = $display_repository->getViewDisplay('node', 'case_study', 'card');
+    $this->assertNull($card_display->getComponent('links'));
+    $this->assertFieldsInOrder($card_display, [
+      'field_featured_image',
+      'field_case_study__client_name',
+      'field_description',
+    ]);
+    $this->assertArraySubset([
+      'field_featured_image' => [
+        'type' => 'entity_reference_entity_view',
+      ],
+    ], $card_display->getComponents());
+
+    $teaser_display = $display_repository->getViewDisplay('node', 'case_study', 'teaser');
+    $this->assertNull($teaser_display->getComponent('links'));
+    $this->assertFieldsInOrder($teaser_display, [
+      'field_featured_image',
+      'field_description',
+    ]);
+
     $this->assertContentModel([
       'case_study' => [
         'title' => [
@@ -65,8 +120,8 @@ class ComponentValidationTest extends BrowserTestBase {
           'input type' => 'media library',
           'help text' => 'Include an image. This appears as the image in search engine results.',
         ],
-        'body' => [
-          'type' => 'text_with_summary',
+        'field_content' => [
+          'type' => 'text_long',
           'cardinality' => 1,
           'required' => FALSE,
           'translatable' => TRUE,
@@ -80,7 +135,7 @@ class ComponentValidationTest extends BrowserTestBase {
           'required' => FALSE,
           'translatable' => FALSE,
           'label' => 'Tags',
-          'input type' => 'text',
+          'input type' => 'tagify',
           'help text' => 'Include tags for relevant topics.',
         ],
         'field_case_study__client_name' => [

@@ -1,6 +1,6 @@
 name: Authentication Tweaks
-description: Sets up a site with useful authentication features.
-type: DXPR CMS
+description: Adds useful authentication features.
+type: Dxpr CMS
 install:
   - bpmn_io
   - eca_base

@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: svg_image
 label: 'SVG Image'
-description: ''
+description: 'A locally hosted SVG file that can be displayed as an image.'
 source: image
 queue_thumbnail_downloads: false
 new_revision: false

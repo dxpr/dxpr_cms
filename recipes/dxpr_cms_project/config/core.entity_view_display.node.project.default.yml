@@ -2,13 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
+    - field.field.node.project.field_content
+    - field.field.node.project.field_description
+    - field.field.node.project.field_featured_image
     - field.field.node.project.field_project__client_link
     - field.field.node.project.field_project__client_logo
     - field.field.node.project.field_project__client_name
-    - field.field.node.project.field_description
-    - field.field.node.project.field_featured_image
     - field.field.node.project.field_tags
+    - image.style.uncropped_500w_webp
     - node.type.project
   module:
     - layout_builder
@@ -33,19 +34,19 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:project:field_featured_image'
+              label: 'Featured image'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                type: media_thumbnail
+                type: entity_reference_entity_view
                 label: hidden
                 settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: eager
+                  view_mode: hero
                 third_party_settings: {  }
-            weight: 0
+            weight: 2
             additional: {  }
           43e820d8-dd02-49c6-8239-34b146f1b568:
             uuid: 43e820d8-dd02-49c6-8239-34b146f1b568
@@ -61,21 +62,23 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 1
+            weight: 7
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          label: Content
-          context_mapping: {  }
-          column_widths: 67-33
-        components:
+          b37e7c11-39c6-4c29-b32d-308f7a5f1ca6:
+            uuid: b37e7c11-39c6-4c29-b32d-308f7a5f1ca6
+            region: content
+            configuration:
+              id: 'extra_field_block:node:project:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 3
+            additional: {  }
           811ba61b-54fa-4d59-9c75-245d66da3d99:
             uuid: 811ba61b-54fa-4d59-9c75-245d66da3d99
-            region: first
+            region: content
             configuration:
-              id: 'field_block:node:project:body'
+              id: 'field_block:node:project:field_content'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -84,30 +87,33 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 0
+            weight: 5
             additional: {  }
-          004263b2-05d9-4c2a-b7d2-4ef9394bb5c3:
-            uuid: 004263b2-05d9-4c2a-b7d2-4ef9394bb5c3
-            region: second
+          635918ab-08d4-46e3-8312-b5c64d8e4752:
+            uuid: 635918ab-08d4-46e3-8312-b5c64d8e4752
+            region: content
             configuration:
-              id: 'field_block:node:project:field_project__client_name'
-              label: 'Client name'
+              id: 'field_block:node:project:field_project__client_logo'
+              label: 'Client logo'
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: string
+                type: media_thumbnail
                 label: hidden
                 settings:
-                  link_to_entity: false
+                  image_link: ''
+                  image_style: uncropped_300w_webp
+                  image_loading:
+                    attribute: lazy
                 third_party_settings: {  }
-            weight: 1
+            weight: 0
             additional: {  }
           ae32e8a9-44e7-433f-8c1f-931fe9497565:
             uuid: ae32e8a9-44e7-433f-8c1f-931fe9497565
-            region: second
+            region: content
             configuration:
               id: 'field_block:node:project:field_project__client_link'
               label: 'Client link'
@@ -126,29 +132,7 @@ third_party_settings:
                   rel: '0'
                   target: _blank
                 third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          635918ab-08d4-46e3-8312-b5c64d8e4752:
-            uuid: 635918ab-08d4-46e3-8312-b5c64d8e4752
-            region: second
-            configuration:
-              id: 'field_block:node:project:field_project__client_logo'
-              label: 'Client logo'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: media_thumbnail
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: uncropped_500w_webp
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 0
+            weight: 6
             additional: {  }
         third_party_settings: {  }
 id: node.project.default
@@ -156,12 +140,26 @@ targetEntityType: node
 bundle: project
 mode: default
 content:
-  body:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_content:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_project__client_link:
     type: link
@@ -194,17 +192,6 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_featured_image:
-    type: media_thumbnail
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: eager
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_tags:
     type: entity_reference_label
     label: inline
@@ -215,5 +202,4 @@ content:
     region: content
 hidden:
   field_description: true
-  langcode: true
   links: true

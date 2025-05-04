@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\dxpr_cms_person\Functional;
 
+use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
@@ -14,6 +16,7 @@ use Drupal\Tests\dxpr_cms_content_type_base\ContentModelTestTrait;
  */
 class ComponentValidationTest extends BrowserTestBase {
 
+  use ArraySubsetAsserts;
   use ContentModelTestTrait;
   use RecipeTestTrait;
 
@@ -33,9 +36,61 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->applyRecipe($dir);
     // Apply it again to prove that it is idempotent.
     $this->applyRecipe($dir);
+
+    $this->ensureFileExists('5a635060-8540-4be7-bad9-8a51414731ad');
   }
 
   public function testContentModel(): void {
+    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
+    $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
+
+    $form_display = $display_repository->getFormDisplay('node', 'person');
+    $this->assertFalse($form_display->isNew());
+    $this->assertNull($form_display->getComponent('url_redirects'));
+    $this->assertFieldsInOrder($form_display, [
+      'title',
+      'field_description',
+      'field_featured_image',
+      'field_person__role_job_title',
+      'field_person__phone_number',
+      'field_person__email',
+      'field_content',
+      'field_tags',
+    ]);
+
+    $default_display = $display_repository->getViewDisplay('node', 'person');
+    $this->assertNull($default_display->getComponent('links'));
+    $this->assertFieldsInOrder($default_display, [
+      'field_featured_image',
+      'field_person__role_job_title',
+      'field_person__phone_number',
+      'field_person__email',
+      'content_moderation_control',
+      'field_content',
+      'field_tags',
+    ]);
+    $this->assertSharedFieldsInSameOrder($form_display, $default_display);
+
+    $card_display = $display_repository->getViewDisplay('node', 'person', 'card');
+    $this->assertNull($card_display->getComponent('links'));
+    $this->assertFieldsInOrder($card_display, [
+      'field_featured_image',
+      'field_person__role_job_title',
+      'field_description',
+    ]);
+    $this->assertArraySubset([
+      'field_featured_image' => [
+        'type' => 'entity_reference_entity_view',
+      ],
+    ], $card_display->getComponents());
+
+    $teaser_display = $display_repository->getViewDisplay('node', 'person', 'teaser');
+    $this->assertNull($teaser_display->getComponent('links'));
+    $this->assertFieldsInOrder($teaser_display, [
+      'field_featured_image',
+      'field_description',
+    ]);
+
     $this->assertContentModel([
       'person' => [
         'title' => [
@@ -92,8 +147,8 @@ class ComponentValidationTest extends BrowserTestBase {
           'input type' => 'media library',
           'help text' => 'Include an image. This appears as the image in search engine results.',
         ],
-        'body' => [
-          'type' => 'text_with_summary',
+        'field_content' => [
+          'type' => 'text_long',
           'cardinality' => 1,
           'required' => FALSE,
           'translatable' => TRUE,
@@ -107,7 +162,7 @@ class ComponentValidationTest extends BrowserTestBase {
           'required' => FALSE,
           'translatable' => FALSE,
           'label' => 'Tags',
-          'input type' => 'text',
+          'input type' => 'tagify',
           'help text' => 'Include tags for relevant topics.',
         ],
       ],
@@ -123,7 +178,7 @@ class ComponentValidationTest extends BrowserTestBase {
       'type' => 'person',
       'title' => 'Test Person profile',
     ]);
-    $this->assertStringEndsWith("/profiles/test-person-profile", $node->toUrl()->toString());
+    $this->assertStringEndsWith("/people/test-person-profile", $node->toUrl()->toString());
   }
 
 }

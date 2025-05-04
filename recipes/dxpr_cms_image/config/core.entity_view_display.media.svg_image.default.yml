@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.svg_image.field_media_svg_image
+    - image.style.large
     - media.type.svg_image
   module:
     - svg_image
@@ -16,7 +17,7 @@ content:
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: large
       image_loading:
         attribute: lazy
       svg_attributes:

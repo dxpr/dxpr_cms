@@ -1,16 +1,17 @@
 {
     "name": "drupal/dxpr_cms_blog",
+    "description": "Adds a blog post content type and listing page.",
     "type": "drupal-recipe",
-    "description": "Sets up a basic blog, with tagging and commenting.",
+    "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.3",
+        "drupal/core": ">=10.4",
         "drupal/add_content_by_bundle": "^1.2.2",
-        "drupal/dxpr_cms_content_type_base": "*",
-        "drupal/dxpr_cms_image": "*",
+        "drupal/dxpr_cms_page": "^1",
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/dxpr_builder": "^2.7.0-beta4",
         "drupal/dxpr_theme_helper": "^2.0.0",
-        "drupal/pathauto": "^1.13.0",
-        "drupal/selective_better_exposed_filters": "^3.0.3"
-    }
+        "drupal/better_exposed_filters": "^7",
+        "drupal/selective_better_exposed_filters": "^3"
+    },
+    "version": "1.x-dev"
 }

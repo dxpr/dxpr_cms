@@ -1,14 +1,12 @@
 {
     "name": "drupal/dxpr_cms_image",
     "type": "drupal-recipe",
-    "description": "Adds focal point-based cropping to the image media type.",
+    "description": "Sets up base image configuration including responsive image styles, view modes, focal point-based cropping and SVG images.",
+    "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/ai": "^1.0.1",
-        "drupal/ai_provider_openai": "^1.0.1",
-        "drupal/ai_provider_anthropic": "^1.0.0",
-        "drupal/ai_image_alt_text": "1.0.0",
-        "drupal/core": ">=11",
-        "drupal/focal_point": "^2.1.2",
-        "drupal/svg_image": "^3.2.1"
-    }
+        "drupal/core": ">=10.4",
+        "drupal/focal_point": "^2",
+        "drupal/svg_image": "^3.1"
+    },
+    "version": "1.x-dev"
 }

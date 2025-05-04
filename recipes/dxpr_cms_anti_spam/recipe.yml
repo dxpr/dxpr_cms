@@ -1,8 +1,7 @@
 name: Anti-spam
-type: DXPR CMS
-description: 'Sets up anti-spam and anti-abuse functionality.'
+type: Dxpr CMS
+description: Sets up anti-spam and anti-abuse functionality.
 install:
-  - antibot
   - captcha
   - friendlycaptcha
   - honeypot
@@ -38,5 +37,4 @@ config:
     user.role.authenticated:
       grantPermissions:
         - 'bypass honeypot protection'
-        - 'skip antibot'
         - 'skip CAPTCHA'

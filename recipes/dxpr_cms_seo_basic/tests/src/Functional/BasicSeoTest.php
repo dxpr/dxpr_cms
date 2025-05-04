@@ -45,7 +45,7 @@ class BasicSeoTest extends BrowserTestBase {
       ->set('js.preprocess', FALSE)
       ->save();
 
-    $dir = realpath(__DIR__ . '/../../dxpr_cms_seo_basic');
+    $dir = realpath(__DIR__ . '/../../..');
     // The recipe should apply cleanly.
     $this->applyRecipe($dir);
     // Apply it again to prove that it is idempotent.

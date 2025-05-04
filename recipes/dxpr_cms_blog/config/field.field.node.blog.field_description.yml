@@ -9,9 +9,9 @@ field_name: field_description
 entity_type: node
 bundle: blog
 label: Description
-description: 'This description will be used in overviews, search results and social media sharing.'
+description: 'Describe the page content. This appears as the description in search engine results.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

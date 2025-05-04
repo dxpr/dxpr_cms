@@ -15,16 +15,26 @@ mode: media_library
 content:
   field_media_svg_image:
     type: image_image
-    weight: 0
+    weight: 1
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
-  langcode: true
-  name: true
   path: true
+  publish_on: true
+  publish_state: true
   status: true
   uid: true
+  unpublish_on: true
+  unpublish_state: true

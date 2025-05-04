@@ -1,14 +1,14 @@
 {
     "name": "drupal/dxpr_cms_news",
-    "description": "Adds a news content type with an overview page and related news items.",
+    "description": "Adds a news content type and listing page.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.3",
+        "drupal/core": ">=10.4",
         "drupal/add_content_by_bundle": "^1.2.2",
-        "drupal/dxpr_cms_content_type_base": "*",
-        "drupal/better_exposed_filters": "^7.0",
-        "drupal/pathauto": "^1.13",
-        "drupal/selective_better_exposed_filters": "^3.0"
-    }
+        "drupal/dxpr_cms_page": "^1",
+        "drupal/better_exposed_filters": "^7",
+        "drupal/selective_better_exposed_filters": "^3"
+    },
+    "version": "1.x-dev"
 }

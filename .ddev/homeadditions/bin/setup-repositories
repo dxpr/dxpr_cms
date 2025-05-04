@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-#
-# Adds all DXPR CMS components as path repositories.
-#
-# The recipes' repositories need to be defined with relative paths because
-# Package Manager does not allow absolute symlinks.
-find . -maxdepth 1 -type d -name 'dxpr_cms*' -exec composer config repositories.{} path {} ';'

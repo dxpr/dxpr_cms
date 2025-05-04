@@ -48,13 +48,10 @@ class CommandLineInstallTest extends TestCase {
    * {@inheritdoc}
    */
   protected function tearDown(): void {
-    // To help with forensic debugging, only delete the site directory if the
-    // test passed.
-    if ($this->hasFailed() === FALSE) {
-      $file_system = new Filesystem();
-      $file_system->chmod($this->sitePath, 0755);
-      $file_system->remove($this->sitePath);
-    }
+    $file_system = new Filesystem();
+    $file_system->chmod($this->sitePath, 0755);
+    $file_system->remove($this->sitePath);
+
     parent::tearDown();
   }
 
@@ -98,8 +95,10 @@ class CommandLineInstallTest extends TestCase {
     $process = new Process($command, $this->root, [
       'DRUPAL_DEV_SITE_PATH' => $this->siteDirectory,
     ]);
-    $process->mustRun();
-    $this->assertStringContainsString('Congratulations, you installed DXPR CMS!', $process->getErrorOutput());
+    // Process uses a default timeout of 60 seconds. $this->drush() disables
+    // it entirely, so do that here too.
+    $process->setTimeout(0)->mustRun();
+    $this->assertStringContainsString('Congratulations, you installed Dxpr CMS!', $process->getErrorOutput());
 
     // The core install command write-protects the site directory, which
     // interferes with $this->drush().

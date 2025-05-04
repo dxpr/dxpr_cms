@@ -1,9 +1,14 @@
-name: Advanced SEO
-description: Configures DXPR CMS for Search Engine Optimization best practices.
-type: DXPR CMS
+name: SEO Tools
+description: Adds common search engine optimisation tools such as meta tags, XML sitemap, robots.txt management and more.
+type: Dxpr CMS
 recipes:
   - core/recipes/image_media_type
 install:
+  - eca_base
+  - eca_config
+  - eca_content
+  - eca_misc
+  - eca_user
   - field_group
   - focal_point
   - layout_builder
@@ -14,13 +19,14 @@ install:
   - node
   - robotstxt
   - seo_checklist
-  - shortcut
   - simple_sitemap
   - sitemap
   - token_or
+  - yoast_seo
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
+    - field.storage.node.field_seo_analysis
     - field.storage.node.field_seo_description
     - field.storage.node.field_seo_image
     - field.storage.node.field_seo_title
@@ -31,11 +37,13 @@ config:
       - metatag.metatag_defaults.404.yml
       - metatag.metatag_defaults.taxonomy_term.yml
       - metatag.metatag_defaults.user.yml
-    shortcut:
-      - shortcut.set.default
     simple_sitemap: '*'
   actions:
     # Add SEO fields to all content types that are installed.
+    field.storage.node.field_seo_analysis:
+      addToAllBundles:
+        label: 'SEO analysis'
+        description: 'Pick the main keyword this page is about.'
     field.storage.node.field_seo_description:
       addToAllBundles:
         label: 'SEO description'
@@ -66,6 +74,7 @@ config:
               - field_seo_title
               - field_seo_description
               - field_seo_image
+              - field_seo_analysis
             label: 'Search Engine Optimization (SEO) Information'
             region: content
             parent_name: ''
@@ -80,6 +89,17 @@ config:
               description: ''
               required_fields: false
       setComponents:
+        -
+          name: field_seo_analysis
+          options:
+            type: yoast_seo_widget
+            weight: 18
+            region: content
+            settings:
+              render_theme: NULL
+              render_view_mode: default
+              edit_title: 0
+              edit_description: 0
         -
           name: field_seo_description
           options:
@@ -183,6 +203,26 @@ config:
           Disallow: /index.php/*/media/oembed
           # XML sitemap
           Sitemap: /sitemap.xml
+    sitemap.settings:
+      simpleConfigUpdate:
+        plugins.frontpage:
+          base_plugin: frontpage
+          enabled: true
+          weight: 0
+          settings:
+            title: 'Front page'
+            rss: null
+          id: frontpage
+          provider: sitemap
+        plugins.menu:main:
+          base_plugin: menu
+          enabled: true
+          weight: 0
+          settings:
+            title: ''
+            show_disabled: false
+          id: 'menu:main'
+          provider: sitemap
     system.performance:
       simpleConfigUpdate:
         # Ensure caching is on and set to 15 minutes for Lighthouse.
@@ -190,3 +230,7 @@ config:
         # Ensure CSS and JS are preprocessed.
         css.preprocess: true
         js.preprocess: true
+    user.role.anonymous:
+      grantPermission: 'access sitemap'
+    user.role.authenticated:
+      grantPermission: 'access sitemap'

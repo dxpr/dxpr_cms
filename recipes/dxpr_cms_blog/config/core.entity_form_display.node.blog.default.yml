@@ -4,19 +4,28 @@ dependencies:
   config:
     - field.field.node.blog.field_content
     - field.field.node.blog.field_description
-    - field.field.node.blog.field_image
+    - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_tags
     - node.type.blog
-    - workflows.workflow.editorial
+    - workflows.workflow.basic_editorial
   module:
-    - content_moderation
-    - media_library
     - path
+    - text
+    - content_moderation
+    - scheduler
 id: node.blog.default
 targetEntityType: node
 bundle: blog
 mode: default
 content:
+  field_content:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 7
@@ -25,27 +34,26 @@ content:
     third_party_settings: {  }
   field_description:
     type: string_textarea
-    weight: 0
+    weight: 3
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_image:
+  field_featured_image:
     type: media_library_widget
-    weight: 4
+    weight: 2
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 2
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   langcode:
@@ -57,7 +65,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 26
+    weight: -7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -76,7 +84,18 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 28
+    weight: -5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_status:
+    type: scheduler_moderation
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: -6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -119,10 +138,10 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 29
+    weight: -3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_content: true
-  url_redirects: true
+  publish_state: true
+  unpublish_state: true

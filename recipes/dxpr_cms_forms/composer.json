@@ -1,10 +1,13 @@
 {
     "name": "drupal/dxpr_cms_forms",
+    "description": "Adds a simple contact form, and tools for building forms.",
     "type": "drupal-recipe",
-    "description": "Provides a simple contact form, and tools for building more complex forms.",
+    "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/dxpr_cms_anti_spam": "*",
-        "drupal/core": ">=10.3",
-        "drupal/webform": "^6.3.0-beta1"
-    }
+        "drupal/dxpr_cms_anti_spam": "^1",
+        "drupal/dxpr_cms_page": "^1",
+        "drupal/core": ">=10.4",
+        "drupal/webform": "^6.3-beta1"
+    },
+    "version": "1.x-dev"
 }

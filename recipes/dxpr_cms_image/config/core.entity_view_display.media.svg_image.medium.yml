@@ -21,7 +21,7 @@ content:
       image_loading:
         attribute: lazy
       svg_attributes:
-        width: 600
+        width: 720
         height: null
       svg_render_as_image: true
     third_party_settings: {  }

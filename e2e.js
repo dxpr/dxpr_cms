@@ -30,6 +30,7 @@ const runCommand = (command) => {
 
   return cy.exec(command, {
     env: env || {},
+    timeout: 240000,
   });
 };
 

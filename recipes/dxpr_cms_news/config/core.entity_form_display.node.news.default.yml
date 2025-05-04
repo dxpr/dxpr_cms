@@ -2,29 +2,30 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.news.body
+    - field.field.node.news.field_content
     - field.field.node.news.field_description
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_tags
     - node.type.news
+    - workflows.workflow.basic_editorial
   module:
     - media_library
     - path
     - text
+    - content_moderation
+    - scheduler
 id: node.news.default
 targetEntityType: node
 bundle: news
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 1
+  field_content:
+    type: text_textarea
+    weight: 2
     region: content
     settings:
       rows: 9
-      summary_rows: 3
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -34,7 +35,7 @@ content:
     third_party_settings: {  }
   field_description:
     type: string_textarea
-    weight: 0
+    weight: 1
     region: content
     settings:
       rows: 5
@@ -42,19 +43,18 @@ content:
     third_party_settings: {  }
   field_featured_image:
     type: media_library_widget
-    weight: 2
+    weight: 0
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_tags:
-    type: entity_reference_autocomplete_tags
+    type: tagify_entity_reference_autocomplete_widget
     weight: 3
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   langcode:
@@ -63,6 +63,12 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: -7
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -76,6 +82,23 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: -5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_status:
+    type: scheduler_moderation
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: -6
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -109,4 +132,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: -3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  publish_state: true
+  unpublish_state: true

@@ -16,8 +16,8 @@ content:
     type: oembed
     label: hidden
     settings:
-      max_width: 608
-      max_height: 342
+      max_width: 720
+      max_height: 405
       loading:
         attribute: lazy
     third_party_settings: {  }

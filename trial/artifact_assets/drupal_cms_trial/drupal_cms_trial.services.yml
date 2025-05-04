@@ -1,4 +1,0 @@
-services:
-  Drupal\dxpr_cms_trial\OutgoingHttpInterceptor:
-    tags:
-      - { name: http_client_middleware }

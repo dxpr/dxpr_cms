@@ -1,5 +1,0 @@
-name: dxpr_cms_trial
-type: module
-description: 'Provides support code for the in-browser trial of DXPR CMS. Not meant for production use.'
-core_version_requirement: '*'
-hidden: true

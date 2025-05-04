@@ -10,9 +10,9 @@ field_name: field_tags
 entity_type: node
 bundle: blog
 label: Tags
-description: 'Enter a comma-separated list. For example: Amsterdam, Mexico City, "Cleveland, Ohio"'
+description: 'Include tags for relevant topics.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

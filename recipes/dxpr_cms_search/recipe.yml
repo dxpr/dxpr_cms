@@ -1,7 +1,6 @@
 name: Search
-type: DXPR CMS
-description: Provides a simple database-powered search, with autocomplete support.
-
+type: Dxpr CMS
+description: Adds a search to help visitors find content.
 install:
   - block
   # Basic search is for node entity type only at the moment.
@@ -13,14 +12,12 @@ install:
   - search_api_exclude
   - simple_search_form
   - views
-
 config:
   strict: false
   import:
-    # Use core node view modes for indexing and displaying results.
+    # Use core node view mode for indexing.
     node:
       - core.entity_view_mode.node.search_index
-      - core.entity_view_mode.node.search_result
   actions:
     # Enable Search API Exclude for all content types.
     node.type.*:
@@ -28,57 +25,10 @@ config:
         module: search_api_exclude
         key: enabled
         value: 1
-      createForEachIfNotExists:
-        # Create view display "Search result highlighting input" for all available content types.
-        core.entity_view_display.node.%bundle.search_result:
-          status: true
-          targetEntityType: node
-          mode: search_result
-          bundle: '%bundle'
     # Create view display "Search Index" for all available content types.
     core.entity_view_display.node.*.default:
       # Clone the "Default" view display by default.
       cloneAs: node.%.search_index
-    # Make sure view display "Search result highlighting input" contains field "Search result excerpt".
-    core.entity_view_display.node.*.search_result:
-      setComponent:
-        name: search_api_excerpt
-        options:
-          weight: 0
-          region: content
-    # Add the search form to the header of the page.
-    block.block.search_form:
-      placeBlockInDefaultTheme:
-        id: search_form
-        # The region accepts an array keyed by theme name.
-        region:
-          olivero: primary_menu
-          dxpr_theme: primary_menu
-        # A fallback used if no match found in the region array.
-        default_region: content
-        # Place the block before any blocks already in the region.
-        position: first
-        plugin: simple_search_form_block
-        settings:
-          label: 'Search form'
-          label_display: '0'
-          provider: simple_search_form
-          action_path: /search
-          get_parameter: text
-          input_type: search_api_autocomplete
-          search_api_autocomplete:
-            search_id: content_autocomplete
-            display: page_1
-            arguments: ''
-            filter: text
-          input_label: Search
-          input_label_display: invisible
-          input_placeholder: 'Enter search keywords'
-          input_css_classes: ''
-          submit_display: true
-          submit_label: Find
-          input_keep_value: false
-          preserve_url_query_parameters: { }
     user.role.anonymous:
       grantPermission: 'use search_api_autocomplete for content_autocomplete'
     user.role.authenticated:

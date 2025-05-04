@@ -102,7 +102,7 @@ background_image_style: cover
 background_image_position: center_center
 background_image_attachment: fixed
 header_position: 0
-header_top_layout: logo_left_menu_left
+header_top_layout: 0
 header_style: normal
 header_top_bg_opacity: '1'
 header_top_height: '60'

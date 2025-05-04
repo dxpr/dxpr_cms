@@ -2,35 +2,35 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.16_9_1008x567_focal_point_webp
-    - image.style.16_9_1312x738_focal_point_webp
-    - image.style.16_9_1800x1080_focal_point_webp
-    - image.style.3_4_504x672_focal_point_webp
-    - image.style.3_4_708x944_focal_point_webp
+    - image.style.16_9_512x288_focal_point_webp
+    - image.style.16_9_704x396_focal_point_webp
+    - image.style.5_2_1000x400_focal_point_webp
+    - image.style.5_2_1300x520_focal_point_webp
+    - image.style.5_2_1800x720_focal_point_webp
   theme:
-    - olivero
+    - dxpr_theme
 id: hero_wide
 label: 'Hero Wide'
 image_style_mappings:
   -
     image_mapping_type: image_style
-    image_mapping: 16_9_1800x1080_focal_point_webp
-    breakpoint_id: olivero.xl
+    image_mapping: 5_2_1800x720_focal_point_webp
+    breakpoint_id: dxpr_theme.xl
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: 16_9_1312x738_focal_point_webp
-    breakpoint_id: olivero.lg
+    image_mapping: 5_2_1300x520_focal_point_webp
+    breakpoint_id: dxpr_theme.lg
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: 16_9_1008x567_focal_point_webp
-    breakpoint_id: olivero.md
+    image_mapping: 5_2_1000x400_focal_point_webp
+    breakpoint_id: dxpr_theme.md
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: 3_4_708x944_focal_point_webp
-    breakpoint_id: olivero.sm
+    image_mapping: 16_9_704x396_focal_point_webp
+    breakpoint_id: dxpr_theme.sm
     multiplier: 1x
-breakpoint_group: olivero
-fallback_image_style: 3_4_504x672_focal_point_webp
+breakpoint_group: dxpr_theme
+fallback_image_style: 16_9_512x288_focal_point_webp

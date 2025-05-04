@@ -5,13 +5,16 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog.field_content
     - field.field.node.blog.field_description
-    - field.field.node.blog.field_image
+    - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_tags
-    - image.style.medium_focal_point
     - node.type.blog
   module:
-    - media
+    - layout_builder
     - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: node.blog.teaser
 targetEntityType: node
 bundle: blog
@@ -24,30 +27,18 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_image:
-    type: media_thumbnail
+  field_featured_image:
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: medium_focal_point
-      image_loading:
-        attribute: lazy
+      view_mode: 4_3_medium
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
-  field_tags:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
 hidden:
+  content_moderation_control: true
   field_content: true
+  field_tags: true
   langcode: true
+  links: true

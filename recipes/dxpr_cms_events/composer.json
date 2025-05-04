@@ -1,22 +1,20 @@
 {
   "name": "drupal/dxpr_cms_events",
+  "description": "Adds an event content type and listing page.",
   "type": "drupal-recipe",
-  "description": "A content type and view to help you manage events.",
+  "license": ["GPL-2.0-or-later"],
   "require": {
-    "drupal/core": ">=10.3",
-    "drupal/dxpr_cms_dxpr_builder": "*",
-    "drupal/dxpr_builder": "^2.7.0-beta4",
-    "drupal/dxpr_theme_helper": "^2.0.0",
+    "drupal/core": ">=10.4",
     "drupal/add_content_by_bundle": "^1.2.2",
-    "drupal/address": "^2.0.3",
+    "drupal/address": "^2",
     "drupal/addtocal_augment": "^1.2.3",
-    "drupal/dxpr_cms_content_type_base": "*",
-    "drupal/dxpr_cms_privacy_basic": "*",
-    "drupal/geocoder": "^4.26.0",
-    "drupal/geofield": "^1.64.0",
-    "drupal/leaflet": "^10.2.35",
-    "drupal/pathauto": "^1.13.0",
+    "drupal/dxpr_cms_page": "^1",
+    "drupal/dxpr_cms_privacy_basic": "^1",
+    "drupal/geocoder": "^4.10",
+    "drupal/geofield": "^1.47",
+    "drupal/leaflet": "^10.2.33",
     "drupal/smart_date": "^4.2.1",
     "geocoder-php/nominatim-provider": "^5.7"
-  }
+  },
+  "version": "1.x-dev"
 }

@@ -2,13 +2,15 @@ name: 'DXPR Builder'
 description: 'DXPR Builder visual layout builder.'
 type: 'Builder'
 recipes:
-  - dxpr_cms_content_type_base
+  - dxpr_cms_page
   - core/recipes/full_html_format_editor
 install:
   - block_content
+  - contact_block
   - options
   - field_group
   - menu_link_attributes
+  - node
   - workflows
   - moderation_dashboard
   - dxpr_builder
@@ -18,6 +20,7 @@ install:
 config:
   strict: false
   import:
+    contact_block: '*'
     dxpr_builder: '*'
     dxpr_builder_block: '*'
     dxpr_builder_page: '*'
@@ -27,4 +30,4 @@ config:
     system.site:
       simple_config_update:
         name: 'DXPR CMS'
-        page.front: '/node/9'
+        page.front: '/home'

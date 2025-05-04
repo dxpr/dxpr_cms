@@ -1,8 +1,0 @@
-{
-    "name": "drupal/dxpr_cms_installer",
-    "type": "drupal-profile",
-    "description": "Provides install-time tweaks for DXPR CMS.",
-    "require": {
-        "drupal/core": ">=10.3"
-    }
-}

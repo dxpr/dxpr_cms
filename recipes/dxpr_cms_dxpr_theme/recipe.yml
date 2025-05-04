@@ -4,6 +4,7 @@ type: 'Themes'
 recipes:
   - core/recipes/basic_html_format_editor
 install:
+  - help
   - dxpr_theme
   - dxpr_theme_helper
   - block_content
@@ -15,6 +16,7 @@ config:
       - system.menu.main
       - system.theme
     dxpr_theme: '*'
+    help: '*'
   actions:
     system.theme:
       simple_config_update:

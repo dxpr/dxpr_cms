@@ -1,37 +1,29 @@
 {
     "name": "drupal/dxpr_cms_starter",
-    "description": "Sets up a DXPR CMS site with useful features and sample content.",
+    "description": "Applies the foundational Dxpr CMS recipes.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/automatic_updates": "^3.1.7",
-        "drupal/core": ">=10.3",
-        "drupal/dashboard": "^2.0.0",
+        "drupal/bpmn_io": "^2.0.6",
+        "drupal/core": ">=10.4",
+        "drupal/eca": "^2.1.4",
+        "drupal/dashboard": "^2",
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/dxpr_cms_admin_ui": "*",
+        "drupal/dxpr_cms_ai": "*",
         "drupal/dxpr_cms_anti_spam": "*",
         "drupal/dxpr_cms_authentication": "*",
+        "drupal/dxpr_cms_blog": "*",
         "drupal/dxpr_cms_page": "*",
         "drupal/dxpr_cms_privacy_basic": "*",
         "drupal/dxpr_cms_remote_video": "*",
         "drupal/dxpr_cms_search": "*",
         "drupal/dxpr_cms_seo_basic": "*",
         "drupal/dxpr_cms_dxpr_theme": "*",
-        "drupal/easy_email_express": "^1.0.3",
-        "drupal/pathauto": "^1.13.0",
-        "drupal/project_browser": "^2.0.0-alpha7"
+        "drupal/easy_email_express": "^1.0.2",
+        "drupal/project_browser": "^2-beta1",
+        "drupal/token": "^1"
     },
-    "suggest": {
-        "drupal/dxpr_cms_accessibility_tools": "Adds tools to improve website accessibility",
-        "drupal/dxpr_cms_ai": "Adds AI-powered features to your website",
-        "drupal/dxpr_cms_blog": "Sets up a basic blog, with tagging",
-        "drupal/dxpr_cms_case_study": "Adds a case study content type that provides detailed information about a subject to the intended audience",
-        "drupal/dxpr_cms_events": "A content type and view to help you manage events",
-        "drupal/dxpr_cms_forms": "Adds form building capabilities",
-        "drupal/dxpr_cms_image": "Adds enhanced image handling features",
-        "drupal/dxpr_cms_multilingual": "Adds multilingual support features",
-        "drupal/dxpr_cms_news": "Adds a news content type with an overview page and related news items",
-        "drupal/dxpr_cms_person": "Adds a person profile content type that provides information about a person",
-        "drupal/dxpr_cms_project": "Adds a project content type that provides information about an example of work to the intended audience"
-    }
+    "version": "1.x-dev"
 }

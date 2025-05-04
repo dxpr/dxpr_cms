@@ -33,22 +33,24 @@ class ComponentValidationTest extends BrowserTestBase {
     // Apply it again to prove that it is idempotent.
     $this->applyRecipe($dir);
 
-    // The privacy links should be visible to anonymous users in the footer.
+    // The footer menu should not be visible by default.
     $this->drupalPlaceBlock('system_menu_block:footer', ['label' => 'Footer']);
     $this->drupalGet('<front>');
-    $footer_menu = $this->assertSession()
-      ->elementExists('css', 'nav > h2:contains("Footer") + ul');
-    // The privacy links should be visible to anonymous users in the footer, but
-    // the privacy policy is unpublished by default, so it shouldn't appear.
-    $this->assertTrue($footer_menu->hasLink('My privacy settings'));
-    $this->assertFalse($footer_menu->hasLink('Privacy policy'));
+    $footer_menu = 'nav > h2:contains("Footer") + ul';
+    $assert_session = $this->assertSession();
+    $assert_session->elementNotExists('css', $footer_menu);
 
     // Publish the privacy policy and ensure it shows up in the footer.
-    $this->container->get(EntityRepositoryInterface::class)
-      ->loadEntityByUuid('node', '00d105b3-6f05-40c6-a289-3dd61c89480e')
-      ?->setPublished()
-      ->save();
+    $privacy_policy = $this->container->get(EntityRepositoryInterface::class)
+      ->loadEntityByUuid('node', '00d105b3-6f05-40c6-a289-3dd61c89480e');
+    $this->assertIsObject($privacy_policy);
+    $privacy_policy->moderation_state = 'published';
+    $privacy_policy->save();
     $this->getSession()->reload();
+    $footer_menu = $assert_session->elementExists('css', $footer_menu);
+    // The privacy settings aren't linked in the menu until a relevant Klaro app
+    // is enabled.
+    $this->assertFalse($footer_menu->hasLink('My privacy settings'));
     $this->assertTrue($footer_menu->hasLink('Privacy policy'));
   }
 

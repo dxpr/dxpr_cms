@@ -1,6 +1,0 @@
-langcode: en
-status: false
-dependencies: {  }
-formId: webform_submission_contact_form_add_form
-captchaType: friendlycaptcha/friendlycaptcha
-label: webform_submission_contact_form_add_form

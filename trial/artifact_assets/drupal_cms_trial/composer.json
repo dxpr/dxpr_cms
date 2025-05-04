@@ -1,5 +1,0 @@
-{
-    "name": "drupal/dxpr_cms_trial",
-    "type": "drupal-custom-module",
-    "description": "Provides support code for the in-browser trial of DXPR CMS. Not meant for production use."
-}

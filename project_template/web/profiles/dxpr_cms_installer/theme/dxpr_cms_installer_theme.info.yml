@@ -1,0 +1,10 @@
+name: Dxpr CMS Installer Theme
+type: theme
+core_version_requirement: '^11.1'
+description: 'Themes the Dxpr CMS installer. Not to be used in production.'
+base theme: claro
+libraries-extend:
+  claro/maintenance-page:
+    - dxpr_cms_installer_theme/maintenance-page
+  core/drupal.progress:
+    - dxpr_cms_installer_theme/drupal.progress

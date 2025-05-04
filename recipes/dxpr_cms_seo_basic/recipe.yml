@@ -1,11 +1,10 @@
 name: Basic SEO
-description: Configures DXPR CMS for basic SEO best practices.
-type: DXPR CMS
+description: Provides basic SEO best practices.
+type: Dxpr CMS
 recipes:
   - core/recipes/content_editor_role
 install:
   - easy_breadcrumb
-  - language
   - node
   - pathauto
   - redirect
@@ -14,24 +13,25 @@ install:
   - user
   - views
 config:
-  import:
-    pathauto: '*'
-    redirect:
-      - language.content_settings.redirect.redirect
-      - system.action.redirect_delete_action
-      - views.view.redirect
-    redirect_404: '*'
   strict:
     # For safety's sake, only treat our bundled configuration strictly.
     - pathauto.pattern.menu_path
+  import:
+    redirect:
+      - system.action.redirect_delete_action
+    redirect_404: '*'
   actions:
     easy_breadcrumb.settings:
       simpleConfigUpdate:
+        # Don't add current page in admin UI.
+        applies_admin_routes: false
         # Add Schema.org Breadcrumb markup.
         add_structured_data_json_ld: true
         # Remove breadcrumbs when only home appears.
         # Since we print the page title in the crumb, this is only applies to the home page.
         hide_single_home_item: true
+        # Don't alter the capitalization of breadcrumbs.
+        capitalizator_mode: none
     redirect_404.settings:
       simpleConfigUpdate:
         suppress_404: true

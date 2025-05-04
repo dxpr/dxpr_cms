@@ -1,11 +1,12 @@
 {
     "name": "drupal/dxpr_cms_case_study",
-    "description": "Adds a Case study content type that provides detailed information about a subject to the intended audience.",
+    "description": "Adds a case study content type and listing page.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.3",
-        "drupal/dxpr_cms_content_type_base": "*",
-        "drupal/pathauto": "^1.13"
-    }
+        "drupal/core": ">=10.4",
+        "drupal/add_content_by_bundle": "^1.2.2",
+        "drupal/dxpr_cms_page": "^1"
+    },
+    "version": "1.x-dev"
 }

@@ -137,11 +137,11 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
 
     // if (isset($install_state['dxpr_cms_installer']['enable_multilingual']) &&
     // $install_state['dxpr_cms_installer']['enable_multilingual']) {
-      $form['google_translation_key'] = [
-        '#type' => 'textfield',
-        '#title' => $this->t('Google Cloud Translation API key (optional)'),
-        '#description' => $this->t('Get a key from <a href="https://console.cloud.google.com/marketplace/product/google/translate.googleapis.com" target="_blank">cloud.google.com</a>.'),
-      ];
+    $form['google_translation_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Google Cloud Translation API key (optional)'),
+      '#description' => $this->t('Get a key from <a href="https://console.cloud.google.com/marketplace/product/google/translate.googleapis.com" target="_blank">cloud.google.com</a>.'),
+    ];
     // }
 
     $form['ai_provider'] = [

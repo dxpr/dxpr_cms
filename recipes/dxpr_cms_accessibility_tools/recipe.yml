@@ -1,6 +1,8 @@
-name: 'Accessibility tools'
-type: 'DXPR CMS'
-description: 'Installs and configures tools to help authors make their content accessible.'
+name: Accessibility Tools
+type: Dxpr CMS
+description: Adds automated checks to help ensure content conforms to web accessibility guidelines.
+recipes:
+  - dxpr_cms_page
 install:
   - editoria11y
 config:

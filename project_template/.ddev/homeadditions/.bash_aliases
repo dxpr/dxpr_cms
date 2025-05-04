@@ -1,5 +1,0 @@
-alias co="composer"
-alias dr="drush"
-alias la="ls -a"
-alias lal="ls -al"
-alias ll="ls -l"

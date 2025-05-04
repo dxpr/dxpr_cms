@@ -1,13 +1,12 @@
-name: 'Case studies'
-type: DXPR CMS
-description: 'Adds a case study content type that provides detailed information about a subject to the intended audience.'
+name: Case Studies
+type: Dxpr CMS
+description: Adds a case study content type and listing page.
 recipes:
-  - dxpr_cms_content_type_base
-  - core/recipes/tags_taxonomy
+  - dxpr_cms_page
 install:
   - link
-  - pathauto
-  - shortcut
+  - add_content_by_bundle
+  - menu_link_content
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
@@ -15,8 +14,6 @@ config:
     - field.storage.node.field_case_study__client_logo
     - field.storage.node.field_case_study__client_name
   import:
-    shortcut:
-      - shortcut.set.default
   actions:
     user.role.content_editor:
       grantPermissions:
@@ -24,3 +21,5 @@ config:
         - 'delete case_study revisions'
         - 'delete any case_study content'
         - 'edit any case_study content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['case_study']

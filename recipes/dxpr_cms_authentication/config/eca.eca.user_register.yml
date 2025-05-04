@@ -7,7 +7,7 @@ dependencies:
 id: user_register
 modeller: bpmn_io
 label: 'User registration'
-version: 0.0.0
+version: 1.0.0
 weight: 0
 events:
   Event_build_user_reg_form:

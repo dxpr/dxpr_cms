@@ -1,13 +1,12 @@
 name: Projects
-type: DXPR CMS
-description: 'Adds a project content type that provides information about an example of work to the intended audience.'
+type: Dxpr CMS
+description: Adds a project content type and listing page.
 recipes:
-  - dxpr_cms_content_type_base
-  - core/recipes/tags_taxonomy
+  - dxpr_cms_page
 install:
   - link
-  - pathauto
-  - shortcut
+  - add_content_by_bundle
+  - menu_link_content
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
@@ -15,8 +14,6 @@ config:
     - field.storage.node.field_project__client_logo
     - field.storage.node.field_project__client_name
   import:
-    shortcut:
-      - shortcut.set.default
   actions:
     user.role.content_editor:
       grantPermissions:
@@ -24,3 +21,5 @@ config:
         - 'delete project revisions'
         - 'delete any project content'
         - 'edit any project content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['project']

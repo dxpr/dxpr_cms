@@ -1,20 +1,15 @@
 name: News
-type: DXPR CMS
-description: 'Adds a news content type with an overview page and related news items.'
+type: Dxpr CMS
+description: Adds a news content type and listing page.
 recipes:
-  - dxpr_cms_content_type_base
-  - core/recipes/tags_taxonomy
+  - dxpr_cms_page
 install:
   - add_content_by_bundle
   - menu_link_content
-  - pathauto
-  - shortcut
   - selective_better_exposed_filters
 config:
   strict: false
   import:
-    shortcut:
-      - shortcut.set.default
     system:
       - system.menu.main
   actions:
@@ -24,3 +19,5 @@ config:
         - 'delete news revisions'
         - 'delete any news content'
         - 'edit any news content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['news']

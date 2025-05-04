@@ -4,6 +4,8 @@
     "description": "Adds support for translations.",
     "require": {
         "drupal/core": ">=10.3",
+        "drupal/dxpr_cms_content_type_base": "*",
+        "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/hreflang": "^1.14",
         "drupal/tmgmt": "^1.15",
         "drupal/tmgmt_google": "^1.1"

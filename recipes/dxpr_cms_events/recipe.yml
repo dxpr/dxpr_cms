@@ -1,18 +1,11 @@
-name: 'Events'
-description: 'A content type and view to help you manage events.'
-type: 'DXPR CMS'
+name: Events
+description: Adds an event content type and listing page.
+type: Dxpr CMS
 recipes:
   - core/recipes/document_media_type
-  - dxpr_cms_content_type_base
+  - dxpr_cms_page
   - dxpr_cms_privacy_basic
-  - dxpr_cms_dxpr_builder
 install:
-  # Core
-  - node
-  - user
-  # Contrib
-  - dxpr_builder_page
-  - dxpr_theme_helper
   - add_content_by_bundle
   - address
   - addtocal_augment
@@ -24,8 +17,6 @@ install:
   - leaflet_views
   - menu_link_content
   - smart_date
-  - pathauto
-  - shortcut
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
@@ -36,9 +27,7 @@ config:
     - field.storage.node.field_location_address
   import:
     geofield: '*'
-    shortcut:
-      - shortcut.set.default
-    smart_date: "*"
+    smart_date: '*'
     system:
       - system.menu.main
   actions:
@@ -48,5 +37,7 @@ config:
         - 'delete event revisions'
         - 'delete any event content'
         - 'edit any event content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['event']
     klaro.klaro_app.leaflet:
       enable: []

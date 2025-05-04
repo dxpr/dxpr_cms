@@ -1,48 +1,19 @@
-name: 'Basic Page'
-type: 'DXPR CMS'
-description: 'Provides a basic Page content type with pretty URLs, moderation, scheduling, translation, and meta tags.'
+name: Basic page
+type: Dxpr CMS
+description: Adds a content type for simple pages.
 recipes:
-  - core/recipes/page_content_type
-  - core/recipes/tags_taxonomy
   - dxpr_cms_content_type_base
 config:
   strict: false
   actions:
-    field.field.node.page.body:
-      setLabel: Content
-      setDescription: 'The content of this page.'
-      setSettings:
-        allowed_formats:
-          - content_format
-        display_summary: false
-    core.entity_form_display.node.page.default:
-      setComponents:
-        - name: body
-          options:
-            type: text_textarea_with_summary
-            weight: 1
-            region: content
-        - name: field_description
-          options:
-            type: string_textarea
-            weight: 0
-            region: content
-        - name: field_featured_image
-          options:
-            type: media_library_widget
-            weight: 2
-            region: content
-        - name: field_tags
-          options:
-            type: entity_reference_autocomplete_tags
-            weight: 3
-            region: content
-      # This setting is advanced, and therefore hidden by default to avoid making
-      # the edit form too overwhelming. Administrators can always re-enable it.
-      hideComponent: url_redirects
+    core.entity_view_display.node.page.default:
+      enableLayoutBuilder: {  }
+      allowLayoutOverrides: true
     user.role.content_editor:
       grantPermissions:
         - 'create page content'
         - 'delete page revisions'
         - 'delete any page content'
         - 'edit any page content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['page']

@@ -11,10 +11,12 @@ field_name: field_content
 entity_type: node
 bundle: blog
 label: Content
-description: 'The content of your blog post.'
+description: 'The content of this page.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats:
+    - content_format
 field_type: text_long

@@ -3,91 +3,21 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.case_study.body
     - field.field.node.case_study.field_case_study__client_link
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
+    - field.field.node.case_study.field_content
     - field.field.node.case_study.field_description
     - field.field.node.case_study.field_featured_image
     - field.field.node.case_study.field_tags
-    - image.style.4_3_300x225_focal_point_webp
     - node.type.case_study
   module:
     - layout_builder
-    - layout_discovery
-    - media
     - user
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          14657eb7-cfc3-4591-b628-7b12914db4a4:
-            uuid: 14657eb7-cfc3-4591-b628-7b12914db4a4
-            region: content
-            configuration:
-              id: 'field_block:node:case_study:field_featured_image'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: media_thumbnail
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: 4_3_300x225_focal_point_webp
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          3923c985-1c3c-4d77-a0ff-a9f9de71e485:
-            uuid: 3923c985-1c3c-4d77-a0ff-a9f9de71e485
-            region: content
-            configuration:
-              id: 'field_block:node:case_study:field_description'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: basic_string
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          65ac54dc-8847-477f-adbe-99bad4556f87:
-            uuid: 65ac54dc-8847-477f-adbe-99bad4556f87
-            region: content
-            configuration:
-              id: 'field_block:node:case_study:field_tags'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          4e28b303-f0ff-483b-a32b-be600f61230c:
-            uuid: 4e28b303-f0ff-483b-a32b-be600f61230c
-            region: content
-            configuration:
-              id: 'extra_field_block:node:case_study:links'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 3
-            additional: {  }
-        third_party_settings: {  }
 id: node.case_study.teaser
 targetEntityType: node
 bundle: case_study
@@ -101,32 +31,20 @@ content:
     weight: 1
     region: content
   field_featured_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: 4_3_300x225_focal_point_webp
-      image_loading:
-        attribute: lazy
+      view_mode: 4_3_medium
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
-  field_tags:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
 hidden:
-  body: true
+  content_moderation_control: true
   field_case_study__client_link: true
   field_case_study__client_logo: true
   field_case_study__client_name: true
+  field_content: true
+  field_tags: true
   langcode: true
+  links: true

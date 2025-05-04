@@ -1,15 +1,19 @@
 {
     "name": "drupal/dxpr_cms_seo_basic",
+    "description": "Provides basic SEO best practices.",
     "type": "drupal-recipe",
-    "description": "Configures DXPR CMS for basic SEO best practices.",
+    "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.3",
+        "drupal/core": ">=10.4",
         "drupal/easy_breadcrumb": "^2.0.9",
         "drupal/pathauto": "^1.13",
         "drupal/redirect": "^1.10",
         "drupal/token": "^1.15"
     },
     "suggest": {
-        "drupal/dxpr_cms_seo_tools": "Add additional SEO tools to help configure and manage meta tags, SEO analysis, sitemaps, with an SEO checklist and dashboard."
-    }
+        "drupal/dxpr_cms_seo_tools": "Add additional SEO tools to help configure and manage meta tags, SEO analysis, sitemaps, with an SEO checklist and dashboard.",
+        "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic.",
+        "drupal/dxpr_cms_accessibility_tools": "Adds automated checks to help ensure content conforms to web accessibility guidelines."
+    },
+    "version": "1.x-dev"
 }

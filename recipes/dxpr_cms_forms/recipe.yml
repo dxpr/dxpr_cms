@@ -1,35 +1,21 @@
 name: Forms
-type: DXPR CMS
-description: Provides a simple contact form, and tools for building more complex forms.
+type: Dxpr CMS
+description: Adds a simple contact form, and tools for building forms.
 recipes:
   - dxpr_cms_anti_spam
+  - dxpr_cms_page
 install:
   - captcha
   - editor
   - filter
   - menu_link_content
-  - shortcut
   - views
   - webform
   - webform_ui
-input:
-  captcha:
-    data_type: boolean
-    description: 'Whether to show a CAPTCHA on the contact form.'
-    prompt:
-      method: confirm
-      arguments:
-        question: 'Do you want to show a CAPTCHA on the contact form?'
-        default: false
-    default:
-      source: value
-      value: false
 config:
   # If Webform's config already exists, we don't really care what it looks like.
   strict: false
   import:
-    shortcut:
-      - shortcut.set.default
     system:
       - system.menu.main
     webform:
@@ -47,10 +33,6 @@ config:
       - filter.format.webform_default
       - views.view.webform_submissions
   actions:
-    # We provide a CAPTCHA but disable it by default, since CAPTCHAs are obstacles
-    # by design.
-    captcha.captcha_point.webform_submission_contact_form_add_form:
-      setStatus: ${captcha}
     webform.settings:
       simpleConfigUpdate:
         ui.promotions_disabled: true

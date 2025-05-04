@@ -4,7 +4,7 @@ dependencies:
   config:
     - image.style.2_3_400x600_focal_point_webp
   theme:
-    - olivero
+    - dxpr_theme
 id: 2_3_medium
 label: '2:3 Medium'
 image_style_mappings:
@@ -14,7 +14,7 @@ image_style_mappings:
       sizes: 100vw
       sizes_image_styles:
         - 2_3_400x600_focal_point_webp
-    breakpoint_id: olivero.sm
+    breakpoint_id: dxpr_theme.sm
     multiplier: 1x
-breakpoint_group: olivero
+breakpoint_group: dxpr_theme
 fallback_image_style: 2_3_400x600_focal_point_webp

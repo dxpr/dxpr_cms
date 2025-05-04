@@ -36,7 +36,7 @@ default:
   field_description:
     -
       value: 'Nothing here yet.'
-  body:
+  field_content:
     -
       value: '<h2>This content needs to be edited before publishing</h2><p>Please note that your site requires a privacy statement.</p>'
       format: content_format

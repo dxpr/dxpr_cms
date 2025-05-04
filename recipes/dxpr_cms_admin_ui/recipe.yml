@@ -1,13 +1,16 @@
-name: 'Admin Theme'
-type: 'DXPR CMS'
-description: 'Sets up a nice administrative theme and navigation.'
+name: Admin UI
+type: Dxpr CMS
+description: Sets up a nice administrative theme and navigation.
 install:
   - coffee
+  - dashboard
   - contextual
   - gin
   - gin_toolbar
   - navigation
   - sam
+  - tagify
+  - tagify_user_list
 config:
   import:
     gin:
@@ -32,5 +35,8 @@ config:
     system.theme:
       simpleConfigUpdate:
         admin: gin
+    tagify.settings:
+      simpleConfigUpdate:
+        set_default_widget: true
     user.role.authenticated:
       grantPermission: 'access coffee'

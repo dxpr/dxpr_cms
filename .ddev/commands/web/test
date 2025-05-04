@@ -10,7 +10,7 @@ set -e
 
 TEST_DIRECTORIES=$1
 if [ -z "$TEST_DIRECTORIES" ]; then
-  TEST_DIRECTORIES="recipes project_template dxpr_cms_olivero"
+  TEST_DIRECTORIES="recipes project_template"
 fi
 phpunit --configuration=$DDEV_DOCROOT/core $TEST_DIRECTORIES
 

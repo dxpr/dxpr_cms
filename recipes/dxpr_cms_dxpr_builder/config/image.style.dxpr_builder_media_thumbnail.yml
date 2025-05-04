@@ -14,7 +14,6 @@ effects:
     data:
       height: 300
       width: 300
-      height: null
       anchor: center-center
   dc3574ca-8b7e-4639-a785-97aaf8fe3e1c:
     uuid: dc3574ca-8b7e-4639-a785-97aaf8fe3e1c

@@ -9,7 +9,7 @@ updates:
 
   # Trial artifact dependencies
   - package-ecosystem: "composer"
-    directory: "/trial/artifact_assets/drupal_cms_trial"
+    directory: "/trial/artifact_assets/dxpr_cms_trial"
     schedule:
       interval: "weekly"
 

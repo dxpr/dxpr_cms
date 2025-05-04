@@ -9,7 +9,7 @@ dependencies:
 id: person_content
 label: 'Person content'
 type: 'canonical_entities:node'
-pattern: '/profiles/[node:title]'
+pattern: '/people/[node:title]'
 selection_criteria:
   38ac2720-ec8c-4121-bd3a-07d2259343b4:
     id: 'entity_bundle:node'

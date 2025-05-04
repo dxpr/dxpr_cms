@@ -12,13 +12,12 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 corepack_enable: false
+ddev_version_constraint: '>= 1.23.0'
 hooks:
   post-start:
-    # Generate `composer.json` by merging the project template with our internal
-    # dev requirements.
-    - exec: 'jq -s ".[0] * .[1] * .[2]" project_template/composer.json dev.composer.json components.composer.json > composer.json'
-    # Install all dependencies.
-    - composer: 'install'
+    # If needed, regenerate `composer.json` and install dependencies.
+    # @see homeadditions/bin/generate-composer-json
+    - exec: 'test -f composer.lock || (generate-composer-json > composer.json && composer install)'
     # The installer is part of the project template, so symlink it into the web root.
     # It needs to be a relative symlink, or it will break Package Manager.
     - exec: 'ln -s -f $(realpath -s --relative-to=$DDEV_DOCROOT/profiles project_template/$DDEV_DOCROOT/profiles/dxpr_cms_installer) $DDEV_DOCROOT/profiles'
@@ -26,15 +25,18 @@ hooks:
     # option is needed to ensure the Cypress binary is actually downloaded;
     # see the warning about Node.js Snap for Linux at
     # https://docs.cypress.io/guides/getting-started/installing-cypress.
-    - exec: 'test -d node_modules || npm clean-install --foreground-scripts'
+#    - exec: 'test -d node_modules || npm clean-install --foreground-scripts'
 web_environment:
+  # If CANARY is set, Composer will install dev branches of all dependencies (be sure to
+  # run `ddev rebuild` if you change this).
+  # @see homeadditions/bin/generate-composer-json
+  # - CANARY=1
   # For faster performance, don't audit dependencies automatically.
   - COMPOSER_NO_AUDIT=1
-  # To display its UI, Cypress needs to be able to talk to an X11 server
-  # running on the host machine.
+  # To display its UI, Cypress needs to be able to talk to an X11 server running on the
+  # host machine.
   # - DISPLAY=host.docker.internal:0
-  # Download Cypress to a directory that won't be blown away every time the
-  # project is restarted.
+  # Download Cypress where it won't be deleted every time the project is restarted.
   - CYPRESS_CACHE_FOLDER=/var/www/html/.cache/cypress
   # Use the DDEV-provided database to run PHPUnit tests.
   - SIMPLETEST_DB=$DDEV_DATABASE_FAMILY://db:db@db/db

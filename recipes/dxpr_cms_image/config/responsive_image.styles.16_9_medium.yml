@@ -4,8 +4,9 @@ dependencies:
   config:
     - image.style.16_9_512x288_focal_point_webp
     - image.style.16_9_608x342_focal_point_webp
+    - image.style.16_9_720x405_focal_point_webp
   theme:
-    - olivero
+    - dxpr_theme
 id: 16_9_medium
 label: '16:9 Medium'
 image_style_mappings:
@@ -16,7 +17,8 @@ image_style_mappings:
       sizes_image_styles:
         - 16_9_512x288_focal_point_webp
         - 16_9_608x342_focal_point_webp
-    breakpoint_id: olivero.sm
+        - 16_9_720x405_focal_point_webp
+    breakpoint_id: dxpr_theme.sm
     multiplier: 1x
-breakpoint_group: olivero
+breakpoint_group: dxpr_theme
 fallback_image_style: 16_9_512x288_focal_point_webp

@@ -2,43 +2,36 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.case_study.body
     - field.field.node.case_study.field_case_study__client_link
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
+    - field.field.node.case_study.field_content
     - field.field.node.case_study.field_description
     - field.field.node.case_study.field_featured_image
     - field.field.node.case_study.field_tags
     - node.type.case_study
+    - workflows.workflow.basic_editorial
   module:
+    - content_moderation
     - link
     - media_library
     - path
+    - scheduler
     - text
 id: node.case_study.default
 targetEntityType: node
 bundle: case_study
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 3
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   field_case_study__client_link:
     type: link_default
-    weight: 7
+    weight: 12
     region: content
     settings:
       placeholder_url: ''
@@ -46,22 +39,30 @@ content:
     third_party_settings: {  }
   field_case_study__client_logo:
     type: media_library_widget
-    weight: 6
+    weight: 9
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_case_study__client_name:
     type: string_textfield
-    weight: 5
+    weight: 8
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 9
+      placeholder: ''
+    third_party_settings: {  }
   field_description:
     type: string_textarea
-    weight: 1
+    weight: 6
     region: content
     settings:
       rows: 5
@@ -69,58 +70,73 @@ content:
     third_party_settings: {  }
   field_featured_image:
     type: media_library_widget
-    weight: 2
+    weight: 10
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 4
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 13
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
       placeholder: ''
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 8
+  moderation_state:
+    type: moderation_state_default
+    weight: 0
     region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 11
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_status:
+    type: scheduler_moderation
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 17
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 12
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 4
     region: content
     settings:
       size: 60
@@ -128,7 +144,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
@@ -136,4 +152,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  publish_state: true
+  unpublish_state: true

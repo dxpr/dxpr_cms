@@ -26,6 +26,6 @@ matchers:
       bundles:
         document: document
       group_by_bundle: false
-      substitution_type: media_download_inline
+      substitution_type: media
       limit: 100
     weight: 0

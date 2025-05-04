@@ -1,7 +1,7 @@
 /.cache
 /.phpunit.result.cache
-/composer.lock
 /composer.json
+/composer.lock
 /cypress
 node_modules
 patches.json
@@ -11,4 +11,4 @@ patches.lock.json
 /.editorconfig
 /.gitattributes
 .DS_Store
-.idea/
+eca.model.*.yml

@@ -2,11 +2,8 @@ langcode: en
 status: open
 dependencies:
   module:
-    - antibot
     - honeypot
 third_party_settings:
-  antibot:
-    antibot: true
   honeypot:
     honeypot: true
 weight: 0
@@ -17,7 +14,7 @@ template: false
 archive: false
 id: contact_form
 title: Contact
-description: 'A basic site-wide contact form for your website. Submissions are stored as well as emailed to the site administrator.'
+description: '<p>A basic site-wide contact form for your website. Submissions are stored as well as emailed to the site administrator.</p>'
 categories: {  }
 elements: |-
   name:
@@ -32,6 +29,8 @@ elements: |-
     '#type': textarea
     '#title': Message
     '#required': true
+  captcha:
+    '#type': captcha
 css: ''
 javascript: ''
 settings:
@@ -41,7 +40,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: /contact
+  page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both

@@ -4,7 +4,6 @@
 ## Usage: rebuild
 ## Example: "ddev rebuild"
 
-ddev stop
-ddev delete --omit-snapshot --yes
+ddev drush sql:drop -y
 rm -r -f vendor $DDEV_DOCROOT composer.* patches.lock.json
-ddev start
+ddev restart
