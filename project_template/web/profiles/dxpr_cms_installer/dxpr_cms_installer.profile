@@ -94,7 +94,7 @@ function dxpr_cms_uninstall_unused_ai_modules(): void {
   // failed, don't do anything.
   if (count($unusable_providers) < count($providers)) {
     foreach ($unusable_providers as $plugin) {
-      \Drupal::service(ModuleInstallerInterface::class)->uninstall([
+      \Drupal::service('module_installer')->uninstall([
         $plugin->getModuleDataName(),
       ]);
     }
