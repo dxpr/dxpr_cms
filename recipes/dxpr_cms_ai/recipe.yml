@@ -12,12 +12,15 @@ install:
   - ai_assistant_api
   - ai_chatbot
   - ai_agents
+  - analyze_ai_brand_voice
+  - analyze
   - menu_link_content
   - markdownify
   - markdownify_path
 recipes:
   - core/recipes/content_editor_role
   - dxpr_cms_privacy_basic
+  - dxpr_cms_roles
 input:
   # This input is not actually used in our config actions; it's only here to
   # provide a toggle for the API key fields in a form.
@@ -142,11 +145,25 @@ config:
       enable: []
     klaro.klaro_app.ai_alt_text_generation:
       enable: []
+    # Grant permissions to roles.
     user.role.content_editor:
+      grantPermissions:
+        - 'generate ai alt tags'
+        - 'view analyze reports'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'view analyze reports'
+    user.role.site_bui:
+      grantPermissions:
+        - 'administer analyze'
+        - 'view analyze reports'
+        # Markdownify related setup.
+        - 'administer markdownify'
+    user.role.marketer:
+      grantPermissions:
+        - 'view analyze reports'
       grantPermission: 'generate ai alt tags'
     # Markdownify related setup.
-    user.role.site_bui:
-      grantPermission: 'administer markdownify'
     markdownify.settings:
       simpleConfigUpdate:
         supported_entity_types:
