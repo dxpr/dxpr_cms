@@ -13,3 +13,4 @@ patches.lock.json
 .DS_Store
 eca.model.*.yml
 .specstory/
+.idea/
