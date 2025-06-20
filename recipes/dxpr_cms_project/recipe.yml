@@ -2,6 +2,7 @@ name: Projects
 type: Dxpr CMS
 description: Adds a project content type and listing page.
 recipes:
+  - core/recipes/content_editor_role
   - dxpr_cms_page
 install:
   - link

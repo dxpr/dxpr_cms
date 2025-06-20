@@ -38,3 +38,6 @@ config:
       grantPermission: 'use klaro'
     user.role.authenticated:
       grantPermission: 'use klaro'
+    user.role.site_bui:
+      grantPermissions:
+        - 'use menu link attributes'

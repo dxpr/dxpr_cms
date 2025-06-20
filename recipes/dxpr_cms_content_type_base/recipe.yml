@@ -21,6 +21,7 @@ install:
   - layout_builder
   - linkit
   - node
+  - file
   # We don't specifically use Pathauto in this recipe, but we can safely
   # assume that content types built on our foundation will want to.
   - pathauto
@@ -100,6 +101,40 @@ config:
         - 'schedule publishing of nodes'
         - 'view any unpublished content'
         - 'view scheduled content'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'administer display modes'
+        - 'access taxonomy overview'
+        - 'create terms in tags'
+        - 'edit terms in tags'
+        - 'administer url aliases'
+        - 'create url aliases'
+        - 'access files overview'
+        - 'view latest version'
+        - 'view any unpublished content'
+    user.role.marketer:
+      grantPermissions:
+        - 'administer display modes'
+        - 'access taxonomy overview'
+        - 'create terms in tags'
+        - 'edit terms in tags'
+        - 'administer url aliases'
+        - 'create url aliases'
+        - 'access files overview'
+        - 'view latest version'
+    user.role.site_bui:
+      grantPermissions:
+        - 'administer display modes'
+        - 'access taxonomy overview'
+        - 'create terms in tags'
+        - 'edit terms in tags'
+        - 'administer url aliases'
+        - 'create url aliases'
+        - 'access files overview'
+        - 'configure any layout'
+        - 'create and edit custom blocks'
+        - 'view latest version'
+        - 'view any unpublished content'
     # Disable the taxonomy and media scheduler views because they are not
     # needed and break the navigation menu.
     views.view.scheduler_scheduled_media:

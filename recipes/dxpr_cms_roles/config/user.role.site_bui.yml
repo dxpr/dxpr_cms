@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies: { }
+id: site_bui
+label: 'Site Builder'
+weight: -6
+is_admin: false
+permissions:
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer users'
+  - 'administer themes'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'access administration pages'
+  - 'access content overview'
+  - 'bypass node access'
+  - 'view all revisions'
+  - 'revert all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'access site in maintenance mode'
+  - 'access user profiles'
+  - 'select account cancellation method'
+  - 'view user email addresses'
+#  Probably, deprecated.
+  - 'administer block css classes'
+  - 'administer entity browsers'
+  - 'administer xmlsitemap'
+  - 'override xmlsitemap link settings'
+
+
+

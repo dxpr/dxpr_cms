@@ -1,6 +1,8 @@
 name: Admin UI
 type: Dxpr CMS
 description: Sets up a nice administrative theme and navigation.
+recipes:
+  - dxpr_cms_roles
 install:
   - coffee
   - dashboard
@@ -40,3 +42,15 @@ config:
         set_default_widget: true
     user.role.authenticated:
       grantPermission: 'access coffee'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'access toolbar'
+        - 'use admin toolbar search'
+    user.role.marketer:
+      grantPermissions:
+        - 'access toolbar'
+        - 'use admin toolbar search'
+    user.role.site_bui:
+      grantPermissions:
+        - 'access toolbar'
+        - 'use admin toolbar search'

@@ -5,6 +5,7 @@ recipes:
   - dxpr_cms_page
   - dxpr_cms_dxpr_builder
   - core/recipes/basic_html_format_editor
+  - core/recipes/content_editor_role
 install:
   - add_content_by_bundle
   - dxpr_builder_page

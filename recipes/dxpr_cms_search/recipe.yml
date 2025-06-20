@@ -1,6 +1,8 @@
 name: Search
 type: Dxpr CMS
 description: Adds a search to help visitors find content.
+recipes:
+  - dxpr_cms_roles
 install:
   - block
   # Basic search is for node entity type only at the moment.
@@ -33,3 +35,12 @@ config:
       grantPermission: 'use search_api_autocomplete for content_autocomplete'
     user.role.authenticated:
       grantPermission: 'use search_api_autocomplete for content_autocomplete'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'use advanced search'
+    user.role.marketer:
+      grantPermissions:
+        - 'use advanced search'
+    user.role.site_bui:
+      grantPermissions:
+        - 'use advanced search'
