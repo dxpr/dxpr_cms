@@ -44,7 +44,6 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'access dxpr_builder_media_modal entity browser pages'
         - 'use moderation dashboard'
     user.role.site_bui:
       grantPermissionsForEachNodeType:
@@ -58,15 +57,9 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'access dxpr_builder_media_modal entity browser pages'
         - 'use moderation dashboard'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
-        - 'use editorial transition archive'
-        - 'use editorial transition archived_draft'
-        - 'use editorial transition archived_published'
-        - 'use editorial transition create_new_draft'
-        - 'use editorial transition publish'
     user.role.marketer:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -77,13 +70,7 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'access dxpr_builder_media_modal entity browser pages'
         - 'use moderation dashboard'
-        - 'use editorial transition archive'
-        - 'use editorial transition archived_draft'
-        - 'use editorial transition archived_published'
-        - 'use editorial transition create_new_draft'
-        - 'use editorial transition publish'
     user.role.content_editor:
       grantPermissions:
         - 'create drag_and_drop_page content'
@@ -91,9 +78,3 @@ config:
         - 'delete any drag_and_drop_page content'
         - 'edit any drag_and_drop_page content'
         - 'edit with dxpr builder'
-        - 'access dxpr_builder_media_modal entity browser pages'
-        - 'use editorial transition archive'
-        - 'use editorial transition archived_draft'
-        - 'use editorial transition archived_published'
-        - 'use editorial transition create_new_draft'
-        - 'use editorial transition publish'

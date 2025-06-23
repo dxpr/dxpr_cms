@@ -45,12 +45,9 @@ config:
     user.role.content_administrator:
       grantPermissions:
         - 'access toolbar'
-        - 'use admin toolbar search'
     user.role.marketer:
       grantPermissions:
         - 'access toolbar'
-        - 'use admin toolbar search'
     user.role.site_bui:
       grantPermissions:
         - 'access toolbar'
-        - 'use admin toolbar search'
