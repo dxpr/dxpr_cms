@@ -13,6 +13,7 @@ install:
   - ai_chatbot
   - ai_agents
   - analyze_ai_brand_voice
+  - analyze_ai_sentiment
   - analyze
   - menu_link_content
   - markdownify
