@@ -4,6 +4,7 @@ type: 'Builder'
 recipes:
   - dxpr_cms_page
   - core/recipes/full_html_format_editor
+  - dxpr_cms_roles
 install:
   - block_content
   - contact_block
@@ -31,3 +32,49 @@ config:
       simple_config_update:
         name: 'DXPR CMS'
         page.front: '/home'
+    user.role.content_administrator:
+      grantPermissionsForEachNodeType:
+        - 'create %bundle content'
+        - 'edit own %bundle content'
+        - 'edit any %bundle content'
+        - 'delete own %bundle content'
+        - 'delete any %bundle content'
+        - 'view %bundle revisions'
+        - 'revert %bundle revisions'
+        - 'delete %bundle revisions'
+      grantPermissions:
+        - 'edit with dxpr builder'
+        - 'use moderation dashboard'
+    user.role.site_bui:
+      grantPermissionsForEachNodeType:
+        - 'create %bundle content'
+        - 'edit own %bundle content'
+        - 'edit any %bundle content'
+        - 'delete own %bundle content'
+        - 'delete any %bundle content'
+        - 'view %bundle revisions'
+        - 'revert %bundle revisions'
+        - 'delete %bundle revisions'
+      grantPermissions:
+        - 'edit with dxpr builder'
+        - 'use moderation dashboard'
+        - 'administer dxpr_builder_profile'
+        - 'administer workflows'
+    user.role.marketer:
+      grantPermissionsForEachNodeType:
+        - 'create %bundle content'
+        - 'edit own %bundle content'
+        - 'delete own %bundle content'
+        - 'view %bundle revisions'
+        - 'revert %bundle revisions'
+        - 'delete %bundle revisions'
+      grantPermissions:
+        - 'edit with dxpr builder'
+        - 'use moderation dashboard'
+    user.role.content_editor:
+      grantPermissions:
+        - 'create drag_and_drop_page content'
+        - 'delete drag_and_drop_page revisions'
+        - 'delete any drag_and_drop_page content'
+        - 'edit any drag_and_drop_page content'
+        - 'edit with dxpr builder'

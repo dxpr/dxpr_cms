@@ -4,6 +4,7 @@ description: 'Adds support for translations.'
 recipes:
   - dxpr_cms_content_type_base
   - dxpr_cms_dxpr_builder
+  - dxpr_cms_roles
 install:
   - config_translation
   - content_translation
@@ -37,9 +38,8 @@ config:
           value:
             untranslatable_fields_hide: '1'
     user.role.content_administrator:
-      createIfNotExists:
-        id: content_administrator
-        label: Content Administrator
+      grantPermissionsForEachNodeType:
+        - 'translate %bundle node'
       grantPermissions:
         - 'create content translations'
         - 'delete content translations'
@@ -51,36 +51,27 @@ config:
         - 'translate editable entities'
         - 'translate menu_link_content'
         - 'translate tags taxonomy_term'
-      grantPermissionsForEachNodeType:
-        - 'translate %bundle node'
     user.role.content_editor:
-      createIfNotExists:
-        id: content_editor
-        label: Content editor
+      grantPermissionsForEachNodeType:
+        - 'translate %bundle node'
       grantPermissions:
         - 'create content translations'
         - 'delete content translations'
         - 'update content translations'
         - 'translate editable entities'
         - 'translate tags taxonomy_term'
-      grantPermissionsForEachNodeType:
-        - 'translate %bundle node'
     user.role.marketer:
-      createIfNotExists:
-        id: marketer
-        label: Marketer
+      grantPermissionsForEachNodeType:
+        - 'translate %bundle node'
       grantPermissions:
         - 'create content translations'
         - 'delete content translations'
         - 'update content translations'
         - 'translate editable entities'
         - 'translate tags taxonomy_term'
+    user.role.site_bui:
       grantPermissionsForEachNodeType:
         - 'translate %bundle node'
-    user.role.site_bui:
-      createIfNotExists:
-        id: site_bui
-        label: Site Builder
       grantPermissions:
         - 'create content translations'
         - 'delete content translations'
@@ -89,11 +80,11 @@ config:
         - 'accept translation jobs'
         - 'create translation jobs'
         - 'submit translation jobs'
+        - 'delete translation jobs'
         - 'translate any entity'
         - 'translate block_content'
         - 'translate editable entities'
         - 'translate interface'
         - 'translate menu_link_content'
         - 'translate tags taxonomy_term'
-      grantPermissionsForEachNodeType:
-        - 'translate %bundle node'
+        - 'administer tmgmt'

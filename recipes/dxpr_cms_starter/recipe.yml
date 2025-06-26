@@ -19,6 +19,7 @@ recipes:
   - dxpr_cms_dxpr_builder
   - dxpr_cms_dxpr_theme
   - dxpr_cms_search
+  - dxpr_cms_roles
 install:
   - automated_cron
   - automatic_updates
@@ -108,9 +109,48 @@ config:
         - 'revert all revisions'
         - 'view all revisions'
         - 'view the administration theme'
-    node.settings:
-      simpleConfigUpdate:
-        use_admin_theme: true
+    user.role.content_administrator:
+      grantPermissionsForEachMediaType:
+        - 'create %bundle media'
+        - 'delete any %bundle media'
+        - 'edit any %bundle media'
+      grantPermissions:
+        # Managing media entities.
+        - 'access media overview'
+        - 'create media'
+        - 'delete media'
+        - 'update media'
+        - 'view media'
+        - 'view all media revisions'
+        - 'view own unpublished media'
+    user.role.site_bui:
+      grantPermissionsForEachMediaType:
+        - 'create %bundle media'
+        - 'delete any %bundle media'
+        - 'edit any %bundle media'
+      grantPermissions:
+        - 'access media overview'
+        - 'create media'
+        - 'delete media'
+        - 'update media'
+        - 'view media'
+        - 'view all media revisions'
+        - 'view own unpublished media'
+        - 'administer views'
+    user.role.marketer:
+      grantPermissionsForEachMediaType:
+        - 'create %bundle media'
+        - 'delete any %bundle media'
+        - 'edit any %bundle media'
+      grantPermissions:
+        # Managing media entities.
+        - 'access media overview'
+        - 'create media'
+        - 'delete media'
+        - 'update media'
+        - 'view media'
+        - 'view all media revisions'
+        - 'view own unpublished media'
     user.role.authenticated:
       grantPermissions:
         - 'delete own files'
@@ -121,6 +161,9 @@ config:
         verify_mail: true
         register: admin_only
         cancel_method: user_cancel_block
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
     announcements_feed.settings:
       simpleConfigUpdate:
         limit: 2

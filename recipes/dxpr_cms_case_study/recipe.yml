@@ -3,6 +3,7 @@ type: Dxpr CMS
 description: Adds a case study content type and listing page.
 recipes:
   - dxpr_cms_page
+  - core/recipes/content_editor_role
 install:
   - link
   - add_content_by_bundle

@@ -92,6 +92,10 @@
       "type": "path",
       "url": "recipes/dxpr_cms_remote_video"
     },
+    "roles": {
+      "type": "path",
+      "url": "recipes/dxpr_cms_roles"
+    },
     "search": {
       "type": "path",
       "url": "recipes/dxpr_cms_search"

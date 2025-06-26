@@ -2,7 +2,7 @@ name: Basic SEO
 description: Provides basic SEO best practices.
 type: Dxpr CMS
 recipes:
-  - core/recipes/content_editor_role
+  - dxpr_cms_roles
 install:
   - easy_breadcrumb
   - node
@@ -45,3 +45,7 @@ config:
     user.role.content_editor:
       # Allow access to the redirect views.
       grantPermission: 'administer redirects'
+    user.role.site_bui:
+      grantPermissions:
+        - 'administer redirect settings'
+        - 'administer redirects'

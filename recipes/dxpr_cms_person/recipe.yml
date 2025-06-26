@@ -2,6 +2,7 @@ name: Person Profiles
 type: Dxpr CMS
 description: Adds a person profile content type.
 recipes:
+  - core/recipes/content_editor_role
   - dxpr_cms_page
 install:
   - add_content_by_bundle

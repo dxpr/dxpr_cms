@@ -2,6 +2,7 @@ name: Basic page
 type: Dxpr CMS
 description: Adds a content type for simple pages.
 recipes:
+  - core/recipes/content_editor_role
   - dxpr_cms_content_type_base
 config:
   strict: false

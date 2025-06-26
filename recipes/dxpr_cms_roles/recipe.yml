@@ -1,0 +1,13 @@
+name: DXPR Standard Roles
+type: Dxpr CMS
+description: '@todo'
+recipes:
+  - core/recipes/content_editor_role
+install:
+  - user
+  - node
+  - system
+  - block
+config:
+  import:
+    user: '*'

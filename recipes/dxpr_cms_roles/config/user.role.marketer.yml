@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: { }
+id: marketer
+label: Marketer
+weight: -7
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'view the administration theme'
+  - 'view all revisions'
+  - 'revert all revisions'
+  - 'view own unpublished content'
+  - 'access content overview'
