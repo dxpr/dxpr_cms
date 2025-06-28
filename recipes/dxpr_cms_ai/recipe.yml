@@ -13,6 +13,8 @@ install:
   - ai_chatbot
   - ai_agents
   - menu_link_content
+  - markdownify
+  - markdownify_path
 recipes:
   - core/recipes/content_editor_role
   - dxpr_cms_privacy_basic
@@ -142,3 +144,10 @@ config:
       enable: []
     user.role.content_editor:
       grantPermission: 'generate ai alt tags'
+    # Markdownify related setup.
+    user.role.site_bui:
+      grantPermission: 'administer markdownify'
+    markdownify.settings:
+      simpleConfigUpdate:
+        supported_entity_types:
+          - node
