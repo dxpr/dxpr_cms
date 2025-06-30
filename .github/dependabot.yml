@@ -1,17 +1,30 @@
 version: 2
 updates:
+  # Main project composer dependencies (production)
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+
+  # Development composer dependencies
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    allow:
+      - dependency-type: "development"
+
   # Project template composer dependencies
   - package-ecosystem: "composer"
     directory: "/project_template"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
-
-  # Trial artifact dependencies
-  - package-ecosystem: "composer"
-    directory: "/trial/artifact_assets/dxpr_cms_trial"
-    schedule:
-      interval: "weekly"
 
   # Recipe composer dependencies
   - package-ecosystem: "composer"
@@ -67,6 +80,10 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_google_analytics"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
     directory: "/recipes/dxpr_cms_image"
     schedule:
       interval: "weekly"
@@ -103,6 +120,10 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "composer"
+    directory: "/recipes/dxpr_cms_roles"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
     directory: "/recipes/dxpr_cms_search"
     schedule:
       interval: "weekly"
@@ -118,11 +139,3 @@ updates:
     directory: "/recipes/dxpr_cms_starter"
     schedule:
       interval: "weekly"
-
-  # Development composer dependencies
-  - package-ecosystem: "composer"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    allow:
-      - dependency-type: "development"
