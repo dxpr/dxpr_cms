@@ -12,8 +12,8 @@
         "drupal/ai_provider_openai": "^1",
         "drupal/dxpr_cms_privacy_basic": "^1",
         "drupal/ai_content_strategy": "^1.0@beta",
-        "drupal/analyze_ai_brand_voice": "^1.0@beta",
-        "drupal/analyze_ai_sentiment-analyze_ai_sentiment": "^1.0@beta",
+        "drupal/analyze_ai_brand_voice": "^1.0@dev",
+        "drupal/analyze_ai_sentiment-analyze_ai_sentiment": "^1.0@dev",
         "league/commonmark": "^2.4",
         "drupal/markdownify": "^1.1"
     },
