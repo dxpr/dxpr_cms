@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Main project composer dependencies (production)
+  # Main project composer dependencies (production and development)
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
@@ -9,14 +9,6 @@ updates:
     allow:
       - dependency-type: "direct"
       - dependency-type: "indirect"
-
-  # Development composer dependencies
-  - package-ecosystem: "composer"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 5
-    allow:
       - dependency-type: "development"
 
   # Project template composer dependencies
