@@ -34,7 +34,7 @@ jobs:
             echo "recipes=[\"${{ github.event.inputs.recipe }}\"]" >> $GITHUB_OUTPUT
           else
             # Generate list of recipes with tests
-            recipes=$(find recipes -name "tests" -type d | sed 's|/tests||' | sed 's|recipes/||' | jq -R -s 'split("\n")[:-1]')
+            recipes=$(find recipes -name "tests" -type d | sed 's|/tests||' | sed 's|recipes/||' | jq -R . | jq -s .)
             echo "recipes=$recipes" >> $GITHUB_OUTPUT
           fi
 
