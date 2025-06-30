@@ -42,7 +42,7 @@ function dxpr_cms_installer_theme_form_installer_site_name_form_alter(array &$fo
     '#prefix' => '<div class="cms-installer__form-group">',
     '#suffix' => '</div>',
   ];
-  $form['site_name']['#default_value'] = t('Dxpr CMS');
+  $form['site_name']['#default_value'] = t('DXPR CMS');
   $form['svg'] = [
     '#theme' => 'step_svg',
     '#id' => 'name',

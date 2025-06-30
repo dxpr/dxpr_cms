@@ -1,5 +1,5 @@
 name: Images
-type: Dxpr CMS
+type: DXPR CMS
 description: Sets up base image configuration including responsive image styles, view modes, focal point-based cropping and SVG images.
 recipes:
   - core/recipes/image_media_type

@@ -1,11 +1,11 @@
-name: Dxpr CMS Installer
+name: DXPR CMS Installer
 type: profile
 core_version_requirement: '^11.1'
-description: 'Provides install-time tweaks for Dxpr CMS. Not to be used in production.'
+description: 'Provides install-time tweaks for DXPR CMS. Not to be used in production.'
 
 # Use the `distribution` key to skip the installer's profile selection step.
 distribution:
-  name: Dxpr CMS
+  name: DXPR CMS
   install:
     finish_url: 'home'
     theme: dxpr_cms_installer_theme

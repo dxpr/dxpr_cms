@@ -1,6 +1,6 @@
 name: SEO Tools
 description: Adds common search engine optimisation tools such as meta tags, XML sitemap, robots.txt management and more.
-type: Dxpr CMS
+type: DXPR CMS
 recipes:
   - core/recipes/image_media_type
 install:

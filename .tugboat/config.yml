@@ -41,7 +41,7 @@ services:
             --yes \
             --db-url=mysql://tugboat:tugboat@db/tugboat \
             --account-pass=admin \
-            --site-name="Dxpr CMS Demo"
+            --site-name="DXPR CMS Demo"
       build:
         # Run composer install and perform database updates
         - |

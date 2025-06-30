@@ -1,5 +1,5 @@
 name: News
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds a news content type and listing page.
 recipes:
   - dxpr_cms_page

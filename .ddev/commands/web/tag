@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## Description: Tags a version of Dxpr CMS and updates version constraints.
+## Description: Tags a version of DXPR CMS and updates version constraints.
 ## Usage: tag VERSION
 ## Example: "ddev tag 1.2.3"
 

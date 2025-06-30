@@ -1,5 +1,5 @@
 name: Person Profiles
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds a person profile content type.
 recipes:
   - core/recipes/content_editor_role

@@ -1,5 +1,5 @@
 name: Case Studies
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds a case study content type and listing page.
 recipes:
   - dxpr_cms_page

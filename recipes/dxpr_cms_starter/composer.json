@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_starter",
-    "description": "Applies the foundational Dxpr CMS recipes.",
+    "description": "Applies the foundational DXPR CMS recipes.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {

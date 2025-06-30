@@ -1,5 +1,5 @@
 name: Admin UI
-type: Dxpr CMS
+type: DXPR CMS
 description: Sets up a nice administrative theme and navigation.
 recipes:
   - dxpr_cms_roles

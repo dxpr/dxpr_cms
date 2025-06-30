@@ -1,5 +1,5 @@
 name: Forms
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds a simple contact form, and tools for building forms.
 recipes:
   - dxpr_cms_anti_spam

@@ -3,7 +3,7 @@
   /**
    * Renders a client-side progress bar.
    *
-   * This is for the Dxpr CMS installer and is not meant to be reused.
+   * This is for the DXPR CMS installer and is not meant to be reused.
    */
   Drupal.theme.progressBar = function (id) {
     const escapedId = Drupal.checkPlain(id);

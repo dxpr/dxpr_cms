@@ -1,5 +1,5 @@
 name: DXPR Standard Roles
-type: Dxpr CMS
+type: DXPR CMS
 description: '@todo'
 recipes:
   - core/recipes/content_editor_role

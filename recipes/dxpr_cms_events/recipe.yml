@@ -1,6 +1,6 @@
 name: Events
 description: Adds an event content type and listing page.
-type: Dxpr CMS
+type: DXPR CMS
 recipes:
   - core/recipes/content_editor_role
   - core/recipes/document_media_type

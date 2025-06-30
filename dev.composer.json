@@ -1,6 +1,6 @@
 {
   "_info": [
-    "This file contains internal development dependencies and patches for Dxpr CMS.",
+    "This file contains internal development dependencies and patches for DXPR CMS.",
     "Do NOT use it to build a real site!"
   ],
   "repositories": {

@@ -1,5 +1,5 @@
 name: Google Analytics
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds tracking of website traffic using Google Analytics and Google Tag Manager. Requires a Google Tag Manager ID.
 recipes:
   - dxpr_cms_privacy_basic

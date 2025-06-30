@@ -1,5 +1,5 @@
 name: Search
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds a search to help visitors find content.
 recipes:
   - dxpr_cms_roles

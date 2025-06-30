@@ -1,5 +1,5 @@
 name: Anti-spam
-type: Dxpr CMS
+type: DXPR CMS
 description: Sets up anti-spam and anti-abuse functionality.
 install:
   - captcha

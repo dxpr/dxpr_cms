@@ -1,6 +1,6 @@
 name: Basic SEO
 description: Provides basic SEO best practices.
-type: Dxpr CMS
+type: DXPR CMS
 recipes:
   - dxpr_cms_roles
 install:

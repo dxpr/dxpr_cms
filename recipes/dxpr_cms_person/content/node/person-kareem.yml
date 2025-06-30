@@ -41,11 +41,11 @@ default:
       langcode: en
   field_content:
     -
-      value: "<p>Kareem is a fast learner with a strong grasp of Dxpr CMS. He likes the structured approach to configuration, seeking concise and clear guidance on utilizing existing functionalities.</p><blockquote><p>Dxpr CMS allows him to efficiently build and customize sites while maintaining a focus on user experience.</p></blockquote><p>Kareem's strengths:</p><ul><li><strong>Rapid prototyping:</strong> Quickly translating user needs into functional Drupal-based prototypes.</li><li><strong>User-centric design:</strong> Prioritizing user experience in all aspects of site development.</li><li><strong>Efficient workflow:</strong> Leveraging structured configurations and clear guidelines to streamline development processes.</li><li><strong>Adaptability:</strong> Continuously learning and adapting to new Drupal features and best practices.</li></ul>"
+      value: "<p>Kareem is a fast learner with a strong grasp of DXPR CMS. He likes the structured approach to configuration, seeking concise and clear guidance on utilizing existing functionalities.</p><blockquote><p>DXPR CMS allows him to efficiently build and customize sites while maintaining a focus on user experience.</p></blockquote><p>Kareem's strengths:</p><ul><li><strong>Rapid prototyping:</strong> Quickly translating user needs into functional Drupal-based prototypes.</li><li><strong>User-centric design:</strong> Prioritizing user experience in all aspects of site development.</li><li><strong>Efficient workflow:</strong> Leveraging structured configurations and clear guidelines to streamline development processes.</li><li><strong>Adaptability:</strong> Continuously learning and adapting to new Drupal features and best practices.</li></ul>"
       format: content_format
   field_description:
     -
-      value: 'Kareem is highly motivated and results-oriented. He possesses a unique blend of technical aptitude and a keen understanding of user experience. As a Dxpr CMS sitebuilder, Kareem excels at rapidly creating engaging user interfaces.'
+      value: 'Kareem is highly motivated and results-oriented. He possesses a unique blend of technical aptitude and a keen understanding of user experience. As a DXPR CMS sitebuilder, Kareem excels at rapidly creating engaging user interfaces.'
   field_featured_image:
     -
       entity: da8e1d35-d11a-4092-a33e-347534dd371a
@@ -57,7 +57,7 @@ default:
       value: '+33 6 39 98 43 65'
   field_person__role_job_title:
     -
-      value: 'Dxpr CMS Sitebuilder & Marketer'
+      value: 'DXPR CMS Sitebuilder & Marketer'
   field_tags:
     -
       entity: d48adeba-e388-4e82-820b-98bbd2f35a46

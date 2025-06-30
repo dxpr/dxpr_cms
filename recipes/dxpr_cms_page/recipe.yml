@@ -1,5 +1,5 @@
 name: Basic page
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds a content type for simple pages.
 recipes:
   - core/recipes/content_editor_role

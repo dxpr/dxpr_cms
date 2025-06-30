@@ -1,5 +1,5 @@
 name: AI Assistant
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds integration with AI services, such as alt text generation and a chat bot to assist with site building. Requires an API key from Open AI or Anthropic.
 install:
   - key

@@ -1,5 +1,5 @@
 name: Content Basics
-type: Dxpr CMS
+type: DXPR CMS
 description: Provides basic tools for creating content.
 recipes:
   - core/recipes/content_editor_role

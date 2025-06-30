@@ -1,7 +1,7 @@
 {
   "name": "dxpr-cms-dev",
   "version": "0.0.0",
-  "description": "**WARNING:** This repository is for Dxpr CMS development only. Do not use it to build sites.",
+  "description": "**WARNING:** This repository is for DXPR CMS development only. Do not use it to build sites.",
   "directories": {
     "doc": "docs"
   },
