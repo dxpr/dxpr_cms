@@ -156,17 +156,12 @@ config:
     user.role.content_administrator:
       grantPermissions:
         - 'access ai content strategy'
+        - 'view analyze reports'
     user.role.site_bui:
       grantPermissions:
         - 'access ai content strategy'
         - 'view analyze reports'
-    user.role.content_administrator:
-      grantPermissions:
-        - 'view analyze reports'
-    user.role.site_bui:
-      grantPermissions:
         - 'administer analyze'
-        - 'view analyze reports'
         # Markdownify related setup.
         - 'administer markdownify'
     user.role.marketer:
