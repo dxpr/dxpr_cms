@@ -13,6 +13,9 @@ install:
   - ai_chatbot
   - ai_agents
   - ai_content_strategy
+  - analyze_ai_brand_voice
+  - analyze_ai_sentiment
+  - analyze
   - menu_link_content
   - markdownify
   - markdownify_path
@@ -156,11 +159,21 @@ config:
     user.role.site_bui:
       grantPermissions:
         - 'access ai content strategy'
+        - 'view analyze reports'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'view analyze reports'
+    user.role.site_bui:
+      grantPermissions:
+        - 'administer analyze'
+        - 'view analyze reports'
         # Markdownify related setup.
         - 'administer markdownify'
     user.role.marketer:
       grantPermissions:
         - 'access ai content strategy'
+        - 'view analyze reports'
+      grantPermission: 'generate ai alt tags'
     # Markdownify related setup.
     markdownify.settings:
       simpleConfigUpdate:
