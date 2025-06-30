@@ -1,0 +1,18 @@
+status:
+  node:
+    blog:
+      brand_voice_analyzer: true
+    case_study:
+      brand_voice_analyzer: true
+    drag_and_drop_page:
+      brand_voice_analyzer: true
+    event:
+      brand_voice_analyzer: true
+    news:
+      brand_voice_analyzer: true
+    page:
+      brand_voice_analyzer: true
+    person:
+      brand_voice_analyzer: true
+    project:
+      brand_voice_analyzer: true
