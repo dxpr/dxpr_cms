@@ -33,9 +33,19 @@ jobs:
           if [ -n "${{ github.event.inputs.recipe }}" ]; then
             echo "recipes=[\"${{ github.event.inputs.recipe }}\"]" >> $GITHUB_OUTPUT
           else
-            # Generate list of recipes with tests
-            recipes=$(find recipes -name "tests" -type d | sed 's|/tests||' | sed 's|recipes/||' | jq -R . | jq -s .)
-            echo "recipes=$recipes" >> $GITHUB_OUTPUT
+            # Generate list of recipes with tests - simpler approach
+            recipe_list=""
+            for recipe_dir in recipes/*/tests; do
+              if [ -d "$recipe_dir" ]; then
+                recipe_name=$(basename $(dirname "$recipe_dir"))
+                if [ -z "$recipe_list" ]; then
+                  recipe_list="\"$recipe_name\""
+                else
+                  recipe_list="$recipe_list,\"$recipe_name\""
+                fi
+              fi
+            done
+            echo "recipes=[$recipe_list]" >> $GITHUB_OUTPUT
           fi
 
   phpunit-tests:
