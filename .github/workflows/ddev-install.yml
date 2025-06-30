@@ -1,4 +1,4 @@
-name: DXPR CMS DDEV
+name: DXPR CMS DDEV Installation Test
 
 on:
   push:
@@ -11,7 +11,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  install:
+    name: Test DXPR CMS Installation
     runs-on: ubuntu-latest
 
     steps:
@@ -25,9 +26,7 @@ jobs:
           sudo install -m 0755 -d /etc/apt/keyrings
           curl -fsSL https://pkg.ddev.com/apt/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/ddev.gpg > /dev/null
           sudo chmod a+r /etc/apt/keyrings/ddev.gpg
-          sudo sh -c 'echo ""'
-          echo "deb [signed-by=/etc/apt/keyrings/ddev.gpg] https://pkg.ddev.com/apt/ * *" | sudo tee /etc/apt/sources.list.d/ddev.list >/dev/null
-          sudo sh -c 'echo ""'
+          sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/ddev.gpg] https://pkg.ddev.com/apt/ * *" > /etc/apt/sources.list.d/ddev.list'
           sudo apt update && sudo apt install -y ddev
 
       - name: Start DXPR CMS DDEV Environment

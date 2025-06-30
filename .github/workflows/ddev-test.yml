@@ -1,0 +1,171 @@
+name: DXPR CMS DDEV Test Suite
+
+on:
+  push:
+    branches: [ 1.x, wip ]
+  pull_request:
+    branches: [ 1.x ]
+  workflow_run:
+    workflows: [ "DXPR CMS DDEV Installation Test" ]
+    types: [ completed ]
+    branches: [ 1.x ]
+  workflow_dispatch:
+    inputs:
+      recipe:
+        description: 'Specific recipe to test (e.g., dxpr_cms_forms). Leave empty to test all.'
+        required: false
+        type: string
+
+jobs:
+  setup:
+    name: Setup DXPR CMS Test Environment
+    runs-on: ubuntu-latest
+    outputs:
+      recipes: ${{ steps.matrix.outputs.recipes }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Generate test matrix
+        id: matrix
+        run: |
+          if [ -n "${{ github.event.inputs.recipe }}" ]; then
+            echo "recipes=[\"${{ github.event.inputs.recipe }}\"]" >> $GITHUB_OUTPUT
+          else
+            # Generate list of recipes with tests
+            recipes=$(find recipes -name "tests" -type d | sed 's|/tests||' | sed 's|recipes/||' | jq -R -s 'split("\n")[:-1]')
+            echo "recipes=$recipes" >> $GITHUB_OUTPUT
+          fi
+
+  phpunit-tests:
+    name: PHPUnit Tests (${{ matrix.recipe }})
+    runs-on: ubuntu-latest
+    needs: setup
+    if: needs.setup.outputs.recipes != '[]'
+    strategy:
+      fail-fast: false
+      matrix:
+        recipe: ${{ fromJson(needs.setup.outputs.recipes) }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install DDEV
+        run: |
+          sudo install -m 0755 -d /etc/apt/keyrings
+          curl -fsSL https://pkg.ddev.com/apt/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/ddev.gpg > /dev/null
+          sudo chmod a+r /etc/apt/keyrings/ddev.gpg
+          sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/ddev.gpg] https://pkg.ddev.com/apt/ * *" > /etc/apt/sources.list.d/ddev.list'
+          sudo apt update && sudo apt install -y ddev
+
+      - name: Start DDEV and install DXPR CMS
+        run: |
+          ddev start
+          ddev drush site:install dxpr_cms_installer --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
+
+      - name: Run PHPUnit tests for ${{ matrix.recipe }}
+        run: |
+          echo "Testing recipe: ${{ matrix.recipe }}"
+          if [ -d "recipes/${{ matrix.recipe }}/tests/src" ]; then
+            ddev exec vendor/bin/phpunit --configuration=web/core --display-skipped recipes/${{ matrix.recipe }}/tests/src
+          else
+            echo "No PHPUnit tests found for ${{ matrix.recipe }}"
+          fi
+
+  cypress-tests:
+    name: Cypress E2E Tests
+    runs-on: ubuntu-latest
+    needs: setup
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install DDEV
+        run: |
+          sudo install -m 0755 -d /etc/apt/keyrings
+          curl -fsSL https://pkg.ddev.com/apt/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/ddev.gpg > /dev/null
+          sudo chmod a+r /etc/apt/keyrings/ddev.gpg
+          sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/ddev.gpg] https://pkg.ddev.com/apt/ * *" > /etc/apt/sources.list.d/ddev.list'
+          sudo apt update && sudo apt install -y ddev
+
+      - name: Start DDEV with Selenium
+        run: |
+          # Start DDEV with selenium service
+          ddev start
+          # Install DXPR CMS
+          ddev drush site:install dxpr_cms_installer --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
+
+      - name: Install Node.js dependencies
+        run: |
+          ddev exec npm clean-install
+
+      - name: Run specific recipe tests or all E2E tests
+        run: |
+          if [ -n "${{ github.event.inputs.recipe }}" ]; then
+            if [ -d "recipes/${{ github.event.inputs.recipe }}/tests/e2e" ]; then
+              echo "Running E2E tests for ${{ github.event.inputs.recipe }}"
+              ddev exec npm test -- --spec="recipes/${{ github.event.inputs.recipe }}/tests/e2e/*.cy.js"
+            else
+              echo "No E2E tests found for ${{ github.event.inputs.recipe }}"
+            fi
+          else
+            echo "Running all E2E tests"
+            ddev exec npm test
+          fi
+
+      - name: Upload Cypress screenshots on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          retention-days: 7
+
+      - name: Upload Cypress videos on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          retention-days: 7
+
+  full-test-suite:
+    name: Full DDEV Test Suite
+    runs-on: ubuntu-latest
+    if: github.event.inputs.recipe == ''
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install DDEV
+        run: |
+          sudo install -m 0755 -d /etc/apt/keyrings
+          curl -fsSL https://pkg.ddev.com/apt/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/ddev.gpg > /dev/null
+          sudo chmod a+r /etc/apt/keyrings/ddev.gpg
+          sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/ddev.gpg] https://pkg.ddev.com/apt/ * *" > /etc/apt/sources.list.d/ddev.list'
+          sudo apt update && sudo apt install -y ddev
+
+      - name: Start DDEV and install DXPR CMS  
+        run: |
+          ddev start
+          ddev drush site:install dxpr_cms_installer --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
+
+      - name: Run full DDEV test suite
+        run: |
+          echo "Running complete DDEV test suite..."
+          ddev test
+
+      - name: Upload test artifacts on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-artifacts
+          path: |
+            cypress/screenshots
+            cypress/videos
+            web/sites/simpletest
+          retention-days: 7 
