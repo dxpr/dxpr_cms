@@ -131,3 +131,23 @@ updates:
     directory: "/recipes/dxpr_cms_starter"
     schedule:
       interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/easy_email_express"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/easy_email_standard"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/easy_email_text_format"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/easy_email_types_core"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/recipes/easy_email_types_default"
+    schedule:
+      interval: "weekly"
