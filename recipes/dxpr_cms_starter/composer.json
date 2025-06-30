@@ -4,9 +4,9 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/automatic_updates": "^3.1.7",
+        "drupal/automatic_updates": "^4",
         "drupal/bpmn_io": "^2.0.6",
-        "drupal/core": ">=10.4",
+        "drupal/core": ">=10.4 || ^11",
         "drupal/eca": "^2.1.4",
         "drupal/dashboard": "^2",
         "drupal/dxpr_cms_dxpr_builder": "*",
