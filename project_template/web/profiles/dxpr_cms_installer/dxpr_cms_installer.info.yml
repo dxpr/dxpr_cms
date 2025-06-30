@@ -7,7 +7,7 @@ description: 'Provides install-time tweaks for Dxpr CMS. Not to be used in produ
 distribution:
   name: Dxpr CMS
   install:
-    finish_url: '/home'
+    finish_url: 'home'
     theme: dxpr_cms_installer_theme
 
 forms:
