@@ -34,25 +34,14 @@ jobs:
         run: |
           ddev start
 
-      - name: Wait for services to be ready
-        run: |
-          # Wait for database to be ready
-          ddev exec "mysqladmin ping -h db -u db -pdb --wait --retry=15"
-          # Wait for web service to be ready
-          timeout 20 bash -c 'until ddev exec "curl -f http://localhost" &>/dev/null; do sleep 2; done'
-
       - name: Install Drupal with DXPR CMS
         run: |
-          ddev drush site:install --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
-          
-      - name: Apply DXPR CMS recipes
-        run: |
-          ddev drush recipe dxpr_cms_starter
+          ddev drush site:install dxpr_cms_installer --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
 
       - name: Test installation
         run: |
-          # Test that the site responds
-          ddev exec "curl -f http://localhost" || exit 1
+          # Test that the site responds via the external DDEV URL
+          curl -f http://dxpr-cms-dev.ddev.site || exit 1
           # Test that we can access the admin interface
           ddev drush user:login --name=admin --uri=$(ddev describe | grep "Primary URL" | awk '{print $3}')
           echo "DXPR CMS installation completed successfully!"
