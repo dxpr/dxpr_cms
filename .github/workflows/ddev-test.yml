@@ -1,14 +1,8 @@
 name: DXPR CMS DDEV Test Suite
 
 on:
-  push:
-    branches: [ 1.x, wip ]
-  pull_request:
-    branches: [ 1.x ]
-  workflow_run:
-    workflows: [ "DXPR CMS DDEV Installation Test" ]
-    types: [ completed ]
-    branches: [ 1.x ]
+  issue_comment:
+    types: [created]
   workflow_dispatch:
     inputs:
       recipe:
@@ -20,18 +14,46 @@ jobs:
   setup:
     name: Setup DXPR CMS Test Environment
     runs-on: ubuntu-latest
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '/test')
     outputs:
       recipes: ${{ steps.matrix.outputs.recipes }}
+      pr_number: ${{ steps.pr.outputs.number }}
+      pr_sha: ${{ steps.pr.outputs.sha }}
     
     steps:
-      - name: Checkout code
+      - name: Add reaction to comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: eyes
+
+      - name: Get PR details
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+            core.setOutput('number', pr.data.number);
+            core.setOutput('sha', pr.data.head.sha);
+            core.setOutput('ref', pr.data.head.ref);
+
+      - name: Checkout PR code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ steps.pr.outputs.sha }}
 
       - name: Generate test matrix
         id: matrix
         run: |
-          if [ -n "${{ github.event.inputs.recipe }}" ]; then
-            echo "recipes=[\"${{ github.event.inputs.recipe }}\"]" >> $GITHUB_OUTPUT
+          if [[ "${{ github.event.comment.body }}" =~ /test[[:space:]]+([a-zA-Z0-9_]+) ]]; then
+            recipe="${BASH_REMATCH[1]}"
+            echo "recipes=[\"$recipe\"]" >> $GITHUB_OUTPUT
+            echo "Testing specific recipe: $recipe"
           else
             # Generate list of recipes with tests - simpler approach
             recipe_list=""
@@ -46,6 +68,7 @@ jobs:
               fi
             done
             echo "recipes=[$recipe_list]" >> $GITHUB_OUTPUT
+            echo "Testing all recipes with tests"
           fi
 
   phpunit-tests:
@@ -59,8 +82,10 @@ jobs:
         recipe: ${{ fromJson(needs.setup.outputs.recipes) }}
     
     steps:
-      - name: Checkout code
+      - name: Checkout PR code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.setup.outputs.pr_sha }}
 
       - name: Install DDEV
         run: |
@@ -90,8 +115,10 @@ jobs:
     needs: setup
     
     steps:
-      - name: Checkout code
+      - name: Checkout PR code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.setup.outputs.pr_sha }}
 
       - name: Install DDEV
         run: |
@@ -112,14 +139,15 @@ jobs:
         run: |
           ddev exec npm clean-install
 
-      - name: Run specific recipe tests or all E2E tests
+      - name: Run E2E tests
         run: |
-          if [ -n "${{ github.event.inputs.recipe }}" ]; then
-            if [ -d "recipes/${{ github.event.inputs.recipe }}/tests/e2e" ]; then
-              echo "Running E2E tests for ${{ github.event.inputs.recipe }}"
-              ddev exec npm test -- --spec="recipes/${{ github.event.inputs.recipe }}/tests/e2e/*.cy.js"
+          if [[ "${{ github.event.comment.body }}" =~ /test[[:space:]]+([a-zA-Z0-9_]+) ]]; then
+            recipe="${BASH_REMATCH[1]}"
+            if [ -d "recipes/$recipe/tests/e2e" ]; then
+              echo "Running E2E tests for $recipe"
+              ddev exec npm test -- --spec="recipes/$recipe/tests/e2e/*.cy.js"
             else
-              echo "No E2E tests found for ${{ github.event.inputs.recipe }}"
+              echo "No E2E tests found for $recipe"
             fi
           else
             echo "Running all E2E tests"
@@ -145,11 +173,14 @@ jobs:
   full-test-suite:
     name: Full DDEV Test Suite
     runs-on: ubuntu-latest
-    if: github.event.inputs.recipe == ''
+    needs: setup
+    if: ${{ !contains(github.event.comment.body, '/test ') || contains(github.event.comment.body, '/test all') }}
     
     steps:
-      - name: Checkout code
+      - name: Checkout PR code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.setup.outputs.pr_sha }}
 
       - name: Install DDEV
         run: |
@@ -178,4 +209,43 @@ jobs:
             cypress/screenshots
             cypress/videos
             web/sites/simpletest
-          retention-days: 7 
+          retention-days: 7
+
+  report-results:
+    name: Report Test Results
+    runs-on: ubuntu-latest
+    needs: [setup, phpunit-tests, cypress-tests, full-test-suite]
+    if: always() && needs.setup.result == 'success'
+    
+    steps:
+      - name: Report success
+        if: needs.phpunit-tests.result == 'success' && needs.cypress-tests.result == 'success' && (needs.full-test-suite.result == 'success' || needs.full-test-suite.result == 'skipped')
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ needs.setup.outputs.pr_number }}
+          body: |
+            ## ✅ Tests Passed!
+            
+            All DXPR CMS tests completed successfully on commit ${{ needs.setup.outputs.pr_sha }}.
+            
+            **Test Results:**
+            - PHPUnit Tests: ✅ Passed
+            - Cypress E2E Tests: ✅ Passed
+            - Full Test Suite: ✅ Passed
+
+      - name: Report failure
+        if: needs.phpunit-tests.result == 'failure' || needs.cypress-tests.result == 'failure' || needs.full-test-suite.result == 'failure'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ needs.setup.outputs.pr_number }}
+          body: |
+            ## ❌ Tests Failed
+            
+            Some DXPR CMS tests failed on commit ${{ needs.setup.outputs.pr_sha }}.
+            
+            **Test Results:**
+            - PHPUnit Tests: ${{ needs.phpunit-tests.result == 'success' && '✅ Passed' || '❌ Failed' }}
+            - Cypress E2E Tests: ${{ needs.cypress-tests.result == 'success' && '✅ Passed' || '❌ Failed' }}
+            - Full Test Suite: ${{ needs.full-test-suite.result == 'success' && '✅ Passed' || needs.full-test-suite.result == 'skipped' && '⏭️ Skipped' || '❌ Failed' }}
+            
+            Please check the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details. 
