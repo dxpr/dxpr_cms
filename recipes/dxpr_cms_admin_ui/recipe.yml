@@ -44,10 +44,10 @@ config:
       grantPermission: 'access coffee'
     user.role.content_administrator:
       grantPermissions:
-        - 'access toolbar'
+        - 'access navigation'
     user.role.marketer:
       grantPermissions:
-        - 'access toolbar'
+        - 'access navigation'
     user.role.site_bui:
       grantPermissions:
-        - 'access toolbar'
+        - 'access navigation'

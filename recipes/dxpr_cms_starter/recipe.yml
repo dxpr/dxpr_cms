@@ -101,7 +101,7 @@ config:
         - 'access media overview'
         - 'access navigation'
         # We need this permission because Toolbar is enabled by Gin Toolbar.
-        - 'access toolbar'
+        - 'access navigation'
         - 'administer url aliases'
         - 'create url aliases'
         - 'view own unpublished media'
