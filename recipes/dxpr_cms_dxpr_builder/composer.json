@@ -11,7 +11,6 @@
         "drupal/responsive_preview": "^2.2.0",
         "drupal/section_library": "^1.2.2",
         "drupal/dxpr_theme_helper": "^2.0.0",
-        "drupal/menu_link_attributes": "^1.5.0",
-        "drupal/moderation_dashboard": "^3.1.0"
+        "drupal/menu_link_attributes": "^1.5.0"
     }
 }

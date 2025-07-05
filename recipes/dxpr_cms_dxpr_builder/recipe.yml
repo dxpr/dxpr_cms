@@ -13,7 +13,6 @@ install:
   - menu_link_attributes
   - node
   - workflows
-  - moderation_dashboard
   - dxpr_builder
   - dxpr_builder_block
   - dxpr_builder_page
@@ -44,7 +43,6 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'use moderation dashboard'
     user.role.site_bui:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -57,7 +55,6 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'use moderation dashboard'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
     user.role.marketer:
@@ -70,7 +67,6 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'use moderation dashboard'
     user.role.content_editor:
       grantPermissions:
         - 'create drag_and_drop_page content'
