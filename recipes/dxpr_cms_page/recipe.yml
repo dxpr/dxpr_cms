@@ -14,7 +14,33 @@ config:
       grantPermissions:
         - 'create page content'
         - 'delete page revisions'
+        - 'delete own page content'
+        - 'edit own page content'
+        - 'view page revisions'
+        - 'revert page revisions'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'create page content'
+        - 'delete page revisions'
         - 'delete any page content'
         - 'edit any page content'
+        - 'view page revisions'
+        - 'revert page revisions'
+    user.role.marketer:
+      grantPermissions:
+        - 'create page content'
+        - 'delete page revisions'
+        - 'delete own page content'
+        - 'edit own page content'
+        - 'view page revisions'
+        - 'revert page revisions'
+    user.role.site_builder:
+      grantPermissions:
+        - 'create page content'
+        - 'delete page revisions'
+        - 'delete any page content'
+        - 'edit any page content'
+        - 'view page revisions'
+        - 'revert page revisions'
     workflows.workflow.basic_editorial:
       addNodeTypes: ['page']

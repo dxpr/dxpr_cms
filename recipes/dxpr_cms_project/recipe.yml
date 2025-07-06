@@ -20,7 +20,33 @@ config:
       grantPermissions:
         - 'create project content'
         - 'delete project revisions'
+        - 'delete own project content'
+        - 'edit own project content'
+        - 'view project revisions'
+        - 'revert project revisions'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'create project content'
+        - 'delete project revisions'
         - 'delete any project content'
         - 'edit any project content'
+        - 'view project revisions'
+        - 'revert project revisions'
+    user.role.marketer:
+      grantPermissions:
+        - 'create project content'
+        - 'delete project revisions'
+        - 'delete own project content'
+        - 'edit own project content'
+        - 'view project revisions'
+        - 'revert project revisions'
+    user.role.site_builder:
+      grantPermissions:
+        - 'create project content'
+        - 'delete project revisions'
+        - 'delete any project content'
+        - 'edit any project content'
+        - 'view project revisions'
+        - 'revert project revisions'
     workflows.workflow.basic_editorial:
       addNodeTypes: ['project']

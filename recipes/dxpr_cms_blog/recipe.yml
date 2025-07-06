@@ -22,5 +22,31 @@ config:
       grantPermissions:
         - 'create blog content'
         - 'delete blog revisions'
+        - 'delete own blog content'
+        - 'edit own blog content'
+        - 'view blog revisions'
+        - 'revert blog revisions'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'create blog content'
+        - 'delete blog revisions'
         - 'delete any blog content'
         - 'edit any blog content'
+        - 'view blog revisions'
+        - 'revert blog revisions'
+    user.role.marketer:
+      grantPermissions:
+        - 'create blog content'
+        - 'delete blog revisions'
+        - 'delete own blog content'
+        - 'edit own blog content'
+        - 'view blog revisions'
+        - 'revert blog revisions'
+    user.role.site_builder:
+      grantPermissions:
+        - 'create blog content'
+        - 'delete blog revisions'
+        - 'delete any blog content'
+        - 'edit any blog content'
+        - 'view blog revisions'
+        - 'revert blog revisions'
