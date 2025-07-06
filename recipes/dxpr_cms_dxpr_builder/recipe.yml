@@ -67,10 +67,14 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
+        - 'create drag_and_drop_page content'
+        - 'edit any drag_and_drop_page content'
+        - 'view drag_and_drop_page revisions'
+        - 'revert drag_and_drop_page revisions'
     user.role.content_editor:
       grantPermissions:
         - 'create drag_and_drop_page content'
-        - 'delete drag_and_drop_page revisions'
-        - 'delete any drag_and_drop_page content'
         - 'edit any drag_and_drop_page content'
+        - 'view drag_and_drop_page revisions'
+        - 'revert drag_and_drop_page revisions'
         - 'edit with dxpr builder'
