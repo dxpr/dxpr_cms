@@ -101,6 +101,7 @@ config:
         - 'schedule publishing of nodes'
         - 'view any unpublished content'
         - 'view scheduled content'
+        - 'administer display modes'
     user.role.content_administrator:
       grantPermissions:
         - 'administer display modes'
@@ -122,7 +123,7 @@ config:
         - 'create url aliases'
         - 'access files overview'
         - 'view latest version'
-    user.role.site_bui:
+    user.role.site_builder:
       grantPermissions:
         - 'administer display modes'
         - 'access taxonomy overview'

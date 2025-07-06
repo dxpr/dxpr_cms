@@ -43,7 +43,11 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-    user.role.site_bui:
+        - 'create drag_and_drop_page content'
+        - 'edit any drag_and_drop_page content'
+        - 'view drag_and_drop_page revisions'
+        - 'revert drag_and_drop_page revisions'
+    user.role.site_builder:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
         - 'edit own %bundle content'

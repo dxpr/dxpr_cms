@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: { }
-id: site_bui
+id: site_builder
 label: 'Site Builder'
 weight: -6
 is_admin: false

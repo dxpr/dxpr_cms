@@ -40,7 +40,7 @@ default:
       value: SiteBuilder@dxpr.com
   roles:
     -
-      target_id: site_bui
+      target_id: site_builder
   path:
     -
       alias: ''

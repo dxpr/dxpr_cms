@@ -69,7 +69,7 @@ config:
         - 'update content translations'
         - 'translate editable entities'
         - 'translate tags taxonomy_term'
-    user.role.site_bui:
+    user.role.site_builder:
       grantPermissionsForEachNodeType:
         - 'translate %bundle node'
       grantPermissions:

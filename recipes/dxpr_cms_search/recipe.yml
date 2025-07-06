@@ -35,12 +35,15 @@ config:
       grantPermission: 'use search_api_autocomplete for content_autocomplete'
     user.role.authenticated:
       grantPermission: 'use search_api_autocomplete for content_autocomplete'
+    user.role.content_editor:
+      grantPermissions:
+        - 'use advanced search'
     user.role.content_administrator:
       grantPermissions:
         - 'use advanced search'
     user.role.marketer:
       grantPermissions:
         - 'use advanced search'
-    user.role.site_bui:
+    user.role.site_builder:
       grantPermissions:
         - 'use advanced search'

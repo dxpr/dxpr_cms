@@ -45,7 +45,11 @@ config:
     user.role.content_editor:
       # Allow access to the redirect views.
       grantPermission: 'administer redirects'
-    user.role.site_bui:
+    user.role.content_administrator:
+      grantPermissions:
+        - 'administer redirect settings'
+        - 'administer redirects'
+    user.role.site_builder:
       grantPermissions:
         - 'administer redirect settings'
         - 'administer redirects'

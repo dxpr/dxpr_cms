@@ -100,8 +100,6 @@ config:
         - 'access contextual links'
         - 'access media overview'
         - 'access navigation'
-        # We need this permission because Toolbar is enabled by Gin Toolbar.
-        - 'access navigation'
         - 'administer url aliases'
         - 'create url aliases'
         - 'view own unpublished media'
@@ -123,7 +121,7 @@ config:
         - 'view media'
         - 'view all media revisions'
         - 'view own unpublished media'
-    user.role.site_bui:
+    user.role.site_builder:
       grantPermissionsForEachMediaType:
         - 'create %bundle media'
         - 'delete any %bundle media'

@@ -157,13 +157,15 @@ config:
       grantPermissions:
         - 'access ai content strategy'
         - 'view analyze reports'
-    user.role.site_bui:
+        - 'generate ai alt tags'
+    user.role.site_builder:
       grantPermissions:
         - 'access ai content strategy'
         - 'view analyze reports'
         - 'administer analyze'
         # Markdownify related setup.
         - 'administer markdownify'
+        - 'generate ai alt tags'
     user.role.marketer:
       grantPermissions:
         - 'access ai content strategy'
