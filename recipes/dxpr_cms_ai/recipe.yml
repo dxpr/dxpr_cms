@@ -16,6 +16,7 @@ install:
   - analyze_ai_brand_voice
   - analyze_ai_sentiment
   - analyze
+  - ckeditor_ai_agent
   - menu_link_content
   - markdownify
   - markdownify_path
@@ -162,6 +163,7 @@ config:
         - 'access ai content strategy'
         - 'view analyze reports'
         - 'administer analyze'
+        - 'administer ckeditor ai agent'
         # Markdownify related setup.
         - 'administer markdownify'
     user.role.marketer:
