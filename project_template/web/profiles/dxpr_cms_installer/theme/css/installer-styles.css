@@ -224,20 +224,26 @@ body.install-page {
   background-color: var(--gin-color-primary);
 }
 
+/* Hide old SVG patterns */
 .cms-installer__pattern {
-  margin-block-start: 4.5rem;
-  display: block !important;
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  inset-inline-start: 0;
+  display: none !important;
+}
 
+/* Video background styles */
+.cms-installer__video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  
   @media (min-width: 78em) {
-    margin-block-start: 0;
-    inset-block: 0 auto;
-    inset-inline: auto 0;
-    height: 100%;
+    left: auto;
+    right: 0;
     width: 30vw;
+    height: 100%;
   }
 
   @media (min-width: 100em) {
@@ -245,11 +251,45 @@ body.install-page {
   }
 }
 
-.cms-installer__pattern svg {
+.cms-installer__background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  
   @media (min-width: 78em) {
+    object-position: right center;
+  }
+}
+
+.cms-installer__video-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #CCEDF9 0%, #E8F4FD 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .cms-installer__background-video {
+    animation-play-state: paused;
+    display: none;
+  }
+  
+  .cms-installer__video-background::after {
+    content: "";
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-end: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background: linear-gradient(135deg, #CCEDF9 0%, #E8F4FD 100%);
+    z-index: 1;
   }
 }

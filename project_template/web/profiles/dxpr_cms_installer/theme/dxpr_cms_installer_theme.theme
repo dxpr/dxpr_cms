@@ -23,6 +23,12 @@ function dxpr_cms_installer_theme_theme(): array {
         'id' => NULL,
       ],
     ],
+    'step_video_background' => [
+      'variables' => [
+        'id' => NULL,
+        'theme_path' => NULL,
+      ],
+    ],
   ];
 }
 
@@ -43,9 +49,12 @@ function dxpr_cms_installer_theme_form_installer_site_name_form_alter(array &$fo
     '#suffix' => '</div>',
   ];
   $form['site_name']['#default_value'] = t('DXPR CMS');
-  $form['svg'] = [
-    '#theme' => 'step_svg',
+  $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+  $form['video_bg'] = [
+    '#theme' => 'step_video_background',
     '#id' => 'name',
+    '#theme_path' => \Drupal::service(FileUrlGeneratorInterface::class)
+      ->generateString($theme_path),
     '#weight' => 1000,
   ];
   $form['actions']['submit']['#attributes']['class'] = ['button--next'];
@@ -73,9 +82,12 @@ function dxpr_cms_installer_theme_form_installer_recipes_form_alter(array &$form
     '#suffix' => '</p>',
     '#weight' => 100,
   ];
-  $form['svg'] = [
-    '#theme' => 'step_svg',
+  $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+  $form['video_bg'] = [
+    '#theme' => 'step_video_background',
     '#id' => 'recipes',
+    '#theme_path' => \Drupal::service(FileUrlGeneratorInterface::class)
+      ->generateString($theme_path),
     '#weight' => 1000,
   ];
   $form['actions']['submit']['#attributes']['class'] = ['button--next'];
@@ -91,9 +103,12 @@ function dxpr_cms_installer_theme_form_install_settings_form_alter(array &$form)
     '#suffix' => '</p>',
     '#weight' => -50,
   ];
-  $form['svg'] = [
-    '#theme' => 'step_svg',
+  $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+  $form['video_bg'] = [
+    '#theme' => 'step_video_background',
     '#id' => 'settings',
+    '#theme_path' => \Drupal::service(FileUrlGeneratorInterface::class)
+      ->generateString($theme_path),
     '#weight' => 1000,
   ];
   $form['driver']['#type'] = 'select';
@@ -126,9 +141,12 @@ function dxpr_cms_installer_theme_form_install_configure_form_alter(array &$form
       '#suffix' => '</div>',
     ];
   }
-  $form['svg'] = [
-    '#theme' => 'step_svg',
+  $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+  $form['video_bg'] = [
+    '#theme' => 'step_video_background',
     '#id' => 'account',
+    '#theme_path' => \Drupal::service(FileUrlGeneratorInterface::class)
+      ->generateString($theme_path),
     '#weight' => 1000,
   ];
   $form['actions']['submit']['#value'] = t('Finish');
