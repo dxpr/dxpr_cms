@@ -11,7 +11,7 @@ default:
       value: en
   name:
     -
-      value: Webmaster
+      value: 'Site Builder'
   pass:
     -
       value: $S$EJplc9aHO.Cg4Ou2U3X4c8p0Y7Y/0TId/H25IrdAD3HQHYAeILK4
@@ -19,7 +19,7 @@ default:
       pre_hashed: false
   mail:
     -
-      value: SiteBuilder@dxpr.com
+      value: site.builder@dxpr.com
   timezone:
     -
       value: Europe/Amsterdam
@@ -37,7 +37,7 @@ default:
       value: 1680532324
   init:
     -
-      value: SiteBuilder@dxpr.com
+      value: site.builder@dxpr.com
   roles:
     -
       target_id: site_builder

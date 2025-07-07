@@ -41,9 +41,6 @@ config:
     user.role.content_administrator:
       grantPermissions:
         - 'use advanced search'
-    user.role.marketer:
-      grantPermissions:
-        - 'use advanced search'
     user.role.site_builder:
       grantPermissions:
         - 'use advanced search'

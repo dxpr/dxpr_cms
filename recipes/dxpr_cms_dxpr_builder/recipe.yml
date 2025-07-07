@@ -61,7 +61,7 @@ config:
         - 'edit with dxpr builder'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
-    user.role.marketer:
+    user.role.content_editor:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
         - 'edit own %bundle content'
@@ -75,10 +75,3 @@ config:
         - 'edit any drag_and_drop_page content'
         - 'view drag_and_drop_page revisions'
         - 'revert drag_and_drop_page revisions'
-    user.role.content_editor:
-      grantPermissions:
-        - 'create drag_and_drop_page content'
-        - 'edit any drag_and_drop_page content'
-        - 'view drag_and_drop_page revisions'
-        - 'revert drag_and_drop_page revisions'
-        - 'edit with dxpr builder'

@@ -11,7 +11,7 @@ default:
       value: en
   name:
     -
-      value: 'Communications Manager'
+      value: 'Content Editor'
   pass:
     -
       value: $S$EnDyYMWGy9fsXRfNEBZdBzuANIoT8h6forvKS.fPGRTv8B93VlOC
@@ -19,7 +19,7 @@ default:
       pre_hashed: false
   mail:
     -
-      value: CommunicationsManager@dxpr.com
+      value: content.editor@dxpr.com
   timezone:
     -
       value: Europe/Amsterdam
@@ -37,7 +37,7 @@ default:
       value: 1680703268
   init:
     -
-      value: CommunicationsManager@dxpr.com
+      value: content.editor@dxpr.com
   roles:
     -
       target_id: content_editor

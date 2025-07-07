@@ -48,9 +48,6 @@ config:
     user.role.content_administrator:
       grantPermissions:
         - 'access navigation'
-    user.role.marketer:
-      grantPermissions:
-        - 'access navigation'
     user.role.site_builder:
       grantPermissions:
         - 'access navigation'

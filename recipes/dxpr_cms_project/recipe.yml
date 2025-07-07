@@ -32,14 +32,7 @@ config:
         - 'edit any project content'
         - 'view project revisions'
         - 'revert project revisions'
-    user.role.marketer:
-      grantPermissions:
-        - 'create project content'
-        - 'delete project revisions'
-        - 'delete own project content'
-        - 'edit own project content'
-        - 'view project revisions'
-        - 'revert project revisions'
+
     user.role.site_builder:
       grantPermissions:
         - 'create project content'

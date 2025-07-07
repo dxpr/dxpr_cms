@@ -102,6 +102,13 @@ config:
         - 'view any unpublished content'
         - 'view scheduled content'
         - 'administer display modes'
+        - 'access taxonomy overview'
+        - 'create terms in tags'
+        - 'edit terms in tags'
+        - 'administer url aliases'
+        - 'create url aliases'
+        - 'access files overview'
+        - 'view latest version'
     user.role.content_administrator:
       grantPermissions:
         - 'administer display modes'
@@ -113,16 +120,7 @@ config:
         - 'access files overview'
         - 'view latest version'
         - 'view any unpublished content'
-    user.role.marketer:
-      grantPermissions:
-        - 'administer display modes'
-        - 'access taxonomy overview'
-        - 'create terms in tags'
-        - 'edit terms in tags'
-        - 'administer url aliases'
-        - 'create url aliases'
-        - 'access files overview'
-        - 'view latest version'
+
     user.role.site_builder:
       grantPermissions:
         - 'administer display modes'

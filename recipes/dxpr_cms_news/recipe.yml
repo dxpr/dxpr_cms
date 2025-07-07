@@ -30,14 +30,7 @@ config:
         - 'edit any news content'
         - 'view news revisions'
         - 'revert news revisions'
-    user.role.marketer:
-      grantPermissions:
-        - 'create news content'
-        - 'delete news revisions'
-        - 'delete own news content'
-        - 'edit own news content'
-        - 'view news revisions'
-        - 'revert news revisions'
+
     user.role.site_builder:
       grantPermissions:
         - 'create news content'

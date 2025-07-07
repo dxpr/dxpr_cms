@@ -32,14 +32,7 @@ config:
         - 'edit any person content'
         - 'view person revisions'
         - 'revert person revisions'
-    user.role.marketer:
-      grantPermissions:
-        - 'create person content'
-        - 'delete person revisions'
-        - 'delete own person content'
-        - 'edit own person content'
-        - 'view person revisions'
-        - 'revert person revisions'
+
     user.role.site_builder:
       grantPermissions:
         - 'create person content'

@@ -48,14 +48,7 @@ config:
         - 'edit any event content'
         - 'view event revisions'
         - 'revert event revisions'
-    user.role.marketer:
-      grantPermissions:
-        - 'create event content'
-        - 'delete event revisions'
-        - 'delete own event content'
-        - 'edit own event content'
-        - 'view event revisions'
-        - 'revert event revisions'
+
     user.role.site_builder:
       grantPermissions:
         - 'create event content'

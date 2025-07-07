@@ -34,14 +34,7 @@ config:
         - 'edit any blog content'
         - 'view blog revisions'
         - 'revert blog revisions'
-    user.role.marketer:
-      grantPermissions:
-        - 'create blog content'
-        - 'delete blog revisions'
-        - 'delete own blog content'
-        - 'edit own blog content'
-        - 'view blog revisions'
-        - 'revert blog revisions'
+
     user.role.site_builder:
       grantPermissions:
         - 'create blog content'

@@ -107,6 +107,12 @@ config:
         - 'revert all revisions'
         - 'view all revisions'
         - 'view the administration theme'
+        # Media management capabilities
+        - 'create media'
+        - 'delete media'
+        - 'update media'
+        - 'view media'
+        - 'view all media revisions'
     user.role.content_administrator:
       grantPermissionsForEachMediaType:
         - 'create %bundle media'
@@ -135,20 +141,7 @@ config:
         - 'view all media revisions'
         - 'view own unpublished media'
         - 'administer views'
-    user.role.marketer:
-      grantPermissionsForEachMediaType:
-        - 'create %bundle media'
-        - 'delete any %bundle media'
-        - 'edit any %bundle media'
-      grantPermissions:
-        # Managing media entities.
-        - 'access media overview'
-        - 'create media'
-        - 'delete media'
-        - 'update media'
-        - 'view media'
-        - 'view all media revisions'
-        - 'view own unpublished media'
+
     user.role.authenticated:
       grantPermissions:
         - 'delete own files'
