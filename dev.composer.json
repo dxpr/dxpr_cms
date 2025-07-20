@@ -116,8 +116,7 @@
   "require-dev": {
     "cweagans/composer-patches": "^2",
     "drupal/core-dev": "^11.2",
-    "drupal/default_content": "^2",
-    "drupal/experience_builder": "0.x-dev@dev"
+    "drupal/default_content": "^2"
   },
   "autoload-dev": {
     "files": [
