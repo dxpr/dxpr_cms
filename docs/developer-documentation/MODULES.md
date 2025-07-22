@@ -27,7 +27,7 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Used by**: dxpr_cms_ai
 
 **ai_provider_openai**
-- **Description**: OpenAI provider integration enabling GPT models for content generation, analysis and chat functionality
+- **Description**: OpenAI provider integration enabling GPT models for content generation and analysis
 - **Used by**: dxpr_cms_ai
 
 **analyze_ai_brand_voice**

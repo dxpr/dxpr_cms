@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_ai",
-    "description": "Adds integration with AI services, such as alt text generation and a chat bot to assist with site building. Requires an API key from Open AI or Anthropic.",
+    "description": "Adds integration with AI services, such as alt text generation and content analysis. Requires an API key from Open AI or Anthropic.",
     "type": "drupal-recipe",
     "license": "GPL-2.0-or-later",
     "require": {

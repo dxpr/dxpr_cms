@@ -1,6 +1,6 @@
 name: AI Assistant
 type: DXPR CMS
-description: Adds integration with AI services, such as alt text generation and a chat bot to assist with site building. Requires an API key from Open AI or Anthropic.
+description: Adds integration with AI services, such as alt text generation and content analysis. Requires an API key from Open AI or Anthropic.
 install:
   - key
   - block
@@ -9,8 +9,6 @@ install:
   - ai_provider_openai
   - ai_provider_anthropic
   - ai_image_alt_text
-  - ai_assistant_api
-  - ai_chatbot
   - ai_agents
   - ai_content_strategy
   - analyze_ai_brand_voice
@@ -127,26 +125,6 @@ config:
         provider: anthropic
       simpleConfigUpdate:
         openai_moderation: false
-    block.block.ai_chatbot:
-      placeBlockInAdminTheme:
-        region:
-          gin: content
-          claro: content
-        default_region: content
-        plugin: ai_chatbot_block
-        settings:
-          id: ai_chatbot_block
-          label: 'Drupal Agent Chatbot'
-          label_display: '0'
-          provider: ai_chatbot
-          ai_assistant: drupal_agent_assistant
-          bot_name: 'Drupal Agent'
-          stream: 0
-          default_avatar: /profiles/dxpr_cms_installer/images/dxpr-logo-dark.svg
-          first_message: 'Hello! How can I assist you today?'
-          show_structured_results: 1
-    klaro.klaro_app.deepchat:
-      enable: []
     klaro.klaro_app.ai_alt_text_generation:
       enable: []
     # Grant permissions to roles.
