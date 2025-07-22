@@ -48,6 +48,10 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 
 ### Administration & UI
 
+**admin_toolbar**
+- **Description**: Enhanced admin toolbar with dropdown menus providing quick access to administrative functions and improved navigation
+- **Used by**: dxpr_cms_admin_ui
+
 **coffee**
 - **Description**: Quick admin navigation tool with keyboard shortcuts for accessing admin pages and functions
 - **Used by**: dxpr_cms_admin_ui
