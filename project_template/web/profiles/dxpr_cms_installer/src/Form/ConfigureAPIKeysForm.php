@@ -123,14 +123,15 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
 
     $form['help'] = [
       '#prefix' => '<p class="cms-installer__subhead">',
-      '#markup' => $this->t('You can enter your API keys now, or add them later.'),
+      '#markup' => $this->t('Enter your DXPR Builder product key to unlock premium features and AI capabilities.'),
       '#suffix' => '</p>',
     ];
 
     $form['json_web_token'] = [
       '#type' => 'textarea',
       '#title' => $this->t('DXPR Builder product key'),
-      '#description' => $this->t('Create a free account at <a href="https://dxpr.com/pricing" target="_blank">DXPR.com</a> and find your key in the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>.'),
+      '#description' => $this->t('Create a free account at <a href="https://dxpr.com/user/free-registration" target="_blank">DXPR.com</a> and find your key in the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>.'),
+      '#required' => TRUE,
     ];
 
 
@@ -313,7 +314,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
     if ($form_state->getValue('json_web_token')) {
       $jwtPayloadData = $this->jwtDecoder->decodeJwt($form_state->getValue('json_web_token'));
       if ($jwtPayloadData['sub'] === NULL || $jwtPayloadData['scope'] === NULL) {
-        $form_state->setErrorByName('json_web_token', $this->t('Your DXPR Builder product key can’t be read, please make sure you copy the whole key without any trailing or leading spaces into the form.'));
+        $form_state->setErrorByName('json_web_token', $this->t('Invalid DXPR Key. Get your free key at https://dxpr.com/user/free-registration'));
       }
       elseif ($jwtPayloadData['dxpr_tier'] === NULL) {
         $form_state->setErrorByName('json_web_token', $this->t('Your product key (JWT) is outdated and not compatible with DXPR Builder version 2.0.0 and up. Please follow instructions <a href=":uri">here</a> to get a new product key.', [
@@ -328,7 +329,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       if ($provider === 'dxpr') {
         // DXPR uses the DXPR Builder key
         if (empty($form_state->getValue('json_web_token'))) {
-          $form_state->setErrorByName('json_web_token', $this->t('DXPR Builder product key is required for DXPR AI.'));
+          $form_state->setErrorByName('json_web_token', $this->t('DXPR Builder product key is required for DXPR AI. Get yours for free at https://dxpr.com/user/free-registration'));
         }
         // No additional validation needed - JWT validation is sufficient
       }

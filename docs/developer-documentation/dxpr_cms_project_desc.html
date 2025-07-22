@@ -98,23 +98,34 @@
 
 <p>Follow these steps to install DXPR CMS:</p>
 
-<h3>Step 1: Install DDEV</h3>
+<h3>Step 1: Get a free DXPR API key</h3>
+<p>Create a free account and get your API key at <a href="https://dxpr.com/user/free-registration" target="_blank">dxpr.com/user/free-registration</a>. This unlocks DXPR Builder page building and AI features.</p>
+
+<h3>Step 2: Install DDEV</h3>
 <p>Install <a href="https://ddev.com/">DDEV</a> if you haven't already.</p>
 
-<h3>Step 2: Clone the repository</h3>
+<h3>Step 3: Clone the repository</h3>
 <code>git clone https://github.com/dxpr/dxpr_cms.git</code>
 
-<h3>Step 3: Navigate to the project directory</h3>
+<h3>Step 4: Navigate to the project directory</h3>
 <code>cd dxpr_cms</code>
 
-<h3>Step 4: Start the DDEV environment</h3>
+<h3>Step 5: Start the DDEV environment</h3>
 <code>ddev start</code>
 
-<h3>Step 5: Complete the installation</h3>
+<h3>Step 6: Complete the installation</h3>
+<p>Choose one of the following installation methods:</p>
+
+<h4>Option A: Web-based installation</h4>
 <p>After the environment starts, follow the link provided in the terminal to access the Drupal installation wizard. Complete the installation steps to set up your site.</p>
 
-<h3>Step 6: Customize with recipes</h3>
-<p>During the installation, you can select additional recipes to customize your site. These recipes will help tailor the installation to your needs.</p>
+<h4>Option B: Command-line installation with DXPR API key</h4>
+<p>For automated installation with your DXPR Builder API key:</p>
+<code>ddev drush site-install dxpr_cms_installer dxpr_cms_installer_api_keys_configuration.json_web_token='YOUR_DXPR_API_KEY' -y</code>
+<p>Replace <code>YOUR_DXPR_API_KEY</code> with your actual DXPR Builder product key from <a href="https://app.dxpr.com/getting-started" target="_blank">app.dxpr.com/getting-started</a>.</p>
+
+<h3>Step 7: Customize with recipes</h3>
+<p>During the web-based installation, you can select additional recipes to customize your site. These recipes will help tailor the installation to your needs.</p>
 
 <h2>Complete Module Reference</h2>
 <p>DXPR CMS includes 87 carefully selected Drupal modules organized by functionality to provide comprehensive capabilities out of the box:</p>
