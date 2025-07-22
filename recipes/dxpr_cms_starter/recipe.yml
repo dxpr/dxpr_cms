@@ -69,7 +69,6 @@ config:
       simpleConfigUpdate:
         allowed_projects:
           recipes:
-            - dxpr_cms_accessibility_tools
             - dxpr_cms_case_study
             - dxpr_cms_events
             - dxpr_cms_forms

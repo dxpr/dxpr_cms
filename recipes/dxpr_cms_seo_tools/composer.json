@@ -17,8 +17,7 @@
         "drupal/token_or": "^2.2"
     },
     "suggest": {
-        "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic.",
-        "drupal/dxpr_cms_accessibility_tools": "Adds automated checks to help ensure content conforms to web accessibility guidelines."
+        "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic."
     },
     "version": "1.x-dev"
 }

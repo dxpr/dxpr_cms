@@ -18,8 +18,6 @@ recipes:
   required:
     - drupal/dxpr_cms_starter
   optional:
-    'Accessibility':
-      - drupal/dxpr_cms_accessibility_tools
     'Case Studies':
       - drupal/dxpr_cms_case_study
     'Events':

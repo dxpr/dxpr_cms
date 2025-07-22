@@ -4,10 +4,6 @@
     "Do NOT use it to build a real site!"
   ],
   "repositories": {
-    "accessibility_tools": {
-      "type": "path",
-      "url": "recipes/dxpr_cms_accessibility_tools"
-    },
     "admin_ui": {
       "type": "path",
       "url": "recipes/dxpr_cms_admin_ui"

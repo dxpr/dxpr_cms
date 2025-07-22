@@ -343,9 +343,6 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: Event-Condition-Action framework for creating automated workflows without custom code requirements
 - **Used by**: dxpr_cms_authentication, dxpr_cms_content_type_base, dxpr_cms_privacy_basic, dxpr_cms_seo_tools, dxpr_cms_starter
 
-**editoria11y**
-- **Description**: Automated accessibility checker helping content editors create WCAG-compliant accessible content easily
-- **Used by**: dxpr_cms_accessibility_tools
 
 **linkit**
 - **Description**: Enhanced linking interface with autocomplete for internal content and media references
@@ -371,7 +368,6 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 
 The following are DXPR CMS recipe modules that bundle functionality:
 
-- **dxpr_cms_accessibility_tools** - Accessibility enhancement tools
 - **dxpr_cms_admin_ui** - Administrative interface improvements
 - **dxpr_cms_ai** - AI and machine learning features
 - **dxpr_cms_analytics** - Analytics integration framework
