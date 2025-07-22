@@ -7,7 +7,6 @@ recipes:
   - core/recipes/core_recommended_performance
   - core/recipes/document_media_type
   - dxpr_cms_admin_ui
-  - dxpr_cms_ai
   - dxpr_cms_anti_spam
   - dxpr_cms_authentication
   - dxpr_cms_blog
@@ -22,6 +21,7 @@ recipes:
   - dxpr_cms_dxpr_theme
   - dxpr_cms_search
   - dxpr_cms_roles
+  - dxpr_cms_ai
 install:
   - automated_cron
   - automatic_updates
