@@ -1,0 +1,13 @@
+name: Basic Analytics
+type: DXPR CMS
+description: Adds basic privacy-first analytics using Drupal's Statistics module for tracking content views without external dependencies.
+
+install:
+  - statistics
+
+config:
+  strict: false
+  actions:
+    statistics.settings:
+      simpleConfigUpdate:
+        count_content_views: 1

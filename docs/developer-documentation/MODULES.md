@@ -192,6 +192,9 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: Provides a human-readable HTML sitemap page for visitors to navigate site structure
 - **Used by**: dxpr_cms_seo_tools
 
+**statistics**
+- **Description**: Sovereign privacy-first anonymous web analytics tracking content views and user activity
+- **Used by**: dxpr_cms_basic_analytics
 
 ### Security & Spam Prevention
 
@@ -357,6 +360,7 @@ The following are DXPR CMS recipe modules that bundle functionality:
 - **dxpr_cms_admin_ui** - Administrative interface improvements
 - **dxpr_cms_ai** - AI and machine learning features
 - **dxpr_cms_analytics** - Analytics integration framework
+- **dxpr_cms_basic_analytics** - Basic privacy-first analytics using Statistics module
 - **dxpr_cms_anti_spam** - Spam prevention tools
 - **dxpr_cms_authentication** - Authentication enhancements
 - **dxpr_cms_blog** - Blog content type and features
