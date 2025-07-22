@@ -1,26 +1,32 @@
 status:
   node:
     blog:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
-    case_study:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
-    drag_and_drop_page:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
-    event:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
-    news:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
+      analyze_ai_brand_voice_analyzer: true
+      analyze_ai_sentiment_analyzer: true
+      content_info: true
+      node_views: true
     page:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
-    person:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
-    project:
-      brand_voice_analyzer: true
-      ai_sentiment_analyzer: true
+      analyze_ai_brand_voice_analyzer: true
+      analyze_ai_sentiment_analyzer: true
+      content_info: true
+      node_views: true
+    drag_and_drop_page:
+      analyze_ai_brand_voice_analyzer: true
+      analyze_ai_sentiment_analyzer: true
+      content_info: true
+      node_views: true
+    case_study:
+      analyze_ai_brand_voice_analyzer: true
+      analyze_ai_sentiment_analyzer: true
+      content_info: true
+      node_views: true
+    news:
+      analyze_ai_brand_voice_analyzer: true
+      analyze_ai_sentiment_analyzer: true
+      content_info: true
+      node_views: true
+    events:
+      analyze_ai_brand_voice_analyzer: true
+      analyze_ai_sentiment_analyzer: true
+      content_info: true
+      node_views: true

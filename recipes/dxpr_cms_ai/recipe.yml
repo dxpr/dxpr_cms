@@ -13,6 +13,8 @@ install:
   - ai_content_strategy
   - analyze_ai_brand_voice
   - analyze_ai_sentiment
+  - analyze_basic_content_info
+  - analyze_page_views
   - analyze
   - ckeditor_ai_agent
   - menu_link_content
