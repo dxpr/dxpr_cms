@@ -206,9 +206,6 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: Provides a human-readable HTML sitemap page for visitors to navigate site structure
 - **Used by**: dxpr_cms_seo_tools
 
-**yoast_seo**
-- **Description**: Real-time SEO analysis providing content optimization suggestions based on proven Yoast algorithms
-- **Used by**: dxpr_cms_seo_tools
 
 ### Security & Spam Prevention
 

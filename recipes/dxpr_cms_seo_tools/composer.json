@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_seo_tools",
-    "description": "Adds common search engine optimisation tools such as meta tags, XML sitemap, robots.txt management and more.",
+    "description": "Adds common search engine optimization tools such as meta tags, XML sitemap, robots.txt management and more.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
@@ -14,8 +14,7 @@
         "drupal/seo_checklist": "^5.2.1",
         "drupal/simple_sitemap": "^4.2.2",
         "drupal/sitemap": "^2",
-        "drupal/token_or": "^2.2",
-        "drupal/yoast_seo": "^2.1"
+        "drupal/token_or": "^2.2"
     },
     "suggest": {
         "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic.",
