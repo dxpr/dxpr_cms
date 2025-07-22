@@ -74,8 +74,6 @@ config:
             - dxpr_cms_forms
             - dxpr_cms_google_analytics
             - dxpr_cms_news
-            - dxpr_cms_person
-            - dxpr_cms_project
             - dxpr_cms_seo_tools
         enabled_sources:
           - drupalorg_jsonapi

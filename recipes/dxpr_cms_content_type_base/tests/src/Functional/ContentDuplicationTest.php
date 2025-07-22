@@ -40,8 +40,6 @@ class ContentDuplicationTest extends BrowserTestBase {
    *   ["drupal/dxpr_cms_events", "event"]
    *   ["drupal/dxpr_cms_news", "news"]
    *   ["drupal/dxpr_cms_page", "page"]
-   *   ["drupal/dxpr_cms_person", "person"]
-   *   ["drupal/dxpr_cms_project", "project"]
    */
   public function testContentDuplication(string $recipe_name, string $content_type): void {
     $dir = InstalledVersions::getInstallPath($recipe_name);

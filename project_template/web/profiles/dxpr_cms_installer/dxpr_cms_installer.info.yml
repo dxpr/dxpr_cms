@@ -28,10 +28,6 @@ recipes:
       - drupal/dxpr_cms_google_analytics
     'News':
       - drupal/dxpr_cms_news
-    'Person Profiles':
-      - drupal/dxpr_cms_person
-    'Projects':
-      - drupal/dxpr_cms_project
     'SEO Tools':
       - drupal/dxpr_cms_seo_tools
 

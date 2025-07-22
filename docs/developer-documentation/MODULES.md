@@ -65,7 +65,7 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Used by**: dxpr_cms_admin_ui
 
 **sam**
-- **Description**: Site Audit Manager providing automated site health checks and performance monitoring tools
+- **Description**: Simple Add More - Simplifies multi-value form widgets by hiding empty fields and providing "Add another" buttons
 - **Used by**: dxpr_cms_admin_ui
 
 **tagify**
@@ -76,7 +76,7 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 
 **add_content_by_bundle**
 - **Description**: Enhanced content creation interface displaying content types as cards with icons and descriptions
-- **Used by**: dxpr_cms_blog, dxpr_cms_case_study, dxpr_cms_events, dxpr_cms_news, dxpr_cms_person, dxpr_cms_project
+- **Used by**: dxpr_cms_blog, dxpr_cms_case_study, dxpr_cms_events, dxpr_cms_news
 
 **autosave_form**
 - **Description**: Automatically saves form progress preventing data loss during content creation and editing sessions
@@ -96,17 +96,9 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 
 ### Page Building & Layout
 
-**contact_block**
-- **Description**: Provides contact form blocks that can be placed anywhere using the block system
-- **Used by**: dxpr_cms_dxpr_builder
-
 **dxpr_builder**
 - **Description**: Advanced drag-and-drop page builder for creating complex layouts without coding knowledge required
 - **Used by**: dxpr_cms_blog, dxpr_cms_dxpr_builder
-
-**dxpr_theme**
-- **Description**: Premium Drupal theme with extensive customization options and modern design patterns built-in
-- **Used by**: dxpr_cms_dxpr_theme
 
 **dxpr_theme_helper**
 - **Description**: Helper module providing additional theme functionality and integration features for DXPR themes
@@ -269,6 +261,10 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 
 ### Forms & User Input
 
+**contact_block**
+- **Description**: Provides contact form blocks that can be placed anywhere using the block system
+- **Used by**: dxpr_cms_dxpr_builder
+
 **webform**
 - **Description**: Comprehensive form builder for creating complex forms, surveys, and applications with submissions
 - **Used by**: dxpr_cms_forms
@@ -335,10 +331,6 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: BPMN diagram viewer and editor for ECA workflows enabling visual workflow design
 - **Used by**: dxpr_cms_authentication, dxpr_cms_content_type_base, dxpr_cms_privacy_basic, dxpr_cms_seo_tools, dxpr_cms_starter
 
-**bootstrap5**
-- **Description**: Bootstrap 5 framework integration providing modern responsive design components and utilities
-- **Used by**: dxpr_cms_dxpr_theme
-
 **eca**
 - **Description**: Event-Condition-Action framework for creating automated workflows without custom code requirements
 - **Used by**: dxpr_cms_authentication, dxpr_cms_content_type_base, dxpr_cms_privacy_basic, dxpr_cms_seo_tools, dxpr_cms_starter
@@ -377,7 +369,6 @@ The following are DXPR CMS recipe modules that bundle functionality:
 - **dxpr_cms_case_study** - Case study content type
 - **dxpr_cms_content_type_base** - Base content type configuration
 - **dxpr_cms_dxpr_builder** - DXPR Builder integration
-- **dxpr_cms_dxpr_theme** - DXPR Theme integration
 - **dxpr_cms_events** - Event management features
 - **dxpr_cms_forms** - Form building tools
 - **dxpr_cms_google_analytics** - Google Analytics integration
@@ -386,9 +377,7 @@ The following are DXPR CMS recipe modules that bundle functionality:
 - **dxpr_cms_news** - News content type
 - **dxpr_cms_page** - Basic page content type
 - **dxpr_cms_performance** - Performance optimizations
-- **dxpr_cms_person** - Person/profile content type
 - **dxpr_cms_privacy_basic** - Privacy compliance tools
-- **dxpr_cms_project** - Project showcase content type
 - **dxpr_cms_remote_video** - Remote video embedding
 - **dxpr_cms_roles** - User role configuration
 - **dxpr_cms_search** - Search functionality
