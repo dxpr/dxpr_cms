@@ -4,6 +4,9 @@ description: Sets up a nice administrative theme and navigation.
 recipes:
   - dxpr_cms_roles
 install:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_search
   - coffee
   - dashboard
   - contextual

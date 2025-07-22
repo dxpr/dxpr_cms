@@ -4,6 +4,7 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
+        "drupal/admin_toolbar": "^3.0",
         "drupal/coffee": "^2",
         "drupal/core": ">=10.3",
         "drupal/dashboard": "^2",
