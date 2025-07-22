@@ -2,17 +2,9 @@ name: 'Recommended performance'
 type: 'DXPR CMS'
 description: 'Adds support for performance.'
 install:
-  - advagg
-  - advagg_bundler
-  - advagg_css_minify
-  - advagg_ext_minify
-  - advagg_js_minify
-  - advagg_mod
-  - advagg_validator
   - minifyhtml
 config:
   import:
-    advagg: '*'
     minifyhtml: '*'
   actions:
     system.performance:
