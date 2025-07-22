@@ -96,7 +96,6 @@ config:
         - 'access content overview'
         - 'access contextual links'
         - 'access media overview'
-        - 'access navigation'
         - 'administer url aliases'
         - 'create url aliases'
         - 'view own unpublished media'
