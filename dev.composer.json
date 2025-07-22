@@ -20,6 +20,10 @@
       "type": "path",
       "url": "recipes/dxpr_cms_anti_spam"
     },
+    "basic_analytics": {
+      "type": "path",
+      "url": "recipes/dxpr_cms_basic_analytics"
+    },
     "authentication": {
       "type": "path",
       "url": "recipes/dxpr_cms_authentication"
