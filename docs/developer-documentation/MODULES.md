@@ -105,9 +105,6 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: Groups form fields into tabs, accordions, and fieldsets for better content organization
 - **Used by**: dxpr_cms_dxpr_builder, dxpr_cms_seo_tools
 
-**responsive_preview**
-- **Description**: Preview content across different device sizes ensuring responsive design works correctly everywhere
-- **Used by**: dxpr_cms_dxpr_builder
 
 **section_library**
 - **Description**: Reusable layout sections library for consistent design patterns across pages and content
