@@ -17,13 +17,26 @@ This document lists all Drupal themes used by DXPR CMS recipes as defined in the
   - Professional pre-built layouts
   - Global styling controls
 
-### Supporting Libraries
+### Base Themes
 
 **bootstrap5**
-- **Description**: Bootstrap 5 framework integration providing modern responsive design components and utilities
+- **Description**: Bootstrap 5 base theme providing modern responsive design components and utilities
 - **Used by**: dxpr_cms_dxpr_theme
-- **Type**: Library/Framework
-- **Purpose**: Provides the underlying CSS framework and JavaScript components for responsive design
+- **Type**: Drupal Base Theme
+- **Purpose**: Provides the underlying theme foundation with Bootstrap 5 CSS framework and JavaScript components
+
+### Admin Themes
+
+**gin**
+- **Description**: Modern, accessible admin theme providing a clean and efficient administrative user interface experience
+- **Used by**: dxpr_cms_admin_ui
+- **Type**: Drupal Admin Theme
+- **Features**:
+  - Modern, clean administrative interface
+  - Accessibility focused design
+  - Enhanced user experience for content editors
+  - Responsive admin interface
+  - Customizable admin theme settings
 
 ## Recipe Integration
 

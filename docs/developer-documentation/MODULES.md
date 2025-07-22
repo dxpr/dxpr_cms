@@ -56,9 +56,6 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: Customizable dashboard system allowing personalized admin interfaces with widgets and quick access links
 - **Used by**: dxpr_cms_admin_ui, dxpr_cms_starter
 
-**gin**
-- **Description**: Modern, accessible admin theme providing a clean and efficient administrative user interface experience
-- **Used by**: dxpr_cms_admin_ui
 
 **gin_toolbar**
 - **Description**: Enhanced toolbar integration for Gin admin theme with improved navigation and user experience
