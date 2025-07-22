@@ -318,10 +318,6 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 
 ### Performance
 
-**advagg**
-- **Description**: Advanced CSS/JS aggregation for improved performance through intelligent bundling and optimization
-- **Used by**: dxpr_cms_performance
-
 **minifyhtml**
 - **Description**: HTML minification removing unnecessary whitespace and comments to reduce page size
 - **Used by**: dxpr_cms_performance
