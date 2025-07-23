@@ -123,14 +123,14 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
 
     $form['help'] = [
       '#prefix' => '<p class="cms-installer__subhead">',
-      '#markup' => $this->t('Enter your DXPR Builder product key to unlock premium features and AI capabilities.'),
+      '#markup' => $this->t('Enter your DXPR API Key to unlock premium features AND get FREE access to DXPR AI - including models from OpenAI, Claude, Gemini, MistralAI, XAI, and Perplexity at no additional cost.'),
       '#suffix' => '</p>',
     ];
 
     $form['json_web_token'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('DXPR Builder product key'),
-      '#description' => $this->t('Create a free account at <a href="https://dxpr.com/user/free-registration" target="_blank">DXPR.com</a> and find your key in the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>.'),
+      '#title' => $this->t('DXPR API Key'),
+      '#description' => $this->t('Sign up free at <a href="https://dxpr.com/user/free-registration" target="_blank">DXPR.com</a> (takes 30 seconds) and grab your key from the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>. Unlock enterprise-grade AI access included with your free account.'),
       '#required' => TRUE,
     ];
 
