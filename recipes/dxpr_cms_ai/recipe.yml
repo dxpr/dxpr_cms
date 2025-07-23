@@ -1,13 +1,12 @@
 name: AI Assistant
 type: DXPR CMS
-description: Adds integration with AI services, such as alt text generation and content analysis. Requires an API key from Open AI or Anthropic.
+description: Adds integration with AI services, such as alt text generation and content analysis. Requires a DXPR API key.
 install:
   - key
   - block
   - taxonomy
   - ai
-  - ai_provider_openai
-  - ai_provider_anthropic
+  - ai_provider_dxpr
   - ai_image_alt_text
   - ai_agents
   - ai_content_strategy
@@ -25,64 +24,21 @@ recipes:
   - dxpr_cms_privacy_basic
   - dxpr_cms_roles
 input:
-  # This input is not actually used in our config actions; it's only here to
-  # provide a toggle for the API key fields in a form.
-  provider:
+  dxpr_api_key:
     data_type: string
-    description: Which AI provider to use.
-    default:
-      source: value
-      value: openai
-    form:
-      '#type': radios
-      '#title': Provider
-      '#description': Which AI provider to use.
-      '#options':
-        openai: OpenAI
-        anthropic: Anthropic
-  openai_api_key:
-    data_type: string
-    description: The OpenAI API key, if you want to use OpenAI.
+    description: The DXPR API key for AI services.
     prompt:
       method: ask
       arguments:
-        question: 'If you want to use OpenAI, enter your OpenAI API key. Otherwise, you can leave this empty:'
+        question: 'Enter your DXPR API key (get yours free at https://dxpr.com/user/free-registration):'
     form:
       '#type': 'textfield'
-      '#description': 'Enter your OpenAI API key.<br>You can find your API keys in <a href="https://platform.openai.com/settings/organization/api-keys" target="_blank">your OpenAI account settings (opens new window)</a>.<br><strong>Note:</strong> A paid OpenAI plan is required for AI features to function.'
-      '#title': 'API Key'
-      '#required': false
-      '#maxlength': 256
+      '#description': 'Sign up free at <a href="https://dxpr.com/user/free-registration" target="_blank">DXPR.com</a> (takes 30 seconds) and grab your key from the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>. Unlock enterprise-grade AI access included with your free account.'
+      '#title': 'DXPR API Key'
+      '#required': true
+      '#maxlength': 2048
       '#attributes':
         autocomplete: off
-      # Only show this field if OpenAI is the selected provider.
-      '#states':
-        visible:
-          'input[name*="dxpr_cms_ai"][name$="[provider]"]':
-            value: openai
-    default:
-      source: value
-      value: ''
-  anthropic_api_key:
-    data_type: string
-    description: The Anthropic API key, if you want to use Anthropic.
-    prompt:
-      method: ask
-      arguments:
-        question: 'If you want to use Anthropic, enter your Anthropic API key. Otherwise, you can leave this empty:'
-    form:
-      '#type': 'textfield'
-      '#description': 'Enter your Anthropic API key.<br>You can find your API keys in <a href="https://console.anthropic.com/settings/keys" target="_blank">your Anthropic account settings (opens new window)</a>.<br><strong>Note:</strong> A paid Anthropic plan is required for AI features to function.'
-      '#title': 'API Key'
-      '#required': false
-      '#maxlength': 256
-      '#attributes':
-        autocomplete: off
-      # Only show this field if Anthropic is the selected provider.
-      '#states':
-        visible:
-          'input[name*="dxpr_cms_ai"][name$="[provider]"]':
-            value: anthropic
     default:
       source: value
       value: ''
@@ -109,24 +65,13 @@ config:
               content_editor: 0
               administrator: 0
             plugin_settings: {  }
-    ai_provider_openai.settings:
+    ai_provider_dxpr.settings:
       setupAiProvider:
-        key_value: ${openai_api_key}
-        key_name: openai_api_key
-        key_label: 'OpenAI API Key'
-        env_var: openai_api_key
-        provider: openai
-      simpleConfigUpdate:
-        moderation: true
-    ai_provider_anthropic.settings:
-      setupAiProvider:
-        key_value: ${anthropic_api_key}
-        key_name: anthropic_api_key
-        key_label: 'Anthropic API Key'
-        env_var: anthropic_api_key
-        provider: anthropic
-      simpleConfigUpdate:
-        openai_moderation: false
+        key_value: ${dxpr_api_key}
+        key_name: dxpr_api_key
+        key_label: 'DXPR API Key'
+        env_var: dxpr_api_key
+        provider: dxpr
     klaro.klaro_app.ai_alt_text_generation:
       enable: []
     # Grant permissions to roles.

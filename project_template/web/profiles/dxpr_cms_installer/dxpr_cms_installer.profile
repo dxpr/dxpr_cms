@@ -76,29 +76,11 @@ function dxpr_cms_installer_form_install_configure_form_alter(array &$form): voi
 }
 
 /**
- * Uninstalls the unused AI provider module.
+ * No longer needed - DXPR CMS now uses only DXPR AI provider.
  */
 function dxpr_cms_uninstall_unused_ai_modules(): void {
-  $providers = ['anthropic', 'openai'];
-  $provider_plugin = \Drupal::service('ai.provider');
-  $unusable_providers = [];
-  foreach ($providers as $provider) {
-    // Create an instance and check if its usable (setup).
-    $plugin = $provider_plugin->createInstance($provider);
-    if (!$plugin->isUsable()) {
-      $unusable_providers[] = $plugin;
-    }
-  }
-
-  // If one of the providers worked, uninstall the unused one(s), but if all
-  // failed, don't do anything.
-  if (count($unusable_providers) < count($providers)) {
-    foreach ($unusable_providers as $plugin) {
-      \Drupal::service('module_installer')->uninstall([
-        $plugin->getModuleDataName(),
-      ]);
-    }
-  }
+  // This function is no longer needed since we only use DXPR AI provider.
+  // Kept for compatibility with existing installation tasks.
 }
 
 /**

@@ -22,12 +22,8 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: Automatically generates accessible alt text for images using AI image recognition and analysis
 - **Used by**: dxpr_cms_ai
 
-**ai_provider_anthropic**
-- **Description**: Integration with Anthropic's Claude AI models for advanced conversational and content generation capabilities
-- **Used by**: dxpr_cms_ai
-
-**ai_provider_openai**
-- **Description**: OpenAI provider integration enabling GPT models for content generation and analysis
+**ai_provider_dxpr**
+- **Description**: DXPR AI provider integration offering free access to multiple AI models including OpenAI, Claude, Gemini, and others through DXPR's unified API
 - **Used by**: dxpr_cms_ai
 
 **analyze_ai_brand_voice**
