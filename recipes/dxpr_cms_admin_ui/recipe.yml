@@ -37,6 +37,9 @@ config:
     system.theme:
       simpleConfigUpdate:
         admin: gin
+    gin.settings:
+      simpleConfigUpdate:
+        classic_toolbar: vertical
     tagify.settings:
       simpleConfigUpdate:
         set_default_widget: true
@@ -45,12 +48,12 @@ config:
     user.role.content_editor:
       grantPermissions:
         - 'use admin toolbar search'
-        - 'use the toolbar'
+        - 'access toolbar'
     user.role.content_administrator:
       grantPermissions:
         - 'use admin toolbar search'
-        - 'use the toolbar'
+        - 'access toolbar'
     user.role.site_builder:
       grantPermissions:
         - 'use admin toolbar search'
-        - 'use the toolbar'
+        - 'access toolbar'
