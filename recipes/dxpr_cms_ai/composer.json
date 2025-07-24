@@ -9,6 +9,7 @@
         "drupal/ai_agents": "^1",
         "drupal/ai_image_alt_text": "^1",
         "drupal/ai_provider_dxpr": "^1.0.0-alpha1",
+        "drupal/ai_checklist": "^1.0",
         "drupal/dxpr_cms_privacy_basic": "^1",
         "drupal/ai_content_strategy": "^1.0@beta",
         "drupal/analyze_ai_brand_voice": "dev-1.x",

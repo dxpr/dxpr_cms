@@ -9,6 +9,7 @@ install:
   - ai_provider_dxpr
   - ai_image_alt_text
   - ai_agents
+  - ai_checklist
   - ai_content_strategy
   - analyze_ai_brand_voice
   - analyze_ai_sentiment
@@ -47,6 +48,7 @@ config:
     ai_image_alt_text: '*'
     ai_agents: '*'
     ai_content_strategy: '*'
+    ai_checklist: '*'
   actions:
     ai_agents.settings:
       simpleConfigUpdate:
