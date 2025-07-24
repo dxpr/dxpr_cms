@@ -8,13 +8,13 @@ _meta:
 default:
   revision_log_message:
     -
-      value: 'Created by translation job <a href="/admin/tmgmt/jobs/4">Social Impact</a>.'
+      value: 'Created by translation job <a href="/admin/tmgmt/jobs/4">AI Tutorial</a>.'
   enabled:
     -
       value: true
   title:
     -
-      value: 'Social Impact'
+      value: 'AI Tutorial'
   menu_name:
     -
       value: main
