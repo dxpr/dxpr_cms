@@ -14,6 +14,10 @@ This document lists all Drupal modules required by DXPR CMS recipes as defined i
 - **Description**: AI agents framework enabling autonomous AI assistants for content creation and management tasks
 - **Used by**: dxpr_cms_ai
 
+**ai_checklist**
+- **Description**: Interactive AI-powered checklists for guiding content creation and ensuring quality standards
+- **Used by**: dxpr_cms_ai
+
 **ai_content_strategy**
 - **Description**: AI-powered content strategy tools for planning, optimizing and analyzing content effectiveness and engagement
 - **Used by**: dxpr_cms_ai
