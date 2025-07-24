@@ -42,3 +42,15 @@ config:
         set_default_widget: true
     user.role.authenticated:
       grantPermission: 'access coffee'
+    user.role.content_editor:
+      grantPermissions:
+        - 'use admin toolbar search'
+        - 'use the toolbar'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'use admin toolbar search'
+        - 'use the toolbar'
+    user.role.site_builder:
+      grantPermissions:
+        - 'use admin toolbar search'
+        - 'use the toolbar'
