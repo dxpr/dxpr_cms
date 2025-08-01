@@ -19,12 +19,26 @@ bundle: blog
 mode: default
 content:
   field_content:
-    type: text_textarea
+    type: ace_editor
     weight: 4
     region: content
     settings:
-      rows: 5
-      placeholder: ''
+      theme: monokai
+      mode: html
+      height: 300
+      width: '100%'
+      font_size: 14
+      show_invisibles: false
+      show_gutter: true
+      show_print_margin: false
+      highlight_active_line: true
+      use_wrap_mode: false
+      use_soft_tabs: true
+      tab_size: 2
+      use_worker: true
+      show_line_numbers: true
+      auto_complete: true
+      show_search_box: true
     third_party_settings: {  }
   created:
     type: datetime_timestamp

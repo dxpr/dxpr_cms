@@ -17,6 +17,7 @@ install:
   - dxpr_builder_block
   - dxpr_builder_page
   - dxpr_theme_helper
+  - ace_editor
 config:
   strict: false
   import:

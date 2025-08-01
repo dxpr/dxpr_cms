@@ -12,6 +12,7 @@ install:
   - dxpr_theme_helper
   - menu_link_content
   - selective_better_exposed_filters
+  - ace_editor
 config:
   strict: false
   import:
