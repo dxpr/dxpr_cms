@@ -50,7 +50,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($form_display->getComponent('url_redirects'));
     $this->assertFieldsInOrder($form_display, [
       'title',
-      'field_description',
       'field_case_study__client_name',
       'field_case_study__client_logo',
       'field_featured_image',
@@ -76,7 +75,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertFieldsInOrder($card_display, [
       'field_featured_image',
       'field_case_study__client_name',
-      'field_description',
     ]);
     $this->assertArraySubset([
       'field_featured_image' => [
@@ -88,7 +86,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($teaser_display->getComponent('links'));
     $this->assertFieldsInOrder($teaser_display, [
       'field_featured_image',
-      'field_description',
     ]);
 
     $this->assertContentModel([
@@ -101,15 +98,6 @@ class ComponentValidationTest extends BrowserTestBase {
           'label' => 'Title',
           'input type' => 'text',
           'help text' => '',
-        ],
-        'field_description' => [
-          'type' => 'string_long',
-          'cardinality' => 1,
-          'required' => TRUE,
-          'translatable' => TRUE,
-          'label' => 'Description',
-          'input type' => 'textarea',
-          'help text' => 'Describe the page content. This appears as the description in search engine results.',
         ],
         'field_featured_image' => [
           'type' => 'entity_reference',

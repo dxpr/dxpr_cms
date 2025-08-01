@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_content
-    - field.field.node.event.field_description
     - field.field.node.event.field_event__date
     - field.field.node.event.field_event__file
     - field.field.node.event.field_event__link
@@ -532,6 +531,5 @@ content:
     weight: 9
     region: content
 hidden:
-  field_description: true
   langcode: true
   links: true

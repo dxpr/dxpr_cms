@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.news.field_content
-    - field.field.node.news.field_description
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_tags
     - node.type.news
@@ -32,14 +31,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_description:
-    type: string_textarea
-    weight: 1
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_featured_image:
     type: media_library_widget

@@ -10,7 +10,7 @@ status:
       analyze_ai_sentiment_analyzer: true
       content_info: true
       node_views: true
-    drag_and_drop_page:
+    landing_page:
       analyze_ai_brand_voice_analyzer: true
       analyze_ai_sentiment_analyzer: true
       content_info: true

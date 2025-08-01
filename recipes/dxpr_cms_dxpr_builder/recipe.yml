@@ -44,10 +44,10 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'create drag_and_drop_page content'
-        - 'edit any drag_and_drop_page content'
-        - 'view drag_and_drop_page revisions'
-        - 'revert drag_and_drop_page revisions'
+        - 'create landing_page content'
+        - 'edit any landing_page content'
+        - 'view landing_page revisions'
+        - 'revert landing_page revisions'
     user.role.site_builder:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -72,7 +72,7 @@ config:
         - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'create drag_and_drop_page content'
-        - 'edit any drag_and_drop_page content'
-        - 'view drag_and_drop_page revisions'
-        - 'revert drag_and_drop_page revisions'
+        - 'create landing_page content'
+        - 'edit any landing_page content'
+        - 'view landing_page revisions'
+        - 'revert landing_page revisions'

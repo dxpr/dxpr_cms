@@ -2,7 +2,7 @@ _meta:
   version: '1.0'
   entity_type: node
   uuid: 2b6abda6-5b2b-4e7f-aec4-2d9e9a9d47be
-  bundle: drag_and_drop_page
+  bundle: landing_page
   default_langcode: en
 default:
   revision_uid:

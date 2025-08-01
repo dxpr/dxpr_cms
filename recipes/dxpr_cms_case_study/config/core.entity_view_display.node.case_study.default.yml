@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
     - field.field.node.case_study.field_content
-    - field.field.node.case_study.field_description
     - field.field.node.case_study.field_featured_image
     - field.field.node.case_study.field_tags
     - image.style.uncropped_500w_webp
@@ -204,5 +203,4 @@ content:
     weight: 2
     region: content
 hidden:
-  field_description: true
   links: true

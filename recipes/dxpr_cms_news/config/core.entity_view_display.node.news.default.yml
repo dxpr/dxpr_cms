@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.news.field_content
-    - field.field.node.news.field_description
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_tags
     - node.type.news
@@ -133,6 +132,5 @@ content:
     weight: 0
     region: content
 hidden:
-  field_description: true
   langcode: true
   links: true

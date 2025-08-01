@@ -60,7 +60,6 @@ class ComponentValidationTest extends BrowserTestBase {
       'field_event__date',
       'field_event__location_name',
       'field_event__location_address',
-      'field_description',
       'field_content',
       'field_event__link',
       'field_event__file',
@@ -88,7 +87,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertFieldsInOrder($card_display, [
       'field_featured_image',
       'field_event__date',
-      'field_description',
     ]);
     $this->assertArraySubset([
       'field_featured_image' => [
@@ -101,7 +99,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertFieldsInOrder($teaser_display, [
       'field_featured_image',
       'field_event__date',
-      'field_description',
     ]);
 
     $this->assertContentModel([
@@ -114,15 +111,6 @@ class ComponentValidationTest extends BrowserTestBase {
           'label' => 'Title',
           'input type' => 'text',
           'help text' => '',
-        ],
-        'field_description' => [
-          'type' => 'string_long',
-          'cardinality' => 1,
-          'required' => TRUE,
-          'translatable' => TRUE,
-          'label' => 'Description',
-          'input type' => 'textarea',
-          'help text' => 'Describe the page content. This appears as the description in search engine results.',
         ],
         'field_featured_image' => [
           'type' => 'entity_reference',

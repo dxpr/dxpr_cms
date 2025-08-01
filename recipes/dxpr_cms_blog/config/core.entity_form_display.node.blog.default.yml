@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.field_content
-    - field.field.node.blog.field_description
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_tags
     - node.type.blog
@@ -45,14 +44,6 @@ content:
     weight: 7
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_description:
-    type: string_textarea
-    weight: 3
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_featured_image:
     type: media_library_widget

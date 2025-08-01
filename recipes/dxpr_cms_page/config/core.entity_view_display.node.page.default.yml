@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_content
-    - field.field.node.page.field_description
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_tags
     - field.field.node.page.layout_builder__layout
@@ -114,7 +113,6 @@ content:
     weight: 1
     region: content
 hidden:
-  field_description: true
   field_tags: true
   layout_builder__layout: true
   links: true
