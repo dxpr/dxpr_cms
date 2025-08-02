@@ -34,8 +34,7 @@ default:
       alias: /empty-dxpr-builder-page
       langcode: en
       pathauto: 1
-  body:
+  field_content:
     -
       value: '&nbsp;'
-      format: full_html
-      summary: ''
+      format: dxpr_builder_html

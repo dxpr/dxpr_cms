@@ -36,9 +36,6 @@ default:
     -
       alias: /events
       langcode: en
-  field_description:
-    -
-      value: 'Lists all upcoming events.'
   layout_builder__layout:
     -
       section:

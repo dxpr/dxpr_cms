@@ -15,7 +15,6 @@ install:
   - workflows
   - dxpr_builder
   - dxpr_builder_block
-  - dxpr_builder_page
   - dxpr_theme_helper
   - ace_editor
 config:
@@ -24,7 +23,6 @@ config:
     contact_block: '*'
     dxpr_builder: '*'
     dxpr_builder_block: '*'
-    dxpr_builder_page: '*'
     dxpr_theme_helper: '*'
     menu_link_attributes: '*'
   actions:
@@ -48,6 +46,7 @@ config:
         - 'edit any landing_page content'
         - 'view landing_page revisions'
         - 'revert landing_page revisions'
+        - 'use text format dxpr_builder_html'
     user.role.site_builder:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -62,6 +61,7 @@ config:
         - 'edit with dxpr builder'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
+        - 'use text format dxpr_builder_html'
     user.role.content_editor:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -76,3 +76,4 @@ config:
         - 'edit any landing_page content'
         - 'view landing_page revisions'
         - 'revert landing_page revisions'
+        - 'use text format dxpr_builder_html'

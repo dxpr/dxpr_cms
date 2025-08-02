@@ -1,0 +1,36 @@
+diff --git a/ace_editor.module b/ace_editor.module
+index 1234567..abcdefg 100644
+--- a/ace_editor.module
++++ b/ace_editor.module
+@@ -36,11 +36,17 @@ function ace_editor_theme($existing, $type, $theme, $path) {
+  */
+ function ace_editor_lib_path() {
+ 
+-  $paths_to_check = [
++  $paths_to_check = [
+     '/libraries/ace',
+     '/libraries/ace-builds',
+     '/' . \Drupal::service('extension.list.module')->getPath('ace_editor') . '/libraries',
+-    '/' . \Drupal::service('extension.list.profile')->getPath(\Drupal::installProfile()) . '/libraries/ace',
++    '/' . \Drupal::service('extension.list.module')->getPath('dxpr_builder') . '/dxpr_builder/vendor/managed/ace-builds/src',
+   ];
++  
++  // Only add profile path if an installation profile exists.
++  $profile = \Drupal::installProfile();
++  if ($profile) {
++    $paths_to_check[] = '/' . \Drupal::service('extension.list.profile')->getPath($profile) . '/libraries/ace';
++  }
+ 
+   foreach ($paths_to_check as $path) {
+@@ -70,6 +75,11 @@ function ace_editor_lib_path() {
+ function ace_editor_library_info_build() {
+ 
+   $path = ace_editor_lib_path();
++  
++  // If library path is not found, return empty array.
++  if (!$path) {
++    return [];
++  }
+ 
+   // Collects all theme and mode files available.
+   $files = \Drupal::service('file_system')->scanDirectory(DRUPAL_ROOT . $path, '/(theme|mode)-(.+)\.js$/', ['recurse' => FALSE]);

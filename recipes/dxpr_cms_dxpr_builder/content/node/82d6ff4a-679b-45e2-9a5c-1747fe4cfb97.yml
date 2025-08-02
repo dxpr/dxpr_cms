@@ -34,11 +34,10 @@ default:
       alias: /ai-tutorial
       langcode: en
       pathauto: 1
-  body:
+  field_content:
     -
       value: ''
-      format: full_html
-      summary: ''
+      format: dxpr_builder_html
   field_dth_hide_regions:
     -
       value: page_title

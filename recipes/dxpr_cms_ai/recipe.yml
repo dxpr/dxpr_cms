@@ -83,13 +83,11 @@ config:
         - 'generate ai alt tags'
         - 'access ai content strategy'
         - 'view analyze reports'
-        - 'view changes'
     user.role.content_administrator:
       grantPermissions:
         - 'access ai content strategy'
         - 'view analyze reports'
         - 'generate ai alt tags'
-        - 'view changes'
     user.role.site_builder:
       grantPermissions:
         - 'access ai content strategy'
@@ -99,8 +97,6 @@ config:
         # Markdownify related setup.
         - 'administer markdownify'
         - 'generate ai alt tags'
-        - 'view changes'
-        - 'administer diff'
     # Markdownify related setup.
     markdownify.settings:
       simpleConfigUpdate:

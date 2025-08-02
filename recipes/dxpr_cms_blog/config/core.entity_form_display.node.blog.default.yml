@@ -8,6 +8,7 @@ dependencies:
     - node.type.blog
     - workflows.workflow.basic_editorial
   module:
+    - field_group
     - path
     - text
     - content_moderation
@@ -18,26 +19,12 @@ bundle: blog
 mode: default
 content:
   field_content:
-    type: ace_editor
+    type: text_textarea
     weight: 4
     region: content
     settings:
-      theme: monokai
-      mode: html
-      height: 300
-      width: '100%'
-      font_size: 14
-      show_invisibles: false
-      show_gutter: true
-      show_print_margin: false
-      highlight_active_line: true
-      use_wrap_mode: false
-      use_soft_tabs: true
-      tab_size: 2
-      use_worker: true
-      show_line_numbers: true
-      auto_complete: true
-      show_search_box: true
+      rows: 9
+      placeholder: ''
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -147,6 +134,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+third_party_settings:
+  field_group:
+    group_content_advanced:
+      children:
+        - field_content
+      label: 'Advanced Content Editing'
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_content_advanced
+        label_as_html: false
+        open: false
+        description: 'For most content editing, use the View tab and click "Edit with DXPR Builder" for a visual editing experience. Use this section only for advanced HTML editing with syntax highlighting.'
+        required_fields: false
 hidden:
   publish_state: true
   unpublish_state: true

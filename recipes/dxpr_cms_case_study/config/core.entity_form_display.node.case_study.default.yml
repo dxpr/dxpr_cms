@@ -17,6 +17,7 @@ dependencies:
     - path
     - scheduler
     - text
+    - field_group
 id: node.case_study.default
 targetEntityType: node
 bundle: case_study
@@ -149,6 +150,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+third_party_settings:
+  field_group:
+    group_content_advanced:
+      children:
+        - field_content
+      label: 'Advanced Content Editing'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_content_advanced
+        label_as_html: false
+        open: false
+        description: 'For most content editing, use the View tab and click "Edit with DXPR Builder" for a visual editing experience. Use this section only for advanced HTML editing with syntax highlighting.'
+        required_fields: false
 hidden:
   publish_state: true
   unpublish_state: true

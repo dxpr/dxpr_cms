@@ -44,7 +44,6 @@ config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
     - field.storage.node.field_content
-    - field.storage.node.field_description
     - field.storage.node.field_featured_image
     - field.storage.node.field_tags
     - field.storage.node.layout_builder__layout
@@ -95,6 +94,7 @@ config:
         - 'access trash'
         - 'administer menu'
         - 'use text format content_format'
+        - 'use text format dxpr_builder_html'
         - 'use basic_editorial transition unpublish'
         - 'use basic_editorial transition create_new_draft'
         - 'use basic_editorial transition publish'

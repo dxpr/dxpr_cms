@@ -36,9 +36,6 @@ default:
     -
       alias: /case-studies
       langcode: en
-  field_description:
-    -
-      value: 'Listing page for case studies.'
   layout_builder__layout:
     -
       section:

@@ -18,6 +18,7 @@ config:
         - 'edit own page content'
         - 'view page revisions'
         - 'revert page revisions'
+        - 'use text format dxpr_builder_html'
     user.role.content_administrator:
       grantPermissions:
         - 'create page content'
@@ -26,6 +27,7 @@ config:
         - 'edit any page content'
         - 'view page revisions'
         - 'revert page revisions'
+        - 'use text format dxpr_builder_html'
 
     user.role.site_builder:
       grantPermissions:
@@ -35,5 +37,6 @@ config:
         - 'edit any page content'
         - 'view page revisions'
         - 'revert page revisions'
+        - 'use text format dxpr_builder_html'
     workflows.workflow.basic_editorial:
       addNodeTypes: ['page']
