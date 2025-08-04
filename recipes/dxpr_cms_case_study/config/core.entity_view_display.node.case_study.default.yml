@@ -85,7 +85,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
               formatter:
-                type: text_default
+                type: dxpr_builder_text
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }

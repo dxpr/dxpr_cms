@@ -6,11 +6,13 @@ recipes:
   - core/recipes/content_editor_role
 install:
   - add_content_by_bundle
+  - dxpr_theme_helper
   - menu_link_content
   - selective_better_exposed_filters
 config:
   strict: false
   import:
+    dxpr_theme_helper: '*'
     system:
       - system.menu.main
   actions:

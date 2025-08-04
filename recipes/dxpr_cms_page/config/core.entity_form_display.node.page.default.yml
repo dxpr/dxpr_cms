@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_content
+    - field.field.node.page.field_dth_hide_regions
+    - field.field.node.page.field_dth_main_content_width
+    - field.field.node.page.field_dth_page_layout
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_tags
     - field.field.node.page.layout_builder__layout
@@ -131,6 +134,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_dth_hide_regions:
+    type: options_buttons
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dth_main_content_width:
+    type: options_select
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dth_page_layout:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 third_party_settings:
   field_group:
     group_content_advanced:
@@ -148,6 +169,24 @@ third_party_settings:
         label_as_html: false
         open: false
         description: 'Please go to the "view" tab for visual content editing. This section is for advanced HTML editing for technical troubleshooting.'
+        required_fields: false
+    group_dxpr_theme_settings:
+      children:
+        - field_dth_page_layout
+        - field_dth_hide_regions
+        - field_dth_main_content_width
+      label: 'DXPR Theme Settings'
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_dxpr_theme_settings
+        label_as_html: false
+        open: false
+        description: ''
         required_fields: false
 hidden:
   layout_builder__layout: true

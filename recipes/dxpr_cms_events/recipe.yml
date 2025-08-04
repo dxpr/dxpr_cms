@@ -11,6 +11,7 @@ install:
   - address
   - addtocal_augment
   - date_augmenter
+  - dxpr_theme_helper
   - geofield
   - geocoder
   - geocoder_address
@@ -27,6 +28,7 @@ config:
     - field.storage.node.field_link
     - field.storage.node.field_location_address
   import:
+    dxpr_theme_helper: '*'
     geofield: '*'
     smart_date: '*'
     system:

@@ -7,6 +7,7 @@ recipes:
 install:
   - link
   - add_content_by_bundle
+  - dxpr_theme_helper
   - menu_link_content
 config:
   # Treat all field storages strictly, since they influence the database layout.
@@ -15,6 +16,7 @@ config:
     - field.storage.node.field_case_study__client_logo
     - field.storage.node.field_case_study__client_name
   import:
+    dxpr_theme_helper: '*'
   actions:
     user.role.content_editor:
       grantPermissions: []

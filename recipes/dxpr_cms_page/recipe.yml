@@ -4,8 +4,12 @@ description: Adds a content type for simple pages.
 recipes:
   - core/recipes/content_editor_role
   - dxpr_cms_content_type_base
+install:
+  - dxpr_theme_helper
 config:
   strict: false
+  import:
+    dxpr_theme_helper: '*'
   actions:
     core.entity_view_display.node.page.default:
       enableLayoutBuilder: {  }
