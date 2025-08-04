@@ -76,6 +76,10 @@
       "type": "path",
       "url": "recipes/dxpr_cms_page"
     },
+    "performance": {
+      "type": "path",
+      "url": "recipes/dxpr_cms_performance"
+    },
     "privacy_basic": {
       "type": "path",
       "url": "recipes/dxpr_cms_privacy_basic"

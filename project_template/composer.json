@@ -24,6 +24,7 @@
         "drupal/dxpr_cms_forms": "*",
         "drupal/dxpr_cms_multilingual": "*",
         "drupal/dxpr_cms_news": "*",
+        "drupal/dxpr_cms_performance": "*",
         "drupal/dxpr_cms_seo_tools": "*",
         "drupal/dxpr_cms_starter": "*",
         "drupal/project_browser": "@beta",
