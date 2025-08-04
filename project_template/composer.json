@@ -12,6 +12,7 @@
     },
     "require": {
         "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
         "drupal/core-recommended": "^11",
@@ -38,8 +39,10 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
+        "preferred-install": "source",
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "php-http/discovery": true
@@ -77,6 +80,12 @@
                 "  * Get support: https://drupal.org/support",
                 "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
             ]
+        },
+        "composer-exit-on-patch-failure": true,
+        "patches": {
+            "drupal/ace_editor": {
+                "Fix profile detection for recipe-based installations": "patches/ace_editor_no_profile.patch"
+            }
         }
     }
 }

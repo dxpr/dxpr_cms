@@ -120,6 +120,7 @@
     ]
   },
   "config": {
+    "preferred-install": "source",
     "allow-plugins": {
       "cweagans/composer-patches": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
@@ -128,6 +129,7 @@
     }
   },
   "extra": {
+    "composer-exit-on-patch-failure": true,
     "patches": {
       "drupal/core": {
         "#3481164: Announcements Feed breaks `test-site.php install`": "https://www.drupal.org/files/issues/2024-10-16/3481164.patch"
@@ -140,6 +142,9 @@
       },
       "drupal/dxpr_theme_helper": {
         "#3477960: Enhance dxpr_theme_helper for Improved Compatibility with Navigation Module": "https://git.drupalcode.org/project/dxpr_theme_helper/-/merge_requests/2/diffs.patch"
+      },
+      "drupal/ace_editor": {
+        "Fix profile detection for recipe-based installations": "patches/ace_editor_no_profile.patch"
       }
     }
   },

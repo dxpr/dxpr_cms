@@ -11,13 +11,5 @@
         "drupal/section_library": "^1.2.2",
         "drupal/dxpr_theme_helper": "^2.0.0",
         "drupal/menu_link_attributes": "^1.5.0",
-        "drupal/ace_editor": "^2.0"
-    },
-    "extra": {
-        "patches": {
-            "drupal/ace_editor": {
-                "Fix profile detection for recipe-based installations": "ace_editor_no_profile.patch"
-            }
-        }
     }
 }
