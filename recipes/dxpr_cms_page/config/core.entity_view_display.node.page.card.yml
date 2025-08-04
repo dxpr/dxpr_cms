@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - field.field.node.page.field_content
-    - field.field.node.page.field_description
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_tags
     - field.field.node.page.layout_builder__layout
@@ -21,13 +20,6 @@ targetEntityType: node
 bundle: page
 mode: card
 content:
-  field_description:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     label: hidden

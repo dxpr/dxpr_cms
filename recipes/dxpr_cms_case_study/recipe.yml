@@ -7,6 +7,7 @@ recipes:
 install:
   - link
   - add_content_by_bundle
+  - dxpr_theme_helper
   - menu_link_content
 config:
   # Treat all field storages strictly, since they influence the database layout.
@@ -15,31 +16,14 @@ config:
     - field.storage.node.field_case_study__client_logo
     - field.storage.node.field_case_study__client_name
   import:
+    dxpr_theme_helper: '*'
   actions:
     user.role.content_editor:
-      grantPermissions:
-        - 'create case_study content'
-        - 'delete case_study revisions'
-        - 'delete own case_study content'
-        - 'edit own case_study content'
-        - 'view case_study revisions'
-        - 'revert case_study revisions'
+      grantPermissions: []
     user.role.content_administrator:
-      grantPermissions:
-        - 'create case_study content'
-        - 'delete case_study revisions'
-        - 'delete any case_study content'
-        - 'edit any case_study content'
-        - 'view case_study revisions'
-        - 'revert case_study revisions'
+      grantPermissions: []
 
     user.role.site_builder:
-      grantPermissions:
-        - 'create case_study content'
-        - 'delete case_study revisions'
-        - 'delete any case_study content'
-        - 'edit any case_study content'
-        - 'view case_study revisions'
-        - 'revert case_study revisions'
+      grantPermissions: []
     workflows.workflow.basic_editorial:
       addNodeTypes: ['case_study']

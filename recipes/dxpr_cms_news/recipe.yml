@@ -6,38 +6,22 @@ recipes:
   - core/recipes/content_editor_role
 install:
   - add_content_by_bundle
+  - dxpr_theme_helper
   - menu_link_content
   - selective_better_exposed_filters
 config:
   strict: false
   import:
+    dxpr_theme_helper: '*'
     system:
       - system.menu.main
   actions:
     user.role.content_editor:
-      grantPermissions:
-        - 'create news content'
-        - 'delete news revisions'
-        - 'delete own news content'
-        - 'edit own news content'
-        - 'view news revisions'
-        - 'revert news revisions'
+      grantPermissions: []
     user.role.content_administrator:
-      grantPermissions:
-        - 'create news content'
-        - 'delete news revisions'
-        - 'delete any news content'
-        - 'edit any news content'
-        - 'view news revisions'
-        - 'revert news revisions'
+      grantPermissions: []
 
     user.role.site_builder:
-      grantPermissions:
-        - 'create news content'
-        - 'delete news revisions'
-        - 'delete any news content'
-        - 'edit any news content'
-        - 'view news revisions'
-        - 'revert news revisions'
+      grantPermissions: []
     workflows.workflow.basic_editorial:
       addNodeTypes: ['news']

@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.field_content
-    - field.field.node.news.field_description
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_tags
     - node.type.news
@@ -20,13 +19,6 @@ targetEntityType: node
 bundle: news
 mode: teaser
 content:
-  field_description:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     label: hidden

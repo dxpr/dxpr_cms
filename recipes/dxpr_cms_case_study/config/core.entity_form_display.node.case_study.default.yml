@@ -6,7 +6,9 @@ dependencies:
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
     - field.field.node.case_study.field_content
-    - field.field.node.case_study.field_description
+    - field.field.node.case_study.field_dth_hide_regions
+    - field.field.node.case_study.field_dth_main_content_width
+    - field.field.node.case_study.field_dth_page_layout
     - field.field.node.case_study.field_featured_image
     - field.field.node.case_study.field_tags
     - node.type.case_study
@@ -18,6 +20,7 @@ dependencies:
     - path
     - scheduler
     - text
+    - field_group
 id: node.case_study.default
 targetEntityType: node
 bundle: case_study
@@ -58,14 +61,6 @@ content:
     region: content
     settings:
       rows: 9
-      placeholder: ''
-    third_party_settings: {  }
-  field_description:
-    type: string_textarea
-    weight: 6
-    region: content
-    settings:
-      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_featured_image:
@@ -158,6 +153,60 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_dth_hide_regions:
+    type: options_buttons
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dth_main_content_width:
+    type: options_select
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dth_page_layout:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+third_party_settings:
+  field_group:
+    group_content_advanced:
+      children:
+        - field_content
+      label: 'HTML Content Editing'
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_content_advanced
+        label_as_html: false
+        open: false
+        description: 'Please go to the "view" tab for visual content editing. This section is for advanced HTML editing for technical troubleshooting.'
+        required_fields: false
+    group_dxpr_theme_settings:
+      children:
+        - field_dth_page_layout
+        - field_dth_hide_regions
+        - field_dth_main_content_width
+      label: 'DXPR Theme Settings'
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_dxpr_theme_settings
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
 hidden:
   publish_state: true
   unpublish_state: true

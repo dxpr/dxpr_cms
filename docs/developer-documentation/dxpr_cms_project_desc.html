@@ -124,8 +124,15 @@
 <code>ddev drush site-install dxpr_cms_installer dxpr_cms_installer_api_keys_configuration.json_web_token='YOUR_DXPR_API_KEY' -y</code>
 <p>Replace <code>YOUR_DXPR_API_KEY</code> with your actual DXPR Builder product key from <a href="https://app.dxpr.com/getting-started" target="_blank">app.dxpr.com/getting-started</a>.</p>
 
-<h3>Step 7: Customize with recipes</h3>
-<p>During the web-based installation, you can select additional recipes to customize your site. These recipes will help tailor the installation to your needs.</p>
+<h3>Step 7: Install optional recipes</h3>
+<p>During the web-based installation, you can select additional recipes (Case Studies, Events, Forms, Analytics, News, SEO Tools) to customize your site.</p>
+<p>If you used command-line installation or want to add recipes later, install them manually:</p>
+<pre><code>ddev drush recipe ../recipes/dxpr_cms_case_study
+ddev drush recipe ../recipes/dxpr_cms_events  
+ddev drush recipe ../recipes/dxpr_cms_forms
+ddev drush recipe ../recipes/dxpr_cms_news
+ddev drush recipe ../recipes/dxpr_cms_google_analytics
+ddev drush recipe ../recipes/dxpr_cms_seo_tools</code></pre>
 
 <h2>Complete Module Reference</h2>
 <p>DXPR CMS includes 86 carefully selected Drupal modules organized by functionality to provide comprehensive capabilities out of the box:</p>

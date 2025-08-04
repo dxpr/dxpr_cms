@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.field_content
-    - field.field.node.blog.field_description
     - field.field.node.blog.field_image
     - field.field.node.blog.field_tags
     - node.type.blog
@@ -48,6 +47,5 @@ content:
     weight: 1
     region: content
 hidden:
-  field_description: true
   langcode: true
   links: true

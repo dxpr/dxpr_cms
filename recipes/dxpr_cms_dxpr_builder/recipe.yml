@@ -15,15 +15,14 @@ install:
   - workflows
   - dxpr_builder
   - dxpr_builder_block
-  - dxpr_builder_page
   - dxpr_theme_helper
+  - ace_editor
 config:
   strict: false
   import:
     contact_block: '*'
     dxpr_builder: '*'
     dxpr_builder_block: '*'
-    dxpr_builder_page: '*'
     dxpr_theme_helper: '*'
     menu_link_attributes: '*'
   actions:
@@ -32,46 +31,13 @@ config:
         name: 'DXPR CMS'
         page.front: '/home'
     user.role.content_administrator:
-      grantPermissionsForEachNodeType:
-        - 'create %bundle content'
-        - 'edit own %bundle content'
-        - 'edit any %bundle content'
-        - 'delete own %bundle content'
-        - 'delete any %bundle content'
-        - 'view %bundle revisions'
-        - 'revert %bundle revisions'
-        - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'create drag_and_drop_page content'
-        - 'edit any drag_and_drop_page content'
-        - 'view drag_and_drop_page revisions'
-        - 'revert drag_and_drop_page revisions'
     user.role.site_builder:
-      grantPermissionsForEachNodeType:
-        - 'create %bundle content'
-        - 'edit own %bundle content'
-        - 'edit any %bundle content'
-        - 'delete own %bundle content'
-        - 'delete any %bundle content'
-        - 'view %bundle revisions'
-        - 'revert %bundle revisions'
-        - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
     user.role.content_editor:
-      grantPermissionsForEachNodeType:
-        - 'create %bundle content'
-        - 'edit own %bundle content'
-        - 'delete own %bundle content'
-        - 'view %bundle revisions'
-        - 'revert %bundle revisions'
-        - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'create drag_and_drop_page content'
-        - 'edit any drag_and_drop_page content'
-        - 'view drag_and_drop_page revisions'
-        - 'revert drag_and_drop_page revisions'

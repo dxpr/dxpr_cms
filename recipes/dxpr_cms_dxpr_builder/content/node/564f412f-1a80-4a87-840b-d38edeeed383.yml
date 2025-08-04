@@ -2,7 +2,7 @@ _meta:
   version: '1.0'
   entity_type: node
   uuid: 564f412f-1a80-4a87-840b-d38edeeed383
-  bundle: drag_and_drop_page
+  bundle: landing_page
   default_langcode: en
 default:
   revision_uid:
@@ -31,7 +31,7 @@ default:
       alias: /home
       langcode: en
       pathauto: 1
-  body:
+  field_content:
     -
       value: |
         <div class="az-element az-section dxpr-theme-util-background-accent1 az-util-vertical-centering hover-style-gb5a83unrv" style="padding-top:10%;padding-bottom:10%;font-size:NaN;border-radius:NaN;background-image: url(-base-url-/sites/default/files/2023-04/flakes-rgba-com.png);opacity:NaN;" data-dxpr-builder-libraries="" data-az-id="gb5a83unrv" data-azat-pid="gb5a83unrv" id="gb5a83unrv" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="yes" data-azat-parallax_speed="0" data-azat-parallax_mode="fixed" data-azat-parallax_mobile_disable="no" data-azat-an_infinite="no"       data-azat-el_class="dxpr-theme-util-background-accent1" data-azat-style="padding-top:10%;padding-bottom:10%;font-size:NaN;border-radius:NaN;background-image: url(-base-url-/sites/default/files/2023-04/flakes-rgba-com.png);opacity:NaN;" data-azat-hover_style="font-size:NaN !important;border-radius:NaN !important;opacity:NaN !important;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-row row az-row--sm az-row--equal-height" style="" data-az-id="gb1a0krxvt" data-azat-pid="gb04x0nabo" id="gb04x0nabo" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm" data-azat-equal="yes" data-azat-reverse_horizontal="no"       data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6 az-util-vertical-centering" style="" data-az-id="gb90c5gnsy" data-azat-pid="gb2biyevjn" id="gb2biyevjn" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2" data-azat-vertical_centering="yes"       data-azcnt="true"><div class="az-element az-icon hover-style-gb5b9qn5tc" style="" data-dxpr-builder-libraries="icon_helpers" data-az-id="gb5b9qn5tc" data-azat-pid="gbklnjwinw" id="gbklnjwinw" data-azb="az_icon" data-az-human-readable="Icon" data-az-human-readable-en="Icon" data-azat-size="fa-lg"       data-azat-style="font-size:NaN;border-radius:NaN;opacity:NaN;" data-azat-hover_style="font-size:NaN !important;border-radius:NaN !important;opacity:NaN !important;"><i class="az-icon-content fa-lg" style="font-size:NaN;border-radius:NaN;opacity:NaN;" data-azcnt="true"></i></div><div class="az-element az-text" style="margin-bottom:10px;" data-az-id="gb0114dzd6" data-azat-pid="gb44np8wti" id="gb44np8wti" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azat-style="margin-bottom:10px;" data-azcnt="true"><h1>Save time with DXPR's software for Drupal.</h1><p class="lead">Discovering this placeholder text was unintended, and we kindly request you to reach out to us via email, providing the webpage's URL where you encountered it. We sincerely appreciate your assistance in this matter.</p></div><div class="az-element az-row row az-row--sm" style="" data-az-id="gbvgqijr1x" data-azat-pid="gbzqpg3r55" id="gbzqpg3r55" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm"       data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbjgshgo6o" data-azat-pid="gb0m3vpfa7" id="gb0m3vpfa7" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2"       data-azcnt="true"><div class="az-element az-button az-button-content" data-az-id="gbiaigdc5h" data-azat-pid="gb7xyoeibw" id="gb7xyoeibw" data-azb="az_button" data-az-human-readable="Button" data-az-human-readable-en="Button" data-azat-title="Call to action" data-azat-link="#" data-azat-link_target="_self" data-azat-type="primary" data-azat-block="no" data-azat-outlined="no" data-azat-size="btn-lg"       data-azat-style="margin-top:15px;"><a href="#" class="az-button-content btn btn-lg btn-primary" style="margin-top:15px;" target="_self" role="button">
@@ -43,8 +43,7 @@ default:
          width: 90%;" src="https://dxpr.com/sites/default/files/dxpr-builder/theme-dashboard.svg" alt="Nice view" title=""></div></div></div></div></div><style><!-- .hover-style-gb5a83unrv:hover  { font-size:NaN !important;border-radius:NaN !important;opacity:NaN !important;} --></style><style><!-- .hover-style-gb5b9qn5tc:hover .az-icon-content { font-size:NaN !important;border-radius:NaN !important;opacity:NaN !important;} --></style><style><!-- .hover-style-gb58z9791t:hover .az-icon-content { font-size:NaN !important;border-radius:NaN !important;opacity:NaN !important;} --></style><style><!-- .hover-style-gbc9sfw6y9:hover .az-icon-content { font-size:NaN !important;border-radius:NaN !important;opacity:NaN !important;} --></style><script src="/modules/contrib/dxpr_builder/dxpr_builder/vendor/managed/jquery-countTo/jquery.countTo.js"></script>
         <script src="/modules/contrib/dxpr_builder/dxpr_builder/vendor/managed/jquery.waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="/modules/contrib/dxpr_builder/dxpr_builder/dxpr_frontend.min.js"></script>
-      format: full_html
-      summary: ''
+      format: dxpr_builder_html
   field_dth_hide_regions:
     -
       value: page_title

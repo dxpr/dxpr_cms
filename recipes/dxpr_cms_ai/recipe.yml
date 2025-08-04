@@ -20,6 +20,7 @@ install:
   - menu_link_content
   - markdownify
   - markdownify_path
+  - diff
 recipes:
   - core/recipes/content_editor_role
   - dxpr_cms_privacy_basic

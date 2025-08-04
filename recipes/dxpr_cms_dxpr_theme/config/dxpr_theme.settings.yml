@@ -9,7 +9,7 @@ full_width_containers:
   cnt_content_bottom: 0
 full_width_content_types:
   blog: blog
-  drag_and_drop_page: drag_and_drop_page
+  landing_page: landing_page
   page: 0
 block_design_regions:
   sidebar_first: sidebar_first

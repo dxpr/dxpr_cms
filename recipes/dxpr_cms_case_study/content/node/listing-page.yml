@@ -36,9 +36,6 @@ default:
     -
       alias: /case-studies
       langcode: en
-  field_description:
-    -
-      value: 'Listing page for case studies.'
   layout_builder__layout:
     -
       section:
@@ -55,7 +52,7 @@ default:
               context_mapping:
                 entity: layout_builder.entity
               formatter:
-                type: text_default
+                type: dxpr_builder_text
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }

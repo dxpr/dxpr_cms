@@ -3,9 +3,11 @@ type: 'DXPR CMS'
 description: 'Adds support for performance.'
 install:
   - minifyhtml
+  - speculative_loading
 config:
   import:
     minifyhtml: '*'
+    speculative_loading: '*'
   actions:
     system.performance:
       simple_config_update:
@@ -15,3 +17,7 @@ config:
           page:
             max_age: 86400
         stale_file_threshold: 172800
+    speculative_loading.settings:
+      simple_config_update:
+        mode: prerender
+        eagerness: eager

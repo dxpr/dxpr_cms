@@ -19,9 +19,30 @@ Follow these steps to install DXPR CMS:
    ```bash
    ddev start
    ```
-5. After the environment starts, follow the link provided in the terminal to access the Drupal installation wizard. Complete the installation steps to set up your site.
-6. During the installation, you can select additional recipes to customize your site. These recipes will help tailor the installation to your needs.
-7. To destroy and rebuild the DDEV environment (which deletes and reinstalls all dependencies), run:
+5. Complete the installation using one of these methods:
+
+   **Option A: Web-based installation**
+   After the environment starts, follow the link provided in the terminal to access the Drupal installation wizard. During installation, you can select optional recipes (Case Studies, Events, Forms, Analytics, News, SEO Tools) to customize your site.
+
+   **Option B: Command-line installation with DXPR API key**
+   For automated installation with your DXPR Builder API key:
+   ```bash
+   ddev drush site-install dxpr_cms_installer dxpr_cms_installer_api_keys_configuration.json_web_token='YOUR_DXPR_API_KEY' -y
+   ```
+   Replace `YOUR_DXPR_API_KEY` with your actual DXPR Builder product key from [app.dxpr.com/getting-started](https://app.dxpr.com/getting-started).
+
+   **Installing optional recipes after installation**
+   If you used command-line installation or want to add recipes later, install them manually:
+   ```bash
+   ddev drush recipe ../recipes/dxpr_cms_case_study
+   ddev drush recipe ../recipes/dxpr_cms_events  
+   ddev drush recipe ../recipes/dxpr_cms_forms
+   ddev drush recipe ../recipes/dxpr_cms_news
+   ddev drush recipe ../recipes/dxpr_cms_google_analytics
+   ddev drush recipe ../recipes/dxpr_cms_seo_tools
+   ```
+
+6. To destroy and rebuild the DDEV environment (which deletes and reinstalls all dependencies), run:
    ```bash
    ddev rebuild
    ```

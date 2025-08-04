@@ -16,7 +16,8 @@
         "drupal/analyze_ai_sentiment-analyze_ai_sentiment": "dev-1.x",
         "drupal/ckeditor_ai_agent": "^1.0@beta",
         "league/commonmark": "^2.4",
-        "drupal/markdownify": "^1.1"
+        "drupal/markdownify": "^1.1",
+        "drupal/diff": "^2.0"
     },
     "conflict": {
         "drupal/project_browser": "<2-alpha7"

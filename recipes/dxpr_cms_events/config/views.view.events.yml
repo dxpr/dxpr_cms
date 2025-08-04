@@ -121,7 +121,7 @@ display:
           empty: true
           content:
             value: '<p>There are no events yet.</p>'
-            format: content_format
+            format: dxpr_builder_html
           tokenize: false
       sorts:
         field_event__date_value:
@@ -597,7 +597,7 @@ display:
           empty: false
           content:
             value: '<a>All events</a>'
-            format: content_format
+            format: dxpr_builder_html
           tokenize: false
       display_extenders: {  }
       block_hide_empty: true

@@ -120,7 +120,7 @@ display:
           empty: true
           content:
             value: '<p>There are no case studies yet.</p>'
-            format: content_format
+            format: dxpr_builder_html
           tokenize: false
       sorts:
         sticky:
@@ -389,7 +389,7 @@ display:
           empty: false
           content:
             value: '<a href="/case-studies">All case studies</a>'
-            format: content_format
+            format: dxpr_builder_html
           tokenize: false
       display_extenders: {  }
     cache_metadata:

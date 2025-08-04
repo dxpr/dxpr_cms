@@ -11,6 +11,7 @@ install:
   - address
   - addtocal_augment
   - date_augmenter
+  - dxpr_theme_helper
   - geofield
   - geocoder
   - geocoder_address
@@ -27,36 +28,19 @@ config:
     - field.storage.node.field_link
     - field.storage.node.field_location_address
   import:
+    dxpr_theme_helper: '*'
     geofield: '*'
     smart_date: '*'
     system:
       - system.menu.main
   actions:
     user.role.content_editor:
-      grantPermissions:
-        - 'create event content'
-        - 'delete event revisions'
-        - 'delete own event content'
-        - 'edit own event content'
-        - 'view event revisions'
-        - 'revert event revisions'
+      grantPermissions: []
     user.role.content_administrator:
-      grantPermissions:
-        - 'create event content'
-        - 'delete event revisions'
-        - 'delete any event content'
-        - 'edit any event content'
-        - 'view event revisions'
-        - 'revert event revisions'
+      grantPermissions: []
 
     user.role.site_builder:
-      grantPermissions:
-        - 'create event content'
-        - 'delete event revisions'
-        - 'delete any event content'
-        - 'edit any event content'
-        - 'view event revisions'
-        - 'revert event revisions'
+      grantPermissions: []
     workflows.workflow.basic_editorial:
       addNodeTypes: ['event']
     klaro.klaro_app.leaflet:
