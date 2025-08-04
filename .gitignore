@@ -14,3 +14,4 @@ patches.lock.json
 eca.model.*.yml
 .specstory/
 .idea/
+/tmp
