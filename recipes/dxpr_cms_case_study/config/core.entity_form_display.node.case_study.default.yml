@@ -158,7 +158,7 @@ third_party_settings:
       label: 'Advanced Content Editing'
       region: content
       parent_name: ''
-      weight: 2
+      weight: 9
       format_type: details
       format_settings:
         classes: ''

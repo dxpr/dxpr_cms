@@ -31,49 +31,13 @@ config:
         name: 'DXPR CMS'
         page.front: '/home'
     user.role.content_administrator:
-      grantPermissionsForEachNodeType:
-        - 'create %bundle content'
-        - 'edit own %bundle content'
-        - 'edit any %bundle content'
-        - 'delete own %bundle content'
-        - 'delete any %bundle content'
-        - 'view %bundle revisions'
-        - 'revert %bundle revisions'
-        - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'create landing_page content'
-        - 'edit any landing_page content'
-        - 'view landing_page revisions'
-        - 'revert landing_page revisions'
-        - 'use text format dxpr_builder_html'
     user.role.site_builder:
-      grantPermissionsForEachNodeType:
-        - 'create %bundle content'
-        - 'edit own %bundle content'
-        - 'edit any %bundle content'
-        - 'delete own %bundle content'
-        - 'delete any %bundle content'
-        - 'view %bundle revisions'
-        - 'revert %bundle revisions'
-        - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
-        - 'use text format dxpr_builder_html'
     user.role.content_editor:
-      grantPermissionsForEachNodeType:
-        - 'create %bundle content'
-        - 'edit own %bundle content'
-        - 'delete own %bundle content'
-        - 'view %bundle revisions'
-        - 'revert %bundle revisions'
-        - 'delete %bundle revisions'
       grantPermissions:
         - 'edit with dxpr builder'
-        - 'create landing_page content'
-        - 'edit any landing_page content'
-        - 'view landing_page revisions'
-        - 'revert landing_page revisions'
-        - 'use text format dxpr_builder_html'

@@ -15,29 +15,11 @@ config:
       - system.menu.main
   actions:
     user.role.content_editor:
-      grantPermissions:
-        - 'create news content'
-        - 'delete news revisions'
-        - 'delete own news content'
-        - 'edit own news content'
-        - 'view news revisions'
-        - 'revert news revisions'
+      grantPermissions: []
     user.role.content_administrator:
-      grantPermissions:
-        - 'create news content'
-        - 'delete news revisions'
-        - 'delete any news content'
-        - 'edit any news content'
-        - 'view news revisions'
-        - 'revert news revisions'
+      grantPermissions: []
 
     user.role.site_builder:
-      grantPermissions:
-        - 'create news content'
-        - 'delete news revisions'
-        - 'delete any news content'
-        - 'edit any news content'
-        - 'view news revisions'
-        - 'revert news revisions'
+      grantPermissions: []
     workflows.workflow.basic_editorial:
       addNodeTypes: ['news']
