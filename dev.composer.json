@@ -112,6 +112,7 @@
   "require-dev": {
     "cweagans/composer-patches": "^2",
     "drupal/core-dev": "^11.2",
+    "drupal/ace_editor": "2.0.2",
     "drupal/default_content": "^2"
   },
   "autoload-dev": {

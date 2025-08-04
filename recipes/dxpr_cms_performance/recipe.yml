@@ -16,7 +16,6 @@ config:
         cache:
           page:
             max_age: 86400
-        stale_file_threshold: 172800
     speculative_loading.settings:
       simple_config_update:
         mode: prerender
