@@ -12,6 +12,7 @@ recipes:
 install:
   - autosave_form
   - bpmn_io
+  - checklistapi
   - ckeditor5
   - content_moderation
   - eca_content
@@ -27,10 +28,13 @@ install:
   - pathauto
   - scheduler
   - scheduler_content_moderation_integration
+  - search
+  - statistics
   - taxonomy
   - token
   - trash
   - views
+  - webform
   # We don't have a specific use of the Options or Field UI modules in this recipe,
   # but we expect that site builders will want to add fields to their content types,
   # so install these modules anyway.
@@ -85,6 +89,8 @@ config:
     trash.settings:
       simpleConfigUpdate:
         enabled_entity_types.node: []
+        enabled_entity_types.media: []
+        enabled_entity_types.taxonomy_term: []
     user.role.anonymous:
       # We assume all published content should be accessible to anonymous users.
       grantPermissions:
@@ -92,7 +98,6 @@ config:
     user.role.authenticated:
       grantPermissions:
         - 'view own unpublished content'
-        - 'view welcome dashboard'
     user.role.content_editor:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -106,9 +111,6 @@ config:
         - 'access trash'
         - 'administer menu'
         - 'use text format content_format'
-        - 'use text format basic_html'
-        - 'use text format dxpr_builder_html'
-        - 'use text format full_html'
         - 'use basic_editorial transition unpublish'
         - 'use basic_editorial transition create_new_draft'
         - 'use basic_editorial transition publish'
@@ -127,23 +129,10 @@ config:
         - 'access files overview'
         - 'view latest version'
         - 'access contextual links'
-        - 'search content'
         - 'view post access counter'
         - 'view deleted entities'
-        - 'restore content from trash'
-        - 'restore media from trash'
-        - 'view any checklistapi checklist'
-        - 'view ai_checklist checklistapi checklist'
-        - 'view seo_checklist checklistapi checklist'
-        - 'edit any checklistapi checklist'
-        - 'edit ai_checklist checklistapi checklist'
-        - 'edit seo_checklist checklistapi checklist'
-        - 'create drag_and_drop_block block content'
-        - 'edit any drag_and_drop_block block content'
-        - 'delete any drag_and_drop_block block content'
-        - 'view any drag_and_drop_block block content history'
-        - 'revert any drag_and_drop_block block content revisions'
-        - 'delete any drag_and_drop_block block content revisions'
+        - 'restore node entities'
+        - 'restore media entities'
         - 'access webform overview'
         - 'view own webform submission'
         - 'edit own webform submission'
@@ -171,41 +160,22 @@ config:
         - 'access files overview'
         - 'view latest version'
         - 'view any unpublished content'
-        - 'view any unpublished media'
         - 'use text format content_format'
-        - 'use text format dxpr_builder_html'
-        - 'use text format basic_html'
-        - 'use text format full_html'
-        - 'use text format email'
+        - 'use text format content_format'
         - 'use basic_editorial transition unpublish'
         - 'use basic_editorial transition create_new_draft'
         - 'use basic_editorial transition publish'
         - 'schedule publishing of nodes'
         - 'schedule publishing of media'
-        - 'schedule publishing of taxonomy term'
         - 'view scheduled content'
         - 'view scheduled media'
-        - 'view scheduled taxonomy term'
         - 'access contextual links'
-        - 'search content'
         - 'view post access counter'
-        - 'view trash bin'
+        - 'access trash'
         - 'view deleted entities'
-        - 'restore content from trash'
-        - 'restore media from trash'
-        - 'restore taxonomy term from trash'
-        - 'create drag_and_drop_block block content'
-        - 'edit any drag_and_drop_block block content'
-        - 'delete any drag_and_drop_block block content'
-        - 'view any drag_and_drop_block block content history'
-        - 'revert any drag_and_drop_block block content revisions'
-        - 'delete any drag_and_drop_block block content revisions'
-        - 'view any checklistapi checklist'
-        - 'view ai_checklist checklistapi checklist'
-        - 'view seo_checklist checklistapi checklist'
-        - 'edit any checklistapi checklist'
-        - 'edit ai_checklist checklistapi checklist'
-        - 'edit seo_checklist checklistapi checklist'
+        - 'restore node entities'
+        - 'restore media entities'
+        - 'restore taxonomy_term entities'
         - 'access webform overview'
         - 'view own webform submission'
         - 'edit own webform submission'
@@ -236,44 +206,25 @@ config:
         - 'create and edit custom blocks'
         - 'view latest version'
         - 'view any unpublished content'
-        - 'view any unpublished media'
         - 'use text format content_format'
-        - 'use text format dxpr_builder_html'
-        - 'use text format basic_html'
-        - 'use text format full_html'
-        - 'use text format email'
+        - 'use text format content_format'
         - 'use basic_editorial transition unpublish'
         - 'use basic_editorial transition create_new_draft'
         - 'use basic_editorial transition publish'
         - 'schedule publishing of nodes'
         - 'schedule publishing of media'
-        - 'schedule publishing of taxonomy term'
         - 'view scheduled content'
         - 'view scheduled media'
-        - 'view scheduled taxonomy term'
         - 'access contextual links'
-        - 'search content'
         - 'view post access counter'
-        - 'view trash bin'
+        - 'access trash'
         - 'view deleted entities'
-        - 'restore content from trash'
-        - 'restore media from trash'
-        - 'restore taxonomy term from trash'
-        - 'purge content from trash'
-        - 'purge media from trash'
-        - 'purge taxonomy term from trash'
-        - 'create drag_and_drop_block block content'
-        - 'edit any drag_and_drop_block block content'
-        - 'delete any drag_and_drop_block block content'
-        - 'view any drag_and_drop_block block content history'
-        - 'revert any drag_and_drop_block block content revisions'
-        - 'delete any drag_and_drop_block block content revisions'
-        - 'view any checklistapi checklist'
-        - 'view ai_checklist checklistapi checklist'
-        - 'view seo_checklist checklistapi checklist'
-        - 'edit any checklistapi checklist'
-        - 'edit ai_checklist checklistapi checklist'
-        - 'edit seo_checklist checklistapi checklist'
+        - 'restore node entities'
+        - 'restore media entities'
+        - 'restore taxonomy_term entities'
+        - 'purge node entities'
+        - 'purge media entities'
+        - 'purge taxonomy_term entities'
         - 'access site reports'
         - 'access webform overview'
         - 'view any webform submission'
