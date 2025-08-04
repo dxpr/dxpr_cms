@@ -139,7 +139,7 @@ third_party_settings:
     group_content_advanced:
       children:
         - field_content
-      label: 'Advanced Content Editing'
+      label: 'HTML Content Editing'
       region: content
       parent_name: ''
       weight: 4
@@ -150,7 +150,7 @@ third_party_settings:
         id: group_content_advanced
         label_as_html: false
         open: false
-        description: 'For most content editing, use the View tab and click "Edit with DXPR Builder" for a visual editing experience. Use this section only for advanced HTML editing with syntax highlighting.'
+        description: 'Please go to the "view" tab for visual content editing. This section is for advanced HTML editing for technical troubleshooting.'
         required_fields: false
 hidden:
   publish_state: true
