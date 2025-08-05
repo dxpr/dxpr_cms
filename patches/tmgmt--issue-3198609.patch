@@ -1,0 +1,222 @@
+From 4863f8016965f4cecd5a24943da84c9cacafe3bc Mon Sep 17 00:00:00 2001
+From: Scott Euser <scotteuser@gmail.com>
+Date: Fri, 11 Oct 2024 09:09:43 +0100
+Subject: [PATCH 1/5] Convert patch to MR
+
+---
+ src/JobCheckoutManager.php | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/JobCheckoutManager.php b/src/JobCheckoutManager.php
+index 9191c57f..a05c2569 100644
+--- a/src/JobCheckoutManager.php
++++ b/src/JobCheckoutManager.php
+@@ -68,7 +68,7 @@ class JobCheckoutManager {
+   public function checkoutAndRedirect(FormStateInterface $form_state, array $jobs) {
+     $checkout_jobs = $this->checkoutMultiple($jobs);
+ 
+-    $jobs_ready_for_checkout = array_udiff($jobs, $checkout_jobs, function (JobInterface $a, JobInterface $b) {
++    $jobs_ready_for_checkout = $checkout_jobs ? array_udiff($jobs, $checkout_jobs, function (JobInterface $a, JobInterface $b) {
+       if ($a->id() < $b->id()) {
+         return -1;
+       }
+@@ -78,7 +78,7 @@ class JobCheckoutManager {
+       else {
+         return 0;
+       }
+-    });
++    }) : [];
+ 
+     // If necessary, do a redirect.
+     if ($checkout_jobs || $jobs_ready_for_checkout) {
+-- 
+GitLab
+
+
+From 3744320420a385b0b5f20d9a8ef6ea1b13107316 Mon Sep 17 00:00:00 2001
+From: Scott Euser <scotteuser@gmail.com>
+Date: Fri, 11 Oct 2024 09:12:55 +0100
+Subject: [PATCH 2/5] Revert "Convert patch to MR"
+
+This reverts commit 4863f8016965f4cecd5a24943da84c9cacafe3bc.
+---
+ src/JobCheckoutManager.php | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/JobCheckoutManager.php b/src/JobCheckoutManager.php
+index a05c2569..9191c57f 100644
+--- a/src/JobCheckoutManager.php
++++ b/src/JobCheckoutManager.php
+@@ -68,7 +68,7 @@ class JobCheckoutManager {
+   public function checkoutAndRedirect(FormStateInterface $form_state, array $jobs) {
+     $checkout_jobs = $this->checkoutMultiple($jobs);
+ 
+-    $jobs_ready_for_checkout = $checkout_jobs ? array_udiff($jobs, $checkout_jobs, function (JobInterface $a, JobInterface $b) {
++    $jobs_ready_for_checkout = array_udiff($jobs, $checkout_jobs, function (JobInterface $a, JobInterface $b) {
+       if ($a->id() < $b->id()) {
+         return -1;
+       }
+@@ -78,7 +78,7 @@ class JobCheckoutManager {
+       else {
+         return 0;
+       }
+-    }) : [];
++    });
+ 
+     // If necessary, do a redirect.
+     if ($checkout_jobs || $jobs_ready_for_checkout) {
+-- 
+GitLab
+
+
+From e9e603dd0ed0a0d85cf0c1e49d57020efaea5334 Mon Sep 17 00:00:00 2001
+From: Scott Euser <scotteuser@gmail.com>
+Date: Fri, 11 Oct 2024 09:13:30 +0100
+Subject: [PATCH 3/5] MR convert to patch 7
+
+---
+ .../ContentTmgmtEntitySourceUiTest.php        | 39 +++++++++++++++++++
+ src/JobCheckoutManager.php                    |  2 +-
+ 2 files changed, 40 insertions(+), 1 deletion(-)
+
+diff --git a/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php b/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php
+index eea0881c..4485a1ef 100644
+--- a/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php
++++ b/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php
+@@ -372,6 +372,45 @@ class ContentTmgmtEntitySourceUiTest extends TMGMTTestBase {
+     $this->assertSession()->pageTextContains('es: ' . $node->body->value);
+   }
+ 
++  /**
++   * Test the translate tab to verify the translator is only called once.
++   */
++  function testNodeTranslateTabJobMessages() {
++    // Allow auto-accept and do not expose checkout settings.
++    $default_translator = Translator::load('test_translator');
++    $default_translator
++      ->setSetting('action', 'submit')
++      ->save();
++
++    $this->loginAsTranslator(['translate any entity', 'create content translations']);
++
++    // Create an english source node.
++    $node = $this->createTranslatableNode('page', 'en');
++
++    // Go to the translate tab.
++    $this->drupalGet($node->toUrl());
++    $this->clickLink('Translate');
++
++    // Request a translation for german.
++    $edit = [
++      'languages[de]' => TRUE,
++    ];
++    $this->submitForm($edit, 'Request translation');
++
++    $job = Job::load(1);
++    /** @var \Drupal\tmgmt\MessageInterface $message */
++    $messages = [];
++    foreach ($job->getMessages() as $message) {
++      $messages[] = (string) $message->getMessage();
++    }
++
++    // Assert job messages.
++    $this->assertEquals(count($messages), 2);
++    $this->assertEquals($messages[0], 'Test translator called.');
++    $this->assertEquals($messages[1], 'Test submit.');
++  }
++
++
+   /**
+    * Test job submission of multiple jobs with an unsupported language
+    */
+diff --git a/src/JobCheckoutManager.php b/src/JobCheckoutManager.php
+index 9191c57f..7f169a02 100644
+--- a/src/JobCheckoutManager.php
++++ b/src/JobCheckoutManager.php
+@@ -66,7 +66,7 @@ class JobCheckoutManager {
+    * @ingroup tmgmt_job
+    */
+   public function checkoutAndRedirect(FormStateInterface $form_state, array $jobs) {
+-    $checkout_jobs = $this->checkoutMultiple($jobs);
++    $checkout_jobs = $this->checkoutMultiple($jobs, TRUE);
+ 
+     $jobs_ready_for_checkout = array_udiff($jobs, $checkout_jobs, function (JobInterface $a, JobInterface $b) {
+       if ($a->id() < $b->id()) {
+-- 
+GitLab
+
+
+From 9b71aa6afaca34abba489c45ea1320df6f612bca Mon Sep 17 00:00:00 2001
+From: Scott Euser <scotteuser@gmail.com>
+Date: Mon, 14 Oct 2024 21:08:54 +0100
+Subject: [PATCH 4/5] Fix failing tests
+
+---
+ config/install/views.view.tmgmt_job_items.yml    | 2 +-
+ config/install/views.view.tmgmt_job_messages.yml | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/config/install/views.view.tmgmt_job_items.yml b/config/install/views.view.tmgmt_job_items.yml
+index ba95bd96..52c7ab5f 100644
+--- a/config/install/views.view.tmgmt_job_items.yml
++++ b/config/install/views.view.tmgmt_job_items.yml
+@@ -630,7 +630,7 @@ display:
+           not: false
+           entity_type: tmgmt_job_item
+           entity_field: tjid
+-          plugin_id: numeric
++          plugin_id: entity_target_id
+       display_extenders: {  }
+       use_ajax: true
+     cache_metadata:
+diff --git a/config/install/views.view.tmgmt_job_messages.yml b/config/install/views.view.tmgmt_job_messages.yml
+index a41f41e4..04c188e1 100644
+--- a/config/install/views.view.tmgmt_job_messages.yml
++++ b/config/install/views.view.tmgmt_job_messages.yml
+@@ -333,7 +333,7 @@ display:
+           validate_options: {  }
+           break_phrase: false
+           not: false
+-          plugin_id: numeric
++          plugin_id: entity_target_id
+       display_extenders: {  }
+     cache_metadata:
+       contexts:
+-- 
+GitLab
+
+
+From cfe5c33dc58f6c8a2c8ff3bfa5c03d444c331986 Mon Sep 17 00:00:00 2001
+From: Scott Euser <scotteuser@gmail.com>
+Date: Thu, 5 Dec 2024 07:05:19 +0000
+Subject: [PATCH 5/5] Fix test coverage
+
+---
+ .../tests/src/Functional/ContentTmgmtEntitySourceUiTest.php   | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php b/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php
+index 4485a1ef..aa44a01a 100644
+--- a/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php
++++ b/sources/content/tests/src/Functional/ContentTmgmtEntitySourceUiTest.php
+@@ -397,6 +397,8 @@ class ContentTmgmtEntitySourceUiTest extends TMGMTTestBase {
+     ];
+     $this->submitForm($edit, 'Request translation');
+ 
++    $this->submitForm([], 'Submit to provider');
++
+     $job = Job::load(1);
+     /** @var \Drupal\tmgmt\MessageInterface $message */
+     $messages = [];
+@@ -405,7 +407,7 @@ class ContentTmgmtEntitySourceUiTest extends TMGMTTestBase {
+     }
+ 
+     // Assert job messages.
+-    $this->assertEquals(count($messages), 2);
++    $this->assertEquals(2, count($messages));
+     $this->assertEquals($messages[0], 'Test translator called.');
+     $this->assertEquals($messages[1], 'Test submit.');
+   }
+-- 
+GitLab
+
