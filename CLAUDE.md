@@ -2,7 +2,7 @@
 
 ## Overview
 
-DXPR CMS is a Drupal-based marketing CMS distribution featuring the DXPR Builder no-code page builder. This project uses a sophisticated development setup with DDEV, Drupal recipes, and dynamic composer.json generation.
+DXPR CMS is a Drupal-based marketing CMS distribution featuring the DXPR Builder no-code page builder. This project uses DDEV for development with Drupal recipes providing modular functionality.
 
 ## Project Structure
 
@@ -29,31 +29,20 @@ DXPR CMS is a Drupal-based marketing CMS distribution featuring the DXPR Builder
 - **`patches/`** - Custom patches directory
 - **`docs/`** - Developer documentation
 
-## Composer.json Build Process
+## Composer.json Configuration
 
-### ⚠️ IMPORTANT: Dynamic composer.json Generation
+The project now uses a static `composer.json` file in the repository root that:
 
-**The root `composer.json` is dynamically generated and should NEVER be edited directly!**
+- Contains production dependencies from `project_template/composer.json`
+- Includes development dependencies (drupal/core-dev, drupal/default_content)
+- Has recipe path repositories pre-configured for all recipes in `/recipes/`
+- Is tracked in version control and can be edited directly
 
-- `composer.json` is rebuilt every time you run `ddev rebuild`
-- It is NOT tracked in version control (gitignored)
-- Changes should be made to `project_template/composer.json`
+### Making Changes
 
-### How It Works
-
-1. **During `ddev start` or `ddev rebuild`:**
-   - The `generate-composer-json` script runs automatically
-   - It copies `project_template/composer.json` as the base
-   - Recipe path repositories are automatically added by scanning the `/recipes/` directory
-   - The result is written to the root `composer.json`
-
-2. **The generation process:**
-   - Base: `project_template/composer.json` (production template with development dependencies)
-   - Auto-discovery: Recipe path repositories are added dynamically
-   - Repository priorities are adjusted (drupal.org becomes lowest priority)
-
-3. **Location of the generator script:**
-   - `.ddev/homeadditions/bin/generate-composer-json`
+- **For production dependencies:** Edit `project_template/composer.json`
+- **For development dependencies or recipe paths:** Edit the root `composer.json`
+- Run `composer install` or `ddev restart` to apply changes
 
 ## DDEV Configuration
 
@@ -73,8 +62,8 @@ DXPR CMS is a Drupal-based marketing CMS distribution featuring the DXPR Builder
 - **Purpose:** Completely rebuilds the development environment
 - **Actions:**
   1. Drops the database
-  2. Removes vendor/, composer files, and patches.lock.json
-  3. Restarts DDEV (triggering composer.json regeneration)
+  2. Removes vendor/, composer.lock, and patches.lock.json
+  3. Restarts DDEV
 
 #### `ddev list-modules`
 - **Location:** `.ddev/commands/web/list-modules`
@@ -92,9 +81,9 @@ DXPR CMS is a Drupal-based marketing CMS distribution featuring the DXPR Builder
 
 The DDEV configuration includes important post-start hooks:
 
-1. **Composer.json generation and installation:**
+1. **Dependency installation:**
    ```bash
-   test -f composer.lock || (generate-composer-json > composer.json && composer install)
+   composer install
    ```
 
 2. **Profile symlink creation:**
@@ -127,11 +116,12 @@ The project uses Drupal Recipes for modular functionality. Each recipe in `/reci
    ```bash
    ddev start
    ```
-   This automatically generates composer.json and installs dependencies
+   This installs dependencies and sets up the environment
 
 2. **Making Dependency Changes:**
-   - Edit `project_template/composer.json`
-   - Run `ddev rebuild` to apply changes
+   - For production: Edit `project_template/composer.json`
+   - For development: Edit root `composer.json`
+   - Run `composer install` or `ddev restart` to apply changes
 
 3. **Working with Recipes:**
    - Recipes are symlinked via path repositories

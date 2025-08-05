@@ -17,10 +17,8 @@ recipes:
   - dxpr_cms_basic_analytics
   - dxpr_cms_seo_tools
   - dxpr_cms_performance
-  - easy_email_express
   - dxpr_cms_dxpr_builder
   - dxpr_cms_dxpr_theme
-  - dxpr_cms_search
   - dxpr_cms_roles
   - dxpr_cms_ai
 install:
