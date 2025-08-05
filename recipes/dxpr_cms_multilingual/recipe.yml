@@ -14,10 +14,10 @@ install:
   - locale
   - node
   - tmgmt
-  - tmgmt_google
   - tmgmt_locale
   - tmgmt_content
   - tmgmt_config
+  - ai_tmgmt
   - user
 config:
   import:
