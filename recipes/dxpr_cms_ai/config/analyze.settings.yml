@@ -3,30 +3,42 @@ status:
     blog:
       analyze_ai_brand_voice_analyzer: true
       analyze_ai_sentiment_analyzer: true
+      analyze_ai_content_marketing_audit_analyzer: true
+      analyze_ai_content_security_audit_analyzer: true
       content_info: true
       node_views: true
     page:
       analyze_ai_brand_voice_analyzer: true
       analyze_ai_sentiment_analyzer: true
+      analyze_ai_content_marketing_audit_analyzer: true
+      analyze_ai_content_security_audit_analyzer: true
       content_info: true
       node_views: true
     landing_page:
       analyze_ai_brand_voice_analyzer: true
       analyze_ai_sentiment_analyzer: true
+      analyze_ai_content_marketing_audit_analyzer: true
+      analyze_ai_content_security_audit_analyzer: true
       content_info: true
       node_views: true
     case_study:
       analyze_ai_brand_voice_analyzer: true
       analyze_ai_sentiment_analyzer: true
+      analyze_ai_content_marketing_audit_analyzer: true
+      analyze_ai_content_security_audit_analyzer: true
       content_info: true
       node_views: true
     news:
       analyze_ai_brand_voice_analyzer: true
       analyze_ai_sentiment_analyzer: true
+      analyze_ai_content_marketing_audit_analyzer: true
+      analyze_ai_content_security_audit_analyzer: true
       content_info: true
       node_views: true
     events:
       analyze_ai_brand_voice_analyzer: true
       analyze_ai_sentiment_analyzer: true
+      analyze_ai_content_marketing_audit_analyzer: true
+      analyze_ai_content_security_audit_analyzer: true
       content_info: true
       node_views: true
