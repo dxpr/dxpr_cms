@@ -19,5 +19,5 @@
     "suggest": {
         "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic."
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

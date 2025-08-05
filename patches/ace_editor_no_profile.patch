@@ -1,5 +1,5 @@
---- ace_editor_orig/ace_editor/ace_editor.module	2025-07-13 14:09:59
-+++ ace_editor/ace_editor.module	2025-08-04 17:28:09
+--- a/ace_editor.module	2025-07-13 14:09:59
++++ b/ace_editor.module	2025-08-04 17:28:09
 @@ -40,7 +40,7 @@
      '/libraries/ace',
      '/libraries/ace-builds',

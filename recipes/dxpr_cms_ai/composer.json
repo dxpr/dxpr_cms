@@ -10,12 +10,13 @@
         "drupal/ai_image_alt_text": "^1",
         "drupal/ai_provider_dxpr": "^1.0.0-alpha1",
         "drupal/ai_checklist": "^1.0",
-        "drupal/dxpr_cms_privacy_basic": "^1",
+        "drupal/dxpr_cms_privacy_basic": "*",
+        "drupal/dxpr_cms_roles": "*",
         "drupal/ai_content_strategy": "^1.0@beta",
-        "drupal/analyze_ai_brand_voice": "dev-1.x",
-        "drupal/analyze_ai_sentiment-analyze_ai_sentiment": "dev-1.x",
-        "drupal/analyze_ai_content_marketing_audit": "dev-1.x",
-        "drupal/analyze_ai_content_security_audit": "dev-1.x",
+        "drupal/analyze_ai_brand_voice": "^1.0@beta",
+        "drupal/analyze_ai_sentiment-analyze_ai_sentiment": "^1.0@beta",
+        "drupal/analyze_ai_content_marketing_audit": "^1.0@beta",
+        "drupal/analyze_ai_content_security_audit": "^1.0@beta",
         "drupal/ckeditor_ai_agent": "^1.0@beta",
         "league/commonmark": "^2.4",
         "drupal/markdownify": "^1.1",
@@ -24,5 +25,5 @@
     "conflict": {
         "drupal/project_browser": "<2-alpha7"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

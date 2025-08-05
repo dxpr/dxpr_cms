@@ -10,5 +10,5 @@
         "drupal/search_api_exclude": "^2",
         "drupal/simple_search_form" : "^1.5"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

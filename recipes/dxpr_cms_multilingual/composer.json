@@ -9,5 +9,6 @@
         "drupal/hreflang": "^1.14",
         "drupal/tmgmt": "^1.15",
         "drupal/tmgmt_google": "^1.1"
-    }
+    },
+    "version": "1.0.0-beta1"
 }
