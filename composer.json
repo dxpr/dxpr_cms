@@ -93,10 +93,6 @@
             "type": "path",
             "url": "recipes/dxpr_cms_roles"
         },
-        "search": {
-            "type": "path",
-            "url": "recipes/dxpr_cms_search"
-        },
         "seo_basic": {
             "type": "path",
             "url": "recipes/dxpr_cms_seo_basic"
@@ -108,26 +104,6 @@
         "starter": {
             "type": "path",
             "url": "recipes/dxpr_cms_starter"
-        },
-        "easy_email_express": {
-            "type": "path",
-            "url": "recipes/easy_email_express"
-        },
-        "easy_email_standard": {
-            "type": "path",
-            "url": "recipes/easy_email_standard"
-        },
-        "easy_email_text_format": {
-            "type": "path",
-            "url": "recipes/easy_email_text_format"
-        },
-        "easy_email_types_core": {
-            "type": "path",
-            "url": "recipes/easy_email_types_core"
-        },
-        "easy_email_types_default": {
-            "type": "path",
-            "url": "recipes/easy_email_types_default"
         },
         "drupal": {
             "type": "composer",

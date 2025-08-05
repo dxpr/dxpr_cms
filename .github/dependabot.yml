@@ -116,10 +116,6 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "composer"
-    directory: "/recipes/dxpr_cms_search"
-    schedule:
-      interval: "weekly"
-  - package-ecosystem: "composer"
     directory: "/recipes/dxpr_cms_seo_basic"
     schedule:
       interval: "weekly"
