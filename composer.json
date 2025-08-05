@@ -128,7 +128,6 @@
         "drupal/dxpr_cms_performance": "*",
         "drupal/dxpr_cms_seo_tools": "*",
         "drupal/dxpr_cms_starter": "*",
-        "drupal/project_browser": "@beta",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
         "drupal/webform": "@beta",
         "drupal/ace_editor": "2.0.2",

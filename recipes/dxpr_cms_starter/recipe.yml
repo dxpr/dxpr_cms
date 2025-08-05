@@ -30,12 +30,10 @@ install:
   - eca_config
   - eca_content
   - eca_misc
-  - eca_project_browser
   - eca_render
   - eca_user
   - menu_link_content
   - package_manager
-  - project_browser
   - update
   # The rest of these are in Standard.
   - inline_form_errors
@@ -66,18 +64,6 @@ config:
         additional_trusted_composer_plugins:
           # This is indirectly added by `drupal/core-dev`.
           - tbachert/spi
-    project_browser.admin_settings:
-      simpleConfigUpdate:
-        allowed_projects:
-          recipes:
-            - dxpr_cms_case_study
-            - dxpr_cms_events
-            - dxpr_cms_forms
-            - dxpr_cms_news
-        enabled_sources:
-          - drupalorg_jsonapi
-          - recipes
-        allow_ui_install: true
     system.site:
       simpleConfigUpdate:
         name: 'DXPR CMS'
