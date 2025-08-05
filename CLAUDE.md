@@ -26,7 +26,6 @@ DXPR CMS is a Drupal-based marketing CMS distribution featuring the DXPR Builder
 
 ### Development Files
 
-- **`dev.composer.json`** - Development dependencies and local path repositories
 - **`patches/`** - Custom patches directory
 - **`docs/`** - Developer documentation
 
@@ -38,22 +37,20 @@ DXPR CMS is a Drupal-based marketing CMS distribution featuring the DXPR Builder
 
 - `composer.json` is rebuilt every time you run `ddev rebuild`
 - It is NOT tracked in version control (gitignored)
-- Changes should be made to either:
-  - `project_template/composer.json` - for production dependencies
-  - `dev.composer.json` - for development dependencies
+- Changes should be made to `project_template/composer.json`
 
 ### How It Works
 
 1. **During `ddev start` or `ddev rebuild`:**
    - The `generate-composer-json` script runs automatically
-   - It merges `project_template/composer.json` with `dev.composer.json`
+   - It copies `project_template/composer.json` as the base
+   - Recipe path repositories are automatically added by scanning the `/recipes/` directory
    - The result is written to the root `composer.json`
 
-2. **The merge process:**
-   - Base: `project_template/composer.json` (production template)
-   - Override: `dev.composer.json` (development additions)
-   - Local path repositories are added for all recipes
-   - Repository priorities are adjusted
+2. **The generation process:**
+   - Base: `project_template/composer.json` (production template with development dependencies)
+   - Auto-discovery: Recipe path repositories are added dynamically
+   - Repository priorities are adjusted (drupal.org becomes lowest priority)
 
 3. **Location of the generator script:**
    - `.ddev/homeadditions/bin/generate-composer-json`
@@ -133,8 +130,7 @@ The project uses Drupal Recipes for modular functionality. Each recipe in `/reci
    This automatically generates composer.json and installs dependencies
 
 2. **Making Dependency Changes:**
-   - For production: Edit `project_template/composer.json`
-   - For development: Edit `dev.composer.json`
+   - Edit `project_template/composer.json`
    - Run `ddev rebuild` to apply changes
 
 3. **Working with Recipes:**
@@ -153,4 +149,4 @@ The project uses Drupal Recipes for modular functionality. Each recipe in `/reci
 - Always use `ddev` commands instead of direct composer/drush commands
 - The project uses Composer 2 with source installation preference
 - Cypress dependencies are included for E2E testing
-- The project includes patches for various modules (see dev.composer.json)
+- The project includes patches for various modules (see project_template/composer.json)

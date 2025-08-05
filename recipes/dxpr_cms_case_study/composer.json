@@ -6,7 +6,7 @@
     "require": {
         "drupal/core": ">=10.4",
         "drupal/add_content_by_bundle": "^1.2.2",
-        "drupal/dxpr_cms_page": "^1"
+        "drupal/dxpr_cms_page": "*"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

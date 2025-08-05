@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-// Generates the development-ready `composer.json` file by merging our
-// development requirements into the project template. This script must
+// Generates the production-ready `composer.json` file by copying the
+// project template and adding recipe path repositories. This script must
 // be run from the repository root.
 
 $read_json = function (string $file): array {
@@ -10,27 +10,34 @@ $read_json = function (string $file): array {
   return json_decode($data, TRUE, flags: JSON_THROW_ON_ERROR);
 };
 
-// From \Drupal\Component\Utility\NestedArray::mergeDeep().
-$merge_deep = function (array ...$arrays) use (&$merge_deep): array {
-  $result = [];
-  foreach ($arrays as $array) {
-    foreach ($array as $key => $value) {
-      // Recurse when both values are arrays.
-      if (isset($result[$key]) && is_array($result[$key]) && is_array($value)) {
-        $result[$key] = $merge_deep($result[$key], $value);
-      }
-      // Otherwise, use the latter value, overriding any previous value.
-      else {
-        $result[$key] = $value;
-      }
-    }
-  }
-  return $result;
-};
+// Start with the project template as the base
+$data = $read_json('project_template/composer.json');
 
-$base = $read_json('project_template/composer.json');
-$dev = $read_json('dev.composer.json');
-$data = $merge_deep($base, $dev);
+// Add recipe path repositories by scanning the recipes directory
+if (is_dir('recipes')) {
+  $recipe_dirs = array_filter(scandir('recipes'), function($dir) {
+    return $dir !== '.' && $dir !== '..' && is_dir("recipes/$dir");
+  });
+  
+  foreach ($recipe_dirs as $recipe_dir) {
+    // Extract recipe name from directory (remove dxpr_cms_ prefix if present)
+    $recipe_name = str_replace('dxpr_cms_', '', $recipe_dir);
+    $data['repositories'][$recipe_name] = [
+      'type' => 'path',
+      'url' => "recipes/$recipe_dir"
+    ];
+  }
+}
+
+// Always use production mode - no development patches or source installs
+
+// Add stability flags for packages that only have dev versions available
+if (isset($data['require']['drupal/dxpr_cms_ai'])) {
+  $data['require']['drupal/views_color_scales'] = '*@dev';
+}
+if (isset($data['require']['drupal/dxpr_cms_starter'])) {
+  $data['require']['drupal/gin'] = '5.0.x-dev@dev';
+}
 
 // If in a CI environment, make all path repository URLs absolute.
 if (getenv('CI') || getenv('TUGBOAT_PREVIEW')) {

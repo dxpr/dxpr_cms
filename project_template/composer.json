@@ -34,19 +34,31 @@
         "drupal/ace_editor": "2.0.2",
         "drush/drush": "^13"
     },
+    "require-dev": {
+        "drupal/core-dev": "^11.2",
+        "drupal/default_content": "^2"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "prefer-stable": true,
+    "autoload-dev": {
+        "files": [
+            "recipes/dxpr_cms_content_type_base/tests/src/ContentModelTestTrait.php"
+        ]
+    },
     "config": {
-        "preferred-install": "source",
+        "preferred-install": "dist",
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true
         },
         "sort-packages": true,
         "optimize-autoloader": true

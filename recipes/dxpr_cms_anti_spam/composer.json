@@ -10,5 +10,5 @@
         "drupal/friendly_captcha_challenge": "^0.9",
         "drupal/honeypot": "^2.1"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

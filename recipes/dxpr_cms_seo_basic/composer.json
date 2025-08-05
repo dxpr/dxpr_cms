@@ -14,5 +14,5 @@
         "drupal/dxpr_cms_seo_tools": "Add additional SEO tools to help configure and manage meta tags, SEO analysis, sitemaps, with an SEO checklist and dashboard.",
         "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic."
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }
