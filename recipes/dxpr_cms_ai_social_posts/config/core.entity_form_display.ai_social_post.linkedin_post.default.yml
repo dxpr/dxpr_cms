@@ -1,0 +1,39 @@
+uuid: 33c9c6dd-ebf2-4ae8-8f5b-54aa60e73c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - ai_social_posts.ai_social_post_type.linkedin_post
+    - field.field.ai_social_post.linkedin_post.post
+  module:
+    - maxlength
+    - text
+_core:
+  default_config_hash: ee8X_v6-H9-LeMjK0bUjAmH4qrqbXT1hmBw-QV9z638
+id: ai_social_post.linkedin_post.default
+targetEntityType: ai_social_post
+bundle: linkedin_post
+mode: default
+content:
+  post:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 3000
+        maxlength_js_enforce: false
+  node_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {}
+hidden: {}

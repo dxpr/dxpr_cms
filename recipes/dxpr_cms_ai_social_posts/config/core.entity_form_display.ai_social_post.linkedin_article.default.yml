@@ -1,0 +1,50 @@
+uuid: 33c9c6dd-ebf2-4ae8-8f5b-54aa60e73c2g
+langcode: en
+status: true
+dependencies:
+  config:
+    - ai_social_posts.ai_social_post_type.linkedin_article
+    - field.field.ai_social_post.linkedin_article.post
+    - field.field.ai_social_post.linkedin_article.title
+  module:
+    - maxlength
+    - text
+id: ai_social_post.linkedin_article.default
+targetEntityType: ai_social_post
+bundle: linkedin_article
+mode: default
+content:
+  title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Title field has a limit of @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+  post:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 10
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 110000
+        maxlength_js_enforce: false
+  node_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {}
+hidden: {} 

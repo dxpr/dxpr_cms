@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ai_social_posts.ai_social_post_type.linkedin_article
+    - field.field.ai_social_post.linkedin_article.post
+    - field.field.ai_social_post.linkedin_article.title
+  module:
+    - text
+id: ai_social_post.linkedin_article.default
+targetEntityType: ai_social_post
+bundle: linkedin_article
+mode: default
+content:
+  title:
+    type: text_default
+    label: above
+    settings: {}
+    third_party_settings: {}
+    weight: 0
+    region: content
+  post:
+    type: text_default
+    label: above
+    settings: {}
+    third_party_settings: {}
+    weight: 1
+    region: content
+hidden: {} 

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ai_social_posts_x
+id: x_post
+label: 'X Post'
+description: 'Post content to X (formerly Twitter)'

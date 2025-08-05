@@ -20,6 +20,7 @@ install:
   - analyze
   - ckeditor_ai_agent
   - menu_link_content
+  - ai_social_posts
   - markdownify
   - markdownify_path
   - diff

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ai_social_posts.ai_social_post_type.linkedin_article
+    - field.storage.ai_social_post.title
+  module:
+    - text
+id: ai_social_post.linkedin_article.title
+field_name: title
+entity_type: ai_social_post
+bundle: linkedin_article
+label: 'Article Title'
+description: 'Write a compelling title for your LinkedIn article.'
+required: true
+translatable: true
+default_value:
+  - 
+    value: "/Write a compelling and professional LinkedIn article title that captures attention and reflects the content."
+    format: ai_social_posts
+settings: {}
+field_type: text_long 

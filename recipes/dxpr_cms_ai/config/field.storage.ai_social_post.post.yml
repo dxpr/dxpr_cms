@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ai_social_posts
+    - text
+id: ai_social_post.post
+field_name: post
+entity_type: ai_social_post
+type: text_long
+settings: {}
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {}
+persist_with_no_fields: false
+custom_storage: false

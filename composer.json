@@ -113,12 +113,14 @@
     "require": {
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2",
+        "drupal/ace_editor": "2.0.2",
+        "drupal/ai_social_posts": "^1.0@beta",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
         "drupal/core-recommended": "^11",
+        "drupal/dxpr_cms_ai": "*",
         "drupal/dxpr_cms_analytics": "*",
         "drupal/dxpr_cms_basic_analytics": "*",
-        "drupal/dxpr_cms_ai": "*",
         "drupal/dxpr_cms_blog": "*",
         "drupal/dxpr_cms_case_study": "*",
         "drupal/dxpr_cms_events": "*",
@@ -128,13 +130,12 @@
         "drupal/dxpr_cms_performance": "*",
         "drupal/dxpr_cms_seo_tools": "*",
         "drupal/dxpr_cms_starter": "*",
+        "drupal/gin": "5.0.x-dev",
         "drupal/project_browser": "@beta",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
-        "drupal/webform": "@beta",
-        "drupal/ace_editor": "2.0.2",
-        "drush/drush": "^13",
         "drupal/views_color_scales": "^1.0@beta",
-        "drupal/gin": "5.0.x-dev"
+        "drupal/webform": "@beta",
+        "drush/drush": "^13"
     },
     "require-dev": {
         "drupal/core-dev": "^11.2",

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ai_social_posts.ai_social_post_type.linkedin_article
+  module:
+    - text
+id: ai_social_post.linkedin_article.post
+field_name: post
+entity_type: ai_social_post
+bundle: linkedin_article
+label: 'Article Content'
+description: 'Write your LinkedIn article content with rich formatting.'
+required: true
+translatable: true
+default_value:
+  - 
+    value: "/Write a LinkedIn article using these formatting options: bold, italic, h2, h3, numbered lists, bullet points, blockquotes, and hashtags. Include sections for: 1. Introduction with industry insights, 2. Main content with practical advice, 3. Examples or case studies, 4. Conclusion with actionable takeaways, 5. Call-to-action for readers, 6. 3-5 relevant hashtags. Aim for professional tone and in-depth analysis that showcases expertise."
+    format: ai_social_posts
+settings: {}
+field_type: text_long 

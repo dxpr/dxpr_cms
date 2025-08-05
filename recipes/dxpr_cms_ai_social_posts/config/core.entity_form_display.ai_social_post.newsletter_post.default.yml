@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.ai_social_post.newsletter_post.title
+    - field.field.ai_social_post.newsletter_post.post
+    - ai_social_posts.ai_social_post_type.newsletter_post
+  module:
+    - maxlength
+    - text
+id: ai_social_post.newsletter_post.default
+targetEntityType: ai_social_post
+bundle: newsletter_post
+mode: default
+content:
+  title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 2
+      placeholder: 'Enter your newsletter subject'
+    third_party_settings:
+      maxlength:
+        maxlength_js: 60
+        maxlength_js_enforce: false
+  post:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 15
+      placeholder: 'Write your newsletter content'
+    third_party_settings:
+      maxlength:
+        maxlength_js: 50000
+        maxlength_js_enforce: false
+  node_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Search for content to promote'
+    third_party_settings: {}
+hidden: {}

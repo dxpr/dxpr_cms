@@ -1,0 +1,21 @@
+uuid: f5b61979-69b2-424c-b2bb-81f54e337489
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ai_social_posts
+name: 'AI Social Posts'
+format: ai_social_posts
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p>'
+      filter_html_help: true
+      filter_html_nofollow: false
+

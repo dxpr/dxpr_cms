@@ -1,0 +1,32 @@
+name: AI Social Posts
+type: DXPR CMS
+description: Adds AI-powered social media post generation with LinkedIn, X, and newsletter support. Requires AI Assistant recipe.
+recipes:
+  - dxpr_cms_ai
+install:
+  - ai_social_posts
+  - ai_social_posts_linkedin
+  - ai_social_posts_linkedin_article
+  - ai_social_posts_x
+  - ai_social_posts_newsletter
+config:
+  actions:
+    # Grant permissions to roles.
+    user.role.content_editor:
+      grantPermissions:
+        - 'create ai social posts'
+        - 'edit own ai social posts'
+        - 'view own ai social posts'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'create ai social posts'
+        - 'edit any ai social posts'
+        - 'view any ai social posts'
+        - 'delete any ai social posts'
+    user.role.site_builder:
+      grantPermissions:
+        - 'administer ai social posts'
+        - 'create ai social posts'
+        - 'edit any ai social posts'
+        - 'view any ai social posts'
+        - 'delete any ai social posts'

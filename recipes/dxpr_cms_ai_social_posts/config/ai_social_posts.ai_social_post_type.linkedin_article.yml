@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ai_social_posts_linkedin_article
+id: linkedin_article
+label: 'LinkedIn Article'
+description: 'Create long-form content with rich formatting for LinkedIn' 

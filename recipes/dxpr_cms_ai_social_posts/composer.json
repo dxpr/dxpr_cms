@@ -1,0 +1,11 @@
+{
+    "name": "drupal/dxpr_cms_ai_social_posts",
+    "description": "Adds AI-powered social media post generation with LinkedIn, X, and newsletter support. Requires AI Assistant recipe.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": ">=10.4",
+        "drupal/dxpr_cms_ai": "*"
+    },
+    "version": "1.0.0-beta1"
+}

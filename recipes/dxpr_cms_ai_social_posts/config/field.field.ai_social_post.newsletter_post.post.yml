@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ai_social_posts.ai_social_post_type.newsletter_post
+  module:
+    - text
+id: ai_social_post.newsletter_post.post
+field_name: post
+entity_type: ai_social_post
+bundle: newsletter_post
+label: Body
+description: 'Write the main content of your newsletter.'
+required: true
+translatable: true
+default_value:
+  - 
+    value: "/Write a newsletter that: - Opens with a hook - Uses clear sections (h2, h3) - Includes a call-to-action - Maintains brand voice. Use paragraph tags () to structure content and heading tags for sections for proper formatting in the editor. Consider using <strong> tags for emphasis and <em> for subtle highlights."
+    format: ai_social_posts
+settings: {}
+field_type: text_long

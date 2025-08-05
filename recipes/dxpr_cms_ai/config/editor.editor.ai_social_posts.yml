@@ -1,0 +1,34 @@
+uuid: 220ad04a-8a1c-4b01-bfd7-3d912c9211da
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ai_social_posts
+  config:
+    - filter.format.ai_social_posts
+  module:
+    - ckeditor5
+format: ai_social_posts
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - aiAgentButton
+      - removeFormat
+      - undo
+      - redo
+  plugins:
+    ckeditor_ai_agent_ai_agent:
+      api_key: null
+      model: null
+      endpoint_url: null
+      temperature: null
+      max_tokens: null
+      timeout_duration: null
+      retry_attempts: null
+      debug_mode: null
+      stream_content: null
+image_upload:
+  status: false
+

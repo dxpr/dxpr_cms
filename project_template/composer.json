@@ -19,6 +19,7 @@
         "drupal/dxpr_cms_analytics": "*",
         "drupal/dxpr_cms_basic_analytics": "*",
         "drupal/dxpr_cms_ai": "*",
+        "drupal/dxpr_cms_ai_social_posts": "*",
         "drupal/dxpr_cms_blog": "*",
         "drupal/dxpr_cms_case_study": "*",
         "drupal/dxpr_cms_events": "*",

@@ -12,6 +12,7 @@
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/dxpr_cms_admin_ui": "*",
         "drupal/dxpr_cms_ai": "*",
+        "drupal/dxpr_cms_ai_social_posts": "*",
         "drupal/dxpr_cms_anti_spam": "*",
         "drupal/dxpr_cms_authentication": "*",
         "drupal/dxpr_cms_blog": "*",

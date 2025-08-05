@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ai_social_posts_newsletter
+id: newsletter_post
+label: 'Newsletter Post'
+description: 'Create engaging newsletter content for your subscribers.'

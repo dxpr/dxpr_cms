@@ -21,6 +21,7 @@ recipes:
   - dxpr_cms_dxpr_theme
   - dxpr_cms_roles
   - dxpr_cms_ai
+  - dxpr_cms_ai_social_posts
 install:
   - automated_cron
   - automatic_updates

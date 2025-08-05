@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.ai_social_post.title
+    - ai_social_posts.ai_social_post_type.newsletter_post
+  module:
+    - text
+id: ai_social_post.newsletter_post.title
+field_name: title
+entity_type: ai_social_post
+bundle: newsletter_post
+label: Subject
+description: 'Write an engaging subject line for your newsletter.'
+required: true
+translatable: true
+default_value:
+  - 
+    value: "/Write a newsletter subject that: - Creates urgency - Sparks curiosity - Stays under 60 characters"
+    format: ai_social_posts
+settings: {}
+field_type: text_long
