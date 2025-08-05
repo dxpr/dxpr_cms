@@ -13,6 +13,8 @@ install:
   - ai_content_strategy
   - analyze_ai_brand_voice
   - analyze_ai_sentiment
+  - analyze_ai_content_marketing_audit
+  - analyze_ai_content_security_audit
   - analyze_basic_content_info
   - analyze_page_views
   - analyze
