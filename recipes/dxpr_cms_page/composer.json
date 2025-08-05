@@ -5,7 +5,7 @@
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/core": ">=10.4",
-        "drupal/dxpr_cms_content_type_base": "^1.0.3"
+        "drupal/dxpr_cms_content_type_base": "*"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

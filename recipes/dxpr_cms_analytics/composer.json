@@ -3,7 +3,7 @@
     "type": "metapackage",
     "description": "Adds recipes for tracking website traffic.",
     "require": {
-        "drupal/dxpr_cms_google_analytics": "^1"
+        "drupal/dxpr_cms_privacy_basic": "*"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }
