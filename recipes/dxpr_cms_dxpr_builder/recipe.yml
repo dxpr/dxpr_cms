@@ -33,11 +33,14 @@ config:
     user.role.content_administrator:
       grantPermissions:
         - 'edit with dxpr builder'
+        - 'use text format dxpr_builder_html'
     user.role.site_builder:
       grantPermissions:
         - 'edit with dxpr builder'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
+        - 'use text format dxpr_builder_html'
     user.role.content_editor:
       grantPermissions:
         - 'edit with dxpr builder'
+        - 'use text format dxpr_builder_html'
