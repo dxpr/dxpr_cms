@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
+use Drupal\dxpr_cms_installer\Form\ConfigureAPIKeysForm;
+use Drupal\dxpr_cms_installer\Form\ConfigureMultilingualForm;
 use Drupal\RecipeKit\Installer\Hooks;
 use Drupal\RecipeKit\Installer\Messenger;
-use Drupal\dxpr_cms_installer\Form\ConfigureAPIKeysForm;
 
 /**
  * Implements hook_install_tasks().
@@ -37,6 +38,16 @@ function dxpr_cms_installer_install_tasks(): array {
     'dxpr_cms_installer_rebuild_theme' => [
       // Rebuild theme CSS.
     ],
+    ConfigureMultilingualForm::CONFIGURE_MULTILINGUAL_TASK => [
+      'display_name' => t('Multilingual set-up'),
+      'type' => 'form',
+      'function' => ConfigureMultilingualForm::class,
+    ],
+    ConfigureMultilingualForm::INSTALL_LANGUAGES_TASK => [
+      'display_name' => t('Multilingual imports'),
+      'type' => 'batch',
+      'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    ],
   ];
 
   return array_merge($tasks, $additional_tasks);
@@ -57,6 +68,16 @@ function dxpr_cms_installer_install_tasks_alter(array &$tasks, array $install_st
   // @see install_profile_modules()
   $settings["locale_custom_strings_$langcode"]['']['Installing @drupal'] = 'Setting up your site';
   new Settings($settings);
+
+  // Make user to be able to set up multiple languages if the recipe is chosen.
+  if (!in_array('drupal/dxpr_cms_multilingual', (array) ($install_state['parameters']['recipes'] ?? []))) {
+    $tasks[ConfigureMultilingualForm::CONFIGURE_MULTILINGUAL_TASK]['run'] = INSTALL_TASK_SKIP;
+  }
+
+  $is_multilingual = $install_state['dxpr_cms_installer']['additional_languages'] ?? FALSE;
+  if (!$is_multilingual) {
+    $tasks[ConfigureMultilingualForm::INSTALL_LANGUAGES_TASK][] = INSTALL_TASK_SKIP;
+  }
 }
 
 /**

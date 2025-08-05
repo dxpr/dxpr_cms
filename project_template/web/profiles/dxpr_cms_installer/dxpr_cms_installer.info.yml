@@ -30,6 +30,8 @@ recipes:
       - drupal/dxpr_cms_news
     'SEO Tools':
       - drupal/dxpr_cms_seo_tools
+    'Multilingual':
+      - drupal/dxpr_cms_multilingual
 
 # Explicitly provide an empty list of themes -- this prevents the installer from
 # injecting Stark into it.
