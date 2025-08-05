@@ -20,7 +20,6 @@
         "drupal/dxpr_cms_remote_video": "*",
         "drupal/dxpr_cms_seo_basic": "*",
         "drupal/dxpr_cms_dxpr_theme": "*",
-        "drupal/project_browser": "^2.1@beta",
         "drupal/token": "^1"
     },
     "version": "1.0.0-beta1"

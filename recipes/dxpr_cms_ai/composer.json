@@ -22,8 +22,5 @@
         "drupal/markdownify": "^1.1",
         "drupal/diff": "^2.0"
     },
-    "conflict": {
-        "drupal/project_browser": "<2-alpha7"
-    },
     "version": "1.0.0-beta1"
 }
