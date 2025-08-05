@@ -15,9 +15,9 @@ corepack_enable: false
 ddev_version_constraint: '>= 1.23.0'
 hooks:
   post-start:
-    # If needed, regenerate `composer.json` and install dependencies.
+    # Always regenerate `composer.json` and install dependencies.
     # @see homeadditions/bin/generate-composer-json
-    - exec: 'test -f composer.lock || (generate-composer-json > composer.json && composer install)'
+    - exec: 'generate-composer-json > composer.json && composer install'
     # The installer is part of the project template, so symlink it into the web root.
     # It needs to be a relative symlink, or it will break Package Manager.
     - exec: 'ln -s -f $(realpath -s --relative-to=$DDEV_DOCROOT/profiles project_template/$DDEV_DOCROOT/profiles/dxpr_cms_installer) $DDEV_DOCROOT/profiles'
