@@ -48,6 +48,15 @@ config:
       simpleConfigUpdate:
         reference_defaults:
           - node
+    tmgmt.translator.ai:
+      simpleConfigUpdate:
+        auto_accept: true
+        settings:
+          model_selection_type: ai_translate
+          chat_model: dxpr__kavya-m1-fast
+          tokenizer_model: dxpr__kavya-m1-fast
+          advanced:
+            max_tokens: '999996'
     user.role.content_administrator:
       grantPermissionsForEachNodeType:
         - 'translate %bundle node'

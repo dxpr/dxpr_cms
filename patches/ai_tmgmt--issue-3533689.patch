@@ -1,0 +1,367 @@
+diff --git a/README.md b/README.md
+index 54ae020..53cee56 100644
+--- a/README.md
++++ b/README.md
+@@ -17,6 +17,12 @@ Submit bug reports and feature suggestions, or track changes in the
+ 
+ - Fast automated translation of content using AI with ability to tweak
+   translation style.
++- Three translation methods to choose from:
++  - **AI Translate module prompts**: Uses the AI Translate module's advanced
++    per-language prompts and model configuration
++  - **AI provider translation interface**: Uses the provider's native translation
++    capabilities with optimized prompts (e.g., specialized providers with translation support)
++  - **Basic prompt**: Simple chat-based translation with customizable prompt
+ - Translate one or multiple nodes by a few simple mouse clicks.
+ - Use advanced translation jobs management tool to submit and review
+   translations.
+@@ -43,6 +49,17 @@ information, see
+   Entity Source'
+ - Configure at least one Provider in the AI module at /admin/config/ai/settings
+ - Enable the TMGMT AI Provider at /admin/tmgmt/translators
++- Choose your preferred translation method:
++  - **AI Translate module prompts**: Requires the AI Translate sub-module to be
++    enabled and configured, plus a default chat provider configured in AI settings.
++    Uses AI Translate's sophisticated per-language prompts via direct chat interface,
++    completely bypassing provider-specific translation methods.
++  - **AI provider translation interface**: Requires a provider that supports the
++    translate_text operation type to be configured as default in AI settings.
++    The provider's native translation prompts will be used (recommended for
++    providers that have specialized translation capabilities).
++  - **Basic prompt**: Uses a simple chat model with the prompt you configure.
++    Works with any chat-capable AI provider.
+ - Check it works by going to /admin/tmgmt/sources, request a translation, and
+   reviewing the generated translation results.
+ 
+@@ -52,21 +69,29 @@ twice, so you will use more tokens until the issue is fixed:
+ 
+ ## Prompt Examples
+ 
++These examples apply when using the "Basic prompt" translation method:
++
+ 1. Default prompt
+ ```
+ Translate from %source% into %target% language
+-
+-%text%
+ ```
+ 
+ 2. Ability to change style of the translation:
+-
+ ```
+ Translate from %source% into %target% language in Ernest Hemingway style
++```
+ 
+-%text%
++3. Formal business translation:
++```
++Translate from %source% into %target% language using formal business terminology
+ ```
+ 
++Note: When using "AI provider translation interface" or "AI Translate module prompts",
++the prompts are managed by the respective provider or module and cannot be customized
++in the TMGMT settings. The AI Translate module allows configuring per-language prompts
++at /admin/config/ai/translate, while provider interfaces use the provider's built-in
++translation logic.
++
+ ## Migrating from the 'TMGMT OpenAI' module
+ 
+ Steps to migrate from https://www.drupal.org/project/tmgmt_openai:
+diff --git a/src/AiTranslatorUi.php b/src/AiTranslatorUi.php
+index 4775be6..92e0c4a 100755
+--- a/src/AiTranslatorUi.php
++++ b/src/AiTranslatorUi.php
+@@ -29,27 +29,34 @@ class AiTranslatorUi extends TranslatorPluginUiBase {
+     /** @var \Drupal\tmgmt\TranslatorInterface $translator */
+     $translator = $form_state->getFormObject()->getEntity();
+     $settings = $translator->getSettings();
++    // Get the URL for the AI settings page.
++    $ai_settings_url = \Drupal\Core\Url::fromRoute('ai.settings_form');
++    
+     $form['model_selection_type'] = [
+       '#type' => 'radios',
+-      '#title' => $this->t('Translation configuration'),
++      '#title' => $this->t('Translation method'),
+       '#required' => TRUE,
+       '#options' => [
+-        'ai_translate' => $this->t('Use the configuration from the "AI Translate" module (recommended)'),
+-        'ai_tmgmt' => $this->t('Use the configuration from this module (basic)'),
++        'ai_translate' => $this->t('Use AI Translate module prompts'),
++        'provider_interface' => $this->t('Use AI provider translation interface'),
++        'basic' => $this->t('Use basic prompt'),
+       ],
+-      '#default_value' => $settings['model_selection_type'] ?? '',
+-      '#description' => $this->t('This module provides a single basic prompt for all languages. The "AI Translate" module however allows you to configure the prompt per language as well as use different models per language (since some models are better trained on specific languages than others). Please enable the "AI Translate" sub-module of the AI core module.'),
++      '#default_value' => $settings['model_selection_type'] ?? 'basic',
++      '#description' => $this->t('Choose how translations should be performed:<ul>
++        <li><strong>AI Translate module prompts:</strong> Uses the AI Translate module\'s advanced per-language prompts and model configuration. Requires the AI Translate sub-module to be enabled.</li>
++        <li><strong>AI provider translation interface:</strong> Uses the translate_text operation type from your configured AI provider. The provider\'s built-in translation prompts will be used. <a href="@ai_settings_url">Configure default providers here</a>.</li>
++        <li><strong>Basic prompt:</strong> Uses a simple chat-based translation with the prompt configured below.</li>
++      </ul>', ['@ai_settings_url' => $ai_settings_url->toString()]),
+     ];
+     $form['chat_model'] = [
+       '#type' => 'select',
+       '#title' => $this->t('Chat translator model'),
+-      '#required' => TRUE,
+       '#options' => $chat_models,
+       '#default_value' => $settings['chat_model'] ?? '',
+       '#description' => $this->t('Choose a chat model that is known to operate well with the languages you typically use.'),
+       '#states' => [
+         'visible' => [
+-          ':input[name="settings[model_selection_type]"]' => ['value' => 'ai_tmgmt'],
++          ':input[name="settings[model_selection_type]"]' => ['value' => 'basic'],
+         ],
+       ],
+     ];
+@@ -74,7 +81,7 @@ class AiTranslatorUi extends TranslatorPluginUiBase {
+       '#required' => TRUE,
+       '#states' => [
+         'visible' => [
+-          ':input[name="settings[model_selection_type]"]' => ['value' => 'ai_tmgmt'],
++          ':input[name="settings[model_selection_type]"]' => ['value' => 'basic'],
+         ],
+       ],
+     ];
+@@ -93,15 +100,39 @@ class AiTranslatorUi extends TranslatorPluginUiBase {
+    * {@inheritdoc}
+    */
+   public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {
++    $model_selection_type = $form_state->getValue('settings')['model_selection_type'];
++    
++    // Validate AI Translate module option.
+     if (
+-      $form_state->getValue('settings')['model_selection_type'] === 'ai_translate'
++      $model_selection_type === 'ai_translate'
+       // @codingStandardsIgnoreStart
+       // @phpstan-ignore-next-line
+       && !\Drupal::hasService('ai_translate.text_translator')
+       // @codingStandardsIgnoreEnd
+     ) {
+-      $form_state->setErrorByName('settings][model_selection_type', $this->t('Please enable the "ai_translate" sub-module of the "ai" module.'));
++      $form_state->setErrorByName('settings][model_selection_type', $this->t('The AI Translate module is not enabled. Please enable the "ai_translate" sub-module of the "ai" module to use this option.'));
++    }
++    
++    // Validate provider interface option.
++    if ($model_selection_type === 'provider_interface') {
++      /** @var \Drupal\ai\AiProviderPluginManager $provider_manager */
++      $provider_manager = \Drupal::service('ai.provider');
++      $default_provider = $provider_manager->getDefaultProviderForOperationType('translate_text');
++      
++      if (empty($default_provider) || !isset($default_provider['provider_id'])) {
++        $ai_settings_url = \Drupal\Core\Url::fromRoute('ai.settings_form')->toString();
++        $form_state->setErrorByName('settings][model_selection_type', $this->t('No default provider is configured for the translate_text operation type. Please <a href="@ai_settings_url">configure a default provider</a> or choose a different translation method.', ['@ai_settings_url' => $ai_settings_url]));
++      }
++    }
++    
++    // Validate basic prompt option.
++    if (
++      $model_selection_type === 'basic'
++      && !$form_state->getValue('settings')['chat_model']
++    ) {
++      $form_state->setErrorByName('settings][chat_model', $this->t('Please choose a chat model for basic translation.'));
+     }
++    
+     parent::validateConfigurationForm($form, $form_state);
+   }
+ 
+diff --git a/src/Plugin/tmgmt/Translator/AiTranslator.php b/src/Plugin/tmgmt/Translator/AiTranslator.php
+index 175d00b..4d74e5a 100755
+--- a/src/Plugin/tmgmt/Translator/AiTranslator.php
++++ b/src/Plugin/tmgmt/Translator/AiTranslator.php
+@@ -254,29 +254,151 @@ class AiTranslator extends TranslatorPluginBase implements ContainerFactoryPlugi
+ 
+     $chunk = $request_query['text'];
+     $settings = $translator->getSettings();
+-    $site_languages = \Drupal::languageManager()->getLanguages();
+-    $prompt = $settings['advanced']['prompt'] ?? 'Translate from %source% into %target% language';
+-
+-    // Replace the source and target language in the prompt.
+-    $system_prompt = str_replace(
+-      ['%source%', '%target%'],
+-      [
+-        $site_languages[$request_query['source']]->getName(),
+-        $site_languages[$request_query['target']]->getName(),
+-      ],
+-      $prompt,
+-    );
+-
+-    /** @var \Drupal\ai\AiProviderPluginManager $provider_manager */
+-    $provider_manager = \Drupal::service('ai.provider');
+-    /** @var \Drupal\ai\OperationType\Chat\ChatInterface $provider */
+-    $provider = $provider_manager->loadProviderFromSimpleOption($settings['chat_model']);
+-    $model_id = $provider_manager->getModelNameFromSimpleOption($settings['chat_model']);
+-    $messages = new ChatInput([
+-      new chatMessage('system', $system_prompt),
+-      new chatMessage('user', $chunk),
+-    ]);
+-    return $provider->chat($messages, $model_id)->getNormalized()->getText();
++    $model_selection_type = $settings['model_selection_type'] ?? 'basic';
++    
++    // Handle the three different translation methods.
++    switch ($model_selection_type) {
++      case 'ai_translate':
++        // Option 1: Use AI Translate module's per-language prompts directly via chat interface.
++        // This bypasses the translate_text operation to avoid delegating to provider translation methods.
++        
++        // Verify AI Translate module is enabled and configured.
++        if (!\Drupal::moduleHandler()->moduleExists('ai_translate')) {
++          throw new TMGMTException('AI Translate module is not available. Please enable the ai_translate module.');
++        }
++        
++        $ai_translate_config = \Drupal::configFactory()->get('ai_translate.settings');
++        if (empty($ai_translate_config->get('prompt'))) {
++          throw new TMGMTException('AI Translate module is not configured. Please configure translation prompts at /admin/config/ai/translate.');
++        }
++        
++        /** @var \Drupal\ai\AiProviderPluginManager $provider_manager */
++        $provider_manager = \Drupal::service('ai.provider');
++        
++        // Get the default chat provider (not translate_text provider) to avoid provider delegation.
++        $chat_config = $provider_manager->getDefaultProviderForOperationType('chat');
++        
++        if (empty($chat_config) || !isset($chat_config['provider_id'])) {
++          throw new TMGMTException('No default chat provider configured. Please configure a chat provider in AI settings for AI Translate to work.');
++        }
++        
++        // Load target language for per-language prompt lookup.
++        $target_lang = \Drupal::entityTypeManager()
++          ->getStorage('configurable_language')
++          ->load($request_query['target']);
++          
++        if (!$target_lang) {
++          throw new TMGMTException('Invalid target language: ' . $request_query['target']);
++        }
++        
++        // Get AI Translate's prompt - check for language-specific prompt first.
++        $prompt = $ai_translate_config->get($target_lang->getId() . '_prompt');
++        if (empty($prompt)) {
++          $prompt = $ai_translate_config->get('prompt');
++        }
++        
++        // Prepare context for Twig template.
++        $context = [
++          'dest_lang' => $target_lang->getId(),
++          'dest_lang_name' => $target_lang->getName(),
++          'input_text' => $chunk,
++        ];
++        
++        // Add source language context if available.
++        if (!empty($request_query['source'])) {
++          $source_lang = \Drupal::entityTypeManager()
++            ->getStorage('configurable_language')
++            ->load($request_query['source']);
++          if ($source_lang) {
++            $context['source_lang'] = $source_lang->getId();
++            $context['source_lang_name'] = $source_lang->getName();
++          }
++        }
++        
++        // Render AI Translate's prompt template.
++        $twig = \Drupal::service('twig');
++        $prompt_text = $twig->renderInline($prompt, $context);
++        
++        // Use direct chat interface to avoid translate_text delegation to provider methods.
++        /** @var \Drupal\ai\OperationType\Chat\ChatInterface $chat_provider */
++        $chat_provider = $provider_manager->createInstance(
++          $chat_config['provider_id'], 
++          $chat_config['config'] ?? []
++        );
++        
++        $messages = new \Drupal\ai\OperationType\Chat\ChatInput([
++          new \Drupal\ai\OperationType\Chat\ChatMessage('system', 'You are a helpful translator.'),
++          new \Drupal\ai\OperationType\Chat\ChatMessage('user', $prompt_text),
++        ]);
++        
++        $chat_output = $chat_provider->chat($messages, $chat_config['model_id'] ?? 'default');
++        
++        return $chat_output->getNormalized()->getText();
++        
++      case 'provider_interface':
++        // Option 2: Use the provider's native translation interface directly.
++        /** @var \Drupal\ai\AiProviderPluginManager $provider_manager */
++        $provider_manager = \Drupal::service('ai.provider');
++        
++        // Get the default provider configuration for translate_text.
++        $provider_config = $provider_manager->getDefaultProviderForOperationType('translate_text');
++        
++        if (empty($provider_config) || !isset($provider_config['provider_id'])) {
++          throw new TMGMTException('No default provider configured for translate_text operation. Please configure it in the AI settings.');
++        }
++        
++        // Create the provider instance.
++        /** @var \Drupal\ai\OperationType\TranslateText\TranslateTextInterface $provider */
++        $provider = $provider_manager->createInstance(
++          $provider_config['provider_id'],
++          $provider_config
++        );
++        
++        // Note: We don't check instanceof TranslateTextInterface here because the provider
++        // may be wrapped in a ProviderProxy that delegates calls to the underlying provider.
++        
++        // Create translation input.
++        $translate_input = new \Drupal\ai\OperationType\TranslateText\TranslateTextInput(
++          $chunk,
++          $request_query['source'] ?: NULL,
++          $request_query['target']
++        );
++        
++        // Perform translation using the provider's native interface.
++        $translate_output = $provider->translateText(
++          $translate_input,
++          $provider_config['model_id'] ?? 'default'
++        );
++        
++        return $translate_output->getNormalized();
++        
++      case 'basic':
++      default:
++        // Option 3: Use basic chat-based translation with custom prompt.
++        $site_languages = \Drupal::languageManager()->getLanguages();
++        $prompt = $settings['advanced']['prompt'] ?? 'Translate from %source% into %target% language';
++
++        // Replace the source and target language in the prompt.
++        $system_prompt = str_replace(
++          ['%source%', '%target%'],
++          [
++            $site_languages[$request_query['source']]->getName(),
++            $site_languages[$request_query['target']]->getName(),
++          ],
++          $prompt,
++        );
++
++        /** @var \Drupal\ai\AiProviderPluginManager $provider_manager */
++        $provider_manager = \Drupal::service('ai.provider');
++        /** @var \Drupal\ai\OperationType\Chat\ChatInterface $provider */
++        $provider = $provider_manager->loadProviderFromSimpleOption($settings['chat_model']);
++        $model_id = $provider_manager->getModelNameFromSimpleOption($settings['chat_model']);
++        $messages = new ChatInput([
++          new chatMessage('system', $system_prompt),
++          new chatMessage('user', $chunk),
++        ]);
++        return $provider->chat($messages, $model_id)->getNormalized()->getText();
++    }
+   }
+ 
+   /**
+@@ -352,9 +474,9 @@ class AiTranslator extends TranslatorPluginBase implements ContainerFactoryPlugi
+   protected function processQueue(): void {
+     $batch_builder = new BatchBuilder();
+     $batch_builder->setTitle($this->t('Translating job items'));
+-    $batch_builder->setFinishCallback([AiTranslator::class, 'batchFinished']);
+-    $request_callable = [AiTranslator::class, 'batchRequestTranslation'];
+-    $finish_callable = [AiTranslator::class, 'beforeBatchFinished'];
++    $batch_builder->setFinishCallback([static::class, 'batchFinished']);
++    $request_callable = [static::class, 'batchRequestTranslation'];
++    $finish_callable = [static::class, 'beforeBatchFinished'];
+     $job_items = [];
+ 
+     // Claim the items we just added to the queue and process them in batch.
+@@ -420,7 +542,7 @@ class AiTranslator extends TranslatorPluginBase implements ContainerFactoryPlugi
+       'target' => $job->getTargetLangcode(),
+       'text' => $chunk,
+     ];
+-    $result = self::doRequest($translator, 'translate', $query_params);
++    $result = static::doRequest($translator, 'translate', $query_params);
+     if (!isset($context['results'][$job_item->id()]['translation'])) {
+       $context['results'][$job_item->id()]['translation'] = [];
+     }

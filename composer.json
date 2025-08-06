@@ -152,6 +152,8 @@
     "config": {
         "preferred-install": {
             "drupal/ace_editor": "source",
+            "drupal/tmgmt": "source",
+            "drupal/ai_tmgmt": "source",
             "*": "dist"
         },
         "allow-plugins": {
@@ -206,6 +208,9 @@
             },
             "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
+            },
+            "drupal/ai_tmgmt": {
+                "Comprehensive translation methods": "patches/ai_tmgmt--issue-3533689.patch"
             }
         }
     }
