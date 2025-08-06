@@ -201,7 +201,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
           ])
           ->set('default_providers.translate_text', [
             'provider_id' => 'dxpr',
-            'model_id' => 'kavya-m1',
+            'model_id' => 'kavya-m1-fast',
           ])
           ->save();
       }
