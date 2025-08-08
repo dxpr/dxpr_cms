@@ -46,7 +46,7 @@ jobs:
       - name: Test installation
         run: |
           # Test that the site responds via the external DDEV URL
-          curl -f http://dxpr-cms-dev.ddev.site || exit 1
+          curl -f http://dxpr-cms.ddev.site || exit 1
           # Test that we can access the admin interface
           ddev drush user:login --name=admin --uri=$(ddev describe | grep "Primary URL" | awk '{print $3}')
           echo "DXPR CMS installation completed successfully!"
