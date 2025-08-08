@@ -32,13 +32,9 @@ class ConfigureMultilingualForm extends FormBase implements InstallerFormInterfa
       haystack: (array) ($install_state['parameters']['recipes'] ?? [])
     );
 
-    if (
-      // First, we should check if the form was submitted and
-      // a default language was set up.
-      !empty($install_state['parameters']['dxpr_cms_installer']['default_language']) ||
-      // Second, check if the recipe was chosen.
-      !$is_recipe_selected
-    ) {
+    $is_task_executed = isset($install_state['parameters']['dxpr_cms_installer']['additional_languages']);
+
+    if (!$is_recipe_selected || $is_task_executed) {
       $run = INSTALL_TASK_SKIP;
     }
 
@@ -102,9 +98,9 @@ class ConfigureMultilingualForm extends FormBase implements InstallerFormInterfa
    *   The current installation state.
    */
   public static function tasksAlter(array &$tasks, array $install_state): void {
-    $has_multilingual = $install_state['parameters']['dxpr_cms_installer']['additional_languages'] ?? FALSE;
-    if (!$has_multilingual) {
-      $tasks[ConfigureMultilingualForm::INSTALL_LANGUAGES_TASK][] = INSTALL_TASK_SKIP;
+    $is_task_executed = isset($install_state['parameters']['dxpr_cms_installer']['additional_languages']);
+    if (!$is_task_executed) {
+      $tasks[ConfigureMultilingualForm::INSTALL_LANGUAGES_TASK]['run'] = INSTALL_TASK_SKIP;
     }
   }
 
@@ -124,46 +120,32 @@ class ConfigureMultilingualForm extends FormBase implements InstallerFormInterfa
       ? $install_state['translations']
       : [];
 
+    $default_langcode = $install_state['parameters']['langcode'] ??
+      $this->configFactory()
+        ->getEditable('system.site')
+        ->get('default_langcode');
+
     $standard_languages = LanguageManager::getStandardLanguageList();
 
     // Build a select list with language names in the native language for
     // the user to choose from. And build a list of available languages
     // for the browser to select the language default from.
     // Select lists based on all standard languages.
-    $options = array_map(function ($language_names) {
-      return $language_names[1];
+    $label_key = (int) ($default_langcode !== 'en');
+    $options = array_map(function ($language_names) use ($label_key) {
+      return $language_names[$label_key];
     }, $standard_languages);
 
     // Add languages based on language files in the translations directory.
     foreach ($files as $langcode => $uri) {
-      $options[$langcode] = $standard_languages[$langcode][1] ?? $langcode;
+      $options[$langcode] = $standard_languages[$langcode][$label_key] ?? $langcode;
     }
     asort($options);
 
-    $default_langcode = $install_state['parameters']['langcode'] ??
-      $this->configFactory()
-        ->getEditable('system.site')
-        ->get('default_langcode');
+    // Remove default languages from additional languages list.
+    unset($options[$default_langcode]);
 
     $form['#title'] = $this->t('Multilingual configuration');
-
-    $form['langcode'] = [
-      '#type' => 'select',
-      '#title' => $this->t('Default language'),
-      '#options' => $options,
-      // Use the browser-detected language as default or English if nothing
-      // found.
-      '#default_value' => $default_langcode ?? NULL,
-      '#attached' => [
-        'library' => [
-          'dxpr_cms_installer_theme/choices',
-        ],
-      ],
-      '#attributes' => [
-        'style' => 'width:100%;',
-        'class' => ['choices-select'],
-      ],
-    ];
 
     $form['additional_languages'] = [
       '#type' => 'select',
@@ -199,16 +181,9 @@ class ConfigureMultilingualForm extends FormBase implements InstallerFormInterfa
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     global $install_state;
 
-    $default_language = $form_state->getValue('langcode');
-
-    // Change a default language in the global scope as it might have impact
-    // on displayed UI language.
-    $install_state['parameters']['langcode'] = $default_language;
-
     // Get a list of selected additional languages.
     $languages = $form_state->getValue('additional_languages');
-
-    $install_state['parameters']['dxpr_cms_installer']['default_language'] = $default_language;
+    // This parameter also will be used for skipping the current task.
     $install_state['parameters']['dxpr_cms_installer']['additional_languages'] = array_filter($languages);
   }
 

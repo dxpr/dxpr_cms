@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
+use Drupal\dxpr_cms_installer\DxprCmsInstallerHelper;
 use Drupal\dxpr_cms_installer\Form\ConfigureAPIKeysForm;
 use Drupal\dxpr_cms_installer\Form\ConfigureMultilingualForm;
 use Drupal\RecipeKit\Installer\Hooks;
@@ -52,7 +53,7 @@ function dxpr_cms_installer_install_tasks(): array {
  * Implements hook_install_tasks_alter().
  */
 function dxpr_cms_installer_install_tasks_alter(array &$tasks, array $install_state): void {
-  Hooks::installTasksAlter($tasks, $install_state);
+  DxprCmsInstallerHelper::wrapStarterKitHooksAlter($tasks, $install_state);
 
   // Specific tasks alterations for multilingual setup.
   ConfigureMultilingualForm::tasksAlter($tasks, $install_state);
