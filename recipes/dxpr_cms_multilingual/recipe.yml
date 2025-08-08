@@ -4,6 +4,7 @@ description: 'Adds support for translations.'
 recipes:
   - dxpr_cms_content_type_base
   - dxpr_cms_dxpr_builder
+  - dxpr_cms_ai
   - dxpr_cms_roles
 install:
   - config_translation
@@ -11,32 +12,51 @@ install:
   - block_content
   - hreflang
   - language
+  - locale
   - node
   - tmgmt
-  - tmgmt_google
   - tmgmt_locale
   - tmgmt_content
   - tmgmt_config
+  - ai_tmgmt
+  - ai_translate
   - user
 config:
   import:
     language: '*'
     tmgmt: '*'
   actions:
-    'language.content_settings.node.%bundle':
-      createIfNotExistsForEachNodeType:
-        target_entity_type_id: node
-        target_bundle: '%bundle'
-        language_alterable: true
+    # Configure translations for content.
+    node.type.*:
+      createForEachIfNotExists:
+        'language.content_settings.node.%bundle':
+          target_entity_type_id: node
+          target_bundle: '%bundle'
+          language_alterable: true
     language.content_settings.node.*:
       setThirdPartySettings:
-        - module: content_translation
+        -
+          module: content_translation
           key: enabled
           value: true
-        - module: content_translation
+        -
+          module: content_translation
           key: bundle_settings
           value:
             untranslatable_fields_hide: '1'
+    ai_translate.settings:
+      simpleConfigUpdate:
+        reference_defaults:
+          - node
+    tmgmt.translator.ai:
+      simpleConfigUpdate:
+        auto_accept: true
+        settings:
+          model_selection_type: ai_translate
+          chat_model: dxpr__kavya-m1-fast
+          tokenizer_model: dxpr__kavya-m1-fast
+          advanced:
+            max_tokens: '999996'
     user.role.content_administrator:
       grantPermissionsForEachNodeType:
         - 'translate %bundle node'
@@ -51,6 +71,8 @@ config:
         - 'translate editable entities'
         - 'translate menu_link_content'
         - 'translate tags taxonomy_term'
+        - 'create ai content translation'
+        - 'create ai interface translation'
     user.role.content_editor:
       grantPermissionsForEachNodeType:
         - 'translate %bundle node'
@@ -60,6 +82,7 @@ config:
         - 'update content translations'
         - 'translate editable entities'
         - 'translate tags taxonomy_term'
+        - 'create ai content translation'
     user.role.site_builder:
       grantPermissionsForEachNodeType:
         - 'translate %bundle node'
@@ -79,3 +102,6 @@ config:
         - 'translate menu_link_content'
         - 'translate tags taxonomy_term'
         - 'administer tmgmt'
+        - 'manage ai translation prompts'
+        - 'create ai content translation'
+        - 'create ai interface translation'

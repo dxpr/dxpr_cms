@@ -152,6 +152,8 @@
     "config": {
         "preferred-install": {
             "drupal/ace_editor": "source",
+            "drupal/tmgmt": "source",
+            "drupal/ai_tmgmt": "source",
             "*": "dist"
         },
         "allow-plugins": {
@@ -198,10 +200,17 @@
                 "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
             ]
         },
+        "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patches": {
             "drupal/ace_editor": {
-                "Fix profile detection for recipe-based installations": "patches/ace_editor_no_profile.patch"
+                "Fix profile detection for recipe-based installations  ": "patches/ace_editor_no_profile.patch"
+            },
+            "drupal/tmgmt": {
+                "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
+            },
+            "drupal/ai_tmgmt": {
+                "Comprehensive translation methods": "patches/ai_tmgmt--issue-3533689.patch"
             }
         }
     }

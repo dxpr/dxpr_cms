@@ -11,3 +11,14 @@ maintenance-page:
 drupal.progress:
   js:
     js/progress.js: {}
+
+choices:
+  version: 1.x
+  js:
+    https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js: { type: external, minified: true }
+    js/choices_init.js: {}
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css: { type: external, minified: true }
+  dependencies:
+    - core/once

@@ -120,18 +120,6 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       '#required' => TRUE,
     ];
 
-
-
-    // if (isset($install_state['dxpr_cms_installer']['enable_multilingual']) &&
-    // $install_state['dxpr_cms_installer']['enable_multilingual']) {
-    $form['google_translation_key'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Google Cloud Translation API key (optional)'),
-      '#description' => $this->t('Get a key from <a href="https://console.cloud.google.com/marketplace/product/google/translate.googleapis.com" target="_blank">cloud.google.com</a>.'),
-    ];
-    // }
-
-
     $form['actions'] = [
       'continue' => [
         '#type' => 'submit',
@@ -181,11 +169,6 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       }
     }
 
-    $google_translation_key = $form_state->getValue('google_translation_key');
-    if (!empty($google_translation_key)) {
-      $this->configFactory->getEditable('tmgmt.translator.google')->set('settings.api_key', $google_translation_key)->save();
-    }
-
     // Configure DXPR AI provider using the DXPR Builder key
     if (!empty($json_web_token)) {
       try {
@@ -215,6 +198,10 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
           ->set('default_providers.chat_with_structured_response', [
             'provider_id' => 'dxpr',
             'model_id' => 'kavya-m1',
+          ])
+          ->set('default_providers.translate_text', [
+            'provider_id' => 'dxpr',
+            'model_id' => 'kavya-m1-fast',
           ])
           ->save();
       }

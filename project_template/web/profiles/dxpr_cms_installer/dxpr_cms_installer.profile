@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
+use Drupal\dxpr_cms_installer\DxprCmsInstallerHelper;
+use Drupal\dxpr_cms_installer\Form\ConfigureAPIKeysForm;
+use Drupal\dxpr_cms_installer\Form\ConfigureMultilingualForm;
 use Drupal\RecipeKit\Installer\Hooks;
 use Drupal\RecipeKit\Installer\Messenger;
-use Drupal\dxpr_cms_installer\Form\ConfigureAPIKeysForm;
 
 /**
  * Implements hook_install_tasks().
@@ -37,6 +39,11 @@ function dxpr_cms_installer_install_tasks(): array {
     'dxpr_cms_installer_rebuild_theme' => [
       // Rebuild theme CSS.
     ],
+    ConfigureMultilingualForm::INSTALL_LANGUAGES_TASK => [
+      'display_name' => t('Multilingual imports'),
+      'type' => 'batch',
+      'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    ],
   ];
 
   return array_merge($tasks, $additional_tasks);
@@ -46,7 +53,10 @@ function dxpr_cms_installer_install_tasks(): array {
  * Implements hook_install_tasks_alter().
  */
 function dxpr_cms_installer_install_tasks_alter(array &$tasks, array $install_state): void {
-  Hooks::installTasksAlter($tasks, $install_state);
+  DxprCmsInstallerHelper::wrapStarterKitHooksAlter($tasks, $install_state);
+
+  // Specific tasks alterations for multilingual setup.
+  ConfigureMultilingualForm::tasksAlter($tasks, $install_state);
 
   // The recipe kit doesn't change the title of the batch job that applies all
   // the recipes, so to override it, we use core's custom string overrides.
