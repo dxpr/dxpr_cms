@@ -31,16 +31,22 @@ jobs:
 
       - name: Start DXPR CMS DDEV Environment
         run: |
-          ddev start
+          ddev config --project-type=drupal11 --database=mariadb:11.4 --docroot=web && ddev start && ddev composer install --no-interaction --no-progress --optimize-autoloader
 
       - name: Install Drupal with DXPR CMS
         run: |
           ddev drush site:install dxpr_cms_installer dxpr_cms_installer_api_keys_configuration.json_web_token='${{ secrets.DXPR_KEY }}' --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
 
+      - name: Show site status
+        run: |
+          ddev status
+          ddev drush status
+
+
       - name: Test installation
         run: |
           # Test that the site responds via the external DDEV URL
-          curl -f http://dxpr-cms-dev.ddev.site || exit 1
+          curl -f http://dxpr-cms.ddev.site || exit 1
           # Test that we can access the admin interface
           ddev drush user:login --name=admin --uri=$(ddev describe | grep "Primary URL" | awk '{print $3}')
           echo "DXPR CMS installation completed successfully!"
