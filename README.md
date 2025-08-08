@@ -15,14 +15,16 @@ Follow these steps to install DXPR CMS:
    ```bash
    cd dxpr_cms
    ```
-4. Start the DDEV environment by running the following command:
+4. Configure and start the DDEV environment:
    ```bash
+   ddev config --project-type=drupal11 --database=mariadb:11.4 --docroot=web
    ddev start
+   ddev composer install
    ```
 5. Complete the installation using one of these methods:
 
    **Option A: Web-based installation**
-   After the environment starts, follow the link provided in the terminal to access the Drupal installation wizard. During installation, you can select optional recipes (Case Studies, Events, Forms, Analytics, News, SEO Tools) to customize your site.
+   Open your browser and navigate to `http://dxpr-cms.ddev.site` or `https://dxpr-cms.ddev.site` to access the Drupal installation wizard. During installation, you can select optional recipes (Case Studies, Events, Forms, Analytics, News, SEO Tools) to customize your site.
 
    **Option B: Command-line installation with DXPR API key**
    For automated installation with your DXPR Builder API key:
@@ -40,11 +42,6 @@ Follow these steps to install DXPR CMS:
    ddev drush recipe ../recipes/dxpr_cms_news
    ddev drush recipe ../recipes/dxpr_cms_google_analytics
    ddev drush recipe ../recipes/dxpr_cms_seo_tools
-   ```
-
-6. To destroy and rebuild the DDEV environment (which deletes and reinstalls all dependencies), run:
-   ```bash
-   ddev rebuild
    ```
 
 ## Future-proof your digital strategy with scalable tools for efficient content management
