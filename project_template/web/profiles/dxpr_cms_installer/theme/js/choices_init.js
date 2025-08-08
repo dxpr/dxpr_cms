@@ -1,13 +1,16 @@
-(function (Drupal) {
+(function (Drupal, once) {
   Drupal.behaviors.dxprCmsChoices = {
     attach: function (context, settings) {
-      const selectElement = context.querySelector('.choices-select');
+      if (typeof Choices === 'undefined') {
+        return;
+      }
+
       // Degrade gracefully if Choices is not loaded.
-      if (selectElement && typeof Choices !== 'undefined') {
-        new Choices(selectElement, {
+      once('init-choises', '.choices-select', context).forEach((element) => {
+        new Choices(element, {
           removeItemButton: true,
         });
-      }
-    },
-  };
-})(Drupal);
+      });
+    }
+  }
+}) (Drupal, once);

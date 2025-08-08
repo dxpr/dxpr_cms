@@ -20,3 +20,5 @@ choices:
   css:
     theme:
       https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css: { type: external, minified: true }
+  dependencies:
+    - core/once

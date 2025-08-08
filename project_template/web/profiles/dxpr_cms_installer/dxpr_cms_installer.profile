@@ -38,11 +38,6 @@ function dxpr_cms_installer_install_tasks(): array {
     'dxpr_cms_installer_rebuild_theme' => [
       // Rebuild theme CSS.
     ],
-    ConfigureMultilingualForm::CONFIGURE_MULTILINGUAL_TASK => [
-      'display_name' => t('Multilingual set-up'),
-      'type' => 'form',
-      'function' => ConfigureMultilingualForm::class,
-    ],
     ConfigureMultilingualForm::INSTALL_LANGUAGES_TASK => [
       'display_name' => t('Multilingual imports'),
       'type' => 'batch',
@@ -59,6 +54,9 @@ function dxpr_cms_installer_install_tasks(): array {
 function dxpr_cms_installer_install_tasks_alter(array &$tasks, array $install_state): void {
   Hooks::installTasksAlter($tasks, $install_state);
 
+  // Specific tasks alterations for multilingual setup.
+  ConfigureMultilingualForm::tasksAlter($tasks, $install_state);
+
   // The recipe kit doesn't change the title of the batch job that applies all
   // the recipes, so to override it, we use core's custom string overrides.
   // We can't use the passed-in $install_state here, because it isn't passed by
@@ -68,16 +66,6 @@ function dxpr_cms_installer_install_tasks_alter(array &$tasks, array $install_st
   // @see install_profile_modules()
   $settings["locale_custom_strings_$langcode"]['']['Installing @drupal'] = 'Setting up your site';
   new Settings($settings);
-
-  // Make user to be able to set up multiple languages if the recipe is chosen.
-  if (!in_array('drupal/dxpr_cms_multilingual', (array) ($install_state['parameters']['recipes'] ?? []))) {
-    $tasks[ConfigureMultilingualForm::CONFIGURE_MULTILINGUAL_TASK]['run'] = INSTALL_TASK_SKIP;
-  }
-
-  $is_multilingual = $install_state['dxpr_cms_installer']['additional_languages'] ?? FALSE;
-  if (!$is_multilingual) {
-    $tasks[ConfigureMultilingualForm::INSTALL_LANGUAGES_TASK][] = INSTALL_TASK_SKIP;
-  }
 }
 
 /**
