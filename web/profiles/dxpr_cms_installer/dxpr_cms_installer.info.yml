@@ -25,7 +25,7 @@ recipes:
       - drupal/dxpr_cms_events
     'Forms':
       - drupal/dxpr_cms_forms
-    'Analytics':
+    'Google Analytics':
       - drupal/dxpr_cms_google_analytics
     'News':
       - drupal/dxpr_cms_news

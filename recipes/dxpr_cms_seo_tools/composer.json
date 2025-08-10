@@ -17,7 +17,7 @@
         "drupal/token_or": "^2.2"
     },
     "suggest": {
-        "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic."
+        "drupal/dxpr_cms_google_analytics": "Adds tracking of website traffic using Google Analytics and Google Tag Manager."
     },
     "version": "1.0.0-beta1"
 }

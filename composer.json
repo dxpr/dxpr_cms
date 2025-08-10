@@ -17,10 +17,6 @@
             "type": "path",
             "url": "recipes/dxpr_cms_ai_linkedin_posts"
         },
-        "analytics": {
-            "type": "path",
-            "url": "recipes/dxpr_cms_analytics"
-        },
         "anti_spam": {
             "type": "path",
             "url": "recipes/dxpr_cms_anti_spam"
@@ -124,7 +120,6 @@
         "drupal/core-recommended": "^11",
         "drupal/dxpr_cms_ai": "*",
         "drupal/dxpr_cms_ai_linkedin_posts": "*",
-        "drupal/dxpr_cms_analytics": "*",
         "drupal/dxpr_cms_basic_analytics": "*",
         "drupal/dxpr_cms_blog": "*",
         "drupal/dxpr_cms_case_study": "*",
@@ -136,6 +131,7 @@
         "drupal/dxpr_cms_seo_tools": "*",
         "drupal/dxpr_cms_starter": "*",
         "drupal/gin": "5.0.x-dev",
+        "drupal/google_tag": "^2.0",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
         "drupal/views_color_scales": "^1.0@beta",
         "drupal/webform": "@beta",

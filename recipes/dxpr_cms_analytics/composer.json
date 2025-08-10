@@ -1,9 +1,0 @@
-{
-    "name": "drupal/dxpr_cms_analytics",
-    "type": "metapackage",
-    "description": "Adds recipes for tracking website traffic.",
-    "require": {
-        "drupal/dxpr_cms_privacy_basic": "*"
-    },
-    "version": "1.0.0-beta1"
-}
