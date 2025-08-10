@@ -92,7 +92,7 @@ function dxpr_cms_installer_theme_form_installer_recipes_form_alter(array &$form
 
   $form['help'] = [
     '#prefix' => '<p class="cms-installer__subhead">',
-    '#markup' => t('You can select pre-configured types of content now, or add them later.'),
+    '#markup' => t('Select additional features to enable now, or add them later.'),
     '#suffix' => '</p>',
     '#weight' => -100,
   ];
@@ -102,7 +102,7 @@ function dxpr_cms_installer_theme_form_installer_recipes_form_alter(array &$form
   ];
   $form['add_ons']['help'] = [
     '#prefix' => '<p class="cms-installer__info">',
-    '#markup' => t('Don’t see what you’re looking for? You can set up customized content later.'),
+    '#markup' => t('On top of this you get landing pages, a blog, social posts, and extensive AI capabilities.'),
     '#suffix' => '</p>',
     '#weight' => 100,
   ];
