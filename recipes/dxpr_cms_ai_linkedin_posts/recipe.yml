@@ -1,0 +1,27 @@
+name: AI LinkedIn Posts
+type: DXPR CMS
+description: Adds LinkedIn-specific AI social post generation capabilities. Requires the AI Assistant recipe to be installed first.
+install:
+  - ai_social_posts_linkedin
+  - ai_social_posts_linkedin_article
+recipes:
+  - dxpr_cms_ai
+config:
+  import:
+    ai_social_posts_linkedin: '*'
+    ai_social_posts_linkedin_article: '*'
+  actions:
+    # Grant permissions to roles for LinkedIn posting
+    user.role.content_editor:
+      grantPermissions:
+        - 'use ai social posts linkedin'
+        - 'use ai social posts linkedin article'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'use ai social posts linkedin'
+        - 'use ai social posts linkedin article'
+    user.role.site_builder:
+      grantPermissions:
+        - 'use ai social posts linkedin'
+        - 'use ai social posts linkedin article'
+        - 'administer ai social posts linkedin'

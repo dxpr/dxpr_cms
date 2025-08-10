@@ -10,6 +10,7 @@
         "drupal/ai_image_alt_text": "^1",
         "drupal/ai_provider_dxpr": "^1.0.0-alpha1",
         "drupal/ai_checklist": "^1.0",
+        "drupal/ai_social_posts": "^1.0@beta",
         "drupal/dxpr_cms_privacy_basic": "*",
         "drupal/dxpr_cms_roles": "*",
         "drupal/ai_content_strategy": "^1.0@beta",

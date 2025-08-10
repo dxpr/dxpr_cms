@@ -1,0 +1,11 @@
+{
+    "name": "drupal/dxpr_cms_ai_linkedin_posts",
+    "description": "Adds LinkedIn-specific AI social post generation capabilities. Requires the AI Assistant recipe to be installed first.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": ">=10.4",
+        "drupal/dxpr_cms_ai": "*"
+    },
+    "version": "1.0.0-beta1"
+}

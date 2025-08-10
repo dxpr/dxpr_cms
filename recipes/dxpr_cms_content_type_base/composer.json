@@ -5,7 +5,7 @@
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/autosave_form": "^1.10",
-        "drupal/bpmn_io": "^2.0.6",
+        "drupal/bpmn_io": "^3.0.0",
         "drupal/core": ">=10.4",
         "drupal/dxpr_cms_image": "*",
         "drupal/eca": "^2.1.4",
