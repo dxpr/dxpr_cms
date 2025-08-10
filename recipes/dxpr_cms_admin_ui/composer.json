@@ -5,7 +5,6 @@
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/admin_toolbar": "^3.6",
-        "drupal/coffee": "^2",
         "drupal/core": ">=10.3",
         "drupal/dashboard": "^2",
         "drupal/gin": "5.0.x-dev",

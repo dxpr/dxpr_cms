@@ -137,16 +137,6 @@ config:
     node.settings:
       simpleConfigUpdate:
         use_admin_theme: true
-    announcements_feed.settings:
-      simpleConfigUpdate:
-        limit: 2
-    core.menu.static_menu_link_overrides:
-      simpleConfigUpdate:
-        definitions.announcements_feed__announcement:
-          menu_name: admin
-          parent: system.admin
-          weight: 0
-          expanded: false
           enabled: false
     automatic_updates.settings:
       simpleConfigUpdate:
