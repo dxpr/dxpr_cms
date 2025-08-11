@@ -19,4 +19,3 @@ services:
       TARGET_DRUPAL_CORE_VERSION: 11
     volumes:
       - .:/src
-
