@@ -76,7 +76,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -152,7 +152,7 @@ display:
               granularity: 2
               refresh: 60
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -221,7 +221,7 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
-      arguments: {  }
+      arguments: {}
       filters:
         status_extra:
           id: status_extra
@@ -234,7 +234,7 @@ display:
           group: 1
           expose:
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
       filter_groups:
         operator: AND
         groups:
@@ -242,7 +242,7 @@ display:
       style:
         type: table
         options:
-          grouping: {  }
+          grouping: {}
           row_class: ''
           default_row_class: true
           columns:
@@ -336,14 +336,14 @@ display:
         type: fields
       query:
         type: views_query
-      relationships: {  }
+      relationships: {}
       show_admin_links: false
       use_more: true
       use_more_always: true
       use_more_text: 'See all content'
       link_display: custom_url
       link_url: /admin/content
-      display_extenders: {  }
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -353,7 +353,7 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}
   block_recent_content:
     id: block_recent_content
     display_title: Block
@@ -361,7 +361,7 @@ display:
     position: 1
     display_options:
       display_comment: 'Recent content block for the Welcome dashboard'
-      display_extenders: {  }
+      display_extenders: {}
       block_category: Dashboard
     cache_metadata:
       max-age: -1
@@ -372,4 +372,4 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}

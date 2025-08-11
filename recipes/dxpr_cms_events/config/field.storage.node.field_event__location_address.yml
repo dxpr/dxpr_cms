@@ -8,11 +8,11 @@ id: node.field_event__location_address
 field_name: field_event__location_address
 entity_type: node
 type: address
-settings: {  }
+settings: {}
 module: address
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: false
 custom_storage: false

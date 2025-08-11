@@ -25,6 +25,9 @@ class ComponentValidationTest extends BrowserTestBase {
    */
   protected $defaultTheme = 'stark';
 
+  /**
+   *
+   */
   public function test(): void {
     $dir = realpath(__DIR__ . '/../../..');
     // The recipe should apply cleanly.

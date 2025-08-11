@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Theme file for DXPR CMS installer theme.
+ */
+
 declare(strict_types=1);
 
 use Drupal\Core\File\FileUrlGeneratorInterface;

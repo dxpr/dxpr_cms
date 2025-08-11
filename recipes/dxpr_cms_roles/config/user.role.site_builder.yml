@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: { }
+dependencies: {}
 id: site_builder
 label: 'Site Builder'
 weight: -6

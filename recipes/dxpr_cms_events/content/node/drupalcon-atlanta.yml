@@ -54,7 +54,7 @@ default:
     -
       uri: 'https://events.drupal.org/atlanta2025'
       title: 'DrupalCon Atlanta website'
-      options: {  }
+      options: {}
   field_event__location_address:
     -
       langcode: ''

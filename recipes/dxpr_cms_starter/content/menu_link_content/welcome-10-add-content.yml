@@ -18,7 +18,7 @@ default:
     -
       uri: 'internal:/node/add'
       title: ''
-      options: {  }
+      options: {}
   external:
     -
       value: false

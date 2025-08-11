@@ -137,7 +137,6 @@ config:
     node.settings:
       simpleConfigUpdate:
         use_admin_theme: true
-          enabled: false
     automatic_updates.settings:
       simpleConfigUpdate:
         allow_core_minor_updates: true

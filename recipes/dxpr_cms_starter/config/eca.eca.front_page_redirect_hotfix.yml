@@ -40,7 +40,7 @@ conditions:
       operator: equal
       type: value
       entity: node
-gateways: {  }
+gateways: {}
 actions:
   Activity_set_home_path:
     plugin: eca_config_write
@@ -51,4 +51,4 @@ actions:
       save_config: true
       config_name: system.site
       config_key: page.front
-    successors: {  }
+    successors: {}

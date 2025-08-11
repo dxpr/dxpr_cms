@@ -14,10 +14,10 @@ label: 'Location address'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value: {}
 default_value_callback: ''
 settings:
-  available_countries: {  }
+  available_countries: {}
   langcode_override: ''
   field_overrides:
     givenName:
@@ -30,5 +30,5 @@ settings:
       override: hidden
     addressLine3:
       override: hidden
-  fields: {  }
+  fields: {}
 field_type: address

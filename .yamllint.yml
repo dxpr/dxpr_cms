@@ -1,0 +1,32 @@
+extends: default
+
+rules:
+  # Allow longer lines in YAML files (common in Drupal config)
+  line-length: disable
+  # Allow empty values (common in Drupal config)
+  empty-values:
+    forbid-in-block-mappings: false
+    forbid-in-flow-mappings: false
+  # Allow truthy values (common in Drupal config)
+  truthy:
+    allowed-values: ['true', 'false', 'yes', 'no']
+  # Allow comments to be indented more than content
+  comments-indentation: disable
+  # Allow document start marker to be optional
+  document-start: disable
+  # Be more permissive with brackets
+  brackets:
+    max-spaces-inside: 1
+  # Be more permissive with braces
+  braces:
+    max-spaces-inside: 1
+
+ignore: |
+  .github/*
+  web/core/*
+  web/modules/contrib/*
+  web/themes/contrib/*
+  web/sites/*
+  vendor/*
+  node_modules/*
+  */tests/*

@@ -25,6 +25,9 @@ class ComponentValidationTest extends BrowserTestBase {
    */
   protected static $modules = ['block'];
 
+  /**
+   *
+   */
   public function test(): void {
     $dir = realpath(__DIR__ . '/../../..');
 

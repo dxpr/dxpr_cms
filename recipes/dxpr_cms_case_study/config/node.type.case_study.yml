@@ -19,7 +19,7 @@ third_party_settings:
     unpublish_required: false
     unpublish_revision: true
   menu_ui:
-    available_menus: {  }
+    available_menus: {}
     parent: ''
 name: 'Case study'
 type: case_study

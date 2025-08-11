@@ -76,7 +76,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -119,8 +119,8 @@ display:
           perm: 'access content'
       cache:
         type: tag
-        options: {  }
-      empty: {  }
+        options: {}
+      empty: {}
       sorts:
         created:
           id: created
@@ -138,7 +138,7 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
-      arguments: {  }
+      arguments: {}
       filters:
         status:
           id: status
@@ -182,7 +182,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -200,8 +200,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       style:
         type: default
       row:
@@ -213,12 +213,12 @@ display:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_tags: {  }
-      relationships: {  }
+          query_tags: {}
+      relationships: {}
       css_class: text-center
-      header: {  }
-      footer: {  }
-      display_extenders: {  }
+      header: {}
+      footer: {}
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -227,14 +227,14 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}
   page_1:
     id: page_1
     display_title: Page
     display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders: {}
       path: blog
     cache_metadata:
       max-age: -1
@@ -244,4 +244,4 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}

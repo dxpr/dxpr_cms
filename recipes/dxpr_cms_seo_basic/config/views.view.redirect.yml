@@ -73,7 +73,7 @@ display:
           hide_alter_empty: true
           action_title: 'With selection'
           include_exclude: exclude
-          selected_actions: {  }
+          selected_actions: {}
         redirect_source__path:
           id: redirect_source__path
           table: redirect
@@ -127,9 +127,9 @@ display:
           hide_alter_empty: true
           click_sort_column: path
           type: redirect_source
-          settings: {  }
+          settings: {}
           group_column: ''
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -257,7 +257,7 @@ display:
           perm: 'administer redirects'
       cache:
         type: tag
-        options: {  }
+        options: {}
       empty:
         area_text_custom:
           id: area_text_custom
@@ -270,8 +270,8 @@ display:
           empty: true
           content: 'There are no redirects yet.'
           tokenize: false
-      sorts: {  }
-      arguments: {  }
+      sorts: {}
+      arguments: {}
       filters:
         redirect_source__path:
           id: redirect_source__path
@@ -294,7 +294,7 @@ display:
             use_operator: false
             operator: redirect_source__path_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: redirect_source__path
             required: false
             remember: false
@@ -313,8 +313,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         redirect_redirect__uri:
           id: redirect_redirect__uri
           table: redirect
@@ -336,7 +336,7 @@ display:
             use_operator: false
             operator: redirect_redirect__uri_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: redirect_redirect__uri
             required: false
             remember: false
@@ -355,8 +355,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         status_code:
           id: status_code
           table: redirect
@@ -381,7 +381,7 @@ display:
             use_operator: false
             operator: status_code_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: status_code
             required: false
             remember: false
@@ -400,7 +400,7 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
+            default_group_multiple: {}
             group_items:
               1:
                 title: '300 Multiple Choices'
@@ -462,7 +462,7 @@ display:
           entity_field: language
           plugin_id: language
           operator: in
-          value: {  }
+          value: {}
           group: 1
           exposed: true
           expose:
@@ -472,7 +472,7 @@ display:
             use_operator: false
             operator: language_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: language
             required: false
             remember: false
@@ -492,8 +492,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       filter_groups:
         operator: AND
         groups:
@@ -501,7 +501,7 @@ display:
       style:
         type: table
         options:
-          grouping: {  }
+          grouping: {}
           row_class: ''
           default_row_class: true
           columns:
@@ -574,11 +574,11 @@ display:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_tags: {  }
-      relationships: {  }
-      header: {  }
-      footer: {  }
-      display_extenders: {  }
+          query_tags: {}
+      relationships: {}
+      header: {}
+      footer: {}
+      display_extenders: {}
     cache_metadata:
       max-age: 0
       contexts:
@@ -587,7 +587,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags: {}
       cacheable: false
   page_1:
     id: page_1
@@ -595,7 +595,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders: {}
       path: admin/config/search/redirect
     cache_metadata:
       max-age: 0
@@ -605,5 +605,5 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags: {}
       cacheable: false

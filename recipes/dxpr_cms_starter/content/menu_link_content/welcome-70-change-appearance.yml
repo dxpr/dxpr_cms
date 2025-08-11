@@ -18,7 +18,7 @@ default:
     -
       uri: 'internal:/admin/appearance'
       title: ''
-      options: {  }
+      options: {}
   external:
     -
       value: false

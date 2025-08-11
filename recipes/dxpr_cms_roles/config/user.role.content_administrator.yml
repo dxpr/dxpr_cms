@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: { }
+dependencies: {}
 id: content_administrator
 label: 'Content Administrator'
 weight: -5

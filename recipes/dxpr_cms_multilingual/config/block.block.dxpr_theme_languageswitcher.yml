@@ -20,4 +20,4 @@ settings:
   label: 'Language switcher'
   label_display: '0'
   provider: language
-visibility: {  }
+visibility: {}

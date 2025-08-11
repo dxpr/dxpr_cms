@@ -13,7 +13,7 @@ label: 'Featured image'
 description: 'Include an image. This appears as the image in search engine results.'
 required: false
 translatable: false
-default_value: {  }
+default_value: {}
 default_value_callback: ''
 settings:
   handler: 'default:media'

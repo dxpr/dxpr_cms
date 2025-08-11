@@ -63,7 +63,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -107,7 +107,7 @@ display:
           perm: 'access content'
       cache:
         type: tag
-        options: {  }
+        options: {}
       empty:
         area:
           id: area
@@ -154,7 +154,7 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
-      arguments: {  }
+      arguments: {}
       filters:
         type:
           id: type
@@ -178,7 +178,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -196,8 +196,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         langcode:
           id: langcode
           table: node_field_data
@@ -222,7 +222,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -240,8 +240,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         status:
           id: status
           table: node_field_data
@@ -263,7 +263,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -280,8 +280,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       style:
         type: default
       row:
@@ -296,8 +296,8 @@ display:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_tags: {  }
-      relationships: {  }
+          query_tags: {}
+      relationships: {}
       use_ajax: true
       header:
         add_content_by_bundle:
@@ -314,8 +314,8 @@ display:
           class: button
           target: ''
           width: 600
-      footer: {  }
-      display_extenders: {  }
+      footer: {}
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -324,7 +324,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}
   all:
     id: all
     display_title: 'All news'
@@ -332,7 +332,7 @@ display:
     position: 2
     display_options:
       display_description: ''
-      display_extenders: {  }
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -341,7 +341,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}
   latest:
     id: latest
     display_title: 'Latest news'
@@ -391,7 +391,7 @@ display:
             value: '<a href="/news">All news</a>'
             format: dxpr_builder_html
           tokenize: false
-      display_extenders: {  }
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -399,7 +399,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}
   related:
     id: related
     display_title: 'Related news'
@@ -412,7 +412,7 @@ display:
         options:
           offset: 0
           items_per_page: 3
-      empty: {  }
+      empty: {}
       arguments:
         field_tags_target_id:
           id: field_tags_target_id
@@ -450,7 +450,7 @@ display:
           validate:
             type: none
             fail: 'not found'
-          validate_options: {  }
+          validate_options: {}
           break_phrase: false
           not: false
         nid:
@@ -471,7 +471,7 @@ display:
           title_enable: false
           title: ''
           default_argument_type: node
-          default_argument_options: {  }
+          default_argument_options: {}
           summary_options:
             base_path: ''
             count: true
@@ -485,7 +485,7 @@ display:
           validate:
             type: none
             fail: 'not found'
-          validate_options: {  }
+          validate_options: {}
           break_phrase: false
           not: true
       defaults:
@@ -495,8 +495,8 @@ display:
         arguments: false
         header: false
       display_description: ''
-      header: {  }
-      display_extenders: {  }
+      header: {}
+      display_extenders: {}
       block_hide_empty: true
     cache_metadata:
       max-age: -1
@@ -506,4 +506,4 @@ display:
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}

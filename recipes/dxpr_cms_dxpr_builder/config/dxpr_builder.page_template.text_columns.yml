@@ -1,6 +1,6 @@
 langcode: en
 status: false
-dependencies: {  }
+dependencies: {}
 id: text_columns
 label: 'Text Columns'
 category: basic

@@ -14,7 +14,7 @@ label: 'DXPR Main Content Width'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value: {}
 default_value_callback: ''
-settings: {  }
+settings: {}
 field_type: list_string

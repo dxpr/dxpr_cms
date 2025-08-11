@@ -14,7 +14,7 @@ label: 'Client link'
 description: 'Include a link to the client or organization website.'
 required: false
 translatable: false
-default_value: {  }
+default_value: {}
 default_value_callback: ''
 settings:
   title: 1

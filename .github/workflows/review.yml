@@ -1,0 +1,106 @@
+name: Review
+
+on: [pull_request]
+
+env:
+  TARGET_DRUPAL_CORE_VERSION: 11
+
+jobs:
+  drupal-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Lint Drupal
+      run: |
+        docker compose -f docker-compose.lint.yml --profile lint run drupal-lint
+
+  eslint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+
+    - name: Check if DXPR theme exists
+      id: check-theme
+      run: |
+        if [ -d "web/themes/contrib/dxpr_theme" ]; then
+          echo "theme_exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "theme_exists=false" >> $GITHUB_OUTPUT
+          echo "DXPR theme not found, skipping ESLint"
+        fi
+
+    - name: Install dependencies
+      if: steps.check-theme.outputs.theme_exists == 'true'
+      working-directory: web/themes/contrib/dxpr_theme
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        else
+          npm install
+        fi
+
+    - name: Run ESLint
+      if: steps.check-theme.outputs.theme_exists == 'true'
+      working-directory: web
+      run: npx eslint .
+
+  stylelint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+
+    - name: Check if DXPR theme exists
+      id: check-theme
+      run: |
+        if [ -d "web/themes/contrib/dxpr_theme" ]; then
+          echo "theme_exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "theme_exists=false" >> $GITHUB_OUTPUT
+          echo "DXPR theme not found, skipping Stylelint"
+        fi
+
+    - name: Install dependencies
+      if: steps.check-theme.outputs.theme_exists == 'true'
+      working-directory: web/themes/contrib/dxpr_theme
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        else
+          npm install
+        fi
+
+    - name: Run Stylelint
+      if: steps.check-theme.outputs.theme_exists == 'true'
+      working-directory: web/themes/contrib/dxpr_theme
+      run: npm run lint:scss
+
+  yamllint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install yamllint
+      run: pip install yamllint
+
+    - name: Run yamllint
+      run: yamllint --format parsable .

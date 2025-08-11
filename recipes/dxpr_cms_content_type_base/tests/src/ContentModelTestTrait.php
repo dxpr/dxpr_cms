@@ -12,6 +12,9 @@ use Drupal\layout_builder\Entity\LayoutEntityDisplayInterface;
 use Drupal\Tests\BrowserTestBase;
 use PHPUnit\Framework\Assert;
 
+/**
+ *
+ */
 trait ContentModelTestTrait {
 
   /**
@@ -37,7 +40,7 @@ trait ContentModelTestTrait {
    *   The weights of the display's components, keyed by name, and sorted.
    */
   protected function getComponentsInOrder(EntityDisplayInterface $display): array {
-    if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {    $fields = [];
+    if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {
       $components = [];
 
       foreach ($display->getSections() as $index => $section) {
@@ -96,6 +99,9 @@ trait ContentModelTestTrait {
     Assert::assertSame($expected_order, $actual_order);
   }
 
+  /**
+   *
+   */
   protected function assertContentModel(array $content_model): void {
     assert($this instanceof BrowserTestBase);
 

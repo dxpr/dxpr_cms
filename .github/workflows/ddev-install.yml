@@ -35,7 +35,7 @@ jobs:
 
       - name: Install Drupal with DXPR CMS
         run: |
-          ddev drush site:install dxpr_cms_installer dxpr_cms_installer_api_keys_configuration.json_web_token='${{ secrets.DXPR_KEY }}' --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
+          ddev drush site:install dxpr_cms_installer dxpr_cms_installer_keys.dxpr_key='${{ secrets.DXPR_KEY }}' --yes --db-url="mysql://db:db@db:3306/db" --account-name=admin --account-pass=admin
 
       - name: Show site status
         run: |

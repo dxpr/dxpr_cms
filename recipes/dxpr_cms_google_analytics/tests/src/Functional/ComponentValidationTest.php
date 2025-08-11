@@ -8,6 +8,8 @@ use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
 
 /**
+ * Tests validation for Google Analytics recipe components.
+ *
  * @group dxpr_cms_google_analytics
  */
 class ComponentValidationTest extends BrowserTestBase {
@@ -19,6 +21,9 @@ class ComponentValidationTest extends BrowserTestBase {
    */
   protected $defaultTheme = 'stark';
 
+  /**
+   * Test recipe application.
+   */
   public function test(): void {
     $dir = realpath(__DIR__ . '/../../..');
 

@@ -12,7 +12,7 @@ config:
     dxpr_theme_helper: '*'
   actions:
     core.entity_view_display.node.page.default:
-      enableLayoutBuilder: {  }
+      enableLayoutBuilder: {}
       allowLayoutOverrides: true
     user.role.content_editor:
       grantPermissions:

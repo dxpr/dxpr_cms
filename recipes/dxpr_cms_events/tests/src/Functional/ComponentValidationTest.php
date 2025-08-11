@@ -47,6 +47,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertTrue($footer_menu->hasLink('My privacy settings'));
   }
 
+  /**
+   *
+   */
   public function testContentModel(): void {
     /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
     $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
@@ -193,6 +196,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $assert_session->responseNotContains('field_geofield');
   }
 
+  /**
+   *
+   */
   public function testPathAliasPatternPrecedence(): void {
     $dir = realpath(__DIR__ . '/../../../../dxpr_cms_seo_basic');
     $this->applyRecipe($dir);
