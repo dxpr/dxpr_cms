@@ -1,0 +1,69 @@
+name: Review
+
+on: [pull_request]
+
+env:
+  TARGET_DRUPAL_CORE_VERSION: 11
+
+jobs:
+  drupal-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Lint Drupal
+      run: |
+        docker compose -f docker-compose.lint.yml --profile lint run drupal-lint
+
+  drupal-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Check Drupal compatibility
+      run: |
+        docker compose -f docker-compose.lint.yml --profile lint run drupal-check
+
+  eslint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: 'web/themes/contrib/dxpr_theme/package-lock.json'
+
+    - name: Install dependencies
+      working-directory: web/themes/contrib/dxpr_theme
+      run: npm ci
+
+    - name: Run ESLint
+      working-directory: web
+      run: npx eslint .
+
+  stylelint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: 'web/themes/contrib/dxpr_theme/package-lock.json'
+
+    - name: Install dependencies
+      working-directory: web/themes/contrib/dxpr_theme
+      run: npm ci
+
+    - name: Run Stylelint
+      working-directory: web/themes/contrib/dxpr_theme
+      run: npm run lint:scss
