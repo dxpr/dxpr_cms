@@ -17,7 +17,7 @@ rules:
   # Be more permissive with brackets
   brackets:
     max-spaces-inside: 1
-  # Be more permissive with braces  
+  # Be more permissive with braces
   braces:
     max-spaces-inside: 1
 
