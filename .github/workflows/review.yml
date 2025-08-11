@@ -35,13 +35,16 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: 'web/themes/contrib/dxpr_theme/package-lock.json'
+        node-version: '22'
 
     - name: Install dependencies
       working-directory: web/themes/contrib/dxpr_theme
-      run: npm ci
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        else
+          npm install
+        fi
 
     - name: Run ESLint
       working-directory: web
@@ -56,13 +59,16 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: 'web/themes/contrib/dxpr_theme/package-lock.json'
+        node-version: '22'
 
     - name: Install dependencies
       working-directory: web/themes/contrib/dxpr_theme
-      run: npm ci
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        else
+          npm install
+        fi
 
     - name: Run Stylelint
       working-directory: web/themes/contrib/dxpr_theme
