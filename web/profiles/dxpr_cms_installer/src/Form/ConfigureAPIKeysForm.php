@@ -97,7 +97,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'dxpr_cms_installer_api_keys_configuration';
+    return 'dxpr_cms_installer_keys';
   }
 
   /**
@@ -112,7 +112,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       '#suffix' => '</p>',
     ];
 
-    $form['json_web_token'] = [
+    $form['dxpr_key'] = [
       '#type' => 'textarea',
       '#title' => $this->t('DXPR API Key'),
       '#description' => $this->t('Sign up free at <a href="https://dxpr.com/user/free-registration" target="_blank">DXPR.com</a> (takes 30 seconds) and grab your key from the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>. Unlock enterprise-grade AI access included with your free account.'),
@@ -136,7 +136,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $json_web_token = $form_state->getValue('json_web_token');
+    $json_web_token = $form_state->getValue('dxpr_key');
     if (!empty($json_web_token)) {
       // Create a key entity for DXPR Builder.
       try {
@@ -216,21 +216,21 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
    * @phpstan-param array<string, mixed> $form
    */
   public function validateForm(array &$form, FormStateInterface $form_state): void {
-    if ($form_state->getValue('json_web_token')) {
-      $jwtPayloadData = $this->jwtDecoder->decodeJwt($form_state->getValue('json_web_token'));
+    if ($form_state->getValue('dxpr_key')) {
+      $jwtPayloadData = $this->jwtDecoder->decodeJwt($form_state->getValue('dxpr_key'));
       if ($jwtPayloadData['sub'] === NULL || $jwtPayloadData['scope'] === NULL) {
-        $form_state->setErrorByName('json_web_token', $this->t('Invalid DXPR Key. Get your free key at https://dxpr.com/user/free-registration'));
+        $form_state->setErrorByName('dxpr_key', $this->t('Invalid DXPR Key. Get your free key at https://dxpr.com/user/free-registration'));
       }
       elseif ($jwtPayloadData['dxpr_tier'] === NULL) {
-        $form_state->setErrorByName('json_web_token', $this->t('Your product key (JWT) is outdated and not compatible with DXPR Builder version 2.0.0 and up. Please follow instructions <a href=":uri">here</a> to get a new product key.', [
+        $form_state->setErrorByName('dxpr_key', $this->t('Your product key (JWT) is outdated and not compatible with DXPR Builder version 2.0.0 and up. Please follow instructions <a href=":uri">here</a> to get a new product key.', [
           ':uri' => 'https://app.dxpr.com/download/all#token',
         ]));
       }
     }
 
     // DXPR AI requires the DXPR API key (same as Builder key)
-    if (empty($form_state->getValue('json_web_token'))) {
-      $form_state->setErrorByName('json_web_token', $this->t('DXPR API Key is required for AI features. Get yours for free at https://dxpr.com/user/free-registration'));
+    if (empty($form_state->getValue('dxpr_key'))) {
+      $form_state->setErrorByName('dxpr_key', $this->t('DXPR API Key is required for AI features. Get yours for free at https://dxpr.com/user/free-registration'));
     }
   }
 
