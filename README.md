@@ -37,7 +37,8 @@ Follow these steps to install DXPR CMS:
    For automated installation with your DXPR Builder API key:
    ```bash
    ddev drush site-install dxpr_cms_installer \
-     dxpr_cms_installer_api_keys_configuration.json_web_token='YOUR_DXPR_API_KEY' -y
+     dxpr_cms_installer_api_keys_configuration.json_web_token='YOUR_DXPR_API_KEY' \
+     -y
    ```
    Replace `YOUR_DXPR_API_KEY` with your actual DXPR Builder product key from
    [app.dxpr.com/getting-started](https://app.dxpr.com/getting-started).
