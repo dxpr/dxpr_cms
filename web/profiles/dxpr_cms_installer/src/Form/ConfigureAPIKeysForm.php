@@ -108,7 +108,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
 
     $form['help'] = [
       '#prefix' => '<p class="cms-installer__subhead">',
-      '#markup' => $this->t('Enter your DXPR API Key to unlock premium features AND get FREE access to DXPR AI - including models from OpenAI, Claude, Gemini, MistralAI, XAI, and Perplexity at no additional cost.'),
+      '#markup' => $this->t('Enter your DXPR API Key get FREE access to DXPR AI - including models from OpenAI, Claude, Gemini, MistralAI, XAI, and Perplexity at no additional cost.'),
       '#suffix' => '</p>',
     ];
 
