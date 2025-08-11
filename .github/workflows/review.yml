@@ -113,13 +113,4 @@ jobs:
       run: pip install yamllint
 
     - name: Run yamllint
-      run: |
-        yamllint --format parsable \
-          --ignore '*.github/*' \
-          --ignore 'web/core/*' \
-          --ignore 'web/modules/contrib/*' \
-          --ignore 'web/themes/contrib/*' \
-          --ignore 'web/sites/*' \
-          --ignore 'vendor/*' \
-          --ignore 'node_modules/*' \
-          .
+      run: yamllint --format parsable .
