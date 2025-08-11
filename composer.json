@@ -114,7 +114,7 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2",
         "drupal/ace_editor": "2.0.2",
-        "drupal/bpmn_io": "^3.0",
+        "drupal/bpmn_io": "^2.0",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
         "drupal/core-recommended": "^11",
