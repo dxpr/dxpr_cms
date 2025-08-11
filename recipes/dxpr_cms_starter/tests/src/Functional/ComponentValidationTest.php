@@ -57,6 +57,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->rebuildAll();
   }
 
+  /**
+   *
+   */
   public function test(): void {
     $dir = dirname(__DIR__, 3);
 

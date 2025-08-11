@@ -114,7 +114,7 @@ class ConfigureMultilingualForm extends FormBase implements InstallerFormInterfa
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL): array {
+  public function buildForm(array $form, FormStateInterface $form_state, ?array &$install_state = NULL): array {
     // Native language list building code taken from the core installation step.
     $files = count($install_state['translations']) > 1
       ? $install_state['translations']

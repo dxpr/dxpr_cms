@@ -24,10 +24,13 @@ class ContentMetaTagsTest extends BrowserTestBase {
    */
   protected $defaultTheme = 'stark';
 
+  /**
+   *
+   */
   private function generateImage(string $extension): Media {
     $random = $this->getRandomGenerator();
 
-    $uri = uniqid('public://') .  '.' . $extension;
+    $uri = uniqid('public://') . '.' . $extension;
     $uri = $random->image($uri, '100x100', '200x200');
     $this->assertFileExists($uri);
     $file = File::create(['uri' => $uri]);

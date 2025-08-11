@@ -39,6 +39,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->applyRecipe($dir);
   }
 
+  /**
+   *
+   */
   public function testTaxonomyTermView(): void {
     // The `tags` vocabulary should exist.
     $vocabulary = Vocabulary::load('tags');
@@ -62,6 +65,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $assert_session->elementExists('named', ['link', 'Card Me'], $card);
   }
 
+  /**
+   *
+   */
   public function testContentEditorPermissions(): void {
     // Create an unpublished page.
     $node = $this->drupalCreateNode(['type' => 'page']);

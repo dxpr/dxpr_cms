@@ -41,6 +41,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->ensureFileExists('831ca26d-590c-4f34-8545-379e9d77106f');
   }
 
+  /**
+   *
+   */
   public function testContentModel(): void {
     /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
     $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
@@ -142,7 +145,7 @@ class ComponentValidationTest extends BrowserTestBase {
           'translatable' => FALSE,
           'label' => 'Client logo',
           'input type' => 'media library',
-          'help text' => 'Include the logo of the client or organization.'
+          'help text' => 'Include the logo of the client or organization.',
         ],
         'field_case_study__client_link' => [
           'type' => 'link',
@@ -157,6 +160,9 @@ class ComponentValidationTest extends BrowserTestBase {
     ]);
   }
 
+  /**
+   *
+   */
   public function testPathAliasPatternPrecedence(): void {
     $dir = realpath(__DIR__ . '/../../../../dxpr_cms_seo_basic');
     $this->applyRecipe($dir);

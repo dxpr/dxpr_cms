@@ -41,4 +41,3 @@ default:
   parent:
     -
       value: 'menu_link_content:2641bc1d-ab39-4391-8f96-46cd452b430a'
-

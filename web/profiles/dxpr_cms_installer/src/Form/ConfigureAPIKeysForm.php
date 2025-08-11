@@ -52,7 +52,6 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
    */
   protected $jwtDecoder;
 
-
   /**
    * Configure API Keys Form constructor.
    *
@@ -72,7 +71,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
     InfoParserInterface $info_parser,
     TranslationInterface $translator,
     ConfigFactoryInterface $config_factory,
-    DxprBuilderJWTDecoder $jwtDecoder
+    DxprBuilderJWTDecoder $jwtDecoder,
   ) {
     $this->root = $root;
     $this->infoParser = $info_parser;
@@ -104,7 +103,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state, ?array &$install_state = NULL) {
     $form['#title'] = $this->t('API Keys Configuration');
 
     $form['help'] = [
@@ -139,7 +138,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $json_web_token = $form_state->getValue('json_web_token');
     if (!empty($json_web_token)) {
-      // Create a key entity for DXPR Builder
+      // Create a key entity for DXPR Builder.
       try {
         $key = Key::create([
           'id' => 'dxpr_builder_key',
@@ -151,14 +150,14 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
         $key->setKeyValue($json_web_token);
         $key->save();
 
-        // Update DXPR Builder settings to use the key
+        // Update DXPR Builder settings to use the key.
         $this->configFactory->getEditable('dxpr_builder.settings')
           ->set('api_key_storage', 'key')
           ->set('key_provider', 'dxpr_builder_key')
           ->set('json_web_token', NULL)
           ->save();
 
-        // Update CKEditor AI Agent settings to use the same key
+        // Update CKEditor AI Agent settings to use the same key.
         $this->configFactory->getEditable('ckeditor_ai_agent.settings')
           ->set('key_provider', 'dxpr_builder_key')
           ->set('model', 'dxai:kavya-m1')
@@ -169,15 +168,15 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       }
     }
 
-    // Configure DXPR AI provider using the DXPR Builder key
+    // Configure DXPR AI provider using the DXPR Builder key.
     if (!empty($json_web_token)) {
       try {
-        // Configure DXPR AI provider to use the same key
+        // Configure DXPR AI provider to use the same key.
         $this->configFactory->getEditable('ai_provider_dxpr.settings')
           ->set('api_key', 'dxpr_builder_key')
           ->save();
 
-        // Set DXPR as default provider for all AI operations
+        // Set DXPR as default provider for all AI operations.
         $this->configFactory->getEditable('ai.settings')
           ->set('default_providers.chat', [
             'provider_id' => 'dxpr',
@@ -234,6 +233,5 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
       $form_state->setErrorByName('json_web_token', $this->t('DXPR API Key is required for AI features. Get yours for free at https://dxpr.com/user/free-registration'));
     }
   }
-
 
 }

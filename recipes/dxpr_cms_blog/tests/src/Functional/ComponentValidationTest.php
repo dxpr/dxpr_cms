@@ -40,6 +40,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->ensureFileExists('4bb02092-717b-44c8-9147-be3821c244c6');
   }
 
+  /**
+   *
+   */
   public function testContentModel(): void {
     /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
     $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
@@ -123,6 +126,9 @@ class ComponentValidationTest extends BrowserTestBase {
     ]);
   }
 
+  /**
+   *
+   */
   public function testPathAliasPatternPrecedence(): void {
     $dir = realpath(__DIR__ . '/../../../../dxpr_cms_seo_basic');
     $this->applyRecipe($dir);

@@ -12,6 +12,9 @@ use Drupal\layout_builder\Entity\LayoutEntityDisplayInterface;
 use Drupal\Tests\BrowserTestBase;
 use PHPUnit\Framework\Assert;
 
+/**
+ *
+ */
 trait ContentModelTestTrait {
 
   /**
@@ -96,6 +99,9 @@ trait ContentModelTestTrait {
     Assert::assertSame($expected_order, $actual_order);
   }
 
+  /**
+   *
+   */
   protected function assertContentModel(array $content_model): void {
     assert($this instanceof BrowserTestBase);
 

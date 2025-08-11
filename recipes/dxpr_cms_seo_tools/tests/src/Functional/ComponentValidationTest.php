@@ -39,11 +39,17 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->drupalCreateContentType(['type' => 'test'])->id();
   }
 
+  /**
+   *
+   */
   private function applyRecipe(mixed ...$arguments): void {
     $dir = realpath(__DIR__ . '/../../..');
     $this->traitApplyRecipe($dir, ...$arguments);
   }
 
+  /**
+   *
+   */
   public function test(): void {
     // The recipe should apply cleanly.
     $this->applyRecipe();
@@ -66,6 +72,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->checkSitemap();
   }
 
+  /**
+   *
+   */
   public function testAutomaticSitemapSettings(): void {
     $this->applyRecipe();
 
