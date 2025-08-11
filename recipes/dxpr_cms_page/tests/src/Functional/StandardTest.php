@@ -9,7 +9,7 @@ use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
 
 /**
- *
+ * Tests standard functionality for page recipe.
  */
 class StandardTest extends BrowserTestBase {
 
@@ -21,7 +21,7 @@ class StandardTest extends BrowserTestBase {
   protected $profile = 'standard';
 
   /**
-   *
+   * Test compatibility with standard profile.
    */
   public function testCompatibilityWithStandard(): void {
     $dir = realpath(__DIR__ . '/../../..');

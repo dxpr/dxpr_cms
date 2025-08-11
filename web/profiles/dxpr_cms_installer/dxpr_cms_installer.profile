@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Installation profile for DXPR CMS installer.
  */
 
 declare(strict_types=1);

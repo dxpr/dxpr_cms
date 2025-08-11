@@ -11,6 +11,8 @@ use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
 
 /**
+ * Tests command line installation of DXPR CMS installer.
+ *
  * @group dxpr_cms_installer
  * @requires extension pdo_sqlite
  */
@@ -56,7 +58,7 @@ class CommandLineInstallTest extends TestCase {
   }
 
   /**
-   *
+   * Assert the expected state after installation is complete.
    */
   private function assertPostInstallState(): void {
     // Confirm that there's no install profile.
@@ -78,7 +80,7 @@ class CommandLineInstallTest extends TestCase {
   }
 
   /**
-   *
+   * Test Drush site installation.
    */
   public function testDrushSiteInstall(): void {
     $options = [
@@ -92,7 +94,7 @@ class CommandLineInstallTest extends TestCase {
   }
 
   /**
-   *
+   * Test core install command.
    */
   public function testCoreInstallCommand(): void {
     $command = [

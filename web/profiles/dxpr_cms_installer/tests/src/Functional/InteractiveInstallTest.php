@@ -14,6 +14,8 @@ use Drupal\user\Entity\User;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
+ * Tests interactive installation of DXPR CMS installer.
+ *
  * @group dxpr_cms_installer
  */
 class InteractiveInstallTest extends InstallerTestBase {
