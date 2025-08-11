@@ -37,7 +37,7 @@ trait ContentModelTestTrait {
    *   The weights of the display's components, keyed by name, and sorted.
    */
   protected function getComponentsInOrder(EntityDisplayInterface $display): array {
-    if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {    $fields = [];
+    if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {
       $components = [];
 
       foreach ($display->getSections() as $index => $section) {
