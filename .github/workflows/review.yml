@@ -97,3 +97,29 @@ jobs:
       if: steps.check-theme.outputs.theme_exists == 'true'
       working-directory: web/themes/contrib/dxpr_theme
       run: npm run lint:scss
+
+  yamllint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install yamllint
+      run: pip install yamllint
+
+    - name: Run yamllint
+      run: |
+        yamllint --format parsable \
+          --ignore '*.github/*' \
+          --ignore 'web/core/*' \
+          --ignore 'web/modules/contrib/*' \
+          --ignore 'web/themes/contrib/*' \
+          --ignore 'web/sites/*' \
+          --ignore 'vendor/*' \
+          --ignore 'node_modules/*' \
+          .
