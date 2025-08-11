@@ -37,7 +37,18 @@ jobs:
       with:
         node-version: '22'
 
+    - name: Check if DXPR theme exists
+      id: check-theme
+      run: |
+        if [ -d "web/themes/contrib/dxpr_theme" ]; then
+          echo "theme_exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "theme_exists=false" >> $GITHUB_OUTPUT
+          echo "DXPR theme not found, skipping ESLint"
+        fi
+
     - name: Install dependencies
+      if: steps.check-theme.outputs.theme_exists == 'true'
       working-directory: web/themes/contrib/dxpr_theme
       run: |
         if [ -f package-lock.json ]; then
@@ -47,6 +58,7 @@ jobs:
         fi
 
     - name: Run ESLint
+      if: steps.check-theme.outputs.theme_exists == 'true'
       working-directory: web
       run: npx eslint .
 
@@ -61,7 +73,18 @@ jobs:
       with:
         node-version: '22'
 
+    - name: Check if DXPR theme exists
+      id: check-theme
+      run: |
+        if [ -d "web/themes/contrib/dxpr_theme" ]; then
+          echo "theme_exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "theme_exists=false" >> $GITHUB_OUTPUT
+          echo "DXPR theme not found, skipping Stylelint"
+        fi
+
     - name: Install dependencies
+      if: steps.check-theme.outputs.theme_exists == 'true'
       working-directory: web/themes/contrib/dxpr_theme
       run: |
         if [ -f package-lock.json ]; then
@@ -71,5 +94,6 @@ jobs:
         fi
 
     - name: Run Stylelint
+      if: steps.check-theme.outputs.theme_exists == 'true'
       working-directory: web/themes/contrib/dxpr_theme
       run: npm run lint:scss
