@@ -21,4 +21,4 @@ selection_criteria:
       case_study: case_study
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

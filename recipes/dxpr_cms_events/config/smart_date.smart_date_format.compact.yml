@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: compact
 label: Compact
 date_format: 'j M Y'

@@ -21,4 +21,4 @@ selection_criteria:
       landing_page: landing_page
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

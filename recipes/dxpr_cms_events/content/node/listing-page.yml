@@ -54,10 +54,10 @@ default:
               formatter:
                 type: dxpr_builder_text
                 label: hidden
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
             weight: 2
-            additional: {  }
+            additional: {}
           812bdbeb-7e3d-4674-bb9d-12af324347b4:
             uuid: 812bdbeb-7e3d-4674-bb9d-12af324347b4
             region: content
@@ -67,12 +67,12 @@ default:
               label_display: 0
               provider: layout_builder
               formatter:
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
               context_mapping:
                 entity: layout_builder.entity
             weight: 1
-            additional: {  }
+            additional: {}
           21cc27f2-13ef-4836-a084-13efc1dedf64:
             uuid: 21cc27f2-13ef-4836-a084-13efc1dedf64
             region: content
@@ -83,9 +83,9 @@ default:
               provider: views
               views_label: ''
               items_per_page: none
-              context_mapping: {  }
+              context_mapping: {}
             weight: 4
-            additional: {  }
+            additional: {}
           ea7095d7-40c6-4e8a-95ae-bc3fce992e07:
             uuid: ea7095d7-40c6-4e8a-95ae-bc3fce992e07
             region: content
@@ -99,12 +99,12 @@ default:
                 type: entity_reference_label
                 settings:
                   link: 1
-                third_party_settings: {  }
+                third_party_settings: {}
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             weight: 3
-            additional: {  }
+            additional: {}
           88cb7b85-bfbd-4fbf-8016-bdb467fac0c4:
             uuid: 88cb7b85-bfbd-4fbf-8016-bdb467fac0c4
             region: content
@@ -118,10 +118,10 @@ default:
                 type: entity_reference_entity_view
                 settings:
                   view_mode: hero
-                third_party_settings: {  }
+                third_party_settings: {}
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             weight: 0
-            additional: {  }
-        third_party_settings: {  }
+            additional: {}
+        third_party_settings: {}

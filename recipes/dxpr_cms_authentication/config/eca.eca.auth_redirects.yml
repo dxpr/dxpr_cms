@@ -12,13 +12,13 @@ events:
   Event_user_logout:
     plugin: 'user:logout'
     label: 'User logout'
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Action_redirect_to_login
         condition: ''
-conditions: {  }
-gateways: {  }
+conditions: {}
+gateways: {}
 actions:
   Action_redirect_to_login:
     plugin: action_goto_action
@@ -26,4 +26,4 @@ actions:
     configuration:
       replace_tokens: false
       url: /user/login
-    successors: {  }
+    successors: {}

@@ -16,4 +16,4 @@ settings:
   label: 'Status messages'
   label_display: '0'
   provider: system
-visibility: {  }
+visibility: {}

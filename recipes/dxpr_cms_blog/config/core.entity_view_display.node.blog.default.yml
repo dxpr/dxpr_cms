@@ -16,15 +16,15 @@ bundle: blog
 mode: default
 content:
   content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: -20
     region: content
   field_content:
     type: dxpr_builder_text
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 2
     region: content
   field_image:
@@ -35,7 +35,7 @@ content:
       image_style: ''
       image_loading:
         attribute: eager
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 0
     region: content
   field_tags:
@@ -43,7 +43,7 @@ content:
     label: inline
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 1
     region: content
 hidden:

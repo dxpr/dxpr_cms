@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: service_page_short
 label: 'Service page short'
 category: MCMS

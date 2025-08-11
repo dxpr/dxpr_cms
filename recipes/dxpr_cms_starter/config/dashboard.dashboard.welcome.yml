@@ -17,7 +17,7 @@ layout:
     layout_id: layout_twocol_section
     layout_settings:
       label: 'Content and tasks'
-      context_mapping: {  }
+      context_mapping: {}
       column_widths: 67-33
     components:
       cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8:
@@ -28,12 +28,12 @@ layout:
           label: 'Top tasks'
           label_display: visible
           provider: system
-          context_mapping: {  }
+          context_mapping: {}
           level: 1
           depth: 1
           expand_all_items: false
         weight: 0
-        additional: {  }
+        additional: {}
       95005442-e22e-4068-bcac-814fb6c1ccc4:
         uuid: 95005442-e22e-4068-bcac-814fb6c1ccc4
         region: first
@@ -42,10 +42,10 @@ layout:
           label: ''
           label_display: visible
           provider: views
-          context_mapping: {  }
+          context_mapping: {}
           views_label: ''
           items_per_page: none
         weight: 0
-        additional: {  }
-    third_party_settings: {  }
+        additional: {}
+    third_party_settings: {}
 weight: 0

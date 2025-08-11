@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: default
 label: Default
 date_format: 'D, j M Y'

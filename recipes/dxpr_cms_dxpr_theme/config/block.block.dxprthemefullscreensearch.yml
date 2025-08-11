@@ -20,4 +20,4 @@ settings:
   label: 'DXPR Theme Full Screen Search'
   label_display: '0'
   provider: dxpr_theme_helper
-visibility: {  }
+visibility: {}

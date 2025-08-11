@@ -25,7 +25,7 @@ content:
         width: null
         height: null
       svg_render_as_image: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 0
     region: content
 hidden:

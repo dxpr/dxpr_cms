@@ -26,7 +26,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: Header
-          context_mapping: {  }
+          context_mapping: {}
         components:
           4cb33af1-7c90-4eed-8890-5c27d526ba68:
             uuid: 4cb33af1-7c90-4eed-8890-5c27d526ba68
@@ -44,9 +44,9 @@ third_party_settings:
                 label: hidden
                 settings:
                   view_mode: hero
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 3
-            additional: {  }
+            additional: {}
           df925eef-8afb-4f9a-8431-415d5b28e3c1:
             uuid: df925eef-8afb-4f9a-8431-415d5b28e3c1
             region: content
@@ -63,9 +63,9 @@ third_party_settings:
                 label: inline
                 settings:
                   link: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 7
-            additional: {  }
+            additional: {}
           8e28256f-9bba-4d3b-af40-8545a51b398b:
             uuid: 8e28256f-9bba-4d3b-af40-8545a51b398b
             region: content
@@ -75,7 +75,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: 4
-            additional: {  }
+            additional: {}
           739968bb-5952-482a-a215-9a642ef92064:
             uuid: 739968bb-5952-482a-a215-9a642ef92064
             region: content
@@ -87,10 +87,10 @@ third_party_settings:
               formatter:
                 type: dxpr_builder_text
                 label: hidden
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
             weight: 5
-            additional: {  }
+            additional: {}
           60cbfb7f-7ffb-4456-9488-6adc0c101abb:
             uuid: 60cbfb7f-7ffb-4456-9488-6adc0c101abb
             region: content
@@ -111,9 +111,9 @@ third_party_settings:
                   url_plain: false
                   rel: '0'
                   target: _blank
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 6
-            additional: {  }
+            additional: {}
           ac86ac5e-6b08-49e4-8ea7-b32f8be8084e:
             uuid: ac86ac5e-6b08-49e4-8ea7-b32f8be8084e
             region: content
@@ -133,18 +133,18 @@ third_party_settings:
                   image_style: uncropped_300w_webp
                   image_loading:
                     attribute: lazy
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 1
-            additional: {  }
-        third_party_settings: {  }
+            additional: {}
+        third_party_settings: {}
 id: node.case_study.default
 targetEntityType: node
 bundle: case_study
 mode: default
 content:
   content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: -20
     region: content
   field_case_study__client_link:
@@ -156,7 +156,7 @@ content:
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 6
     region: content
   field_case_study__client_logo:
@@ -167,7 +167,7 @@ content:
       image_style: uncropped_500w_webp
       image_loading:
         attribute: lazy
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 5
     region: content
   field_case_study__client_name:
@@ -175,14 +175,14 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 4
     region: content
   field_content:
     type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 3
     region: content
   field_featured_image:
@@ -191,7 +191,7 @@ content:
     settings:
       view_mode: hero
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 1
     region: content
   field_tags:
@@ -199,7 +199,7 @@ content:
     label: hidden
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 2
     region: content
 hidden:

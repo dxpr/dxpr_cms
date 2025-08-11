@@ -23,5 +23,5 @@ default_value:
     min: ''
     max: ''
 default_value_callback: ''
-settings: {  }
+settings: {}
 field_type: smartdate

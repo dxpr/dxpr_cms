@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: colored_icon_boxes
 label: 'Colored icon boxes'
 template: |-

@@ -8,11 +8,11 @@ id: node.field_content
 field_name: field_content
 entity_type: node
 type: text_long
-settings: {  }
+settings: {}
 module: text
 locked: false
 cardinality: 1
 translatable: true
-indexes: {  }
+indexes: {}
 persist_with_no_fields: true
 custom_storage: false

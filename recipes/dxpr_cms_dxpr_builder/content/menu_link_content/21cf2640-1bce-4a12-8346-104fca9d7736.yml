@@ -24,7 +24,7 @@ default:
       title: ''
       options:
         attributes:
-          class: {  }
+          class: {}
   external:
     -
       value: false

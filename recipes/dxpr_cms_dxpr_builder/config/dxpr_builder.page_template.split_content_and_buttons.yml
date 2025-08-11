@@ -1,6 +1,6 @@
 langcode: en
 status: false
-dependencies: {  }
+dependencies: {}
 id: split_content_and_buttons
 label: 'Split Content and Buttons'
 category: basic

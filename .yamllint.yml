@@ -2,8 +2,7 @@ extends: default
 
 rules:
   # Allow longer lines in YAML files (common in Drupal config)
-  line-length:
-    max: 120
+  line-length: disable
   # Allow empty values (common in Drupal config)
   empty-values:
     forbid-in-block-mappings: false

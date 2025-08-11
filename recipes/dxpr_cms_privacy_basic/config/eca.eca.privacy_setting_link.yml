@@ -70,12 +70,12 @@ conditions:
       operator: equal
       type: value
       negate: true
-gateways: {  }
+gateways: {}
 actions:
   Activity_and_1:
     plugin: eca_void_and_condition
     label: AND
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Activity_and_2
@@ -83,7 +83,7 @@ actions:
   Activity_and_2:
     plugin: eca_void_and_condition
     label: AND
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Activity_and_3
@@ -126,4 +126,4 @@ actions:
       trim: false
       save_entity: true
       object: menulink
-    successors: {  }
+    successors: {}

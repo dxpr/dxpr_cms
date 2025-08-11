@@ -1,6 +1,6 @@
 langcode: en
 status: false
-dependencies: {  }
+dependencies: {}
 id: homepage_basic
 label: 'Homepage Basic'
 category: home_pages

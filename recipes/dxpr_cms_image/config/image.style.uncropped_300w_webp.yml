@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 name: uncropped_300w_webp
 label: 'Uncropped | 300w | WebP'
 effects:

@@ -21,7 +21,7 @@ filters:
     provider: filter
     status: false
     weight: 0
-    settings: {  }
+    settings: {}
   filter_url:
     id: filter_url
     provider: filter

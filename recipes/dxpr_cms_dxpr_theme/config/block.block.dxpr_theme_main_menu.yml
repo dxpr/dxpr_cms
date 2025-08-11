@@ -21,4 +21,4 @@ settings:
   level: 1
   depth: 9
   expand_all_items: false
-visibility: {  }
+visibility: {}

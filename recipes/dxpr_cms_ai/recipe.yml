@@ -43,7 +43,7 @@ input:
       '#required': true
       '#maxlength': 2048
       '#attributes':
-        autocomplete: off
+        autocomplete: 'off'
     default:
       source: value
       value: ''
@@ -71,7 +71,7 @@ config:
               authenticated: 0
               content_editor: 0
               administrator: 0
-            plugin_settings: {  }
+            plugin_settings: {}
     ai_provider_dxpr.settings:
       setupAiProvider:
         key_value: ${dxpr_api_key}

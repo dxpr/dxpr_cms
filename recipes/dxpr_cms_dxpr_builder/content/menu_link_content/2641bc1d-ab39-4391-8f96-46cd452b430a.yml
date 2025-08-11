@@ -20,7 +20,7 @@ default:
     -
       uri: 'internal:#'
       title: ''
-      options: {  }
+      options: {}
   external:
     -
       value: false

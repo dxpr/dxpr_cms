@@ -98,7 +98,7 @@ config:
             weight: 17
             region: content
             settings:
-              media_types: {  }
+              media_types: {}
         -
           name: field_seo_title
           options:

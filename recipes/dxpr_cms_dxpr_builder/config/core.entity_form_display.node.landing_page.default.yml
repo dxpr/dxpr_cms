@@ -23,33 +23,33 @@ content:
     settings:
       rows: 9
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   created:
     type: datetime_timestamp
     weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   path:
     type: path
     weight: 7
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 3
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 4
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
     weight: 0
@@ -57,7 +57,7 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   uid:
     type: entity_reference_autocomplete
     weight: 1
@@ -66,25 +66,25 @@ content:
       size: 60
       placeholder: ''
     region: content
-    third_party_settings: {  }
+    third_party_settings: {}
   field_dth_hide_regions:
     type: options_buttons
     weight: 21
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   field_dth_main_content_width:
     type: options_select
     weight: 22
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   field_dth_page_layout:
     type: options_select
     weight: 20
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
 third_party_settings:
   field_group:
     group_content_advanced:
@@ -121,4 +121,4 @@ third_party_settings:
         open: false
         description: ''
         required_fields: false
-hidden: {  }
+hidden: {}

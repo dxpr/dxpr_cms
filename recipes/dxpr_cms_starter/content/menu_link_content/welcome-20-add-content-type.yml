@@ -18,7 +18,7 @@ default:
     -
       uri: 'internal:/admin/structure/types/add'
       title: ''
-      options: {  }
+      options: {}
   external:
     -
       value: false
