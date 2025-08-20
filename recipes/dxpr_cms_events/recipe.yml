@@ -19,6 +19,8 @@ install:
   - leaflet_views
   - menu_link_content
   - smart_date
+  - smart_trim
+  - views_bootstrap
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:

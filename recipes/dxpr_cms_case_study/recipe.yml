@@ -9,6 +9,8 @@ install:
   - add_content_by_bundle
   - dxpr_theme_helper
   - menu_link_content
+  - smart_trim
+  - views_bootstrap
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:

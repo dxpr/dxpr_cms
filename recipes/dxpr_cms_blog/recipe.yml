@@ -12,11 +12,14 @@ install:
   - menu_link_content
   - selective_better_exposed_filters
   - ace_editor
+  - smart_trim
+  - views_bootstrap
 config:
   strict: false
   import:
     system:
       - system.menu.main
+    dxpr_theme_helper: '*'
   actions:
     user.role.content_editor:
       grantPermissions:

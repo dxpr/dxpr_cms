@@ -12,6 +12,7 @@ recipes:
 install:
   - autosave_form
   - bpmn_io
+  - block_classes
   - checklistapi
   - ckeditor5
   - content_moderation
@@ -19,7 +20,10 @@ install:
   - eca_misc
   - eca_render
   - filter
+  - gin_lb
   - layout_builder
+  - layout_builder_component_attributes
+  - layout_disable
   - linkit
   - node
   - file
@@ -55,6 +59,7 @@ config:
     filter: '*'
     linkit:
       - image.style.linkit_result_thumbnail
+    layout_disable: '*'
     node:
       # Only import config which is also imported by the Standard profile.
       - core.entity_view_mode.node.full

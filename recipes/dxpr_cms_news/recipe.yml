@@ -9,6 +9,8 @@ install:
   - dxpr_theme_helper
   - menu_link_content
   - selective_better_exposed_filters
+  - smart_trim
+  - views_bootstrap
 config:
   strict: false
   import:

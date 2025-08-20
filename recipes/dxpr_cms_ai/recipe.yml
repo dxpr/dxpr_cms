@@ -18,7 +18,9 @@ install:
   - analyze_ai_content_security_audit
   - analyze_basic_content_info
   - analyze_page_views
+  - ai_sorting
   - analyze
+  - rl
   - ckeditor_ai_agent
   - menu_link_content
   - markdownify
