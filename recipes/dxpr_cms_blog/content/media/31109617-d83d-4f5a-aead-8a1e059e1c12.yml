@@ -19,7 +19,15 @@ default:
   created:
     -
       value: 1755247749
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
   field_media_image:
     -
       entity: ecfbe889-8863-4286-a703-e76cc3c8378f
-      alt: 'Media image'
+      alt: 'Abstract art with swirling orange and blue shapes, resembling a face in profile.'
+      title: ''
+      width: 1536
+      height: 1024

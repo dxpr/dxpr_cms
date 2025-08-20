@@ -19,7 +19,15 @@ default:
   created:
     -
       value: 1755102211
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
   field_media_image:
     -
       entity: 67d15b16-c6e5-4ee8-ba13-515dfbf2bb01
-      alt: 'Media image'
+      alt: 'Blurred gradient with pastel orange and blue hues.'
+      title: ''
+      width: 1536
+      height: 1024

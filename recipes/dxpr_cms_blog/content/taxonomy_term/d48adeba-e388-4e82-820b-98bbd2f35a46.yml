@@ -17,3 +17,8 @@ default:
   parent:
     -
       target_id: 0
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

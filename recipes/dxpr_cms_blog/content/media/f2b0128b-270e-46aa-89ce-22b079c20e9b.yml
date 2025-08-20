@@ -19,7 +19,15 @@ default:
   created:
     -
       value: 1755102189
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
   field_media_image:
     -
       entity: c14dfa0c-db4e-49df-8fd2-b488360b07e5
-      alt: 'Blog image'
+      alt: 'Blue and green abstract gradient background with soft diagonal streaks.'
+      title: ''
+      width: 1536
+      height: 1024
