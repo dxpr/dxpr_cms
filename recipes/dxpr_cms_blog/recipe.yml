@@ -7,6 +7,7 @@ recipes:
   - core/recipes/basic_html_format_editor
   - core/recipes/content_editor_role
 install:
+  - block_content
   - add_content_by_bundle
   - dxpr_theme_helper
   - menu_link_content
