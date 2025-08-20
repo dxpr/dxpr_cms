@@ -1,3 +1,4 @@
+uuid: 6a2f84cf-b7f0-4a9c-89ba-cf895bc467fc
 langcode: en
 status: true
 dependencies:
@@ -30,7 +31,7 @@ third_party_settings:
         layout_settings:
           label: Hero
           context_mapping: {  }
-          section_classes: 'container bg-primary py-5'
+          section_classes: 'container bg-primary-subtle py-5'
           container_type: container
           first_column_width: '6'
           second_column_width: '6'
@@ -40,6 +41,7 @@ third_party_settings:
           second_column_classes: ''
         components:
           753f5544-318a-42c7-9b8d-78af2230b64b:
+            uuid: 753f5544-318a-42c7-9b8d-78af2230b64b
             region: first
             configuration:
               id: 'field_block:node:blog:field_featured_image'
@@ -58,6 +60,7 @@ third_party_settings:
             weight: 2
             additional: {  }
           cf849105-7068-4f71-9711-36fd35ae569c:
+            uuid: cf849105-7068-4f71-9711-36fd35ae569c
             region: second
             configuration:
               id: 'field_block:node:blog:uid'
@@ -75,6 +78,7 @@ third_party_settings:
             weight: -2
             additional: {  }
           e4018806-25b9-490d-a693-be75464bac28:
+            uuid: e4018806-25b9-490d-a693-be75464bac28
             region: second
             configuration:
               id: 'field_block:node:blog:created'
@@ -105,6 +109,7 @@ third_party_settings:
             weight: -1
             additional: {  }
           ee69c788-6997-4747-ba03-8a068720ac2e:
+            uuid: ee69c788-6997-4747-ba03-8a068720ac2e
             region: second
             configuration:
               id: 'field_block:node:blog:field_tags'
@@ -120,6 +125,7 @@ third_party_settings:
             weight: 0
             additional: {  }
           1aeac669-8bf2-4a6b-8dc8-c5a63f50560c:
+            uuid: 1aeac669-8bf2-4a6b-8dc8-c5a63f50560c
             region: left
             configuration:
               id: 'field_block:node:blog:field_featured_image'
@@ -138,6 +144,7 @@ third_party_settings:
             weight: 0
             additional: {  }
           4a7e8973-9fd6-423f-97d5-ee62a33f7d72:
+            uuid: 4a7e8973-9fd6-423f-97d5-ee62a33f7d72
             region: right
             configuration:
               id: 'field_block:node:blog:uid'
@@ -156,6 +163,7 @@ third_party_settings:
             weight: 0
             additional: {  }
           75b61643-5c9a-466a-b6a7-ac3a101c3f59:
+            uuid: 75b61643-5c9a-466a-b6a7-ac3a101c3f59
             region: right
             configuration:
               id: 'field_block:node:blog:created'
@@ -186,6 +194,7 @@ third_party_settings:
             weight: 1
             additional: {  }
           d967c54a-e783-4fa4-b0d6-dd8256b8210b:
+            uuid: d967c54a-e783-4fa4-b0d6-dd8256b8210b
             region: right
             configuration:
               id: 'field_block:node:blog:field_tags'
@@ -228,6 +237,7 @@ third_party_settings:
           section_classes: ''
         components:
           d6bb9e2e-1242-430a-affd-7f899d2da459:
+            uuid: d6bb9e2e-1242-430a-affd-7f899d2da459
             region: content
             configuration:
               id: 'field_block:node:blog:field_content'
@@ -243,6 +253,7 @@ third_party_settings:
             weight: 1
             additional: {  }
           2704fc93-5c16-471a-80a4-14f5bc50ee91:
+            uuid: 2704fc93-5c16-471a-80a4-14f5bc50ee91
             region: content
             configuration:
               id: 'views_block:blog-related'
@@ -292,6 +303,7 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+_core:
   default_config_hash: tgijcYp3uCPSTLOLLh46mPiveOTQGmw3_ke_cSnaXB4
 id: node.blog.default
 targetEntityType: node
