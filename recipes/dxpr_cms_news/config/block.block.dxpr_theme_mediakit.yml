@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:drag_and_drop_block:f1dcbf37-f7fd-490b-a5ee-0ace9d5851bc'
+    - 'block_content:drag_and_drop_block:650c62eb-2eb9-424b-95d7-aa3489fc94d5'
   module:
     - block_content
     - system
   theme:
     - dxpr_theme
-id: dxpr_theme_newsroom
+id: dxpr_theme_mediakit
 theme: dxpr_theme
-region: highlighted
-weight: -7
+region: content_bottom
+weight: 0
 provider: null
-plugin: 'block_content:f1dcbf37-f7fd-490b-a5ee-0ace9d5851bc'
+plugin: 'block_content:650c62eb-2eb9-424b-95d7-aa3489fc94d5'
 settings:
-  id: 'block_content:f1dcbf37-f7fd-490b-a5ee-0ace9d5851bc'
-  label: Newsroom
+  id: 'block_content:650c62eb-2eb9-424b-95d7-aa3489fc94d5'
+  label: 'Media Kit'
   label_display: '0'
   provider: block_content
   status: true
