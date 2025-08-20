@@ -14,7 +14,7 @@ label: 'Welcome to your site'
 description: 'Presented to users when they complete the DXPR CMS install process.'
 layout:
   -
-    layout_id: layout_twocol_section
+    layout_id: dxpr_two_column
     layout_settings:
       label: 'Content and tasks'
       context_mapping: {}

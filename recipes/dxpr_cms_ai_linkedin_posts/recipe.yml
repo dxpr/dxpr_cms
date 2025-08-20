@@ -11,17 +11,23 @@ config:
     ai_social_posts_linkedin: '*'
     ai_social_posts_linkedin_article: '*'
   actions:
-    # Grant permissions to roles for LinkedIn posting
+    # Grant permissions to roles for AI Social Posts
     user.role.content_editor:
       grantPermissions:
-        - 'use ai social posts linkedin'
-        - 'use ai social posts linkedin article'
+        - 'add ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'view ai_social_post entity'
     user.role.content_administrator:
       grantPermissions:
-        - 'use ai social posts linkedin'
-        - 'use ai social posts linkedin article'
+        - 'add ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'delete ai_social_post entity'
     user.role.site_builder:
       grantPermissions:
-        - 'use ai social posts linkedin'
-        - 'use ai social posts linkedin article'
-        - 'administer ai social posts linkedin'
+        - 'add ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'delete ai_social_post entity'
+        - 'administer ai_social_post entity'
+        - 'administer ai_social_post types'

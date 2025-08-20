@@ -5,7 +5,6 @@ _meta:
   bundle: blog
   default_langcode: en
   depends:
-    c66f67f2-5d13-4889-9233-c00f372a4910: user
     351c7ad9-04b2-4937-bb11-fbd33f9a23f4: media
     d48adeba-e388-4e82-820b-98bbd2f35a46: taxonomy_term
 default:
@@ -20,7 +19,7 @@ default:
       value: true
   uid:
     -
-      entity: c66f67f2-5d13-4889-9233-c00f372a4910
+      target_id: 1
   title:
     -
       value: 'Building a blog on your website'
@@ -33,122 +32,3 @@ default:
   sticky:
     -
       value: true
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'Building a blog on your website | DXPR CMS'
-    -
-      tag: link
-      attributes:
-        rel: shortlink
-        href: 'https://dxpr-cms.ddev.site:8443/'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'https://dxpr-cms.ddev.site:8443/home'
-    -
-      tag: link
-      attributes:
-        rel: image_src
-        href: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2025-08/blog-4.png.webp?itok=6PlVwkUe'
-    -
-      tag: meta
-      attributes:
-        name: rights
-        content: 'Copyright ©2025 All rights reserved.'
-    -
-      tag: meta
-      attributes:
-        name: referrer
-        content: unsafe-url
-    -
-      tag: meta
-      attributes:
-        property: 'og:site_name'
-        content: 'DXPR CMS'
-    -
-      tag: meta
-      attributes:
-        property: 'og:type'
-        content: article
-    -
-      tag: meta
-      attributes:
-        property: 'og:url'
-        content: 'https://dxpr-cms.ddev.site:8443/home'
-    -
-      tag: meta
-      attributes:
-        property: 'og:title'
-        content: 'Building a blog on your website'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image'
-        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2025-08/blog-4.png.webp?itok=6PlVwkUe'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:type'
-        content: image/webp
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:width'
-        content: '1200'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:height'
-        content: '630'
-    -
-      tag: meta
-      attributes:
-        property: 'og:updated_time'
-        content: '2025-08-15T14:27:02+02:00'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:alt'
-        content: 'Purple and lavender abstract texture with soft brush strokes.'
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:card'
-        content: summary_large_image
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:title'
-        content: 'Building a blog on your website'
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:image'
-        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_x/public/2025-08/blog-4.png.webp?itok=uQU3zGKm'
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:image:alt'
-        content: 'Purple and lavender abstract texture with soft brush strokes.'
-  path:
-    -
-      alias: /blog/2024-08/building-blog-your-website
-      langcode: en
-      pathauto: 1
-  field_content:
-    -
-      value: '<div class="az-element az-section mt-5" data-azat-el_class=mt-5 data-azb=az_section id=Eoah25><div class="az-ctnr container" data-azcnt=true><div class="az-element az-text ck-content" data-azb=az_text id=Xd8owo><h1 class=mb-4>Starting Your Own Blog: A Complete Guide</h1><p>Creating a blog requires careful planning, the right tools, and a strong platform. This guide will walk you through the steps to create a dynamic and engaging blog using a content management system (CMS).</p><h2 class=mb-3>Why Choose a Content Management System (CMS)?</h2><p>A good CMS offers a powerful content management system with integrated technologies for efficient content creation. It provides a platform with multilingual support, SEO features, and advanced analytics.</p></div><div class="az-element az-text ck-content" data-azb=az_text id=Gm8fum><h2 class=mb-3>Getting Started</h2><ol><li><strong>Get access to the CMS:</strong> Start by signing up for an account on the CMS''s website. This gives you access to its features.</li><li><strong>Install a local development tool:</strong> Set up an open-source tool for local development environments, which simplifies setting up and managing your site.</li><li><strong>Download the CMS software:</strong> Use a version control system to obtain the CMS software from the appropriate repository.</li><li><strong>Set up the environment:</strong> Configure your development environment for CMS development.</li><li><strong>Finish the installation:</strong> Complete the installation via a setup wizard or a command-line method using an API key if needed. Each method provides straightforward steps to get your site running quickly.</li></ol><h2 class=mb-3>Using CMS Features</h2><p>The CMS comes with features that enhance content creation and ensure it remains engaging and relevant. It offers SEO tools and integrated analytics to provide insights into content performance and optimization.</p></div><div class="az-element az-text ck-content" data-azb=az_text id=e78t70><div class=ckeditor-inline id=cke5-e78t70><h2 class=mb-3>Design and Personalize Your Blog</h2><p>Use the CMS to customize your blog''s appearance. Adjust branding, colors, and typography to maintain a consistent and professional look on all devices.</p><h2 class=mb-3>Advanced SEO and Analytics</h2><p>The CMS comes with SEO tools like automated sitemap generation and real-time SEO analysis to optimize your content for search engines. Analytics tools provide detailed insights to fine-tune your content strategy.</p><h2 class=mb-3>Conclusion</h2><p>Building a blog with a CMS simplifies the process and enhances the content experience through its features. With easy setup, integrated technologies, and effective SEO strategies, creating a successful blog becomes seamless and efficient.</p></div></div></div></div>'
-      format: dxpr_builder_html
-  field_featured_image:
-    -
-      entity: 351c7ad9-04b2-4937-bb11-fbd33f9a23f4
-  field_tags:
-    -
-      entity: d48adeba-e388-4e82-820b-98bbd2f35a46

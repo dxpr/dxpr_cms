@@ -5,7 +5,6 @@ _meta:
   bundle: blog
   default_langcode: en
   depends:
-    c66f67f2-5d13-4889-9233-c00f372a4910: user
     f2b0128b-270e-46aa-89ce-22b079c20e9b: media
     d48adeba-e388-4e82-820b-98bbd2f35a46: taxonomy_term
 default:
@@ -17,7 +16,7 @@ default:
       value: true
   uid:
     -
-      entity: c66f67f2-5d13-4889-9233-c00f372a4910
+      target_id: 1
   title:
     -
       value: 'The basics of website accessibility'
@@ -30,122 +29,3 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
-  metatag:
-    -
-      tag: meta
-      attributes:
-        name: title
-        content: 'The basics of website accessibility | DXPR CMS'
-    -
-      tag: link
-      attributes:
-        rel: shortlink
-        href: 'https://dxpr-cms.ddev.site:8443/'
-    -
-      tag: link
-      attributes:
-        rel: canonical
-        href: 'https://dxpr-cms.ddev.site:8443/home'
-    -
-      tag: link
-      attributes:
-        rel: image_src
-        href: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2025-08/blog-2.png.webp?itok=-cu360ep'
-    -
-      tag: meta
-      attributes:
-        name: rights
-        content: 'Copyright ©2025 All rights reserved.'
-    -
-      tag: meta
-      attributes:
-        name: referrer
-        content: unsafe-url
-    -
-      tag: meta
-      attributes:
-        property: 'og:site_name'
-        content: 'DXPR CMS'
-    -
-      tag: meta
-      attributes:
-        property: 'og:type'
-        content: article
-    -
-      tag: meta
-      attributes:
-        property: 'og:url'
-        content: 'https://dxpr-cms.ddev.site:8443/home'
-    -
-      tag: meta
-      attributes:
-        property: 'og:title'
-        content: 'The basics of website accessibility'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image'
-        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2025-08/blog-2.png.webp?itok=-cu360ep'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:type'
-        content: image/webp
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:width'
-        content: '1200'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:height'
-        content: '630'
-    -
-      tag: meta
-      attributes:
-        property: 'og:updated_time'
-        content: '2025-08-15T14:29:41+02:00'
-    -
-      tag: meta
-      attributes:
-        property: 'og:image:alt'
-        content: 'Blue and green abstract gradient background with soft diagonal streaks.'
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:card'
-        content: summary_large_image
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:title'
-        content: 'The basics of website accessibility'
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:image'
-        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_x/public/2025-08/blog-2.png.webp?itok=RJSei03J'
-    -
-      tag: meta
-      attributes:
-        name: 'twitter:image:alt'
-        content: 'Blue and green abstract gradient background with soft diagonal streaks.'
-  path:
-    -
-      alias: /blog/2023-04/basics-website-accessibility
-      langcode: en
-      pathauto: 1
-  field_content:
-    -
-      value: '<div class="az-element az-section my-5" data-azat-el_class=my-5 data-azb=az_section id=Aw4c4a><div class="az-ctnr container" data-azcnt=true><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=ea1p4l><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=t6dyti><div class="az-element az-text ck-content" data-azb=az_text id=Komsf7 style=position:relative><p>In today''s digital age, website accessibility is crucial for ensuring that all users, including those with disabilities, can effectively access and navigate web content. This is both a moral imperative and a business necessity. Understanding and implementing website accessibility fosters inclusion, compliance with legal standards, and enhancements in business operations.</p></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=c64vua><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=I0pufo><div class="az-element az-image img-fluid overflow-hidden" data-azat-alt="A diverse group of people using various devices with ease, representing accessibility." data-azat-el_class="img-fluid overflow-hidden" data-azat-image="https://promptahuman.com/600x400@2x?bg_color=007bff&text_color=ffffff&title=image1.jpg&prompt=People%20of%20diverse%20abilities%20using%20devices%20with%20ease." data-azat-height data-azat-width data-azb=az_image id=c39lls><img alt="A diverse group of people using various devices with ease, representing accessibility." src="https://promptahuman.com/600x400@2x?bg_color=007bff&text_color=ffffff&title=image1.jpg&prompt=People%20of%20diverse%20abilities%20using%20devices%20with%20ease." class=az-image-content></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Rx7y0u><div class="az-element az-text ck-content" data-azb=az_text id=Fh1l6f><h3>Understanding the Core Principles</h3><p>The foundation of creating accessible websites lies in four main principles: perceivable, operable, understandable, and robust (POUR). These guidelines, established in the Web Content Accessibility Guidelines (WCAG), ensure that digital content is usable by everyone.</p><h4 class=mt-4>Perceivable</h4><p>All information must be presented in such a way that it is perceivable by all users, regardless of their sensory abilities. This includes providing alternative text for images, captions for video content, and ensuring adequate color contrast between text and backgrounds.</p></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=Fmmq2x><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=jt5b7d><div class="az-element az-text ck-content" data-azb=az_text id=si9lf5><h4>Operable</h4><p>An accessible website allows users to navigate and interact with all interface elements, regardless of their means of control. This involves ensuring that all functions can be performed using a keyboard and that navigation does not rely solely on mouse input.</p><h4>Understandable</h4><p>The content and user operations on a site must be easy to understand. This means using clear and concise language, maintaining consistent layouts across pages, and providing helpful instructions and feedback for any errors encountered by the user.</p></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Z8ayry><div class="az-element az-image img-fluid overflow-hidden" data-azat-alt="A user accessing a website using a keyboard, illustrating operable design." data-azat-el_class="img-fluid overflow-hidden" data-azat-image="https://promptahuman.com/600x400@2x?bg_color=222222&text_color=ffffff&title=image2.jpg&prompt=Web%20navigation%20with%20clear%20instructions%20and%20keyboard%20access." data-azat-height data-azat-width data-azb=az_image id=Rr0xk1><img alt="A user accessing a website using a keyboard, illustrating operable design." src="https://promptahuman.com/600x400@2x?bg_color=222222&text_color=ffffff&title=image2.jpg&prompt=Web%20navigation%20with%20clear%20instructions%20and%20keyboard%20access." class=az-image-content></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=h5lgge><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=hmlhre><div class="az-element az-image img-fluid overflow-hidden" data-azat-alt="Various devices and technologies demonstrating robust design." data-azat-el_class="img-fluid overflow-hidden" data-azat-image="https://promptahuman.com/600x400@2x?bg_color=333333&text_color=ffffff&title=image3.jpg&prompt=Diverse%20devices%20and%20technologies%20illustrating%20robust%20design." data-azat-height data-azat-width data-azb=az_image id=Erjrh6><img alt="Various devices and technologies demonstrating robust design." src="https://promptahuman.com/600x400@2x?bg_color=333333&text_color=ffffff&title=image3.jpg&prompt=Diverse%20devices%20and%20technologies%20illustrating%20robust%20design." class=az-image-content></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Vjiwq4><div class="az-element az-text ck-content" data-azb=az_text id=v5abyu><div class=ckeditor-inline id=cke5-v5abyu><h4>Robust</h4><p>A robust website remains functional across a wide range of devices, technologies, and future advancements. This necessitates clean, standardized code and proper markup to ensure compatibility with various browsers and assistive technologies.</p><h3 class=mt-4>The Benefits of Accessibility</h3><p>Beyond meeting legal obligations such as the ADA and WCAG guidelines, accessible websites reach broader audiences, including an aging population and non-native speakers. These practices also enhance SEO, performance, and brand reputation.</p></div></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=Nkihm2><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=zil8i1><div class="az-element az-text ck-content" data-azb=az_text id=C0a3s2><div class=ckeditor-inline id=cke5-C0a3s2><h3>Conclusion</h3><p>Website accessibility is not a one-time adjustment but a continuous process requiring vigilance and commitment. As technology and user needs evolve, maintaining accessible digital properties ensures that inclusivity and usability remain at the forefront of web design.</p></div></div></div></div></div></div>'
-      format: dxpr_builder_html
-  field_featured_image:
-    -
-      entity: f2b0128b-270e-46aa-89ce-22b079c20e9b
-  field_tags:
-    -
-      entity: d48adeba-e388-4e82-820b-98bbd2f35a46

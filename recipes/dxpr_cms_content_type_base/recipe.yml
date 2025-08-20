@@ -16,6 +16,7 @@ install:
   - checklistapi
   - ckeditor5
   - content_moderation
+  - dxpr_cms_layouts
   - eca_content
   - eca_misc
   - eca_render
@@ -60,6 +61,7 @@ config:
     linkit:
       - image.style.linkit_result_thumbnail
     layout_disable: '*'
+    dxpr_cms_layouts: '*'
     node:
       # Only import config which is also imported by the Standard profile.
       - core.entity_view_mode.node.full
