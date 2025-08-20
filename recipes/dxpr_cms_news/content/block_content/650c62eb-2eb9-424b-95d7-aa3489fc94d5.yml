@@ -1,0 +1,71 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 650c62eb-2eb9-424b-95d7-aa3489fc94d5
+  bundle: drag_and_drop_block
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Saved with DXPR builder'
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Media Kit'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| DXPR CMS'
+    -
+      tag: link
+      attributes:
+        rel: shortlink
+        href: 'https://dxpr-cms.ddev.site:8443/node/6'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        name: rights
+        content: 'Copyright ©2025 All rights reserved.'
+    -
+      tag: meta
+      attributes:
+        name: referrer
+        content: unsafe-url
+    -
+      tag: meta
+      attributes:
+        property: 'og:site_name'
+        content: 'DXPR CMS'
+    -
+      tag: meta
+      attributes:
+        property: 'og:url'
+        content: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:card'
+        content: summary
+  body:
+    -
+      value: '<div class="az-element az-section my-5 py-3 bg-primary" data-azat-el_class="my-5 py-3 bg-primary" data-azb=az_section id=Xzhwo2><div class="az-ctnr container" data-azcnt=true><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=eq20yd><div class="az-element az-ctnr az-column col-md-3" data-azat-width=1/4 data-azb=az_column data-azcnt=true id=xnuput></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=" 1/2 " data-azb=az_column data-azcnt=true id=rhcf3n><div class="az-element az-text ck-content" data-azb=az_text id=C5lgx0><h2 class=mb-4>Download Our Media Kit</h2><p class="mb-4 lead">Get all the resources you need to explore our brand and its creative assets. Our specially curated media kit provides everything from logos to recent press releases.</p></div><div class="az-element az-button text-center" data-azat-title="Download Media Kit" data-azat-bm=,,,20,,,,,,,,,, data-azat-el_class=text-center data-azat-size=btn-lg data-azat-type=secondary data-azb=az_button id=te8kaq><button class="az-button-content btn btn-lg btn-secondary" style=margin-right:20px type=button><p>Download Media Kit</p></button></div></div><div class="az-element az-ctnr az-column col-md-3" data-azat-width=" 1/4" data-azb=az_column data-azcnt=true id=Uwpp6u></div></div></div></div>'
+      format: ''
+      summary: ''

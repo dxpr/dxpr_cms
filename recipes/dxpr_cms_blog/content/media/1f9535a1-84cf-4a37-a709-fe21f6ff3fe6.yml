@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
-  entity_type: taxonomy_term
-  uuid: d48adeba-e388-4e82-820b-98bbd2f35a46
-  bundle: tags
+  entity_type: media
+  uuid: 1f9535a1-84cf-4a37-a709-fe21f6ff3fe6
+  bundle: image
   default_langcode: en
+  depends:
+    4a986ed7-2747-4da0-a480-485badcd77d2: file
 default:
   status:
     -
       value: true
+  uid:
+    -
+      target_id: 1
   name:
     -
-      value: Drupal
-  weight:
+      value: blog-1.png
+  created:
     -
-      value: 0
-  parent:
-    -
-      target_id: 0
+      value: 1755102071
   revision_translation_affected:
     -
       value: true
@@ -65,4 +67,11 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 4a986ed7-2747-4da0-a480-485badcd77d2
+      alt: 'Gradient of blue and yellow brushstrokes creating a blurred texture.'
+      title: ''
+      width: 1536
+      height: 1024

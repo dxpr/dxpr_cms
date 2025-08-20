@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
-  entity_type: taxonomy_term
-  uuid: d48adeba-e388-4e82-820b-98bbd2f35a46
-  bundle: tags
+  entity_type: media
+  uuid: 4cd96ac7-9e39-4350-a2b4-cbcf93d5100c
+  bundle: image
   default_langcode: en
+  depends:
+    7c708dd7-8216-46e5-b6c3-1ef576f07105: file
 default:
   status:
     -
       value: true
+  uid:
+    -
+      target_id: 1
   name:
     -
-      value: Drupal
-  weight:
+      value: logoipsum-334.png
+  created:
     -
-      value: 0
-  parent:
-    -
-      target_id: 0
+      value: 1755261852
   revision_translation_affected:
     -
       value: true
@@ -65,4 +67,11 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 7c708dd7-8216-46e5-b6c3-1ef576f07105
+      alt: 'Logo with the text "LOGOIPSUM" in stylized dark blue font.'
+      title: ''
+      width: 400
+      height: 69

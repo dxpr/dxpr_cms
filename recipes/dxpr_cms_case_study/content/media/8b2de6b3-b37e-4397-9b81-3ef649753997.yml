@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
-  entity_type: taxonomy_term
-  uuid: d48adeba-e388-4e82-820b-98bbd2f35a46
-  bundle: tags
+  entity_type: media
+  uuid: 8b2de6b3-b37e-4397-9b81-3ef649753997
+  bundle: image
   default_langcode: en
+  depends:
+    81b1c707-1b11-4322-bc9b-8d92dc172948: file
 default:
   status:
     -
       value: true
+  uid:
+    -
+      target_id: 1
   name:
     -
-      value: Drupal
-  weight:
+      value: logoipsum-238.png
+  created:
     -
-      value: 0
-  parent:
-    -
-      target_id: 0
+      value: 1755261904
   revision_translation_affected:
     -
       value: true
@@ -65,4 +67,11 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 81b1c707-1b11-4322-bc9b-8d92dc172948
+      alt: 'Green logo with a chat bubble and text "logolpsum".'
+      title: ''
+      width: 400
+      height: 109

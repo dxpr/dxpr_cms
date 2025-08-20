@@ -87,11 +87,18 @@ config:
         - 'generate ai alt tags'
         - 'access ai content strategy'
         - 'view analyze reports'
+        - 'add ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'edit ai_social_post entity'
     user.role.content_administrator:
       grantPermissions:
         - 'access ai content strategy'
         - 'view analyze reports'
         - 'generate ai alt tags'
+        - 'add ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'delete ai_social_post entity'
     user.role.site_builder:
       grantPermissions:
         - 'access ai content strategy'
@@ -101,6 +108,11 @@ config:
         # Markdownify related setup.
         - 'administer markdownify'
         - 'generate ai alt tags'
+        - 'add ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'delete ai_social_post entity'
+        - 'administer ai_social_post entity'
     # Markdownify related setup.
     markdownify.settings:
       simpleConfigUpdate:

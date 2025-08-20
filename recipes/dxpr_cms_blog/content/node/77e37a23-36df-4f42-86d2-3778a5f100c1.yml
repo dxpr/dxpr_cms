@@ -4,22 +4,23 @@ _meta:
   uuid: 77e37a23-36df-4f42-86d2-3778a5f100c1
   bundle: blog
   default_langcode: en
+  depends:
+    c66f67f2-5d13-4889-9233-c00f372a4910: user
+    f2b0128b-270e-46aa-89ce-22b079c20e9b: media
+    d48adeba-e388-4e82-820b-98bbd2f35a46: taxonomy_term
 default:
   revision_uid:
     -
       target_id: 1
-  revision_log:
-    -
-      value: 'Created by translation job <a href="/admin/tmgmt/jobs/2">Team member Tuesday: William</a>.'
   status:
     -
       value: true
   uid:
     -
-      target_id: 1
+      entity: c66f67f2-5d13-4889-9233-c00f372a4910
   title:
     -
-      value: 'Team member Tuesday: William'
+      value: 'The basics of website accessibility'
   created:
     -
       value: 1680705160
@@ -29,13 +30,122 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'The basics of website accessibility | DXPR CMS'
+    -
+      tag: link
+      attributes:
+        rel: shortlink
+        href: 'https://dxpr-cms.ddev.site:8443/'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: link
+      attributes:
+        rel: image_src
+        href: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2025-08/blog-2.png.webp?itok=-cu360ep'
+    -
+      tag: meta
+      attributes:
+        name: rights
+        content: 'Copyright ©2025 All rights reserved.'
+    -
+      tag: meta
+      attributes:
+        name: referrer
+        content: unsafe-url
+    -
+      tag: meta
+      attributes:
+        property: 'og:site_name'
+        content: 'DXPR CMS'
+    -
+      tag: meta
+      attributes:
+        property: 'og:type'
+        content: article
+    -
+      tag: meta
+      attributes:
+        property: 'og:url'
+        content: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        property: 'og:title'
+        content: 'The basics of website accessibility'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2025-08/blog-2.png.webp?itok=-cu360ep'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:type'
+        content: image/webp
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:width'
+        content: '1200'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:height'
+        content: '630'
+    -
+      tag: meta
+      attributes:
+        property: 'og:updated_time'
+        content: '2025-08-15T14:29:41+02:00'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:alt'
+        content: 'Blue and green abstract gradient background with soft diagonal streaks.'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:card'
+        content: summary_large_image
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:title'
+        content: 'The basics of website accessibility'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_x/public/2025-08/blog-2.png.webp?itok=RJSei03J'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image:alt'
+        content: 'Blue and green abstract gradient background with soft diagonal streaks.'
   path:
     -
-      alias: /blog/team-member-tuesday-william
+      alias: /blog/2023-04/basics-website-accessibility
       langcode: en
       pathauto: 1
   field_content:
     -
-      value: |
-        <div class="az-element az-section dxpr-theme-util-color-white container-fluid-wrapper" style="background-image: url(-base-url-/sites/default/files/2023-04/brooke-cagle-Nm70URdtf3c-unsplash.jpg);background-repeat: no-repeat;background-size: cover;background-position:center center; min-height: 100vh;" data-dxpr-builder-libraries="" data-az-id="gbwr9wpzwj" data-azat-pid="gb66l4zlls" id="gb66l4zlls" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="yes" data-azat-fullheight="yes" data-azat-vertical_centering="no" data-azat-parallax_speed="NaN" data-azat-parallax_mode="fixed" data-azat-parallax_mobile_disable="no" data-azat-an_infinite="no"       data-azat-el_class="dxpr-theme-util-color-white" data-azat-style="background-image: url(-base-url-/sites/default/files/2023-04/brooke-cagle-Nm70URdtf3c-unsplash.jpg);background-repeat: no-repeat;background-size: cover;background-position:center center;"><div class="az-ctnr container-fluid" data-azcnt="true"><div class="az-element az-text" style="opacity:0.6;" data-az-id="gbb17ws9jn" data-azat-pid="gbossfy1z1" id="gbossfy1z1" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azat-style="opacity:0.6;" data-azcnt="true">Photo by <a data-cke-saved-href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" tabindex="-1">Sincerely Media</a> on <a data-cke-saved-href="https://unsplash.com/photos/5LYQQS_JUgY?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" href="https://unsplash.com/photos/5LYQQS_JUgY?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" tabindex="-1">Unsplash</a></div></div></div><div class="az-element az-section" style="" data-dxpr-builder-libraries="" data-az-id="gb8oqiuvc8" data-azat-pid="gbcmq80hg9" id="gbcmq80hg9" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section"      ><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-row row az-row--md" style="" data-az-id="gbyp2c3ifi" data-azat-pid="gb621nwt7j" id="gb621nwt7j" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="md"       data-azcnt="true"><div class="az-element az-ctnr az-column col-md-2" style="" data-az-id="gb131ml8q8" data-azat-pid="gbek415a9i" id="gbek415a9i" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/6"       data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbz75cycgd" data-azat-pid="gbusyh04qw" id="gbusyh04qw" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azcnt="true"><br></div></div><div class="az-element az-ctnr az-column col-md-8" style="" data-az-id="gbf0417r1t" data-azat-pid="gb6cq37jtl" id="gb6cq37jtl" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 4/6 "       data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbct49l7ri" data-azat-pid="gb5s6xlue1" id="gb5s6xlue1" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azcnt="true"><h2>Placeholder text</h2><p>Discovering this placeholder text was unintended, and we kindly request you to reach out to us via email, providing the webpage's URL where you encountered it. We sincerely appreciate your assistance in this matter. Discovering this placeholder text was unintended, and we kindly request you to reach out to us via email, providing the webpage's URL where you encountered it. We sincerely appreciate your assistance in this matter.</p><p>Discovering this placeholder text was unintended, and we kindly request you to reach out to us via email, providing the webpage's URL where you encountered it. We sincerely appreciate your assistance in this matter.</p><p>Discovering this placeholder text was unintended, and we kindly request you to reach out to us via email, providing the webpage's URL where you encountered it. We sincerely appreciate your assistance in this matter.</p></div></div><div class="az-element az-ctnr az-column col-md-2" style="" data-az-id="gb2op7z6dw" data-azat-pid="gbcgdjfiby" id="gbcgdjfiby" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/6"       data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbcss45gd1" data-azat-pid="gb3l0jksj8" id="gb3l0jksj8" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azcnt="true"><br></div></div></div></div></div><div class="az-element az-section" style="" data-dxpr-builder-libraries="" data-az-id="gbbo7m20uf" data-azat-pid="gb3qu0x355" id="gb3qu0x355" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section"      ><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-row row az-row--md" style="" data-az-id="gbft5ng3aq" data-azat-pid="gb9rpdkrob" id="gb9rpdkrob" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="md"       data-azcnt="true"><div class="az-element az-ctnr az-column col-md-6" style="" data-az-id="gbm7c21cr6" data-azat-pid="gbzn9xxuns" id="gbzn9xxuns" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2"       data-azcnt="true"><div class="az-element az-image" data-az-id="gbp92oh4m6" data-azat-pid="gbqkalt1qu" id="gbqkalt1qu" data-azb="az_image" data-az-human-readable="Image" data-az-human-readable-en="Image" data-azat-image="-base-url-/sites/default/files/2023-04/brooke-cagle-Nm70URdtf3c-unsplash.jpg" data-azat-height="" data-azat-link_target="_self" data-azat-an_infinite="no"      ><img class="az-image-content" style="width: 100%;" src="-base-url-/sites/default/files/2023-04/brooke-cagle-Nm70URdtf3c-unsplash.jpg" alt="" title=""></div></div><div class="az-element az-ctnr az-column col-md-6" style="" data-az-id="gbfiqkz27g" data-azat-pid="gbt5ar0loa" id="gbt5ar0loa" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/2"       data-azcnt="true"><div class="az-element az-image" data-az-id="gbshmyf6u8" data-azat-pid="gbts11djnv" id="gbts11djnv" data-azb="az_image" data-az-human-readable="Image" data-az-human-readable-en="Image" data-azat-image="-base-url-/sites/default/files/2023-04/brooke-cagle-Nm70URdtf3c-unsplash.jpg" data-azat-height="" data-azat-link_target="_self" data-azat-an_infinite="no"      ><img class="az-image-content" style="width: 100%;" src="-base-url-/sites/default/files/2023-04/brooke-cagle-Nm70URdtf3c-unsplash.jpg" alt="" title=""></div></div></div></div></div><div class="az-element az-section" style="" data-dxpr-builder-libraries="" data-az-id="gbfz3l7faz" data-azat-pid="gb69ac0byk" id="gb69ac0byk" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section"      ><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-row row az-row--md" style="" data-az-id="gb8q46gffx" data-azat-pid="gbw7xm8p0i" id="gbw7xm8p0i" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="md"       data-azcnt="true"><div class="az-element az-ctnr az-column col-md-2" style="" data-az-id="gbze9m9vmw" data-azat-pid="gbofqd055y" id="gbofqd055y" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/6"       data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbjt2ht9ig" data-azat-pid="gb6vdazsfa" id="gb6vdazsfa" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azcnt="true"><br></div></div><div class="az-element az-ctnr az-column col-md-8" style="" data-az-id="gbpraz0na3" data-azat-pid="gbkdylubzi" id="gbkdylubzi" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 4/6 "       data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbbt6vlf9l" data-azat-pid="gbpf9wo0q7" id="gbpf9wo0q7" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azcnt="true"><p>Discovering this placeholder text was unintended, and we kindly request you to reach out to us via email, providing the webpage's URL where you encountered it. We sincerely appreciate your assistance in this matter. Discovering this placeholder text was unintended, and we kindly request you to reach out to us via email, providing the webpage's URL where you encountered it. We sincerely appreciate your assistance in this matter.</p></div></div><div class="az-element az-ctnr az-column col-md-2" style="" data-az-id="gbn36jt9oj" data-azat-pid="gblimv1xue" id="gblimv1xue" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/6"       data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbw3qdkz2m" data-azat-pid="gbzta7clyh" id="gbzta7clyh" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azcnt="true"><br></div></div></div></div></div><script src="/modules/contrib/dxpr_builder/dxpr_builder/dxpr_frontend.js"></script>
+      value: '<div class="az-element az-section my-5" data-azat-el_class=my-5 data-azb=az_section id=Aw4c4a><div class="az-ctnr container" data-azcnt=true><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=ea1p4l><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=t6dyti><div class="az-element az-text ck-content" data-azb=az_text id=Komsf7 style=position:relative><p>In today''s digital age, website accessibility is crucial for ensuring that all users, including those with disabilities, can effectively access and navigate web content. This is both a moral imperative and a business necessity. Understanding and implementing website accessibility fosters inclusion, compliance with legal standards, and enhancements in business operations.</p></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=c64vua><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=I0pufo><div class="az-element az-image img-fluid overflow-hidden" data-azat-alt="A diverse group of people using various devices with ease, representing accessibility." data-azat-el_class="img-fluid overflow-hidden" data-azat-image="https://promptahuman.com/600x400@2x?bg_color=007bff&text_color=ffffff&title=image1.jpg&prompt=People%20of%20diverse%20abilities%20using%20devices%20with%20ease." data-azat-height data-azat-width data-azb=az_image id=c39lls><img alt="A diverse group of people using various devices with ease, representing accessibility." src="https://promptahuman.com/600x400@2x?bg_color=007bff&text_color=ffffff&title=image1.jpg&prompt=People%20of%20diverse%20abilities%20using%20devices%20with%20ease." class=az-image-content></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Rx7y0u><div class="az-element az-text ck-content" data-azb=az_text id=Fh1l6f><h3>Understanding the Core Principles</h3><p>The foundation of creating accessible websites lies in four main principles: perceivable, operable, understandable, and robust (POUR). These guidelines, established in the Web Content Accessibility Guidelines (WCAG), ensure that digital content is usable by everyone.</p><h4 class=mt-4>Perceivable</h4><p>All information must be presented in such a way that it is perceivable by all users, regardless of their sensory abilities. This includes providing alternative text for images, captions for video content, and ensuring adequate color contrast between text and backgrounds.</p></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=Fmmq2x><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=jt5b7d><div class="az-element az-text ck-content" data-azb=az_text id=si9lf5><h4>Operable</h4><p>An accessible website allows users to navigate and interact with all interface elements, regardless of their means of control. This involves ensuring that all functions can be performed using a keyboard and that navigation does not rely solely on mouse input.</p><h4>Understandable</h4><p>The content and user operations on a site must be easy to understand. This means using clear and concise language, maintaining consistent layouts across pages, and providing helpful instructions and feedback for any errors encountered by the user.</p></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Z8ayry><div class="az-element az-image img-fluid overflow-hidden" data-azat-alt="A user accessing a website using a keyboard, illustrating operable design." data-azat-el_class="img-fluid overflow-hidden" data-azat-image="https://promptahuman.com/600x400@2x?bg_color=222222&text_color=ffffff&title=image2.jpg&prompt=Web%20navigation%20with%20clear%20instructions%20and%20keyboard%20access." data-azat-height data-azat-width data-azb=az_image id=Rr0xk1><img alt="A user accessing a website using a keyboard, illustrating operable design." src="https://promptahuman.com/600x400@2x?bg_color=222222&text_color=ffffff&title=image2.jpg&prompt=Web%20navigation%20with%20clear%20instructions%20and%20keyboard%20access." class=az-image-content></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=h5lgge><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=hmlhre><div class="az-element az-image img-fluid overflow-hidden" data-azat-alt="Various devices and technologies demonstrating robust design." data-azat-el_class="img-fluid overflow-hidden" data-azat-image="https://promptahuman.com/600x400@2x?bg_color=333333&text_color=ffffff&title=image3.jpg&prompt=Diverse%20devices%20and%20technologies%20illustrating%20robust%20design." data-azat-height data-azat-width data-azb=az_image id=Erjrh6><img alt="Various devices and technologies demonstrating robust design." src="https://promptahuman.com/600x400@2x?bg_color=333333&text_color=ffffff&title=image3.jpg&prompt=Diverse%20devices%20and%20technologies%20illustrating%20robust%20design." class=az-image-content></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Vjiwq4><div class="az-element az-text ck-content" data-azb=az_text id=v5abyu><div class=ckeditor-inline id=cke5-v5abyu><h4>Robust</h4><p>A robust website remains functional across a wide range of devices, technologies, and future advancements. This necessitates clean, standardized code and proper markup to ensure compatibility with various browsers and assistive technologies.</p><h3 class=mt-4>The Benefits of Accessibility</h3><p>Beyond meeting legal obligations such as the ADA and WCAG guidelines, accessible websites reach broader audiences, including an aging population and non-native speakers. These practices also enhance SEO, performance, and brand reputation.</p></div></div></div></div><div class="az-element az-row row az-row--md my-4" data-azat-device=md data-azat-el_class=my-4 data-azb=az_row data-azcnt=true id=Nkihm2><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=zil8i1><div class="az-element az-text ck-content" data-azb=az_text id=C0a3s2><div class=ckeditor-inline id=cke5-C0a3s2><h3>Conclusion</h3><p>Website accessibility is not a one-time adjustment but a continuous process requiring vigilance and commitment. As technology and user needs evolve, maintaining accessible digital properties ensures that inclusivity and usability remain at the forefront of web design.</p></div></div></div></div></div></div>'
       format: dxpr_builder_html
+  field_featured_image:
+    -
+      entity: f2b0128b-270e-46aa-89ce-22b079c20e9b
+  field_tags:
+    -
+      entity: d48adeba-e388-4e82-820b-98bbd2f35a46

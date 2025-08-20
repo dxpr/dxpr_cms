@@ -1,0 +1,30 @@
+uuid: 205cdfc4-87ad-4505-ae41-1dc0ee4e9fdb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:f1dcbf37-f7fd-490b-a5ee-0ace9d5851bc'
+  module:
+    - block_content
+    - system
+  theme:
+    - dxpr_theme
+id: dxpr_theme_newsroom
+theme: dxpr_theme
+region: highlighted
+weight: -7
+provider: null
+plugin: 'block_content:f1dcbf37-f7fd-490b-a5ee-0ace9d5851bc'
+settings:
+  id: 'block_content:f1dcbf37-f7fd-490b-a5ee-0ace9d5851bc'
+  label: Newsroom
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news2

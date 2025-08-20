@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
-  entity_type: taxonomy_term
-  uuid: d48adeba-e388-4e82-820b-98bbd2f35a46
-  bundle: tags
+  entity_type: media
+  uuid: 31109617-d83d-4f5a-aead-8a1e059e1c12
+  bundle: image
   default_langcode: en
+  depends:
+    ecfbe889-8863-4286-a703-e76cc3c8378f: file
 default:
   status:
     -
       value: true
+  uid:
+    -
+      target_id: 1
   name:
     -
-      value: Drupal
-  weight:
+      value: blog-8.png
+  created:
     -
-      value: 0
-  parent:
-    -
-      target_id: 0
+      value: 1755247749
   revision_translation_affected:
     -
       value: true
@@ -65,4 +67,11 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
+  field_media_image:
+    -
+      entity: ecfbe889-8863-4286-a703-e76cc3c8378f
+      alt: 'Abstract art with swirling orange and blue shapes, resembling a face in profile.'
+      title: ''
+      width: 1536
+      height: 1024

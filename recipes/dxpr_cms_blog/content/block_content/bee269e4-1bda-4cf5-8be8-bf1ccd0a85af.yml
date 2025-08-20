@@ -1,0 +1,71 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: bee269e4-1bda-4cf5-8be8-bf1ccd0a85af
+  bundle: drag_and_drop_block
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Saved with DXPR builder'
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Blog header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: '| DXPR CMS'
+    -
+      tag: link
+      attributes:
+        rel: shortlink
+        href: 'https://dxpr-cms.ddev.site:8443/node/6'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        name: rights
+        content: 'Copyright ©2025 All rights reserved.'
+    -
+      tag: meta
+      attributes:
+        name: referrer
+        content: unsafe-url
+    -
+      tag: meta
+      attributes:
+        property: 'og:site_name'
+        content: 'DXPR CMS'
+    -
+      tag: meta
+      attributes:
+        property: 'og:url'
+        content: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:card'
+        content: summary
+  body:
+    -
+      value: '<div class="az-element az-section" data-azb=az_section id=Xfjdsm><div class="az-ctnr container" data-azcnt=true><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=alkjj3><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Nt2qqi><div class="az-element az-cms-element" data-azat-items data-azat-offset data-azat-override_pager=no data-azat-toggle_fields=title,field_featured_image,field_content data-azb=az_view-blog-hero id=w9nedu></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=" 1/2" data-azb=az_column data-azcnt=true id=bvdbj5><div class="az-element az-cms-element" data-azat-display_title=yes data-azat-items data-azat-offset data-azat-override_pager=no data-azat-toggle_fields=title,field_content data-azb=az_view-blog-featured id=Rewueo></div></div></div></div></div>'
+      format: ''
+      summary: ''

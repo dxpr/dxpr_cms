@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: taxonomy_term
-  uuid: d48adeba-e388-4e82-820b-98bbd2f35a46
+  uuid: f4a5d917-3031-4d55-9774-497d29a82a84
   bundle: tags
   default_langcode: en
 default:
@@ -10,7 +10,7 @@ default:
       value: true
   name:
     -
-      value: Drupal
+      value: DXPR
   weight:
     -
       value: 0

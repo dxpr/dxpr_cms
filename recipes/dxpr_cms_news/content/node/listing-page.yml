@@ -39,7 +39,7 @@ default:
   layout_builder__layout:
     -
       section:
-        layout_id: layout_onecol
+        layout_id: dxpr_one_column
         layout_settings:
           label: ''
         components:

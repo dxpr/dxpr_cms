@@ -23,7 +23,7 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: dxpr_one_column
         layout_settings:
           label: Header
           context_mapping: {}

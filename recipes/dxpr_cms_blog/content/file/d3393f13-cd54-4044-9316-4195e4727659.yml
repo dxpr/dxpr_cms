@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d3393f13-cd54-4044-9316-4195e4727659
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: blog-4.png
+  uri:
+    -
+      value: 'public://2025-08/blog-4.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1318222
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1755247700

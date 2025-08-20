@@ -42,6 +42,9 @@ config:
     tagify.settings:
       simpleConfigUpdate:
         set_default_widget: true
+    admin_toolbar_tools.settings:
+      simpleConfigUpdate:
+        show_local_tasks: true
     user.role.content_editor:
       grantPermissions:
         - 'use admin toolbar search'

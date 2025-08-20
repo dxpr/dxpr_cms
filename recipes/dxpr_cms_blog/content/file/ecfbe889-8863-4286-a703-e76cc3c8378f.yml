@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: b8a036c4-311c-4699-85f7-f0503917d1eb
+  uuid: ecfbe889-8863-4286-a703-e76cc3c8378f
   default_langcode: en
 default:
   uid:
@@ -9,19 +9,19 @@ default:
       target_id: 1
   filename:
     -
-      value: icon-blog-post.svg
+      value: blog-8.png
   uri:
     -
-      value: 'public://type-tray-icons/icon-blog-post.svg'
+      value: 'public://2025-08/blog-8.png'
   filemime:
     -
-      value: image/svg+xml
+      value: image/png
   filesize:
     -
-      value: 1112
+      value: 876866
   status:
     -
       value: true
   created:
     -
-      value: 1715805315
+      value: 1755247749

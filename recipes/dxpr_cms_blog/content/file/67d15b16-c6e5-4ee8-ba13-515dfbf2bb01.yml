@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: 47b880a9-c2a4-4ed6-844d-95c6d6677004
+  uuid: 67d15b16-c6e5-4ee8-ba13-515dfbf2bb01
   default_langcode: en
 default:
   uid:
@@ -9,19 +9,19 @@ default:
       target_id: 1
   filename:
     -
-      value: dxpr-cms-logo.png
+      value: blog-3.png
   uri:
     -
-      value: 'public://2024-12/dxpr-cms-logo.png'
+      value: 'public://2025-08/blog-3.png'
   filemime:
     -
       value: image/png
   filesize:
     -
-      value: 13677
+      value: 832005
   status:
     -
       value: true
   created:
     -
-      value: 1733291105
+      value: 1755102211

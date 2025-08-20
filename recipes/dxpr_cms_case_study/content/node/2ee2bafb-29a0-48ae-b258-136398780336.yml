@@ -1,13 +1,13 @@
 _meta:
   version: '1.0'
   entity_type: node
-  uuid: 1d208712-bb75-4af9-98af-fd6c48ce9924
+  uuid: 2ee2bafb-29a0-48ae-b258-136398780336
   bundle: case_study
   default_langcode: en
   depends:
-    930856d3-0fff-455c-819d-2c74e01cff3d: media
+    4cd96ac7-9e39-4350-a2b4-cbcf93d5100c: media
     35a186fc-5bff-4357-9f4b-a9c6218866fc: media
-    d48adeba-e388-4e82-820b-98bbd2f35a46: taxonomy_term
+    f4a5d917-3031-4d55-9774-497d29a82a84: taxonomy_term
 default:
   revision_uid:
     -
@@ -23,7 +23,7 @@ default:
       value: 'Transforming government digital services with Drupal'
   created:
     -
-      value: 1734363110
+      value: 1755252651
   promote:
     -
       value: true
@@ -36,18 +36,120 @@ default:
   moderation_state:
     -
       value: published
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Transforming government digital services with Drupal | DXPR CMS'
+    -
+      tag: link
+      attributes:
+        rel: shortlink
+        href: 'https://dxpr-cms.ddev.site:8443/'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: link
+      attributes:
+        rel: image_src
+        href: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+    -
+      tag: meta
+      attributes:
+        name: rights
+        content: 'Copyright ©2025 All rights reserved.'
+    -
+      tag: meta
+      attributes:
+        name: referrer
+        content: unsafe-url
+    -
+      tag: meta
+      attributes:
+        property: 'og:site_name'
+        content: 'DXPR CMS'
+    -
+      tag: meta
+      attributes:
+        property: 'og:type'
+        content: article
+    -
+      tag: meta
+      attributes:
+        property: 'og:url'
+        content: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        property: 'og:title'
+        content: 'Transforming government digital services with Drupal'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:type'
+        content: image/webp
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:width'
+        content: '1200'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:height'
+        content: '630'
+    -
+      tag: meta
+      attributes:
+        property: 'og:updated_time'
+        content: '2025-08-15T14:44:22+02:00'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:alt'
+        content: 'Flags of European Union Countries.'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:card'
+        content: summary_large_image
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:title'
+        content: 'Transforming government digital services with Drupal'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_x/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=FeHTCNyu'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image:alt'
+        content: 'Flags of European Union Countries.'
   path:
     -
-      alias: /case-studies/transforming-government-digital-services-drupal
+      alias: /case-studies/transforming-government-digital-services-drupal-0
       langcode: en
+      pathauto: 1
   field_case_study__client_link:
     -
       uri: 'https://www.drupal.org/case-studies?sectors%5B%5D=24660'
       title: 'Visit website'
-      options: {}
+      options: {  }
   field_case_study__client_logo:
     -
-      entity: 930856d3-0fff-455c-819d-2c74e01cff3d
+      entity: 4cd96ac7-9e39-4350-a2b4-cbcf93d5100c
   field_case_study__client_name:
     -
       value: 'DXPR CMS'
@@ -60,4 +162,4 @@ default:
       entity: 35a186fc-5bff-4357-9f4b-a9c6218866fc
   field_tags:
     -
-      entity: d48adeba-e388-4e82-820b-98bbd2f35a46
+      entity: f4a5d917-3031-4d55-9774-497d29a82a84

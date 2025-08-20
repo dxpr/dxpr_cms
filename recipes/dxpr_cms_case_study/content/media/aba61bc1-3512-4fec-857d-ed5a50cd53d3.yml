@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
-  entity_type: taxonomy_term
-  uuid: d48adeba-e388-4e82-820b-98bbd2f35a46
-  bundle: tags
+  entity_type: media
+  uuid: aba61bc1-3512-4fec-857d-ed5a50cd53d3
+  bundle: image
   default_langcode: en
+  depends:
+    f436e20c-9f4f-49ec-9352-330a9155c2a0: file
 default:
   status:
     -
       value: true
+  uid:
+    -
+      target_id: 1
   name:
     -
-      value: Drupal
-  weight:
+      value: logoipsum-354.png
+  created:
     -
-      value: 0
-  parent:
-    -
-      target_id: 0
+      value: 1755261718
   revision_translation_affected:
     -
       value: true
@@ -65,4 +67,11 @@ default:
     -
       alias: ''
       langcode: en
-      pathauto: 1
+      pathauto: 0
+  field_media_image:
+    -
+      entity: f436e20c-9f4f-49ec-9352-330a9155c2a0
+      alt: 'Logo with green shield and text "Logolpsum University".'
+      title: ''
+      width: 400
+      height: 109
