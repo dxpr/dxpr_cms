@@ -114,6 +114,7 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2",
         "drupal/ace_editor": "2.0.2",
+        "drupal/admin_toolbar": "^3.6",
         "drupal/bpmn_io": "^2.0",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
@@ -130,11 +131,9 @@
         "drupal/dxpr_cms_performance": "*",
         "drupal/dxpr_cms_seo_tools": "*",
         "drupal/dxpr_cms_starter": "*",
-        "drupal/gin": "5.0.x-dev",
         "drupal/google_tag": "^2.0",
+        "drupal/project_browser": "^2.1@beta",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
-        "drupal/views_color_scales": "^1.0@beta",
-        "drupal/webform": "@beta",
         "drush/drush": "^13"
     },
     "require-dev": {
@@ -154,6 +153,7 @@
     "config": {
         "preferred-install": {
             "drupal/ace_editor": "source",
+            "drupal/admin_toolbar": "source",
             "drupal/tmgmt": "source",
             "drupal/ai_tmgmt": "source",
             "*": "dist"
@@ -207,6 +207,9 @@
         "patches": {
             "drupal/ace_editor": {
                 "Fix profile detection for recipe-based installations  ": "patches/ace_editor_no_profile.patch"
+            },
+            "drupal/admin_toolbar": {
+                "Fix TypeError when iterating Project Browser enabled sources": "patches/admin_toolbar--issue-3540400.patch"
             },
             "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
