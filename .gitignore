@@ -13,3 +13,4 @@ eca.model.*.yml
 .specstory/
 .idea/
 /tmp
+/db
