@@ -1,3 +1,4 @@
+uuid: b2451877-0af4-4d75-ad74-d3dc93e73886
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,9 @@ dependencies:
     - field.field.node.page.field_dth_main_content_width
     - field.field.node.page.field_dth_page_layout
     - field.field.node.page.field_featured_image
+    - field.field.node.page.field_seo_description
+    - field.field.node.page.field_seo_image
+    - field.field.node.page.field_seo_title
     - field.field.node.page.field_tags
     - field.field.node.page.layout_builder__layout
     - node.type.page
@@ -17,159 +21,10 @@ dependencies:
     - media_library
     - path
     - scheduler
+    - tagify
     - text
-id: node.page.default
-targetEntityType: node
-bundle: page
-mode: default
-content:
-  created:
-    type: datetime_timestamp
-    weight: 11
-    region: content
-    settings: {}
-    third_party_settings: {}
-  field_content:
-    type: text_textarea
-    weight: 7
-    region: content
-    settings:
-      rows: 9
-      placeholder: ''
-    third_party_settings: {}
-  field_featured_image:
-    type: media_library_widget
-    weight: 3
-    region: content
-    settings:
-      media_types: {}
-    third_party_settings: {}
-  field_tags:
-    type: tagify_entity_reference_autocomplete_widget
-    weight: 9
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      placeholder: ''
-    third_party_settings: {}
-  langcode:
-    type: language_select
-    weight: 8
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {}
-  moderation_state:
-    type: moderation_state_default
-    weight: 0
-    region: content
-    settings: {}
-    third_party_settings: {}
-  path:
-    type: path
-    weight: 14
-    region: content
-    settings: {}
-    third_party_settings: {}
-  promote:
-    type: boolean_checkbox
-    weight: 12
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {}
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 4
-    region: content
-    settings: {}
-    third_party_settings: {}
-  publish_status:
-    type: scheduler_moderation
-    weight: -4
-    region: content
-    settings: {}
-    third_party_settings: {}
-  scheduler_settings:
-    weight: 1
-    region: content
-    settings: {}
-    third_party_settings: {}
-  status:
-    type: boolean_checkbox
-    weight: 16
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {}
-  sticky:
-    type: boolean_checkbox
-    weight: 13
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {}
-  title:
-    type: string_textfield
-    weight: 2
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {}
-  uid:
-    type: entity_reference_autocomplete
-    weight: 10
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {}
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 5
-    region: content
-    settings: {}
-    third_party_settings: {}
-  field_dth_hide_regions:
-    type: options_buttons
-    weight: 21
-    region: content
-    settings: {}
-    third_party_settings: {}
-  field_dth_main_content_width:
-    type: options_select
-    weight: 22
-    region: content
-    settings: {}
-    third_party_settings: {}
-  field_dth_page_layout:
-    type: options_select
-    weight: 20
-    region: content
-    settings: {}
-    third_party_settings: {}
 third_party_settings:
   field_group:
-    group_content_advanced:
-      children:
-        - field_content
-      label: 'HTML Content Editing'
-      region: content
-      parent_name: ''
-      weight: 7
-      format_type: details
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: group_content_advanced
-        label_as_html: false
-        open: false
-        description: 'Please go to the "view" tab for visual content editing. This section is for advanced HTML editing for technical troubleshooting.'
-        required_fields: false
     group_dxpr_theme_settings:
       children:
         - field_dth_page_layout
@@ -178,7 +33,7 @@ third_party_settings:
       label: 'DXPR Theme Settings'
       region: content
       parent_name: ''
-      weight: 20
+      weight: 15
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -188,7 +43,192 @@ third_party_settings:
         open: false
         description: ''
         required_fields: false
+    group_seo:
+      children:
+        - field_seo_title
+        - field_seo_description
+        - field_seo_image
+      label: 'Search Engine Optimization (SEO) Information'
+      region: content
+      parent_name: ''
+      weight: 17
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_seo
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+_core:
+  default_config_hash: tc5LYj1V6FXD4-8W8I7UQsC4bPzCTsB_bkqoPfRUVQk
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 9
+      placeholder: ''
+    third_party_settings: {  }
+  field_dth_hide_regions:
+    type: options_buttons
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dth_main_content_width:
+    type: options_select
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dth_page_layout:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_featured_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_seo_description:
+    type: string_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_seo_image:
+    type: media_library_widget
+    weight: 17
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_seo_title:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tags:
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_status:
+    type: scheduler_moderation
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   layout_builder__layout: true
   publish_state: true
   unpublish_state: true
+

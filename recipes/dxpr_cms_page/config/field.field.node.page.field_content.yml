@@ -1,11 +1,17 @@
+uuid: 702d53c9-2c88-4701-a287-ca445d02ddca
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_content
+    - filter.format.basic_html
+    - filter.format.content_format
+    - filter.format.full_html
     - node.type.page
   module:
     - text
+_core:
+  default_config_hash: Xz5u1L4u5CqnLMYQvRGOuYmLMPNsjWC5gfq56eQxOfA
 id: node.page.field_content
 field_name: field_content
 entity_type: node
@@ -14,12 +20,12 @@ label: Content
 description: 'The content of this page.'
 required: false
 translatable: true
-default_value:
-  -
-    value: ''
-    format: dxpr_builder_html
+default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    - dxpr_builder_html
+    - basic_html
+    - content_format
+    - full_html
 field_type: text_long
+
