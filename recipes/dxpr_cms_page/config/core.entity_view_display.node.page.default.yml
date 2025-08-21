@@ -34,13 +34,20 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:page:field_content'
+              label: Content
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: dxpr_builder_text
                 label: hidden
-                settings: {  }
+                settings:
+                  profile: light
+                  profile_info:
+                    light: ''
+                    medium: ''
                 third_party_settings: {  }
             weight: 2
             additional: {  }
@@ -94,7 +101,7 @@ third_party_settings:
             additional: {  }
         third_party_settings: {  }
 _core:
-  default_config_hash: '-7Zsa2DpRYTqrfUN7kQ6rq1ZIwjHuIY--N3b-NMly-g'
+  default_config_hash: 0FkBRgKI9kJ1T9SJMAiUJisLN0FbrbyPoQlM6sKRfIo
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -131,4 +138,3 @@ hidden:
   field_tags: true
   layout_builder__layout: true
   links: true
-
