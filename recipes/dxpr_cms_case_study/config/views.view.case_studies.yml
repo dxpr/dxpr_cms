@@ -580,7 +580,7 @@ display:
         row: false
       display_description: ''
       display_extenders: {  }
-      path: case-studies2
+      path: case-studies
       menu:
         type: normal
         title: 'Case studies'

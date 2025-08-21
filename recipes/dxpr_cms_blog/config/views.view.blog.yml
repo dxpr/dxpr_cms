@@ -407,51 +407,6 @@ display:
       tags:
         - 'config:field.storage.node.field_content'
         - 'config:field.storage.node.field_featured_image'
-  all_posts:
-    id: all_posts
-    display_title: Blog
-    display_plugin: page
-    position: 1
-    display_options:
-      style:
-        type: views_bootstrap_grid
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: false
-          grid_class: ''
-          col_xs: col-12
-          col_sm: col-sm-6
-          col_md: col-md-3
-          col_lg: none
-          col_xl: none
-          col_xxl: none
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: true
-      defaults:
-        css_class: true
-        style: false
-        row: false
-        fields: true
-      display_description: ''
-      display_extenders: {  }
-      path: blog
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_content'
-        - 'config:field.storage.node.field_featured_image'
   featured:
     id: featured
     display_title: 'Featured posts'
@@ -915,6 +870,51 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_content'
+        - 'config:field.storage.node.field_featured_image'
+  page:
+    id: page
+    display_title: Blog
+    display_plugin: page
+    position: 1
+    display_options:
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          grid_class: ''
+          col_xs: col-12
+          col_sm: col-sm-6
+          col_md: col-md-3
+          col_lg: none
+          col_xl: none
+          col_xxl: none
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      defaults:
+        css_class: true
+        style: false
+        row: false
+        fields: true
+      display_description: ''
+      display_extenders: {  }
+      path: blog
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
