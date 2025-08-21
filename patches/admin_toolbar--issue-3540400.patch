@@ -1,0 +1,29 @@
+diff --git a/admin_toolbar_tools/src/Plugin/Derivative/ExtraLinks.php b/admin_toolbar_tools/src/Plugin/Derivative/ExtraLinks.php
+index 96a1890..b5e6d5c 100644
+--- a/admin_toolbar_tools/src/Plugin/Derivative/ExtraLinks.php
++++ b/admin_toolbar_tools/src/Plugin/Derivative/ExtraLinks.php
+@@ -741,7 +741,8 @@ class ExtraLinks extends DeriverBase implements ContainerDeriverInterface {
+         $project_browser_enabled_sources = $project_browser_admin_settings->get('enabled_sources');
+         if (!empty($project_browser_enabled_sources)) {
+           // Build a menu link for each enabled project browser source.
+-          foreach ($project_browser_enabled_sources as $key => $source_id) {
++          $weight_offset = 0;
++          foreach ($project_browser_enabled_sources as $source_id => $source_config) {
+             $links['project_browser.browse.' . $source_id] = [
+               'route_name' => 'project_browser.browse',
+               'parent' => 'system.modules_list',
+@@ -748,7 +749,7 @@ class ExtraLinks extends DeriverBase implements ContainerDeriverInterface {
+               // Menu items are ordered by the enabled sources.
+-              'weight' => -10 + $key,
++              'weight' => -10 + $weight_offset,
+               'route_parameters' => ['source' => $source_id],
+               'class' => 'Drupal\admin_toolbar_tools\Plugin\Menu\MenuLinkPlugin',
+               'metadata' => [
+@@ -756,6 +757,7 @@ class ExtraLinks extends DeriverBase implements ContainerDeriverInterface {
+                 'label_pattern' => $this->t('Browse @label'),
+               ],
+             ] + $base_plugin_definition;
++            $weight_offset++;
+           }
+         }
+       }
