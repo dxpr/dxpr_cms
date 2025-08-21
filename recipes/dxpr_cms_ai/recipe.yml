@@ -21,6 +21,7 @@ install:
   - ai_sorting
   - analyze
   - rl
+  - views_color_scales
   - ckeditor_ai_agent
   - menu_link_content
   - markdownify

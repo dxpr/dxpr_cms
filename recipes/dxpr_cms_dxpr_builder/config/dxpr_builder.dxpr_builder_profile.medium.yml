@@ -1,0 +1,102 @@
+uuid: de455060-853f-4e1b-b0d7-22b93ba74f99
+langcode: en
+status: true
+dependencies: {  }
+id: medium
+label: Medium
+dxpr_editor: true
+weight: 0
+roles:
+  - administrator
+  - site_builder
+  - content_administrator
+  - content_editor
+elements:
+  - az_accordion
+  - az_alert
+  - az_blockquote
+  - az_button
+  - az_card
+  - az_countdown
+  - az_icon
+  - az_image
+  - az_jumbotron
+  - az_link
+  - az_map
+  - az_separator
+  - az_text
+  - az_video
+  - az_video_local
+  - az_carousel
+  - az_row
+  - az_section
+  - az_tabs
+  - az_toggle
+blocks: {  }
+views: {  }
+page_templates:
+  - 59709ffe-8043-4e7f-9776-f0551ade8e37
+  - ea72cd08-f19c-4de4-946c-c54e5e909665
+  - faaf4666-509e-4bf6-b9b8-b016e732cae3
+  - c0913efe-b8e9-4399-8a1d-6bc8e64878aa
+  - 5ccc9277-b5bb-4c19-be6e-607540866058
+user_templates:
+  - 5abda7f1-81b8-45ea-bcac-7cc8a17630a6
+  - 13ee435d-642b-4e35-9980-a86009b4446f
+  - 54ea3e88-24b8-4aee-99a7-826f67992ef8
+  - c30643fa-76bd-4640-8ef5-ab1493573f9b
+  - 4b282cee-d09a-42d4-94d9-1f4a6f60ab6c
+inline_buttons:
+  - aiAgentButton
+  - aiAgentToneButton
+  - bold
+  - italic
+  - 'alignment:left'
+  - 'alignment:center'
+  - 'alignment:right'
+  - 'alignment:justify'
+  - bulletedList
+  - undo
+  - redo
+  - link
+  - insertImage
+  - fontColor
+  - fontSize
+  - removeFormat
+  - heading
+  - style
+  - insertTable
+  - check_uncheck_all_wrapper
+modal_buttons:
+  - aiAgentButton
+  - aiAgentToneButton
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - 'alignment:left'
+  - 'alignment:center'
+  - 'alignment:right'
+  - 'alignment:justify'
+  - bulletedList
+  - numberedList
+  - outdent
+  - indent
+  - undo
+  - redo
+  - link
+  - insertImage
+  - fontColor
+  - fontSize
+  - superscript
+  - subscript
+  - blockQuote
+  - sourceEditing
+  - horizontalLine
+  - showBlocks
+  - removeFormat
+  - specialCharacters
+  - heading
+  - style
+  - insertTable
+  - check_uncheck_all_wrapper

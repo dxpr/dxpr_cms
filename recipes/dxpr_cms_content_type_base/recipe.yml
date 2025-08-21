@@ -34,11 +34,13 @@ install:
   - scheduler
   - scheduler_content_moderation_integration
   - search
+  - smart_trim
   - statistics
   - taxonomy
   - token
   - trash
   - views
+  - views_bootstrap
   - webform
   # We don't have a specific use of the Options or Field UI modules in this recipe,
   # but we expect that site builders will want to add fields to their content types,
