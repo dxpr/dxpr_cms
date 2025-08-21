@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies: {  }
+name: client_logo_small
+label: 'Client logo small'
+effects:
+  32296a12-7e46-498f-aaea-a5ffaa3c92e4:
+    uuid: 32296a12-7e46-498f-aaea-a5ffaa3c92e4
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 40
+      upscale: true
+  2206af01-231e-4eb7-8b8a-c11beb26c37e:
+    uuid: 2206af01-231e-4eb7-8b8a-c11beb26c37e
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp
+
