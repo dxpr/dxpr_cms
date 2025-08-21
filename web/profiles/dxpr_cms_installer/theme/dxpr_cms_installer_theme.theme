@@ -181,3 +181,12 @@ function dxpr_cms_installer_theme_form_install_configure_form_alter(array &$form
   ];
   $form['actions']['submit']['#value'] = t('Finish');
 }
+
+/**
+ * Implements template_preprocess_maintenance_page().
+ */
+function dxpr_cms_installer_theme_preprocess_maintenance_page(array &$variables): void {
+  $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+  $variables['#attached']['drupalSettings']['dxprCmsInstaller']['themePath'] = \Drupal::service(FileUrlGeneratorInterface::class)
+    ->generateString($theme_path);
+}

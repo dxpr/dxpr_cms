@@ -293,3 +293,8 @@ body.install-page {
     z-index: 1;
   }
 }
+
+body.install-page .page-wrapper {
+  background: transparent !important;
+}
+

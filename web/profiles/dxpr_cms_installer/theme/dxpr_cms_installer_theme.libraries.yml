@@ -5,8 +5,11 @@ maintenance-page:
       css/fonts.css: {}
       css/installer-styles.css: {}
       css/add-ons.css: {}
+  js:
+    js/batch-video-background.js: {}
   dependencies:
     - core/once
+    - core/drupal
 
 drupal.progress:
   js:
