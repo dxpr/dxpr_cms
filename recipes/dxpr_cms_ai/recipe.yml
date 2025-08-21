@@ -89,6 +89,7 @@ config:
         - 'generate ai alt tags'
         - 'access ai content strategy'
         - 'view analyze reports'
+        - 'view rl reports'
         - 'add ai_social_post entity'
         - 'view ai_social_post entity'
         - 'edit ai_social_post entity'
@@ -96,6 +97,7 @@ config:
       grantPermissions:
         - 'access ai content strategy'
         - 'view analyze reports'
+        - 'view rl reports'
         - 'generate ai alt tags'
         - 'add ai_social_post entity'
         - 'view ai_social_post entity'
@@ -105,6 +107,7 @@ config:
       grantPermissions:
         - 'access ai content strategy'
         - 'view analyze reports'
+        - 'view rl reports'
         - 'administer analyze'
         - 'administer ckeditor ai agent'
         # Markdownify related setup.
