@@ -94,6 +94,7 @@ config:
         - 'add ai_social_post entity'
         - 'view ai_social_post entity'
         - 'edit ai_social_post entity'
+        - 'use text format ai_social_posts'
     user.role.content_administrator:
       grantPermissions:
         - 'access ai content strategy'
@@ -104,6 +105,7 @@ config:
         - 'view ai_social_post entity'
         - 'edit ai_social_post entity'
         - 'delete ai_social_post entity'
+        - 'use text format ai_social_posts'
     user.role.site_builder:
       grantPermissions:
         - 'access ai content strategy'
@@ -119,6 +121,7 @@ config:
         - 'edit ai_social_post entity'
         - 'delete ai_social_post entity'
         - 'administer ai_social_post entity'
+        - 'use text format ai_social_posts'
     # Markdownify related setup.
     markdownify.settings:
       simpleConfigUpdate:
