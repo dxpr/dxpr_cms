@@ -5,7 +5,7 @@
     "require": {
         "drupal/core": ">=10.3",
         "drupal/bootstrap5": "^4.0.3",
-        "drupal/dxpr_theme": "^6.0.2",
+        "drupal/dxpr_theme": "^6.1@beta",
         "drupal/dxpr_theme_helper": "^2.0.0",
         "drupal/media_library_form_element": "^2.1.1"
     },
