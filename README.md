@@ -109,9 +109,9 @@ as malicious links or PII disclosure. By scanning content in real-time, this
 module mitigates risks during the content creation process and enhances
 overall security.
 
-### AI Sentiment Analysis (coming soon)
+### AI Sentiments Analysis (coming soon)
 
-The AI Sentiment Analysis feature provides real-time content analysis to
+The AI Sentiments Analysis feature provides real-time content analysis to
 identify emotional tones such as joy, anger, or neutrality. This will allow
 content editors to gauge the emotional impact of their content and make
 adjustments accordingly.
@@ -178,7 +178,7 @@ our [open core](https://en.wikipedia.org/wiki/Open-core_model)
 [DXPR Builder](https://www.drupal.org/project/dxpr_builder). While DXPR
 Builder and DXPR Theme do not yet have AI capabilities, DXPR is actively
 contributing to Drupal's innovation with a suite of AI-first modules. These
-include AI Image Alt Text, AI Views Sorting, AI Sentiment Analysis, AI
+include AI Image Alt Text, AI Views Sorting, AI Sentiments Analysis, AI
 Security Analyze, and the upcoming AI CKEditor Assistant, among others.
 
 ### Community Collaboration
