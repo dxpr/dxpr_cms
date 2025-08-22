@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: user
-  uuid: ee5c0321-7bd8-4d8f-94bf-53839609f8ac
+  uuid: f45a8b3c-2e17-4d8a-9f12-1a2b3c4d5e6f
 default:
   preferred_langcode:
     -
@@ -11,10 +11,10 @@ default:
       value: en
   name:
     -
-      value: 'Site Builder'
+      value: 'Content Administrator'
   mail:
     -
-      value: site.builder@cms.example
+      value: content.administrator@cms.example
   timezone:
     -
       value: Europe/Amsterdam
@@ -23,19 +23,19 @@ default:
       value: true
   created:
     -
-      value: 1669145491
+      value: 1669145500
   access:
     -
-      value: 1680532964
+      value: 1680709200
   login:
     -
-      value: 1680532324
+      value: 1680703300
   init:
     -
-      value: site.builder@cms.example
+      value: content.administrator@cms.example
   roles:
     -
-      target_id: site_builder
+      target_id: content_administrator
   path:
     -
       alias: ''

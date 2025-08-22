@@ -12,14 +12,9 @@ default:
   name:
     -
       value: 'Content Editor'
-  pass:
-    -
-      value: $S$EnDyYMWGy9fsXRfNEBZdBzuANIoT8h6forvKS.fPGRTv8B93VlOC
-      existing: ''
-      pre_hashed: false
   mail:
     -
-      value: content.editor@dxpr.com
+      value: content.editor@cms.example
   timezone:
     -
       value: Europe/Amsterdam
@@ -37,7 +32,7 @@ default:
       value: 1680703268
   init:
     -
-      value: content.editor@dxpr.com
+      value: content.editor@cms.example
   roles:
     -
       target_id: content_editor
