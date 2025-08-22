@@ -13,7 +13,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: Nziv8-Fg3bgdhHSGaHBEHOhI7SxBrkyENnWCTU5zWDA
+  default_config_hash: LwdWLLj65w2NXqdZCyUGxGFII6g9ky1CaZ3Ocdf7aWA
 id: news
 label: News
 module: views
@@ -113,8 +113,8 @@ display:
       cache:
         type: time
         options:
-          results_lifespan: 60
-          output_lifespan: 60
+          results_lifespan: 1
+          output_lifespan: 1
       empty:
         area:
           id: area
@@ -433,7 +433,7 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
-          cache_max_age: '60'
+          cache_max_age: '1'
           favor_recent: 1
           time_window_seconds: '31536000'
       arguments:
