@@ -6,11 +6,14 @@ dependencies:
     - core.entity_view_mode.node.card
     - field.storage.node.field_event__date
     - node.type.event
+    - system.menu.main
   module:
     - add_content_by_bundle
     - node
     - smart_date
     - user
+_core:
+  default_config_hash: joRuqiFWlpKHfczuq-S6yq-AGBvu-O2qswvDsMDHoTk
 id: events
 label: Events
 module: views
@@ -479,6 +482,15 @@ display:
           params: ''
       display_extenders: {  }
       path: events
+      menu:
+        type: normal
+        title: Events
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
