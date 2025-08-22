@@ -41,7 +41,6 @@ install:
   - trash
   - views
   - views_bootstrap
-  - webform
   # We don't have a specific use of the Options or Field UI modules in this recipe,
   # but we expect that site builders will want to add fields to their content types,
   # so install these modules anyway.
@@ -142,13 +141,6 @@ config:
         - 'view deleted entities'
         - 'restore node entities'
         - 'restore media entities'
-        - 'access webform overview'
-        - 'view own webform submission'
-        - 'edit own webform submission'
-        - 'delete own webform submission'
-        - 'create webform'
-        - 'edit own webform'
-        - 'delete own webform'
     user.role.content_administrator:
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -184,13 +176,6 @@ config:
         - 'restore node entities'
         - 'restore media entities'
         - 'restore taxonomy_term entities'
-        - 'access webform overview'
-        - 'view own webform submission'
-        - 'edit own webform submission'
-        - 'delete own webform submission'
-        - 'create webform'
-        - 'edit own webform'
-        - 'delete own webform'
 
     user.role.site_builder:
       grantPermissionsForEachNodeType:
@@ -233,18 +218,6 @@ config:
         - 'purge media entities'
         - 'purge taxonomy_term entities'
         - 'access site reports'
-        - 'access webform overview'
-        - 'view any webform submission'
-        - 'edit any webform submission'
-        - 'delete any webform submission'
-        - 'view own webform submission'
-        - 'edit own webform submission'
-        - 'delete own webform submission'
-        - 'create webform'
-        - 'edit any webform'
-        - 'delete any webform'
-        - 'edit own webform'
-        - 'delete own webform'
     # Disable the taxonomy and media scheduler views because they are not
     # needed and break the navigation menu.
     views.view.scheduler_scheduled_media:
