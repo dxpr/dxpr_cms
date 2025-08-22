@@ -1,3 +1,4 @@
+uuid: a18a4e2a-28ab-40d6-9795-dd5d640ebdca
 langcode: en
 status: true
 dependencies:
@@ -39,6 +40,7 @@ third_party_settings:
           section_classes: 'bg-primary-subtle py-4 px-4 my-4'
         components:
           f445fec6-859a-4382-a2b3-c6adac50c491:
+            uuid: f445fec6-859a-4382-a2b3-c6adac50c491
             region: first
             configuration:
               id: 'field_block:node:event:field_featured_image'
@@ -57,6 +59,7 @@ third_party_settings:
             weight: 0
             additional: {  }
           7ba011b7-5468-40ab-8b18-4c4c809c7c89:
+            uuid: 7ba011b7-5468-40ab-8b18-4c4c809c7c89
             region: second
             configuration:
               id: 'field_block:node:event:field_event__location_address'
@@ -74,6 +77,7 @@ third_party_settings:
             weight: 1
             additional: {  }
           1d4d3030-a66f-4eb8-9524-84871e712175:
+            uuid: 1d4d3030-a66f-4eb8-9524-84871e712175
             region: second
             configuration:
               id: 'field_block:node:event:field_event__location_name'
@@ -92,6 +96,7 @@ third_party_settings:
             weight: 0
             additional: {  }
           0561765a-b1af-4ce8-a01e-cd1f75d3e4aa:
+            uuid: 0561765a-b1af-4ce8-a01e-cd1f75d3e4aa
             region: third
             configuration:
               id: 'field_block:node:event:field_geofield'
@@ -202,6 +207,7 @@ third_party_settings:
           label: ''
         components:
           f5b85d4d-8778-4f04-b8dc-10a8bc93a0da:
+            uuid: f5b85d4d-8778-4f04-b8dc-10a8bc93a0da
             region: content
             configuration:
               id: 'extra_field_block:node:event:content_moderation_control'
@@ -211,6 +217,7 @@ third_party_settings:
             weight: 0
             additional: {  }
           91e4b920-2499-4e9f-8e36-2aa11774306e:
+            uuid: 91e4b920-2499-4e9f-8e36-2aa11774306e
             region: content
             configuration:
               id: 'field_block:node:event:field_content'
@@ -225,6 +232,7 @@ third_party_settings:
             weight: 6
             additional: {  }
           dc70d8af-07f7-45ce-82f6-31b1efecbb8f:
+            uuid: dc70d8af-07f7-45ce-82f6-31b1efecbb8f
             region: content
             configuration:
               id: 'field_block:node:event:field_event__link'
@@ -244,6 +252,7 @@ third_party_settings:
             weight: 7
             additional: {  }
           d33af099-0948-4a26-ade1-c9c981606e2f:
+            uuid: d33af099-0948-4a26-ade1-c9c981606e2f
             region: content
             configuration:
               id: 'field_block:node:event:field_event__file'
@@ -260,6 +269,7 @@ third_party_settings:
             weight: 8
             additional: {  }
           a6267978-afeb-4ea9-8d3f-f96aa64d58ab:
+            uuid: a6267978-afeb-4ea9-8d3f-f96aa64d58ab
             region: content
             configuration:
               id: 'field_block:node:event:field_tags'
@@ -275,6 +285,7 @@ third_party_settings:
             weight: 9
             additional: {  }
           c871a72e-ca57-411e-958c-539fec3529e1:
+            uuid: c871a72e-ca57-411e-958c-539fec3529e1
             region: content
             configuration:
               id: 'field_block:node:event:field_event__date'
@@ -328,6 +339,7 @@ third_party_settings:
             weight: 10
             additional: {  }
         third_party_settings: {  }
+_core:
   default_config_hash: AKCjWak511TLQM4f9MxHEBRZ-_jsq7PAbT7bTvF5nbE
 id: node.event.default
 targetEntityType: node
@@ -547,4 +559,3 @@ hidden:
   field_dth_main_content_width: true
   field_dth_page_layout: true
   links: true
-

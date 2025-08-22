@@ -1,3 +1,4 @@
+uuid: 13af6c95-91b1-48e1-86ba-820753e245b5
 langcode: en
 status: true
 dependencies:
@@ -26,6 +27,7 @@ third_party_settings:
           label: ''
         components:
           ef3dbec3-d4c2-481e-ae4e-526297acceed:
+            uuid: ef3dbec3-d4c2-481e-ae4e-526297acceed
             region: content
             configuration:
               id: 'field_block:node:news:field_featured_image'
@@ -60,6 +62,7 @@ third_party_settings:
                   style: ''
                   data: ''
           ef1d88e6-4477-43a9-a9a2-23efade33853:
+            uuid: ef1d88e6-4477-43a9-a9a2-23efade33853
             region: content
             configuration:
               id: 'field_block:node:news:field_content'
@@ -90,6 +93,7 @@ third_party_settings:
                   style: ''
                   data: ''
           43617bd8-2ce9-44c6-975e-1512223b14ea:
+            uuid: 43617bd8-2ce9-44c6-975e-1512223b14ea
             region: content
             configuration:
               id: 'views_block:news-related'
@@ -118,6 +122,7 @@ third_party_settings:
                   style: ''
                   data: ''
           68ad074b-b045-43f3-b4ea-c89278e5a851:
+            uuid: 68ad074b-b045-43f3-b4ea-c89278e5a851
             region: content
             configuration:
               id: 'field_block:node:news:field_tags'
@@ -149,6 +154,7 @@ third_party_settings:
                   style: ''
                   data: ''
           bbd9bda8-e7fd-49dc-9113-3ac04c14aae9:
+            uuid: bbd9bda8-e7fd-49dc-9113-3ac04c14aae9
             region: content
             configuration:
               id: 'extra_field_block:node:news:content_moderation_control'
@@ -158,6 +164,7 @@ third_party_settings:
             weight: 1
             additional: {  }
         third_party_settings: {  }
+_core:
   default_config_hash: dJuGfVwLRi66seEYOOh9twrie3FO9qkl16ht7pksYzA
 id: node.news.default
 targetEntityType: node
@@ -198,4 +205,3 @@ hidden:
   field_dth_main_content_width: true
   field_dth_page_layout: true
   links: true
-

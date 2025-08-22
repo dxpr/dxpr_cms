@@ -1,3 +1,4 @@
+uuid: 43324929-1ff2-4fc3-aced-8536d32190a5
 langcode: en
 status: true
 dependencies:
@@ -36,6 +37,7 @@ third_party_settings:
           section_classes: 'bg-primary-subtle py-4 px-4 my-4'
         components:
           ac86ac5e-6b08-49e4-8ea7-b32f8be8084e:
+            uuid: ac86ac5e-6b08-49e4-8ea7-b32f8be8084e
             region: first
             configuration:
               id: 'field_block:node:case_study:field_case_study__client_logo'
@@ -57,6 +59,7 @@ third_party_settings:
             weight: 0
             additional: {  }
           4cb33af1-7c90-4eed-8890-5c27d526ba68:
+            uuid: 4cb33af1-7c90-4eed-8890-5c27d526ba68
             region: second
             configuration:
               id: 'field_block:node:case_study:field_featured_image'
@@ -83,6 +86,7 @@ third_party_settings:
           section_classes: ''
         components:
           df925eef-8afb-4f9a-8431-415d5b28e3c1:
+            uuid: df925eef-8afb-4f9a-8431-415d5b28e3c1
             region: content
             configuration:
               id: 'field_block:node:case_study:field_tags'
@@ -101,6 +105,7 @@ third_party_settings:
             weight: 10
             additional: {  }
           8e28256f-9bba-4d3b-af40-8545a51b398b:
+            uuid: 8e28256f-9bba-4d3b-af40-8545a51b398b
             region: content
             configuration:
               id: 'extra_field_block:node:case_study:content_moderation_control'
@@ -115,6 +120,7 @@ third_party_settings:
             weight: 7
             additional: {  }
           739968bb-5952-482a-a215-9a642ef92064:
+            uuid: 739968bb-5952-482a-a215-9a642ef92064
             region: content
             configuration:
               id: 'field_block:node:case_study:field_content'
@@ -133,6 +139,7 @@ third_party_settings:
             weight: 8
             additional: {  }
           60cbfb7f-7ffb-4456-9488-6adc0c101abb:
+            uuid: 60cbfb7f-7ffb-4456-9488-6adc0c101abb
             region: content
             configuration:
               id: 'field_block:node:case_study:field_case_study__client_link'
@@ -163,6 +170,7 @@ third_party_settings:
           section_classes: ''
         components:
           f0fbaf1b-10a3-4b8c-b9f1-b4dc849f8432:
+            uuid: f0fbaf1b-10a3-4b8c-b9f1-b4dc849f8432
             region: content
             configuration:
               id: 'views_block:case_studies-related'
@@ -191,6 +199,7 @@ third_party_settings:
                   style: ''
                   data: ''
         third_party_settings: {  }
+_core:
   default_config_hash: sNMqrN8-LZkTsfkej76Hj5BxOuwtxe7ejcvKalOhkZw
 id: node.case_study.default
 targetEntityType: node
@@ -262,4 +271,3 @@ hidden:
   field_dth_main_content_width: true
   field_dth_page_layout: true
   links: true
-
