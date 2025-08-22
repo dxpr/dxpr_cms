@@ -13,7 +13,7 @@ install:
   - ai_social_posts
   - ai_content_strategy
   - analyze_ai_brand_voice
-  - analyze_ai_sentiment
+  - analyze_ai_sentiments
   - analyze_ai_content_marketing_audit
   - analyze_ai_content_security_audit
   - analyze_basic_content_info
@@ -27,6 +27,7 @@ install:
   - markdownify
   - markdownify_path
   - diff
+  - views
 recipes:
   - core/recipes/content_editor_role
   - dxpr_cms_privacy_basic
@@ -57,6 +58,13 @@ config:
     ai_content_strategy: '*'
     ai_checklist: '*'
     ai_social_posts: '*'
+    analyze: '*'
+    analyze_ai_sentiments: '*'
+    analyze_ai_brand_voice: '*'
+    analyze_ai_content_marketing_audit: '*'
+    analyze_ai_content_security_audit: '*'
+    analyze_basic_content_info: '*'
+    analyze_page_views: '*'
   actions:
     ai_agents.settings:
       simpleConfigUpdate:
