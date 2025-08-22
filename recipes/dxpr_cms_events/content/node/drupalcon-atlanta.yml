@@ -41,8 +41,8 @@ default:
       format: dxpr_builder_html
   field_event__date:
     -
-      value: 1742738400
-      end_value: 1743083940
+      value: 1913622466
+      end_value: 1913881666
       duration: 5759
       rrule: 0
       rrule_index: 0
