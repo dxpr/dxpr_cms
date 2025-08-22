@@ -6,6 +6,7 @@
     "require": {
         "drupal/autosave_form": "^1.10",
         "drupal/bpmn_io": "^2.0",
+        "drupal/block_classes": "^1.0",
         "drupal/core": ">=10.4",
         "drupal/dxpr_cms_image": "*",
         "drupal/dxpr_cms_layouts": "^1.0",
