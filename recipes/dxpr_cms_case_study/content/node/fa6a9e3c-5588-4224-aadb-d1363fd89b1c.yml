@@ -30,6 +30,136 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
   moderation_state:
     -
       value: published
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Delivering accessible healthcare websites with open-source tools | DXPR CMS'
+    -
+      tag: link
+      attributes:
+        rel: shortlink
+        href: 'https://dxpr-cms.ddev.site:8443/'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: link
+      attributes:
+        rel: image_src
+        href: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+    -
+      tag: meta
+      attributes:
+        name: rights
+        content: 'Copyright ©2025 All rights reserved.'
+    -
+      tag: meta
+      attributes:
+        name: referrer
+        content: unsafe-url
+    -
+      tag: meta
+      attributes:
+        property: 'og:site_name'
+        content: 'DXPR CMS'
+    -
+      tag: meta
+      attributes:
+        property: 'og:type'
+        content: article
+    -
+      tag: meta
+      attributes:
+        property: 'og:url'
+        content: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        property: 'og:title'
+        content: 'Delivering accessible healthcare websites with open-source tools'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:type'
+        content: image/webp
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:width'
+        content: '1200'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:height'
+        content: '630'
+    -
+      tag: meta
+      attributes:
+        property: 'og:updated_time'
+        content: '2025-08-15T14:44:46+02:00'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:alt'
+        content: 'Flags of European Union Countries.'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:card'
+        content: summary_large_image
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:title'
+        content: 'Delivering accessible healthcare websites with open-source tools'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_x/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=FeHTCNyu'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image:alt'
+        content: 'Flags of European Union Countries.'
+  path:
+    -
+      alias: /case-studies/delivering-accessible-healthcare-websites-open-source-tools
+      langcode: en
+      pathauto: 1
+  field_case_study__client_link:
+    -
+      uri: 'https://www.drupal.org/case-studies?sectors%5B%5D=24660'
+      title: 'Visit website'
+      options: {  }
+  field_case_study__client_logo:
+    -
+      entity: fa9c81ad-b282-4a3a-93b9-7952e0ed611e
+  field_case_study__client_name:
+    -
+      value: 'DXPR CMS'
+  field_content:
+    -
+      value: '<div class="az-element az-section" data-azb=az_section id=r63koa><div class="az-ctnr container" data-azcnt=true><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=Kqan23><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=Aio8ce><div class="az-element az-text ck-content" data-azb=az_text id=epoxj2><h2>Delivering Accessible Healthcare Websites with Open-Source Tools</h2></div></div></div><div class="az-element az-row row az-row--md mb-4" data-azat-device=md data-azat-el_class=mb-4 data-azb=az_row data-azcnt=true id=icerte><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=eaozfo><div class="az-element az-text ck-content" data-azb=az_text id=juzsxo><p>As the landscape of healthcare technology evolves, creating accessible healthcare websites has become more than just a legal requirement; it''s a critical aspect of delivering equitable care. By adhering to global accessibility standards such as WCAG 2.2 Level AA and leveraging open-source platforms, healthcare organizations can ensure their digital presence is both inclusive and compliant.</p></div></div></div><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=Hri0le><div class="az-element az-ctnr az-column mb-4 col-md-6" data-azat-el_class=mb-4 data-azat-width=1/2 data-azb=az_column data-azcnt=true id=Tbfq7j><div class="az-element az-image img-fluid overflow-hidden" data-azat-alt="Open-source tools enabling accessible healthcare websites in 2025." data-azat-el_class="img-fluid overflow-hidden" data-azat-image="https://promptahuman.com/600x400@2x?bg_color=666666&text_color=ffffff&title=accessibility_tools.jpg&prompt=Open-source%20tools%20enabling%20accessible%20healthcare%20websites%20in%202025." data-azat-height data-azat-width data-azb=az_image id=lclhnd><img alt="Open-source tools enabling accessible healthcare websites in 2025." src="https://promptahuman.com/600x400@2x?bg_color=666666&text_color=ffffff&title=accessibility_tools.jpg&prompt=Open-source%20tools%20enabling%20accessible%20healthcare%20websites%20in%202025." class=az-image-content></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=M56v6b><div class="az-element az-text ck-content" data-azb=az_text id=Vwn7i5><p>Open-source platforms such as WordPress, Drupal, and Medplum have emerged as leading solutions for developing accessible healthcare websites. Each offers unique benefits that can be tailored to meet complex healthcare requirements. WordPress provides flexibility and a rich ecosystem of plugins geared towards creating patient portals and engaging user experiences. Similarly, Drupal is renowned for its security and scalability, making it an ideal choice for large health systems that require robust data management and role-based access control.</p><p>Notably, Medplum stands out as a health-specific platform focused on interoperability and workflow customization, catering to the intricate demands of electronic health record (EHR) integrations. Its open-source foundation allows healthcare organizations to build, test, and deploy custom applications that are both compliant and cost-effective.</p></div></div></div><div class="az-element az-row row az-row--md mt-4" data-azat-device=md data-azat-el_class=mt-4 data-azb=az_row data-azcnt=true id=Hs5fao><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=x93jrb><div class="az-element az-text ck-content" data-azb=az_text id=B5kaa4><h3>Case Study: Northern Arizona Healthcare</h3><p>A prime example of successfully delivering accessible websites using open-source tools is the case of Northern Arizona Healthcare (NAH). During its transition from Drupal to WordPress, NAH prioritized accessibility by collaborating with Siteimprove for automated testing and monitoring. This strategic approach enabled the organization to achieve a 100% accessibility score, ensuring their site was free from barriers that often impede users with disabilities.</p><p>Compliance with WCAG standards was central to NAH''s migration strategy. By leveraging WordPress''s extensive plugin library, NAH implemented enhancements such as keyboard navigability for motor-impaired users, high contrast settings for visual accessibility, and comprehensive alt-text for images. Furthermore, conducting user testing with individuals with disabilities provided critical insights that guided iterative improvements in site functionality.</p></div></div></div><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=fwcfns><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=B0t8oc><div class="az-element az-text ck-content" data-azb=az_text id=k9qb6l><h3>Challenges and Opportunities</h3><p>Despite progress, many healthcare websites are still plagued by accessibility issues, including poor contrast ratios, inaccessible forms, and insufficient keyboard support. These barriers not only impact user experience but also expose organizations to legal risks under increasing regulatory scrutiny.</p><p>Going forward, healthcare organizations must embrace continuous monitoring and regular audits to ensure compliance and inclusivity. Open-source platforms, with their collaborative communities, provide abundant resources and tools to facilitate this ongoing process. By prioritizing accessibility in their digital strategies, healthcare providers can significantly enhance patient engagement, trust, and satisfaction.</p></div></div></div></div></div>'
+      format: dxpr_builder_html
+  field_featured_image:
+    -
+      entity: 35a186fc-5bff-4357-9f4b-a9c6218866fc
+  field_tags:
+    -
+      entity: d48adeba-e388-4e82-820b-98bbd2f35a46

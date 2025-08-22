@@ -33,6 +33,136 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
   moderation_state:
     -
       value: published
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Modernizing university websites with Drupal | DXPR CMS'
+    -
+      tag: link
+      attributes:
+        rel: shortlink
+        href: 'https://dxpr-cms.ddev.site:8443/'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: link
+      attributes:
+        rel: image_src
+        href: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+    -
+      tag: meta
+      attributes:
+        name: rights
+        content: 'Copyright ©2025 All rights reserved.'
+    -
+      tag: meta
+      attributes:
+        name: referrer
+        content: unsafe-url
+    -
+      tag: meta
+      attributes:
+        property: 'og:site_name'
+        content: 'DXPR CMS'
+    -
+      tag: meta
+      attributes:
+        property: 'og:type'
+        content: article
+    -
+      tag: meta
+      attributes:
+        property: 'og:url'
+        content: 'https://dxpr-cms.ddev.site:8443/home'
+    -
+      tag: meta
+      attributes:
+        property: 'og:title'
+        content: 'Modernizing university websites with Drupal'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:type'
+        content: image/webp
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:width'
+        content: '1200'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:height'
+        content: '630'
+    -
+      tag: meta
+      attributes:
+        property: 'og:updated_time'
+        content: '2025-08-15T14:56:10+02:00'
+    -
+      tag: meta
+      attributes:
+        property: 'og:image:alt'
+        content: 'Flags of European Union Countries.'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:card'
+        content: summary_large_image
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:title'
+        content: 'Modernizing university websites with Drupal'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image'
+        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_x/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=FeHTCNyu'
+    -
+      tag: meta
+      attributes:
+        name: 'twitter:image:alt'
+        content: 'Flags of European Union Countries.'
+  path:
+    -
+      alias: /case-studies/modernizing-university-websites-drupal
+      langcode: en
+      pathauto: 1
+  field_case_study__client_link:
+    -
+      uri: 'https://www.drupal.org/case-studies?sectors%5B%5D=24660'
+      title: 'Visit website'
+      options: {  }
+  field_case_study__client_logo:
+    -
+      entity: aba61bc1-3512-4fec-857d-ed5a50cd53d3
+  field_case_study__client_name:
+    -
+      value: 'DXPR CMS'
+  field_content:
+    -
+      value: '<div class="az-element az-section" data-azb=az_section id=y2mxku><div class="az-ctnr container" data-azcnt=true><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=R9qqbt><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=G9405z><div class="az-element az-text ck-content" data-azb=az_text id=Swfyvq><h3>Flexibility and Scalability</h3><p>Drupal''s modular architecture offers universities unparalleled flexibility. Its ability to support multi-site management allows institutions to maintain a consistent brand identity while accommodating diverse departmental needs. This setup benefits both smaller colleges requiring integrated departmental sites and larger universities managing extensive digital ecosystems.</p><p>The ability to customize and add functionalities such as event calendars, directories, and personalized content ensures that universities can adapt their websites without the need for extensive rebuilds. This customization capability is vital in a rapidly evolving digital landscape.</p></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=z3y4dm><div class="az-element az-text ck-content" data-azb=az_text id=g0am86><h3>Seamless Integration and Security</h3><p>Integration capabilities are where Drupal particularly excels, offering seamless connections with Student Information Systems (SIS), Learning Management Systems (LMS), and other critical educational platforms. This integration helps to eliminate data silos, leading to a more unified data environment across campus.</p><p>Security remains a top priority for educational institutions. Drupal''s robust security features, backed by a vigilant developer community, ensure that the platform is well-equipped to handle the sensitive data typical of university operations.</p></div></div></div><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=Ea0te4><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=M8p80a><div class="az-element az-text ck-content" data-azb=az_text id=Zptx8t><h3>Enhanced User Experience</h3><p>Drupal provides enhanced user experiences through responsive design modules and intuitive interface tools like the Experience Builder. These features allow content editors, even those without technical expertise, to manage content efficiently. This ease of use extends to students, faculty, and staff, making the platform accessible and engaging.</p><p>Furthermore, AI-powered personalization and automation capabilities ensure that the content delivered is relevant and engaging, which is especially crucial for prospective students and other key stakeholders.</p></div></div><div class="az-element az-ctnr az-column col-md-6" data-azat-width=1/2 data-azb=az_column data-azcnt=true id=a2gg1f><div class="az-element az-text ck-content" data-azb=az_text id=zonyta><h3>Case Studies: Success Stories</h3><p>Institutions such as Ashland University and UC Santa Cruz have leveraged Drupal to revamp their digital interfaces. By integrating AI functionalities and customizable layouts, these universities have seen enhanced user interaction and improved recruitment outcomes. Drupal’s commitment to accessibility and inclusive design further supports these institutions in providing equitable digital access.</p></div></div></div><div class="az-element az-row row az-row--md" data-azat-device=md data-azb=az_row data-azcnt=true id=qldaqu><div class="az-element az-ctnr az-column col-md-12" data-azat-width=1/1 data-azb=az_column data-azcnt=true id=ye3tzu><div class="az-element az-text ck-content" data-azb=az_text id=Ksf7kn><h3>Conclusion</h3><p>As universities continue to navigate the demands of digital transformation, Drupal offers a comprehensive solution for modernizing their online presence. The platform’s combination of enterprise-grade features, adaptability, and innovativeness positions it as an ideal choice for institutions eager to enhance their digital infrastructure and provide engaging, reliable experiences to all users.</p></div></div></div></div></div>'
+      format: dxpr_builder_html
+  field_featured_image:
+    -
+      entity: 35a186fc-5bff-4357-9f4b-a9c6218866fc
+  field_tags:
+    -
+      entity: d48adeba-e388-4e82-820b-98bbd2f35a46
