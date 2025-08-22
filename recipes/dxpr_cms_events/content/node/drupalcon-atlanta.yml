@@ -18,7 +18,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'DrupalCon Atlanta 2025'
+      value: 'DrupalCon Atlanta 2030'
   created:
     -
       value: 1734408562
@@ -33,11 +33,11 @@ default:
       value: published
   path:
     -
-      alias: /events/drupalcon-atlanta-2025
+      alias: /events/drupalcon-atlanta-2030
       langcode: en
   field_content:
     -
-      value: '<p>DrupalCon is heading to the incredible city of Atlanta, Georgia, from 24-27 March 2025. You’ll get the chance to connect with the Drupal community through insightful sessions, informative discussions, networking opportunities, and more. Don’t miss this opportunity to visit a city rich with history and to get together with fellow Drupalers!<br><br><strong>When you buy a conference ticket, you’ll get access to:</strong></p><ul><li dir="ltr">2-hour&nbsp;Welcome Party at the Expo Hall</li><li dir="ltr">Trivia Night</li><li dir="ltr">All general conference sessions + contribution sessions including Driesnote</li><li dir="ltr">Keynote speakers, access to Expo Hall, and raffle contest</li><li dir="ltr">Lunch and coffee breaks</li><li dir="ltr">and more!&nbsp;</li></ul><p><a href="https://events.drupal.org/atlanta2025/program-glance">View the program at a glance now</a>.</p><p><a href="https://events.drupal.org/atlanta2025/summits-trainings">Trainings and Summits</a> will be available to purchase on,&nbsp;<strong>Monday, 18 November</strong>. These include the Industry Summits and Trainings for Government, Higher Education, Nonprofit, Healthcare, and Community. Stay tuned!<br><br>Applications are also available for our needs-based Scholarships and Community Grants, which close on&nbsp;<strong>20 December</strong>.&nbsp;<a href="https://events.drupal.org/atlanta2025/scholarships-community-grants">Visit our Scholarships and Community Grants page</a> for more information on eligibility criteria and to submit an application.</p>'
+      value: '<p>DrupalCon is heading to the incredible city of Atlanta, Georgia, from 24-27 March 2030. You’ll get the chance to connect with the Drupal community through insightful sessions, informative discussions, networking opportunities, and more. Don’t miss this opportunity to visit a city rich with history and to get together with fellow Drupalers!<br><br><strong>When you buy a conference ticket, you’ll get access to:</strong></p><ul><li dir="ltr">2-hour&nbsp;Welcome Party at the Expo Hall</li><li dir="ltr">Trivia Night</li><li dir="ltr">All general conference sessions + contribution sessions including Driesnote</li><li dir="ltr">Keynote speakers, access to Expo Hall, and raffle contest</li><li dir="ltr">Lunch and coffee breaks</li><li dir="ltr">and more!&nbsp;</li></ul><p><a href="https://events.drupal.org/atlanta2030/program-glance">View the program at a glance now</a>.</p><p><a href="https://events.drupal.org/atlanta2030/summits-trainings">Trainings and Summits</a> will be available to purchase on,&nbsp;<strong>Monday, 18 November</strong>. These include the Industry Summits and Trainings for Government, Higher Education, Nonprofit, Healthcare, and Community. Stay tuned!<br><br>Applications are also available for our needs-based Scholarships and Community Grants, which close on&nbsp;<strong>20 December</strong>.&nbsp;<a href="https://events.drupal.org/atlanta2030/scholarships-community-grants">Visit our Scholarships and Community Grants page</a> for more information on eligibility criteria and to submit an application.</p>'
       format: dxpr_builder_html
   field_event__date:
     -
@@ -49,7 +49,7 @@ default:
       timezone: ''
   field_event__link:
     -
-      uri: 'https://events.drupal.org/atlanta2025'
+      uri: 'https://events.drupal.org/atlanta2030'
       title: 'DrupalCon Atlanta website'
       options: {}
   field_event__location_address:
