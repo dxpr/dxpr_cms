@@ -50,6 +50,7 @@ Follow these steps to install DXPR CMS:
    ddev drush recipe ../recipes/dxpr_cms_events  
    ddev drush recipe ../recipes/dxpr_cms_forms
    ddev drush recipe ../recipes/dxpr_cms_news
+   ddev drush recipe ../recipes/dxpr_cms_multilingual
    ddev drush recipe ../recipes/dxpr_cms_google_analytics
    ddev drush recipe ../recipes/dxpr_cms_seo_tools
    ```
