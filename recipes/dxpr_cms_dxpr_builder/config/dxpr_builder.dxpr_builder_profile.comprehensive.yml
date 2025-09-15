@@ -2,15 +2,12 @@ uuid: de455060-853f-4e1b-b0d7-22b93ba74f99
 langcode: en
 status: true
 dependencies: {  }
-id: medium
-label: Medium
+id: comprehensive
+label: Comprehensive content elements
 dxpr_editor: true
 weight: 0
 roles:
-  - administrator
-  - site_builder
   - content_administrator
-  - content_editor
 elements:
   - az_accordion
   - az_alert

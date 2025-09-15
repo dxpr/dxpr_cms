@@ -2,14 +2,11 @@ uuid: 1417509e-05c3-4817-b85f-788716852069
 langcode: en
 status: true
 dependencies: {  }
-id: light
-label: Light
+id: basic
+label: Basic Content Elements
 dxpr_editor: true
 weight: 0
 roles:
-  - administrator
-  - site_builder
-  - content_administrator
   - content_editor
 elements:
   - az_blockquote
