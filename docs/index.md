@@ -2,6 +2,8 @@
 
 Welcome to the DXPR CMS documentation. DXPR CMS is a powerful, marketing-focused Drupal distribution that empowers content creators and marketers to build beautiful websites without coding.
 
+*Last updated: September 2025*
+
 ## What is DXPR CMS?
 
 DXPR CMS combines the power and flexibility of Drupal with an intuitive page builder and marketing tools, making it the perfect choice for organizations that need enterprise-grade features with ease of use.
