@@ -52,6 +52,7 @@ extra:
       link: https://www.drupal.org/node/2303425
 nav:
   - Home: index.md
+  - Modules: modules.md
   - Kitchen Sink Demo: kitchen-sink.md
 docs_dir: docs
 site_dir: site
