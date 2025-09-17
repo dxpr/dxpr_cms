@@ -33,7 +33,13 @@ pages:
         - mkdocs.yml
         - .gitlab-ci.yml
       when: on_success
-    # Run automatically on 1.x branch (our default branch)
+    # Run automatically on default branch (0.x) and 1.x branch
+    - if: '$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
+      changes:
+        - docs/**/*
+        - mkdocs.yml
+        - .gitlab-ci.yml
+      when: on_success
     - if: '$CI_COMMIT_REF_NAME == "1.x"'
       changes:
         - docs/**/*
