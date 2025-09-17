@@ -14,3 +14,11 @@ eca.model.*.yml
 .idea/
 /tmp
 /db
+
+# Drupal files and directories
+/web/core/
+/web/libraries/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/sites/*/files/
+/web/sites/*/private/
