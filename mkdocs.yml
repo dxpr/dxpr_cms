@@ -49,7 +49,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://nl.linkedin.com/company/dxpr
     - icon: fontawesome/brands/drupal
-      link: https://www.drupal.org/project/dxpr_cms
+      link: https://www.drupal.org/node/2303425
 nav:
   - Home: index.md
   - Kitchen Sink Demo: kitchen-sink.md
