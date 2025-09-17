@@ -21,4 +21,4 @@ selection_criteria:
       blog: blog
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

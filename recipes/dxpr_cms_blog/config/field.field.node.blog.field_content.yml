@@ -14,9 +14,12 @@ label: Content
 description: 'The content of this page.'
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: ''
+    format: dxpr_builder_html
 default_value_callback: ''
 settings:
   allowed_formats:
-    - content_format
+    - dxpr_builder_html
 field_type: text_long

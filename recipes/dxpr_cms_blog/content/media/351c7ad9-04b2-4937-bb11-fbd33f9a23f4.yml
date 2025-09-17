@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 351c7ad9-04b2-4937-bb11-fbd33f9a23f4
+  bundle: image
+  default_langcode: en
+  depends:
+    d3393f13-cd54-4044-9316-4195e4727659: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: blog-4.png
+  created:
+    -
+      value: 1755247700
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: d3393f13-cd54-4044-9316-4195e4727659
+      alt: 'Purple and lavender abstract texture with soft brush strokes.'
+      title: ''
+      width: 1536
+      height: 1024

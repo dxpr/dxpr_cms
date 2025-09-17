@@ -23,7 +23,7 @@ default:
     -
       target_uuid: 6cac9014-4fb3-4152-a3df-16420d9517e9
       title: ''
-      options: {  }
+      options: {}
   external:
     -
       value: false

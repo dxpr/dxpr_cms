@@ -1,7 +1,7 @@
 uuid: 7ea64269-0429-4fd8-8666-290d93a4616b
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 _core:
   default_config_hash: YzZh6H_mXyPGZIh537BXwZWEr6H3Ca5-VwRZRiSM87s
 name: dxpr_builder_media_thumbnail

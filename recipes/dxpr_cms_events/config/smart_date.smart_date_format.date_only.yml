@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: date_only
 label: 'Date Only'
 date_format: 'D, j M Y'

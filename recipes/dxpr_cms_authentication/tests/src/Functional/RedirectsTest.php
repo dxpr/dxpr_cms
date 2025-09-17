@@ -7,7 +7,6 @@ namespace Drupal\Tests\dxpr_cms_authentication\Functional;
 use Drupal\Core\Test\AssertMailTrait;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
-use Drupal\user\Entity\Role;
 
 /**
  * @group dxpr_cms_authentication
@@ -22,6 +21,9 @@ class RedirectsTest extends BrowserTestBase {
    */
   protected $defaultTheme = 'stark';
 
+  /**
+   *
+   */
   public function testRedirects(): void {
     $dir = realpath(__DIR__ . '/../../..');
     $this->applyRecipe($dir);

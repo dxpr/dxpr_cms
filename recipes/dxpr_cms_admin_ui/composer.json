@@ -4,12 +4,13 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/coffee": "^2",
+        "drupal/admin_toolbar": "^3.6",
         "drupal/core": ">=10.3",
         "drupal/dashboard": "^2",
-        "drupal/gin": "^4.0.6",
+        "drupal/gin": "5.0.x-dev",
+        "drupal/gin_toolbar": "^3.0.2",
         "drupal/sam": "^1.2",
         "drupal/tagify": "^1.2"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

@@ -1,80 +1,53 @@
 name: AI Assistant
-type: Dxpr CMS
-description: Adds integration with AI services, such as alt text generation and a chat bot to assist with site building. Requires an API key from Open AI or Anthropic.
+type: DXPR CMS
+description: Adds integration with AI services, such as alt text generation and content analysis. Requires a DXPR API key.
 install:
   - key
   - block
   - taxonomy
   - ai
-  - ai_provider_openai
-  - ai_provider_anthropic
+  - ai_provider_dxpr
   - ai_image_alt_text
-  - ai_assistant_api
-  - ai_chatbot
   - ai_agents
+  - ai_checklist
+  - ai_social_posts
+  - ai_content_strategy
+  - analyze_ai_brand_voice
+  - analyze_ai_sentiments
+  - analyze_ai_content_marketing_audit
+  - analyze_ai_content_security_audit
+  - analyze_basic_content_info
+  - analyze_page_views
+  - ai_sorting
+  - analyze
+  - rl
+  - views_color_scales
+  - ckeditor_ai_agent
   - menu_link_content
+  - markdownify
+  - markdownify_path
+  - diff
+  - views
 recipes:
   - core/recipes/content_editor_role
   - dxpr_cms_privacy_basic
+  - dxpr_cms_roles
 input:
-  # This input is not actually used in our config actions; it's only here to
-  # provide a toggle for the API key fields in a form.
-  provider:
+  dxpr_api_key:
     data_type: string
-    description: Which AI provider to use.
-    default:
-      source: value
-      value: openai
-    form:
-      '#type': radios
-      '#title': Provider
-      '#description': Which AI provider to use.
-      '#options':
-        openai: OpenAI
-        anthropic: Anthropic
-  openai_api_key:
-    data_type: string
-    description: The OpenAI API key, if you want to use OpenAI.
+    description: The DXPR API key for AI services.
     prompt:
       method: ask
       arguments:
-        question: 'If you want to use OpenAI, enter your OpenAI API key. Otherwise, you can leave this empty:'
+        question: 'Enter your DXPR API key (get yours free at https://dxpr.com/user/free-registration):'
     form:
       '#type': 'textfield'
-      '#description': 'Enter your OpenAI API key.<br>You can find your API keys in <a href="https://platform.openai.com/settings/organization/api-keys" target="_blank">your OpenAI account settings (opens new window)</a>.<br><strong>Note:</strong> A paid OpenAI plan is required for AI features to function.'
-      '#title': 'API Key'
-      '#required': false
-      '#maxlength': 256
+      '#description': 'Sign up free at <a href="https://dxpr.com/user/free-registration" target="_blank">DXPR.com</a> (takes 30 seconds) and grab your key from the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>. Unlock enterprise-grade AI access included with your free account.'
+      '#title': 'DXPR API Key'
+      '#required': true
+      '#maxlength': 2048
       '#attributes':
-        autocomplete: off
-      # Only show this field if OpenAI is the selected provider.
-      '#states':
-        visible:
-          'input[name*="dxpr_cms_ai"][name$="[provider]"]':
-            value: openai
-    default:
-      source: value
-      value: ''
-  anthropic_api_key:
-    data_type: string
-    description: The Anthropic API key, if you want to use Anthropic.
-    prompt:
-      method: ask
-      arguments:
-        question: 'If you want to use Anthropic, enter your Anthropic API key. Otherwise, you can leave this empty:'
-    form:
-      '#type': 'textfield'
-      '#description': 'Enter your Anthropic API key.<br>You can find your API keys in <a href="https://console.anthropic.com/settings/keys" target="_blank">your Anthropic account settings (opens new window)</a>.<br><strong>Note:</strong> A paid Anthropic plan is required for AI features to function.'
-      '#title': 'API Key'
-      '#required': false
-      '#maxlength': 256
-      '#attributes':
-        autocomplete: off
-      # Only show this field if Anthropic is the selected provider.
-      '#states':
-        visible:
-          'input[name*="dxpr_cms_ai"][name$="[provider]"]':
-            value: anthropic
+        autocomplete: 'off'
     default:
       source: value
       value: ''
@@ -82,6 +55,16 @@ config:
   import:
     ai_image_alt_text: '*'
     ai_agents: '*'
+    ai_content_strategy: '*'
+    ai_checklist: '*'
+    ai_social_posts: '*'
+    analyze: '*'
+    analyze_ai_sentiments: '*'
+    analyze_ai_brand_voice: '*'
+    analyze_ai_content_marketing_audit: '*'
+    analyze_ai_content_security_audit: '*'
+    analyze_basic_content_info: '*'
+    analyze_page_views: '*'
   actions:
     ai_agents.settings:
       simpleConfigUpdate:
@@ -99,46 +82,56 @@ config:
               authenticated: 0
               content_editor: 0
               administrator: 0
-            plugin_settings: {  }
-    ai_provider_openai.settings:
+            plugin_settings: {}
+    ai_provider_dxpr.settings:
       setupAiProvider:
-        key_value: ${openai_api_key}
-        key_name: openai_api_key
-        key_label: 'OpenAI API Key'
-        env_var: openai_api_key
-        provider: openai
-      simpleConfigUpdate:
-        moderation: true
-    ai_provider_anthropic.settings:
-      setupAiProvider:
-        key_value: ${anthropic_api_key}
-        key_name: anthropic_api_key
-        key_label: 'Anthropic API Key'
-        env_var: anthropic_api_key
-        provider: anthropic
-      simpleConfigUpdate:
-        openai_moderation: false
-    block.block.ai_chatbot:
-      placeBlockInAdminTheme:
-        region:
-          gin: content
-          claro: content
-        default_region: content
-        plugin: ai_chatbot_block
-        settings:
-          id: ai_chatbot_block
-          label: 'Drupal Agent Chatbot'
-          label_display: '0'
-          provider: ai_chatbot
-          ai_assistant: drupal_agent_assistant
-          bot_name: 'Drupal Agent'
-          stream: 0
-          default_avatar: /profiles/dxpr_cms_installer/images/dxpr-logo-dark.svg
-          first_message: 'Hello! How can I assist you today?'
-          show_structured_results: 1
-    klaro.klaro_app.deepchat:
-      enable: []
+        key_value: ${dxpr_api_key}
+        key_name: dxpr_api_key
+        key_label: 'DXPR API Key'
+        env_var: dxpr_api_key
+        provider: dxpr
     klaro.klaro_app.ai_alt_text_generation:
       enable: []
+    # Grant permissions to roles.
     user.role.content_editor:
-      grantPermission: 'generate ai alt tags'
+      grantPermissions:
+        - 'generate ai alt tags'
+        - 'access ai content strategy'
+        - 'view analyze reports'
+        - 'view rl reports'
+        - 'add ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'use text format ai_social_posts'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'access ai content strategy'
+        - 'view analyze reports'
+        - 'view rl reports'
+        - 'generate ai alt tags'
+        - 'add ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'delete ai_social_post entity'
+        - 'use text format ai_social_posts'
+    user.role.site_builder:
+      grantPermissions:
+        - 'access ai content strategy'
+        - 'view analyze reports'
+        - 'view rl reports'
+        - 'administer analyze'
+        - 'administer ckeditor ai agent'
+        # Markdownify related setup.
+        - 'administer markdownify'
+        - 'generate ai alt tags'
+        - 'add ai_social_post entity'
+        - 'view ai_social_post entity'
+        - 'edit ai_social_post entity'
+        - 'delete ai_social_post entity'
+        - 'administer ai_social_post entity'
+        - 'use text format ai_social_posts'
+    # Markdownify related setup.
+    markdownify.settings:
+      simpleConfigUpdate:
+        supported_entity_types:
+          - node

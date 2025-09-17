@@ -1,14 +1,21 @@
+uuid: 4874545b-9d71-4fb8-a415-f49d6fb93890
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
+    - field.storage.node.field_case_study__client_logo
     - node.type.case_study
+    - system.menu.main
     - taxonomy.vocabulary.tags
   module:
     - add_content_by_bundle
+    - ai_sorting
     - node
     - user
+    - views_bootstrap
+_core:
+  default_config_hash: 0ITKdEPG7wBtyeDbv_jfXM_td3_iKoq1P2fuYyvqAoQ
 id: case_studies
 label: 'Case studies'
 module: views
@@ -25,6 +32,69 @@ display:
     display_options:
       title: 'Case studies'
       fields:
+        field_case_study__client_logo:
+          id: field_case_study__client_logo
+          table: node__field_case_study__client_logo
+          field: field_case_study__client_logo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: div
+          element_class: 'my-3 client-logo'
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: client_logo_small
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -39,21 +109,39 @@ display:
           exclude: false
           alter:
             alter_text: false
+            text: ''
             make_link: false
+            path: ''
             absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
             word_boundary: false
             ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
             strip_tags: false
             trim: false
+            preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: p
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -72,6 +160,59 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: div
+          element_class: 'btn btn-primary'
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Read more'
+          output_url_as_text: false
+          absolute: false
       pager:
         type: mini
         options:
@@ -106,8 +247,10 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: time
+        options:
+          results_lifespan: 1
+          output_lifespan: 1
       empty:
         area:
           id: area
@@ -120,7 +263,7 @@ display:
           empty: true
           content:
             value: '<p>There are no case studies yet.</p>'
-            format: content_format
+            format: dxpr_builder_html
           tokenize: false
       sorts:
         sticky:
@@ -311,9 +454,11 @@ display:
           label: 'Add a case study'
           empty: true
           bundle: case_study
-          class: button
+          class: 'btn btn-outline-primary my-3 btn-lg'
           target: ''
           width: 600
+          form_mode: null
+          params: ''
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -324,36 +469,20 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
-  all:
-    id: all
-    display_title: 'All case studies'
-    display_plugin: block
-    position: 2
-    display_options:
-      display_description: ''
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_case_study__client_logo'
   latest:
     id: latest
-    display_title: 'Latest case studies'
+    display_title: 'Featured case studies'
     display_plugin: block
     position: 3
     display_options:
-      title: 'Latest case studies'
+      title: 'Featured case studies'
       pager:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 2
       sorts:
         created:
           id: created
@@ -371,9 +500,31 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          grid_class: ''
+          col_xs: col-12
+          col_sm: col-sm-6
+          col_md: none
+          col_lg: none
+          col_xl: none
+          col_xxl: none
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         sorts: false
         header: false
       display_description: ''
@@ -389,7 +540,7 @@ display:
           empty: false
           content:
             value: '<a href="/case-studies">All case studies</a>'
-            format: content_format
+            format: dxpr_builder_html
           tokenize: false
       display_extenders: {  }
     cache_metadata:
@@ -399,7 +550,59 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_case_study__client_logo'
+  page_1:
+    id: page_1
+    display_title: 'Case Studies'
+    display_plugin: page
+    position: 2
+    display_options:
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          grid_class: ''
+          col_xs: col-12
+          col_sm: col-sm-6
+          col_md: col-md-3
+          col_lg: none
+          col_xl: none
+          col_xxl: none
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      defaults:
+        style: false
+        row: false
+      display_description: ''
+      display_extenders: {  }
+      path: case-studies
+      menu:
+        type: normal
+        title: 'Case studies'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_case_study__client_logo'
   related:
     id: related
     display_title: 'Related case studies'
@@ -413,6 +616,24 @@ display:
           offset: 0
           items_per_page: 3
       empty: {  }
+      sorts:
+        ai_sorting:
+          id: ai_sorting
+          table: node_field_data
+          field: ai_sorting
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: ai_sorting
+          order: ''
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          cache_max_age: '1'
+          favor_recent: 0
+          time_window_seconds: '7776000'
       arguments:
         field_tags_target_id:
           id: field_tags_target_id
@@ -492,6 +713,7 @@ display:
         empty: false
         title: false
         pager: false
+        sorts: false
         arguments: false
         header: false
       display_description: ''
@@ -506,4 +728,5 @@ display:
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_case_study__client_logo'

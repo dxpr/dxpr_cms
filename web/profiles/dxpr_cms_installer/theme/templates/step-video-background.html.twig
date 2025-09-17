@@ -1,0 +1,21 @@
+{% set video_files = {
+  'name': 'dxpr-bg-light-3D-2D_slowmo2x_bounce.webm',
+  'recipes': 'dxpr-bg-light-3D-2D_slowmo3x_bounce.webm', 
+  'settings': 'dxpr-bg-light-5_slowmo1.1x_bounce.webm',
+  'account': 'dxpr-bg-light-5_slowmo2x_bounce.webm'
+} %}
+
+<div class="cms-installer__video-background" aria-hidden="true">
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    preload="auto"
+    class="cms-installer__background-video"
+  >
+    <source src="{{ theme_path }}/videos/{{ video_files[id] }}" type="video/webm">
+    <!-- Fallback div for browsers that don't support video -->
+    <div class="cms-installer__video-fallback"></div>
+  </video>
+</div> 

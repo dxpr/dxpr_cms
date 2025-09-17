@@ -59,6 +59,9 @@ class BasicSeoTest extends BrowserTestBase {
     $this->drupalCreateContentType(['type' => 'page']);
   }
 
+  /**
+   *
+   */
   public function testJsonLdBreadcrumbListExists(): void {
     $this->drupalPlaceBlock('system_breadcrumb_block');
 
@@ -70,6 +73,9 @@ class BasicSeoTest extends BrowserTestBase {
       ->elementAttributeContains('css', 'script:contains("BreadcrumbList")', 'type', 'application/ld+json');
   }
 
+  /**
+   *
+   */
   public function test404NotLogged(): void {
     $this->container->get(ModuleInstallerInterface::class)->install(['dblog']);
 

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9659f8bf-91ca-4245-aa30-f8ac10ccb13d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: logoipsum-380.png
+  uri:
+    -
+      value: 'public://2025-08/logoipsum-380.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 4476
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1755261876

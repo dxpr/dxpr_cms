@@ -19,6 +19,9 @@ class ComponentValidationTest extends BrowserTestBase {
    */
   protected $defaultTheme = 'stark';
 
+  /**
+   *
+   */
   public function test(): void {
     // The recipe block config requires an admin theme to be set.
     $this->config('system.theme')->set('admin', $this->defaultTheme)->save();

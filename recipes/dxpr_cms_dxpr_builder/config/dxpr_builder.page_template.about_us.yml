@@ -1,6 +1,6 @@
 langcode: en
 status: false
-dependencies: {  }
+dependencies: {}
 id: about_us
 label: 'About Us'
 category: about_pages

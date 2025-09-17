@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7a5b9c3d-4e8f-2a6b-9c1d-5e7f8a9b0c1d
+  bundle: news
+  default_langcode: en
+  depends:
+    d6206efd-8da4-4479-a0a3-807890330705: media
+    d48adeba-e388-4e82-820b-98bbd2f35a46: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Community Spotlight: Innovative CMS Projects'
+  created:
+    -
+      value: 1734608462
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/2024-12/community-spotlight-innovative-cms-projects
+      langcode: en
+  field_content:
+    -
+      value: "<p>The our CMS community continues to amaze with innovative projects and creative solutions that push the boundaries of what's possible with the platform. This month, we're highlighting several outstanding community contributions that demonstrate the versatility and power of our CMS.</p><h2>Featured Community Projects</h2><p>From nonprofit organizations creating impactful social platforms to enterprises building complex e-commerce solutions, the our CMS community is solving real-world challenges with creativity and technical excellence.</p><h3>Educational Platform Innovation</h3><p>A consortium of universities has developed a comprehensive learning management system built entirely on our CMS, serving over 50,000 students across multiple institutions. The platform features advanced content personalization, integrated assessment tools, and seamless multimedia support.</p><h3>Nonprofit Impact Platform</h3><p>A major nonprofit organization has launched a global platform connecting volunteers with opportunities worldwide. The system handles multilingual content, complex user workflows, and integration with various third-party services, all built on a robust our CMS foundation.</p><h2>Community Contributions</h2><p>Beyond individual projects, community members continue to contribute valuable modules, themes, and improvements to the our CMS ecosystem. Recent contributions include enhanced accessibility features, improved developer tools, and innovative content management solutions.</p><h3>Developer Tools Enhancement</h3><p>New development tools have been contributed to help streamline the our CMS development process, including improved debugging capabilities, automated testing frameworks, and enhanced deployment tools.</p><h2>Recognition and Support</h2><p>The our CMS Association continues to recognize outstanding community contributions through various programs and initiatives. These efforts help sustain the vibrant ecosystem that makes our CMS such a powerful and flexible platform.</p><p>Community members are encouraged to share their own innovative projects and contribute to the collective knowledge base that benefits all our CMS users worldwide.</p>"
+      format: dxpr_builder_html
+  field_featured_image:
+    -
+      entity: d6206efd-8da4-4479-a0a3-807890330705
+  field_tags:
+    -
+      entity: d48adeba-e388-4e82-820b-98bbd2f35a46

@@ -6,12 +6,11 @@
         "drupal/core": ">=10.3",
         "drupal/contact_block": "^2.0",
         "drupal/dxpr_cms_content_type_base": "*",
-        "drupal/dxpr_builder": "^2.7.0-beta5",
+        "drupal/dxpr_builder": "^2.8.0-alpha3",
         "drupal/field_group": "^3.6.0",
-        "drupal/responsive_preview": "^2.2.0",
         "drupal/section_library": "^1.2.2",
         "drupal/dxpr_theme_helper": "^2.0.0",
-        "drupal/menu_link_attributes": "^1.5.0",
-        "drupal/moderation_dashboard": "^3.1.0"
-    }
+        "drupal/menu_link_attributes": "^1.5.0"
+    },
+    "version": "1.0.0-beta1"
 }

@@ -15,7 +15,7 @@ events:
   Event_uncaught_exception:
     plugin: 'kernel:exception_status_code'
     label: 'Uncaught Exception'
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Activity_and
@@ -40,12 +40,12 @@ conditions:
       type: value
       negate: true
       entity: node
-gateways: {  }
+gateways: {}
 actions:
   Activity_and:
     plugin: eca_void_and_condition
     label: AND
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Activity_switch_user_1
@@ -77,4 +77,4 @@ actions:
       exception_type: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
       response_message: ''
       log_exception: false
-    successors: {  }
+    successors: {}

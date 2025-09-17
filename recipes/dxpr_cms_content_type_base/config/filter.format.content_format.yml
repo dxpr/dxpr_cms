@@ -26,19 +26,19 @@ filters:
     provider: filter
     status: true
     weight: 0
-    settings: {  }
+    settings: {}
   filter_autop:
     id: filter_autop
     provider: filter
     status: true
     weight: 0
-    settings: {  }
+    settings: {}
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
     weight: 0
-    settings: {  }
+    settings: {}
   filter_html:
     id: filter_html
     provider: filter
@@ -53,13 +53,13 @@ filters:
     provider: filter
     status: true
     weight: 10
-    settings: {  }
+    settings: {}
   filter_image_lazy_load:
     id: filter_image_lazy_load
     provider: filter
     status: true
     weight: 15
-    settings: {  }
+    settings: {}
   filter_url:
     id: filter_url
     provider: filter
@@ -94,4 +94,4 @@ filters:
         9_16_small: 9_16_small
         medium: medium
         small: small
-      allowed_media_types: {  }
+      allowed_media_types: {}

@@ -1,0 +1,40 @@
+name: DXPR CMS Installer
+type: profile
+core_version_requirement: '^11.1'
+description: 'Provides install-time tweaks for DXPR CMS. Not to be used in production.'
+
+# Use the `distribution` key to skip the installer's profile selection step.
+distribution:
+  name: DXPR CMS
+  install:
+    finish_url: 'home'
+    theme: dxpr_cms_installer_theme
+
+forms:
+  - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
+  - '\Drupal\dxpr_cms_installer\Form\ConfigureMultilingualForm'
+  - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'
+
+recipes:
+  required:
+    - drupal/dxpr_cms_starter
+  optional:
+    'Case Studies':
+      - drupal/dxpr_cms_case_study
+    'Events':
+      - drupal/dxpr_cms_events
+    'Forms':
+      - drupal/dxpr_cms_forms
+    'Google Analytics':
+      - drupal/dxpr_cms_google_analytics
+    'News':
+      - drupal/dxpr_cms_news
+    'SEO Tools':
+      - drupal/dxpr_cms_seo_tools
+    'Multilingual':
+      - drupal/dxpr_cms_multilingual
+
+# Explicitly provide an empty list of themes -- this prevents the installer from
+# injecting Stark into it.
+# @see install_profile_info()
+themes: []

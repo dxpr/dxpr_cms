@@ -10,6 +10,7 @@ install:
   - block_content
   - media_library_form_element
 config:
+  strict: false
   import:
     system:
       - system.menu.account

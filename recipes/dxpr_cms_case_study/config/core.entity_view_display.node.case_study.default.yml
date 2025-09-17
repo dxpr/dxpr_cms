@@ -1,3 +1,4 @@
+uuid: 43324929-1ff2-4fc3-aced-8536d32190a5
 langcode: en
 status: true
 dependencies:
@@ -6,32 +7,60 @@ dependencies:
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
     - field.field.node.case_study.field_content
-    - field.field.node.case_study.field_description
+    - field.field.node.case_study.field_dth_hide_regions
+    - field.field.node.case_study.field_dth_main_content_width
+    - field.field.node.case_study.field_dth_page_layout
     - field.field.node.case_study.field_featured_image
     - field.field.node.case_study.field_tags
     - image.style.uncropped_500w_webp
     - node.type.case_study
+    - views.view.case_studies
   module:
+    - dxpr_cms_layouts
     - layout_builder
     - layout_discovery
     - link
     - media
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: dxpr_two_column_container
         layout_settings:
-          label: Header
+          label: ''
           context_mapping: {  }
+          section_classes: 'bg-primary-subtle py-4 px-4 my-4'
         components:
+          ac86ac5e-6b08-49e4-8ea7-b32f8be8084e:
+            uuid: ac86ac5e-6b08-49e4-8ea7-b32f8be8084e
+            region: first
+            configuration:
+              id: 'field_block:node:case_study:field_case_study__client_logo'
+              label: 'Client logo'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: uncropped_300w_webp
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
           4cb33af1-7c90-4eed-8890-5c27d526ba68:
             uuid: 4cb33af1-7c90-4eed-8890-5c27d526ba68
-            region: content
+            region: second
             configuration:
               id: 'field_block:node:case_study:field_featured_image'
               label: 'Featured image'
@@ -46,8 +75,16 @@ third_party_settings:
                 settings:
                   view_mode: hero
                 third_party_settings: {  }
-            weight: 3
+            weight: 0
             additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          context_mapping: {  }
+          section_classes: ''
+        components:
           df925eef-8afb-4f9a-8431-415d5b28e3c1:
             uuid: df925eef-8afb-4f9a-8431-415d5b28e3c1
             region: content
@@ -65,32 +102,41 @@ third_party_settings:
                 settings:
                   link: true
                 third_party_settings: {  }
-            weight: 7
+            weight: 10
             additional: {  }
           8e28256f-9bba-4d3b-af40-8545a51b398b:
             uuid: 8e28256f-9bba-4d3b-af40-8545a51b398b
             region: content
             configuration:
               id: 'extra_field_block:node:case_study:content_moderation_control'
+              label: 'Moderation control'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
-            weight: 4
+              formatter:
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
             additional: {  }
           739968bb-5952-482a-a215-9a642ef92064:
             uuid: 739968bb-5952-482a-a215-9a642ef92064
             region: content
             configuration:
               id: 'field_block:node:case_study:field_content'
+              label: Content
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                type: text_default
+                type: dxpr_builder_text
                 label: hidden
-                settings: {  }
+                settings:
+                  profile: ''
                 third_party_settings: {  }
-            weight: 5
+            weight: 8
             additional: {  }
           60cbfb7f-7ffb-4456-9488-6adc0c101abb:
             uuid: 60cbfb7f-7ffb-4456-9488-6adc0c101abb
@@ -113,31 +159,48 @@ third_party_settings:
                   rel: '0'
                   target: _blank
                 third_party_settings: {  }
-            weight: 6
-            additional: {  }
-          ac86ac5e-6b08-49e4-8ea7-b32f8be8084e:
-            uuid: ac86ac5e-6b08-49e4-8ea7-b32f8be8084e
-            region: content
-            configuration:
-              id: 'field_block:node:case_study:field_case_study__client_logo'
-              label: 'Client logo'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: media_thumbnail
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: uncropped_300w_webp
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 1
+            weight: 9
             additional: {  }
         third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          section_classes: ''
+        components:
+          f0fbaf1b-10a3-4b8c-b9f1-b4dc849f8432:
+            uuid: f0fbaf1b-10a3-4b8c-b9f1-b4dc849f8432
+            region: content
+            configuration:
+              id: 'views_block:case_studies-related'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: null
+            weight: 0
+            additional:
+              component_attributes:
+                block_attributes:
+                  id: ''
+                  class: 'col-md-8 col-sm-6 mx-auto my-5'
+                  style: ''
+                  data: ''
+                block_title_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+                block_content_attributes:
+                  id: ''
+                  class: ''
+                  style: ''
+                  data: ''
+        third_party_settings: {  }
+_core:
+  default_config_hash: sNMqrN8-LZkTsfkej76Hj5BxOuwtxe7ejcvKalOhkZw
 id: node.case_study.default
 targetEntityType: node
 bundle: case_study
@@ -204,5 +267,7 @@ content:
     weight: 2
     region: content
 hidden:
-  field_description: true
+  field_dth_hide_regions: true
+  field_dth_main_content_width: true
+  field_dth_page_layout: true
   links: true

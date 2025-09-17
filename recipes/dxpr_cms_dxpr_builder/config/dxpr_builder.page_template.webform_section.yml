@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: webform_section
 label: 'Webform Section'
 category: 'Site Building'

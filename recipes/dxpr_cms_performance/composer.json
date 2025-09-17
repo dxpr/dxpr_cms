@@ -3,7 +3,8 @@
     "type": "drupal-recipe",
     "require": {
         "drupal/core": ">=10.3",
-        "drupal/advagg": "^6.0@alpha",
-        "drupal/minifyhtml": "^2.0"
-    }
+        "drupal/minifyhtml": "^2.0",
+        "drupal/speculative_loading": "^1.0"
+    },
+    "version": "1.0.0-beta1"
 }

@@ -25,6 +25,9 @@ class ComponentValidationTest extends BrowserTestBase {
    */
   protected $defaultTheme = 'stark';
 
+  /**
+   *
+   */
   public function test(): void {
     $dir = realpath(__DIR__ . '/../../..');
     // The recipe should apply cleanly.
@@ -41,7 +44,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertFieldsInOrder($form_display, [
       'title',
       'field_featured_image',
-      'field_description',
       'field_content',
       'field_tags',
     ]);
@@ -60,7 +62,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($card_display->getComponent('links'));
     $this->assertFieldsInOrder($card_display, [
       'field_featured_image',
-      'field_description',
     ]);
     $this->assertArraySubset([
       'field_featured_image' => [
@@ -72,7 +73,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($teaser_display->getComponent('links'));
     $this->assertFieldsInOrder($teaser_display, [
       'field_featured_image',
-      'field_description',
     ]);
 
     $this->assertContentModel([
@@ -85,15 +85,6 @@ class ComponentValidationTest extends BrowserTestBase {
           'label' => 'Title',
           'input type' => 'text',
           'help text' => '',
-        ],
-        'field_description' => [
-          'type' => 'string_long',
-          'cardinality' => 1,
-          'required' => TRUE,
-          'translatable' => TRUE,
-          'label' => 'Description',
-          'input type' => 'textarea',
-          'help text' => 'Describe the page content. This appears as the description in search engine results.',
         ],
         'field_featured_image' => [
           'type' => 'entity_reference',

@@ -1,0 +1,75 @@
+uuid: 1417509e-05c3-4817-b85f-788716852069
+langcode: en
+status: true
+dependencies: {  }
+id: basic
+label: Basic Content Elements
+dxpr_editor: true
+weight: 0
+roles:
+  - content_editor
+elements:
+  - az_blockquote
+  - az_button
+  - az_card
+  - az_text
+  - az_row
+  - az_section
+blocks: {  }
+views: {  }
+page_templates: {  }
+user_templates: {  }
+inline_buttons:
+  - aiAgentButton
+  - aiAgentToneButton
+  - bold
+  - italic
+  - 'alignment:left'
+  - 'alignment:center'
+  - 'alignment:right'
+  - 'alignment:justify'
+  - bulletedList
+  - undo
+  - redo
+  - link
+  - insertImage
+  - fontColor
+  - fontSize
+  - removeFormat
+  - heading
+  - style
+  - insertTable
+  - check_uncheck_all_wrapper
+modal_buttons:
+  - aiAgentButton
+  - aiAgentToneButton
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - 'alignment:left'
+  - 'alignment:center'
+  - 'alignment:right'
+  - 'alignment:justify'
+  - bulletedList
+  - numberedList
+  - outdent
+  - indent
+  - undo
+  - redo
+  - link
+  - insertImage
+  - fontColor
+  - fontSize
+  - superscript
+  - subscript
+  - blockQuote
+  - sourceEditing
+  - horizontalLine
+  - showBlocks
+  - removeFormat
+  - specialCharacters
+  - heading
+  - style
+  - insertTable
+  - check_uncheck_all_wrapper

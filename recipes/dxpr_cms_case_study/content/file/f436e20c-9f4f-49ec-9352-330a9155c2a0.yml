@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f436e20c-9f4f-49ec-9352-330a9155c2a0
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: logoipsum-354.png
+  uri:
+    -
+      value: 'public://2025-08/logoipsum-354.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 9282
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1755261718

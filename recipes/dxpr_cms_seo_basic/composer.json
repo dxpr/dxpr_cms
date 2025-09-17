@@ -12,8 +12,7 @@
     },
     "suggest": {
         "drupal/dxpr_cms_seo_tools": "Add additional SEO tools to help configure and manage meta tags, SEO analysis, sitemaps, with an SEO checklist and dashboard.",
-        "drupal/dxpr_cms_analytics": "Adds recipes for tracking website traffic.",
-        "drupal/dxpr_cms_accessibility_tools": "Adds automated checks to help ensure content conforms to web accessibility guidelines."
+        "drupal/dxpr_cms_google_analytics": "Adds tracking of website traffic using Google Analytics and Google Tag Manager."
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

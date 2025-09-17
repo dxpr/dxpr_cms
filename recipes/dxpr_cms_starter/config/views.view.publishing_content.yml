@@ -137,7 +137,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -202,7 +202,7 @@ display:
           settings:
             link: true
           group_column: target_id
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -269,7 +269,7 @@ display:
             custom_date_format: 'm/d g:ia'
             timezone: ''
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -336,7 +336,7 @@ display:
             custom_date_format: 'm/d g:ia'
             timezone: ''
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -403,7 +403,7 @@ display:
             format_custom_false: ''
             format_custom_true: ''
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -501,8 +501,8 @@ display:
           perm: 'view publishing dashboard'
       cache:
         type: none
-        options: {  }
-      empty: {  }
+        options: {}
+      empty: {}
       sorts:
         changed:
           id: changed
@@ -511,7 +511,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
-      arguments: {  }
+      arguments: {}
       filters:
         latest_translation_affected_revision:
           id: latest_translation_affected_revision
@@ -533,7 +533,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -550,8 +550,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         moderation_state:
           id: moderation_state
           table: node_field_revision
@@ -562,7 +562,7 @@ display:
           entity_type: node
           plugin_id: moderation_state_filter
           operator: in
-          value: {  }
+          value: {}
           group: 1
           exposed: true
           expose:
@@ -572,7 +572,7 @@ display:
             use_operator: false
             operator: moderation_state_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: moderation_state
             required: false
             remember: false
@@ -593,8 +593,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         uid:
           id: uid
           table: node_field_revision
@@ -619,7 +619,7 @@ display:
             use_operator: false
             operator: uid_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: uid
             required: false
             remember: false
@@ -638,8 +638,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         combine:
           id: combine
           table: views
@@ -659,7 +659,7 @@ display:
             use_operator: false
             operator: combine_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: combine
             required: false
             remember: false
@@ -678,8 +678,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
           fields:
             title: title
         type:
@@ -693,7 +693,7 @@ display:
           entity_field: type
           plugin_id: bundle
           operator: in
-          value: {  }
+          value: {}
           group: 1
           exposed: true
           expose:
@@ -703,7 +703,7 @@ display:
             use_operator: false
             operator: type_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: type
             required: false
             remember: false
@@ -723,8 +723,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       filter_groups:
         operator: AND
         groups:
@@ -732,7 +732,7 @@ display:
       style:
         type: table
         options:
-          grouping: {  }
+          grouping: {}
           row_class: ''
           default_row_class: true
           columns:
@@ -809,15 +809,15 @@ display:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_tags: {  }
-      relationships: {  }
+          query_tags: {}
+      relationships: {}
       use_ajax: true
       use_more: false
       use_more_always: false
       use_more_text: more
-      header: {  }
-      footer: {  }
-      display_extenders: {  }
+      header: {}
+      footer: {}
+      display_extenders: {}
     cache_metadata:
       max-age: 0
       contexts:
@@ -893,7 +893,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -969,7 +969,7 @@ display:
               granularity: 2
               refresh: 60
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1092,7 +1092,7 @@ display:
           title_enable: false
           title: ''
           default_argument_type: current_user
-          default_argument_options: {  }
+          default_argument_options: {}
           summary_options:
             base_path: ''
             count: true
@@ -1106,7 +1106,7 @@ display:
           validate:
             type: none
             fail: 'not found'
-          validate_options: {  }
+          validate_options: {}
           break_phrase: false
           not: false
       filters:
@@ -1130,7 +1130,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -1147,8 +1147,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         moderation_state:
           id: moderation_state
           table: node_field_revision
@@ -1170,7 +1170,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -1188,8 +1188,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       filter_groups:
         operator: AND
         groups:
@@ -1298,7 +1298,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1374,7 +1374,7 @@ display:
               granularity: 2
               refresh: 60
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1450,7 +1450,7 @@ display:
               granularity: 2
               refresh: 60
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -1580,7 +1580,7 @@ display:
             use_operator: false
             operator: publish_on_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: publish_on_scheduled
             required: false
             remember: false
@@ -1603,8 +1603,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         unpublish_on:
           id: unpublish_on
           table: node_field_revision
@@ -1630,7 +1630,7 @@ display:
             use_operator: false
             operator: unpublish_on_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: unpublish_on
             required: false
             remember: false
@@ -1653,8 +1653,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       filter_groups:
         operator: AND
         groups:
@@ -1693,4 +1693,4 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags: {}

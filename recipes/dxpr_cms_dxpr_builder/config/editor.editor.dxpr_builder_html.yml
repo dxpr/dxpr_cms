@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.dxpr_builder_html
+  module:
+    - ace_editor
+format: dxpr_builder_html
+editor: ace_editor
+settings:
+  fieldset:
+    theme: dawn
+    syntax: html
+    height: 300px
+    width: 100%
+    font_size: 16px
+    line_numbers: 1
+    print_margins: 0
+    show_invisibles: 0
+    use_wrap_mode: 1
+    auto_complete: 1
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: null
+  max_dimensions:
+    width: null
+    height: null

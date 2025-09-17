@@ -1,0 +1,43 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: f45a8b3c-2e17-4d8a-9f12-1a2b3c4d5e6f
+default:
+  preferred_langcode:
+    -
+      value: en
+  preferred_admin_langcode:
+    -
+      value: en
+  name:
+    -
+      value: 'Content Administrator'
+  mail:
+    -
+      value: content.administrator@cms.example
+  timezone:
+    -
+      value: Europe/Amsterdam
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1669145500
+  access:
+    -
+      value: 1680709200
+  login:
+    -
+      value: 1680703300
+  init:
+    -
+      value: content.administrator@cms.example
+  roles:
+    -
+      target_id: content_administrator
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

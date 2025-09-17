@@ -1,6 +1,6 @@
 name: SEO Tools
-description: Adds common search engine optimisation tools such as meta tags, XML sitemap, robots.txt management and more.
-type: Dxpr CMS
+description: Adds common search engine optimization tools such as meta tags, XML sitemap, robots.txt management and more.
+type: DXPR CMS
 recipes:
   - core/recipes/image_media_type
 install:
@@ -22,11 +22,9 @@ install:
   - simple_sitemap
   - sitemap
   - token_or
-  - yoast_seo
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
-    - field.storage.node.field_seo_analysis
     - field.storage.node.field_seo_description
     - field.storage.node.field_seo_image
     - field.storage.node.field_seo_title
@@ -40,10 +38,6 @@ config:
     simple_sitemap: '*'
   actions:
     # Add SEO fields to all content types that are installed.
-    field.storage.node.field_seo_analysis:
-      addToAllBundles:
-        label: 'SEO analysis'
-        description: 'Pick the main keyword this page is about.'
     field.storage.node.field_seo_description:
       addToAllBundles:
         label: 'SEO description'
@@ -74,7 +68,6 @@ config:
               - field_seo_title
               - field_seo_description
               - field_seo_image
-              - field_seo_analysis
             label: 'Search Engine Optimization (SEO) Information'
             region: content
             parent_name: ''
@@ -89,17 +82,6 @@ config:
               description: ''
               required_fields: false
       setComponents:
-        -
-          name: field_seo_analysis
-          options:
-            type: yoast_seo_widget
-            weight: 18
-            region: content
-            settings:
-              render_theme: NULL
-              render_view_mode: default
-              edit_title: 0
-              edit_description: 0
         -
           name: field_seo_description
           options:
@@ -116,7 +98,7 @@ config:
             weight: 17
             region: content
             settings:
-              media_types: {  }
+              media_types: {}
         -
           name: field_seo_title
           options:

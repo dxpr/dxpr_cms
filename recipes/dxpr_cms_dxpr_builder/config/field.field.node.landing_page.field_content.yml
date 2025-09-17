@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.field_content
+field_name: field_content
+entity_type: node
+bundle: landing_page
+label: Content
+description: 'The content of this page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: ''
+    format: dxpr_builder_html
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - dxpr_builder_html
+field_type: text_long

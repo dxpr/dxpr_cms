@@ -5,17 +5,24 @@
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/autosave_form": "^1.10",
-        "drupal/bpmn_io": "^2.0.6",
+        "drupal/bpmn_io": "^2.0",
+        "drupal/block_classes": "^1.0",
         "drupal/core": ">=10.4",
-        "drupal/dxpr_cms_image": "^1.0.1",
-        "drupal/eca": "^2.1.4",
+        "drupal/dxpr_cms_image": "*",
+        "drupal/dxpr_cms_layouts": "^1.0",
+        "drupal/eca": "^2.0",
+        "drupal/gin_lb": "^3.0@beta",
+        "drupal/layout_builder_component_attributes": "^2.2",
+        "drupal/layout_disable": "^2.0",
         "drupal/linkit": "^7",
         "drupal/pathauto": "^1.13",
+        "drupal/smart_trim": "^2.2",
         "drupal/token": "^1",
         "drupal/trash": "^3.0.13",
         "drupal/scheduler": "^2.2",
         "drupal/scheduler_content_moderation_integration": "^3.0.4",
-        "drupal/tagify": "^1.2"
+        "drupal/tagify": "^1.2",
+        "drupal/views_bootstrap": "^5.5@RC"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

@@ -1,9 +1,0 @@
-{
-    "name": "drupal/dxpr_cms_analytics",
-    "type": "metapackage",
-    "description": "Adds recipes for tracking website traffic.",
-    "require": {
-        "drupal/dxpr_cms_google_analytics": "^1"
-    },
-    "version": "1.x-dev"
-}

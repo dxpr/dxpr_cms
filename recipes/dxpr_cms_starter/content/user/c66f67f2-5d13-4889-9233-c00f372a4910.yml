@@ -1,0 +1,43 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: c66f67f2-5d13-4889-9233-c00f372a4910
+default:
+  preferred_langcode:
+    -
+      value: en
+  preferred_admin_langcode:
+    -
+      value: en
+  name:
+    -
+      value: 'Content Editor'
+  mail:
+    -
+      value: content.editor@cms.example
+  timezone:
+    -
+      value: Europe/Amsterdam
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1669145451
+  access:
+    -
+      value: 1680709166
+  login:
+    -
+      value: 1680703268
+  init:
+    -
+      value: content.editor@cms.example
+  roles:
+    -
+      target_id: content_editor
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

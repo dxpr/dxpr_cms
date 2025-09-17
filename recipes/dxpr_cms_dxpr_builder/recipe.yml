@@ -4,6 +4,7 @@ type: 'Builder'
 recipes:
   - dxpr_cms_page
   - core/recipes/full_html_format_editor
+  - dxpr_cms_roles
 install:
   - block_content
   - contact_block
@@ -12,18 +13,16 @@ install:
   - menu_link_attributes
   - node
   - workflows
-  - moderation_dashboard
   - dxpr_builder
   - dxpr_builder_block
-  - dxpr_builder_page
   - dxpr_theme_helper
+  - ace_editor
 config:
   strict: false
   import:
     contact_block: '*'
     dxpr_builder: '*'
     dxpr_builder_block: '*'
-    dxpr_builder_page: '*'
     dxpr_theme_helper: '*'
     menu_link_attributes: '*'
   actions:
@@ -31,3 +30,17 @@ config:
       simple_config_update:
         name: 'DXPR CMS'
         page.front: '/home'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'edit with dxpr builder'
+        - 'use text format dxpr_builder_html'
+    user.role.site_builder:
+      grantPermissions:
+        - 'edit with dxpr builder'
+        - 'administer dxpr_builder_profile'
+        - 'administer workflows'
+        - 'use text format dxpr_builder_html'
+    user.role.content_editor:
+      grantPermissions:
+        - 'edit with dxpr builder'
+        - 'use text format dxpr_builder_html'

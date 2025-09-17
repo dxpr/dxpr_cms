@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ace_editor
+name: 'DXPR Builder HTML'
+format: dxpr_builder_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption width height> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <br> <div class id data-*> <span class id data-*> <section class id data-*> <article class id data-*> <aside class id data-*> <header class id data-*> <footer class id data-*> <nav class id data-*> <main class id data-*> <address class id data-*> <time class id data-*> <figure class id data-*> <figcaption class id data-*> <mark class id data-*> <small class id data-*> <del class id data-*> <ins class id data-*> <abbr class id data-*> <dfn class id data-*> <kbd class id data-*> <samp class id data-*> <var class id data-*> <q class id data-*> <ruby class id data-*> <rb class id data-*> <rt class id data-*> <rp class id data-*> <bdi class id data-*> <bdo class id data-*> <wbr class id data-*> <details class id data-*> <summary class id data-*> <button class id data-*> <input class id data-*> <textarea class id data-*> <select class id data-*> <option class id data-*> <optgroup class id data-*> <fieldset class id data-*> <legend class id data-*> <label class id data-*> <datalist class id data-*> <output class id data-*> <progress class id data-*> <meter class id data-*> <iframe src width height frameborder allowfullscreen class id data-*> <embed src type width height class id data-*> <object data type width height class id data-*> <param name value class id data-*> <video src controls width height class id data-*> <audio src controls class id data-*> <source src type class id data-*> <track src kind srclang label class id data-*> <canvas width height class id data-*> <svg class id data-*> <defs class id data-*> <g class id data-*> <path class id data-*> <circle class id data-*> <rect class id data-*> <line class id data-*> <ellipse class id data-*> <polygon class id data-*> <polyline class id data-*> <text class id data-*> <tspan class id data-*> <use class id data-*> <image class id data-*> <clipPath class id data-*> <mask class id data-*> <pattern class id data-*> <linearGradient class id data-*> <radialGradient class id data-*> <stop class id data-*> <animate class id data-*> <animateTransform class id data-*>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: 0
+    settings: {}
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: 0
+    settings:
+      filter_url_length: 72

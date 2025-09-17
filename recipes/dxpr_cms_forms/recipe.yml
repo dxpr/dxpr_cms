@@ -1,5 +1,5 @@
 name: Forms
-type: Dxpr CMS
+type: DXPR CMS
 description: Adds a simple contact form, and tools for building forms.
 recipes:
   - dxpr_cms_anti_spam
@@ -36,3 +36,35 @@ config:
     webform.settings:
       simpleConfigUpdate:
         ui.promotions_disabled: true
+    user.role.content_editor:
+      grantPermissions:
+        - 'access webform overview'
+        - 'view own webform submission'
+        - 'edit own webform submission'
+        - 'delete own webform submission'
+        - 'create webform'
+        - 'edit own webform'
+        - 'delete own webform'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'access webform overview'
+        - 'view own webform submission'
+        - 'edit own webform submission'
+        - 'delete own webform submission'
+        - 'create webform'
+        - 'edit own webform'
+        - 'delete own webform'
+    user.role.site_builder:
+      grantPermissions:
+        - 'access webform overview'
+        - 'view any webform submission'
+        - 'edit any webform submission'
+        - 'delete any webform submission'
+        - 'view own webform submission'
+        - 'edit own webform submission'
+        - 'delete own webform submission'
+        - 'create webform'
+        - 'edit any webform'
+        - 'delete any webform'
+        - 'edit own webform'
+        - 'delete own webform'

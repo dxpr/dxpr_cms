@@ -1,29 +1,27 @@
 {
     "name": "drupal/dxpr_cms_starter",
-    "description": "Applies the foundational Dxpr CMS recipes.",
+    "description": "Applies the foundational DXPR CMS recipes.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/automatic_updates": "^3.1.7",
-        "drupal/bpmn_io": "^2.0.6",
-        "drupal/core": ">=10.4",
-        "drupal/eca": "^2.1.4",
+        "drupal/automatic_updates": "^3.1.7 || ^4.0",
+        "drupal/bpmn_io": "^2.0",
+        "drupal/core": ">=10.4 || ^11",
+        "drupal/eca": "^2.0",
         "drupal/dashboard": "^2",
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/dxpr_cms_admin_ui": "*",
         "drupal/dxpr_cms_ai": "*",
+        "drupal/dxpr_cms_ai_linkedin_posts": "*",
         "drupal/dxpr_cms_anti_spam": "*",
         "drupal/dxpr_cms_authentication": "*",
         "drupal/dxpr_cms_blog": "*",
         "drupal/dxpr_cms_page": "*",
         "drupal/dxpr_cms_privacy_basic": "*",
         "drupal/dxpr_cms_remote_video": "*",
-        "drupal/dxpr_cms_search": "*",
         "drupal/dxpr_cms_seo_basic": "*",
         "drupal/dxpr_cms_dxpr_theme": "*",
-        "drupal/easy_email_express": "^1.0.2",
-        "drupal/project_browser": "^2-beta1",
         "drupal/token": "^1"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

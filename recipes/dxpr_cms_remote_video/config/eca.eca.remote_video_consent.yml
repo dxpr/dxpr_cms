@@ -92,7 +92,7 @@ conditions:
       right: '1'
       operator: equal
       type: value
-gateways: {  }
+gateways: {}
 actions:
   Activity_set_default_provider:
     plugin: eca_token_set_value
@@ -115,7 +115,7 @@ actions:
       token_name: provider
       token_value: vimeo
       use_yaml: false
-    successors: {  }
+    successors: {}
   Activity_read_current_setting:
     plugin: eca_config_read
     label: 'Read current setting'
@@ -137,7 +137,7 @@ actions:
       save_config: true
       config_name: 'klaro.klaro_app.[provider]'
       config_key: status
-    successors: {  }
+    successors: {}
   Activity_switch_user:
     plugin: eca_switch_account
     label: 'Switch user account'
@@ -150,7 +150,7 @@ actions:
   Activity_and_1:
     plugin: eca_void_and_condition
     label: AND
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Activity_and_2
@@ -158,7 +158,7 @@ actions:
   Activity_and_2:
     plugin: eca_void_and_condition
     label: AND
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Activity_switch_
@@ -172,7 +172,7 @@ actions:
       save_config: true
       config_name: '[config_name]'
       config_key: status
-    successors: {  }
+    successors: {}
   Activity_switch_:
     plugin: eca_switch_account
     label: 'Switch user'

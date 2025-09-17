@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8f7d2b1c-5e9a-4d3f-b8c6-1a2b3c4d5e6f
+  bundle: news
+  default_langcode: en
+  depends:
+    d6206efd-8da4-4479-a0a3-807890330705: media
+    d48adeba-e388-4e82-820b-98bbd2f35a46: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'CMS Performance Improvements in Latest Release'
+  created:
+    -
+      value: 1735817062
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/2025-01/cms-performance-improvements-latest-release
+      langcode: en
+  field_content:
+    -
+      value: "<p>The latest our CMS release brings significant performance enhancements that will benefit websites of all sizes. These improvements focus on reducing page load times, optimizing database queries, and enhancing caching mechanisms.</p><h2>Key Performance Enhancements</h2><p>The development team has worked tirelessly to identify and resolve performance bottlenecks throughout the system. Major improvements include optimized entity loading, reduced memory usage, and enhanced BigPipe performance for faster page rendering.</p><h3>Database Query Optimization</h3><p>One of the most significant improvements is the optimization of database queries. The new release includes more efficient query patterns and better indexing strategies, resulting in faster content retrieval and improved overall site responsiveness.</p><h3>Enhanced Caching Layer</h3><p>The caching system has been redesigned to be more intelligent and efficient. New cache tags and invalidation strategies ensure that content updates are reflected quickly while maintaining optimal performance for end users.</p><h2>Real-world Impact</h2><p>Early testing shows that sites running the latest version experience up to 30% faster page load times and significantly improved performance under heavy traffic loads. These improvements are particularly noticeable on content-heavy sites with complex data structures.</p><p>Site administrators will also benefit from improved administrative interface performance, making content management tasks more efficient and responsive.</p>"
+      format: dxpr_builder_html
+  field_featured_image:
+    -
+      entity: d6206efd-8da4-4479-a0a3-807890330705
+  field_tags:
+    -
+      entity: d48adeba-e388-4e82-820b-98bbd2f35a46

@@ -1,13 +1,12 @@
-name: Dxpr CMS
+name: DXPR CMS
 type: Site
-description: Applies the foundational Dxpr CMS recipes.
+description: Applies the foundational DXPR CMS recipes.
 recipes:
   - core/recipes/administrator_role
   - core/recipes/core_recommended_maintenance
   - core/recipes/core_recommended_performance
   - core/recipes/document_media_type
   - dxpr_cms_admin_ui
-  - dxpr_cms_ai
   - dxpr_cms_anti_spam
   - dxpr_cms_authentication
   - dxpr_cms_blog
@@ -15,25 +14,28 @@ recipes:
   - dxpr_cms_privacy_basic
   - dxpr_cms_remote_video
   - dxpr_cms_seo_basic
-  - easy_email_express
+  - dxpr_cms_basic_analytics
+  - dxpr_cms_seo_tools
+  - dxpr_cms_performance
   - dxpr_cms_dxpr_builder
   - dxpr_cms_dxpr_theme
-  - dxpr_cms_search
+  - dxpr_cms_roles
+  - dxpr_cms_ai
+  - dxpr_cms_ai_linkedin_posts
 install:
   - automated_cron
   - automatic_updates
   - automatic_updates_extensions
+  - block_classes
   - dashboard
   - eca_base
   - eca_config
   - eca_content
   - eca_misc
-  - eca_project_browser
   - eca_render
   - eca_user
   - menu_link_content
   - package_manager
-  - project_browser
   - update
   # The rest of these are in Standard.
   - inline_form_errors
@@ -64,23 +66,6 @@ config:
         additional_trusted_composer_plugins:
           # This is indirectly added by `drupal/core-dev`.
           - tbachert/spi
-    project_browser.admin_settings:
-      simpleConfigUpdate:
-        allowed_projects:
-          recipes:
-            - dxpr_cms_accessibility_tools
-            - dxpr_cms_case_study
-            - dxpr_cms_events
-            - dxpr_cms_forms
-            - dxpr_cms_google_analytics
-            - dxpr_cms_news
-            - dxpr_cms_person
-            - dxpr_cms_project
-            - dxpr_cms_seo_tools
-        enabled_sources:
-          - drupalorg_jsonapi
-          - recipes
-        allow_ui_install: true
     system.site:
       simpleConfigUpdate:
         name: 'DXPR CMS'
@@ -98,9 +83,6 @@ config:
         - 'access content overview'
         - 'access contextual links'
         - 'access media overview'
-        - 'access navigation'
-        # We need this permission because Toolbar is enabled by Gin Toolbar.
-        - 'access toolbar'
         - 'administer url aliases'
         - 'create url aliases'
         - 'view own unpublished media'
@@ -108,9 +90,41 @@ config:
         - 'revert all revisions'
         - 'view all revisions'
         - 'view the administration theme'
-    node.settings:
-      simpleConfigUpdate:
-        use_admin_theme: true
+        # Media management capabilities
+        - 'create media'
+        - 'delete media'
+        - 'update media'
+        - 'view media'
+        - 'view all media revisions'
+    user.role.content_administrator:
+      grantPermissionsForEachMediaType:
+        - 'create %bundle media'
+        - 'delete any %bundle media'
+        - 'edit any %bundle media'
+      grantPermissions:
+        # Managing media entities.
+        - 'access media overview'
+        - 'create media'
+        - 'delete media'
+        - 'update media'
+        - 'view media'
+        - 'view all media revisions'
+        - 'view own unpublished media'
+    user.role.site_builder:
+      grantPermissionsForEachMediaType:
+        - 'create %bundle media'
+        - 'delete any %bundle media'
+        - 'edit any %bundle media'
+      grantPermissions:
+        - 'access media overview'
+        - 'create media'
+        - 'delete media'
+        - 'update media'
+        - 'view media'
+        - 'view all media revisions'
+        - 'view own unpublished media'
+        - 'administer views'
+
     user.role.authenticated:
       grantPermissions:
         - 'delete own files'
@@ -121,17 +135,9 @@ config:
         verify_mail: true
         register: admin_only
         cancel_method: user_cancel_block
-    announcements_feed.settings:
+    node.settings:
       simpleConfigUpdate:
-        limit: 2
-    core.menu.static_menu_link_overrides:
-      simpleConfigUpdate:
-        definitions.announcements_feed__announcement:
-          menu_name: admin
-          parent: system.admin
-          weight: 0
-          expanded: false
-          enabled: false
+        use_admin_theme: true
     automatic_updates.settings:
       simpleConfigUpdate:
         allow_core_minor_updates: true

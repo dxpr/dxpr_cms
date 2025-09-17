@@ -57,6 +57,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->rebuildAll();
   }
 
+  /**
+   *
+   */
   public function test(): void {
     $dir = dirname(__DIR__, 3);
 
@@ -74,7 +77,7 @@ class ComponentValidationTest extends BrowserTestBase {
     $optional_recipes = $composer['suggest'] ?? [];
     foreach (array_keys($optional_recipes) as $name) {
       $this->applyRecipe($cookbook_dir . '/' . basename($name), [
-        '--input=dxpr_cms_analytics.property_id=GTM-123456',
+        '--input=dxpr_cms_google_analytics.property_id=GTM-123456',
       ]);
     }
 

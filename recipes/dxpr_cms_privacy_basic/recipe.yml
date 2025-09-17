@@ -1,6 +1,6 @@
 name: Basic Privacy
 description: Adds basic privacy features such as consent management and remote content blocking.
-type: Dxpr CMS
+type: DXPR CMS
 recipes:
   - dxpr_cms_page
 install:
@@ -28,7 +28,7 @@ config:
         consentModal.privacyPolicy.url: 'internal:/privacy-policy'
     klaro.klaro_app.cms:
       simpleConfigUpdate:
-        label: 'Dxpr CMS'
+        label: 'DXPR CMS'
     menu_link_attributes.config:
       simpleConfigUpdate:
         attributes.rel:
@@ -38,3 +38,6 @@ config:
       grantPermission: 'use klaro'
     user.role.authenticated:
       grantPermission: 'use klaro'
+    user.role.site_builder:
+      grantPermissions:
+        - 'use menu link attributes'

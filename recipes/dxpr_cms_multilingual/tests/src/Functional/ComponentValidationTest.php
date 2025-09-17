@@ -41,6 +41,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->drupalCreateContentType(['type' => 'page']);
   }
 
+  /**
+   *
+   */
   public function testHreflangAddedToTranslatedContent(): void {
     ConfigurableLanguage::createFromLangcode('fr')->save();
 

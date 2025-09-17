@@ -2,7 +2,7 @@ _meta:
   version: '1.0'
   entity_type: node
   uuid: 6cac9014-4fb3-4152-a3df-16420d9517e9
-  bundle: drag_and_drop_page
+  bundle: landing_page
   default_langcode: en
 default:
   revision_uid:
@@ -34,7 +34,7 @@ default:
       alias: /all-dxpr-builder-layout-elements
       langcode: en
       pathauto: 1
-  body:
+  field_content:
     -
       value: |
         <div class="az-element az-section" style="" data-dxpr-builder-libraries="" data-az-id="gbapupb2rn" data-azat-pid="gbwnm43gmn" id="gbwnm43gmn" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section"      ><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gb6uzra2ol" data-azat-pid="gbdvwpr67g" id="gbdvwpr67g" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text"       data-azcnt="true"><h2 style="text-align: center;">Section element</h2></div></div></div><div class="az-element az-section" style="padding: 25%; background-image: url(&quot;https://images.unsplash.com/photo-1564296786842-4fc88fb50485?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2370&amp;q=80&quot;); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50% 0px;" data-dxpr-builder-libraries="waypoints" data-az-id="gbf92lt2o7" data-azat-pid="gbid8asb07" id="gbid8asb07" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-effect="parallax" data-azat-parallax_speed="17" data-azat-parallax_mode="fixed" data-azat-parallax_mobile_disable="no"   data-azat-style_padding_locked="yes"    data-azat-style="padding-top:25%;padding-bottom:25%;padding-left:25%;padding-right:25%;background-image: url(https://images.unsplash.com/photo-1564296786842-4fc88fb50485?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2370&amp;q=80);background-repeat: no-repeat;background-size: cover;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-button az-button-content center-block text-center" data-az-id="gb6xkc2y8u" data-azat-pid="gbrs5yi4sj" id="gbrs5yi4sj" data-azb="az_button" data-az-human-readable="Button" data-az-human-readable-en="Button" data-azat-title="Section parallax background" data-azat-link="#" data-azat-link_target="_self" data-azat-type="primary" data-azat-block="no" data-azat-outlined="no" data-azat-size="btn-lg"       data-azat-el_class="center-block text-center"><a href="#" class="az-button-content btn btn-lg btn-primary" style="" target="_self" role="button">
@@ -127,5 +127,4 @@ default:
         <script src="/modules/contrib/dxpr_builder/dxpr_builder/vendor/managed/jquery.waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="/modules/contrib/dxpr_builder/dxpr_builder/vendor/unmanaged/owl.carousel/owl-carousel/owl.carousel.js"></script>
         <script src="/modules/contrib/dxpr_builder/dxpr_builder/dxpr_frontend.min.js"></script>
-      format: full_html
-      summary: ''
+      format: dxpr_builder_html

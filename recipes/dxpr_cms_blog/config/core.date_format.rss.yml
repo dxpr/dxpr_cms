@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: rss
 label: RSS
 locked: false

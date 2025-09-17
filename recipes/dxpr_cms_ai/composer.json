@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_ai",
-    "description": "Adds integration with AI services, such as alt text generation and a chat bot to assist with site building. Requires an API key from Open AI or Anthropic.",
+    "description": "Adds integration with AI services, such as alt text generation and content analysis. Requires a DXPR API key.",
     "type": "drupal-recipe",
     "license": "GPL-2.0-or-later",
     "require": {
@@ -8,13 +8,23 @@
         "drupal/ai": "^1.0.4",
         "drupal/ai_agents": "^1",
         "drupal/ai_image_alt_text": "^1",
-        "drupal/ai_provider_anthropic": "^1",
-        "drupal/ai_provider_openai": "^1",
-        "drupal/dxpr_cms_privacy_basic": "^1",
-        "league/commonmark": "^2.4"
+        "drupal/ai_provider_dxpr": "^1.0.0-alpha1",
+        "drupal/ai_checklist": "^1.0",
+        "drupal/ai_social_posts": "^1.0@beta",
+        "drupal/ai_sorting": "^1.0@beta",
+        "drupal/dxpr_cms_privacy_basic": "*",
+        "drupal/dxpr_cms_roles": "*",
+        "drupal/ai_content_strategy": "^1.0@beta",
+        "drupal/analyze_ai_brand_voice": "^1.0@beta",
+        "drupal/analyze_ai_sentiments": "^1.0@beta",
+        "drupal/analyze_ai_content_marketing_audit": "^1.0@beta",
+        "drupal/analyze_ai_content_security_audit": "^1.0@beta",
+        "drupal/ckeditor_ai_agent": "^1.0@beta",
+        "drupal/rl": "^1.0@beta",
+        "drupal/views_color_scales": "^1.0@beta",
+        "league/commonmark": "^2.4",
+        "drupal/markdownify": "^1.1",
+        "drupal/diff": "^2.0"
     },
-    "conflict": {
-        "drupal/project_browser": "<2-alpha7"
-    },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

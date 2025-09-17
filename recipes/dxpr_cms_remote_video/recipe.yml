@@ -1,5 +1,5 @@
 name: Remote Video
-type: Dxpr CMS
+type: DXPR CMS
 description: Configures display options for remote video.
 recipes:
   - core/recipes/remote_video_media_type

@@ -1,0 +1,7 @@
+disabled_layouts:
+  layout_twocol_bricks: layout_twocol_bricks
+  layout_threecol_section: layout_threecol_section
+  layout_threecol_25_50_25: layout_threecol_25_50_25
+  layout_threecol_33_34_33: layout_threecol_33_34_33
+  layout_fourcol_section: layout_fourcol_section
+

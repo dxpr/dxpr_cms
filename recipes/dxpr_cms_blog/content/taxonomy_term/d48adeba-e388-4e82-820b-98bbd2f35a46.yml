@@ -10,4 +10,15 @@ default:
       value: true
   name:
     -
-      value: 'Drupal'
+      value: Drupal
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1

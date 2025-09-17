@@ -1,13 +1,16 @@
 name: Admin UI
-type: Dxpr CMS
+type: DXPR CMS
 description: Sets up a nice administrative theme and navigation.
+recipes:
+  - dxpr_cms_roles
 install:
-  - coffee
+  - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_search
   - dashboard
   - contextual
   - gin
   - gin_toolbar
-  - navigation
   - sam
   - tagify
   - tagify_user_list
@@ -21,8 +24,6 @@ config:
       - block.block.gin_page_title
       - block.block.gin_primary_local_tasks
       - block.block.gin_secondary_local_tasks
-    navigation:
-      - system.menu.content
     claro:
       - block.block.claro_breadcrumbs
       - block.block.claro_content
@@ -35,8 +36,24 @@ config:
     system.theme:
       simpleConfigUpdate:
         admin: gin
+    gin.settings:
+      simpleConfigUpdate:
+        classic_toolbar: vertical
     tagify.settings:
       simpleConfigUpdate:
         set_default_widget: true
-    user.role.authenticated:
-      grantPermission: 'access coffee'
+    admin_toolbar_tools.settings:
+      simpleConfigUpdate:
+        show_local_tasks: true
+    user.role.content_editor:
+      grantPermissions:
+        - 'use admin toolbar search'
+        - 'access toolbar'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'use admin toolbar search'
+        - 'access toolbar'
+    user.role.site_builder:
+      grantPermissions:
+        - 'use admin toolbar search'
+        - 'access toolbar'

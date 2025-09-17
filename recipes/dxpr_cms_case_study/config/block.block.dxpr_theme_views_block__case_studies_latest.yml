@@ -1,0 +1,33 @@
+uuid: bf099129-ea79-4432-92a2-250d2a971541
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.case_studies
+  module:
+    - block_classes
+    - system
+    - views
+  theme:
+    - dxpr_theme
+third_party_settings:
+  block_classes:
+    block_class: 'container bg-primary-subtle py-4 px-3'
+id: dxpr_theme_views_block__case_studies_latest
+theme: dxpr_theme
+region: content_top
+weight: -7
+provider: null
+plugin: 'views_block:case_studies-latest'
+settings:
+  id: 'views_block:case_studies-latest'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /case-studies

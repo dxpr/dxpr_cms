@@ -8,6 +8,9 @@ use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
 
+/**
+ * Tests standard functionality for page recipe.
+ */
 class StandardTest extends BrowserTestBase {
 
   use RecipeTestTrait;
@@ -17,6 +20,9 @@ class StandardTest extends BrowserTestBase {
    */
   protected $profile = 'standard';
 
+  /**
+   * Test compatibility with standard profile.
+   */
   public function testCompatibilityWithStandard(): void {
     $dir = realpath(__DIR__ . '/../../..');
     $this->applyRecipe($dir);

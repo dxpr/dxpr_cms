@@ -6,7 +6,9 @@ dependencies:
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
     - field.field.node.case_study.field_content
-    - field.field.node.case_study.field_description
+    - field.field.node.case_study.field_dth_hide_regions
+    - field.field.node.case_study.field_dth_main_content_width
+    - field.field.node.case_study.field_dth_page_layout
     - field.field.node.case_study.field_featured_image
     - field.field.node.case_study.field_tags
     - node.type.case_study
@@ -18,6 +20,7 @@ dependencies:
     - path
     - scheduler
     - text
+    - field_group
 id: node.case_study.default
 targetEntityType: node
 bundle: case_study
@@ -27,8 +30,8 @@ content:
     type: datetime_timestamp
     weight: 13
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   field_case_study__client_link:
     type: link_default
     weight: 12
@@ -36,14 +39,14 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   field_case_study__client_logo:
     type: media_library_widget
     weight: 9
     region: content
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
   field_case_study__client_name:
     type: string_textfield
     weight: 8
@@ -51,7 +54,7 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   field_content:
     type: text_textarea
     weight: 11
@@ -59,22 +62,14 @@ content:
     settings:
       rows: 9
       placeholder: ''
-    third_party_settings: {  }
-  field_description:
-    type: string_textarea
-    weight: 6
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   field_featured_image:
     type: media_library_widget
     weight: 10
     region: content
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types: {}
+    third_party_settings: {}
   field_tags:
     type: tagify_entity_reference_autocomplete_widget
     weight: 13
@@ -83,57 +78,57 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   moderation_state:
     type: moderation_state_default
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   path:
     type: path
     weight: 16
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   promote:
     type: boolean_checkbox
     weight: 14
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
   publish_on:
     type: datetime_timestamp_no_default
     weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   publish_status:
     type: scheduler_moderation
     weight: -4
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   scheduler_settings:
     weight: 1
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
   status:
     type: boolean_checkbox
     weight: 17
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
   sticky:
     type: boolean_checkbox
     weight: 15
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
+    third_party_settings: {}
   title:
     type: string_textfield
     weight: 4
@@ -141,7 +136,7 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   uid:
     type: entity_reference_autocomplete
     weight: 12
@@ -151,13 +146,67 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings: {}
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 3
     region: content
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
+  field_dth_hide_regions:
+    type: options_buttons
+    weight: 21
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dth_main_content_width:
+    type: options_select
+    weight: 22
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dth_page_layout:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {}
+    third_party_settings: {}
+third_party_settings:
+  field_group:
+    group_content_advanced:
+      children:
+        - field_content
+      label: 'HTML Content Editing'
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_content_advanced
+        label_as_html: false
+        open: false
+        description: 'Please go to the "view" tab for visual content editing. This section is for advanced HTML editing for technical troubleshooting.'
+        required_fields: false
+    group_dxpr_theme_settings:
+      children:
+        - field_dth_page_layout
+        - field_dth_hide_regions
+        - field_dth_main_content_width
+      label: 'DXPR Theme Settings'
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: group_dxpr_theme_settings
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
 hidden:
   publish_state: true
   unpublish_state: true

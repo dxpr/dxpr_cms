@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: nominatim
 label: Nominatim
 plugin: nominatim

@@ -1,0 +1,222 @@
+{
+    "name": "drupal/dxpr-cms-project",
+    "description": "Marketing CMS demo site with DXPR Builder no-code page builder.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/dxpr_cms",
+    "repositories": {
+        "admin_ui": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_admin_ui"
+        },
+        "ai": {
+            "type": "path", 
+            "url": "recipes/dxpr_cms_ai"
+        },
+        "ai_linkedin_posts": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_ai_linkedin_posts"
+        },
+        "anti_spam": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_anti_spam"
+        },
+        "authentication": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_authentication"
+        },
+        "basic_analytics": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_basic_analytics"
+        },
+        "blog": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_blog"
+        },
+        "case_study": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_case_study"
+        },
+        "content_type_base": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_content_type_base"
+        },
+        "dxpr_builder": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_dxpr_builder"
+        },
+        "dxpr_theme": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_dxpr_theme"
+        },
+        "events": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_events"
+        },
+        "forms": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_forms"
+        },
+        "google_analytics": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_google_analytics"
+        },
+        "image": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_image"
+        },
+        "multilingual": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_multilingual"
+        },
+        "news": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_news"
+        },
+        "page": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_page"
+        },
+        "performance": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_performance"
+        },
+        "privacy_basic": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_privacy_basic"
+        },
+        "remote_video": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_remote_video"
+        },
+        "roles": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_roles"
+        },
+        "seo_basic": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_seo_basic"
+        },
+        "seo_tools": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_seo_tools"
+        },
+        "starter": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_starter"
+        },
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "require": {
+        "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2.0.0-beta2",
+        "drupal/ace_editor": "2.0.2",
+        "drupal/admin_toolbar": "^3.6",
+        "drupal/bpmn_io": "^2.0",
+        "drupal/core-composer-scaffold": "^11",
+        "drupal/core-project-message": "^11",
+        "drupal/core-recommended": "^11",
+        "drupal/dxpr_cms_ai": "*",
+        "drupal/dxpr_cms_ai_linkedin_posts": "*",
+        "drupal/dxpr_cms_basic_analytics": "*",
+        "drupal/dxpr_cms_blog": "*",
+        "drupal/dxpr_cms_case_study": "*",
+        "drupal/dxpr_cms_events": "*",
+        "drupal/dxpr_cms_forms": "*",
+        "drupal/dxpr_cms_multilingual": "*",
+        "drupal/dxpr_cms_news": "*",
+        "drupal/dxpr_cms_performance": "*",
+        "drupal/dxpr_cms_seo_tools": "*",
+        "drupal/dxpr_cms_starter": "*",
+        "drupal/google_tag": "^2.0",
+        "drupal/project_browser": "^2.1@beta",
+        "drupal/recipe_installer_kit": "^1-alpha3@alpha",
+        "drush/drush": "^13"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^11.2",
+        "drupal/default_content": "^2"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "files": [
+            "recipes/dxpr_cms_content_type_base/tests/src/ContentModelTestTrait.php"
+        ]
+    },
+    "config": {
+        "preferred-install": {
+            "drupal/ace_editor": "source",
+            "drupal/admin_toolbar": "source",
+            "drupal/tmgmt": "source",
+            "drupal/ai_tmgmt": "source",
+            "*": "dist"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true
+        },
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "recipes/{$name}": ["type:drupal-recipe"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                   </>",
+                "<bg=blue;fg=white>  Congratulations, you've installed DXPR CMS!    </>",
+                "<bg=blue;fg=white>                                                   </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://drupal.org/support",
+                "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
+            ]
+        },
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
+        "patches": {
+            "drupal/ace_editor": {
+                "Fix profile detection for recipe-based installations  ": "patches/ace_editor_no_profile.patch"
+            },
+            "drupal/admin_toolbar": {
+                "Fix TypeError when iterating Project Browser enabled sources": "patches/admin_toolbar--issue-3540400.patch"
+            },
+            "drupal/tmgmt": {
+                "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
+            },
+            "drupal/ai_tmgmt": {
+                "Comprehensive translation methods": "patches/ai_tmgmt--issue-3533689.patch"
+            }
+        }
+    }
+}

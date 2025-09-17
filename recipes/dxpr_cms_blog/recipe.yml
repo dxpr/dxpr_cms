@@ -4,22 +4,54 @@ description: 'Sets up a basic blog, with tagging and commenting.'
 recipes:
   - dxpr_cms_page
   - dxpr_cms_dxpr_builder
+  - dxpr_cms_dxpr_theme
   - core/recipes/basic_html_format_editor
+  - core/recipes/content_editor_role
 install:
+  - block_content
   - add_content_by_bundle
-  - dxpr_builder_page
   - dxpr_theme_helper
   - menu_link_content
   - selective_better_exposed_filters
+  - ace_editor
+  - smart_trim
+  - views_bootstrap
 config:
   strict: false
   import:
     system:
       - system.menu.main
+    dxpr_theme_helper: '*'
   actions:
     user.role.content_editor:
       grantPermissions:
         - 'create blog content'
         - 'delete blog revisions'
+        - 'delete own blog content'
+        - 'edit own blog content'
+        - 'view blog revisions'
+        - 'revert blog revisions'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'create blog content'
+        - 'delete blog revisions'
         - 'delete any blog content'
         - 'edit any blog content'
+        - 'view blog revisions'
+        - 'revert blog revisions'
+
+    user.role.site_builder:
+      grantPermissions:
+        - 'create blog content'
+        - 'delete blog revisions'
+        - 'delete any blog content'
+        - 'edit any blog content'
+        - 'view blog revisions'
+        - 'revert blog revisions'
+
+    # Configure blog header block placement
+    block.block.dxpr_theme_blogheader:
+      simple_config_update:
+        status: true
+        region: highlighted
+        weight: -8

@@ -1,10 +1,16 @@
+uuid: 57bcee53-836e-4eac-a00b-0cd71d5840a5
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.field_content
-    - field.field.node.page.field_description
+    - field.field.node.page.field_dth_hide_regions
+    - field.field.node.page.field_dth_main_content_width
+    - field.field.node.page.field_dth_page_layout
     - field.field.node.page.field_featured_image
+    - field.field.node.page.field_seo_description
+    - field.field.node.page.field_seo_image
+    - field.field.node.page.field_seo_title
     - field.field.node.page.field_tags
     - field.field.node.page.layout_builder__layout
     - node.type.page
@@ -28,13 +34,20 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:page:field_content'
+              label: Content
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                type: text_default
+                type: dxpr_builder_text
                 label: hidden
-                settings: {  }
+                settings:
+                  profile: light
+                  profile_info:
+                    light: ''
+                    medium: ''
                 third_party_settings: {  }
             weight: 2
             additional: {  }
@@ -87,6 +100,8 @@ third_party_settings:
             weight: 4
             additional: {  }
         third_party_settings: {  }
+_core:
+  default_config_hash: 0FkBRgKI9kJ1T9SJMAiUJisLN0FbrbyPoQlM6sKRfIo
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -114,7 +129,12 @@ content:
     weight: 1
     region: content
 hidden:
-  field_description: true
+  field_dth_hide_regions: true
+  field_dth_main_content_width: true
+  field_dth_page_layout: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true
   field_tags: true
   layout_builder__layout: true
   links: true

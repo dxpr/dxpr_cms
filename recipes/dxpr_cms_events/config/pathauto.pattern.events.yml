@@ -17,4 +17,4 @@ selection_criteria:
       event: event
 selection_logic: and
 weight: -5
-relationships: {  }
+relationships: {}

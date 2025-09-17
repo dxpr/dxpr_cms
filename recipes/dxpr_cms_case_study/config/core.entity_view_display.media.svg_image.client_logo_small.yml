@@ -1,0 +1,44 @@
+uuid: aab4f27c-de52-4e4f-a319-4661fdf6bc17
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.client_logo_small
+    - field.field.media.svg_image.field_media_svg_image
+    - image.style.large
+    - media.type.svg_image
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: pKrsHdKCRwI4_mpcVzuqg_60fXWqQAL_mDo2_i87ovU
+id: media.svg_image.client_logo_small
+targetEntityType: media
+bundle: svg_image
+mode: client_logo_small
+content:
+  field_media_svg_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: 960
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
+

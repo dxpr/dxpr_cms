@@ -47,7 +47,7 @@ conditions:
       xss_filter: true
       operator: equal
       type: numeric
-gateways: {  }
+gateways: {}
 actions:
   Activity_password_field_not_required:
     plugin: eca_form_field_require
@@ -139,7 +139,7 @@ actions:
       strip_tags: true
       trim: true
       xss_filter: true
-    successors: {  }
+    successors: {}
   Activity_invisible_state_status:
     plugin: eca_form_field_add_state
     label: 'Add invisible state for status'
@@ -149,7 +149,7 @@ actions:
       condition: checked
       value: ''
       field_name: status
-    successors: {  }
+    successors: {}
   Activity_invisible_state_password:
     plugin: eca_form_field_add_state
     label: 'Add invisible state for password'
@@ -159,7 +159,7 @@ actions:
       condition: checked
       value: ''
       field_name: pass
-    successors: {  }
+    successors: {}
   Activity_set_status:
     plugin: eca_form_field_set_value
     label: 'Set status'
@@ -170,4 +170,4 @@ actions:
       strip_tags: true
       trim: true
       xss_filter: true
-    successors: {  }
+    successors: {}

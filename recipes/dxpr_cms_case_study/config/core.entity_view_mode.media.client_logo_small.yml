@@ -1,0 +1,12 @@
+uuid: b69f9eeb-8f6c-4e50-a325-b4b3c13e06b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.client_logo_small
+label: 'Client logo small'
+description: 'Fixed height flexible width image style'
+targetEntityType: media
+cache: true
+

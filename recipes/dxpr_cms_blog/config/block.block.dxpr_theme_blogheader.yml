@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:bee269e4-1bda-4cf5-8be8-bf1ccd0a85af'
+  module:
+    - block_content
+    - system
+  theme:
+    - dxpr_theme
+_core:
+  default_config_hash: ezeMm3twyumSM550jofjV8bz5Q0tCo3ViGiAOKIO_eo
+id: dxpr_theme_blogheader
+theme: dxpr_theme
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:bee269e4-1bda-4cf5-8be8-bf1ccd0a85af'
+settings:
+  id: 'block_content:bee269e4-1bda-4cf5-8be8-bf1ccd0a85af'
+  label: 'Blog header'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /blog

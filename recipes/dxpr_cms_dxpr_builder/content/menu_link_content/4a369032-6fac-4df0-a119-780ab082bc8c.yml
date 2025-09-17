@@ -20,7 +20,7 @@ default:
     -
       uri: 'internal:/blog'
       title: ''
-      options: {  }
+      options: {}
   external:
     -
       value: false

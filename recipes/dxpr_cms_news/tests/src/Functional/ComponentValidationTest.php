@@ -45,6 +45,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->ensureFileExists('f57ca5cc-9336-44d5-b847-b24876ffd1f6');
   }
 
+  /**
+   *
+   */
   public function testContentModel(): void {
     /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
     $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
@@ -55,7 +58,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertFieldsInOrder($form_display, [
       'title',
       'field_featured_image',
-      'field_description',
       'field_content',
       'field_tags',
     ]);
@@ -74,7 +76,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($default_display->getComponent('links'));
     $this->assertFieldsInOrder($card_display, [
       'field_featured_image',
-      'field_description',
     ]);
     $this->assertArraySubset([
       'field_featured_image' => [
@@ -86,7 +87,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($teaser_display->getComponent('links'));
     $this->assertFieldsInOrder($teaser_display, [
       'field_featured_image',
-      'field_description',
     ]);
 
     $this->assertContentModel([
@@ -99,15 +99,6 @@ class ComponentValidationTest extends BrowserTestBase {
           'label' => 'Title',
           'input type' => 'text',
           'help text' => '',
-        ],
-        'field_description' => [
-          'type' => 'string_long',
-          'cardinality' => 1,
-          'required' => TRUE,
-          'translatable' => TRUE,
-          'label' => 'Description',
-          'input type' => 'textarea',
-          'help text' => 'Describe the page content. This appears as the description in search engine results.',
         ],
         'field_featured_image' => [
           'type' => 'entity_reference',
@@ -140,6 +131,9 @@ class ComponentValidationTest extends BrowserTestBase {
     ]);
   }
 
+  /**
+   *
+   */
   public function testPathAliasPatternPrecedence(): void {
     $dir = realpath(__DIR__ . '/../../../../dxpr_cms_seo_basic');
     $this->applyRecipe($dir);

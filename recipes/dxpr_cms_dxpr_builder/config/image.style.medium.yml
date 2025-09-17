@@ -1,7 +1,7 @@
 uuid: db29bfa8-1123-462d-8e4a-db839679498c
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 _core:
   default_config_hash: Y9NmnZHQq20ASSyTNA6JnwtWrJJiSajOehGDtmUFdM0
 name: medium

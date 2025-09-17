@@ -1,0 +1,10 @@
+{
+    "name": "drupal/dxpr_cms_roles",
+    "description": "todo",
+    "type": "drupal-recipe",
+    "license": ["GPL-2.0-or-later"],
+    "require": {
+        "drupal/core": ">=10.4"
+    },
+    "version": "1.0.0-beta1"
+}

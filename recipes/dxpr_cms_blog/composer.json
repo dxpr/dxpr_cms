@@ -6,12 +6,12 @@
     "require": {
         "drupal/core": ">=10.4",
         "drupal/add_content_by_bundle": "^1.2.2",
-        "drupal/dxpr_cms_page": "^1",
+        "drupal/dxpr_cms_page": "*",
         "drupal/dxpr_cms_dxpr_builder": "*",
-        "drupal/dxpr_builder": "^2.7.0-beta4",
+        "drupal/dxpr_builder": "^2.7.6-alpha2",
         "drupal/dxpr_theme_helper": "^2.0.0",
         "drupal/better_exposed_filters": "^7",
         "drupal/selective_better_exposed_filters": "^3"
     },
-    "version": "1.x-dev"
+    "version": "1.0.0-beta1"
 }

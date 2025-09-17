@@ -82,7 +82,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -147,7 +147,7 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -212,7 +212,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -273,9 +273,9 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: content_moderation_state
-          settings: {  }
+          settings: {}
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -351,7 +351,7 @@ display:
               granularity: 2
               refresh: 60
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -449,7 +449,7 @@ display:
           perm: 'view any unpublished content'
       cache:
         type: tag
-        options: {  }
+        options: {}
       empty:
         area_text_custom:
           id: area_text_custom
@@ -462,8 +462,8 @@ display:
           empty: true
           content: 'No moderated content available. Only pending versions of content, such as drafts, are listed here.'
           tokenize: false
-      sorts: {  }
-      arguments: {  }
+      sorts: {}
+      arguments: {}
       filters:
         latest_translation_affected_revision:
           id: latest_translation_affected_revision
@@ -485,7 +485,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -502,8 +502,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         title:
           id: title
           table: node_field_revision
@@ -525,7 +525,7 @@ display:
             use_operator: false
             operator: title_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: title
             required: false
             remember: false
@@ -544,8 +544,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         type:
           id: type
           table: node_field_data
@@ -557,7 +557,7 @@ display:
           entity_field: type
           plugin_id: bundle
           operator: in
-          value: {  }
+          value: {}
           group: 1
           exposed: true
           expose:
@@ -567,7 +567,7 @@ display:
             use_operator: false
             operator: type_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: type
             required: false
             remember: false
@@ -587,8 +587,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         moderation_state:
           id: moderation_state
           table: node_field_revision
@@ -611,7 +611,7 @@ display:
             use_operator: false
             operator: moderation_state_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: moderation_state
             required: false
             remember: false
@@ -631,8 +631,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         langcode:
           id: langcode
           table: node_field_revision
@@ -644,7 +644,7 @@ display:
           entity_field: langcode
           plugin_id: language
           operator: in
-          value: {  }
+          value: {}
           group: 1
           exposed: true
           expose:
@@ -654,7 +654,7 @@ display:
             use_operator: false
             operator: langcode_op
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: langcode
             required: false
             remember: false
@@ -674,8 +674,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         moderation_state_1:
           id: moderation_state_1
           table: node_field_revision
@@ -697,7 +697,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -715,8 +715,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       filter_groups:
         operator: AND
         groups:
@@ -724,7 +724,7 @@ display:
       style:
         type: table
         options:
-          grouping: {  }
+          grouping: {}
           row_class: ''
           default_row_class: true
           columns:
@@ -785,7 +785,7 @@ display:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_tags: {  }
+          query_tags: {}
       relationships:
         nid:
           id: nid
@@ -809,9 +809,9 @@ display:
           entity_field: uid
           plugin_id: standard
           required: false
-      header: {  }
-      footer: {  }
-      display_extenders: {  }
+      header: {}
+      footer: {}
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -830,7 +830,7 @@ display:
     position: 1
     display_options:
       display_description: ''
-      display_extenders: {  }
+      display_extenders: {}
       path: admin/content/moderated
     cache_metadata:
       max-age: -1

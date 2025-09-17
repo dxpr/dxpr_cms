@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4cd96ac7-9e39-4350-a2b4-cbcf93d5100c
+  bundle: image
+  default_langcode: en
+  depends:
+    7c708dd7-8216-46e5-b6c3-1ef576f07105: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: logoipsum-334.png
+  created:
+    -
+      value: 1755261852
+  field_media_image:
+    -
+      entity: 7c708dd7-8216-46e5-b6c3-1ef576f07105
+      alt: 'Media image'

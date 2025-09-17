@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - field.field.node.event.field_content
-    - field.field.node.event.field_description
     - field.field.node.event.field_event__date
     - field.field.node.event.field_event__file
     - field.field.node.event.field_event__link
@@ -29,13 +28,6 @@ targetEntityType: node
 bundle: event
 mode: card
 content:
-  field_description:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_event__date:
     type: smartdate_default
     label: hidden
@@ -88,7 +80,7 @@ content:
     settings:
       view_mode: 16_9_medium
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 0
     region: content
 hidden:
