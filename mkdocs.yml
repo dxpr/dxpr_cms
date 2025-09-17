@@ -34,51 +34,11 @@ theme:
     - search.suggest
     - search.highlight
 plugins:
-  - search:
-      lang: en
-  - glightbox:
-      touchNavigation: true
-      loop: false
-      effect: zoom
-      slide_effect: slide
-      width: 100%
-      height: auto
-      zoomable: true
-      draggable: true
-  - mike:
-      alias_type: redirect
-      canonical_version: 1.0.0
-      version_selector: true
-      deploy_prefix: "mkdocs"
+  - search
 markdown_extensions:
   - attr_list
-  - md_in_html
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.blocks.caption
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - codehilite
   - tables
   - footnotes
   - def_list
@@ -90,11 +50,6 @@ extra:
       link: https://nl.linkedin.com/company/dxpr
     - icon: fontawesome/brands/drupal
       link: https://www.drupal.org/dxpr
-  version:
-    provider: mike
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
 nav:
   - Home: index.md
   - Kitchen Sink Demo: kitchen-sink.md
