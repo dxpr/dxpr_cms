@@ -1,0 +1,92 @@
+<p>This module is included in <a href="https://www.drupal.org/project/dxpr_cms">DXPR CMS</a>.</p>
+
+<blockquote>Transform CKEditor 5 into an AI-powered content creation platform with slash commands, real-time streaming, and support for 400+ AI models. Like ChatGPT but faster, and better at creating HTML content. Built on <a href="https://github.com/dxpr/ckeditor5-ai-agent">DXPR's CKEditor 5 AI plugin</a>.</blockquote>
+
+<h3>You need CKEditor AI Agent if</h3>
+<ul>
+  <li>You want AI-powered content generation directly within your text editor</li>
+  <li>Your content team needs faster, more efficient writing workflows</li>
+  <li>You want to integrate external web content seamlessly into your articles</li>
+  <li>You need support for multiple AI providers with automatic failover</li>
+  <li>You prefer intuitive slash commands over complex AI interfaces</li>
+</ul>
+
+<h3 id="module-project--features">Features</h3>
+<ul>
+  <li><strong>Slash commands:</strong> Quickly trigger AI actions using intuitive commands like <code>/write blog about AI</code></li>
+  <li><strong>Real-time streaming:</strong> See AI-generated content appear instantly as it's written</li>
+  <li><strong>Web content integration:</strong> Includes content from user-provided URLs directly into generated text</li>
+  <li><strong>Context-aware writing:</strong> Automatically uses surrounding editor content to enhance response accuracy</li>
+  <li><strong>Selection-based edits:</strong> Select text to quickly revise with AI</li>
+  <li><strong>400+ AI models support:</strong> Works with commercial and open source AI vendors</li>
+  <li><strong>Smart formatting:</strong> Automatically ensures generated HTML matches your editor's allowed content</li>
+  <li><strong>Multilingual support:</strong> Fully supports Drupal's multilingual content features</li>
+  <li><strong>Simple menu options:</strong> Easily edit, review, fix errors, and adjust tone from dropdown menus</li>
+  <li><strong>Extensible API:</strong> Clearly defined API for integration with custom workflows or systems</li>
+</ul>
+
+<h3 id="module-project--keyboard-shortcuts">Keyboard Shortcuts</h3>
+<ul>
+  <li><code>/</code> - Open AI Command Menu in empty field</li>
+  <li><code>Cmd/Ctrl + /</code> - Force insert slash command within text</li>
+  <li><code>Cmd/Ctrl + Backspace</code> - Cancel AI generation</li>
+  <li><code>Enter</code> - Execute command</li>
+  <li><code>Shift + Enter</code> - Add new line in command</li>
+</ul>
+
+<h3 id="module-project--post-installation">Post-installation</h3>
+<ol>
+  <li>Configure AI provider settings at /admin/config/ai/providers</li>
+  <li>Configure global AI settings at /admin/config/content/ckeditor-ai-agent</li>
+  <li>Configure permissions at /admin/people/permissions</li>
+  <li>Set up text formats at /admin/config/content/formats</li>
+  <li>Add the AI Agent button to your CKEditor toolbars</li>
+  <li>Start using slash commands or the toolbar button for AI assistance</li>
+</ol>
+
+<div class="note-tip">
+  <h4>Prefer a turnkey demo site?</h4>
+  <p>Spin up <strong>DXPR CMS</strong>—Drupal pre-configured with DXPR Builder, DXPR Theme, CKEditor AI Agent module, and security best practices.</p>
+  <p><a href="https://www.drupal.org/project/dxpr_cms" title="DXPR CMS platform">Get DXPR CMS »</a></p>
+</div>
+
+<h3 id="module-project--keyboard-shortcuts">Keyboard Shortcuts</h3>
+<ul>
+  <li><code>/</code> - Open AI Command Menu in empty field</li>
+  <li><code>Cmd/Ctrl + /</code> - Force insert slash command within text</li>
+  <li><code>Cmd/Ctrl + Backspace</code> - Cancel AI generation</li>
+  <li><code>Enter</code> - Execute command</li>
+  <li><code>Shift + Enter</code> - Add new line in command</li>
+</ul>
+
+<div class="note-tip">
+  <h4>Extended Content Capabilities</h4>
+  <p><a href="https://www.drupal.org/project/ai_provider_dxpr"><strong>DXPR AI Provider</strong></a> enables long-form content creation by automatically routing between multiple AI providers when limits are reached, with integrated web research for fact-checking. Includes free access tier.</p>
+</div>
+
+<h3 id="module-project--usage-examples">Usage Examples</h3>
+<ul>
+  <li><strong>Content Creation</strong>: Type "/write" followed by your topic to generate new content</li>
+  <li><strong>Content Enhancement</strong>: Select text and use the AI menu to improve or modify it</li>
+  <li><strong>Reference Integration</strong>: Include URLs in prompts to incorporate external content</li>
+  <li><strong>Inline Assistance</strong>: Use Cmd/Ctrl + / to insert AI content mid-sentence</li>
+  <li><strong>Multilingual Content</strong>: Generate content in any language supported by your chosen AI model</li>
+</ul>
+
+<h3>AI Modules in DXPR CMS</h3>
+<p>CKEditor AI Agent works seamlessly with other AI modules included in DXPR CMS:</p>
+<ul>
+  <li><strong><a href="https://www.drupal.org/project/ai">AI (Artificial Intelligence)</a></strong> - Core AI framework with support for 400+ AI models</li>
+  <li><strong><a href="https://www.drupal.org/project/ai_provider_dxpr">AI Provider DXPR</a></strong> - DXPR's AI provider with extended content capabilities and free access tier</li>
+  <li><strong><a href="https://www.drupal.org/project/ai_image_alt_text">AI Image Alt Text</a></strong> - Automatic AI-generated alt text for images</li>
+  <li><strong><a href="https://www.drupal.org/project/ai_social_posts">AI Social Posts</a></strong> - AI-powered social media content generation</li>
+  <li><strong><a href="https://www.drupal.org/project/ai_content_strategy">AI Content Strategy</a></strong> - AI-driven content planning and strategy</li>
+  <li><strong><a href="https://www.drupal.org/project/ai_agents">AI Agents</a></strong> - Advanced AI agent orchestration system</li>
+</ul>
+
+<p><strong><a href="https://project.pages.drupalcode.org/dxpr_cms/modules/">→ VIEW FULL MODULES LIST</a></strong> - Complete list of all 90+ modules included in DXPR CMS</p>
+
+<h3>Optional Dependencies</h3>
+<ul>
+  <li><strong><a href="https://www.drupal.org/project/markdownify">Markdownify module</a></strong> (<code>drupal/markdownify</code>) - Enables internal links to unpublished content for users with appropriate access permissions. When installed, users can reference and link to draft content that they have permission to view, even if it's not published.</li>
+</ul>
