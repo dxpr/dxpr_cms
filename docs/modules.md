@@ -9,8 +9,8 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **[ai_checklist](https://drupal.org/project/ai_checklist)** - Interactive AI-powered checklists for guiding content creation and ensuring quality standards
 - **[ai_content_strategy](https://drupal.org/project/ai_content_strategy)** - AI-powered content strategy tools for planning, optimizing and analyzing content effectiveness and engagement
 - **[ai_social_posts](https://drupal.org/project/ai_social_posts)** - AI-powered social media post generation for content promotion
-- **[ai_social_posts_linkedin](https://drupal.org/project/ai_social_posts_linkedin)** - LinkedIn-specific AI social post generation capabilities with specialized formatting and engagement optimization
-- **[ai_social_posts_linkedin_article](https://drupal.org/project/ai_social_posts_linkedin_article)** - Generate LinkedIn article posts using AI for long-form professional content
+- **ai_social_posts_linkedin** - LinkedIn-specific AI social post generation capabilities with specialized formatting and engagement optimization (submodule of [ai_social_posts](https://drupal.org/project/ai_social_posts))
+- **ai_social_posts_linkedin_article** - Generate LinkedIn article posts using AI for long-form professional content (submodule of [ai_social_posts](https://drupal.org/project/ai_social_posts))
 - **[ai_sorting](https://drupal.org/project/ai_sorting)** - AI-powered content sorting and prioritization based on relevance and engagement potential
 - **[ai_image_alt_text](https://drupal.org/project/ai_image_alt_text)** - Automatically generates accessible alt text for images using AI image recognition and analysis
 - **[ai_provider_dxpr](https://drupal.org/project/ai_provider_dxpr)** - DXPR AI provider integration offering free access to multiple AI models including OpenAI, Claude, Gemini, and others through DXPR's unified API
@@ -19,13 +19,13 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **[analyze_ai_content_security_audit](https://drupal.org/project/analyze_ai_content_security_audit)** - AI-powered security audit scanning content for potential security vulnerabilities and compliance issues
 - **[analyze_ai_sentiments](https://drupal.org/project/analyze_ai_sentiments)** - Sentiments analysis using AI to evaluate emotional tone and reader perception of content
 - **[analyze](https://drupal.org/project/analyze)** - Core framework for content analysis providing extensible analysis capabilities
-- **[analyze_basic_content_info](https://drupal.org/project/analyze_basic_content_info)** - Basic content information analysis including readability, word count, and structure metrics
-- **[analyze_page_views](https://drupal.org/project/analyze_page_views)** - Page view analytics integration for analyzing content performance and engagement
+- **analyze_basic_content_info** - Basic content information analysis including readability, word count, and structure metrics (submodule of [analyze](https://drupal.org/project/analyze))
+- **analyze_page_views** - Page view analytics integration for analyzing content performance and engagement (submodule of [analyze](https://drupal.org/project/analyze))
 - **[ckeditor_ai_agent](https://drupal.org/project/ckeditor_ai_agent)** - AI assistant integrated into CKEditor for real-time writing suggestions and content improvements
 - **[diff](https://drupal.org/project/diff)** - Shows differences between content revisions with visual comparison tools
 - **[key](https://drupal.org/project/key)** - Key management framework for securely storing API keys and credentials
 - **[markdownify](https://drupal.org/project/markdownify)** - Converts HTML content to Markdown format for easier information exchange with AI models
-- **[markdownify_path](https://drupal.org/project/markdownify_path)** - Provides path-based Markdown conversion capabilities for specific content routes
+- **markdownify_path** - Provides path-based Markdown conversion capabilities for specific content routes (submodule of [markdownify](https://drupal.org/project/markdownify))
 - **[rl](https://drupal.org/project/rl)** - Reinforcement Learning module providing machine learning capabilities for content optimization
 
 ## Administration & UI
@@ -39,7 +39,7 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **[sam](https://drupal.org/project/sam)** - Simple Add More - Simplifies multi-value form widgets by hiding empty fields and providing "Add another" buttons
 - **[smart_trim](https://drupal.org/project/smart_trim)** - Intelligent text trimming with configurable options for teaser displays
 - **[tagify](https://drupal.org/project/tagify)** - Modern tag input widget transforming text fields into user-friendly tag selection interfaces
-- **[tagify_user_list](https://drupal.org/project/tagify_user_list)** - User selection widget using Tagify for improved user reference fields
+- **tagify_user_list** - User selection widget using Tagify for improved user reference fields (submodule of [tagify](https://drupal.org/project/tagify))
 
 ## Content Management
 
@@ -128,9 +128,9 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **[automatic_updates](https://drupal.org/project/automatic_updates)** - Automated security updates for Drupal core and contrib modules keeping sites secure
 - **[bpmn_io](https://drupal.org/project/bpmn_io)** - BPMN diagram viewer and editor for ECA workflows enabling visual workflow design
 - **[eca](https://drupal.org/project/eca)** - Event-Condition-Action framework for creating automated workflows without custom code requirements
-- **[eca_content](https://drupal.org/project/eca_content)** - ECA plugins for content-related events and actions
-- **[eca_misc](https://drupal.org/project/eca_misc)** - Miscellaneous ECA plugins for various workflow automation tasks
-- **[eca_render](https://drupal.org/project/eca_render)** - ECA plugins for rendering and display-related workflows
+- **eca_content** - ECA plugins for content-related events and actions (submodule of [eca](https://drupal.org/project/eca))
+- **eca_misc** - Miscellaneous ECA plugins for various workflow automation tasks (submodule of [eca](https://drupal.org/project/eca))
+- **eca_render** - ECA plugins for rendering and display-related workflows (submodule of [eca](https://drupal.org/project/eca))
 - **[linkit](https://drupal.org/project/linkit)** - Enhanced linking interface with autocomplete for internal content and media references
 - **[menu_link_attributes](https://drupal.org/project/menu_link_attributes)** - Add custom attributes to menu links including classes, target, and rel attributes
 - **[token](https://drupal.org/project/token)** - Token system providing placeholders for dynamic content replacement throughout the site
