@@ -17,6 +17,7 @@ install:
   - dxpr_builder_block
   - dxpr_theme_helper
   - ace_editor
+  - toast_image_editor
 config:
   strict: false
   import:
@@ -34,13 +35,17 @@ config:
       grantPermissions:
         - 'edit with dxpr builder'
         - 'use text format dxpr_builder_html'
+        - 'use toast image editor'
     user.role.site_builder:
       grantPermissions:
         - 'edit with dxpr builder'
         - 'administer dxpr_builder_profile'
         - 'administer workflows'
         - 'use text format dxpr_builder_html'
+        - 'administer toast image editor'
+        - 'use toast image editor'
     user.role.content_editor:
       grantPermissions:
         - 'edit with dxpr builder'
         - 'use text format dxpr_builder_html'
+        - 'use toast image editor'
