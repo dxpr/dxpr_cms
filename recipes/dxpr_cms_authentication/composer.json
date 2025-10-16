@@ -7,6 +7,7 @@
         "drupal/bpmn_io": "^2.0",
         "drupal/core": ">=10.3",
         "drupal/eca": "^2.0",
+        "drupal/gin_login": "^2.1",
         "drupal/login_emailusername": "^3",
         "drupal/token": "^1"
     },
