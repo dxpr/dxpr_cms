@@ -10,6 +10,7 @@ install:
   - focal_point
   - responsive_image
   - svg_image
+  - toast_image_editor
 config:
   # Treat field storages strictly since they influence the database layout.
   strict:
