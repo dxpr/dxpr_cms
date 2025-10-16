@@ -18,6 +18,17 @@ config:
   import:
     focal_point: '*'
   actions:
+    user.role.content_editor:
+      grantPermissions:
+        - 'use toast image editor'
+    user.role.content_administrator:
+      grantPermissions:
+        - 'use toast image editor'
+        - 'administer toast image editor'
+    user.role.site_builder:
+      grantPermissions:
+        - 'use toast image editor'
+        - 'administer toast image editor'
     core.entity_form_display.media.image.*:
       setComponents:
         -
