@@ -24,7 +24,6 @@ config:
     user.role.content_administrator:
       grantPermissions:
         - 'use toast image editor'
-        - 'administer toast image editor'
     user.role.site_builder:
       grantPermissions:
         - 'use toast image editor'
