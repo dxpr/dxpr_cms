@@ -31,7 +31,7 @@ default:
       value: false
   path:
     -
-      alias: /ai-tutorial
+      alias: /page
       langcode: en
       pathauto: 1
   field_content:
