@@ -208,9 +208,6 @@
             "drupal/ace_editor": {
                 "Fix profile detection for recipe-based installations  ": "patches/ace_editor_no_profile.patch"
             },
-            "drupal/admin_toolbar": {
-                "Fix TypeError when iterating Project Browser enabled sources": "patches/admin_toolbar--issue-3540400.patch"
-            },
             "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
             },
