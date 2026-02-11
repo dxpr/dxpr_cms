@@ -4,9 +4,9 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/bpmn_io": "^2.0",
+        "drupal/bpmn_io": "^3.0",
         "drupal/core": ">=10.4",
-        "drupal/eca": "^2.0",
+        "drupal/eca": "^3.0",
         "drupal/dxpr_cms_page": "*",
         "drupal/klaro": "^3",
         "drupal/menu_link_attributes": "^1.5"

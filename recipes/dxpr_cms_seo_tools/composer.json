@@ -4,10 +4,10 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/bpmn_io": "^2.0",
+        "drupal/bpmn_io": "^3.0",
         "drupal/core": ">=10.4",
-        "drupal/eca": "^2.0",
-        "drupal/field_group": "^3.6",
+        "drupal/eca": "^3.0",
+        "drupal/field_group": "^4.0",
         "drupal/focal_point": "^2.1",
         "drupal/metatag": "^2",
         "drupal/robotstxt": "^1.6",

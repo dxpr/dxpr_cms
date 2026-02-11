@@ -8,7 +8,7 @@
         "drupal/add_content_by_bundle": "^1.2.2",
         "drupal/dxpr_cms_page": "*",
         "drupal/dxpr_cms_dxpr_builder": "*",
-        "drupal/dxpr_builder": "^2.7.6-alpha2",
+        "drupal/dxpr_builder": "^3.0.0-alpha1",
         "drupal/dxpr_theme_helper": "^3.0.0",
         "drupal/better_exposed_filters": "^7",
         "drupal/selective_better_exposed_filters": "^3"

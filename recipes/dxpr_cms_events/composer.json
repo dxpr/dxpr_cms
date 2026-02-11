@@ -11,7 +11,7 @@
     "drupal/dxpr_cms_page": "*",
     "drupal/dxpr_cms_privacy_basic": "*",
     "drupal/geocoder": "^4.10",
-    "drupal/geofield": "^1.47",
+    "drupal/geofield": "^10.3",
     "drupal/leaflet": "^10.2.33",
     "drupal/smart_date": "^4.2.1",
     "geocoder-php/nominatim-provider": "^5.7"
