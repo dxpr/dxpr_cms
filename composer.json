@@ -143,6 +143,26 @@
     "conflict": {
         "drupal/drupal": "*"
     },
+    "scripts": {
+        "post-install-cmd": [
+            "echo ''",
+            "echo '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'",
+            "echo ' DXPR CMS ready to install'",
+            "echo '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'",
+            "echo ''",
+            "echo ' Next step → Run the installer'",
+            "echo ''",
+            "echo \"   Browser:  $DDEV_PRIMARY_URL\"",
+            "echo \"   Terminal: ddev drush site-install dxpr_cms_installer dxpr_cms_installer_keys.dxpr_key='YOUR_API_KEY' -y\"",
+            "echo ''",
+            "echo ' Get your API key: https://app.dxpr.com/getting-started'",
+            "echo ''",
+            "echo ' Optional recipes available after install:'",
+            "echo '   ddev drush recipe ../recipes/dxpr_cms_[recipe-name]'",
+            "echo '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'",
+            "echo ''"
+        ]
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload-dev": {
