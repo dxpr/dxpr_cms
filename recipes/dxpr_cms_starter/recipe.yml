@@ -25,7 +25,6 @@ recipes:
 install:
   - automated_cron
   - automatic_updates
-  - automatic_updates_extensions
   - block_classes
   - dashboard
   - eca_base
