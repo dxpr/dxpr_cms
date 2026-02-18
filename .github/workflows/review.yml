@@ -7,7 +7,7 @@ env:
 
 jobs:
   drupal-lint:
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-4
     timeout-minutes: 60
     steps:
     - uses: actions/checkout@v4
@@ -17,7 +17,7 @@ jobs:
         docker compose -f docker-compose.lint.yml --profile lint run drupal-lint
 
   eslint:
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-4
     timeout-minutes: 30
     steps:
     - uses: actions/checkout@v4
@@ -53,7 +53,7 @@ jobs:
       run: npx eslint .
 
   stylelint:
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-4
     timeout-minutes: 30
     steps:
     - uses: actions/checkout@v4
@@ -89,7 +89,7 @@ jobs:
       run: npm run lint:scss
 
   yamllint:
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-4
     timeout-minutes: 10
     steps:
     - uses: actions/checkout@v4
