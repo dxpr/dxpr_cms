@@ -22,14 +22,14 @@ jobs:
     
     steps:
       - name: Add reaction to comment
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: eyes
 
       - name: Get PR details
         id: pr
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const pr = await github.rest.pulls.get({
@@ -42,7 +42,7 @@ jobs:
             core.setOutput('ref', pr.data.head.ref);
 
       - name: Checkout PR code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ steps.pr.outputs.sha }}
@@ -83,7 +83,7 @@ jobs:
     
     steps:
       - name: Checkout PR code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ needs.setup.outputs.pr_sha }}
 
@@ -116,7 +116,7 @@ jobs:
     
     steps:
       - name: Checkout PR code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ needs.setup.outputs.pr_sha }}
 
@@ -155,7 +155,7 @@ jobs:
           fi
 
       - name: Upload Cypress screenshots on failure
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: cypress-screenshots
@@ -163,7 +163,7 @@ jobs:
           retention-days: 7
 
       - name: Upload Cypress videos on failure
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: cypress-videos
@@ -178,7 +178,7 @@ jobs:
     
     steps:
       - name: Checkout PR code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ needs.setup.outputs.pr_sha }}
 
@@ -201,7 +201,7 @@ jobs:
           ddev test
 
       - name: Upload test artifacts on failure
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: test-artifacts
@@ -220,7 +220,7 @@ jobs:
     steps:
       - name: Report success
         if: needs.phpunit-tests.result == 'success' && needs.cypress-tests.result == 'success' && (needs.full-test-suite.result == 'success' || needs.full-test-suite.result == 'skipped')
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ needs.setup.outputs.pr_number }}
           body: |
@@ -235,7 +235,7 @@ jobs:
 
       - name: Report failure
         if: needs.phpunit-tests.result == 'failure' || needs.cypress-tests.result == 'failure' || needs.full-test-suite.result == 'failure'
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ needs.setup.outputs.pr_number }}
           body: |

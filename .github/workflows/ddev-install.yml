@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # https://github.com/marketplace/actions/checkout
+        uses: actions/checkout@v6 # https://github.com/marketplace/actions/checkout
 
       # See https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/#debianubuntu
       - name: Install DDEV
