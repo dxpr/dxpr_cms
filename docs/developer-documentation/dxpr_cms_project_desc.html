@@ -119,11 +119,28 @@
 <code>ddev drush site-install dxpr_cms_installer dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code>
 <p>Replace <code>YOUR_DXPR_API_KEY</code> with your actual DXPR Builder product key from <a href="https://app.dxpr.com/getting-started" target="_blank">app.dxpr.com/getting-started</a>.</p>
 
-<h3>Step 7: Install optional recipes</h3>
-<p>During the web-based installation, you can select additional recipes (Case Studies, Events, Forms, Analytics, News, SEO Tools) to customize your site.</p>
-<p>If you used command-line installation or want to add recipes later, install them manually:</p>
+<h4>Option C: Command-line installation with recipes</h4>
+<p>You can select optional recipes during command-line installation, mirroring the options available in the web-based installer. Use pipe-separated recipe names with the <code>installer_recipes_form.add_ons</code> parameter:</p>
+<pre><code>ddev drush site-install dxpr_cms_installer \
+  "installer_recipes_form.add_ons=Case Studies|Events|Forms|Google Analytics|News|SEO Tools|Multilingual" \
+  site_name='My Site' \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code></pre>
+<p>Available recipes: <code>Case Studies</code>, <code>Events</code>, <code>Forms</code>, <code>Google Analytics</code>, <code>News</code>, <code>SEO Tools</code>, <code>Multilingual</code>.</p>
+<p>To install with <strong>all</strong> optional recipes, use <code>*</code>:</p>
+<pre><code>ddev drush site-install dxpr_cms_installer \
+  "installer_recipes_form.add_ons=*" \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code></pre>
+<p>When including the Multilingual recipe, you can also specify additional languages:</p>
+<pre><code>ddev drush site-install dxpr_cms_installer \
+  "installer_recipes_form.add_ons=Case Studies|Events|Multilingual" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code></pre>
+
+<h3>Step 7: Install optional recipes after installation</h3>
+<p>If you want to add recipes later, install them manually:</p>
 <pre><code>ddev drush recipe ../recipes/dxpr_cms_case_study
-ddev drush recipe ../recipes/dxpr_cms_events  
+ddev drush recipe ../recipes/dxpr_cms_events
 ddev drush recipe ../recipes/dxpr_cms_forms
 ddev drush recipe ../recipes/dxpr_cms_news
 ddev drush recipe ../recipes/dxpr_cms_multilingual

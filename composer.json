@@ -115,6 +115,7 @@
         "cweagans/composer-patches": "^2.0.0-beta2",
         "drupal/ace_editor": "2.0.2",
         "drupal/admin_toolbar": "^3.6",
+        "drupal/ai_provider_dxpr": "1.0.x-dev@dev",
         "drupal/bpmn_io": "^3.0",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
@@ -230,9 +231,6 @@
             },
             "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
-            },
-            "drupal/ai_tmgmt": {
-                "Comprehensive translation methods": "patches/ai_tmgmt--issue-3533689.patch"
             }
         }
     }

@@ -25,6 +25,7 @@ config:
   import:
     language: '*'
     tmgmt: '*'
+    ai_translate: '*'
   actions:
     # Configure translations for content.
     node.type.*:
@@ -56,7 +57,7 @@ config:
           chat_model: dxpr__kavya-m1-fast
           tokenizer_model: dxpr__kavya-m1-fast
           advanced:
-            max_tokens: '999996'
+            max_tokens: 999996
     user.role.content_administrator:
       grantPermissionsForEachNodeType:
         - 'translate %bundle node'

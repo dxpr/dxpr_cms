@@ -184,7 +184,7 @@ class ConfigureMultilingualForm extends FormBase implements InstallerFormInterfa
     // Get a list of selected additional languages.
     $languages = $form_state->getValue('additional_languages');
     // This parameter also will be used for skipping the current task.
-    $install_state['parameters']['dxpr_cms_installer']['additional_languages'] = array_filter($languages);
+    $install_state['parameters']['dxpr_cms_installer']['additional_languages'] = array_filter((array) $languages);
   }
 
 }

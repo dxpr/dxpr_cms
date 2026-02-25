@@ -42,12 +42,42 @@ Follow these steps to install DXPR CMS:
    Replace `YOUR_DXPR_API_KEY` with your actual DXPR Builder product key from
    [app.dxpr.com/getting-started](https://app.dxpr.com/getting-started).
 
+   **Option C: Command-line installation with recipes**
+   You can select optional recipes during command-line installation, mirroring
+   the options available in the web-based installer. Use pipe-separated recipe
+   names with the `installer_recipes_form.add_ons` parameter:
+   ```bash
+   ddev drush site-install dxpr_cms_installer \
+     "installer_recipes_form.add_ons=Case Studies|Events|Forms|Google Analytics|News|SEO Tools|Multilingual" \
+     site_name='My Site' \
+     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+   ```
+
+   Available recipes: `Case Studies`, `Events`, `Forms`, `Google Analytics`,
+   `News`, `SEO Tools`, `Multilingual`.
+
+   To install with **all** optional recipes, use `*`:
+   ```bash
+   ddev drush site-install dxpr_cms_installer \
+     "installer_recipes_form.add_ons=*" \
+     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+   ```
+
+   When including the Multilingual recipe, you can also specify additional
+   languages:
+   ```bash
+   ddev drush site-install dxpr_cms_installer \
+     "installer_recipes_form.add_ons=Case Studies|Events|Multilingual" \
+     "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
+     "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
+     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+   ```
+
    **Installing optional recipes after installation**
-   If you used command-line installation or want to add recipes later,
-   install them manually:
+   If you want to add recipes later, install them manually:
    ```bash
    ddev drush recipe ../recipes/dxpr_cms_case_study
-   ddev drush recipe ../recipes/dxpr_cms_events  
+   ddev drush recipe ../recipes/dxpr_cms_events
    ddev drush recipe ../recipes/dxpr_cms_forms
    ddev drush recipe ../recipes/dxpr_cms_news
    ddev drush recipe ../recipes/dxpr_cms_multilingual

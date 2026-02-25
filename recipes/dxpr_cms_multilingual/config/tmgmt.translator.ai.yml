@@ -1,0 +1,13 @@
+name: ai
+label: AI
+description: 'AI-powered translation using the AI module.'
+auto_accept: true
+weight: 0
+plugin: ai
+settings:
+  model_selection_type: ai_translate
+  chat_model: 'dxpr__kavya-m1-fast'
+  tokenizer_model: 'dxpr__kavya-m1-fast'
+  advanced:
+    max_tokens: '999996'
+remote_languages_mappings: {  }
