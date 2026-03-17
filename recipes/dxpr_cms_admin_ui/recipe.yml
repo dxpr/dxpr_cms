@@ -7,6 +7,7 @@ install:
   - admin_toolbar
   - admin_toolbar_tools
   - admin_toolbar_search
+  - coffee
   - dashboard
   - contextual
   - gin
@@ -38,13 +39,17 @@ config:
         admin: gin
     gin.settings:
       simpleConfigUpdate:
-        classic_toolbar: vertical
+        classic_toolbar: horizontal
+        enable_darkmode: auto
     tagify.settings:
       simpleConfigUpdate:
         set_default_widget: true
     admin_toolbar_tools.settings:
       simpleConfigUpdate:
         show_local_tasks: true
+    user.role.authenticated:
+      grantPermissions:
+        - 'access coffee'
     user.role.content_editor:
       grantPermissions:
         - 'use admin toolbar search'

@@ -18,7 +18,7 @@ mode: default
 content:
   field_content:
     type: text_textarea
-    weight: 1
+    weight: 2
     region: content
     settings:
       rows: 9
@@ -26,13 +26,13 @@ content:
     third_party_settings: {}
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 12
     region: content
     settings: {}
     third_party_settings: {}
   path:
     type: path
-    weight: 7
+    weight: 15
     region: content
     settings: {}
     third_party_settings: {}
@@ -40,14 +40,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 13
     region: content
     third_party_settings: {}
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 14
     region: content
     third_party_settings: {}
   title:
@@ -60,7 +60,7 @@ content:
     third_party_settings: {}
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60
@@ -93,7 +93,7 @@ third_party_settings:
       label: 'HTML Content Editing'
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         classes: ''

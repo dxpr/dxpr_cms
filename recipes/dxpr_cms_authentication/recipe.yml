@@ -7,6 +7,7 @@ install:
   - eca_form
   - eca_misc
   - eca_user
+  - gin_login
   - login_emailusername
   - token
 config:
@@ -14,6 +15,9 @@ config:
   # owner has made their own tweaks to the authentication flows, and we respect those.
   strict: false
   actions:
+    gin_login.settings:
+      simpleConfigUpdate:
+        brand_image.use_default: false
     system.site:
       simpleConfigUpdate:
         page.403: '/user/login'

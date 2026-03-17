@@ -33,7 +33,7 @@ third_party_settings:
       label: 'DXPR Theme Settings'
       region: content
       parent_name: ''
-      weight: 15
+      weight: 20
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -51,7 +51,7 @@ third_party_settings:
       label: 'Search Engine Optimization (SEO) Information'
       region: content
       parent_name: ''
-      weight: 17
+      weight: 18
       format_type: details
       format_settings:
         classes: ''
@@ -70,13 +70,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_content:
     type: text_textarea
-    weight: 4
+    weight: 2
     region: content
     settings:
       rows: 9
@@ -102,14 +102,14 @@ content:
     third_party_settings: {  }
   field_featured_image:
     type: media_library_widget
-    weight: 3
+    weight: 1
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_seo_description:
     type: string_textarea
-    weight: 16
+    weight: 18
     region: content
     settings:
       rows: 5
@@ -117,14 +117,14 @@ content:
     third_party_settings: {  }
   field_seo_image:
     type: media_library_widget
-    weight: 17
+    weight: 19
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_seo_title:
     type: string_textfield
-    weight: 15
+    weight: 17
     region: content
     settings:
       size: 60
@@ -132,7 +132,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: tagify_entity_reference_autocomplete_widget
-    weight: 7
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -145,26 +145,26 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 0
+    weight: -7
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 11
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 5
+    weight: -5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -175,32 +175,32 @@ content:
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 1
+    weight: -6
     region: content
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 9
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 14
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 12
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 0
     region: content
     settings:
       size: 60
@@ -208,7 +208,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 11
     region: content
     settings:
       match_operator: CONTAINS
@@ -218,12 +218,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 6
+    weight: -3
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 16
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }

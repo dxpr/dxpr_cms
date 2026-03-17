@@ -132,6 +132,7 @@
         "drupal/dxpr_cms_performance": "*",
         "drupal/dxpr_cms_seo_tools": "*",
         "drupal/dxpr_cms_starter": "*",
+        "drupal/easy_email_express": "^1",
         "drupal/google_tag": "^2.0",
         "drupal/project_browser": "^2.1@beta",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",

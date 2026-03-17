@@ -21,6 +21,7 @@
         "drupal/dxpr_cms_remote_video": "*",
         "drupal/dxpr_cms_seo_basic": "*",
         "drupal/dxpr_cms_dxpr_theme": "*",
+        "drupal/easy_email_express": "*",
         "drupal/token": "^1"
     },
     "version": "1.0.0-beta1"

@@ -22,6 +22,7 @@ recipes:
   - dxpr_cms_roles
   - dxpr_cms_ai
   - dxpr_cms_ai_linkedin_posts
+  - easy_email_express
 install:
   - automated_cron
   - automatic_updates
@@ -35,6 +36,7 @@ install:
   - eca_user
   - menu_link_content
   - package_manager
+  - project_browser
   - update
   # The rest of these are in Standard.
   - inline_form_errors

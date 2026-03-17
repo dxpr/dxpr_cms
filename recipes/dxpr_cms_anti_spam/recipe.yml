@@ -3,6 +3,7 @@ type: DXPR CMS
 description: Sets up anti-spam and anti-abuse functionality.
 install:
   - captcha
+  - friendly_captcha_challenge
   - friendlycaptcha
   - honeypot
 input:
