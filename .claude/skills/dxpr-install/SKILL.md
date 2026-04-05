@@ -57,16 +57,15 @@ echo "SITES: ${SITES:-none}"
 **Use the AskUserQuestion tool** for interactive prompts — never dump questions as plain text. Batch related questions into a single AskUserQuestion call. Skip questions the preamble or user request already answered.
 
 1. **Codebase location** — If "no-project": confirm target directory (infer from request)
-2. **Default site language** — What language should the site UI be in? Default: English (en). Common: nl, de, fr, es, ja, ar. This sets the `--locale` and the primary admin/UI language.
-3. **Recipes** — Which optional add-ons? Present as multi-select:
+2. **Languages** — Ask as a single question: "Which languages do you need? Pick one for a single-language site, or multiple for a multilingual site." Default: English (en). Common: nl, de, fr, es, ja, ar, zh-hans, pt-br. The **first** language listed becomes the `--locale` (default site UI language). If the user picks more than one language, **auto-add the Multilingual recipe** — do not require the user to select it separately.
+3. **Recipes** — Which optional add-ons? Present as multi-select. If Multilingual was auto-added from step 2, show it as already selected:
    - Case Studies — portfolio/client work showcase
    - Events — event listings with dates, locations, maps
    - Forms — contact forms and webforms
    - Google Analytics — GA4 tracking via Google Tag Manager
    - News — news articles and listings
    - SEO Tools — sitemap, meta tags, SEO checklist
-   - Multilingual — translation management (enables additional language selection)
-4. **Additional languages** — Only if Multilingual selected. Which extra languages beyond the default? Common: nl, de, fr, es, ar, ja, zh-hans, pt-br.
+   - Multilingual — translation management (auto-selected when multiple languages chosen)
 5. **API key** — If preamble found one, confirm. If not, ask or offer skip for dev.
 6. **Site name** — Default to directory name. Confirm or ask.
 7. **Admin account** — Username (default: admin), email (default: admin@example.com), password.
