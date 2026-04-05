@@ -57,16 +57,15 @@ echo "SITES: ${SITES:-none}"
 **Use the AskUserQuestion tool** for interactive prompts — never dump questions as plain text. Batch related questions into a single AskUserQuestion call. Skip questions the preamble or user request already answered.
 
 1. **Codebase location** — If "no-project": confirm target directory (infer from request)
-2. **Languages** — Ask as a single question: "Which languages do you need? Pick one for a single-language site, or multiple for a multilingual site." Default: English (en). Common: nl, de, fr, es, ja, ar, zh-hans, pt-br. The **first** language listed becomes the `--locale` (default site UI language). If the user picks more than one language, **auto-add the Multilingual recipe** — do not require the user to select it separately.
-3. **Recipes** — Which optional add-ons? Present as multi-select. If Multilingual was auto-added from step 2, show it as already selected:
+2. **Languages** — Ask: "Which languages do you need? Pick one for a single-language site, or multiple for a multilingual site." Default: English (en). Common: nl, de, fr, es, ja, ar, zh-hans, pt-br. The **first** language becomes the `--locale` (default site UI language). Any additional languages become `additional_languages` arguments. **If the user picks more than one language, silently add the Multilingual recipe — never ask the user about it separately.**
+3. **Recipes** — Which optional add-ons? **Do NOT list Multilingual here** — it is handled automatically by the language question above. Present as multi-select:
    - Case Studies — portfolio/client work showcase
    - Events — event listings with dates, locations, maps
    - Forms — contact forms and webforms
    - Google Analytics — GA4 tracking via Google Tag Manager
    - News — news articles and listings
    - SEO Tools — sitemap, meta tags, SEO checklist
-   - Multilingual — translation management (auto-selected when multiple languages chosen)
-5. **API key** — If preamble found one, confirm. If not, ask or offer skip for dev.
+4. **API key** — If preamble found one, confirm. If not, ask or offer skip for dev.
 6. **Site name** — Default to directory name. Confirm or ask.
 7. **Admin account** — Username (default: admin), email (default: admin@example.com), password.
 8. **Site email** — The "From:" address for site-generated emails. Default: same as admin email.
@@ -185,7 +184,7 @@ Drush native options: `--locale`, `--site-name`, `--account-name`, `--account-ma
 | SEO Tools | — | simple_sitemap, seo_checklist |
 | Multilingual | — | tmgmt, locale, content_translation |
 
-If additional languages are specified without Multilingual, auto-add it.
+Multilingual is never shown to the user as a recipe choice. It is auto-added whenever more than one language is selected.
 
 ## Environment
 
