@@ -195,6 +195,8 @@ drush status --format=json
 drush pml --status=enabled --no-core --format=json
 ```
 
+**Do NOT run `locale:check`, `locale:update`, or `locale:import` after install.** Translations are already downloaded and imported during `drush site:install`. Running these again is redundant and takes a very long time (hundreds of HTTP requests to ftp.drupal.org).
+
 #### Step 5: Install AI skill files (if available)
 
 These drush commands are provided by DXPR Builder, DXPR Theme, and the
