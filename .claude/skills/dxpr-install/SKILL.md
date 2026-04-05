@@ -134,7 +134,7 @@ git clone https://github.com/dxpr/dxpr_cms.git .
 composer install
 ```
 
-**Important:** `composer install` can take 3-5 minutes and may need extra memory. Use a **10 minute timeout** for the Bash tool call. If it fails with a memory error, retry with `php -d memory_limit=2G $(which composer) install`.
+**Important:** `composer install` can take 5-15 minutes. Use the **maximum timeout (600000ms)** for the Bash tool call. If it fails with a memory error, retry with `php -d memory_limit=2G $(which composer) install`.
 
 #### Step 2: Create database (Valet/native only, DDEV auto-creates)
 
@@ -179,7 +179,7 @@ vendor/bin/drush site:install dxpr_cms_installer \
   "install_configure_form.date_default_timezone=<timezone>"
 ```
 
-**Important:** Use a **10 minute timeout** for the drush Bash tool call. If drush hits a memory limit, prefix with `php -d memory_limit=2G`.
+**Important:** `drush site:install` can take 10-30 minutes (especially with multilingual + recipes). Use the **maximum timeout (600000ms)** for the Bash tool call. If drush hits a memory limit, prefix with `php -d memory_limit=2G`.
 
 Notes on drush form keys:
 - **Omit form key arguments that are empty.** If no recipes were selected, do NOT pass `installer_recipes_form.add_ons` at all. If no additional languages, do NOT pass `additional_languages`. An empty value causes errors.
