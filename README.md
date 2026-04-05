@@ -33,43 +33,19 @@ Follow these steps to install DXPR CMS:
    During installation, you can select optional recipes (Case Studies,
    Events, Forms, Analytics, News, SEO Tools) to customize your site.
 
-   **Option B: Interactive TUI wizard**
-   Run the interactive installer which guides you through each step:
+   **Option B: Command-line installation with DXPR API key**
+   For automated installation with your DXPR Builder API key:
    ```bash
-   ddev exec bin/dxpr-install
+   ddev drush site-install dxpr_cms_installer \
+     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
    ```
-   The wizard prompts for recipe selection, site name, API key, languages,
-   and admin credentials — the same steps as the web-based installer.
-
-   **Option C: Non-interactive CLI installation**
-   For automated or scripted installations with all options on one line:
-   ```bash
-   ddev exec bin/dxpr-install \
-     --api-key='YOUR_DXPR_API_KEY' \
-     --all-recipes \
-     --site-name='My Site' \
-     --admin-pass='admin' \
-     --no-interaction
-   ```
-
-   With specific recipes and languages:
-   ```bash
-   ddev exec bin/dxpr-install \
-     --api-key='YOUR_DXPR_API_KEY' \
-     --recipes="News,Events,Multilingual" \
-     --languages="nl,de,fr" \
-     --site-name='My Site' \
-     --no-interaction
-   ```
-
-   Run `bin/dxpr-install --help` for all available options.
-
-   Replace `YOUR_DXPR_API_KEY` with your actual DXPR API key from
+   Replace `YOUR_DXPR_API_KEY` with your actual DXPR Builder product key from
    [app.dxpr.com/getting-started](https://app.dxpr.com/getting-started).
 
-   **Option D: Advanced — raw drush site-install**
-   For direct control over the installation process, you can use drush
-   with form key parameters:
+   **Option C: Command-line installation with recipes**
+   You can select optional recipes during command-line installation, mirroring
+   the options available in the web-based installer. Use pipe-separated recipe
+   names with the `installer_recipes_form.add_ons` parameter:
    ```bash
    ddev drush site-install dxpr_cms_installer \
      "installer_recipes_form.add_ons=Case Studies|Events|Forms|Google Analytics|News|SEO Tools|Multilingual" \
@@ -78,7 +54,24 @@ Follow these steps to install DXPR CMS:
    ```
 
    Available recipes: `Case Studies`, `Events`, `Forms`, `Google Analytics`,
-   `News`, `SEO Tools`, `Multilingual`. Use `*` for all recipes.
+   `News`, `SEO Tools`, `Multilingual`.
+
+   To install with **all** optional recipes, use `*`:
+   ```bash
+   ddev drush site-install dxpr_cms_installer \
+     "installer_recipes_form.add_ons=*" \
+     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+   ```
+
+   When including the Multilingual recipe, you can also specify additional
+   languages:
+   ```bash
+   ddev drush site-install dxpr_cms_installer \
+     "installer_recipes_form.add_ons=Case Studies|Events|Multilingual" \
+     "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
+     "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
+     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+   ```
 
    **Installing optional recipes after installation**
    If you want to add recipes later, install them manually:

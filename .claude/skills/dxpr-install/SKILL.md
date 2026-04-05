@@ -6,10 +6,10 @@ description: |
   the user asks to "install DXPR CMS", "create a new site", "set up
   a new DXPR site", "install with all recipes", "install multilingual
   site", "run the installer", "set up DXPR", or any DXPR CMS
-  installation task. Also use when the user mentions "dxpr-install",
-  "site-install", or asks to "add another site" (multisite).
-  Proactively invoke this skill instead of manually constructing
-  drush site-install arguments.
+  installation task. Also use when the user mentions "site-install"
+  or asks to "add another site" (multisite). Proactively invoke
+  this skill instead of manually constructing drush site-install
+  arguments.
 ---
 
 ## Preamble (run first)
@@ -19,22 +19,18 @@ Do NOT search or explore the codebase. Just run this single script:
 ```bash
 if [ ! -f composer.json ]; then
   echo "STATUS: no-project"
-elif [ -x bin/dxpr-install ] || [ -f vendor/bin/dxpr-install ]; then
-  echo "STATUS: ready"
-  echo "TOOL: bin/dxpr-install"
 elif [ -f vendor/bin/drush ]; then
   echo "STATUS: ready"
-  echo "TOOL: drush-only"
 else
   echo "STATUS: needs-composer-install"
 fi
 if [ -n "$IS_DDEV_PROJECT" ]; then
   echo "DB: ddev"
-elif mysql -u root -padmin -e "SELECT 1" &>/dev/null 2>&1; then
+elif mysql -u root -padmin -e "SELECT 1" &>/dev/null; then
   echo "DB: mysql://root:admin@127.0.0.1/<dbname>"
-elif mysql -u root -e "SELECT 1" &>/dev/null 2>&1; then
+elif mysql -u root -e "SELECT 1" &>/dev/null; then
   echo "DB: mysql://root@127.0.0.1/<dbname>"
-elif mysql -u root -proot -e "SELECT 1" &>/dev/null 2>&1; then
+elif mysql -u root -proot -e "SELECT 1" &>/dev/null; then
   echo "DB: mysql://root:root@127.0.0.1/<dbname>"
 else
   echo "DB: unknown"
@@ -117,23 +113,7 @@ mysql -u root -padmin -e "CREATE DATABASE <dbname>"
 
 #### Step 3: Install
 
-**If `bin/dxpr-install` available** (TOOL: bin/dxpr-install):
-
-```bash
-bin/dxpr-install \
-  --locale='<langcode>' \
-  --recipes="<comma-separated>" \
-  --languages="<comma-separated>" \
-  --api-key='<jwt>' \
-  --site-name="<name>" \
-  --admin-name="<username>" \
-  --admin-email="<email>" \
-  --admin-pass="<password>" \
-  --db-url="<url>" \
-  --no-interaction
-```
-
-**If only drush available** (TOOL: drush-only), construct the full drush command with form keys:
+Construct the full drush command with form keys:
 
 ```bash
 vendor/bin/drush site:install dxpr_cms_installer \
@@ -175,28 +155,7 @@ drush wm:setup-ai     # Webmaster CLI skill
 
 ## Complete Options Reference
 
-### bin/dxpr-install options
-
-| Option | Description | Default |
-|---|---|---|
-| `--locale` | Default site language (ISO code) | en |
-| `--recipes` | Comma-separated recipe names | none |
-| `--all-recipes` | Install all 7 optional recipes | off |
-| `--site-name` | Site name | "DXPR CMS" |
-| `--api-key` | DXPR API key (JWT) | required |
-| `--skip-api-key` | Skip API key (dev only) | off |
-| `--languages` | Additional language ISO codes | none |
-| `--admin-name` | Admin username | admin |
-| `--admin-email` | Admin email | admin@example.com |
-| `--admin-pass` | Admin password | auto-generated |
-| `--site-mail` | Site From: email | admin email |
-| `--timezone` | Site timezone (Olson) | system default |
-| `--db-url` | Database URL | auto in DDEV |
-| `--multisite` | Drupal multisite mode | off |
-| `--sites-subdir` | Sites subdirectory | default |
-| `--dry-run` | Preview only | off |
-
-### drush site:install form keys (when bin/dxpr-install unavailable)
+### drush site:install form keys
 
 | Form key | Maps to |
 |---|---|
@@ -230,8 +189,7 @@ If additional languages are specified without Multilingual, auto-add it.
 |---|---|
 | `STATUS: no-project` | Clone repo + composer install |
 | `STATUS: needs-composer-install` | Run composer install |
-| `STATUS: ready` + `TOOL: bin/dxpr-install` | Use bin/dxpr-install |
-| `STATUS: ready` + `TOOL: drush-only` | Use drush site:install with form keys |
+| `STATUS: ready` | Use drush site:install with form keys |
 | `DB: ddev` | Auto-configured, use `ddev exec` |
 | `DB: mysql://root:admin@...` | Use discovered credentials |
 | `KEY: claude-md` | Extract JWT from CLAUDE.md |

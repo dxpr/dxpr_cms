@@ -1,39 +1,49 @@
-# DXPR CMS Installer CLI
+# DXPR CMS Installer
 
-Install DXPR CMS via `bin/dxpr-install`. Standalone CLI that works before Drupal is installed.
+Install DXPR CMS via `drush site:install` with the correct form key parameters.
 
 ## Quick Start
 
 ```bash
-# Interactive wizard
-bin/dxpr-install
+# Basic install with API key
+vendor/bin/drush site:install dxpr_cms_installer \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
 
-# Non-interactive, all recipes
-bin/dxpr-install --api-key='eyJ...' --all-recipes --no-interaction
+# All recipes
+vendor/bin/drush site:install dxpr_cms_installer \
+  "installer_recipes_form.add_ons=*" \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
 
 # Specific recipes + languages
-bin/dxpr-install --api-key='eyJ...' --recipes="News,Multilingual" --languages="nl,de" --no-interaction
-
-# Dry run (show drush command)
-bin/dxpr-install --api-key='eyJ...' --all-recipes --dry-run
+vendor/bin/drush site:install dxpr_cms_installer \
+  --locale='nl' \
+  --site-name="My Site" \
+  "installer_recipes_form.add_ons=News|Events|Multilingual" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.de=de" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.fr=fr" \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
 ```
 
-## Options
+## drush site:install Options
 
 | Option | Description | Default |
 |---|---|---|
-| `--recipes` | Comma-separated names | none |
-| `--all-recipes` | All 7 optional recipes | off |
+| `--locale` | Default site language (ISO code) | en |
 | `--site-name` | Site name | "DXPR CMS" |
-| `--api-key` | DXPR API key (JWT) | required |
-| `--skip-api-key` | Skip key (dev) | off |
-| `--languages` | ISO codes | none |
-| `--admin-email` | Admin email | admin@example.com |
-| `--admin-pass` | Password | auto-generated |
+| `--account-name` | Admin username | admin |
+| `--account-mail` | Admin email | admin@example.com |
+| `--account-pass` | Admin password | auto-generated |
 | `--db-url` | Database URL | auto in DDEV |
-| `--multisite` | Multisite mode | off |
-| `--sites-subdir` | Sites subdir | default |
-| `--dry-run` | Preview only | off |
+
+## Form Key Parameters
+
+| Form key | Description |
+|---|---|
+| `installer_recipes_form.add_ons` | Recipe selection (pipe-separated or `*` for all) |
+| `dxpr_cms_installer_keys.dxpr_key` | DXPR API key (JWT) |
+| `dxpr_cms_installer_multilingual_configuration.additional_languages.<code>` | Additional language (one per lang) |
+| `install_configure_form.date_default_timezone` | Timezone (Olson format) |
+| `install_configure_form.site_mail` | Site "From:" email |
 
 Available recipes: Case Studies, Events, Forms, Google Analytics, News, SEO Tools, Multilingual.
 
