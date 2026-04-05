@@ -76,6 +76,8 @@ echo "SITES: ${SITES:-none}"
 
 ### Phase 2: Present plan for confirmation
 
+Always show languages as full name + code, e.g. "French (fr)", "Chinese Simplified (zh-hans)" — never bare codes.
+
 ```
 I'll set up DXPR CMS at ~/www/dxpr-cms-test1/:
 
@@ -84,7 +86,7 @@ I'll set up DXPR CMS at ~/www/dxpr-cms-test1/:
   3. Install with:
      - Default language: Dutch (nl)
      - Recipes: News, Events, Multilingual
-     - Additional languages: de, fr
+     - Additional languages: German (de), French (fr)
      - API key: from CLAUDE.md
      - Site name: "My Site"
      - Admin: admin / admin@example.com
