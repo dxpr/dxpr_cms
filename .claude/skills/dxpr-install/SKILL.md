@@ -14,89 +14,63 @@ description: |
 
 ## Preamble (run first)
 
+Do NOT search or explore the codebase. Just run this single script — it detects everything needed:
+
 ```bash
-echo "=== DXPR CMS INSTALL CONTEXT ==="
-
-# --- PHP ---
-echo ""
-echo "=== PHP ==="
-php -v 2>/dev/null | head -1 || echo "PHP: NOT FOUND"
-
-# --- DDEV detection ---
-echo ""
-echo "=== ENVIRONMENT ==="
-if [ -n "$IS_DDEV_PROJECT" ]; then
-  echo "RUNTIME: ddev container"
-  echo "DB_URL: mysql://db:db@db:3306/db (auto)"
-elif command -v ddev &>/dev/null && [ -f .ddev/config.yaml ]; then
-  DDEV_STATUS=$(ddev status 2>/dev/null | head -3)
-  echo "DDEV: project found (.ddev/config.yaml)"
-  echo "$DDEV_STATUS"
-  echo "HINT: run 'ddev exec bin/dxpr-install' to install inside DDEV"
-else
-  echo "DDEV: not detected"
-fi
-
-# --- MySQL credential probing (outside DDEV only) ---
-if [ -z "$IS_DDEV_PROJECT" ]; then
-  echo ""
-  echo "=== DATABASE ==="
-  if mysql -u root -e "SELECT 1" &>/dev/null 2>&1; then
-    echo "MYSQL: root@localhost (no password) — works"
-    echo "DB_URL: mysql://root@127.0.0.1/<dbname>"
+# --- Fast exit if no project ---
+if [ ! -f composer.json ]; then
+  echo "STATUS: no-project"
+  echo "ACTION: need git clone + composer install"
+  # Still probe DB and API key since those are needed for planning
+  if [ -n "$IS_DDEV_PROJECT" ]; then
+    echo "DB: ddev (auto)"
   elif mysql -u root -padmin -e "SELECT 1" &>/dev/null 2>&1; then
-    echo "MYSQL: root:admin@localhost — works"
-    echo "DB_URL: mysql://root:admin@127.0.0.1/<dbname>"
+    echo "DB: mysql://root:admin@127.0.0.1/<dbname>"
+  elif mysql -u root -e "SELECT 1" &>/dev/null 2>&1; then
+    echo "DB: mysql://root@127.0.0.1/<dbname>"
   elif mysql -u root -proot -e "SELECT 1" &>/dev/null 2>&1; then
-    echo "MYSQL: root:root@localhost — works"
-    echo "DB_URL: mysql://root:root@127.0.0.1/<dbname>"
+    echo "DB: mysql://root:root@127.0.0.1/<dbname>"
   else
-    echo "MYSQL: could not auto-detect credentials — user must provide --db-url"
+    echo "DB: unknown — user must provide --db-url"
   fi
+  [ -n "$DXPR_API_KEY" ] && echo "KEY: env" || echo "KEY: not-found"
+  exit 0
 fi
 
-# --- Installer binary ---
-echo ""
-echo "=== INSTALLER ==="
-if [ -x bin/dxpr-install ]; then
-  echo "BINARY: bin/dxpr-install (available)"
-elif [ -f vendor/bin/dxpr-install ]; then
-  echo "BINARY: vendor/bin/dxpr-install (available)"
-elif [ -f composer.json ]; then
-  echo "BINARY: NOT FOUND — run 'composer install' first"
+# --- Project exists, check readiness ---
+if [ -x bin/dxpr-install ] || [ -f vendor/bin/dxpr-install ]; then
+  echo "STATUS: ready"
 else
-  echo "BINARY: NOT FOUND — not a dxpr_cms project directory"
+  echo "STATUS: needs-composer-install"
 fi
 
-# --- DXPR API key detection ---
-echo ""
-echo "=== API KEY ==="
+# --- Environment ---
+if [ -n "$IS_DDEV_PROJECT" ]; then
+  echo "DB: ddev (auto)"
+elif mysql -u root -padmin -e "SELECT 1" &>/dev/null 2>&1; then
+  echo "DB: mysql://root:admin@127.0.0.1/<dbname>"
+elif mysql -u root -e "SELECT 1" &>/dev/null 2>&1; then
+  echo "DB: mysql://root@127.0.0.1/<dbname>"
+elif mysql -u root -proot -e "SELECT 1" &>/dev/null 2>&1; then
+  echo "DB: mysql://root:root@127.0.0.1/<dbname>"
+else
+  echo "DB: unknown"
+fi
+
+# --- API key ---
 if [ -n "$DXPR_API_KEY" ]; then
-  echo "ENV: \$DXPR_API_KEY is set"
+  echo "KEY: env"
 elif [ -f .env ] && grep -q 'DXPR_API_KEY' .env 2>/dev/null; then
-  echo "FILE: found in .env"
+  echo "KEY: dotenv"
 elif [ -f CLAUDE.md ] && grep -q 'eyJ' CLAUDE.md 2>/dev/null; then
-  echo "FILE: JWT found in CLAUDE.md"
+  echo "KEY: claude-md"
 else
-  echo "NOT FOUND: user must provide --api-key or get one at https://app.dxpr.com/getting-started"
+  echo "KEY: not-found"
 fi
 
 # --- Existing sites ---
-echo ""
-echo "=== EXISTING SITES ==="
-SITE_COUNT=0
-for settings in web/sites/*/settings.php; do
-  [ -f "$settings" ] || continue
-  SITE_COUNT=$((SITE_COUNT + 1))
-  site_dir=$(dirname "$settings" | sed 's|web/sites/||')
-  db=$(grep "'database'" "$settings" 2>/dev/null | grep -v "^\s*[*/]" | head -1 | sed "s/.*=> *'//;s/'.*//")
-  echo "  $site_dir (db: ${db:-unknown})"
-done
-[ "$SITE_COUNT" -eq 0 ] && echo "  (none — fresh codebase)"
-
-echo ""
-echo "=== AVAILABLE RECIPES ==="
-echo "Case Studies, Events, Forms, Google Analytics, News, SEO Tools, Multilingual"
+SITES=$(ls -d web/sites/*/settings.php 2>/dev/null | sed 's|web/sites/||;s|/settings.php||' | tr '\n' ',' | sed 's/,$//')
+echo "SITES: ${SITES:-none}"
 ```
 
 ## Workflow: Gather First, Execute Later
