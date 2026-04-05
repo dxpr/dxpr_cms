@@ -79,7 +79,7 @@ echo "SITES: ${SITES:-none}"
 
 ### Phase 1: Gather all inputs (ask questions, no commands)
 
-Walk through these questions using the preamble output. Skip questions that the preamble already answered. Ask remaining questions **in a single message** to avoid back-and-forth:
+Walk through these questions using the preamble output. Skip questions the preamble already answered. **Use the AskUserQuestion tool** to present choices as interactive prompts — never dump questions as plain text. Batch related questions into a single AskUserQuestion call:
 
 1. **Codebase location** — If preamble shows "no-project": confirm the target directory (default: infer from request, e.g. "dxpr-cms-test1" → `~/www/dxpr-cms-test1/`)
 2. **Recipes** — Present the full list with descriptions so the user can pick:
