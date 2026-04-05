@@ -57,20 +57,21 @@ echo "SITES: ${SITES:-none}"
 **Use the AskUserQuestion tool** for interactive prompts — never dump questions as plain text. Batch related questions into a single AskUserQuestion call. Skip questions the preamble or user request already answered.
 
 1. **Codebase location** — If "no-project": confirm target directory (infer from request)
-2. **Languages** — Ask: "Which languages do you need? Pick one for a single-language site, or multiple for a multilingual site." Default: English (en). Common: nl, de, fr, es, ja, ar, zh-hans, pt-br. The **first** language becomes the `--locale` (default site UI language). Any additional languages become `additional_languages` arguments. **If the user picks more than one language, silently add the Multilingual recipe — never ask the user about it separately.**
-3. **Recipes** — Which optional add-ons? **Do NOT list Multilingual here** — it is handled automatically by the language question above. Present as multi-select:
+2. **Environment** — If "no-project": ask "Use DDEV or Valet/native?" DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`. If preamble detected DDEV (`DB: ddev`), skip this question.
+3. **Languages** — Ask the user to list all languages they want, comma-separated (e.g. "en, nl, de, fr"). Suggest common codes: en, nl, de, fr, es, ja, ar, zh-hans, pt-br. The **first** language becomes the `--locale` (default site UI language). Any additional languages become `additional_languages` arguments. **If the user lists more than one language, silently add the Multilingual recipe — never ask the user about it separately.** Do NOT use a multi-select checkbox UI for this — a free-text field is simpler and allows any language code.
+4. **Recipes** — Which optional add-ons? **Do NOT list Multilingual here** — it is handled automatically by the language question above. Present as multi-select:
    - Case Studies — portfolio/client work showcase
    - Events — event listings with dates, locations, maps
    - Forms — contact forms and webforms
    - Google Analytics — GA4 tracking via Google Tag Manager
    - News — news articles and listings
    - SEO Tools — sitemap, meta tags, SEO checklist
-4. **API key** — If preamble found one, confirm. If not, ask or offer skip for dev.
+5. **API key** — If preamble found one, confirm it. If not, ask the user to paste the key directly (do NOT use a two-step "Do you have one?" → "Paste it" flow — just ask them to paste it or type "skip"). The key is required for DXPR Builder to function.
 6. **Site name** — Default to directory name. Confirm or ask.
 7. **Admin account** — Username (default: admin), email (default: admin@example.com), password.
 8. **Site email** — The "From:" address for site-generated emails. Default: same as admin email.
 9. **Timezone** — Default: auto-detect from system. Common: Europe/Amsterdam, America/New_York, etc.
-10. **Database** — If DDEV: auto. If Valet/native: use preamble DB credentials, default dbname = directory name with hyphens→underscores.
+10. **Database** — If DDEV: auto (skip this question). If Valet/native: use preamble DB credentials, default dbname = directory name with hyphens→underscores.
 11. **Multisite** — Only if preamble SITES is not "none". Ask: multisite or separate codebase?
 
 ### Phase 2: Present plan for confirmation
@@ -97,13 +98,23 @@ Proceed?
 
 #### Step 1: Bootstrap codebase (if STATUS was no-project)
 
+**DDEV path:**
+```bash
+mkdir <site-name> && cd <site-name>
+git clone https://github.com/dxpr/dxpr_cms.git .
+ddev config --project-type=drupal11 --database=mariadb:11.4 --docroot=web
+ddev start
+ddev composer install
+```
+
+**Valet/native path:**
 ```bash
 mkdir <site-name> && cd <site-name>
 git clone https://github.com/dxpr/dxpr_cms.git .
 composer install
 ```
 
-#### Step 2: Create database (Valet/native only)
+#### Step 2: Create database (Valet/native only, DDEV auto-creates)
 
 ```bash
 mysql -u root -padmin -e "CREATE DATABASE <dbname>"
@@ -111,8 +122,25 @@ mysql -u root -padmin -e "CREATE DATABASE <dbname>"
 
 #### Step 3: Install
 
-Construct the full drush command with form keys:
+Construct the drush command with form keys. Use `ddev drush` for DDEV or `vendor/bin/drush` for Valet/native. DDEV does not need `--db-url`.
 
+**DDEV:**
+```bash
+ddev drush site:install dxpr_cms_installer \
+  --yes \
+  --locale='<langcode>' \
+  --site-name="<name>" \
+  --account-name="<username>" \
+  --account-mail="<email>" \
+  --account-pass="<password>" \
+  --site-mail="<site-email>" \
+  "installer_recipes_form.add_ons=<pipe-separated-recipes>" \
+  "dxpr_cms_installer_keys.dxpr_key=<jwt>" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.<code>=<code>" \
+  "install_configure_form.date_default_timezone=<timezone>"
+```
+
+**Valet/native:**
 ```bash
 vendor/bin/drush site:install dxpr_cms_installer \
   --yes \
@@ -140,7 +168,6 @@ Notes on drush form keys:
 ```bash
 drush status --format=json
 drush pml --status=enabled --no-core --format=json
-drush dxt:palette:get 2>/dev/null
 ```
 
 #### Step 5: Install AI skill files (if available)
@@ -201,4 +228,4 @@ Multilingual is never shown to the user as a recipe choice. It is auto-added whe
 
 ## API Key
 
-Free at https://app.dxpr.com/getting-started — unlocks AI features (OpenAI, Claude, Gemini, MistralAI, XAI, Perplexity).
+Free at https://app.dxpr.com/getting-started — required for DXPR Builder to function. Also enables AI features (OpenAI, Claude, Gemini, MistralAI, XAI, Perplexity).

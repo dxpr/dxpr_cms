@@ -49,4 +49,4 @@ Available recipes: Case Studies, Events, Forms, Google Analytics, News, SEO Tool
 
 DDEV auto-detects database. Valet/native requires `--db-url`.
 
-Get API key: https://app.dxpr.com/getting-started
+API key (required for DXPR Builder to function): https://app.dxpr.com/getting-started
