@@ -81,13 +81,21 @@ echo "SITES: ${SITES:-none}"
 
 Walk through these questions using the preamble output. Skip questions that the preamble already answered. Ask remaining questions **in a single message** to avoid back-and-forth:
 
-1. **Codebase location** — If preamble shows "not a dxpr_cms project directory": confirm the target directory with the user (default: infer from their request, e.g. "dxpr-cms-test1" → `~/www/dxpr-cms-test1/`)
-2. **Recipes** — Which optional add-ons? (Case Studies, Events, Forms, Google Analytics, News, SEO Tools, Multilingual). If user said "all" or "full install", note `--all-recipes`. If unspecified, ask.
-3. **API key** — If preamble found one (ENV/FILE/CLAUDE.md), confirm using it. If not found, ask for it or offer `--skip-api-key`.
-4. **Languages** — Only relevant if Multilingual is selected. If multilingual mentioned, ask which languages.
+1. **Codebase location** — If preamble shows "no-project": confirm the target directory (default: infer from request, e.g. "dxpr-cms-test1" → `~/www/dxpr-cms-test1/`)
+2. **Recipes** — Present the full list with descriptions so the user can pick:
+   - Case Studies — portfolio/client work showcase
+   - Events — event listings with dates, locations, maps
+   - Forms — contact forms and webforms
+   - Google Analytics — GA4 tracking via Google Tag Manager
+   - News — news articles and listings
+   - SEO Tools — sitemap, meta tags, SEO checklist
+   - Multilingual — translation management (enables language selection)
+   If user said "all" or "full install", note `--all-recipes`. If unspecified, show this list and ask.
+3. **API key** — If preamble found one (env/dotenv/claude-md), confirm using it. If "not-found", ask for it or offer `--skip-api-key`.
+4. **Languages** — Only if Multilingual was selected. Show common options: nl (Dutch), de (German), fr (French), es (Spanish), ar (Arabic), ja (Japanese), zh-hans (Chinese), pt-br (Portuguese). Ask which ones.
 5. **Site name** — Default to directory name or "DXPR CMS". Confirm or ask.
-6. **Database** — If DDEV, auto-configured. If Valet/native, use auto-detected MySQL credentials from preamble. Database name defaults to directory name with hyphens replaced by underscores.
-7. **Multisite** — Only if existing sites were detected in preamble. Ask: multisite or separate codebase?
+6. **Database** — If DDEV, auto-configured. If Valet/native, use DB credentials from preamble. Database name defaults to directory name with hyphens→underscores.
+7. **Multisite** — Only if preamble SITES is not "none". Ask: multisite or separate codebase?
 
 ### Phase 2: Present the plan for confirmation
 
