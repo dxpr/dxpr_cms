@@ -101,29 +101,40 @@ echo "Case Studies, Events, Forms, Google Analytics, News, SEO Tools, Multilingu
 
 ## Decision Tree (after preamble)
 
-Follow this logic to determine the right installation approach:
+Follow this logic top-to-bottom. Each step resolves one question.
 
-### 1. Is the installer binary available?
+### 1. Does a dxpr_cms codebase exist?
 
-- **No** → Run `composer install` first (or `ddev composer install` if DDEV project)
-- **Yes** → Continue
+- **"not a dxpr_cms project directory"** → No codebase. Bootstrap from scratch:
+  ```bash
+  # Determine target directory from user request or default to site name
+  mkdir <site-name> && cd <site-name>
+  git clone https://github.com/dxpr/dxpr_cms.git .
+  composer install
+  ```
+  For **Valet/native** setups: the directory name under `~/www/` becomes the `.test` hostname automatically (e.g. `~/www/dxpr-cms-test1/` → `http://dxpr-cms-test1.test`). Create the MySQL database before running the installer:
+  ```bash
+  mysql -u root -padmin -e "CREATE DATABASE <dbname>"
+  ```
+- **"run 'composer install' first"** → Codebase exists but dependencies missing. Run `composer install` (or `ddev composer install`)
+- **Binary available** → Continue to step 2
 
 ### 2. Is this running inside DDEV?
 
-- **RUNTIME: ddev container** → Database auto-configured, use `bin/dxpr-install` directly
-- **DDEV: project found** → Suggest `ddev exec bin/dxpr-install` (runs inside the container)
-- **DDEV: not detected** → Need `--db-url`, use auto-detected MySQL credentials from preamble
+- **"RUNTIME: ddev container"** → Database auto-configured, use `bin/dxpr-install` directly
+- **"DDEV: project found"** → Run `ddev exec bin/dxpr-install` (executes inside the container)
+- **"DDEV: not detected"** → Need `--db-url`. Use the auto-detected MySQL credentials from the preamble DATABASE section. Replace `<dbname>` with the site directory name (underscores for hyphens)
 
 ### 3. Is an API key available?
 
-- **ENV/FILE found** → Extract and pass as `--api-key`
-- **JWT found in CLAUDE.md** → Extract the JWT token from CLAUDE.md and use it
-- **NOT FOUND** → Ask user for their key, or suggest `--skip-api-key` for dev-only installs
+- **"ENV:" or "FILE:"** → Extract and pass as `--api-key`
+- **"JWT found in CLAUDE.md"** → Extract the JWT token from CLAUDE.md and use it
+- **"NOT FOUND"** → Ask user for their key, or suggest `--skip-api-key` for dev-only installs
 
-### 4. Are there existing sites?
+### 4. Are there existing sites on this codebase?
 
-- **None** → Fresh install, proceed normally
-- **Existing sites found** → Ask user: install as **multisite** (`--multisite --sites-subdir=<name>`) on the same codebase, or create a **separate codebase** in a new directory?
+- **"(none — fresh codebase)"** → Fresh install, proceed normally
+- **Existing sites listed** → Ask user: install as **multisite** (`--multisite --sites-subdir=<name>`) on this codebase, or create a **separate codebase** in a new directory?
 
 ### 5. What does the user want to install?
 
