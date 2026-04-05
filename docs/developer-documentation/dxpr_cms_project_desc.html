@@ -114,12 +114,22 @@
 <h4>Option A: Web-based installation</h4>
 <p>Open your browser and navigate to <code>http://dxpr-cms.ddev.site</code> or <code>https://dxpr-cms.ddev.site</code> to access the Drupal installation wizard. Complete the installation steps to set up your site.</p>
 
-<h4>Option B: Command-line installation with DXPR API key</h4>
+<h4>Option B: AI-assisted installation (Claude Code)</h4>
+<p>The repo includes a built-in AI skill that walks you through the full installation interactively — language selection, recipes, API key, and more. Install <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code</a>, then from the project root:</p>
+<code>claude</code>
+<p>Once Claude starts, type "install DXPR CMS" and follow the prompts. The skill is auto-detected from <code>.claude/skills/dxpr-install/</code>.</p>
+<p><strong>Power users:</strong> To use the skill from anywhere (without cloning first), install it globally:</p>
+<pre><code>mkdir -p ~/.claude/skills/dxpr-install && curl -sL \
+  https://raw.githubusercontent.com/dxpr/dxpr_cms/1.x/.claude/skills/dxpr-install/SKILL.md \
+  -o ~/.claude/skills/dxpr-install/SKILL.md</code></pre>
+<p>Then run <code>claude</code> from any directory and type "install DXPR CMS".</p>
+
+<h4>Option C: Command-line installation with DXPR API key</h4>
 <p>For automated installation with your DXPR Builder API key:</p>
 <code>ddev drush site-install dxpr_cms_installer dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code>
 <p>Replace <code>YOUR_DXPR_API_KEY</code> with your actual DXPR Builder product key from <a href="https://app.dxpr.com/getting-started" target="_blank">app.dxpr.com/getting-started</a>.</p>
 
-<h4>Option C: Command-line installation with recipes</h4>
+<h4>Option D: Command-line installation with recipes</h4>
 <p>You can select optional recipes during command-line installation, mirroring the options available in the web-based installer. Use pipe-separated recipe names with the <code>installer_recipes_form.add_ons</code> parameter:</p>
 <pre><code>ddev drush site-install dxpr_cms_installer \
   "installer_recipes_form.add_ons=Case Studies|Events|Forms|Google Analytics|News|SEO Tools|Multilingual" \
