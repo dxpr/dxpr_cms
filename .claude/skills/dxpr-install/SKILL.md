@@ -24,6 +24,11 @@ elif [ -f vendor/bin/drush ]; then
 else
   echo "STATUS: needs-composer-install"
 fi
+if command -v ddev &>/dev/null; then
+  echo "DDEV: installed"
+else
+  echo "DDEV: not-installed"
+fi
 if [ -n "$IS_DDEV_PROJECT" ]; then
   echo "DB: ddev"
 elif mysql -u root -padmin -e "SELECT 1" &>/dev/null; then
@@ -57,7 +62,7 @@ echo "SITES: ${SITES:-none}"
 **Use the AskUserQuestion tool** for interactive prompts — never dump questions as plain text. Batch related questions into a single AskUserQuestion call. Skip questions the preamble or user request already answered.
 
 1. **Codebase location** — If "no-project": confirm target directory (infer from request)
-2. **Environment** — If "no-project": ask "Use DDEV or Valet/native?" DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`. If preamble detected DDEV (`DB: ddev`), skip this question.
+2. **Environment** — If preamble shows `DB: ddev` (already inside a DDEV project), use DDEV — skip this question. If preamble shows `DDEV: not-installed`, use Valet/native — skip this question. Otherwise (DDEV is installed but this isn't a DDEV project), ask: "Use DDEV or Valet/native for this site?" DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`.
 3. **Languages** — First, fetch the list of Drupal-supported languages by running:
    ```bash
    php -r "
@@ -235,7 +240,9 @@ Multilingual is never shown to the user as a recipe choice. It is auto-added whe
 | `STATUS: no-project` | Clone repo + composer install |
 | `STATUS: needs-composer-install` | Run composer install |
 | `STATUS: ready` | Use drush site:install with form keys |
-| `DB: ddev` | Auto-configured, use `ddev exec` |
+| `DDEV: installed` | DDEV is available — ask user whether to use it |
+| `DDEV: not-installed` | Use Valet/native (don't offer DDEV) |
+| `DB: ddev` | Already a DDEV project — use DDEV automatically |
 | `DB: mysql://root:admin@...` | Use discovered credentials |
 | `KEY: claude-md` | Extract JWT from CLAUDE.md |
 | `SITES: none` | Fresh install |
