@@ -145,13 +145,18 @@ drush pml --status=enabled --no-core --format=json
 drush dxt:palette:get 2>/dev/null
 ```
 
-#### Step 5: Install AI skill files
+#### Step 5: Install AI skill files (if available)
+
+These drush commands are provided by DXPR Builder, DXPR Theme, and the
+Webmaster module. They may not exist yet — only run the ones that are available:
 
 ```bash
-drush dxt:setup-ai    # Theme CLI skill
-drush dxb:setup-ai    # Builder CLI skill
-drush wm:setup-ai     # Webmaster CLI skill
+drush dxt:setup-ai 2>/dev/null    # Theme CLI skill (if dxpr_theme provides it)
+drush dxb:setup-ai 2>/dev/null    # Builder CLI skill (if dxpr_builder provides it)
+drush wm:setup-ai  2>/dev/null    # Webmaster CLI skill (if webmaster provides it)
 ```
+
+If a command fails with "not found", skip it — it means the module does not yet provide that command.
 
 ## Complete Options Reference
 
