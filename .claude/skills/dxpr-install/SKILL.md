@@ -58,7 +58,20 @@ echo "SITES: ${SITES:-none}"
 
 1. **Codebase location** — If "no-project": confirm target directory (infer from request)
 2. **Environment** — If "no-project": ask "Use DDEV or Valet/native?" DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`. If preamble detected DDEV (`DB: ddev`), skip this question.
-3. **Languages** — Ask the user to list all languages they want, comma-separated (e.g. "en, nl, de, fr"). Suggest common codes: en, nl, de, fr, es, ja, ar, zh-hans, pt-br. The **first** language becomes the `--locale` (default site UI language). Any additional languages become `additional_languages` arguments. **If the user lists more than one language, silently add the Multilingual recipe — never ask the user about it separately.** Do NOT use a multi-select checkbox UI for this — a free-text field is simpler and allows any language code.
+3. **Languages** — First, fetch the list of Drupal-supported languages by running:
+   ```bash
+   php -r "
+   require 'web/core/lib/Drupal/Core/DependencyInjection/DependencySerializationTrait.php';
+   require 'web/core/lib/Drupal/Core/Language/LanguageInterface.php';
+   require 'web/core/lib/Drupal/Core/Language/Language.php';
+   require 'web/core/lib/Drupal/Core/Language/LanguageManagerInterface.php';
+   require 'web/core/lib/Drupal/Core/Language/LanguageManager.php';
+   \\\$list = \\Drupal\\Core\\Language\\LanguageManager::getStandardLanguageList();
+   foreach(\\\$list as \\\$code => \\\$info) { echo \\\$code . '|' . \\\$info[0] . \"\\n\"; }
+   "
+   ```
+   For from-scratch installs where the codebase doesn't exist yet, run this after `git clone` but before asking the language question.
+   Then ask the user which languages they want. Present common ones (English, Dutch, German, French, Spanish, Arabic, Chinese Simplified, Portuguese, Japanese) but accept any from the full list. The user can type names or codes. **Validate every language the user provides against the fetched list** — if something doesn't match (typo, unsupported), show the closest matches and ask them to clarify. The **first** language becomes the `--locale` (default site UI language). Any additional languages become `additional_languages` arguments. **If the user picks more than one language, silently add the Multilingual recipe — never ask the user about it separately.**
 4. **Recipes** — Which optional add-ons? **Do NOT list Multilingual here** — it is handled automatically by the language question above. Present as multi-select:
    - Case Studies — portfolio/client work showcase
    - Events — event listings with dates, locations, maps
