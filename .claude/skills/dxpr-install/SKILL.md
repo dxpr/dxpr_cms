@@ -84,7 +84,7 @@ echo "SITES: ${SITES:-none}"
    - Google Analytics — GA4 tracking via Google Tag Manager
    - News — news articles and listings
    - SEO Tools — sitemap, meta tags, SEO checklist
-5. **API key** — If preamble found one, confirm it. If not, ask the user to paste the key directly (do NOT use a two-step "Do you have one?" → "Paste it" flow — just ask them to paste it or type "skip"). The key is required for DXPR Builder to function.
+5. **API key** — If preamble found one, confirm it. If not, ask the user to paste the key directly as a single free-text input. Do NOT offer numbered choices like "Skip / I'll paste it / Type something" — that creates a confusing two-step flow. Instead, use a single text field with the prompt: "Paste your DXPR API key (or type 'skip'):" and provide the URL https://app.dxpr.com/getting-started as context. The key is required for DXPR Builder to function.
 6. **Site name** — Default to directory name. Confirm or ask.
 7. **Admin account** — Username (default: admin), email (default: admin@example.com), password.
 8. **Site email** — The "From:" address for site-generated emails. Default: same as admin email.
