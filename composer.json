@@ -154,24 +154,30 @@
             "echo ''",
             "echo ' Next step → Run the installer'",
             "echo ''",
+            "echo '   Wizard:   ddev exec bin/dxpr-install'",
+            "echo '   Quick:    ddev exec bin/dxpr-install --api-key=YOUR_KEY --all-recipes --no-interaction'",
             "echo \"   Browser:  $DDEV_PRIMARY_URL\"",
-            "echo \"   Terminal: ddev drush site-install dxpr_cms_installer dxpr_cms_installer_keys.dxpr_key='YOUR_API_KEY' -y\"",
             "echo ''",
-            "echo ' Get your API key: https://app.dxpr.com/getting-started'",
-            "echo ''",
-            "echo ' Optional recipes available after install:'",
-            "echo '   ddev drush recipe ../recipes/dxpr_cms_[recipe-name]'",
+            "echo ' Get your free API key: https://app.dxpr.com/getting-started'",
             "echo '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'",
             "echo ''"
         ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "DxprCms\\": "src/"
+        }
+    },
     "autoload-dev": {
         "files": [
             "recipes/dxpr_cms_content_type_base/tests/src/ContentModelTestTrait.php"
         ]
     },
+    "bin": [
+        "bin/dxpr-install"
+    ],
     "config": {
         "preferred-install": {
             "drupal/ace_editor": "source",

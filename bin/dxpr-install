@@ -1,0 +1,41 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * @file
+ * DXPR CMS interactive installer.
+ *
+ * Standalone CLI entry point that works before Drupal is installed.
+ * Provides a TUI wizard and non-interactive mode for automated installs.
+ */
+
+declare(strict_types=1);
+
+// Find the Composer autoloader from multiple possible locations.
+$autoloadPaths = [
+  __DIR__ . '/../vendor/autoload.php',
+  __DIR__ . '/../../autoload.php',
+  __DIR__ . '/../../../autoload.php',
+];
+
+$autoloader = null;
+foreach ($autoloadPaths as $path) {
+  if (file_exists($path)) {
+    $autoloader = require $path;
+    break;
+  }
+}
+
+if ($autoloader === null) {
+  fwrite(STDERR, "Could not find vendor/autoload.php. Run 'composer install' first.\n");
+  exit(1);
+}
+
+use DxprCms\Installer\InstallCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('DXPR CMS Installer', '1.0.0');
+$command = new InstallCommand();
+$app->add($command);
+$app->setDefaultCommand($command->getName(), true);
+$app->run();
