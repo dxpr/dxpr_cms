@@ -99,49 +99,84 @@ echo "=== AVAILABLE RECIPES ==="
 echo "Case Studies, Events, Forms, Google Analytics, News, SEO Tools, Multilingual"
 ```
 
-## Decision Tree (after preamble)
+## Workflow: Gather First, Execute Later
 
-Follow this logic top-to-bottom. Each step resolves one question.
+**CRITICAL: Do NOT run any slow commands (git clone, composer install, bin/dxpr-install) until all questions are answered and the user confirms the plan.** Collect all inputs first, present a summary, then execute only after approval.
 
-### 1. Does a dxpr_cms codebase exist?
+### Phase 1: Gather all inputs (ask questions, no commands)
 
-- **"not a dxpr_cms project directory"** → No codebase. Bootstrap from scratch:
-  ```bash
-  # Determine target directory from user request or default to site name
-  mkdir <site-name> && cd <site-name>
-  git clone https://github.com/dxpr/dxpr_cms.git .
-  composer install
-  ```
-  For **Valet/native** setups: the directory name under `~/www/` becomes the `.test` hostname automatically (e.g. `~/www/dxpr-cms-test1/` → `http://dxpr-cms-test1.test`). Create the MySQL database before running the installer:
-  ```bash
-  mysql -u root -padmin -e "CREATE DATABASE <dbname>"
-  ```
-- **"run 'composer install' first"** → Codebase exists but dependencies missing. Run `composer install` (or `ddev composer install`)
-- **Binary available** → Continue to step 2
+Walk through these questions using the preamble output. Skip questions that the preamble already answered. Ask remaining questions **in a single message** to avoid back-and-forth:
 
-### 2. Is this running inside DDEV?
+1. **Codebase location** — If preamble shows "not a dxpr_cms project directory": confirm the target directory with the user (default: infer from their request, e.g. "dxpr-cms-test1" → `~/www/dxpr-cms-test1/`)
+2. **Recipes** — Which optional add-ons? (Case Studies, Events, Forms, Google Analytics, News, SEO Tools, Multilingual). If user said "all" or "full install", note `--all-recipes`. If unspecified, ask.
+3. **API key** — If preamble found one (ENV/FILE/CLAUDE.md), confirm using it. If not found, ask for it or offer `--skip-api-key`.
+4. **Languages** — Only relevant if Multilingual is selected. If multilingual mentioned, ask which languages.
+5. **Site name** — Default to directory name or "DXPR CMS". Confirm or ask.
+6. **Database** — If DDEV, auto-configured. If Valet/native, use auto-detected MySQL credentials from preamble. Database name defaults to directory name with hyphens replaced by underscores.
+7. **Multisite** — Only if existing sites were detected in preamble. Ask: multisite or separate codebase?
 
-- **"RUNTIME: ddev container"** → Database auto-configured, use `bin/dxpr-install` directly
-- **"DDEV: project found"** → Run `ddev exec bin/dxpr-install` (executes inside the container)
-- **"DDEV: not detected"** → Need `--db-url`. Use the auto-detected MySQL credentials from the preamble DATABASE section. Replace `<dbname>` with the site directory name (underscores for hyphens)
+### Phase 2: Present the plan for confirmation
 
-### 3. Is an API key available?
+Summarize everything before executing. Example:
 
-- **"ENV:" or "FILE:"** → Extract and pass as `--api-key`
-- **"JWT found in CLAUDE.md"** → Extract the JWT token from CLAUDE.md and use it
-- **"NOT FOUND"** → Ask user for their key, or suggest `--skip-api-key` for dev-only installs
+```
+I'll set up DXPR CMS at ~/www/dxpr-cms-test1/:
 
-### 4. Are there existing sites on this codebase?
+  1. Clone repo + composer install (~2-3 min)
+  2. Create database: dxpr_cms_test1
+  3. Run installer with:
+     - Recipes: all
+     - Languages: nl, de
+     - API key: from CLAUDE.md
+     - Site name: "DXPR Test 1"
+     - URL: http://dxpr-cms-test1.test
 
-- **"(none — fresh codebase)"** → Fresh install, proceed normally
-- **Existing sites listed** → Ask user: install as **multisite** (`--multisite --sites-subdir=<name>`) on this codebase, or create a **separate codebase** in a new directory?
+Proceed?
+```
 
-### 5. What does the user want to install?
+### Phase 3: Execute (only after user confirms)
 
-- If unspecified, ask about recipes and languages
-- If "everything" or "full install", use `--all-recipes`
-- If specific features mentioned (e.g. "with events and news"), map to `--recipes="Events,News"`
-- If multilingual mentioned, ask which languages or suggest common ones
+Run commands in order:
+
+1. **Bootstrap codebase** (if needed):
+   ```bash
+   mkdir <site-name> && cd <site-name>
+   git clone https://github.com/dxpr/dxpr_cms.git .
+   composer install
+   ```
+2. **Create database** (Valet/native only):
+   ```bash
+   mysql -u root -padmin -e "CREATE DATABASE <dbname>"
+   ```
+3. **Run installer**:
+   ```bash
+   bin/dxpr-install \
+     --api-key='...' \
+     --recipes="..." \
+     --languages="..." \
+     --site-name="..." \
+     --db-url="mysql://root:admin@127.0.0.1/<dbname>" \
+     --admin-pass="admin" \
+     --no-interaction
+   ```
+
+For **Valet/native**: the directory name under `~/www/` becomes the `.test` hostname automatically (e.g. `~/www/dxpr-cms-test1/` → `http://dxpr-cms-test1.test`).
+
+For **DDEV**: use `ddev exec bin/dxpr-install` instead. Database auto-configured.
+
+### Resolving preamble signals
+
+| Preamble output | Meaning |
+|---|---|
+| `BINARY: NOT FOUND — not a dxpr_cms project directory` | Need git clone + composer install |
+| `BINARY: NOT FOUND — run 'composer install' first` | Need composer install only |
+| `BINARY: bin/dxpr-install (available)` | Ready to install |
+| `RUNTIME: ddev container` | Inside DDEV, DB auto |
+| `DDEV: project found` | Use `ddev exec` |
+| `MYSQL: root:admin@localhost — works` | Use `mysql://root:admin@127.0.0.1/<dbname>` |
+| `ENV: $DXPR_API_KEY is set` | Use that value |
+| `FILE: JWT found in CLAUDE.md` | Extract JWT from CLAUDE.md |
+| Existing sites listed | Offer multisite option |
 
 ## Pre-bootstrap Awareness
 
