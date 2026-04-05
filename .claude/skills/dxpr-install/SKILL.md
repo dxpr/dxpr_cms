@@ -62,7 +62,7 @@ echo "SITES: ${SITES:-none}"
 **Use the AskUserQuestion tool** for interactive prompts — never dump questions as plain text. Batch related questions into a single AskUserQuestion call. Skip questions the preamble or user request already answered.
 
 1. **Codebase location** — If "no-project": confirm target directory (infer from request)
-2. **Environment** — If preamble shows `DB: ddev` (already inside a DDEV project), use DDEV — skip this question. If preamble shows `DDEV: not-installed`, use Valet/native — skip this question. Otherwise (DDEV is installed but this isn't a DDEV project), ask: "Use DDEV or Valet/native for this site?" DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`.
+2. **Environment** — **You MUST ask this question if preamble shows `DDEV: installed` and `DB:` is NOT `ddev`.** Do not infer the answer from detected MySQL credentials — always ask: "Use DDEV or Valet/native for this site?" Only skip this question when: (a) preamble shows `DB: ddev` (already a DDEV project — use DDEV), or (b) preamble shows `DDEV: not-installed` (use Valet/native). DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`.
 3. **Languages** — First, fetch the list of Drupal-supported languages by running:
    ```bash
    php -r "
