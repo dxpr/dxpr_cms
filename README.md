@@ -33,7 +33,27 @@ Follow these steps to install DXPR CMS:
    During installation, you can select optional recipes (Case Studies,
    Events, Forms, Analytics, News, SEO Tools) to customize your site.
 
-   **Option B: Command-line installation with DXPR API key**
+   **Option B: AI-assisted installation (Claude Code)**
+   The repo includes a built-in AI skill that walks you through the full
+   installation interactively — language selection, recipes, API key, and
+   more. Install [Claude Code](https://docs.anthropic.com/en/docs/claude-code),
+   then from the project root:
+   ```bash
+   claude
+   ```
+   Once Claude starts, type "install DXPR CMS" and follow the prompts.
+   The skill is auto-detected from `.claude/skills/dxpr-install/`.
+
+   **Power users:** To use the skill from anywhere (without cloning first),
+   install it globally:
+   ```bash
+   mkdir -p ~/.claude/skills/dxpr-install && curl -sL \
+     https://raw.githubusercontent.com/dxpr/dxpr_cms/1.x/.claude/skills/dxpr-install/SKILL.md \
+     -o ~/.claude/skills/dxpr-install/SKILL.md
+   ```
+   Then run `claude` from any directory and type "install DXPR CMS".
+
+   **Option C: Command-line installation with API key**
    For automated installation with your DXPR Builder API key:
    ```bash
    ddev drush site-install dxpr_cms_installer \
@@ -42,7 +62,7 @@ Follow these steps to install DXPR CMS:
    Replace `YOUR_DXPR_API_KEY` with your actual DXPR Builder product key from
    [app.dxpr.com/getting-started](https://app.dxpr.com/getting-started).
 
-   **Option C: Command-line installation with recipes**
+   **Option D: Command-line installation with recipes**
    You can select optional recipes during command-line installation, mirroring
    the options available in the web-based installer. Use pipe-separated recipe
    names with the `installer_recipes_form.add_ons` parameter:
