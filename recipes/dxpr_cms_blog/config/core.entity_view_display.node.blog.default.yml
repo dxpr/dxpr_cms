@@ -31,7 +31,7 @@ third_party_settings:
         layout_id: dxpr_two_column
         layout_settings:
           label: Hero
-          context_mapping: {  }
+          context_mapping: {}
           section_classes: 'container bg-primary-subtle py-5'
           container_type: container
           first_column_width: '6'
@@ -57,9 +57,9 @@ third_party_settings:
                 label: hidden
                 settings:
                   view_mode: default
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 2
-            additional: {  }
+            additional: {}
           cf849105-7068-4f71-9711-36fd35ae569c:
             uuid: cf849105-7068-4f71-9711-36fd35ae569c
             region: second
@@ -74,10 +74,10 @@ third_party_settings:
               formatter:
                 type: author
                 label: above
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
             weight: -2
-            additional: {  }
+            additional: {}
           e4018806-25b9-490d-a693-be75464bac28:
             uuid: e4018806-25b9-490d-a693-be75464bac28
             region: second
@@ -106,9 +106,9 @@ third_party_settings:
                     granularity: 2
                     refresh: 60
                     description: ''
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: -1
-            additional: {  }
+            additional: {}
           ee69c788-6997-4747-ba03-8a068720ac2e:
             uuid: ee69c788-6997-4747-ba03-8a068720ac2e
             region: second
@@ -122,9 +122,9 @@ third_party_settings:
                 label: inline
                 settings:
                   link: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
+            additional: {}
           1aeac669-8bf2-4a6b-8dc8-c5a63f50560c:
             uuid: 1aeac669-8bf2-4a6b-8dc8-c5a63f50560c
             region: left
@@ -141,9 +141,9 @@ third_party_settings:
                 label: hidden
                 settings:
                   view_mode: default
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
+            additional: {}
           4a7e8973-9fd6-423f-97d5-ee62a33f7d72:
             uuid: 4a7e8973-9fd6-423f-97d5-ee62a33f7d72
             region: right
@@ -160,9 +160,9 @@ third_party_settings:
                 label: above
                 settings:
                   link: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
+            additional: {}
           75b61643-5c9a-466a-b6a7-ac3a101c3f59:
             uuid: 75b61643-5c9a-466a-b6a7-ac3a101c3f59
             region: right
@@ -191,9 +191,9 @@ third_party_settings:
                     granularity: 2
                     refresh: 60
                     description: ''
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 1
-            additional: {  }
+            additional: {}
           d967c54a-e783-4fa4-b0d6-dd8256b8210b:
             uuid: d967c54a-e783-4fa4-b0d6-dd8256b8210b
             region: right
@@ -210,7 +210,7 @@ third_party_settings:
                 label: inline
                 settings:
                   link: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 2
             additional:
               component_attributes:
@@ -229,12 +229,12 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
-        third_party_settings: {  }
+        third_party_settings: {}
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Related posts'
-          context_mapping: {  }
+          context_mapping: {}
           section_classes: ''
         components:
           d6bb9e2e-1242-430a-affd-7f899d2da459:
@@ -256,9 +256,9 @@ third_party_settings:
                   profile_info:
                     medium: ''
                     default: ''
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 1
-            additional: {  }
+            additional: {}
           2704fc93-5c16-471a-80a4-14f5bc50ee91:
             uuid: 2704fc93-5c16-471a-80a4-14f5bc50ee91
             region: content
@@ -267,7 +267,7 @@ third_party_settings:
               label: ''
               label_display: visible
               provider: views
-              context_mapping: {  }
+              context_mapping: {}
               views_label: ''
               items_per_page: null
             weight: 2
@@ -288,7 +288,7 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
-        third_party_settings: {  }
+        third_party_settings: {}
   field_group:
     group_container:
       children:
@@ -318,8 +318,8 @@ bundle: blog
 mode: default
 content:
   content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: -20
     region: content
   field_content:
@@ -327,7 +327,7 @@ content:
     label: hidden
     settings:
       profile: ''
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 1
     region: content
   field_featured_image:
@@ -336,7 +336,7 @@ content:
     settings:
       view_mode: 3_2_wide
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 0
     region: content
   field_tags:
@@ -344,7 +344,7 @@ content:
     label: inline
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 2
     region: content
 hidden:

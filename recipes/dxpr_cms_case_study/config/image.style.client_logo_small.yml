@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 name: client_logo_small
 label: 'Client logo small'
 effects:
@@ -18,4 +18,3 @@ effects:
     weight: 2
     data:
       extension: webp
-

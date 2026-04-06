@@ -1156,7 +1156,3 @@ Ensure that you don't have any unsaved changes in any patched dependencies in yo
 {{< /warning >}}
 5. If your patch definition was removed from  `composer.json`, run `composer update --lock` to update the content hash in `composer.lock`.
 6. Commit any related changes to your external patches file (if configured), `composer.json`, `composer.lock`, and `patches.lock.json`.
-
-
-
-

@@ -1,7 +1,7 @@
 uuid: 1417509e-05c3-4817-b85f-788716852069
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: basic
 label: Basic Content Elements
 dxpr_editor: true
@@ -15,10 +15,10 @@ elements:
   - az_text
   - az_row
   - az_section
-blocks: {  }
-views: {  }
-page_templates: {  }
-user_templates: {  }
+blocks: {}
+views: {}
+page_templates: {}
+user_templates: {}
 inline_buttons:
   - aiAgentButton
   - aiAgentToneButton

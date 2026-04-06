@@ -33,7 +33,7 @@ third_party_settings:
         layout_id: dxpr_two_column_container
         layout_settings:
           label: ''
-          context_mapping: {  }
+          context_mapping: {}
           section_classes: 'bg-primary-subtle py-4 px-4 my-4'
         components:
           ac86ac5e-6b08-49e4-8ea7-b32f8be8084e:
@@ -55,9 +55,9 @@ third_party_settings:
                   image_style: uncropped_300w_webp
                   image_loading:
                     attribute: lazy
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
+            additional: {}
           4cb33af1-7c90-4eed-8890-5c27d526ba68:
             uuid: 4cb33af1-7c90-4eed-8890-5c27d526ba68
             region: second
@@ -74,15 +74,15 @@ third_party_settings:
                 label: hidden
                 settings:
                   view_mode: hero
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
-        third_party_settings: {  }
+            additional: {}
+        third_party_settings: {}
       -
         layout_id: layout_onecol
         layout_settings:
           label: Header
-          context_mapping: {  }
+          context_mapping: {}
           section_classes: ''
         components:
           df925eef-8afb-4f9a-8431-415d5b28e3c1:
@@ -101,9 +101,9 @@ third_party_settings:
                 label: inline
                 settings:
                   link: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 10
-            additional: {  }
+            additional: {}
           8e28256f-9bba-4d3b-af40-8545a51b398b:
             uuid: 8e28256f-9bba-4d3b-af40-8545a51b398b
             region: content
@@ -115,10 +115,10 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
               formatter:
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
             weight: 7
-            additional: {  }
+            additional: {}
           739968bb-5952-482a-a215-9a642ef92064:
             uuid: 739968bb-5952-482a-a215-9a642ef92064
             region: content
@@ -135,9 +135,9 @@ third_party_settings:
                 label: hidden
                 settings:
                   profile: ''
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 8
-            additional: {  }
+            additional: {}
           60cbfb7f-7ffb-4456-9488-6adc0c101abb:
             uuid: 60cbfb7f-7ffb-4456-9488-6adc0c101abb
             region: content
@@ -158,15 +158,15 @@ third_party_settings:
                   url_plain: false
                   rel: '0'
                   target: _blank
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 9
-            additional: {  }
-        third_party_settings: {  }
+            additional: {}
+        third_party_settings: {}
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
-          context_mapping: {  }
+          context_mapping: {}
           section_classes: ''
         components:
           f0fbaf1b-10a3-4b8c-b9f1-b4dc849f8432:
@@ -177,7 +177,7 @@ third_party_settings:
               label: ''
               label_display: visible
               provider: views
-              context_mapping: {  }
+              context_mapping: {}
               views_label: ''
               items_per_page: null
             weight: 0
@@ -198,7 +198,7 @@ third_party_settings:
                   class: ''
                   style: ''
                   data: ''
-        third_party_settings: {  }
+        third_party_settings: {}
 _core:
   default_config_hash: sNMqrN8-LZkTsfkej76Hj5BxOuwtxe7ejcvKalOhkZw
 id: node.case_study.default
@@ -207,8 +207,8 @@ bundle: case_study
 mode: default
 content:
   content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: -20
     region: content
   field_case_study__client_link:
@@ -220,7 +220,7 @@ content:
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 6
     region: content
   field_case_study__client_logo:
@@ -231,7 +231,7 @@ content:
       image_style: uncropped_500w_webp
       image_loading:
         attribute: lazy
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 5
     region: content
   field_case_study__client_name:
@@ -239,14 +239,14 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 4
     region: content
   field_content:
     type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 3
     region: content
   field_featured_image:
@@ -255,7 +255,7 @@ content:
     settings:
       view_mode: hero
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 1
     region: content
   field_tags:
@@ -263,7 +263,7 @@ content:
     label: hidden
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 2
     region: content
 hidden:

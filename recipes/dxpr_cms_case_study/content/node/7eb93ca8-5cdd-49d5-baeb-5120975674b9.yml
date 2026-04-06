@@ -149,7 +149,7 @@ default:
     -
       uri: 'https://www.drupal.org/case-studies?sectors%5B%5D=24660'
       title: 'Visit website'
-      options: {  }
+      options: {}
   field_case_study__client_logo:
     -
       entity: aba61bc1-3512-4fec-857d-ed5a50cd53d3

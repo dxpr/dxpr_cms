@@ -33,7 +33,7 @@ content:
         width: 960
         height: null
       svg_render_as_image: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 0
     region: content
 hidden:
@@ -41,4 +41,3 @@ hidden:
   name: true
   thumbnail: true
   uid: true
-

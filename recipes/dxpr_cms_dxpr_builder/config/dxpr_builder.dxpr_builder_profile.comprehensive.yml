@@ -1,7 +1,7 @@
 uuid: de455060-853f-4e1b-b0d7-22b93ba74f99
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: comprehensive
 label: Comprehensive content elements
 dxpr_editor: true
@@ -29,8 +29,8 @@ elements:
   - az_section
   - az_tabs
   - az_toggle
-blocks: {  }
-views: {  }
+blocks: {}
+views: {}
 page_templates:
   - 59709ffe-8043-4e7f-9776-f0551ade8e37
   - ea72cd08-f19c-4de4-946c-c54e5e909665

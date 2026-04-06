@@ -73,4 +73,3 @@ pages:
     paths:
       - public
     expire_in: 1 week
-

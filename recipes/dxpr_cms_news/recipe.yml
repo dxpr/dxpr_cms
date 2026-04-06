@@ -36,7 +36,7 @@ config:
         status: true
         region: highlighted
         weight: -7
-    
+
     block.block.dxpr_theme_mediakit:
       simple_config_update:
         status: true
