@@ -53,7 +53,7 @@ extra:
 nav:
   - Home: index.md
   - Modules:
-    - Overview: modules.md
+      - Overview: modules.md
   - Kitchen Sink Demo: kitchen-sink.md
 docs_dir: docs
 site_dir: site

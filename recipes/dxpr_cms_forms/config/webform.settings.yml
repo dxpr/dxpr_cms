@@ -1,6 +1,6 @@
 settings:
   default_status: open
-  default_categories: {  }
+  default_categories: {}
   default_page: true
   default_page_base_path: /form
   default_ajax: false
@@ -57,7 +57,7 @@ settings:
   default_submission_exception_message: 'Unable to process this submission. Please contact the site administrator.'
   default_submission_locked_message: 'This submission has been locked.'
   default_submission_log: false
-  default_submission_views: {  }
+  default_submission_views: {}
   default_submission_views_replace:
     global_routes:
       - entity.webform_submission.collection
@@ -118,9 +118,9 @@ assets:
   css: ''
   javascript: ''
 handler:
-  excluded_handlers: {  }
+  excluded_handlers: {}
 variant:
-  excluded_variants: {  }
+  excluded_variants: {}
 export:
   temp_directory: ''
   exporter: delimited
@@ -142,7 +142,7 @@ export:
   delimiter: ','
   excel: false
   archive_type: tar
-  excluded_exporters: {  }
+  excluded_exporters: {}
 batch:
   default_batch_export_size: 500
   default_batch_import_size: 100
@@ -208,7 +208,7 @@ file:
   default_video_file_extensions: 'avi mov mp4 ogg wav webm'
   make_unused_managed_files_temporary: true
   delete_temporary_managed_files: true
-format: {  }
+format: {}
 mail:
   default_to_mail: '[site:mail]'
   default_from_mail: '[site:mail]'
@@ -229,7 +229,7 @@ mail:
     <p>Submitted by: [webform_submission:user]</p>
     <p>Submitted values are:</p>
     [webform_submission:values]
-  roles: {  }
+  roles: {}
 test:
   types: |
     checkbox:

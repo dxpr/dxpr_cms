@@ -33,7 +33,7 @@ events:
   Event_alter_local_tasks:
     plugin: 'eca_render:local_tasks'
     label: 'Alter local task'
-    configuration: {  }
+    configuration: {}
     successors:
       -
         id: Activity_load_route_parmeter
@@ -45,7 +45,7 @@ conditions:
       negate: false
       operation: create
       entity: temp
-gateways: {  }
+gateways: {}
 actions:
   Activity_add_link:
     plugin: eca_render_build
@@ -60,7 +60,7 @@ actions:
       token_name: ''
       weight: ''
       mode: append
-    successors: {  }
+    successors: {}
   Activity_load_entity:
     plugin: eca_token_load_entity
     label: 'Load original entity'
@@ -98,7 +98,7 @@ actions:
       published: false
       owner: ''
       object: original
-    successors: {  }
+    successors: {}
   Activity_duplicate_access_link:
     plugin: eca_clone_entity
     label: Duplicate

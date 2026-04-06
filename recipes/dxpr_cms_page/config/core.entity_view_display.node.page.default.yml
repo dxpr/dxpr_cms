@@ -48,9 +48,9 @@ third_party_settings:
                   profile_info:
                     light: ''
                     medium: ''
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 2
-            additional: {  }
+            additional: {}
           b09072a1-7bd8-49c5-ac58-2da953562e12:
             uuid: b09072a1-7bd8-49c5-ac58-2da953562e12
             region: content
@@ -60,7 +60,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: 1
-            additional: {  }
+            additional: {}
           bfcb27c2-a42f-4e71-bf84-1841a548d5a6:
             uuid: bfcb27c2-a42f-4e71-bf84-1841a548d5a6
             region: content
@@ -77,9 +77,9 @@ third_party_settings:
                 label: hidden
                 settings:
                   view_mode: hero
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
+            additional: {}
           6976105a-c13d-457c-a8ae-0dfd6f9a7903:
             uuid: 6976105a-c13d-457c-a8ae-0dfd6f9a7903
             region: content
@@ -96,10 +96,10 @@ third_party_settings:
                 label: inline
                 settings:
                   link: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 4
-            additional: {  }
-        third_party_settings: {  }
+            additional: {}
+        third_party_settings: {}
 _core:
   default_config_hash: 0FkBRgKI9kJ1T9SJMAiUJisLN0FbrbyPoQlM6sKRfIo
 id: node.page.default
@@ -108,15 +108,15 @@ bundle: page
 mode: default
 content:
   content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: -20
     region: content
   field_content:
     type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 100
     region: content
   field_featured_image:
@@ -125,7 +125,7 @@ content:
     settings:
       view_mode: hero
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 1
     region: content
 hidden:

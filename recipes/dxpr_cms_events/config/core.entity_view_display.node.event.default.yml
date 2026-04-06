@@ -36,7 +36,7 @@ third_party_settings:
         layout_id: dxpr_three_column_container
         layout_settings:
           label: ''
-          context_mapping: {  }
+          context_mapping: {}
           section_classes: 'bg-primary-subtle py-4 px-4 my-4'
         components:
           f445fec6-859a-4382-a2b3-c6adac50c491:
@@ -55,9 +55,9 @@ third_party_settings:
                 label: hidden
                 settings:
                   view_mode: default
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
+            additional: {}
           7ba011b7-5468-40ab-8b18-4c4c809c7c89:
             uuid: 7ba011b7-5468-40ab-8b18-4c4c809c7c89
             region: second
@@ -72,10 +72,10 @@ third_party_settings:
               formatter:
                 type: address_default
                 label: above
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
             weight: 1
-            additional: {  }
+            additional: {}
           1d4d3030-a66f-4eb8-9524-84871e712175:
             uuid: 1d4d3030-a66f-4eb8-9524-84871e712175
             region: second
@@ -92,9 +92,9 @@ third_party_settings:
                 label: above
                 settings:
                   link_to_entity: false
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
+            additional: {}
           0561765a-b1af-4ce8-a01e-cd1f75d3e4aa:
             uuid: 0561765a-b1af-4ce8-a01e-cd1f75d3e4aa
             region: third
@@ -197,10 +197,10 @@ third_party_settings:
                       options: ''
                   map_lazy_load:
                     lazy_load: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 0
-            additional: {  }
-        third_party_settings: {  }
+            additional: {}
+        third_party_settings: {}
       -
         layout_id: layout_onecol
         layout_settings:
@@ -215,7 +215,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             weight: 0
-            additional: {  }
+            additional: {}
           91e4b920-2499-4e9f-8e36-2aa11774306e:
             uuid: 91e4b920-2499-4e9f-8e36-2aa11774306e
             region: content
@@ -227,10 +227,10 @@ third_party_settings:
               formatter:
                 type: dxpr_builder_text
                 label: hidden
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
             weight: 6
-            additional: {  }
+            additional: {}
           dc70d8af-07f7-45ce-82f6-31b1efecbb8f:
             uuid: dc70d8af-07f7-45ce-82f6-31b1efecbb8f
             region: content
@@ -248,9 +248,9 @@ third_party_settings:
                   url_plain: false
                   rel: ''
                   target: ''
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 7
-            additional: {  }
+            additional: {}
           d33af099-0948-4a26-ade1-c9c981606e2f:
             uuid: d33af099-0948-4a26-ade1-c9c981606e2f
             region: content
@@ -265,9 +265,9 @@ third_party_settings:
                 settings:
                   view_mode: default
                   link: false
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 8
-            additional: {  }
+            additional: {}
           a6267978-afeb-4ea9-8d3f-f96aa64d58ab:
             uuid: a6267978-afeb-4ea9-8d3f-f96aa64d58ab
             region: content
@@ -281,9 +281,9 @@ third_party_settings:
                 label: inline
                 settings:
                   link: true
-                third_party_settings: {  }
+                third_party_settings: {}
             weight: 9
-            additional: {  }
+            additional: {}
           c871a72e-ca57-411e-958c-539fec3529e1:
             uuid: c871a72e-ca57-411e-958c-539fec3529e1
             region: content
@@ -337,8 +337,8 @@ third_party_settings:
                       augmenter_settings:
                         fields__field_event__date__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
             weight: 10
-            additional: {  }
-        third_party_settings: {  }
+            additional: {}
+        third_party_settings: {}
 _core:
   default_config_hash: AKCjWak511TLQM4f9MxHEBRZ-_jsq7PAbT7bTvF5nbE
 id: node.event.default
@@ -347,15 +347,15 @@ bundle: event
 mode: default
 content:
   content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 0
     region: content
   field_content:
     type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 6
     region: content
   field_event__date:
@@ -410,7 +410,7 @@ content:
     settings:
       view_mode: default
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 8
     region: content
   field_event__link:
@@ -422,14 +422,14 @@ content:
       url_plain: false
       rel: ''
       target: ''
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 7
     region: content
   field_event__location_address:
     type: address_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 4
     region: content
   field_event__location_name:
@@ -437,7 +437,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 3
     region: content
   field_featured_image:
@@ -446,7 +446,7 @@ content:
     settings:
       view_mode: 16_9_wide
       link: false
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 1
     region: content
   field_geofield:
@@ -543,7 +543,7 @@ content:
           options: ''
       map_lazy_load:
         lazy_load: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 5
     region: content
   field_tags:
@@ -551,7 +551,7 @@ content:
     label: inline
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings: {}
     weight: 9
     region: content
 hidden:

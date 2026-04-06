@@ -86,7 +86,7 @@ display:
           settings:
             view_mode: client_logo_small
           group_column: target_id
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -151,7 +151,7 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns: {}
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -297,7 +297,7 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
-      arguments: {  }
+      arguments: {}
       filters:
         type:
           id: type
@@ -321,7 +321,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -339,8 +339,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         langcode:
           id: langcode
           table: node_field_data
@@ -365,7 +365,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -383,8 +383,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
         status:
           id: status
           table: node_field_data
@@ -406,7 +406,7 @@ display:
             use_operator: false
             operator: ''
             operator_limit_selection: false
-            operator_list: {  }
+            operator_list: {}
             identifier: ''
             required: false
             remember: false
@@ -423,8 +423,8 @@ display:
             multiple: false
             remember: false
             default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+            default_group_multiple: {}
+            group_items: {}
       style:
         type: default
       row:
@@ -439,8 +439,8 @@ display:
           disable_sql_rewrite: false
           distinct: false
           replica: false
-          query_tags: {  }
-      relationships: {  }
+          query_tags: {}
+      relationships: {}
       use_ajax: true
       header:
         add_content_by_bundle:
@@ -459,8 +459,8 @@ display:
           width: 600
           form_mode: null
           params: ''
-      footer: {  }
-      display_extenders: {  }
+      footer: {}
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -503,7 +503,7 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
+          grouping: {}
           row_class: ''
           default_row_class: false
           grid_class: ''
@@ -517,7 +517,7 @@ display:
         type: fields
         options:
           default_field_elements: false
-          inline: {  }
+          inline: {}
           separator: ''
           hide_empty: false
       defaults:
@@ -542,7 +542,7 @@ display:
             value: '<a href="/case-studies">All case studies</a>'
             format: dxpr_builder_html
           tokenize: false
-      display_extenders: {  }
+      display_extenders: {}
     cache_metadata:
       max-age: -1
       contexts:
@@ -561,7 +561,7 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
+          grouping: {}
           row_class: ''
           default_row_class: false
           grid_class: ''
@@ -575,14 +575,14 @@ display:
         type: fields
         options:
           default_field_elements: false
-          inline: {  }
+          inline: {}
           separator: ''
           hide_empty: true
       defaults:
         style: false
         row: false
       display_description: ''
-      display_extenders: {  }
+      display_extenders: {}
       path: case-studies
       menu:
         type: normal
@@ -615,7 +615,7 @@ display:
         options:
           offset: 0
           items_per_page: 3
-      empty: {  }
+      empty: {}
       sorts:
         ai_sorting:
           id: ai_sorting
@@ -671,7 +671,7 @@ display:
           validate:
             type: none
             fail: 'not found'
-          validate_options: {  }
+          validate_options: {}
           break_phrase: false
           not: false
         nid:
@@ -692,7 +692,7 @@ display:
           title_enable: false
           title: ''
           default_argument_type: node
-          default_argument_options: {  }
+          default_argument_options: {}
           summary_options:
             base_path: ''
             count: true
@@ -706,7 +706,7 @@ display:
           validate:
             type: none
             fail: 'not found'
-          validate_options: {  }
+          validate_options: {}
           break_phrase: false
           not: true
       defaults:
@@ -717,8 +717,8 @@ display:
         arguments: false
         header: false
       display_description: ''
-      header: {  }
-      display_extenders: {  }
+      header: {}
+      display_extenders: {}
       block_hide_empty: true
     cache_metadata:
       max-age: -1

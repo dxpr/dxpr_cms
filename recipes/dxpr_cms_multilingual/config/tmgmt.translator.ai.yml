@@ -10,4 +10,4 @@ settings:
   tokenizer_model: 'dxpr__kavya-m1-fast'
   advanced:
     max_tokens: '999996'
-remote_languages_mappings: {  }
+remote_languages_mappings: {}
