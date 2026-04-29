@@ -35,7 +35,7 @@ Follow these steps to install DXPR CMS:
 
    **Option B: AI-assisted installation (Claude Code)**
    The repo includes a built-in AI skill that walks you through the full
-   installation interactively — language selection, recipes, API key, and
+   installation interactively -- language selection, recipes, API key, and
    more. Install [Claude Code](https://docs.anthropic.com/en/docs/claude-code),
    then from the project root:
    ```bash
@@ -105,6 +105,52 @@ Follow these steps to install DXPR CMS:
    ddev drush recipe ../recipes/dxpr_cms_seo_tools
    ```
 
+## AI Coding Assistant Integration
+
+DXPR CMS includes built-in [Agent Skills](https://agentskills.io/specification)
+files that teach AI coding assistants how to install, configure, and manage
+your site through natural language.
+
+| Capability | What you can ask |
+|------------|-----------------|
+| **Installation** | "Install DXPR CMS with News, Events, and multilingual support" |
+| **Page Building** | "Create a landing page for our spring campaign" |
+| **Content Management** | "Add a testimonial content type with company and quote fields" |
+| **Theme Settings** | "Set the header layout to centered and generate a warm color palette" |
+| **Views & Menus** | "Create a view that shows the 5 most recent news articles" |
+| **A/B Testing** | "Analyze the homepage hero experiment and show conversion rates" |
+| **Translations** | "Translate node 42 to French and German" |
+| **Site Management** | "Add a phone number field to the event content type" |
+
+**Example -- building a Case Studies section from scratch:**
+
+1. "Create a case_study content type with fields for client name, industry, challenge, solution, and results"
+2. "Create a view showing case studies as a card grid, filterable by industry"
+3. "Build a case study detail page template with a hero section and sidebar stats"
+4. "Add Case Studies to the main menu after About Us"
+
+The AI assistant handles the entire workflow -- content types, fields,
+views, page layout, and navigation -- through conversation.
+
+### Quick Setup
+
+After installing DXPR CMS, enable AI assistant support:
+
+```bash
+drush dxb:setup-ai    # Page builder
+drush dxt:setup-ai    # Theme settings
+drush rl:setup-ai     # A/B testing
+drush wm:setup-ai     # Site management
+```
+
+Compatible with Claude Code, Codex CLI, Gemini CLI, GitHub Copilot,
+Cursor, and other tools supporting the
+[Agent Skills standard](https://agentskills.io/specification).
+
+Compatible with Claude Code, Codex CLI, Gemini CLI, GitHub Copilot,
+Cursor, and other tools supporting the
+[Agent Skills standard](https://agentskills.io/specification).
+
 ## Future-proof your digital strategy with scalable tools for efficient content management
 
 Welcome to DXPR CMS, a dynamic Drupal distribution that simplifies complex content management challenges. Designed to enhance productivity, ensure data security, and leverage the potential of AI, this platform integrates tools like [DXPR Builder](https://www.drupal.org/project/dxpr_builder) and [DXPR Theme](https://www.drupal.org/project/dxpr_theme), alongside cutting-edge AI modules to empower users, streamline workflows, and reduce operational costs.
@@ -170,7 +216,7 @@ adjustments accordingly.
 
 The AI CKEditor Assistant will introduce generative AI capabilities into
 CKEditor via a slash command interface. Users will be able to prompt the AI
-to generate content, perform corrections, or provide enhancements—all within
+to generate content, perform corrections, or provide enhancements -- all within
 the CKEditor environment. This tool will make content creation faster and
 smarter.
 

@@ -269,7 +269,7 @@ Jump to sections:
 
 > "Where marketers fall in love with Drupal"
 >
-> — DXPR Team
+> (DXPR Team)
 
 ### Nested Blockquote
 

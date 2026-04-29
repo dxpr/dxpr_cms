@@ -25,8 +25,27 @@
 <h3>Configurable AI Provider Failover</h3>
 <p>Never experience AI downtime again. DXPR AI provides free access to OpenAI, Claude, MistralAI, Google Gemini, XAI, and Perplexity with intelligent routing ensuring continuous productivity.</p>
 
+<h3>Web-Search-Powered Content Generation</h3>
+<p>Generate factually accurate content with our unified research layer powered by Perplexity AI.</p>
+
+
 <h3>Research-Powered Content Generation</h3>
 <p>Generate factually accurate content with our unified research layer powered by Perplexity AI.</p>
+
+<h2>Reinforcement Learning Content Optimization</h2>
+<p>DXPR CMS integrates Thompson Sampling reinforcement learning algorithms through our RL module and AI Sorting plugin. This implementation automatically optimizes content performance by learning from user interactions across News, Blog, and Case Study views.</p>
+
+<h3>Smart A/B Testing Without the Wait</h3>
+<p>Our reinforcement learning system powers intelligent content ranking in "Popular News," "Featured Posts," and "Related Content" blocks. Unlike traditional A/B testing that requires weeks for results, DXPR's implementation adapts instantly, shifting traffic to winning variations while minimizing lost conversions.</p>
+
+<h2>AI Content Analysis and Optimization</h2>
+<p>DXPR CMS includes comprehensive AI analysis modules that automatically evaluate and optimize your content quality, security, and marketing effectiveness. These intelligent analysis tools work behind the scenes to ensure professional standards and maximum engagement.</p>
+
+<h3>Intelligent Sentiment Analysis</h3>
+<p>The AI Sentiment Analysis module automatically evaluates the emotional tone and reader perception of your content. This intelligent analysis ensures your messaging resonates with your target audience while identifying content that may need tone adjustments for optimal engagement.</p>
+
+<h3>Security and Marketing Audits</h3>
+<p>Automated Content Security Audit and Content Marketing Audit modules provide continuous analysis of your content strategy. These tools identify potential security vulnerabilities, optimization opportunities, and engagement improvements without manual intervention.</p>
 
 <h2>Theme System</h2>
 <p>DXPR Theme provides customizable design foundation with global branding controls, color management, and typography settings.</p>
@@ -87,6 +106,66 @@
 
 <hr>
 
+<h3>AI Coding Assistant Integration</h3>
+
+<p>DXPR CMS includes built-in <a href="https://agentskills.io/specification">Agent Skills</a> files that teach AI coding assistants how to install, configure, and manage your site through natural language. Compatible with Claude Code, Codex CLI, Gemini CLI, GitHub Copilot, Cursor, and other tools supporting the standard.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>What you can ask</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Installation</strong></td>
+      <td>"Install DXPR CMS with News, Events, and multilingual support"</td>
+    </tr>
+    <tr>
+      <td><strong>Page Building</strong></td>
+      <td>"Create a landing page for our spring campaign"</td>
+    </tr>
+    <tr>
+      <td><strong>Content Management</strong></td>
+      <td>"Add a testimonial content type with company and quote fields"</td>
+    </tr>
+    <tr>
+      <td><strong>Theme Settings</strong></td>
+      <td>"Set the header layout to centered and generate a warm color palette"</td>
+    </tr>
+    <tr>
+      <td><strong>Views &amp; Menus</strong></td>
+      <td>"Create a view that shows the 5 most recent news articles"</td>
+    </tr>
+    <tr>
+      <td><strong>A/B Testing</strong></td>
+      <td>"Analyze the homepage hero experiment and show conversion rates"</td>
+    </tr>
+    <tr>
+      <td><strong>Translations</strong></td>
+      <td>"Translate node 42 to French and German"</td>
+    </tr>
+    <tr>
+      <td><strong>Site Management</strong></td>
+      <td>"Add a phone number field to the event content type"</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example -- building a Case Studies section from scratch:</strong></p>
+<ol>
+  <li>"Create a case_study content type with fields for client name, industry, challenge, solution, and results"</li>
+  <li>"Create a view showing case studies as a card grid, filterable by industry"</li>
+  <li>"Build a case study detail page template with a hero section and sidebar stats"</li>
+  <li>"Add Case Studies to the main menu after About Us"</li>
+</ol>
+<p>The AI assistant handles the entire workflow -- content types, fields, views, page layout, and navigation -- through conversation.</p>
+
+<p>After installing DXPR CMS, run <code>drush dxb:setup-ai</code>, <code>drush dxt:setup-ai</code>, <code>drush rl:setup-ai</code>, and <code>drush wm:setup-ai</code> to enable AI assistant support across all modules.</p>
+
+<hr>
+
 <h2 id="dxpr-installation">Getting Started with DXPR CMS</h2>
 
 <p>Follow these steps to install DXPR CMS:</p>
@@ -114,43 +193,16 @@
 <h4>Option A: Web-based installation</h4>
 <p>Open your browser and navigate to <code>http://dxpr-cms.ddev.site</code> or <code>https://dxpr-cms.ddev.site</code> to access the Drupal installation wizard. Complete the installation steps to set up your site.</p>
 
-<h4>Option B: AI-assisted installation (Claude Code)</h4>
-<p>The repo includes a built-in AI skill that walks you through the full installation interactively — language selection, recipes, API key, and more. Install <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code</a>, then from the project root:</p>
-<code>claude</code>
-<p>Once Claude starts, type "install DXPR CMS" and follow the prompts. The skill is auto-detected from <code>.claude/skills/dxpr-install/</code>.</p>
-<p><strong>Power users:</strong> To use the skill from anywhere (without cloning first), install it globally:</p>
-<pre><code>mkdir -p ~/.claude/skills/dxpr-install && curl -sL \
-  https://raw.githubusercontent.com/dxpr/dxpr_cms/1.x/.claude/skills/dxpr-install/SKILL.md \
-  -o ~/.claude/skills/dxpr-install/SKILL.md</code></pre>
-<p>Then run <code>claude</code> from any directory and type "install DXPR CMS".</p>
-
-<h4>Option C: Command-line installation with DXPR API key</h4>
+<h4>Option B: Command-line installation with DXPR API key</h4>
 <p>For automated installation with your DXPR Builder API key:</p>
 <code>ddev drush site-install dxpr_cms_installer dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code>
 <p>Replace <code>YOUR_DXPR_API_KEY</code> with your actual DXPR Builder product key from <a href="https://app.dxpr.com/getting-started" target="_blank">app.dxpr.com/getting-started</a>.</p>
 
-<h4>Option D: Command-line installation with recipes</h4>
-<p>You can select optional recipes during command-line installation, mirroring the options available in the web-based installer. Use pipe-separated recipe names with the <code>installer_recipes_form.add_ons</code> parameter:</p>
-<pre><code>ddev drush site-install dxpr_cms_installer \
-  "installer_recipes_form.add_ons=Case Studies|Events|Forms|Google Analytics|News|SEO Tools|Multilingual" \
-  site_name='My Site' \
-  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code></pre>
-<p>Available recipes: <code>Case Studies</code>, <code>Events</code>, <code>Forms</code>, <code>Google Analytics</code>, <code>News</code>, <code>SEO Tools</code>, <code>Multilingual</code>.</p>
-<p>To install with <strong>all</strong> optional recipes, use <code>*</code>:</p>
-<pre><code>ddev drush site-install dxpr_cms_installer \
-  "installer_recipes_form.add_ons=*" \
-  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code></pre>
-<p>When including the Multilingual recipe, you can also specify additional languages:</p>
-<pre><code>ddev drush site-install dxpr_cms_installer \
-  "installer_recipes_form.add_ons=Case Studies|Events|Multilingual" \
-  "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
-  "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
-  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code></pre>
-
-<h3>Step 7: Install optional recipes after installation</h3>
-<p>If you want to add recipes later, install them manually:</p>
+<h3>Step 7: Install optional recipes</h3>
+<p>During the web-based installation, you can select additional recipes (Case Studies, Events, Forms, Analytics, News, SEO Tools) to customize your site.</p>
+<p>If you used command-line installation or want to add recipes later, install them manually:</p>
 <pre><code>ddev drush recipe ../recipes/dxpr_cms_case_study
-ddev drush recipe ../recipes/dxpr_cms_events
+ddev drush recipe ../recipes/dxpr_cms_events  
 ddev drush recipe ../recipes/dxpr_cms_forms
 ddev drush recipe ../recipes/dxpr_cms_news
 ddev drush recipe ../recipes/dxpr_cms_multilingual
