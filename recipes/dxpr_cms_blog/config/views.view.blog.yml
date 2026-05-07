@@ -9,7 +9,7 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - add_content_by_bundle
-    - ai_sorting
+    - rl_sorting
     - node
     - smart_trim
     - user
@@ -564,15 +564,15 @@ display:
           offset: 0
           items_per_page: 7
       sorts:
-        ai_sorting:
-          id: ai_sorting
+        rl_sorting:
+          id: rl_sorting
           table: node_field_data
-          field: ai_sorting
+          field: rl_sorting
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          plugin_id: ai_sorting
+          plugin_id: rl_sorting
           order: ''
           expose:
             label: ''
@@ -1075,15 +1075,15 @@ display:
           offset: 0
           items_per_page: 3
       sorts:
-        ai_sorting:
-          id: ai_sorting
+        rl_sorting:
+          id: rl_sorting
           table: node_field_data
-          field: ai_sorting
+          field: rl_sorting
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          plugin_id: ai_sorting
+          plugin_id: rl_sorting
           order: ''
           expose:
             label: ''

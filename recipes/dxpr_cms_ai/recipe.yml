@@ -18,7 +18,7 @@ install:
   - analyze_ai_content_security_audit
   - analyze_basic_content_info
   - analyze_page_views
-  - ai_sorting
+  - rl_sorting
   - analyze
   - rl
   - views_color_scales

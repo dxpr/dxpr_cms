@@ -11,7 +11,7 @@
         "drupal/ai_provider_dxpr": "^1.0.0-beta3",
         "drupal/ai_checklist": "^1.0",
         "drupal/ai_social_posts": "^1.0@beta",
-        "drupal/ai_sorting": "^1.0@beta",
+        "drupal/rl_sorting": "^1.0@beta",
         "drupal/dxpr_cms_privacy_basic": "*",
         "drupal/dxpr_cms_roles": "*",
         "drupal/ai_content_strategy": "^1.0@beta",
