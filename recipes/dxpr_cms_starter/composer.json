@@ -6,7 +6,7 @@
     "require": {
         "drupal/automatic_updates": "^3.1.7 || ^4.0",
         "drupal/bpmn_io": "^3.0",
-        "drupal/core": ">=10.4 || ^11",
+        "drupal/core": "^10.4 || ^11",
         "drupal/eca": "^3.0",
         "drupal/dashboard": "^2",
         "drupal/dxpr_cms_dxpr_builder": "*",

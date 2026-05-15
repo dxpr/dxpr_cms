@@ -3,7 +3,7 @@
     "type": "drupal-recipe",
     "description": "Sets up DXPR Theme as the front-end theme.",
     "require": {
-        "drupal/core": ">=10.3",
+        "drupal/core": "^10.3 || ^11",
         "drupal/bootstrap5": "^4.0.3",
         "drupal/dxpr_theme": "^8",
         "drupal/dxpr_theme_helper": "^3.0.0",

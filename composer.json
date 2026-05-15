@@ -77,6 +77,10 @@
             "type": "path",
             "url": "recipes/dxpr_cms_page"
         },
+        "person": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_person"
+        },
         "performance": {
             "type": "path",
             "url": "recipes/dxpr_cms_performance"
@@ -92,6 +96,10 @@
         "roles": {
             "type": "path",
             "url": "recipes/dxpr_cms_roles"
+        },
+        "search": {
+            "type": "path",
+            "url": "recipes/dxpr_cms_search"
         },
         "seo_basic": {
             "type": "path",
@@ -130,8 +138,11 @@
         "drupal/dxpr_cms_multilingual": "*",
         "drupal/dxpr_cms_news": "*",
         "drupal/dxpr_cms_performance": "*",
+        "drupal/dxpr_cms_person": "*",
+        "drupal/dxpr_cms_search": "*",
         "drupal/dxpr_cms_seo_tools": "*",
         "drupal/dxpr_cms_starter": "*",
+        "drupal/eca_project_browser": "^3",
         "drupal/easy_email_express": "^1",
         "drupal/google_tag": "^2.0",
         "drupal/project_browser": "^2.1@beta",

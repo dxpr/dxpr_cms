@@ -5,7 +5,7 @@
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/bpmn_io": "^3.0",
-        "drupal/core": ">=10.3",
+        "drupal/core": "^10.3 || ^11",
         "drupal/eca": "^3.0",
         "drupal/gin_login": "^2.1",
         "drupal/login_emailusername": "^3",

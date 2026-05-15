@@ -7,7 +7,7 @@
         "drupal/autosave_form": "^1.10",
         "drupal/bpmn_io": "^3.0",
         "drupal/block_classes": "^1.0",
-        "drupal/core": ">=10.4",
+        "drupal/core": "^10.4 || ^11",
         "drupal/dxpr_cms_image": "*",
         "drupal/dxpr_cms_layouts": "^1.0",
         "drupal/eca": "^3.0",

@@ -15,6 +15,7 @@ input:
       source: config
       config: ['system.site', 'uuid']
 config:
+  strict: false
   actions:
     captcha.settings:
       simpleConfigUpdate:

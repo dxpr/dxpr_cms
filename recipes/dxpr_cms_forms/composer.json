@@ -6,7 +6,7 @@
     "require": {
         "drupal/dxpr_cms_anti_spam": "*",
         "drupal/dxpr_cms_page": "*",
-        "drupal/core": ">=10.4",
+        "drupal/core": "^10.4 || ^11",
         "drupal/webform": "^6.3-beta1"
     },
     "version": "1.0.0-beta1"

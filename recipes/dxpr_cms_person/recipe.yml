@@ -1,0 +1,30 @@
+name: Person Profiles
+type: DXPR CMS
+description: Adds a person profile content type.
+recipes:
+  - dxpr_cms_page
+  - core/recipes/content_editor_role
+install:
+  - add_content_by_bundle
+  - block_classes
+  - dxpr_theme_helper
+  - menu_link_content
+  - smart_trim
+  - telephone
+  - views_bootstrap
+config:
+  strict:
+    - field.storage.node.field_person__email
+    - field.storage.node.field_person__phone_number
+    - field.storage.node.field_person__role_job_title
+  import:
+    dxpr_theme_helper: '*'
+  actions:
+    user.role.content_editor:
+      grantPermissions: []
+    user.role.content_administrator:
+      grantPermissions: []
+    user.role.site_builder:
+      grantPermissions: []
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['person']

@@ -3,7 +3,7 @@
     "type": "drupal-recipe",
     "description": "Adds support for translations.",
     "require": {
-        "drupal/core": ">=10.3",
+        "drupal/core": "^10.3 || ^11",
         "drupal/dxpr_cms_content_type_base": "*",
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/hreflang": "^1.14",

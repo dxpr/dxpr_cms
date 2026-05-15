@@ -4,7 +4,7 @@
   "type": "drupal-recipe",
   "license": ["GPL-2.0-or-later"],
   "require": {
-    "drupal/core": ">=10.4",
+    "drupal/core": "^10.4 || ^11",
     "drupal/add_content_by_bundle": "^1.2.2",
     "drupal/address": "^2",
     "drupal/addtocal_augment": "^1.2.3",

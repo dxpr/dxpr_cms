@@ -5,6 +5,7 @@ install:
   - minifyhtml
   - speculative_loading
 config:
+  strict: false
   import:
     minifyhtml: '*'
     speculative_loading: '*'

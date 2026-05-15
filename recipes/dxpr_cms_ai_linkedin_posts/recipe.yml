@@ -7,6 +7,7 @@ install:
 recipes:
   - dxpr_cms_ai
 config:
+  strict: false
   import:
     ai_social_posts_linkedin: '*'
     ai_social_posts_linkedin_article: '*'
