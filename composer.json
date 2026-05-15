@@ -181,6 +181,7 @@
         "preferred-install": {
             "drupal/ace_editor": "source",
             "drupal/admin_toolbar": "source",
+            "drupal/layout_builder_component_attributes": "source",
             "drupal/tmgmt": "source",
             "drupal/ai_tmgmt": "source",
             "*": "dist"
