@@ -1,0 +1,6 @@
+type: drupal11
+docroot: web
+database:
+  type: mariadb
+  version: "11.4"
+corepack_enable: true

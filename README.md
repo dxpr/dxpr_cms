@@ -1,113 +1,101 @@
 # DXPR CMS
 
-DXPR CMS is a powerful and enhanced version of Drupal 10, incorporating some
-of the best modules and themes available. It is designed to help you quickly
-set up and start building your site. Unlike traditional distributions, DXPR
-CMS utilizes the Drupal recipe system, ensuring flexibility and ease of
-customization.
+DXPR CMS is a Drupal distribution built on the
+[Drupal recipe system](https://www.drupal.org/docs/extending-drupal/drupal-recipes).
+It bundles [DXPR Builder](https://www.drupal.org/project/dxpr_builder) (drag-and-drop
+page builder), [DXPR Theme](https://www.drupal.org/project/dxpr_theme), and a curated
+set of modules for content management, SEO, analytics, multilingual support, and
+AI-assisted workflows.
 
-## Getting started with DXPR CMS
+## Getting started
 
-Follow these steps to install DXPR CMS:
+### Prerequisites
 
-1. Install [DDEV](https://ddev.com/) if you haven't already.
-2. Clone the DXPR CMS repository:
-   ```bash
-   git clone https://github.com/dxpr/dxpr_cms.git
-   ```
-3. Navigate to the project directory:
-   ```bash
-   cd dxpr_cms
-   ```
-4. Configure and start the DDEV environment:
-   ```bash
-   ddev config --project-type=drupal11 --database=mariadb:11.4 --docroot=web
-   ddev start
-   ddev composer install
-   ```
-5. Complete the installation using one of these methods:
+- [Docker](https://docs.docker.com/get-docker/) (Docker Desktop or Colima)
+- [DDEV](https://ddev.com/) v1.24.0 or later
 
-   **Option A: Web-based installation**
-   Open your browser and navigate to `http://dxpr-cms.ddev.site` or
-   `https://dxpr-cms.ddev.site` to access the Drupal installation wizard.
-   During installation, you can select optional recipes (Case Studies,
-   Events, Forms, Analytics, News, SEO Tools) to customize your site.
+### Installation
 
-   **Option B: AI-assisted installation (Claude Code)**
-   The repo includes a built-in AI skill that walks you through the full
-   installation interactively -- language selection, recipes, API key, and
-   more. Install [Claude Code](https://docs.anthropic.com/en/docs/claude-code),
-   then from the project root:
-   ```bash
-   claude
-   ```
-   Once Claude starts, type "install DXPR CMS" and follow the prompts.
-   The skill is auto-detected from `.claude/skills/dxpr-install/`.
+```bash
+git clone https://github.com/dxpr/dxpr_cms.git
+cd dxpr_cms
+ddev start
+ddev composer install
+```
 
-   **Power users:** To use the skill from anywhere (without cloning first),
-   install it globally:
-   ```bash
-   mkdir -p ~/.claude/skills/dxpr-install && curl -sL \
-     https://raw.githubusercontent.com/dxpr/dxpr_cms/1.x/.claude/skills/dxpr-install/SKILL.md \
-     -o ~/.claude/skills/dxpr-install/SKILL.md
-   ```
-   Then run `claude` from any directory and type "install DXPR CMS".
+DDEV configuration is included in the repository -- no manual `ddev config`
+step is needed.
 
-   **Option C: Command-line installation with API key**
-   For automated installation with your DXPR Builder API key:
-   ```bash
-   ddev drush site-install dxpr_cms_installer \
-     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
-   ```
-   Replace `YOUR_DXPR_API_KEY` with your actual DXPR Builder product key from
-   [app.dxpr.com/getting-started](https://app.dxpr.com/getting-started).
+After `composer install` finishes, complete the installation using one of
+the methods below.
 
-   **Option D: Command-line installation with recipes**
-   You can select optional recipes during command-line installation, mirroring
-   the options available in the web-based installer. Use pipe-separated recipe
-   names with the `installer_recipes_form.add_ons` parameter:
-   ```bash
-   ddev drush site-install dxpr_cms_installer \
-     "installer_recipes_form.add_ons=Case Studies|Events|Forms|Google Analytics|News|SEO Tools|Multilingual" \
-     site_name='My Site' \
-     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
-   ```
+#### Web-based installation
 
-   Available recipes: `Case Studies`, `Events`, `Forms`, `Google Analytics`,
-   `News`, `SEO Tools`, `Multilingual`.
+Open your browser and navigate to the URL shown in the terminal output
+(typically `https://dxpr-cms.ddev.site`). The installation wizard lets you
+choose a site name, optional recipes, and enter your
+[DXPR API key](https://app.dxpr.com/getting-started).
 
-   To install with **all** optional recipes, use `*`:
-   ```bash
-   ddev drush site-install dxpr_cms_installer \
-     "installer_recipes_form.add_ons=*" \
-     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
-   ```
+#### Command-line installation
 
-   When including the Multilingual recipe, you can also specify additional
-   languages:
-   ```bash
-   ddev drush site-install dxpr_cms_installer \
-     "installer_recipes_form.add_ons=Case Studies|Events|Multilingual" \
-     "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
-     "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
-     dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
-   ```
+```bash
+ddev drush site-install dxpr_cms_installer \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+```
 
-   **Installing optional recipes after installation**
-   If you want to add recipes later, install them manually:
-   ```bash
-   ddev drush recipe ../recipes/dxpr_cms_case_study
-   ddev drush recipe ../recipes/dxpr_cms_events
-   ddev drush recipe ../recipes/dxpr_cms_forms
-   ddev drush recipe ../recipes/dxpr_cms_news
-   ddev drush recipe ../recipes/dxpr_cms_multilingual
-   ddev drush recipe ../recipes/dxpr_cms_google_analytics
-   ddev drush recipe ../recipes/dxpr_cms_seo_tools
-   ```
+Replace `YOUR_DXPR_API_KEY` with your key from
+[app.dxpr.com/getting-started](https://app.dxpr.com/getting-started).
 
-## AI Coding Assistant Integration
+To include optional recipes, add them as a pipe-separated list:
 
-DXPR CMS includes built-in [Agent Skills](https://agentskills.io/specification)
+```bash
+ddev drush site-install dxpr_cms_installer \
+  "installer_recipes_form.add_ons=Case Studies|Events|Forms|Google Analytics|News|SEO Tools|Multilingual" \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+```
+
+Use `"installer_recipes_form.add_ons=*"` to install all optional recipes.
+
+#### After installation
+
+Once installation completes, drush prints admin credentials. To access
+your site:
+
+```bash
+ddev drush user-login    # Opens a one-time admin login link
+ddev launch              # Opens the site homepage in your browser
+```
+
+You can also log in manually at `https://<project-name>.ddev.site/user/login`.
+
+### Installing recipes after initial setup
+
+```bash
+ddev drush recipe ../recipes/dxpr_cms_case_study
+ddev drush recipe ../recipes/dxpr_cms_events
+ddev drush recipe ../recipes/dxpr_cms_forms
+ddev drush recipe ../recipes/dxpr_cms_news
+ddev drush recipe ../recipes/dxpr_cms_multilingual
+ddev drush recipe ../recipes/dxpr_cms_google_analytics
+ddev drush recipe ../recipes/dxpr_cms_seo_tools
+```
+
+### Advanced: multilingual installation
+
+When including the Multilingual recipe via command line, specify additional
+languages with their language codes:
+
+```bash
+ddev drush site-install dxpr_cms_installer \
+  "installer_recipes_form.add_ons=Multilingual" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
+  dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
+```
+
+## AI coding assistant integration
+
+DXPR CMS includes [Agent Skills](https://agentskills.io/specification)
 files that teach AI coding assistants how to install, configure, and manage
 your site through natural language.
 
@@ -122,17 +110,28 @@ your site through natural language.
 | **Translations** | "Translate node 42 to French and German" |
 | **Site Management** | "Add a phone number field to the event content type" |
 
-**Example -- building a Case Studies section from scratch:**
+### AI-assisted installation
 
-1. "Create a case_study content type with fields for client name, industry, challenge, solution, and results"
-2. "Create a view showing case studies as a card grid, filterable by industry"
-3. "Build a case study detail page template with a hero section and sidebar stats"
-4. "Add Case Studies to the main menu after About Us"
+The repo includes a built-in AI skill for interactive installation. Install
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code), then from the
+project root:
 
-The AI assistant handles the entire workflow -- content types, fields,
-views, page layout, and navigation -- through conversation.
+```bash
+claude
+```
 
-### Quick Setup
+Type "install DXPR CMS" and follow the prompts. The skill handles language
+selection, recipe choices, API key entry, and more.
+
+To use the skill from anywhere (without cloning first), install it globally:
+
+```bash
+mkdir -p ~/.claude/skills/dxpr-install && curl -sL \
+  https://raw.githubusercontent.com/dxpr/dxpr_cms/1.x/.claude/skills/dxpr-install/SKILL.md \
+  -o ~/.claude/skills/dxpr-install/SKILL.md
+```
+
+### Quick setup for AI assistants
 
 After installing DXPR CMS, enable AI assistant support:
 
@@ -147,140 +146,61 @@ Compatible with Claude Code, Codex CLI, Gemini CLI, GitHub Copilot,
 Cursor, and other tools supporting the
 [Agent Skills standard](https://agentskills.io/specification).
 
-Compatible with Claude Code, Codex CLI, Gemini CLI, GitHub Copilot,
-Cursor, and other tools supporting the
-[Agent Skills standard](https://agentskills.io/specification).
+## Troubleshooting
 
-## Future-proof your digital strategy with scalable tools for efficient content management
+### `ddev start` fails with hostname/sudo error
 
-Welcome to DXPR CMS, a dynamic Drupal distribution that simplifies complex content management challenges. Designed to enhance productivity, ensure data security, and leverage the potential of AI, this platform integrates tools like [DXPR Builder](https://www.drupal.org/project/dxpr_builder) and [DXPR Theme](https://www.drupal.org/project/dxpr_theme), alongside cutting-edge AI modules to empower users, streamline workflows, and reduce operational costs.
+DDEV needs to add a hostname entry to `/etc/hosts`, which requires elevated
+privileges. If `ddev start` fails:
 
-## Key features of DXPR CMS
+```bash
+sudo ddev hostname <project-name>.ddev.site 127.0.0.1
+ddev start
+```
 
-### DXPR Builder: empowering content management
+### Port conflicts
 
-[DXPR Builder](https://www.drupal.org/project/dxpr_builder) is an intuitive drag-and-drop page builder that allows users of all technical levels to create engaging, mobile-responsive web pages effortlessly. While it does not yet integrate AI features, it remains a key part of our CMS, streamlining content creation and management with minimal backend involvement.
+If another DDEV project or local server is using the same ports:
 
-### DXPR Theme: simplifying customization
+```bash
+ddev poweroff           # Stop all DDEV projects
+ddev start
+```
 
-The [DXPR Theme](https://www.drupal.org/project/dxpr_theme) offers a visual interface that enables developers to swiftly align site design with organizational branding guidelines. Although it doesn't yet feature AI integrations, it minimizes time spent on styling and enhances site functionality, promoting consistent brand identity across digital assets.
+Or change the router ports in `.ddev/config.yaml`:
 
-### AI-first features: a new approach to content management
+```yaml
+router_http_port: "8080"
+router_https_port: "8443"
+```
 
-DXPR CMS distinguishes itself by offering AI-powered assistance directly
-within the user interface. Unlike other platforms that rely on cramped
-sidebars or popup tools, we make AI a central part of the content creation
-experience. Our AI modules enhance productivity and usability without
-distraction.
+### Docker is not running
 
-## AI-enhanced content management modules
+DDEV requires Docker. If you see "docker not running" errors, start Docker
+Desktop (or your Docker daemon) and retry `ddev start`.
 
-### AI Image Alt Text
+### Composer runs out of memory
 
-The [AI Image Alt Text](https://www.drupal.org/project/ai_image_alt_text)
-module automatically generates alt texts for images using AI vision models.
-Integrated with image widgets, it exposes a button for authorized users to
-generate alt texts, supporting alt text creation in the language of the
-entity.
+If `ddev composer install` fails with a memory error:
 
-### AI Views Sorting (coming soon)
+```bash
+ddev composer install -- --memory-limit=-1
+```
 
-The [AI Views Sorting](https://www.drupal.org/project/ai_sorting) module
-introduces an AI-based sorting plugin for Drupal Views. Using the UCB2
-algorithm, it ranks and displays content dynamically based on user engagement
-metrics. This feature will be a powerful tool for improving content relevance
-and discovery over time.
+### Block plugin warnings during installation
 
-### Analyze Module (coming soon)
+During `drush site-install` you may see warnings like:
 
-The [Analyze Module](https://www.drupal.org/project/analyze) provides an API
-framework for adding content-related information to Drupal entities. Its
-"Analyze" tab serves as a unified interface where other modules can display
-their analysis results.
+```
+[warning] The "field_block:node:page:field_content" block plugin was not found
+```
 
-### AI Security Analyze (coming soon)
+These are expected and harmless. They occur because recipe configuration
+references layout builder blocks that are registered after the configuration
+is imported. The site works correctly despite these warnings.
 
-AI-powered security analysis helps detect in-content security threats such
-as malicious links or PII disclosure. By scanning content in real-time, this
-module mitigates risks during the content creation process and enhances
-overall security.
+## Contributing
 
-### AI Sentiments Analysis (coming soon)
-
-The AI Sentiments Analysis feature provides real-time content analysis to
-identify emotional tones such as joy, anger, or neutrality. This will allow
-content editors to gauge the emotional impact of their content and make
-adjustments accordingly.
-
-### AI CKEditor Assistant (coming soon)
-
-The AI CKEditor Assistant will introduce generative AI capabilities into
-CKEditor via a slash command interface. Users will be able to prompt the AI
-to generate content, perform corrections, or provide enhancements -- all within
-the CKEditor environment. This tool will make content creation faster and
-smarter.
-
-## Technical advantages
-
-### Developer and site builder tools
-
-DXPR CMS is equipped with a comprehensive suite of tools that enhance site
-functionality and allow for deep integration with existing systems. Extensive
-API support and customizable modules facilitate adoption and provide
-continuous technical support. With upcoming AI modules, developers and site
-builders will find it even easier to configure and optimize AI-driven
-functionalities.
-
-### Enhanced security
-
-Our platform incorporates robust security protocols from the start, using
-built-in modules and best practices to safeguard against emerging threats.
-The AI security analysis feature adds an extra layer of protection,
-identifying risks in real-time and ensuring your content remains secure and
-compliant.
-
-### Multilingual and localization support
-
-DXPR CMS excels in managing multilingual content, including complex scenarios
-involving right-to-left (RTL) languages. Features include:
-
-- **Full RTL language support:** Ensures that text, layout, and user
-  interfaces adapt seamlessly for RTL languages.
-- **Sophisticated language navigation tools:** Enables easy switching between
-  languages while maintaining user context.
-- **Localized user experiences:** Automatically adjusts date formats,
-  currency, and form validations to match local preferences.
-- **Integration with leading translation services:** Supports both automated
-  and manual translation workflows to ensure content accuracy and relevance.
-
-## Community and support
-
-Join the DXPR CMS community to connect with developers, share insights, and
-collaborate on projects. Our forums are an invaluable resource for support
-and staying updated with the latest developments.
-
-## Case studies and success stories
-
-Explore how diverse organizations utilize DXPR CMS to enhance their online
-presence. Our case studies demonstrate the practical applications and
-significant impacts of our distribution on digital strategies.
-
-## Innovative Contributions to Drupal
-
-### Pushing Boundaries in Drupal
-
-DXPR CMS integrates open-source flexibility with enhanced features through
-our [open core](https://en.wikipedia.org/wiki/Open-core_model) 
-[DXPR Builder](https://www.drupal.org/project/dxpr_builder). While DXPR
-Builder and DXPR Theme do not yet have AI capabilities, DXPR is actively
-contributing to Drupal's innovation with a suite of AI-first modules. These
-include AI Image Alt Text, AI Views Sorting, AI Sentiments Analysis, AI
-Security Analyze, and the upcoming AI CKEditor Assistant, among others.
-
-### Community Collaboration
-
-**Strengthening Drupal Together:**  
-We invite the Drupal community to collaborate on DXPR CMS, enhancing both our
-platform and the broader ecosystem. By contributing to the open-source core
-and sharing advancements, we empower users and developers to join us in
-shaping a forward-thinking digital landscape.
+Visit the [DXPR CMS project page](https://www.drupal.org/project/dxpr_cms)
+on Drupal.org and the [GitHub repository](https://github.com/dxpr/dxpr_cms)
+to report issues, submit patches, or contribute recipes.
