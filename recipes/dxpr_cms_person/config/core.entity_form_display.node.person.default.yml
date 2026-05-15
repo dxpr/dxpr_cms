@@ -14,12 +14,13 @@ dependencies:
     - workflows.workflow.basic_editorial
   module:
     - content_moderation
+    - field_group
     - media_library
     - options
     - path
     - scheduler
+    - telephone
     - text
-    - field_group
 id: node.person.default
 targetEntityType: node
 bundle: person
@@ -55,19 +56,18 @@ content:
       size: 60
     third_party_settings: {}
   field_person__phone_number:
-    type: string_textfield
+    type: telephone_default
     weight: 4
     region: content
     settings:
-      size: 60
       placeholder: ''
     third_party_settings: {}
   field_person__role_job_title:
-    type: text_textfield
+    type: string_textarea
     weight: 3
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {}
   field_tags:

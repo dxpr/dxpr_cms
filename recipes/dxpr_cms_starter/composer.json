@@ -8,6 +8,7 @@
         "drupal/bpmn_io": "^3.0",
         "drupal/core": "^10.4 || ^11",
         "drupal/eca": "^3.0",
+        "drupal/eca_project_browser": "^3",
         "drupal/dashboard": "^2",
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/dxpr_cms_admin_ui": "*",
