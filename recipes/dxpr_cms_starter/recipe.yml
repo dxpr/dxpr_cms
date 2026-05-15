@@ -83,6 +83,23 @@ config:
             - dxpr_cms_person
             - dxpr_cms_search
             - dxpr_cms_seo_tools
+          modules:
+            - dxpr_builder
+            - dxpr_theme
+            - ai
+            - ai_agents
+            - ai_image_alt_text
+            - ai_provider_dxpr
+            - ckeditor_ai_agent
+            - webform
+            - google_tag
+            - metatag
+            - simple_sitemap
+            - redirect
+            - search_api
+            - eca
+            - klaro
+            - leaflet
         enabled_sources:
           - drupalorg_jsonapi
           - recipes

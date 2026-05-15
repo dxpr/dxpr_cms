@@ -1,7 +1,8 @@
 {
     "name": "drupal/dxpr_cms_dxpr_builder",
     "type": "drupal-recipe",
-    "description": "Advanced page with visual page building tools. Powered by DXPR Builder.",
+    "description": "Adds a landing page content type with DXPR Builder drag-and-drop visual page building.",
+    "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/core": "^10.3 || ^11",
         "drupal/contact_block": "^2.0",

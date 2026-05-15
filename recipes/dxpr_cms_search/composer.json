@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_search",
-    "description": "Adds a search to help visitors find content.",
+    "description": "Adds site search with autocomplete, powered by Search API and a database backend.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {

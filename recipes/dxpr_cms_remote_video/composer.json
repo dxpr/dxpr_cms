@@ -1,7 +1,7 @@
 {
     "name": "drupal/dxpr_cms_remote_video",
     "type": "drupal-recipe",
-    "description": "Configures display options for remote video.",
+    "description": "Configures privacy-aware display options for YouTube and Vimeo videos with consent management.",
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/core": "^10.4 || ^11",

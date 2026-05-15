@@ -26,5 +26,9 @@
         "drupal/markdownify": "^1.1",
         "drupal/diff": "^2.0"
     },
+    "suggest": {
+        "drupal/dxpr_cms_ai_linkedin_posts": "Adds LinkedIn-specific AI social post generation for professional content.",
+        "drupal/dxpr_cms_multilingual": "Adds AI-powered translation workflows for multilingual content."
+    },
     "version": "1.0.0-beta1"
 }

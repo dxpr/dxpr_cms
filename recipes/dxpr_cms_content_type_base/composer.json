@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_content_type_base",
-    "description": "Provides basic tools for creating content.",
+    "description": "Provides the content editing foundation: CKEditor, Layout Builder, autosave, content moderation, scheduled publishing, and trash.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {

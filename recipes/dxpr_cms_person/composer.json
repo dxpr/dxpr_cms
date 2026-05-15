@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_person",
-    "description": "Adds a person profile content type.",
+    "description": "Adds a person profile content type with email, phone, and role fields for team pages.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {

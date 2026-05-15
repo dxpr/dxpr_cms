@@ -22,11 +22,28 @@ config:
     dxpr_theme_helper: '*'
   actions:
     user.role.content_editor:
-      grantPermissions: []
+      grantPermissions:
+        - 'create case_study content'
+        - 'delete case_study revisions'
+        - 'delete own case_study content'
+        - 'edit own case_study content'
+        - 'view case_study revisions'
+        - 'revert case_study revisions'
     user.role.content_administrator:
-      grantPermissions: []
-
+      grantPermissions:
+        - 'create case_study content'
+        - 'delete case_study revisions'
+        - 'delete any case_study content'
+        - 'edit any case_study content'
+        - 'view case_study revisions'
+        - 'revert case_study revisions'
     user.role.site_builder:
-      grantPermissions: []
+      grantPermissions:
+        - 'create case_study content'
+        - 'delete case_study revisions'
+        - 'delete any case_study content'
+        - 'edit any case_study content'
+        - 'view case_study revisions'
+        - 'revert case_study revisions'
     workflows.workflow.basic_editorial:
       addNodeTypes: ['case_study']

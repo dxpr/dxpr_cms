@@ -1,5 +1,6 @@
 {
     "name": "drupal/dxpr_cms_google_analytics",
+    "license": ["GPL-2.0-or-later"],
     "type": "drupal-recipe",
     "description": "Adds tracking of website traffic using Google Analytics and Google Tag Manager. Requires a Google Tag Manager ID.",
     "require": {

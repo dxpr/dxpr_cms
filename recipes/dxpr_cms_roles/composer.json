@@ -1,6 +1,6 @@
 {
     "name": "drupal/dxpr_cms_roles",
-    "description": "todo",
+    "description": "Creates Content Administrator and Site Builder roles with graduated permissions.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {

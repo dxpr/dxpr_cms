@@ -10,5 +10,9 @@
         "drupal/better_exposed_filters": "^7",
         "drupal/selective_better_exposed_filters": "^3"
     },
+    "suggest": {
+        "drupal/dxpr_cms_seo_tools": "Adds meta tags, XML sitemap, robots.txt management, and SEO analysis for news content.",
+        "drupal/dxpr_cms_ai": "Adds AI-powered content generation, analysis, and social media post creation."
+    },
     "version": "1.0.0-beta1"
 }
