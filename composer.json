@@ -230,6 +230,9 @@
             "drupal/ace_editor": {
                 "Fix profile detection for recipe-based installations  ": "patches/ace_editor_no_profile.patch"
             },
+            "drupal/layout_builder_component_attributes": {
+                "Fix PHP 8.4 implicit nullable deprecation in ManageComponentAttributesForm::buildForm()": "patches/layout_builder_component_attributes--implicit-nullable.patch"
+            },
             "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
             }
