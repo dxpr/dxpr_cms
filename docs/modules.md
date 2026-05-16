@@ -11,7 +11,7 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **[ai_social_posts](https://drupal.org/project/ai_social_posts)** - AI-powered social media post generation for content promotion
 - **ai_social_posts_linkedin** - LinkedIn-specific AI social post generation capabilities with specialized formatting and engagement optimization (submodule of [ai_social_posts](https://drupal.org/project/ai_social_posts))
 - **ai_social_posts_linkedin_article** - Generate LinkedIn article posts using AI for long-form professional content (submodule of [ai_social_posts](https://drupal.org/project/ai_social_posts))
-- **[ai_sorting](https://drupal.org/project/ai_sorting)** - AI-powered content sorting and prioritization based on relevance and engagement potential
+- **[rl_sorting](https://drupal.org/project/rl_sorting)** - Reinforcement learning content sorting and prioritization based on relevance and engagement potential
 - **[ai_image_alt_text](https://drupal.org/project/ai_image_alt_text)** - Automatically generates accessible alt text for images using AI image recognition and analysis
 - **[ai_provider_dxpr](https://drupal.org/project/ai_provider_dxpr)** - DXPR AI provider integration offering free access to multiple AI models including OpenAI, Claude, Gemini, and others through DXPR's unified API
 - **[analyze_ai_brand_voice](https://drupal.org/project/analyze_ai_brand_voice)** - AI-powered brand voice analysis ensuring content consistency with organizational tone and messaging guidelines
