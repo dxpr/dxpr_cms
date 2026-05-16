@@ -128,6 +128,7 @@
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
         "drupal/core-recommended": "^11",
+        "drupal/drush_webmaster": "^1.0@beta",
         "drupal/dxpr_cms_ai": "*",
         "drupal/dxpr_cms_ai_linkedin_posts": "*",
         "drupal/dxpr_cms_basic_analytics": "*",
