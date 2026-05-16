@@ -26,6 +26,7 @@ recipes:
 install:
   - automated_cron
   - automatic_updates
+  - drush_webmaster
   - block_classes
   - dashboard
   - eca_base
@@ -84,8 +85,8 @@ config:
             - dxpr_cms_search
             - dxpr_cms_seo_tools
         enabled_sources:
-          - drupalorg_jsonapi
-          - recipes
+          drupalorg_jsonapi: []
+          recipes: []
         allow_ui_install: true
         max_selections: 1
     system.site:
