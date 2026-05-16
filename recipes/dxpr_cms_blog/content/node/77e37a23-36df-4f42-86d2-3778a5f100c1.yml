@@ -30,6 +30,9 @@ default:
   sticky:
     -
       value: false
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: /blog/2023-04/basics-website-accessibility

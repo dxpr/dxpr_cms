@@ -26,6 +26,9 @@ default:
   sticky:
     -
       value: false
+  moderation_state:
+    -
+      value: draft
   path:
     -
       alias: /privacy-policy
