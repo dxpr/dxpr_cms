@@ -29,6 +29,9 @@ default:
   sticky:
     -
       value: false
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: /all-dxpr-builder-layout-elements

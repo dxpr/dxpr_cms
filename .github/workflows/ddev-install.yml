@@ -45,8 +45,10 @@ jobs:
 
       - name: Test installation
         run: |
-          # Test that the site responds via the external DDEV URL
-          curl -f http://dxpr-cms.ddev.site || exit 1
+          # Test that the home page responds and contains demo content
+          HOME_HTML=$(curl -fL http://dxpr-cms.ddev.site)
+          echo "$HOME_HTML" | grep -q "Save time with DXPR" || { echo "FAIL: Home page missing expected demo content"; exit 1; }
+          echo "Home page demo content verified."
           # Test that we can access the admin interface
           ddev drush user:login --name=admin --uri=$(ddev describe | grep "Primary URL" | awk '{print $3}')
           echo "DXPR CMS installation completed successfully!"
