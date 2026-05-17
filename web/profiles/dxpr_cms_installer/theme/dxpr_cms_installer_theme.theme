@@ -183,6 +183,21 @@ function dxpr_cms_installer_theme_form_install_configure_form_alter(array &$form
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter() for dxpr_cms_installer_keys.
+ */
+function dxpr_cms_installer_theme_form_dxpr_cms_installer_keys_alter(array &$form): void {
+  $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+  $form['video_bg'] = [
+    '#theme' => 'step_video_background',
+    '#id' => 'keys',
+    '#theme_path' => \Drupal::service(FileUrlGeneratorInterface::class)
+      ->generateString($theme_path),
+    '#weight' => 1000,
+  ];
+  $form['actions']['continue']['#attributes']['class'] = ['button--next'];
+}
+
+/**
  * Implements template_preprocess_maintenance_page().
  */
 function dxpr_cms_installer_theme_preprocess_maintenance_page(array &$variables): void {
