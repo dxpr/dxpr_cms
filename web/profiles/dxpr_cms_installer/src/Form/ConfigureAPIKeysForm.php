@@ -104,19 +104,20 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, ?array &$install_state = NULL) {
-    $form['#title'] = $this->t('API Keys Configuration');
+    $form['#title'] = $this->t('Activate AI Features');
 
     $form['help'] = [
       '#prefix' => '<p class="cms-installer__subhead">',
-      '#markup' => $this->t('Enter your DXPR API Key get FREE access to DXPR AI - including models from OpenAI, Claude, Gemini, MistralAI, XAI, and Perplexity at no additional cost.'),
+      '#markup' => $this->t('Enter your DXPR API Key to get FREE access to DXPR AI, including models from OpenAI, Claude, Gemini, MistralAI, XAI, and Perplexity at no additional cost.'),
       '#suffix' => '</p>',
     ];
 
     $form['dxpr_key'] = [
-      '#type' => 'textarea',
+      '#type' => 'textfield',
       '#title' => $this->t('DXPR API Key'),
+      '#maxlength' => 2048,
       '#description' => $this->t('Sign up free at <a href="https://dxpr.com/user/free-registration" target="_blank">DXPR.com</a> (takes 30 seconds) and grab your key from the <a href="https://app.dxpr.com/getting-started" target="_blank">Get Started dashboard</a>. Unlock enterprise-grade AI access included with your free account.'),
-      '#required' => TRUE,
+      '#required' => FALSE,
     ];
 
     $form['actions'] = [
@@ -124,6 +125,12 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
         '#type' => 'submit',
         '#value' => $this->t('Continue'),
         '#button_type' => 'primary',
+      ],
+      'skip' => [
+        '#type' => 'submit',
+        '#value' => $this->t('Skip this step'),
+        '#limit_validation_errors' => [],
+        '#submit' => ['::skipForm'],
       ],
       '#type' => 'actions',
       '#weight' => 5,
@@ -211,13 +218,23 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
   }
 
   /**
+   * Submit handler for the skip button.
+   */
+  public function skipForm(array &$form, FormStateInterface $form_state): void {
+    // Do nothing -- just advance to the next install task.
+  }
+
+  /**
    * {@inheritdoc}
    *
    * @phpstan-param array<string, mixed> $form
    */
   public function validateForm(array &$form, FormStateInterface $form_state): void {
-    if ($form_state->getValue('dxpr_key')) {
-      $jwtPayloadData = $this->jwtDecoder->decodeJwt($form_state->getValue('dxpr_key'));
+    $key = trim((string) $form_state->getValue('dxpr_key'));
+    $form_state->setValue('dxpr_key', $key);
+
+    if (!empty($key)) {
+      $jwtPayloadData = $this->jwtDecoder->decodeJwt($key);
       if ($jwtPayloadData['sub'] === NULL || $jwtPayloadData['scope'] === NULL) {
         $form_state->setErrorByName('dxpr_key', $this->t('Invalid DXPR Key. Get your free key at https://dxpr.com/user/free-registration'));
       }
@@ -226,11 +243,6 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
           ':uri' => 'https://app.dxpr.com/download/all#token',
         ]));
       }
-    }
-
-    // DXPR AI requires the DXPR API key (same as Builder key)
-    if (empty($form_state->getValue('dxpr_key'))) {
-      $form_state->setErrorByName('dxpr_key', $this->t('DXPR API Key is required for AI features. Get yours for free at https://dxpr.com/user/free-registration'));
     }
   }
 
