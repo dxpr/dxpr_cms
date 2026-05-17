@@ -37,12 +37,29 @@ config:
       - system.menu.main
   actions:
     user.role.content_editor:
-      grantPermissions: []
+      grantPermissions:
+        - 'create event content'
+        - 'delete event revisions'
+        - 'delete own event content'
+        - 'edit own event content'
+        - 'view event revisions'
+        - 'revert event revisions'
     user.role.content_administrator:
-      grantPermissions: []
-
+      grantPermissions:
+        - 'create event content'
+        - 'delete event revisions'
+        - 'delete any event content'
+        - 'edit any event content'
+        - 'view event revisions'
+        - 'revert event revisions'
     user.role.site_builder:
-      grantPermissions: []
+      grantPermissions:
+        - 'create event content'
+        - 'delete event revisions'
+        - 'delete any event content'
+        - 'edit any event content'
+        - 'view event revisions'
+        - 'revert event revisions'
     workflows.workflow.basic_editorial:
       addNodeTypes: ['event']
     klaro.klaro_app.leaflet:

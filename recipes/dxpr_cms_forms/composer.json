@@ -6,8 +6,11 @@
     "require": {
         "drupal/dxpr_cms_anti_spam": "*",
         "drupal/dxpr_cms_page": "*",
-        "drupal/core": ">=10.4",
+        "drupal/core": "^10.4 || ^11",
         "drupal/webform": "^6.3-beta1"
+    },
+    "suggest": {
+        "drupal/dxpr_cms_google_analytics": "Adds tracking of form submissions and website traffic using Google Analytics."
     },
     "version": "1.0.0-beta1"
 }

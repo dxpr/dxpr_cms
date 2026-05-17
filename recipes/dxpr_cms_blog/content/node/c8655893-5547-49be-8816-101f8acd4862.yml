@@ -30,6 +30,9 @@ default:
   sticky:
     -
       value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: /blog/2025-08/why-site-speed-matters-more-ever

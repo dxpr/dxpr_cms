@@ -799,7 +799,7 @@ You probably don't need to change this value unless you're building a plugin tha
  
 For completeness, all of the patchers that ship with the plugin are listed above, but you should _not_ list all of them. If no patchers are available, the plugin will throw an exception during `composer install`.
 
-`GitPatcher` and `GitInitPatcher` should be enabled and disabled together -- don't disable one without the other.
+`GitPatcher` and `GitInitPatcher` should be enabled and disabled together. Do not disable one without the other.
 
 After changing this value, you should re-lock and re-apply patches to your project.
 

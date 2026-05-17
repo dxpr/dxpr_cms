@@ -23,7 +23,7 @@ ddev start
 ddev composer install
 ```
 
-DDEV configuration is included in the repository -- no manual `ddev config`
+DDEV configuration is included in the repository, so no manual `ddev config`
 step is needed.
 
 After `composer install` finishes, complete the installation using one of
@@ -184,7 +184,7 @@ Desktop (or your Docker daemon) and retry `ddev start`.
 If `ddev composer install` fails with a memory error:
 
 ```bash
-ddev composer install -- --memory-limit=-1
+COMPOSER_MEMORY_LIMIT=-1 ddev composer install
 ```
 
 ### Block plugin warnings during installation

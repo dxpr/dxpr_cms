@@ -4,7 +4,7 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.4",
+        "drupal/core": "^10.4 || ^11",
         "drupal/easy_breadcrumb": "^2.0.9",
         "drupal/pathauto": "^1.13",
         "drupal/redirect": "^1.10",

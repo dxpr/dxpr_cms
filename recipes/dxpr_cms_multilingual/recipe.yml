@@ -22,6 +22,7 @@ install:
   - ai_translate
   - user
 config:
+  strict: false
   import:
     language: '*'
     tmgmt: '*'

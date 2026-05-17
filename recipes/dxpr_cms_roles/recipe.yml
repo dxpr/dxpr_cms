@@ -9,5 +9,6 @@ install:
   - system
   - block
 config:
+  strict: false
   import:
     user: '*'

@@ -16,6 +16,7 @@ install:
   - tagify
   - tagify_user_list
 config:
+  strict: false
   import:
     gin:
       - block.block.gin_breadcrumbs

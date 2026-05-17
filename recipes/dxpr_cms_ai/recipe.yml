@@ -52,6 +52,7 @@ input:
       source: value
       value: ''
 config:
+  strict: false
   import:
     ai_image_alt_text: '*'
     ai_agents: '*'

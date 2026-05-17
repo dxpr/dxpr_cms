@@ -1,8 +1,10 @@
 {
     "name": "drupal/dxpr_cms_performance",
+    "description": "Adds HTML minification and speculative loading for faster page loads.",
     "type": "drupal-recipe",
+    "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.3",
+        "drupal/core": "^10.3 || ^11",
         "drupal/minifyhtml": "^2.0",
         "drupal/speculative_loading": "^1.0"
     },

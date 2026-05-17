@@ -44,3 +44,5 @@ config:
       grantPermissions:
         - 'edit with dxpr builder'
         - 'use text format dxpr_builder_html'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['landing_page']

@@ -54,6 +54,7 @@ config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
     - field.storage.node.field_content
+    - field.storage.node.field_description
     - field.storage.node.field_featured_image
     - field.storage.node.field_tags
     - field.storage.node.layout_builder__layout

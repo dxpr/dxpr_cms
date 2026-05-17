@@ -1,9 +1,10 @@
 {
     "name": "drupal/dxpr_cms_multilingual",
     "type": "drupal-recipe",
-    "description": "Adds support for translations.",
+    "description": "Adds multilingual support with AI-powered translation, TMGMT integration, and hreflang tags.",
+    "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.3",
+        "drupal/core": "^10.3 || ^11",
         "drupal/dxpr_cms_content_type_base": "*",
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/hreflang": "^1.14",

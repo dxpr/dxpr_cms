@@ -26,6 +26,7 @@ recipes:
 install:
   - automated_cron
   - automatic_updates
+  - drush_webmaster
   - block_classes
   - dashboard
   - eca_base
@@ -67,6 +68,27 @@ config:
         additional_trusted_composer_plugins:
           # This is indirectly added by `drupal/core-dev`.
           - tbachert/spi
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        allowed_projects:
+          recipes:
+            - dxpr_cms_ai
+            - dxpr_cms_ai_linkedin_posts
+            - dxpr_cms_blog
+            - dxpr_cms_case_study
+            - dxpr_cms_events
+            - dxpr_cms_forms
+            - dxpr_cms_google_analytics
+            - dxpr_cms_multilingual
+            - dxpr_cms_news
+            - dxpr_cms_person
+            - dxpr_cms_search
+            - dxpr_cms_seo_tools
+        enabled_sources:
+          drupalorg_jsonapi: []
+          recipes: []
+        allow_ui_install: true
+        max_selections: 1
     system.site:
       simpleConfigUpdate:
         name: 'DXPR CMS'
@@ -150,6 +172,17 @@ config:
           type: string_textfield
           weight: -1
           region: content
+    announcements_feed.settings:
+      simpleConfigUpdate:
+        limit: 2
+    core.menu.static_menu_link_overrides:
+      simpleConfigUpdate:
+        definitions.announcements_feed__announcement:
+          menu_name: admin
+          parent: system.admin
+          weight: 0
+          expanded: false
+          enabled: false
     update.settings:
       simpleConfigUpdate:
         check.disabled_extensions: true

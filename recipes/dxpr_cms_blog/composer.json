@@ -4,7 +4,7 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.4",
+        "drupal/core": "^10.4 || ^11",
         "drupal/add_content_by_bundle": "^1.2.2",
         "drupal/dxpr_cms_page": "*",
         "drupal/dxpr_cms_dxpr_builder": "*",
@@ -12,6 +12,10 @@
         "drupal/dxpr_theme_helper": "^3.0.0",
         "drupal/better_exposed_filters": "^7",
         "drupal/selective_better_exposed_filters": "^3"
+    },
+    "suggest": {
+        "drupal/dxpr_cms_seo_tools": "Adds meta tags, XML sitemap, robots.txt management, and SEO analysis for blog content.",
+        "drupal/dxpr_cms_ai": "Adds AI-powered content generation, analysis, and social media post creation."
     },
     "version": "1.0.0-beta1"
 }

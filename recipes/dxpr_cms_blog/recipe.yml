@@ -49,6 +49,8 @@ config:
         - 'view blog revisions'
         - 'revert blog revisions'
 
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['blog']
     # Configure blog header block placement
     block.block.dxpr_theme_blogheader:
       simple_config_update:

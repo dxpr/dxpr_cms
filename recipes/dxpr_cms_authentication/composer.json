@@ -1,11 +1,11 @@
 {
     "name": "drupal/dxpr_cms_authentication",
-    "description": "Sets up a site with useful authentication features.",
+    "description": "Adds email-based login, styled login page, and automated authentication workflows.",
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/bpmn_io": "^3.0",
-        "drupal/core": ">=10.3",
+        "drupal/core": "^10.3 || ^11",
         "drupal/eca": "^3.0",
         "drupal/gin_login": "^2.1",
         "drupal/login_emailusername": "^3",
