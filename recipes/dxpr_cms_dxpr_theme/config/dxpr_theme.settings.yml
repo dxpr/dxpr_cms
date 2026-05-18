@@ -233,6 +233,7 @@ page_title_image_path: ''
 background_image_path: ''
 dropdown_width: '285'
 color_scheme: custom
+color_palette: 'a:33:{s:4:"base";s:7:"#000000";s:8:"basetext";s:7:"#FFFFFF";s:10:"basesubtle";s:7:"#ecfdf5";s:14:"basesubtletext";s:7:"#047857";s:4:"link";s:7:"#000000";s:7:"accent1";s:7:"#353740";s:11:"accent1text";s:7:"#FFFFFF";s:13:"accent1subtle";s:7:"#f0fdf4";s:17:"accent1subtletext";s:7:"#166534";s:7:"accent2";s:7:"#F7F7F8";s:11:"accent2text";s:7:"#353740";s:13:"accent2subtle";s:7:"#f8fafc";s:17:"accent2subtletext";s:7:"#475569";s:4:"text";s:7:"#353740";s:8:"headings";s:7:"#171717";s:14:"headingssubtle";s:7:"#f1f5f9";s:18:"headingssubtletext";s:7:"#64748b";s:4:"card";s:7:"#F7F7F8";s:8:"cardtext";s:7:"#171717";s:6:"footer";s:7:"#FFFFFF";s:10:"footertext";s:7:"#353740";s:9:"secheader";s:7:"#000000";s:13:"secheadertext";s:7:"#FFFFFF";s:6:"header";s:7:"#FFFFFF";s:10:"headertext";s:7:"#171717";s:10:"headerside";s:7:"#FFFFFF";s:14:"headersidetext";s:7:"#171717";s:9:"pagetitle";s:7:"#FFFFFF";s:13:"pagetitletext";s:7:"#171717";s:9:"graylight";s:7:"#6E6E80";s:11:"graylighter";s:7:"#E5E5E5";s:6:"silver";s:7:"#F7F7F8";s:4:"body";s:7:"#FFFFFF";}'
 color_palette_base: '#000000'
 color_palette_basetext: '#FFFFFF'
 color_palette_basesubtle: '#ecfdf5'
