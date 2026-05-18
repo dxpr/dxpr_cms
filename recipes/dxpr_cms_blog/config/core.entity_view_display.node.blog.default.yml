@@ -28,11 +28,11 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: dxpr_two_column
+        layout_id: dxpr_two_column_container
         layout_settings:
           label: Hero
           context_mapping: {}
-          section_classes: 'container bg-primary-subtle py-5'
+          section_classes: 'bg-primary-subtle py-5'
           container_type: container
           first_column_width: '6'
           second_column_width: '6'
