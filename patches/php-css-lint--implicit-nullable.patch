@@ -1,5 +1,5 @@
---- vendor/neilime/php-css-lint/src/CssLint/Linter.php	2023-06-19 18:35:21
-+++ /dev/fd/12	2026-05-18 11:37:38
+--- a/src/CssLint/Linter.php
++++ b/src/CssLint/Linter.php
 @@ -68,7 +68,7 @@
       * Constructor
       * @param \CssLint\Properties $oProperties (optional) an instance of the "\CssLint\Properties" helper
