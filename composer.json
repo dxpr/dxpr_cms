@@ -157,7 +157,9 @@
         "drupal/drupal": "*"
     },
     "scripts": {
-        "post-install-cmd": [
+        "post-install-cmd": "@dxpr-welcome",
+        "post-update-cmd": "@dxpr-welcome",
+        "dxpr-welcome": [
             "echo ''",
             "echo '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'",
             "echo ' DXPR CMS ready to install'",
