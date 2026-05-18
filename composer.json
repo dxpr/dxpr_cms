@@ -254,6 +254,9 @@
             },
             "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
+            },
+            "neilime/php-css-lint": {
+                "Fix PHP 8.4 implicit nullable deprecation in Linter constructor": "patches/php-css-lint--implicit-nullable.patch"
             }
         }
     }
