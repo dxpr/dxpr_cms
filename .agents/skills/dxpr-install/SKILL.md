@@ -50,3 +50,32 @@ Available recipes: Case Studies, Events, Forms, Google Analytics, News, SEO Tool
 DDEV auto-detects database. Valet/native requires `--db-url`.
 
 API key (required for DXPR Builder to function): https://app.dxpr.com/getting-started
+
+## Post-install: Configure API key and AI providers
+
+After install, run this to ensure the DXPR key, AI provider, and default AI operations are fully wired up. This is idempotent and safe to re-run. Replace `YOUR_JWT` with the actual key.
+
+```bash
+vendor/bin/drush php:eval '
+$jwt = "YOUR_JWT";
+$key = \Drupal\key\Entity\Key::load("dxpr_builder_key");
+if (!$key) {
+  $key = \Drupal\key\Entity\Key::create(["id" => "dxpr_builder_key", "label" => "DXPR Builder API Key", "key_type" => "authentication", "key_provider" => "config"]);
+}
+$key->setKeyValue($jwt);
+$key->save();
+\Drupal::configFactory()->getEditable("dxpr_builder.settings")->set("api_key_storage", "key")->set("key_provider", "dxpr_builder_key")->set("json_web_token", NULL)->save();
+\Drupal::configFactory()->getEditable("ckeditor_ai_agent.settings")->set("key_provider", "dxpr_builder_key")->set("model", "dxai:kavya-m1")->save();
+\Drupal::configFactory()->getEditable("ai_provider_dxpr.settings")->set("api_key", "dxpr_builder_key")->save();
+\Drupal::configFactory()->getEditable("ai.settings")
+  ->set("default_providers.chat", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_image_vision", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_complex_json", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_tools", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_structured_response", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.translate_text", ["provider_id" => "dxpr", "model_id" => "kavya-m1-fast"])
+  ->save();
+echo "Done.\n";
+'
+vendor/bin/drush cr
+```

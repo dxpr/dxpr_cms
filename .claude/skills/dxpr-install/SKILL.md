@@ -59,11 +59,11 @@ echo "SITES: ${SITES:-none}"
 
 ### Phase 1: Gather inputs
 
-**Use the AskUserQuestion tool** for interactive prompts — never dump questions as plain text. Batch related questions into a single AskUserQuestion call. Skip questions the preamble or user request already answered.
+**Use the AskUserQuestion tool** for interactive prompts; never dump questions as plain text. Batch related questions into a single AskUserQuestion call. Skip questions the preamble or user request already answered.
 
-1. **Codebase location** — If "no-project": confirm target directory (infer from request)
-2. **Environment** — **You MUST ask this question if preamble shows `DDEV: installed` and `DB:` is NOT `ddev`.** Do not infer the answer from detected MySQL credentials — always ask: "Use DDEV or Valet/native for this site?" Only skip this question when: (a) preamble shows `DB: ddev` (already a DDEV project — use DDEV), or (b) preamble shows `DDEV: not-installed` (use Valet/native). DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`.
-3. **Languages** — First, fetch the list of Drupal-supported languages by running:
+1. **Codebase location**: if "no-project", confirm target directory (infer from request)
+2. **Environment**: **You MUST ask this question if preamble shows `DDEV: installed` and `DB:` is NOT `ddev`.** Do not infer the answer from detected MySQL credentials; always ask: "Use DDEV or Valet/native for this site?" Only skip this question when: (a) preamble shows `DB: ddev` (already a DDEV project, use DDEV), or (b) preamble shows `DDEV: not-installed` (use Valet/native). DDEV auto-configures the database and uses `ddev exec` / `ddev drush` prefixes. Valet/native uses direct commands and requires a `--db-url`.
+3. **Languages**: first, fetch the list of Drupal-supported languages by running:
    ```bash
    php -r "
    require 'web/core/lib/Drupal/Core/DependencyInjection/DependencySerializationTrait.php';
@@ -76,25 +76,25 @@ echo "SITES: ${SITES:-none}"
    "
    ```
    For from-scratch installs where the codebase doesn't exist yet, run this after `git clone` but before asking the language question.
-   Then ask the user which languages they want. Present common ones (English, Dutch, German, French, Spanish, Arabic, Chinese Simplified, Portuguese, Japanese) but accept any from the full list. The user can type names or codes. **Validate every language the user provides against the fetched list** — if something doesn't match (typo, unsupported), show the closest matches and ask them to clarify. The **first** language becomes the `--locale` (default site UI language). Any additional languages become `additional_languages` arguments. **If the user picks more than one language, silently add the Multilingual recipe — never ask the user about it separately.**
-4. **Recipes** — Which optional add-ons? **Do NOT list Multilingual here** — it is handled automatically by the language question above. Present as multi-select:
-   - Case Studies — portfolio/client work showcase
-   - Events — event listings with dates, locations, maps
-   - Forms — contact forms and webforms
-   - Google Analytics — GA4 tracking via Google Tag Manager
-   - News — news articles and listings
-   - SEO Tools — sitemap, meta tags, SEO checklist
-5. **API key** — If preamble found one, confirm it. If not, ask the user to paste the key directly as a single free-text input. Do NOT offer numbered choices like "Skip / I'll paste it / Type something" — that creates a confusing two-step flow. Instead, use a single text field with the prompt: "Paste your DXPR API key (or type 'skip'):" and provide the URL https://app.dxpr.com/getting-started as context. The key is required for DXPR Builder to function.
-6. **Site name** — Default to directory name. Confirm or ask.
-7. **Admin account** — Username (default: admin), email (default: admin@example.com), password.
-8. **Site email** — The "From:" address for site-generated emails. Default: same as admin email.
-9. **Timezone** — Default: auto-detect from system. Common: Europe/Amsterdam, America/New_York, etc.
-10. **Database** — If DDEV: auto (skip this question). If Valet/native: use preamble DB credentials, default dbname = directory name with hyphens→underscores.
-11. **Multisite** — Only if preamble SITES is not "none". Ask: multisite or separate codebase?
+   Then ask the user which languages they want. Present common ones (English, Dutch, German, French, Spanish, Arabic, Chinese Simplified, Portuguese, Japanese) but accept any from the full list. The user can type names or codes. **Validate every language the user provides against the fetched list**; if something doesn't match (typo, unsupported), show the closest matches and ask them to clarify. The **first** language becomes the `--locale` (default site UI language). Any additional languages become `additional_languages` arguments. **If the user picks more than one language, silently add the Multilingual recipe; never ask the user about it separately.**
+4. **Recipes**: which optional add-ons? **Do NOT list Multilingual here**; it is handled automatically by the language question above. Present as multi-select:
+   - Case Studies: portfolio/client work showcase
+   - Events: event listings with dates, locations, maps
+   - Forms: contact forms and webforms
+   - Google Analytics: GA4 tracking via Google Tag Manager
+   - News: news articles and listings
+   - SEO Tools: sitemap, meta tags, SEO checklist
+5. **API key**: if preamble found one, confirm it. If not, ask the user to paste the key directly as a single free-text input. Do NOT offer numbered choices like "Skip / I'll paste it / Type something"; that creates a confusing two-step flow. Instead, use a single text field with the prompt: "Paste your DXPR API key (or type 'skip'):" and provide the URL https://app.dxpr.com/getting-started as context. The key is required for DXPR Builder to function.
+6. **Site name**: default to directory name. Confirm or ask.
+7. **Admin account**: username (default: admin), email (default: admin@example.com), password.
+8. **Site email**: the "From:" address for site-generated emails. Default: same as admin email.
+9. **Timezone**: default: auto-detect from system. Common: Europe/Amsterdam, America/New_York, etc.
+10. **Database**: if DDEV: auto (skip this question). If Valet/native: use preamble DB credentials, default dbname = directory name with hyphens to underscores.
+11. **Multisite**: only if preamble SITES is not "none". Ask: multisite or separate codebase?
 
 ### Phase 2: Present plan for confirmation
 
-Always show languages as full name + code, e.g. "French (fr)", "Chinese Simplified (zh-hans)" — never bare codes.
+Always show languages as full name + code, e.g. "French (fr)", "Chinese Simplified (zh-hans)"; never bare codes.
 
 ```
 I'll set up DXPR CMS at ~/www/dxpr-cms-test1/:
@@ -188,7 +188,63 @@ Notes on drush form keys:
 - Timezone uses Olson format: `"install_configure_form.date_default_timezone=Europe/Amsterdam"`
 - Site mail: `"install_configure_form.site_mail=info@example.com"`
 
-#### Step 4: Post-install verification
+#### Step 4: Configure API key and AI providers
+
+After a successful install the `ConfigureAPIKeysForm::submitForm()` handles this automatically. However, if the install was interrupted, the key was invalid, or the key was set manually after install, `submitForm` never ran. **Always run this step** to ensure the key is fully wired up (it is idempotent):
+
+```bash
+drush php:eval '
+$jwt = "<jwt-token>";
+
+// 1. Create or update Key entity for DXPR Builder.
+$key = \Drupal\key\Entity\Key::load("dxpr_builder_key");
+if (!$key) {
+  $key = \Drupal\key\Entity\Key::create([
+    "id" => "dxpr_builder_key",
+    "label" => "DXPR Builder API Key",
+    "description" => "API Key for DXPR Builder",
+    "key_type" => "authentication",
+    "key_provider" => "config",
+  ]);
+}
+$key->setKeyValue($jwt);
+$key->save();
+
+// 2. Point DXPR Builder settings at the Key entity.
+\Drupal::configFactory()->getEditable("dxpr_builder.settings")
+  ->set("api_key_storage", "key")
+  ->set("key_provider", "dxpr_builder_key")
+  ->set("json_web_token", NULL)
+  ->save();
+
+// 3. Configure CKEditor AI Agent.
+\Drupal::configFactory()->getEditable("ckeditor_ai_agent.settings")
+  ->set("key_provider", "dxpr_builder_key")
+  ->set("model", "dxai:kavya-m1")
+  ->save();
+
+// 4. Point the DXPR AI provider at the same Key entity.
+\Drupal::configFactory()->getEditable("ai_provider_dxpr.settings")
+  ->set("api_key", "dxpr_builder_key")
+  ->save();
+
+// 5. Set DXPR as default provider for all AI operations.
+\Drupal::configFactory()->getEditable("ai.settings")
+  ->set("default_providers.chat", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_image_vision", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_complex_json", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_tools", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.chat_with_structured_response", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
+  ->set("default_providers.translate_text", ["provider_id" => "dxpr", "model_id" => "kavya-m1-fast"])
+  ->save();
+
+echo "API key fully configured.\n";
+'
+```
+
+Replace `<jwt-token>` with the actual JWT. Use `ddev drush` for DDEV or `php -d memory_limit=-1 vendor/drush/drush/drush.php` for Valet/native. Then clear cache with `drush cr`.
+
+#### Step 5: Post-install verification
 
 ```bash
 drush status --format=json
@@ -197,10 +253,10 @@ drush pml --status=enabled --no-core --format=json
 
 **Do NOT run `locale:check`, `locale:update`, or `locale:import` after install.** Translations are already downloaded and imported during `drush site:install`. Running these again is redundant and takes a very long time (hundreds of HTTP requests to ftp.drupal.org).
 
-#### Step 5: Install AI skill files (if available)
+#### Step 6: Install AI skill files (if available)
 
 These drush commands are provided by DXPR Builder, DXPR Theme, and the
-Webmaster module. They may not exist yet — only run the ones that are available:
+Webmaster module. They may not exist yet; only run the ones that are available:
 
 ```bash
 drush dxt:setup-ai 2>/dev/null    # Theme CLI skill (if dxpr_theme provides it)
@@ -208,7 +264,7 @@ drush dxb:setup-ai 2>/dev/null    # Builder CLI skill (if dxpr_builder provides 
 drush wm:setup-ai  2>/dev/null    # Webmaster CLI skill (if webmaster provides it)
 ```
 
-If a command fails with "not found", skip it — it means the module does not yet provide that command.
+If a command fails with "not found", skip it; it means the module does not yet provide that command.
 
 ## Complete Options Reference
 
@@ -230,13 +286,13 @@ Drush native options: `--locale`, `--site-name`, `--account-name`, `--account-ma
 
 | Recipe | Adds content type | Key modules |
 |---|---|---|
-| Case Studies | case_study | — |
+| Case Studies | case_study | - |
 | Events | event | geofield |
-| Forms | — | webform |
-| Google Analytics | — | google_tag |
-| News | news | — |
-| SEO Tools | — | simple_sitemap, seo_checklist |
-| Multilingual | — | tmgmt, locale, content_translation |
+| Forms | - | webform |
+| Google Analytics | - | google_tag |
+| News | news | - |
+| SEO Tools | - | simple_sitemap, seo_checklist |
+| Multilingual | - | tmgmt, locale, content_translation |
 
 Multilingual is never shown to the user as a recipe choice. It is auto-added whenever more than one language is selected.
 
@@ -247,9 +303,9 @@ Multilingual is never shown to the user as a recipe choice. It is auto-added whe
 | `STATUS: no-project` | Clone repo + composer install |
 | `STATUS: needs-composer-install` | Run composer install |
 | `STATUS: ready` | Use drush site:install with form keys |
-| `DDEV: installed` | DDEV is available — ask user whether to use it |
+| `DDEV: installed` | DDEV is available; ask user whether to use it |
 | `DDEV: not-installed` | Use Valet/native (don't offer DDEV) |
-| `DB: ddev` | Already a DDEV project — use DDEV automatically |
+| `DB: ddev` | Already a DDEV project; use DDEV automatically |
 | `DB: mysql://root:admin@...` | Use discovered credentials |
 | `KEY: claude-md` | Extract JWT from CLAUDE.md |
 | `SITES: none` | Fresh install |
@@ -257,4 +313,4 @@ Multilingual is never shown to the user as a recipe choice. It is auto-added whe
 
 ## API Key
 
-Free at https://app.dxpr.com/getting-started — required for DXPR Builder to function. Also enables AI features (OpenAI, Claude, Gemini, MistralAI, XAI, Perplexity).
+Free at https://app.dxpr.com/getting-started; required for DXPR Builder to function. Also enables AI features (OpenAI, Claude, Gemini, MistralAI, XAI, Perplexity).
