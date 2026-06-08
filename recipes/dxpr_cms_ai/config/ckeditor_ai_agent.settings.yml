@@ -1,0 +1,10 @@
+toneOfVoiceVocabulary: ai_tone_of_voice
+commandsVocabulary: ai_agent_commands
+aiOutputSecurity:
+  allowedDomains:
+    - unsplash.com
+    - images.unsplash.com
+    - pexels.com
+    - images.pexels.com
+    - pixabay.com
+    - promptahuman.com

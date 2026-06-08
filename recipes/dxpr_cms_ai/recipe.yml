@@ -66,6 +66,8 @@ config:
     analyze_ai_content_security_audit: '*'
     analyze_basic_content_info: '*'
     analyze_page_views: '*'
+    ckeditor_ai_agent:
+      - ckeditor_ai_agent.settings
   actions:
     ai_agents.settings:
       simpleConfigUpdate:
@@ -91,18 +93,6 @@ config:
         key_label: 'DXPR API Key'
         env_var: dxpr_api_key
         provider: dxpr
-    ckeditor_ai_agent.settings:
-      simpleConfigUpdate:
-        toneOfVoiceVocabulary: ai_tone_of_voice
-        commandsVocabulary: ai_agent_commands
-        aiOutputSecurity:
-          allowedDomains:
-            - unsplash.com
-            - images.unsplash.com
-            - pexels.com
-            - images.pexels.com
-            - pixabay.com
-            - promptahuman.com
     klaro.klaro_app.ai_alt_text_generation:
       enable: []
     # Grant permissions to roles.
