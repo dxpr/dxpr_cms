@@ -164,11 +164,6 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
           ->set('json_web_token', NULL)
           ->save();
 
-        // Update CKEditor AI Agent settings to use the same key.
-        $this->configFactory->getEditable('ckeditor_ai_agent.settings')
-          ->set('key_provider', 'dxpr_builder_key')
-          ->set('model', 'dxai:kavya-m1')
-          ->save();
       }
       catch (\Exception $e) {
         $this->messenger()->addError($this->t('An error occurred while saving the DXPR Builder key: @error', ['@error' => $e->getMessage()]));

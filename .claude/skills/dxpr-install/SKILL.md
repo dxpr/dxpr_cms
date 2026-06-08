@@ -217,18 +217,12 @@ $key->save();
   ->set("json_web_token", NULL)
   ->save();
 
-// 3. Configure CKEditor AI Agent.
-\Drupal::configFactory()->getEditable("ckeditor_ai_agent.settings")
-  ->set("key_provider", "dxpr_builder_key")
-  ->set("model", "dxai:kavya-m1")
-  ->save();
-
-// 4. Point the DXPR AI provider at the same Key entity.
+// 3. Point the DXPR AI provider at the same Key entity.
 \Drupal::configFactory()->getEditable("ai_provider_dxpr.settings")
   ->set("api_key", "dxpr_builder_key")
   ->save();
 
-// 5. Set DXPR as default provider for all AI operations.
+// 4. Set DXPR as default provider for all AI operations.
 \Drupal::configFactory()->getEditable("ai.settings")
   ->set("default_providers.chat", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
   ->set("default_providers.chat_with_image_vision", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])

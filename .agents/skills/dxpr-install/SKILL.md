@@ -65,7 +65,6 @@ if (!$key) {
 $key->setKeyValue($jwt);
 $key->save();
 \Drupal::configFactory()->getEditable("dxpr_builder.settings")->set("api_key_storage", "key")->set("key_provider", "dxpr_builder_key")->set("json_web_token", NULL)->save();
-\Drupal::configFactory()->getEditable("ckeditor_ai_agent.settings")->set("key_provider", "dxpr_builder_key")->set("model", "dxai:kavya-m1")->save();
 \Drupal::configFactory()->getEditable("ai_provider_dxpr.settings")->set("api_key", "dxpr_builder_key")->save();
 \Drupal::configFactory()->getEditable("ai.settings")
   ->set("default_providers.chat", ["provider_id" => "dxpr", "model_id" => "kavya-m1"])
