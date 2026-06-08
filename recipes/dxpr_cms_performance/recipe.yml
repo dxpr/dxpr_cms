@@ -2,6 +2,8 @@ name: 'Recommended performance'
 type: 'DXPR CMS'
 description: 'Adds support for performance.'
 install:
+  - big_pipe
+  - dynamic_page_cache
   - minifyhtml
   - speculative_loading
 config:

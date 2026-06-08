@@ -4,7 +4,6 @@ description: Applies the foundational DXPR CMS recipes.
 recipes:
   - core/recipes/administrator_role
   - core/recipes/core_recommended_maintenance
-  - core/recipes/core_recommended_performance
   - core/recipes/document_media_type
   - dxpr_cms_admin_ui
   - dxpr_cms_anti_spam
