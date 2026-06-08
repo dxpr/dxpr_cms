@@ -19,7 +19,7 @@
         "drupal/analyze_ai_sentiments": "^1.2",
         "drupal/analyze_ai_content_marketing_audit": "^1.2",
         "drupal/analyze_ai_content_security_audit": "^1.2",
-        "drupal/ckeditor_ai_agent": "^1.0@rc",
+        "drupal/ckeditor_ai_agent": "^2.0@rc",
         "drupal/rl": "^1.1",
         "drupal/views_color_scales": "^1.0",
         "league/commonmark": "^2.4",
