@@ -96,6 +96,7 @@ config:
     # Grant permissions to roles.
     user.role.content_editor:
       grantPermissions:
+        - 'use ckeditor ai agent'
         - 'generate ai alt tags'
         - 'access ai content strategy'
         - 'view analyze reports'
@@ -106,6 +107,7 @@ config:
         - 'use text format ai_social_posts'
     user.role.content_administrator:
       grantPermissions:
+        - 'use ckeditor ai agent'
         - 'access ai content strategy'
         - 'view analyze reports'
         - 'view rl reports'
@@ -122,6 +124,7 @@ config:
         - 'view rl reports'
         - 'administer analyze'
         - 'administer ckeditor ai agent'
+        - 'use ckeditor ai agent'
         # Markdownify related setup.
         - 'administer markdownify'
         - 'generate ai alt tags'
