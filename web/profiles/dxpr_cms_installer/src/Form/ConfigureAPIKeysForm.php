@@ -221,7 +221,7 @@ class ConfigureAPIKeysForm extends FormBase implements ContainerInjectionInterfa
    * Submit handler for the skip button.
    */
   public function skipForm(array &$form, FormStateInterface $form_state): void {
-    // Do nothing -- just advance to the next install task.
+    // Intentionally empty: advancing to the next install task.
   }
 
   /**
