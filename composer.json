@@ -205,7 +205,8 @@
             "php-http/discovery": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "tbachert/spi": true
+            "tbachert/spi": true,
+            "symfony/runtime": true
         },
         "sort-packages": true,
         "optimize-autoloader": true

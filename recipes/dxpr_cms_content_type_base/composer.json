@@ -4,7 +4,7 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/autosave_form": "^1.10",
+        "drupal/autosave_form": "^1.11",
         "drupal/bpmn_io": "^3.0",
         "drupal/block_classes": "^1.0",
         "drupal/core": "^10.4 || ^11",
