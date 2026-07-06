@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: user_created_by_admin
 label: 'User: Created - By Administrator'
 module: user
