@@ -1,0 +1,3 @@
+name: ai-content-strategy
+description: Generate and manage AI content strategy recommendations via Drush CLI
+allow_implicit_invocation: true

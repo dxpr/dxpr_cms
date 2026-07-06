@@ -1,0 +1,4 @@
+display_name: "Content Analysis"
+description: "Run content analysis across Drupal entities via Drush CLI. Batch processing, broken link checking, sentiment analysis, brand voice auditing, and more."
+default_prompt: "List all available batch-capable analyzers and show which content types have them enabled."
+allow_implicit_invocation: true

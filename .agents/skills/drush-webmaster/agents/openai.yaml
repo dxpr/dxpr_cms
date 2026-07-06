@@ -1,0 +1,6 @@
+interface:
+  display_name: "drush-webmaster"
+  short_description: "Manage Drupal content, entities, views, menus, and fields via drush wm:* commands with structured YAML output."
+  default_prompt: "Use drush-webmaster for Drupal site management tasks."
+policy:
+  allow_implicit_invocation: true

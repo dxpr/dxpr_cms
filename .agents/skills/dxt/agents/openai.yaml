@@ -1,0 +1,6 @@
+interface:
+  display_name: "DXPR Theme"
+  description: "Manage DXPR Theme settings via dxt:* Drush commands"
+  default_prompt: "Use dxt:config:list --detail to discover settings before making changes"
+policy:
+  allow_implicit_invocation: true
