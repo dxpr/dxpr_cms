@@ -8,9 +8,6 @@ default:
   revision_user:
     -
       target_id: 1
-  revision_log:
-    -
-      value: 'Created by translation job <a href="/admin/tmgmt/jobs/2">Footer</a>.'
   status:
     -
       value: true
@@ -35,35 +32,765 @@ default:
   body:
     -
       value: |
-        <div class="az-element az-section" style="padding-top:15px;" data-dxpr-builder-libraries="" data-az-id="gblzrfb6v3" data-azat-pid="gbb3me9isy" id="gbb3me9isy" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azat-style="padding-top:15px;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-row row az-row--sm" style="" data-az-id="gbwok1wb63" data-azat-pid="gbdmdbr0xj" id="gbdmdbr0xj" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbhqevh26x" data-azat-pid="gbw8muef5t" id="gbw8muef5t" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-row row az-row--sm" style="" data-az-id="gb5hl65l7g" data-azat-pid="gbzcg4dpu8" id="gbzcg4dpu8" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbthmi1lnm" data-azat-pid="gbeyep3zj4" id="gbeyep3zj4" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbzxgxgqjf" data-azat-pid="gbvuus62de" id="gbvuus62de" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4>Why us?</h4><a data-cke-saved-href="http://dcms6.test/my-page#" href="http://dcms6.test/my-page#" tabindex="-1">Link One<br>Link Two<br>Link Three</a></div></div><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbs161if1q" data-azat-pid="gbeqtdaxnv" id="gbeqtdaxnv" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gb8n58ex46" data-azat-pid="gbjesb86cj" id="gbjesb86cj" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4>Services</h4><a data-cke-saved-href="http://dcms6.test/my-page#" href="http://dcms6.test/my-page#" tabindex="-1">Link One<br>Link Two<br>Link Three</a></div></div></div></div><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbgwo9tg7l" data-azat-pid="gb2ug4gqc7" id="gb2ug4gqc7" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-row row az-row--sm" style="" data-az-id="gbq9kgri2x" data-azat-pid="gbkib34cl4" id="gbkib34cl4" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbmw7edpn8" data-azat-pid="gbo0euegao" id="gbo0euegao" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbbfw8vi8g" data-azat-pid="gb2cwfzabb" id="gb2cwfzabb" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4>Resources</h4><a data-cke-saved-href="http://dcms6.test/my-page#" href="http://dcms6.test/my-page#" tabindex="-1">Link One<br>Link Two<br>Link Three</a></div></div><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbp5d6903y" data-azat-pid="gbo4qz6ss1" id="gbo4qz6ss1" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbidmqegbv" data-azat-pid="gbwcgl7frf" id="gbwcgl7frf" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4>Contact us</h4><p>+31 5678 1234<br>Damrak 1, Amsterdam<br>1050 AA, Netherlands</p></div></div></div></div></div></div></div><script src="/modules/contrib/dxpr_builder/dxpr_builder/dxpr_frontend.js"></script>
+        <section class="py-5 border-top">
+        <div class="container">
+        <div class="row">
+        <div class="col-12 col-md-4">
+        <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR logo" class="mb-2" width="100" height="38">
+        <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
+        </div>
+        <div class="col-12 col-md-4">
+        <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demo guide</a></p>
+        <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">What's new</a></p>
+        <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">About DXPR</a></p>
+        </div>
+        <div class="col-12 col-md-4">
+        <p class="fw-semibold mb-1">Contact</p>
+        <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Contact us</a></p>
+        </div>
+        </div>
+        </div>
+        </section>
       format: dxpr_builder_html
       summary: ''
 translations:
-  es:
+  nl:
     status:
       -
         value: true
     info:
       -
-        value: 'Pie de página'
-    revision_translation_affected:
-      -
-        value: true
+        value: Footer
     content_translation_source:
       -
         value: en
     content_translation_outdated:
       -
         value: false
-
-    content_translation_uid:
-      -
-        target_id: 1
-    content_translation_created:
-      -
-        value: 1680676372
     body:
       -
-        value: '<div class="az-element az-section" style="padding-top:15px;" data-dxpr-builder-libraries="" data-az-id="gblzrfb6v3" data-azat-pid="gbb3me9isy" id="gbb3me9isy" data-azb="az_section" data-az-human-readable="Section" data-az-human-readable-en="Section" data-azat-fluid="no" data-azat-fullheight="no" data-azat-vertical_centering="no" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azat-style="padding-top:15px;"><div class="az-ctnr container" data-azcnt="true"><div class="az-element az-row row az-row--sm" style="" data-az-id="gbwok1wb63" data-azat-pid="gbdmdbr0xj" id="gbdmdbr0xj" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbhqevh26x" data-azat-pid="gbw8muef5t" id="gbw8muef5t" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-row row az-row--sm" style="" data-az-id="gb5hl65l7g" data-azat-pid="gbzcg4dpu8" id="gbzcg4dpu8" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbthmi1lnm" data-azat-pid="gbeyep3zj4" id="gbeyep3zj4" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbzxgxgqjf" data-azat-pid="gbvuus62de" id="gbvuus62de" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4> ¿Porque nosotros?</h4><a data-cke-saved-href="http://dcms6.test/my-page#" href="http://dcms6.test/my-page#" tabindex="-1">enlace uno<br> enlace dos<br> Enlace tres</a> </div></div><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbs161if1q" data-azat-pid="gbeqtdaxnv" id="gbeqtdaxnv" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gb8n58ex46" data-azat-pid="gbjesb86cj" id="gbjesb86cj" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4> Servicios</h4><a data-cke-saved-href="http://dcms6.test/my-page#" href="http://dcms6.test/my-page#" tabindex="-1">enlace uno<br> enlace dos<br> Enlace tres</a> </div></div></div></div><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbgwo9tg7l" data-azat-pid="gb2ug4gqc7" id="gb2ug4gqc7" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-row row az-row--sm" style="" data-az-id="gbq9kgri2x" data-azat-pid="gbkib34cl4" id="gbkib34cl4" data-azb="az_row" data-az-human-readable="Row" data-az-human-readable-en="Row" data-azat-device="sm" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbmw7edpn8" data-azat-pid="gbo0euegao" id="gbo0euegao" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width="1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbbfw8vi8g" data-azat-pid="gb2cwfzabb" id="gb2cwfzabb" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4> Recursos</h4><a data-cke-saved-href="http://dcms6.test/my-page#" href="http://dcms6.test/my-page#" tabindex="-1">enlace uno<br> enlace dos<br> Enlace tres</a> </div></div><div class="az-element az-ctnr az-column col-sm-6" style="" data-az-id="gbp5d6903y" data-azat-pid="gbo4qz6ss1" id="gbo4qz6ss1" data-azb="az_column" data-az-human-readable="Column" data-az-human-readable-en="Column" data-azat-width=" 1/2" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><div class="az-element az-text" style="" data-az-id="gbidmqegbv" data-azat-pid="gbwcgl7frf" id="gbwcgl7frf" data-azb="az_text" data-az-human-readable="Text" data-az-human-readable-en="Text" data-azat-style_margin_locked="no" data-azat-style_border_locked="no" data-azat-style_padding_locked="no" data-azat-hover_style_margin_locked="no" data-azat-hover_style_border_locked="no" data-azat-hover_style_padding_locked="no" data-azcnt="true"><h4> Contáctenos</h4><p> +31 5678 1234<br> Damrak 1, Ámsterdam<br> 1050 AA, Países Bajos </p></div></div></div></div></div></div></div><script src="/modules/contrib/dxpr_builder/dxpr_builder/dxpr_frontend.js"></script>'
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR logo" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Alle rechten voorbehouden.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demogids</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Wat is nieuw</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Over DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Contact</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Neem contact op</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  es:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR logo" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Todos los derechos reservados.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Gu&iacute;a de demostraci&oacute;n</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Novedades</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Acerca de DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Contacto</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Cont&aacute;ctenos</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  en-gb:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR logo" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demo guide</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">What's new</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">About DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Contact</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Contact us</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  de:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR-Logo" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Alle Rechte vorbehalten.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demo-Anleitung</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Neuigkeiten</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">&Uuml;ber DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Kontakt</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Kontaktieren Sie uns</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  fr:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="Logo DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Tous droits r&eacute;serv&eacute;s.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Guide de d&eacute;monstration</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Nouveaut&eacute;s</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">&Agrave; propos de DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Contact</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Contactez-nous</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  it:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="Logo DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Tutti i diritti riservati.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Guida demo</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Novit&agrave;</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Informazioni su DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Contatto</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Contattaci</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  pl:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="Logo DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Wszelkie prawa zastrze&#x17C;one.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Przewodnik demo</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Co nowego</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">O DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Kontakt</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Skontaktuj si&#x119; z nami</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  sv:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR-logotyp" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Alla r&auml;ttigheter f&ouml;rbeh&aring;llna.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demoguide</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Nyheter</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Om DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Kontakt</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Kontakta oss</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  da:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR-logo" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Alle rettigheder forbeholdes.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demovejledning</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Nyheder</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Om DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Kontakt</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Kontakt os</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  nb:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR-logo" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Alle rettigheter forbeholdt.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demoguide</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Hva er nytt</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Om DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Kontakt</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Kontakt oss</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  fi:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR-logo" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Kaikki oikeudet pid&auml;tet&auml;&auml;n.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demo-opas</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Uutta</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Tietoa DXPR:st&auml;</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Yhteystiedot</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Ota yhteytt&auml;</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  pt-pt:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="Log&oacute;tipo DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Todos os direitos reservados.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Guia de demonstra&ccedil;&atilde;o</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Novidades</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Sobre o DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Contacto</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Contacte-nos</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  ja:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR&#x30ED;&#x30B4;" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">&#x30C7;&#x30E2;&#x30AC;&#x30A4;&#x30C9;</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">&#x65B0;&#x6A5F;&#x80FD;</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">DXPR&#x306B;&#x3064;&#x3044;&#x3066;</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  ar:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="&#x634;&#x639;&#x627;&#x631; DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629;.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">&#x62F;&#x644;&#x64A;&#x644; &#x627;&#x644;&#x639;&#x631;&#x636;</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">&#x645;&#x627; &#x627;&#x644;&#x62C;&#x62F;&#x64A;&#x62F;</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">&#x62D;&#x648;&#x644; DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">&#x627;&#x62A;&#x635;&#x644; &#x628;&#x646;&#x627;</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">&#x62A;&#x648;&#x627;&#x635;&#x644; &#x645;&#x639;&#x646;&#x627;</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  cs:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="Logo DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. V&scaron;echna pr&aacute;va vyhrazena.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Pr&#x16F;vodce uk&aacute;zkou</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Co je nov&eacute;ho</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">O DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Kontakt</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Kontaktujte n&aacute;s</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  ro:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="Logo DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Toate drepturile rezervate.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Ghid demo</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Nout&#x103;ți</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Despre DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Contact</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Contactați-ne</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  tr:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR logosu" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. T&uuml;m haklar&#x131; sakl&#x131;d&#x131;r.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demo rehberi</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Yenilikler</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">DXPR Hakk&#x131;nda</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">&#x130;letişim</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Bize ulaş&#x131;n</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  ko:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR &#xB85C;&#xACE0;" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">&#xB370;&#xBAA8; &#xAC00;&#xC774;&#xB4DC;</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">&#xC0C8; &#xC18C;&#xC2DD;</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">DXPR &#xC18C;&#xAC1C;</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">&#xBB38;&#xC758;</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">&#xBB38;&#xC758;&#xD558;&#xAE30;</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  id:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="Logo DXPR" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. Hak cipta dilindungi.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Panduan demo</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">Yang baru</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">Tentang DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">Kontak</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Hubungi kami</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
+        format: dxpr_builder_html
+        summary: ''
+  zh-hans:
+    status:
+      -
+        value: true
+    info:
+      -
+        value: Footer
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    body:
+      -
+        value: |
+          <section class="py-5 border-top">
+          <div class="container">
+          <div class="row">
+          <div class="col-12 col-md-4">
+          <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR &#x6807;&#x5FD7;" class="mb-2" width="100" height="38">
+          <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">&#x6F14;&#x793A;&#x6307;&#x5357;</a></p>
+          <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">&#x6700;&#x65B0;&#x52A8;&#x6001;</a></p>
+          <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">&#x5173;&#x4E8E; DXPR</a></p>
+          </div>
+          <div class="col-12 col-md-4">
+          <p class="fw-semibold mb-1">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</p>
+          <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</a></p>
+          </div>
+          </div>
+          </div>
+          </section>
         format: dxpr_builder_html
         summary: ''

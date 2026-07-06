@@ -1,0 +1,208 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 2bea87b5-6d87-47ff-9fa9-94a633d8e1aa
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Demo guide'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/guide'
+      title: ''
+      options: {  }
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+translations:
+  nl:
+    title:
+      -
+        value: Demogids
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  es:
+    title:
+      -
+        value: "Gu\xEDa de demostraci\xF3n"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  en-gb:
+    title:
+      -
+        value: "Demo guide"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  de:
+    title:
+      -
+        value: "Demo-Anleitung"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  fr:
+    title:
+      -
+        value: "Guide de d&eacute;monstration"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  it:
+    title:
+      -
+        value: "Guida demo"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  pl:
+    title:
+      -
+        value: "Przewodnik demo"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  sv:
+    title:
+      -
+        value: "Demoguide"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  da:
+    title:
+      -
+        value: "Demovejledning"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  nb:
+    title:
+      -
+        value: "Demoguide"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  fi:
+    title:
+      -
+        value: "Demo-opas"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  pt-pt:
+    title:
+      -
+        value: "Guia de demonstra&ccedil;&atilde;o"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  ja:
+    title:
+      -
+        value: "デモガイド"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  ar:
+    title:
+      -
+        value: "دليل العرض"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  cs:
+    title:
+      -
+        value: "Průvodce ukázkou"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  ro:
+    title:
+      -
+        value: "Ghid demo"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  tr:
+    title:
+      -
+        value: "Demo rehberi"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  ko:
+    title:
+      -
+        value: "데모 가이드"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  id:
+    title:
+      -
+        value: "Panduan demo"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }
+  zh-hans:
+    title:
+      -
+        value: "演示指南"
+    link:
+      -
+        uri: 'internal:/guide'
+        title: ''
+        options: {  }

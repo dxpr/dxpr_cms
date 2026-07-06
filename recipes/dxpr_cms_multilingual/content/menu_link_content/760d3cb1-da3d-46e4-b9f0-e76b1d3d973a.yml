@@ -1,0 +1,208 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 760d3cb1-da3d-46e4-b9f0-e76b1d3d973a
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'About DXPR'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/about'
+      title: ''
+      options: {  }
+  weight:
+    -
+      value: 2
+  expanded:
+    -
+      value: false
+translations:
+  nl:
+    title:
+      -
+        value: Over DXPR
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  es:
+    title:
+      -
+        value: Acerca de DXPR
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  en-gb:
+    title:
+      -
+        value: "About DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  de:
+    title:
+      -
+        value: "&Uuml;ber DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  fr:
+    title:
+      -
+        value: "&Agrave; propos de DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  it:
+    title:
+      -
+        value: "Informazioni su DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  pl:
+    title:
+      -
+        value: "O DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  sv:
+    title:
+      -
+        value: "Om DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  da:
+    title:
+      -
+        value: "Om DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  nb:
+    title:
+      -
+        value: "Om DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  fi:
+    title:
+      -
+        value: "Tietoa DXPR:stä"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  pt-pt:
+    title:
+      -
+        value: "Sobre o DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  ja:
+    title:
+      -
+        value: "DXPRについて"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  ar:
+    title:
+      -
+        value: "حول DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  cs:
+    title:
+      -
+        value: "O DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  ro:
+    title:
+      -
+        value: "Despre DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  tr:
+    title:
+      -
+        value: "DXPR Hakkında"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  ko:
+    title:
+      -
+        value: "DXPR 소개"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  id:
+    title:
+      -
+        value: "Tentang DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }
+  zh-hans:
+    title:
+      -
+        value: "关于 DXPR"
+    link:
+      -
+        uri: 'internal:/about'
+        title: ''
+        options: {  }

@@ -1,12 +1,10 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 4a369032-6fac-4df0-a119-780ab082bc8c
+  uuid: 83b2e9b7-93ef-4966-8a92-4422a059eac8
   bundle: menu_link_content
+  default_langcode: en
 default:
-  revision_log_message:
-    -
-      value: 'Created by translation job <a href="/admin/tmgmt/jobs/6">Blog</a>.'
   enabled:
     -
       value: true
@@ -20,16 +18,10 @@ default:
     -
       uri: 'internal:/blog'
       title: ''
-      options: {}
-  external:
-    -
-      value: false
-  rediscover:
-    -
-      value: true
+      options: {  }
   weight:
     -
-      value: -45
+      value: 0
   expanded:
     -
       value: false

@@ -21,6 +21,7 @@ install:
   - ai_tmgmt
   - ai_translate
   - user
+  - dxpr_cms_multilingual_content
 config:
   strict: false
   import:
@@ -28,6 +29,30 @@ config:
     tmgmt: '*'
     ai_translate: '*'
   actions:
+    # Enable browser language detection alongside URL prefix.
+    language.types:
+      simpleConfigUpdate:
+        negotiation:
+          language_interface:
+            enabled:
+              language-url: 0
+              language-browser: 1
+              language-selected: 2
+          language_content:
+            enabled:
+              language-interface: 0
+          language_url:
+            enabled:
+              language-url: 0
+              language-url-fallback: 1
+    # Use URL path prefix for all languages (including English) so that
+    # browser-based language detection can redirect the root / URL.
+    language.negotiation:
+      simpleConfigUpdate:
+        url:
+          source: path_prefix
+          prefixes:
+            en: en
     # Configure translations for content.
     node.type.*:
       createForEachIfNotExists:
