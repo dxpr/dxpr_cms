@@ -131,7 +131,6 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **eca_content** - ECA plugins for content-related events and actions (submodule of [eca](https://drupal.org/project/eca))
 - **eca_misc** - Miscellaneous ECA plugins for various workflow automation tasks (submodule of [eca](https://drupal.org/project/eca))
 - **eca_render** - ECA plugins for rendering and display-related workflows (submodule of [eca](https://drupal.org/project/eca))
-- **[linkit](https://drupal.org/project/linkit)** - Enhanced linking interface with autocomplete for internal content and media references
 - **[menu_link_attributes](https://drupal.org/project/menu_link_attributes)** - Add custom attributes to menu links including classes, target, and rel attributes
 - **[token](https://drupal.org/project/token)** - Token system providing placeholders for dynamic content replacement throughout the site
 - **[token_or](https://drupal.org/project/token_or)** - Token OR logic allowing fallback tokens when primary tokens have no value
