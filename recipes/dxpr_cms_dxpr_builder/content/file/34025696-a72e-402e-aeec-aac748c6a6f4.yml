@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 34025696-a72e-402e-aeec-aac748c6a6f4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dxpr-builder-ui-inline-editing.png
+  uri:
+    -
+      value: 'public://dxpr-builder-ui-inline-editing.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 883271
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1780488029

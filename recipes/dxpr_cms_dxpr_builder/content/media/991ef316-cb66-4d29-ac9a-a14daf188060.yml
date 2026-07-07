@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 991ef316-cb66-4d29-ac9a-a14daf188060
+  bundle: image
+  default_langcode: en
+  depends:
+    1ff309f0-1564-40c4-9249-3a8a7afcbf79: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'DXPR Builder UI: Builder Profiles'
+  created:
+    -
+      value: 1783318668
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 1ff309f0-1564-40c4-9249-3a8a7afcbf79
+      alt: 'DXPR Builder UI: Builder Profiles'
+      title: ''
+      width: 1448
+      height: 1086

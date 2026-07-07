@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3a8e1f4e-99fc-4f6d-997c-6ff9e6f0387a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dxpr-builder-ui-ai-generate-prompt.png
+  uri:
+    -
+      value: 'public://dxpr-builder-ui-ai-generate-prompt.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 859321
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1783318668

@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 13015a15-45f2-43ba-afad-4f99163798ca
+  bundle: image
+  default_langcode: en
+  depends:
+    49ae0997-abb5-4d82-8c07-035ee825fbcc: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Background: Pastel Blobs'
+  created:
+    -
+      value: 1780481527
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 49ae0997-abb5-4d82-8c07-035ee825fbcc
+      alt: 'Background: Pastel Blobs'
+      title: ''
+      width: 1448
+      height: 1086

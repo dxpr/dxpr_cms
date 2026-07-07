@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1d0cfc05-ff89-4998-ad7b-f07ce961ea83
+  bundle: image
+  default_langcode: en
+  depends:
+    d6d76f6c-bd53-4413-9c86-1093be17d646: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'DXPR Builder UI: AI Chat'
+  created:
+    -
+      value: 1783318690
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: d6d76f6c-bd53-4413-9c86-1093be17d646
+      alt: 'DXPR Builder UI: AI Chat'
+      title: ''
+      width: 935
+      height: 747

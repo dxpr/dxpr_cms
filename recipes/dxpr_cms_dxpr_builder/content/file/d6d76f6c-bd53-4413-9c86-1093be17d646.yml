@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d6d76f6c-bd53-4413-9c86-1093be17d646
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dxpr-builder-ui-ai-chat.png
+  uri:
+    -
+      value: 'public://dxpr-builder-ui-ai-chat.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 166210
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1783318690

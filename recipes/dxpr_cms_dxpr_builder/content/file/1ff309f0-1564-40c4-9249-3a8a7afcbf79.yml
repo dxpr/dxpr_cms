@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1ff309f0-1564-40c4-9249-3a8a7afcbf79
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dxpr-builder-ui-builder-profiles.png
+  uri:
+    -
+      value: 'public://dxpr-builder-ui-builder-profiles.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 852250
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1783318668

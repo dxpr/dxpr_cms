@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6339a32b-cc26-46be-b05e-72ca735f3b4f
+  bundle: image
+  default_langcode: en
+  depends:
+    34025696-a72e-402e-aeec-aac748c6a6f4: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'DXPR Builder UI: Inline Editing'
+  created:
+    -
+      value: 1780488029
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 34025696-a72e-402e-aeec-aac748c6a6f4
+      alt: 'DXPR Builder UI: Inline Editing'
+      title: ''
+      width: 1448
+      height: 1086

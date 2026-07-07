@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 49ae0997-abb5-4d82-8c07-035ee825fbcc
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: try-dxpr-bg-pastel-blobs.png
+  uri:
+    -
+      value: 'public://marketing-bg/try-dxpr-bg-pastel-blobs.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 902941
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1780481527

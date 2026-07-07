@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 72a71333-e279-4183-b686-4b00de9a666c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dxpr-builder-ui-ai-generate.png
+  uri:
+    -
+      value: 'public://dxpr-builder-ui-ai-generate.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 8289
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1783318668
