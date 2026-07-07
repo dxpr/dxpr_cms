@@ -1,0 +1,7 @@
+name: 'DXPR CMS Multilingual Content'
+type: module
+description: 'Merges translations from recipe default content into existing entities.'
+core_version_requirement: ^11
+package: DXPR CMS
+dependencies:
+  - drupal:content_translation

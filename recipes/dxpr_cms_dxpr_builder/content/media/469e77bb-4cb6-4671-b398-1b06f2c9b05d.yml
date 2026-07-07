@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 469e77bb-4cb6-4671-b398-1b06f2c9b05d
+  bundle: image
+  default_langcode: en
+  depends:
+    72a71333-e279-4183-b686-4b00de9a666c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'DXPR Builder UI: AI Generate Prompt'
+  created:
+    -
+      value: 1783318668
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 72a71333-e279-4183-b686-4b00de9a666c
+      alt: 'DXPR Builder UI: AI Generate Prompt'
+      title: ''
+      width: 463
+      height: 327

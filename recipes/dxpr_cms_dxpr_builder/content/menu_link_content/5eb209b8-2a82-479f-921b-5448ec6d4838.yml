@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 5eb209b8-2a82-479f-921b-5448ec6d4838
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'What''s new'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/whats-new'
+      title: ''
+      options: {}
+  weight:
+    -
+      value: 1
+  expanded:
+    -
+      value: false

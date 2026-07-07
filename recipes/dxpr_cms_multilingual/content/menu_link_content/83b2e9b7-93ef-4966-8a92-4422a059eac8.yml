@@ -1,0 +1,208 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 83b2e9b7-93ef-4966-8a92-4422a059eac8
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Blog
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/blog'
+      title: ''
+      options: {}
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+translations:
+  nl:
+    title:
+      -
+        value: Blog
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  es:
+    title:
+      -
+        value: Blog
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  en-gb:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  de:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  fr:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  it:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  pl:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  sv:
+    title:
+      -
+        value: "Blogg"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  da:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  nb:
+    title:
+      -
+        value: "Blogg"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  fi:
+    title:
+      -
+        value: "Blogi"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  pt-pt:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  ja:
+    title:
+      -
+        value: "ブログ"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  ar:
+    title:
+      -
+        value: "المدونة"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  cs:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  ro:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  tr:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  ko:
+    title:
+      -
+        value: "블로그"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  id:
+    title:
+      -
+        value: "Blog"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}
+  zh-hans:
+    title:
+      -
+        value: "博客"
+    link:
+      -
+        uri: 'internal:/blog'
+        title: ''
+        options: {}

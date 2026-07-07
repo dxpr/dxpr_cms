@@ -12,9 +12,6 @@ default:
   revision_uid:
     -
       target_id: 1
-  revision_log:
-    -
-      value: 'Saved with DXPR builder'
   status:
     -
       value: true
@@ -23,7 +20,7 @@ default:
       entity: c66f67f2-5d13-4889-9233-c00f372a4910
   title:
     -
-      value: 'Building a blog on your website'
+      value: 'Accessible by default: how WCAG 2.2 AAA shapes our editor'
   created:
     -
       value: 1724414516
@@ -32,18 +29,18 @@ default:
       value: true
   sticky:
     -
-      value: true
+      value: false
   moderation_state:
     -
       value: published
   path:
     -
-      alias: /blog/2024-08/building-blog-your-website
+      alias: /blog/2024-08/accessible-default-how-wcag-22-aaa-shapes-our-editor
       langcode: en
       pathauto: 1
   field_content:
     -
-      value: '<div class="az-element az-section mt-5" data-azat-el_class=mt-5 data-azb=az_section id=Eoah25><div class="az-ctnr container" data-azcnt=true><div class="az-element az-text ck-content" data-azb=az_text id=Xd8owo><h1 class=mb-4>Starting Your Own Blog: A Complete Guide</h1><p>Creating a blog requires careful planning, the right tools, and a strong platform. This guide will walk you through the steps to create a dynamic and engaging blog using a content management system (CMS).</p><h2 class=mb-3>Why Choose a Content Management System (CMS)?</h2><p>A good CMS offers a powerful content management system with integrated technologies for efficient content creation. It provides a platform with multilingual support, SEO features, and advanced analytics.</p></div><div class="az-element az-text ck-content" data-azb=az_text id=Gm8fum><h2 class=mb-3>Getting Started</h2><ol><li><strong>Get access to the CMS:</strong> Start by signing up for an account on the CMS''s website. This gives you access to its features.</li><li><strong>Install a local development tool:</strong> Set up an open-source tool for local development environments, which simplifies setting up and managing your site.</li><li><strong>Download the CMS software:</strong> Use a version control system to obtain the CMS software from the appropriate repository.</li><li><strong>Set up the environment:</strong> Configure your development environment for CMS development.</li><li><strong>Finish the installation:</strong> Complete the installation via a setup wizard or a command-line method using an API key if needed. Each method provides straightforward steps to get your site running quickly.</li></ol><h2 class=mb-3>Using CMS Features</h2><p>The CMS comes with features that enhance content creation and ensure it remains engaging and relevant. It offers SEO tools and integrated analytics to provide insights into content performance and optimization.</p></div><div class="az-element az-text ck-content" data-azb=az_text id=e78t70><div class=ckeditor-inline id=cke5-e78t70><h2 class=mb-3>Design and Personalize Your Blog</h2><p>Use the CMS to customize your blog''s appearance. Adjust branding, colors, and typography to maintain a consistent and professional look on all devices.</p><h2 class=mb-3>Advanced SEO and Analytics</h2><p>The CMS comes with SEO tools like automated sitemap generation and real-time SEO analysis to optimize your content for search engines. Analytics tools provide detailed insights to fine-tune your content strategy.</p><h2 class=mb-3>Conclusion</h2><p>Building a blog with a CMS simplifies the process and enhances the content experience through its features. With easy setup, integrated technologies, and effective SEO strategies, creating a successful blog becomes seamless and efficient.</p></div></div></div></div>'
+      value: '<div class="container py-5"><div class="row"><div class="col-12 col-md-12"><p>Accessibility in page builders is usually an afterthought: a plugin that scans your finished page for contrast issues, or a checklist you run before publishing. DXPR Builder 3 takes a different approach. We redesigned the editor interface itself to meet WCAG 2.2 AAA standards, so accessibility is built into the tool, not bolted on afterwards.</p><p>This starts with the editor controls. Every button, panel, and dialogue in the builder meets AAA contrast ratios. Keyboard navigation works throughout: you can create a page, rearrange sections, edit text, and publish without ever touching a mouse. Focus indicators are clearly visible, and screen reader announcements describe what each action does.</p><p>The content the builder produces is accessible by default as well. Heading hierarchy is enforced: if you skip from H2 to H4, the builder flags it. Images require alt text before you can save. The Bootstrap 5 grid system ensures semantic HTML structure, so assistive technologies can parse the page correctly.</p><p>For organisations in regulated sectors (government, healthcare, education), this matters enormously. Accessibility compliance is not optional; it is a legal requirement in many jurisdictions. A page builder that produces inaccessible output creates liability. DXPR Builder reduces that risk by making the accessible choice the default choice.</p><p>We also run automated accessibility testing as part of our CI pipeline. Every pull request is checked against axe-core rules, and regressions block the merge. This means the accessibility standard does not degrade over time as new features are added. It is a continuous commitment, not a one-off audit.</p></div></div></div>'
       format: dxpr_builder_html
   field_featured_image:
     -

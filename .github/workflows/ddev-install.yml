@@ -47,7 +47,7 @@ jobs:
         run: |
           # Test that the home page responds and contains demo content
           HOME_HTML=$(curl -fL http://dxpr-cms.ddev.site)
-          echo "$HOME_HTML" | grep -q "Save time with DXPR" || { echo "FAIL: Home page missing expected demo content"; exit 1; }
+          echo "$HOME_HTML" | grep -q "DXPR Builder" || { echo "FAIL: Home page missing expected demo content"; exit 1; }
           echo "Home page demo content verified."
           # Test that we can access the admin interface
           ddev drush user:login --name=admin --uri=$(ddev describe | grep "Primary URL" | awk '{print $3}')

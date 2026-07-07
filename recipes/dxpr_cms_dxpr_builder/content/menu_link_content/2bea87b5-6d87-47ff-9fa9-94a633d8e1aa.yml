@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 2bea87b5-6d87-47ff-9fa9-94a633d8e1aa
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Demo guide'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/guide'
+      title: ''
+      options: {}
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ebb3a2c0-5012-4c32-acff-f39449e4307c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dxpr-logo.svg
+  uri:
+    -
+      value: 'public://dxpr-logo.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 1718
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1780481527

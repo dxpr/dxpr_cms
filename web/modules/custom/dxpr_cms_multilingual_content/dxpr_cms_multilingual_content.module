@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Hooks for DXPR CMS Multilingual Content module.
+ */
+
+declare(strict_types=1);
+
+use Drupal\language\ConfigurableLanguageInterface;
+use Drupal\dxpr_cms_multilingual_content\EventSubscriber\TranslationMergeSubscriber;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for configurable_language.
+ *
+ * When a new language is added (e.g. during multilingual install), scan the
+ * multilingual recipe content and add translations for that language to any
+ * existing entities.
+ */
+function dxpr_cms_multilingual_content_configurable_language_insert(ConfigurableLanguageInterface $language): void {
+  try {
+    $data = TranslationMergeSubscriber::loadRecipeContentData();
+    if (empty($data)) {
+      return;
+    }
+
+    $subscriber = \Drupal::service('dxpr_cms_multilingual_content.translation_merger');
+    $subscriber->mergeTranslationForLanguage($data, $language->getId());
+  }
+  catch (\Exception $e) {
+    \Drupal::logger('dxpr_cms_multilingual_content')->warning(
+      'Translation merge failed for @langcode: @error',
+      ['@langcode' => $language->getId(), '@error' => $e->getMessage()]
+    );
+  }
+}

@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a
+  bundle: landing_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'What''s new'
+  created:
+    -
+      value: 1751788800
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /whats-new
+      langcode: en
+      pathauto: 0
+  field_content:
+    -
+      value: |
+        <div class="az-section py-5 text-center" data-azb id=jp1hbi><div class=container-fluid><div class="row align-items-start" data-azb id=Tsxyg9><div class="col-md-8 col-12 py-5 mx-auto" data-azb id=Svb0kl><div class="az-element az-text ck-content" data-azb=az_text id=flzp50><h1 class="display-4 fw-bold mb-4">What's new</h1><p class="lead text-muted mb-5">The latest features and improvements in DXPR CMS and DXPR Builder.</p></div></div></div></div></div><div class="az-section py-5" data-azb id=olxxjc><div class=container><div class="row align-items-start" data-azb id=rfylmr><div class="col-md-8 col-12 mx-auto" data-azb id=nhwym4><div class="az-element az-text ck-content" data-azb=az_text id=inj71f><h2 class="fw-bold mb-5">DXPR Builder 3</h2><p class=mb-5>DXPR Builder 3 is a ground-up rebuild of the page building experience. Every component has been rewritten with modern JavaScript, accessibility, and AI integration in mind.</p></div></div></div><div class="row g-5 align-items-start" data-azb id=xuoqp5><div class="col-md-2 col-12 text-center" data-azb id=Qsz8rh><div data-dxpr-builder-libraries="icon_helpers bootstrap_icons" class=az-icon data-azb id=m5e1jx><i class="az-icon-content bi bi-stars fa-4x"></i></div></div><div class="col-md-10 col-12" data-azb id=Yfjy53><div class="az-element az-text ck-content" data-azb=az_text id=ipvy7t><h3 class="fw-bold mb-3">AI page generation</h3><p class=text-muted>Describe what you need in plain language, and the AI generates complete pages with sections, headings, images, cards, and calls to action. The output is clean Bootstrap 5 HTML that the builder parses into fully editable drag-and-drop components.</p></div></div></div><div class="row g-5 mt-4 align-items-start" data-azb id=Y9qiu2><div class="col-md-2 col-12 text-center" data-azb id=hbppzv><div data-dxpr-builder-libraries="icon_helpers bootstrap_icons" class=az-icon data-azb id=aosmms><i class="az-icon-content bi bi-chat-dots fa-4x"></i></div></div><div class="col-md-10 col-12" data-azb id=xooysx><div class="az-element az-text ck-content" data-azb=az_text id=Uxaqiz><h3 class="fw-bold mb-3">AI chat for refinement</h3><p class=text-muted>After generating a page, use the AI chat to adjust tone, rewrite individual sections, translate content, or add new components. The chat understands the current page context and makes targeted edits.</p></div></div></div><div class="row g-5 mt-4 align-items-start" data-azb id=yuyo2v><div class="col-md-2 col-12 text-center" data-azb id=fkd8pi><div data-dxpr-builder-libraries="icon_helpers bootstrap_icons" class=az-icon data-azb id=ntmn32><i class="az-icon-content bi bi-universal-access fa-4x"></i></div></div><div class="col-md-10 col-12" data-azb id=g1la8d><div class="az-element az-text ck-content" data-azb=az_text id=U7gfja><h3 class="fw-bold mb-3">WCAG 2.2 AAA editor interface</h3><p class=text-muted>The entire editor has been redesigned for accessibility. All controls meet AAA contrast ratios, keyboard navigation works throughout, and screen reader support covers every interaction.</p></div></div></div><div class="row g-5 mt-4 align-items-start" data-azb id=Tmxyig><div class="col-md-2 col-12 text-center" data-azb id=nxlcmu><div data-dxpr-builder-libraries="icon_helpers bootstrap_icons" class=az-icon data-azb id=So9xv3><i class="az-icon-content bi bi-filetype-html fa-4x"></i></div></div><div class="col-md-10 col-12" data-azb id=grqi1t><div class="az-element az-text ck-content" data-azb=az_text id=K1qxer><h3 class="fw-bold mb-3">Bootstrap 5 native output</h3><p class=text-muted>Every page the builder creates is standard Bootstrap 5 HTML. No proprietary markup, no JavaScript rendering layer. Your content is portable, readable, and works in any Bootstrap 5 theme.</p></div></div></div><div class="row g-5 mt-4 align-items-start" data-azb id=l51ys1><div class="col-md-2 col-12 text-center" data-azb id=Ajd5zp><div data-dxpr-builder-libraries="icon_helpers bootstrap_icons" class=az-icon data-azb id=npbd3z><i class="az-icon-content bi bi-cloud-arrow-up fa-4x"></i></div></div><div class="col-md-10 col-12" data-azb id=Pluw5r><div class="az-element az-text ck-content" data-azb=az_text id=bb1jpt><h3 class="fw-bold mb-3">Drag-and-drop file uploads</h3><p class=text-muted>Drop images directly from your desktop onto the builder canvas. Files are uploaded to Drupal's media system with automatic image optimisation and responsive image styles applied.</p></div></div></div><div class="row g-5 mt-4 align-items-start" data-azb id=hulunr><div class="col-md-2 col-12 text-center" data-azb id=Y38o4m><div data-dxpr-builder-libraries="icon_helpers bootstrap_icons" class=az-icon data-azb id=Mkuz9h><i class="az-icon-content bi bi-copy fa-4x"></i></div></div><div class="col-md-10 col-12" data-azb id=zi2f3c><div class="az-element az-text ck-content" data-azb=az_text id=Uwcobq><h3 class="fw-bold mb-3">Reusable section templates</h3><p class=text-muted>Save any section as a template for your team. Build a library of approved hero sections, feature grids, and CTAs that maintain visual consistency across your site.</p></div></div></div></div></div><link href=/modules/contrib/dxpr_builder/dxpr_builder/vendor/managed/bootstrap-icons/font/bootstrap-icons.min.css rel=stylesheet>
+      format: dxpr_builder_html
+  field_dth_hide_regions:
+    -
+      value: page_title
