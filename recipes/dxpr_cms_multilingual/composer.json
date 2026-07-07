@@ -9,7 +9,8 @@
         "drupal/dxpr_cms_dxpr_builder": "*",
         "drupal/hreflang": "^1.14",
         "drupal/tmgmt": "^1.15",
-        "drupal/ai_tmgmt": "^1.0.0-beta5"
+        "drupal/ai_tmgmt": "^1.0.0-beta5",
+        "drupal/ai_translate": "^1.3"
     },
     "version": "1.0.0-beta1"
 }
