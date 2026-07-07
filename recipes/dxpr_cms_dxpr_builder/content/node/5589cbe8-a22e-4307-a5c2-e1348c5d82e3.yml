@@ -1,0 +1,175 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5589cbe8-a22e-4307-a5c2-e1348c5d82e3
+  bundle: landing_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Demo guide'
+  created:
+    -
+      value: 1751788800
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /guide
+      langcode: en
+      pathauto: 0
+  field_content:
+    -
+      value: |
+        <div class="container-fluid py-5 text-center">
+        <div class="row">
+        <div class="col-12 col-md-8 py-5 mx-auto">
+        <h1 class="display-4 fw-bold mb-4">Demo guide</h1>
+        <p class="lead text-muted mb-5">Explore the key features of DXPR CMS. This guide walks you through the content types, AI tools, and page building capabilities included in this demo.</p>
+        </div>
+        </div>
+        </div>
+
+        <div class="container py-5">
+        <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+        <h2 class="fw-bold mb-4">Content types</h2>
+        <p class="text-muted mb-5">DXPR CMS ships with six content types, each designed for a specific purpose. Together they cover the most common needs of a modern website.</p>
+        </div>
+        </div>
+        <div class="row g-4">
+        <div class="col-12 col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Blog posts</h4>
+        <p class="text-muted small">Categorised entries for articles, tutorials, and opinion pieces. Supports tags, featured images, and SEO fields.</p>
+        <p class="small"><a href="/blog">Browse blog posts</a></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">News items</h4>
+        <p class="text-muted small">Short announcements and press releases, organised by tags. Great for keeping visitors informed about updates.</p>
+        <p class="small"><a href="/news">Browse news items</a></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Case studies</h4>
+        <p class="text-muted small">Detailed showcases of real-world projects. Includes fields for client information, challenges, and outcomes.</p>
+        <p class="small"><a href="/case-studies">Browse case studies</a></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Events</h4>
+        <p class="text-muted small">Content for conferences, meetups, and webinars with date, location, and registration fields.</p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Landing pages</h4>
+        <p class="text-muted small">Flexible pages powered by DXPR Builder. Use drag-and-drop or AI to create custom layouts with Bootstrap 5 markup.</p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Basic pages</h4>
+        <p class="text-muted small">Simple static pages for privacy policies, terms of service, and other standard content.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="container py-5">
+        <div class="row">
+        <div class="col-12 col-md-8 mx-auto text-center">
+        <h2 class="fw-bold mb-4">AI-powered page building</h2>
+        <p class="text-muted mb-5">DXPR Builder 3 lets you create and edit pages with AI assistance. Describe what you need and watch the builder generate structured, accessible Bootstrap 5 markup.</p>
+        </div>
+        </div>
+        <div class="row g-4">
+        <div class="col-12 col-md-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Generate pages from a prompt</h4>
+        <p class="text-muted small">Open any landing page, click the AI button, and describe the page you want. The builder creates complete sections with headings, text, images, and cards.</p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Refine with chat</h4>
+        <p class="text-muted small">After generating, use the AI chat to adjust tone, rewrite sections, add calls to action, or translate content into another language.</p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Drag-and-drop editing</h4>
+        <p class="text-muted small">Every element the AI generates is fully editable. Drag sections to reorder them, click to edit text inline, and adjust layout with a visual interface.</p>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+        <div class="card-body">
+        <h4 class="fw-bold">Reusable templates</h4>
+        <p class="text-muted small">Save any section as a reusable template. Build a library of hero sections, feature grids, and CTAs that your team can drop into new pages.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="container py-5">
+        <div class="row">
+        <div class="col-12 col-md-8 mx-auto text-center">
+        <h2 class="fw-bold mb-4">Try it yourself</h2>
+        <p class="text-muted mb-4">Ready to explore? Here are a few things to try in this demo:</p>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+        <ol class="lead">
+        <li class="mb-3">Open the <a href="/node/7/edit">empty DXPR Builder page</a> and generate content with the AI button</li>
+        <li class="mb-3">Browse the <a href="/blog">blog</a>, <a href="/news">news</a>, and <a href="/case-studies">case studies</a> to see structured content in action</li>
+        <li class="mb-3">Edit any landing page and try the drag-and-drop editor</li>
+        <li class="mb-3">Check the <a href="/admin/content">content overview</a> to see all content types working together</li>
+        </ol>
+        </div>
+        </div>
+        </div>
+      format: dxpr_builder_html
+  field_dth_hide_regions:
+    -
+      value: page_title
