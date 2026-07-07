@@ -45,14 +45,14 @@ config:
             enabled:
               language-url: 0
               language-url-fallback: 1
-    # Use URL path prefix for all languages (including English) so that
-    # browser-based language detection can redirect the root / URL.
+    # Use URL path prefix for non-default languages; the default language
+    # (English) serves from the root URL without a prefix.
     language.negotiation:
       simpleConfigUpdate:
         url:
           source: path_prefix
           prefixes:
-            en: en
+            en: ''
     # Configure translations for content.
     node.type.*:
       createForEachIfNotExists:
