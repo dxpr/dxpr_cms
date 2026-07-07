@@ -18,7 +18,7 @@ default:
     -
       uri: 'internal:/about'
       title: ''
-      options: {  }
+      options: {}
   weight:
     -
       value: 2
@@ -34,7 +34,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   es:
     title:
       -
@@ -43,7 +43,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   en-gb:
     title:
       -
@@ -52,7 +52,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   de:
     title:
       -
@@ -61,7 +61,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   fr:
     title:
       -
@@ -70,7 +70,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   it:
     title:
       -
@@ -79,7 +79,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   pl:
     title:
       -
@@ -88,7 +88,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   sv:
     title:
       -
@@ -97,7 +97,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   da:
     title:
       -
@@ -106,7 +106,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   nb:
     title:
       -
@@ -115,7 +115,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   fi:
     title:
       -
@@ -124,7 +124,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   pt-pt:
     title:
       -
@@ -133,7 +133,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   ja:
     title:
       -
@@ -142,7 +142,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   ar:
     title:
       -
@@ -151,7 +151,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   cs:
     title:
       -
@@ -160,7 +160,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   ro:
     title:
       -
@@ -169,7 +169,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   tr:
     title:
       -
@@ -178,7 +178,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   ko:
     title:
       -
@@ -187,7 +187,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   id:
     title:
       -
@@ -196,7 +196,7 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}
   zh-hans:
     title:
       -
@@ -205,4 +205,4 @@ translations:
       -
         uri: 'internal:/about'
         title: ''
-        options: {  }
+        options: {}

@@ -18,7 +18,7 @@ default:
     -
       uri: 'internal:/about'
       title: ''
-      options: {  }
+      options: {}
   weight:
     -
       value: 2
