@@ -1,4 +1,4 @@
-# Analyze — Content Analysis CLI
+# Analyze: Content Analysis CLI
 
 Centralized content analysis for Drupal entities.
 
