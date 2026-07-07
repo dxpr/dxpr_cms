@@ -11,6 +11,7 @@ install:
   - content_translation
   - block_content
   - hreflang
+  - lang_dropdown
   - language
   - locale
   - node
