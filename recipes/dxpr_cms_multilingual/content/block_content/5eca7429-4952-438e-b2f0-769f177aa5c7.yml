@@ -40,13 +40,13 @@ default:
         <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
         </div>
         <div class="col-12 col-md-4">
-        <p class="mb-1"><a href="/guide" class="text-dark text-decoration-none">Demo guide</a></p>
-        <p class="mb-1"><a href="/whats-new" class="text-dark text-decoration-none">What's new</a></p>
-        <p class="mb-1"><a href="/about" class="text-dark text-decoration-none">About DXPR</a></p>
+        <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demo guide</a></p>
+        <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">What's new</a></p>
+        <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">About DXPR</a></p>
         </div>
         <div class="col-12 col-md-4">
         <p class="fw-semibold mb-1">Contact</p>
-        <p class="mb-1"><a href="/contact-us" class="text-muted text-decoration-none">Contact us</a></p>
+        <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contact us</a></p>
         </div>
         </div>
         </div>
@@ -78,13 +78,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Alle rechten voorbehouden.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/nl/guide" class="text-dark text-decoration-none">Demogids</a></p>
-          <p class="mb-1"><a href="/nl/whats-new" class="text-dark text-decoration-none">Wat is nieuw</a></p>
-          <p class="mb-1"><a href="/nl/about" class="text-dark text-decoration-none">Over DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demogids</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Wat is nieuw</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Over DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Contact</p>
-          <p class="mb-1"><a href="/nl/contact-us" class="text-muted text-decoration-none">Neem contact op</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Neem contact op</a></p>
           </div>
           </div>
           </div>
@@ -115,13 +115,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Todos los derechos reservados.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/es/guide" class="text-dark text-decoration-none">Gu&iacute;a de demostraci&oacute;n</a></p>
-          <p class="mb-1"><a href="/es/whats-new" class="text-dark text-decoration-none">Novedades</a></p>
-          <p class="mb-1"><a href="/es/about" class="text-dark text-decoration-none">Acerca de DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Gu&iacute;a de demostraci&oacute;n</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Novedades</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Acerca de DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Contacto</p>
-          <p class="mb-1"><a href="/es/contact-us" class="text-muted text-decoration-none">Cont&aacute;ctenos</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Cont&aacute;ctenos</a></p>
           </div>
           </div>
           </div>
@@ -152,13 +152,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/en-gb/guide" class="text-dark text-decoration-none">Demo guide</a></p>
-          <p class="mb-1"><a href="/en-gb/whats-new" class="text-dark text-decoration-none">What's new</a></p>
-          <p class="mb-1"><a href="/en-gb/about" class="text-dark text-decoration-none">About DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demo guide</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">What's new</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">About DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Contact</p>
-          <p class="mb-1"><a href="/en-gb/contact-us" class="text-muted text-decoration-none">Contact us</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contact us</a></p>
           </div>
           </div>
           </div>
@@ -189,13 +189,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Alle Rechte vorbehalten.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/de/guide" class="text-dark text-decoration-none">Demo-Anleitung</a></p>
-          <p class="mb-1"><a href="/de/whats-new" class="text-dark text-decoration-none">Neuigkeiten</a></p>
-          <p class="mb-1"><a href="/de/about" class="text-dark text-decoration-none">&Uuml;ber DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demo-Anleitung</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Neuigkeiten</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">&Uuml;ber DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Kontakt</p>
-          <p class="mb-1"><a href="/de/contact-us" class="text-muted text-decoration-none">Kontaktieren Sie uns</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Kontaktieren Sie uns</a></p>
           </div>
           </div>
           </div>
@@ -226,13 +226,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Tous droits r&eacute;serv&eacute;s.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/fr/guide" class="text-dark text-decoration-none">Guide de d&eacute;monstration</a></p>
-          <p class="mb-1"><a href="/fr/whats-new" class="text-dark text-decoration-none">Nouveaut&eacute;s</a></p>
-          <p class="mb-1"><a href="/fr/about" class="text-dark text-decoration-none">&Agrave; propos de DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Guide de d&eacute;monstration</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Nouveaut&eacute;s</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">&Agrave; propos de DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Contact</p>
-          <p class="mb-1"><a href="/fr/contact-us" class="text-muted text-decoration-none">Contactez-nous</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contactez-nous</a></p>
           </div>
           </div>
           </div>
@@ -263,13 +263,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Tutti i diritti riservati.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/it/guide" class="text-dark text-decoration-none">Guida demo</a></p>
-          <p class="mb-1"><a href="/it/whats-new" class="text-dark text-decoration-none">Novit&agrave;</a></p>
-          <p class="mb-1"><a href="/it/about" class="text-dark text-decoration-none">Informazioni su DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Guida demo</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Novit&agrave;</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Informazioni su DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Contatto</p>
-          <p class="mb-1"><a href="/it/contact-us" class="text-muted text-decoration-none">Contattaci</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contattaci</a></p>
           </div>
           </div>
           </div>
@@ -300,13 +300,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Wszelkie prawa zastrze&#x17C;one.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/pl/guide" class="text-dark text-decoration-none">Przewodnik demo</a></p>
-          <p class="mb-1"><a href="/pl/whats-new" class="text-dark text-decoration-none">Co nowego</a></p>
-          <p class="mb-1"><a href="/pl/about" class="text-dark text-decoration-none">O DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Przewodnik demo</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Co nowego</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">O DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Kontakt</p>
-          <p class="mb-1"><a href="/pl/contact-us" class="text-muted text-decoration-none">Skontaktuj si&#x119; z nami</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Skontaktuj si&#x119; z nami</a></p>
           </div>
           </div>
           </div>
@@ -337,13 +337,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Alla r&auml;ttigheter f&ouml;rbeh&aring;llna.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/sv/guide" class="text-dark text-decoration-none">Demoguide</a></p>
-          <p class="mb-1"><a href="/sv/whats-new" class="text-dark text-decoration-none">Nyheter</a></p>
-          <p class="mb-1"><a href="/sv/about" class="text-dark text-decoration-none">Om DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demoguide</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Nyheter</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Om DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Kontakt</p>
-          <p class="mb-1"><a href="/sv/contact-us" class="text-muted text-decoration-none">Kontakta oss</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Kontakta oss</a></p>
           </div>
           </div>
           </div>
@@ -374,13 +374,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Alle rettigheder forbeholdes.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/da/guide" class="text-dark text-decoration-none">Demovejledning</a></p>
-          <p class="mb-1"><a href="/da/whats-new" class="text-dark text-decoration-none">Nyheder</a></p>
-          <p class="mb-1"><a href="/da/about" class="text-dark text-decoration-none">Om DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demovejledning</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Nyheder</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Om DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Kontakt</p>
-          <p class="mb-1"><a href="/da/contact-us" class="text-muted text-decoration-none">Kontakt os</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Kontakt os</a></p>
           </div>
           </div>
           </div>
@@ -411,13 +411,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Alle rettigheter forbeholdt.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/nb/guide" class="text-dark text-decoration-none">Demoguide</a></p>
-          <p class="mb-1"><a href="/nb/whats-new" class="text-dark text-decoration-none">Hva er nytt</a></p>
-          <p class="mb-1"><a href="/nb/about" class="text-dark text-decoration-none">Om DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demoguide</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Hva er nytt</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Om DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Kontakt</p>
-          <p class="mb-1"><a href="/nb/contact-us" class="text-muted text-decoration-none">Kontakt oss</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Kontakt oss</a></p>
           </div>
           </div>
           </div>
@@ -448,13 +448,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Kaikki oikeudet pid&auml;tet&auml;&auml;n.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/fi/guide" class="text-dark text-decoration-none">Demo-opas</a></p>
-          <p class="mb-1"><a href="/fi/whats-new" class="text-dark text-decoration-none">Uutta</a></p>
-          <p class="mb-1"><a href="/fi/about" class="text-dark text-decoration-none">Tietoa DXPR:st&auml;</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demo-opas</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Uutta</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Tietoa DXPR:st&auml;</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Yhteystiedot</p>
-          <p class="mb-1"><a href="/fi/contact-us" class="text-muted text-decoration-none">Ota yhteytt&auml;</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Ota yhteytt&auml;</a></p>
           </div>
           </div>
           </div>
@@ -485,13 +485,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Todos os direitos reservados.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/pt-pt/guide" class="text-dark text-decoration-none">Guia de demonstra&ccedil;&atilde;o</a></p>
-          <p class="mb-1"><a href="/pt-pt/whats-new" class="text-dark text-decoration-none">Novidades</a></p>
-          <p class="mb-1"><a href="/pt-pt/about" class="text-dark text-decoration-none">Sobre o DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Guia de demonstra&ccedil;&atilde;o</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Novidades</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Sobre o DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Contacto</p>
-          <p class="mb-1"><a href="/pt-pt/contact-us" class="text-muted text-decoration-none">Contacte-nos</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contacte-nos</a></p>
           </div>
           </div>
           </div>
@@ -522,13 +522,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/ja/guide" class="text-dark text-decoration-none">&#x30C7;&#x30E2;&#x30AC;&#x30A4;&#x30C9;</a></p>
-          <p class="mb-1"><a href="/ja/whats-new" class="text-dark text-decoration-none">&#x65B0;&#x6A5F;&#x80FD;</a></p>
-          <p class="mb-1"><a href="/ja/about" class="text-dark text-decoration-none">DXPR&#x306B;&#x3064;&#x3044;&#x3066;</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">&#x30C7;&#x30E2;&#x30AC;&#x30A4;&#x30C9;</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">&#x65B0;&#x6A5F;&#x80FD;</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">DXPR&#x306B;&#x3064;&#x3044;&#x3066;</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</p>
-          <p class="mb-1"><a href="/ja/contact-us" class="text-muted text-decoration-none">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;</a></p>
           </div>
           </div>
           </div>
@@ -559,13 +559,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629;.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/ar/guide" class="text-dark text-decoration-none">&#x62F;&#x644;&#x64A;&#x644; &#x627;&#x644;&#x639;&#x631;&#x636;</a></p>
-          <p class="mb-1"><a href="/ar/whats-new" class="text-dark text-decoration-none">&#x645;&#x627; &#x627;&#x644;&#x62C;&#x62F;&#x64A;&#x62F;</a></p>
-          <p class="mb-1"><a href="/ar/about" class="text-dark text-decoration-none">&#x62D;&#x648;&#x644; DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">&#x62F;&#x644;&#x64A;&#x644; &#x627;&#x644;&#x639;&#x631;&#x636;</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">&#x645;&#x627; &#x627;&#x644;&#x62C;&#x62F;&#x64A;&#x62F;</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">&#x62D;&#x648;&#x644; DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">&#x627;&#x62A;&#x635;&#x644; &#x628;&#x646;&#x627;</p>
-          <p class="mb-1"><a href="/ar/contact-us" class="text-muted text-decoration-none">&#x62A;&#x648;&#x627;&#x635;&#x644; &#x645;&#x639;&#x646;&#x627;</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">&#x62A;&#x648;&#x627;&#x635;&#x644; &#x645;&#x639;&#x646;&#x627;</a></p>
           </div>
           </div>
           </div>
@@ -596,13 +596,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. V&scaron;echna pr&aacute;va vyhrazena.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/cs/guide" class="text-dark text-decoration-none">Pr&#x16F;vodce uk&aacute;zkou</a></p>
-          <p class="mb-1"><a href="/cs/whats-new" class="text-dark text-decoration-none">Co je nov&eacute;ho</a></p>
-          <p class="mb-1"><a href="/cs/about" class="text-dark text-decoration-none">O DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Pr&#x16F;vodce uk&aacute;zkou</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Co je nov&eacute;ho</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">O DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Kontakt</p>
-          <p class="mb-1"><a href="/cs/contact-us" class="text-muted text-decoration-none">Kontaktujte n&aacute;s</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Kontaktujte n&aacute;s</a></p>
           </div>
           </div>
           </div>
@@ -633,13 +633,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Toate drepturile rezervate.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/ro/guide" class="text-dark text-decoration-none">Ghid demo</a></p>
-          <p class="mb-1"><a href="/ro/whats-new" class="text-dark text-decoration-none">Nout&#x103;ți</a></p>
-          <p class="mb-1"><a href="/ro/about" class="text-dark text-decoration-none">Despre DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Ghid demo</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Nout&#x103;ți</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Despre DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Contact</p>
-          <p class="mb-1"><a href="/ro/contact-us" class="text-muted text-decoration-none">Contactați-ne</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contactați-ne</a></p>
           </div>
           </div>
           </div>
@@ -670,13 +670,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. T&uuml;m haklar&#x131; sakl&#x131;d&#x131;r.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/tr/guide" class="text-dark text-decoration-none">Demo rehberi</a></p>
-          <p class="mb-1"><a href="/tr/whats-new" class="text-dark text-decoration-none">Yenilikler</a></p>
-          <p class="mb-1"><a href="/tr/about" class="text-dark text-decoration-none">DXPR Hakk&#x131;nda</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demo rehberi</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Yenilikler</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">DXPR Hakk&#x131;nda</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">&#x130;letişim</p>
-          <p class="mb-1"><a href="/tr/contact-us" class="text-muted text-decoration-none">Bize ulaş&#x131;n</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Bize ulaş&#x131;n</a></p>
           </div>
           </div>
           </div>
@@ -707,13 +707,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/ko/guide" class="text-dark text-decoration-none">&#xB370;&#xBAA8; &#xAC00;&#xC774;&#xB4DC;</a></p>
-          <p class="mb-1"><a href="/ko/whats-new" class="text-dark text-decoration-none">&#xC0C8; &#xC18C;&#xC2DD;</a></p>
-          <p class="mb-1"><a href="/ko/about" class="text-dark text-decoration-none">DXPR &#xC18C;&#xAC1C;</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">&#xB370;&#xBAA8; &#xAC00;&#xC774;&#xB4DC;</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">&#xC0C8; &#xC18C;&#xC2DD;</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">DXPR &#xC18C;&#xAC1C;</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">&#xBB38;&#xC758;</p>
-          <p class="mb-1"><a href="/ko/contact-us" class="text-muted text-decoration-none">&#xBB38;&#xC758;&#xD558;&#xAE30;</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">&#xBB38;&#xC758;&#xD558;&#xAE30;</a></p>
           </div>
           </div>
           </div>
@@ -744,13 +744,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. Hak cipta dilindungi.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/id/guide" class="text-dark text-decoration-none">Panduan demo</a></p>
-          <p class="mb-1"><a href="/id/whats-new" class="text-dark text-decoration-none">Yang baru</a></p>
-          <p class="mb-1"><a href="/id/about" class="text-dark text-decoration-none">Tentang DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Panduan demo</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">Yang baru</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">Tentang DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">Kontak</p>
-          <p class="mb-1"><a href="/id/contact-us" class="text-muted text-decoration-none">Hubungi kami</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Hubungi kami</a></p>
           </div>
           </div>
           </div>
@@ -781,13 +781,13 @@ translations:
           <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
           </div>
           <div class="col-12 col-md-4">
-          <p class="mb-1"><a href="/zh-hans/guide" class="text-dark text-decoration-none">&#x6F14;&#x793A;&#x6307;&#x5357;</a></p>
-          <p class="mb-1"><a href="/zh-hans/whats-new" class="text-dark text-decoration-none">&#x6700;&#x65B0;&#x52A8;&#x6001;</a></p>
-          <p class="mb-1"><a href="/zh-hans/about" class="text-dark text-decoration-none">&#x5173;&#x4E8E; DXPR</a></p>
+          <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">&#x6F14;&#x793A;&#x6307;&#x5357;</a></p>
+          <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">&#x6700;&#x65B0;&#x52A8;&#x6001;</a></p>
+          <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">&#x5173;&#x4E8E; DXPR</a></p>
           </div>
           <div class="col-12 col-md-4">
           <p class="fw-semibold mb-1">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</p>
-          <p class="mb-1"><a href="/zh-hans/contact-us" class="text-muted text-decoration-none">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</a></p>
+          <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">&#x8054;&#x7CFB;&#x6211;&#x4EEC;</a></p>
           </div>
           </div>
           </div>

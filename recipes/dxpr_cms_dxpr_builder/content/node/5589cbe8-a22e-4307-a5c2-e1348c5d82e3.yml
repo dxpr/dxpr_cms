@@ -143,7 +143,7 @@ default:
         <div class="row">
         <div class="col-12 col-md-8 mx-auto">
         <ol class="lead">
-        <li class="mb-3">Open the <a href="/empty-dxpr-builder-page">empty DXPR Builder page</a> and generate content with the AI button</li>
+        <li class="mb-3">Open the <a href="/empty-dxpr-builder-page" data-entity-type="node" data-entity-uuid="9c76ff5e-7def-4611-bf22-69cd76a95a79">empty DXPR Builder page</a> and generate content with the AI button</li>
         <li class="mb-3">Browse the <a href="/blog">blog</a> to see structured content in action</li>
         <li class="mb-3">Edit any landing page and try the drag-and-drop editor</li>
         <li class="mb-3">Check the <a href="/admin/content">content overview</a> to see all available content types</li>
