@@ -49,8 +49,6 @@ config:
   # what it looks like.
   strict: false
   import:
-    linkit:
-      - image.style.linkit_result_thumbnail
     image:
       - image.style.large
       - image.style.thumbnail
