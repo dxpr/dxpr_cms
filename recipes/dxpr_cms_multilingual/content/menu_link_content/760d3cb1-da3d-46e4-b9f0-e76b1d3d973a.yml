@@ -56,7 +56,7 @@ translations:
   de:
     title:
       -
-        value: "&Uuml;ber DXPR"
+        value: "Über DXPR"
     link:
       -
         uri: 'internal:/about'
@@ -65,7 +65,7 @@ translations:
   fr:
     title:
       -
-        value: "&Agrave; propos de DXPR"
+        value: "À propos de DXPR"
     link:
       -
         uri: 'internal:/about'

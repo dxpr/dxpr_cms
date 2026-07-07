@@ -65,7 +65,7 @@ translations:
   fr:
     title:
       -
-        value: "Guide de d&eacute;monstration"
+        value: "Guide de démonstration"
     link:
       -
         uri: 'internal:/guide'
@@ -128,7 +128,7 @@ translations:
   pt-pt:
     title:
       -
-        value: "Guia de demonstra&ccedil;&atilde;o"
+        value: "Guia de demonstração"
     link:
       -
         uri: 'internal:/guide'

@@ -65,7 +65,7 @@ translations:
   fr:
     title:
       -
-        value: "Nouveaut&eacute;s"
+        value: "Nouveautés"
     link:
       -
         uri: 'internal:/whats-new'
@@ -74,7 +74,7 @@ translations:
   it:
     title:
       -
-        value: "Novit&agrave;"
+        value: "Novità"
     link:
       -
         uri: 'internal:/whats-new'
