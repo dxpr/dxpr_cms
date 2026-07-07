@@ -50,7 +50,7 @@ Keys: base, basetext, link, accent1, accent1text, accent2, accent2text, text, he
 
 ## Theme vs Content Responsibility
 
-DXPR Theme (dxt) owns the visual baseline: heading weight, text colors, backgrounds, font sizes. Content markup (dxb) inherits these automatically. Configure the theme FIRST — don't compensate with utility classes in content.
+DXPR Theme (dxt) owns the visual baseline: heading weight, text colors, backgrounds, font sizes. Content markup (dxb) inherits these automatically. Configure the theme FIRST: don't compensate with utility classes in content.
 
 ## Workflow
 

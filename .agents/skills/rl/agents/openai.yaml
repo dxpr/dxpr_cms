@@ -1,4 +1,4 @@
 display_name: "RL Experiments"
-description: "Manage A/B testing experiments via Drush CLI — create, analyze, configure Thompson Sampling multi-armed bandit experiments."
+description: "Manage A/B testing experiments via Drush CLI: create, analyze, configure Thompson Sampling multi-armed bandit experiments."
 default_prompt: "List all RL experiments and their current status."
 allow_implicit_invocation: true

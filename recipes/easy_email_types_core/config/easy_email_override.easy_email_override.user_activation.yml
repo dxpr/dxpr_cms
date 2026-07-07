@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: user_activation
 label: 'User: Account Activation'
 module: user
