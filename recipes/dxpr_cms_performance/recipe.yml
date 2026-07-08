@@ -19,6 +19,10 @@ config:
         cache:
           page:
             max_age: 86400
+        css:
+          compress: true
+        js:
+          compress: true
     speculative_loading.settings:
       simple_config_update:
         mode: prerender
