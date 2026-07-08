@@ -143,9 +143,9 @@ header_side_width: '350'
 hamburger_menu: two-dash
 menu_type: ''
 menu_link_spacing: '20'
-menu_hover: text
+menu_hover: border
 menu_border_position: bottom
-menu_border_animate: drop
+menu_border_animate: ''
 menu_border_position_offset: '0'
 menu_border_position_offset_sticky: '0'
 menu_border_size: '2'
