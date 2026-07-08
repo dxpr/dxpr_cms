@@ -49,17 +49,17 @@ default:
       tag: link
       attributes:
         rel: shortlink
-        href: 'https://dxpr-cms.ddev.site:8443/'
+        href: '/'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://dxpr-cms.ddev.site:8443/home'
+        href: '/home'
     -
       tag: link
       attributes:
         rel: image_src
-        href: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+        href: '/-files-directory-/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
     -
       tag: meta
       attributes:
@@ -84,7 +84,7 @@ default:
       tag: meta
       attributes:
         property: 'og:url'
-        content: 'https://dxpr-cms.ddev.site:8443/home'
+        content: '/home'
     -
       tag: meta
       attributes:
@@ -94,7 +94,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
+        content: '/-files-directory-/styles/social_media_facebook/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=cpnKqTB6'
     -
       tag: meta
       attributes:
@@ -134,7 +134,7 @@ default:
       tag: meta
       attributes:
         name: 'twitter:image'
-        content: 'https://dxpr-cms.ddev.site:8443/sites/default/files/styles/social_media_x/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=FeHTCNyu'
+        content: '/-files-directory-/styles/social_media_x/public/2024-12/Government-building-EU-flag-credit-pexels-gintare-kairaityte-11923111-17178100.webp?h=10d202d3&itok=FeHTCNyu'
     -
       tag: meta
       attributes:

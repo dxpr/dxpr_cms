@@ -13,7 +13,7 @@ default:
   uri:
     -
       value: 'public://2024-12/unsplash_John_Schnobrich.webp'
-      url: /sites/default/files/2024-12/unsplash_John_Schnobrich.webp
+      url: /-files-directory-/2024-12/unsplash_John_Schnobrich.webp
   filemime:
     -
       value: image/webp
