@@ -37,8 +37,6 @@ config:
         suppress_404: true
     system.performance:
       simpleConfigUpdate:
-        # Ensure caching is on and set to 15 minutes for Lighthouse.
-        cache.page.max_age: 900
         # Ensure CSS and JS are preprocessed.
         css.preprocess: true
         js.preprocess: true
