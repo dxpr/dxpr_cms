@@ -189,7 +189,7 @@ features:
   favicon: 1
   node_user_picture: 1
 logo:
-  path: sites/default/files/dxpr-logo.svg
+  path: 'public://dxpr-logo.svg'
   url: ''
   use_default: 0
 previous_label: Previous
