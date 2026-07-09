@@ -1,12 +1,12 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: user_cancellation_confirmation
 label: 'User: Account Cancellation Confirmation'
 key: ''
-recipient: {  }
-cc: {  }
-bcc: {  }
+recipient: {}
+cc: {}
+bcc: {}
 fromName: ''
 fromAddress: ''
 replyToAddress: ''
@@ -17,7 +17,7 @@ bodyHtml:
   format: easy_email
 bodyPlain: "[easy_email:recipient_uid:0:entity:display-name]\r\n\r\nA request to cancel your account has been made at [site:name].\r\n\r\nYou may now cancel your account on [site:url-brief] by clicking this link or copying and pasting it into your browser:\r\n\r\n[easy_email:recipient_uid:0:entity:cancel-url]\r\n\r\nNOTE: The cancellation of your account is not reversible.\r\n\r\nThis link expires in one day and nothing will happen if it is not used.\r\n\r\n--  [site:name] team"
 generateBodyPlain: false
-attachment: {  }
+attachment: {}
 saveAttachment: false
 attachmentScheme: public
 attachmentDirectory: ''
