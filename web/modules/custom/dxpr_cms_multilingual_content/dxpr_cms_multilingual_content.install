@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for DXPR CMS Multilingual Content module.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_install().
+ *
+ * Swaps standard language filters in Views with the language_hierarchy
+ * fallback filter so that untranslated content falls back through
+ * the configured language chain instead of showing empty listings.
+ */
+function dxpr_cms_multilingual_content_install(): void {
+  if (!\Drupal::moduleHandler()->moduleExists('language_hierarchy')) {
+    return;
+  }
+
+  $view_storage = \Drupal::entityTypeManager()->getStorage('view');
+  $views = $view_storage->loadMultiple();
+
+  foreach ($views as $view) {
+    $display = $view->get('display');
+    $changed = FALSE;
+
+    foreach ($display as $display_id => &$display_config) {
+      $filters = $display_config['display_options']['filters'] ?? [];
+
+      foreach ($filters as $filter_id => $filter) {
+        if (($filter['plugin_id'] ?? '') !== 'language'
+            || ($filter['entity_field'] ?? '') !== 'langcode') {
+          continue;
+        }
+
+        $value = $filter['value'] ?? [];
+        $is_interface = is_array($value)
+          && isset($value['***LANGUAGE_language_interface***']);
+
+        if (!$is_interface) {
+          continue;
+        }
+
+        unset($display_config['display_options']['filters'][$filter_id]);
+
+        $display_config['display_options']['filters']['language_hierarchy_content_language_fallback_limited_langcode'] = [
+          'id' => 'language_hierarchy_content_language_fallback_limited_langcode',
+          'table' => $filter['table'],
+          'field' => 'language_hierarchy_content_language_fallback_limited_langcode',
+          'relationship' => 'none',
+          'group_type' => 'group',
+          'admin_label' => '',
+          'plugin_id' => 'language_hierarchy_content_language_fallback_limited',
+          'value' => '1',
+          'group' => $filter['group'] ?? 1,
+          'exposed' => FALSE,
+          'is_grouped' => FALSE,
+        ];
+        $changed = TRUE;
+      }
+    }
+    unset($display_config);
+
+    if ($changed) {
+      $deps = $view->get('dependencies');
+      if (!in_array('language_hierarchy', $deps['module'] ?? [], TRUE)) {
+        $deps['module'][] = 'language_hierarchy';
+        $view->set('dependencies', $deps);
+      }
+      $view->set('display', $display);
+      $view->save();
+    }
+  }
+}
