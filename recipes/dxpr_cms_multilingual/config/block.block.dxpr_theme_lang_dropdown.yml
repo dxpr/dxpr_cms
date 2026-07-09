@@ -8,7 +8,7 @@ dependencies:
     - dxpr_theme
 third_party_settings:
   block_classes:
-    block_class: small
+    block_class: 'small mx-3 float-end'
 id: dxpr_theme_lang_dropdown
 theme: dxpr_theme
 region: secondary_header
