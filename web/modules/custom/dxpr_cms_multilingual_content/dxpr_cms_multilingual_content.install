@@ -19,6 +19,38 @@ function dxpr_cms_multilingual_content_install(): void {
     return;
   }
 
+  _dxpr_cms_multilingual_content_configure_fallback_chains();
+  _dxpr_cms_multilingual_content_swap_views_filters();
+}
+
+/**
+ * Configures language_hierarchy fallback chains for all installed languages.
+ */
+function _dxpr_cms_multilingual_content_configure_fallback_chains(): void {
+  $overrides = [
+    'nl-be' => 'nl',
+  ];
+  $default_langcode = \Drupal::languageManager()->getDefaultLanguage()->getId();
+
+  $languages = \Drupal::entityTypeManager()
+    ->getStorage('configurable_language')
+    ->loadMultiple();
+
+  foreach ($languages as $language) {
+    $langcode = $language->id();
+    if ($langcode === $default_langcode) {
+      continue;
+    }
+    $fallback = $overrides[$langcode] ?? $default_langcode;
+    $language->setThirdPartySetting('language_hierarchy', 'fallback_langcode', $fallback);
+    $language->save();
+  }
+}
+
+/**
+ * Swaps standard language filters in Views with language_hierarchy fallback.
+ */
+function _dxpr_cms_multilingual_content_swap_views_filters(): void {
   $view_storage = \Drupal::entityTypeManager()->getStorage('view');
   $views = $view_storage->loadMultiple();
 

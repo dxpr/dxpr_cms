@@ -18,6 +18,10 @@ use Drupal\dxpr_cms_multilingual_content\EventSubscriber\TranslationMergeSubscri
  * existing entities.
  */
 function dxpr_cms_multilingual_content_configurable_language_insert(ConfigurableLanguageInterface $language): void {
+  if (\Drupal::moduleHandler()->moduleExists('language_hierarchy')) {
+    _dxpr_cms_multilingual_content_set_language_fallback($language);
+  }
+
   try {
     $data = TranslationMergeSubscriber::loadRecipeContentData();
     if (empty($data)) {
@@ -33,4 +37,23 @@ function dxpr_cms_multilingual_content_configurable_language_insert(Configurable
       ['@langcode' => $language->getId(), '@error' => $e->getMessage()]
     );
   }
+}
+
+/**
+ * Sets the language_hierarchy fallback for a language entity.
+ */
+function _dxpr_cms_multilingual_content_set_language_fallback(ConfigurableLanguageInterface $language): void {
+  $overrides = [
+    'nl-be' => 'nl',
+  ];
+  $langcode = $language->id();
+  $default_langcode = \Drupal::languageManager()->getDefaultLanguage()->getId();
+
+  if ($langcode === $default_langcode) {
+    return;
+  }
+
+  $fallback = $overrides[$langcode] ?? $default_langcode;
+  $language->setThirdPartySetting('language_hierarchy', 'fallback_langcode', $fallback);
+  $language->save();
 }

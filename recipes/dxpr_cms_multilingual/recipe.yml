@@ -73,20 +73,6 @@ config:
           key: bundle_settings
           value:
             untranslatable_fields_hide: '1'
-    # Set all languages to fall back to English by default.
-    language.entity.*:
-      setThirdPartySettings:
-        -
-          module: language_hierarchy
-          key: fallback_langcode
-          value: en
-    # Override nl-be to fall back to Dutch first.
-    language.entity.nl-be:
-      setThirdPartySettings:
-        -
-          module: language_hierarchy
-          key: fallback_langcode
-          value: nl
     ai_translate.settings:
       simpleConfigUpdate:
         reference_defaults:
