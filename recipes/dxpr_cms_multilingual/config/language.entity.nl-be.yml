@@ -1,9 +1,6 @@
 langcode: en
 status: true
 dependencies: {}
-third_party_settings:
-  language_hierarchy:
-    fallback_langcode: nl
 id: nl-be
 label: Vlaams
 direction: ltr
