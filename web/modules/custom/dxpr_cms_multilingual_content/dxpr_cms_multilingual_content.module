@@ -9,15 +9,27 @@ declare(strict_types=1);
 
 use Drupal\language\ConfigurableLanguageInterface;
 use Drupal\dxpr_cms_multilingual_content\EventSubscriber\TranslationMergeSubscriber;
+use Drupal\views\ViewEntityInterface;
 
 /**
  * Implements hook_ENTITY_TYPE_insert() for configurable_language.
- *
- * When a new language is added (e.g. during multilingual install), scan the
- * multilingual recipe content and add translations for that language to any
- * existing entities.
  */
 function dxpr_cms_multilingual_content_configurable_language_insert(ConfigurableLanguageInterface $language): void {
+  if (\Drupal::moduleHandler()->moduleExists('language_hierarchy')) {
+    _dxpr_cms_multilingual_content_set_language_fallback($language);
+
+    // When Dutch is added, update nl-be to fall back to nl instead of en.
+    if ($language->id() === 'nl') {
+      $nlBe = \Drupal::entityTypeManager()
+        ->getStorage('configurable_language')
+        ->load('nl-be');
+      if ($nlBe) {
+        $nlBe->setThirdPartySetting('language_hierarchy', 'fallback_langcode', 'nl');
+        $nlBe->save();
+      }
+    }
+  }
+
   try {
     $data = TranslationMergeSubscriber::loadRecipeContentData();
     if (empty($data)) {
@@ -32,5 +44,102 @@ function dxpr_cms_multilingual_content_configurable_language_insert(Configurable
       'Translation merge failed for @langcode: @error',
       ['@langcode' => $language->getId(), '@error' => $e->getMessage()]
     );
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for view.
+ *
+ * Swaps standard language filters with language_hierarchy fallback filters
+ * on views imported after module install (e.g. from later recipe application).
+ */
+function dxpr_cms_multilingual_content_view_insert(ViewEntityInterface $view): void {
+  if (!\Drupal::moduleHandler()->moduleExists('language_hierarchy')) {
+    return;
+  }
+  _dxpr_cms_multilingual_content_swap_view_language_filter($view);
+}
+
+/**
+ * Sets the language_hierarchy fallback for a language entity.
+ *
+ * Regional variants (e.g. nl-be) fall back to their parent language if it is
+ * installed, otherwise to the site default language.
+ */
+function _dxpr_cms_multilingual_content_set_language_fallback(ConfigurableLanguageInterface $language): void {
+  $overrides = [
+    'nl-be' => 'nl',
+  ];
+  $langcode = $language->id();
+  $default_langcode = \Drupal::languageManager()->getDefaultLanguage()->getId();
+
+  if ($langcode === $default_langcode) {
+    return;
+  }
+
+  $fallback = $default_langcode;
+  if (isset($overrides[$langcode])) {
+    $target = $overrides[$langcode];
+    $exists = \Drupal::entityTypeManager()
+      ->getStorage('configurable_language')
+      ->load($target);
+    if ($exists) {
+      $fallback = $target;
+    }
+  }
+
+  $language->setThirdPartySetting('language_hierarchy', 'fallback_langcode', $fallback);
+  $language->save();
+}
+
+/**
+ * Swaps the standard language interface filter with language_hierarchy fallback.
+ */
+function _dxpr_cms_multilingual_content_swap_view_language_filter(ViewEntityInterface $view): void {
+  $display = $view->get('display');
+  $changed = FALSE;
+
+  foreach ($display as $display_id => &$display_config) {
+    $filters = $display_config['display_options']['filters'] ?? [];
+
+    foreach ($filters as $filter_id => $filter) {
+      if (($filter['plugin_id'] ?? '') !== 'language'
+          || ($filter['entity_field'] ?? '') !== 'langcode') {
+        continue;
+      }
+
+      $value = $filter['value'] ?? [];
+      if (!is_array($value) || !isset($value['***LANGUAGE_language_interface***'])) {
+        continue;
+      }
+
+      unset($display_config['display_options']['filters'][$filter_id]);
+
+      $display_config['display_options']['filters']['language_hierarchy_content_language_fallback_limited_langcode'] = [
+        'id' => 'language_hierarchy_content_language_fallback_limited_langcode',
+        'table' => $filter['table'],
+        'field' => 'language_hierarchy_content_language_fallback_limited_langcode',
+        'relationship' => 'none',
+        'group_type' => 'group',
+        'admin_label' => '',
+        'plugin_id' => 'language_hierarchy_content_language_fallback_limited',
+        'value' => '1',
+        'group' => $filter['group'] ?? 1,
+        'exposed' => FALSE,
+        'is_grouped' => FALSE,
+      ];
+      $changed = TRUE;
+    }
+  }
+  unset($display_config);
+
+  if ($changed) {
+    $deps = $view->get('dependencies');
+    if (!in_array('language_hierarchy', $deps['module'] ?? [], TRUE)) {
+      $deps['module'][] = 'language_hierarchy';
+      $view->set('dependencies', $deps);
+    }
+    $view->set('display', $display);
+    $view->save();
   }
 }

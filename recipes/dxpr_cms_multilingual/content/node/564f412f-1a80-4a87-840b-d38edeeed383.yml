@@ -133,6 +133,48 @@ translations:
     field_dth_hide_regions:
       -
         value: page_title
+  nl-be:
+    status:
+      -
+        value: true
+    uid:
+      -
+        target_id: 1
+    title:
+      -
+        value: "Thuis"
+    created:
+      -
+        value: 1680675002
+    promote:
+      -
+        value: true
+    sticky:
+      -
+        value: false
+    moderation_state:
+      -
+        value: published
+    path:
+      -
+        alias: /home
+        langcode: nl-be
+        pathauto: 0
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
+    field_content:
+      -
+        value: |
+          <div class="az-section py-5 text-center" data-azb id=d8ywy1 style=background-image:url(-base-url-/-files-directory-/marketing-bg/try-dxpr-bg-pastel-blobs.png)><div class=container-fluid><div class="row align-items-start" data-azb id=Emxfvu><div class="col-6 col-12 col-md-12 py-5" data-azb id=K15g61><div class=az-icon data-azb data-dxpr-builder-libraries=icon_helpers id=Wzg1c1><i class="az-icon-content fa-lg"></i></div><div class="az-image py-5" data-azb id=y77nay><img alt="DXPR logo" class=az-image-content src=-base-url-/-files-directory-/dxpr-logo.svg></div><div class="az-element az-text ck-content py-5" data-azb=az_text id=Omiqu1><h1 class="display-4 fw-bold mb-4">Den AI-native Drupal<br>paginabouwer is geland!</h1><p class="lead text-muted mb-5">Vertelt wa ge wilt, en kijkt hoe DXPR AI<br>da proper in mekaar steekt met structuur, best practices en precisie. </p></div></div></div></div></div><div class="az-section py-5 text-center" data-azb id=ts0uu7><div class=container><div class="row align-items-start" data-azb id=o86ac5><div class="col-6 col-2 col-md-2" data-azb id=d2mzlu></div><div class="col-6 col-8 col-md-8" data-azb id=u3z1hr><div class="az-element az-text ck-content py-5" data-azb=az_text id=nh04lq><h2>DXPR Builder 3 is van de grond af herwerkt voor de volgende generatie Drupal-contentcreatie. Da's pas proper werk.</h2><p class="text-muted mb-5 lead">Kijkt hoe AI uw pagina in mekaar bokst. Vijlt elke sectie visueel bij. En publiceert dan gewoon met de Drupal-rechten, revisies, vertalingen en workflows waar uw organisatie al op draait.</p></div></div><div class="col-6 col-2 col-md-2" data-azb id=ukh488></div></div><div class="row g-4 align-items-start" data-azb id=Bp53dk><div class="col-6 col-md-4" data-azb id=Ijhvu8><div class="az-element az-card card border-0 shadow-sm rounded-4 p-4 h-100 text-start" data-azb=az_card id=Dtwlom><div class=card-body><div class=az-ctnr data-azcnt=true><div class="az-element az-text ck-content mb-3" data-azb=az_text id=Zjpywu><h4 class=fw-bold>Van idee naar pagina, plansen maar</h4></div><div class="az-element az-text ck-content" data-azb=az_text id=Azakbi><p class="text-muted small">Genereert complete pagina's, herschrijft secties, vertaalt content, maakt afbeeldingen en bouwt herbruikbare lay-outs zonder van een wit blad te moeten vertrekken.</p></div><div class=az-image data-azb id=Wlg5c9><img alt="DXPR Builder UI: AI-generatieprompt" src=-base-url-/-files-directory-/dxpr-builder-ui-ai-generate.png class=az-image-content></div></div></div></div></div><div class="col-6 col-md-4" data-azb id=Lyz1gn><div class="az-element az-card card border-0 shadow-sm rounded-4 p-4 h-100 text-start" data-azb=az_card id=Cm1s1e><div class=card-body><div class=az-ctnr data-azcnt=true><div class="az-element az-text ck-content mb-3" data-azb=az_text id=V651ku><h4 class=fw-bold>Bewerken met goesting</h4></div><div class="az-element az-text ck-content" data-azb=az_text id=Npzbyt><p class="text-muted small">Een vernieuwde interface gericht op WCAG 2.2 AAA geeft contentteams een properder, rapper en veel toegankelijker manier van bouwen.</p></div><div class=az-image data-azb id=upashw><img alt="DXPR Builder UI: AI-chat" src=-base-url-/-files-directory-/dxpr-builder-ui-ai-chat.png class=az-image-content></div></div></div></div></div><div class="col-6 col-md-4" data-azb id=Th6bej><div class="az-element az-card card border-0 shadow-sm rounded-4 p-4 h-100 text-start" data-azb=az_card id=gmpclm><div class=card-body><div class=az-ctnr data-azcnt=true><div class="az-element az-text ck-content mb-3" data-azb=az_text id=e5oexo><h4 class=fw-bold>Drupal blijft de baas</h4></div><div class="az-element az-text ck-content" data-azb=az_text id=Lw3suq><p class="text-muted small">Uw content blijft gestructureerd, overdraagbaar en beheerd door Drupal, met propere Bootstrap 5 HTML in plaats van ne hoop eigen paginabouwer-gedoe.</p></div><div class=az-image data-azb id=Is9tnz><img alt="DXPR Builder UI: Inline bewerken" class=az-image-content src=-base-url-/-files-directory-/dxpr-builder-ui-inline-editing.png></div></div></div></div></div></div></div></div>
+        format: dxpr_builder_html
+        summary: ''
+    field_dth_hide_regions:
+      -
+        value: page_title
   zh-hans:
     status:
       -

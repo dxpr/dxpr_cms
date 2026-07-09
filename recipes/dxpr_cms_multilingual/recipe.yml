@@ -21,6 +21,7 @@ install:
   - tmgmt_config
   - ai_tmgmt
   - ai_translate
+  - language_hierarchy
   - user
   - dxpr_cms_multilingual_content
 config:

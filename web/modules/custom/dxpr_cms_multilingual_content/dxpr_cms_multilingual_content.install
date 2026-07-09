@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for DXPR CMS Multilingual Content module.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_install().
+ *
+ * Configures language_hierarchy fallback chains for all installed languages
+ * and swaps standard language filters in Views with the language_hierarchy
+ * fallback filter. Languages and views created after install are handled by
+ * hook_configurable_language_insert() and hook_view_insert() in the .module.
+ */
+function dxpr_cms_multilingual_content_install(): void {
+  if (!\Drupal::moduleHandler()->moduleExists('language_hierarchy')) {
+    return;
+  }
+
+  $default_langcode = \Drupal::languageManager()->getDefaultLanguage()->getId();
+  $languages = \Drupal::entityTypeManager()
+    ->getStorage('configurable_language')
+    ->loadMultiple();
+
+  foreach ($languages as $language) {
+    if ($language->id() === $default_langcode) {
+      continue;
+    }
+    _dxpr_cms_multilingual_content_set_language_fallback($language);
+  }
+
+  $views = \Drupal::entityTypeManager()->getStorage('view')->loadMultiple();
+  foreach ($views as $view) {
+    _dxpr_cms_multilingual_content_swap_view_language_filter($view);
+  }
+}
