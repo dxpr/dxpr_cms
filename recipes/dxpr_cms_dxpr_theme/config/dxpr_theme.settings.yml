@@ -109,8 +109,8 @@ header_top_layout: '0'
 header_style: normal
 header_top_bg_opacity: '1'
 header_top_height: '60'
-header_top_fixed: 1
-header_top_sticky: 1
+header_top_fixed: 0
+header_top_sticky: 0
 header_top_sticky_show: always
 header_top_height_sticky_offset: '60'
 header_top_height_scroll: '50'
