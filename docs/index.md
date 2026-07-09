@@ -17,7 +17,7 @@ DXPR CMS combines Drupal with [DXPR Builder](https://www.drupal.org/project/dxpr
 
 - **No-Code Page Builder** - Create pages with drag-and-drop using DXPR Builder
 - **AI Integration** - AI-powered content creation, translation, image alt text, brand voice analysis, and inline CKEditor assistance via the DXPR AI platform
-- **Multilingual** - 21 languages with demo content, translation fallback hierarchies via language_hierarchy, compact language switcher dropdown, and AI-powered translation through TMGMT
+- **Multilingual** - Supports all Drupal languages with pre-translated demo content, translation fallback hierarchies via language_hierarchy, compact language switcher dropdown, and AI-powered translation through TMGMT
 - **HTML Email** - Easy Email replaces plain-text core emails with themeable HTML templates
 - **Marketing Tools** - SEO, analytics, A/B testing with reinforcement learning
 - **Enterprise Ready** - Scalable, secure, content moderation, and scheduled publishing
