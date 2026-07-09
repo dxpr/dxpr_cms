@@ -4,8 +4,8 @@ DXPR CMS is a Drupal distribution built on the
 [Drupal recipe system](https://www.drupal.org/docs/extending-drupal/drupal-recipes).
 It bundles [DXPR Builder](https://www.drupal.org/project/dxpr_builder) (drag-and-drop
 page builder), [DXPR Theme](https://www.drupal.org/project/dxpr_theme), and a curated
-set of modules for content management, SEO, analytics, multilingual support, and
-AI-assisted workflows.
+set of modules for content management, SEO, analytics, multilingual support,
+AI-assisted workflows, and HTML email.
 
 ## Getting started
 
@@ -78,17 +78,23 @@ ddev drush recipe ../recipes/dxpr_cms_news
 ddev drush recipe ../recipes/dxpr_cms_multilingual
 ddev drush recipe ../recipes/dxpr_cms_google_analytics
 ddev drush recipe ../recipes/dxpr_cms_seo_tools
+ddev drush recipe ../recipes/easy_email_express
 ```
 
 ### Advanced: multilingual installation
 
 When including the Multilingual recipe via command line, specify additional
-languages with their language codes:
+languages with their language codes. The multilingual recipe ships demo
+homepage translations for 21 languages and configures translation fallback
+hierarchies (e.g. regional variants fall back to their parent language)
+via [language_hierarchy](https://www.drupal.org/project/language_hierarchy):
 
 ```bash
 ddev drush site-install dxpr_cms_installer \
   "installer_recipes_form.add_ons=Multilingual" \
   "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.de=de" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.fr=fr" \
   "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
   dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y
 ```

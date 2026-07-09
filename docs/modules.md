@@ -111,8 +111,11 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 
 ## Multilingual & Translation
 
+- **[ai_translate](https://drupal.org/project/ai_translate)** - AI-powered translation using configurable language models for high-quality automated content translation
+- **[ai_tmgmt](https://drupal.org/project/ai_tmgmt)** - AI translation provider for TMGMT enabling automated translation jobs through the AI framework
+- **[lang_dropdown](https://drupal.org/project/lang_dropdown)** - Language switcher as a compact select dropdown widget, replacing the default language block
+- **[language_hierarchy](https://drupal.org/project/language_hierarchy)** - Defines parent/child relationships between languages so regional variants (e.g. nl-be) fall back to their parent language (e.g. nl) for untranslated content
 - **[tmgmt](https://drupal.org/project/tmgmt)** - Translation Management Tool for managing translation workflows with translator assignment and review
-- **[tmgmt_google](https://drupal.org/project/tmgmt_google)** - Translation provider integration for TMGMT with DXPR AI Platform providing automated translation with post-editing capabilities
 
 ## Performance
 
@@ -123,8 +126,14 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 
 - **[klaro](https://drupal.org/project/klaro)** - Privacy-focused consent manager for GDPR compliance with customizable cookie consent interface
 
+## Email
+
+- **[easy_email](https://drupal.org/project/easy_email)** - HTML email framework replacing plain-text core emails with themeable, configurable HTML email templates
+- **easy_email_express** - Opinionated Easy Email setup that replaces all core emails with HTML formatted emails (submodule of [easy_email](https://drupal.org/project/easy_email))
+
 ## Utility & Helper Modules
 
+- **[ace_editor](https://drupal.org/project/ace_editor)** - Code editor integration providing syntax highlighting for HTML, CSS, and other formats in text areas
 - **[automatic_updates](https://drupal.org/project/automatic_updates)** - Automated security updates for Drupal core and contrib modules keeping sites secure
 - **[bpmn_io](https://drupal.org/project/bpmn_io)** - BPMN diagram viewer and editor for ECA workflows enabling visual workflow design
 - **[eca](https://drupal.org/project/eca)** - Event-Condition-Action framework for creating automated workflows without custom code requirements
@@ -133,10 +142,13 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **eca_render** - ECA plugins for rendering and display-related workflows (submodule of [eca](https://drupal.org/project/eca))
 - **[menu_link_attributes](https://drupal.org/project/menu_link_attributes)** - Add custom attributes to menu links including classes, target, and rel attributes
 - **[token](https://drupal.org/project/token)** - Token system providing placeholders for dynamic content replacement throughout the site
+- **[default_content](https://drupal.org/project/default_content)** - Import and export default content as YAML files, used by recipes to ship demo content
+- **[project_browser](https://drupal.org/project/project_browser)** - Browse and install Drupal modules directly from the admin UI without using the command line
+- **[token](https://drupal.org/project/token)** - Token system providing placeholders for dynamic content replacement throughout the site
 - **[token_or](https://drupal.org/project/token_or)** - Token OR logic allowing fallback tokens when primary tokens have no value
 
 ---
 
-*This comprehensive list includes all modules pre-configured in DXPR CMS, organized by functionality to help you understand the platform's capabilities.*
+*This comprehensive list includes all modules pre-configured in DXPR CMS, organised by functionality to help you understand the platform's capabilities.*
 
-*Last updated: September 2025*
+*Last updated: July 2026*
