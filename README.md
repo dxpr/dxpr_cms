@@ -84,8 +84,7 @@ ddev drush recipe ../recipes/easy_email_express
 ### Advanced: multilingual installation
 
 When including the Multilingual recipe via command line, specify additional
-languages with their language codes. The multilingual recipe ships pre-translated
-demo content and configures translation fallback
+languages with their language codes. The multilingual recipe configures translation fallback
 hierarchies (e.g. regional variants fall back to their parent language)
 via [language_hierarchy](https://www.drupal.org/project/language_hierarchy):
 
