@@ -216,7 +216,7 @@ ddev drush recipe ../recipes/dxpr_cms_seo_tools
 ddev drush recipe ../recipes/easy_email_express</code></pre>
 
 <h3>Advanced: multilingual installation</h3>
-<p>When including the Multilingual recipe via command line, specify additional languages with their language codes. The multilingual recipe ships pre-translated demo content and configures translation fallback hierarchies (e.g. regional variants fall back to their parent language) via <a href="https://www.drupal.org/project/language_hierarchy">language_hierarchy</a>:</p>
+<p>When including the Multilingual recipe via command line, specify additional languages with their language codes:</p>
 <pre><code>ddev drush site-install dxpr_cms_installer \
   "installer_recipes_form.add_ons=Multilingual" \
   "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
