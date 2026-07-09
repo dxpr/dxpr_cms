@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: user_created_approval_admin
 label: 'User: Created - Awaiting Approval - Admin Notification'
 module: user

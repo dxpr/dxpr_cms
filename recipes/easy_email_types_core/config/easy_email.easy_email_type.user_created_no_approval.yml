@@ -1,12 +1,12 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: user_created_no_approval
 label: 'User: Created - No Approval Required'
 key: ''
-recipient: {}
-cc: {}
-bcc: {}
+recipient: {  }
+cc: {  }
+bcc: {  }
 fromName: ''
 fromAddress: ''
 replyToAddress: ''
@@ -17,7 +17,7 @@ bodyHtml:
   format: easy_email
 bodyPlain: "[easy_email:recipient_uid:0:entity:display-name],\r\n\r\nThank you for registering at [site:name]. You may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n[easy_email:recipient_uid:0:entity:one-time-login-url]\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password.\r\n\r\nAfter setting your password, you will be able to log in at [site:login-url] in the future using:\r\n\r\nusername: [easy_email:recipient_uid:0:entity:name]\r\npassword: Your password\r\n\r\n--  [site:name] team"
 generateBodyPlain: false
-attachment: {}
+attachment: {  }
 saveAttachment: false
 attachmentScheme: public
 attachmentDirectory: ''

@@ -1,12 +1,12 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: user_created_awaiting_approval
 label: 'User: Created - Awaiting Approval'
 key: ''
-recipient: {}
-cc: {}
-bcc: {}
+recipient: {  }
+cc: {  }
+bcc: {  }
 fromName: ''
 fromAddress: ''
 replyToAddress: ''
@@ -17,7 +17,7 @@ bodyHtml:
   format: easy_email
 bodyPlain: "[easy_email:recipient_uid:0:entity:display-name],\r\n\r\nThank you for registering at [site:name]. Your application for an account is currently pending approval. Once it has been approved, you will receive another email containing information about how to log in, set your password, and other details.\r\n\r\n--  [site:name] team"
 generateBodyPlain: false
-attachment: {}
+attachment: {  }
 saveAttachment: false
 attachmentScheme: public
 attachmentDirectory: ''

@@ -18,7 +18,7 @@ content:
     label: hidden
     settings:
       use_description_as_link_text: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 0
     region: content
   attachment_path:
@@ -26,7 +26,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   bcc_address:
@@ -34,28 +34,28 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   bcc_uid:
     type: author
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   body_html:
     type: text_default
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   body_plain:
     type: basic_string
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   cc_address:
@@ -63,21 +63,21 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   cc_uid:
     type: author
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   creator_uid:
     type: author
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   field_related_user:
@@ -85,7 +85,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 1
     region: content
   from_address:
@@ -93,7 +93,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   from_name:
@@ -101,14 +101,14 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   inbox_preview:
     type: basic_string
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   key:
@@ -116,7 +116,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   label:
@@ -124,7 +124,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -5
     region: content
   recipient_address:
@@ -132,14 +132,14 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   recipient_uid:
     type: author
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   reply_to:
@@ -147,7 +147,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
   subject:
@@ -155,7 +155,7 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: -4
     region: content
-hidden: {}
+hidden: {  }

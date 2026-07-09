@@ -23,16 +23,11 @@ default:
         <section class="py-5 border-top">
         <div class="container">
         <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
         <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR logo" class="mb-2" width="100" height="38">
         <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
         </div>
-        <div class="col-12 col-md-4">
-        <p class="mb-1"><a href="/guide" data-entity-type="node" data-entity-uuid="5589cbe8-a22e-4307-a5c2-e1348c5d82e3" class="text-dark text-decoration-none">Demo guide</a></p>
-        <p class="mb-1"><a href="/whats-new" data-entity-type="node" data-entity-uuid="47d3e3a7-76a0-45f8-82a1-4f7e703b4f4a" class="text-dark text-decoration-none">What's new</a></p>
-        <p class="mb-1"><a href="/about" data-entity-type="node" data-entity-uuid="e77dfae0-e753-413a-9fe1-10a23e17ae08" class="text-dark text-decoration-none">About DXPR</a></p>
-        </div>
-        <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6">
         <p class="fw-semibold mb-1">Contact</p>
         <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contact us</a></p>
         </div>

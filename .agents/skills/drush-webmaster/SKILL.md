@@ -22,7 +22,7 @@ full documentation on any command before using it.
 
 ## Discovery (Start Here)
 
-### `wm:schema:dump`: Full site schema for AI context
+### `wm:schema:dump` — Full site schema for AI context
 
 **Run this first** when working with an unfamiliar site or section.
 
@@ -35,7 +35,7 @@ drush wm:schema:dump --section=content-types --section=vocabularies
 Available sections: `content-types`, `vocabularies`, `views`, `menus`,
 `blocks`, `media-types`, `entity-types`, `site`
 
-### `wm:site:info`: Site name, slogan, email, paths
+### `wm:site:info` — Site name, slogan, email, paths
 
 ```
 drush wm:site:info
@@ -48,21 +48,21 @@ appropriate discovery command. This prevents validation errors.
 
 | Operation | Run first |
 |-----------|-----------|
-| Create entity | `wm:content-type:get <bundle>`: required fields |
-| Edit entity | `wm:entity:get <type> <id>`: current values |
-| Delete entity | `wm:entity:get <type> <id>`: confirm correct entity |
+| Create entity | `wm:content-type:get <bundle>` — required fields |
+| Edit entity | `wm:entity:get <type> <id>` — current values |
+| Delete entity | `wm:entity:get <type> <id>` — confirm correct entity |
 | Add field to bundle | `wm:field:list <type> <bundle>` then `wm:field:types` |
 | Create/edit view | `wm:view:tables` then `wm:view:available:fields` |
-| Translate entity | `wm:translation:languages`: see configured languages |
-| Moderate entity | `wm:entity:transitions <type> <id>`: transitions |
-| Bulk operations | `wm:content-type:get` or `wm:entity:query`: scope |
+| Translate entity | `wm:translation:languages` — see configured languages |
+| Moderate entity | `wm:entity:transitions <type> <id>` — transitions |
+| Bulk operations | `wm:content-type:get` or `wm:entity:query` — scope |
 
 Skip discovery when context is already known or the user
 asks to proceed directly.
 
 ## Querying & Inspecting Entities
 
-### `wm:entity:query`: Find entities by field conditions
+### `wm:entity:query` — Find entities by field conditions
 
 ```
 drush wm:entity:query node article \
@@ -76,14 +76,14 @@ drush wm:entity:query node blog --limit=50 --offset=50
 Where operators: `=`, `!=`, `>`, `<`, `>=`, `<=`,
 `=NULL`, `!=NULL`, `=a,b,c` (IN list)
 
-### `wm:entity:get`: Get single entity with field values
+### `wm:entity:get` — Get single entity with field values
 
 ```
 drush wm:entity:get node 1
 drush wm:entity:get node 1 --fields=title,body
 ```
 
-### `wm:entity:field:get` / `wm:entity:field:set`: Get/set single field value
+### `wm:entity:field:get` / `wm:entity:field:set` — Get/set single field value
 
 ```
 drush wm:entity:field:get node 1 title
@@ -92,7 +92,7 @@ drush wm:entity:field:set node 1 body \
   '{"value":"<p>HTML</p>","format":"full_html"}'
 ```
 
-### `wm:search`: Full-text search (requires Search module)
+### `wm:search` — Full-text search (requires Search module)
 
 ```
 drush wm:search "contact form"

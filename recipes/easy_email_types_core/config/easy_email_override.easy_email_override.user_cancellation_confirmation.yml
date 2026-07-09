@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: user_cancellation_confirmation
 label: 'User: Account Cancellation Confirmation'
 module: user

@@ -1,13 +1,13 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: user_created_approval_admin
 label: 'User: Created - Awaiting Approval - Admin Notification'
 key: ''
 recipient:
   - '[site:mail]'
-cc: {}
-bcc: {}
+cc: {  }
+bcc: {  }
 fromName: ''
 fromAddress: ''
 replyToAddress: ''
@@ -18,7 +18,7 @@ bodyHtml:
   format: easy_email
 bodyPlain: "[easy_email:field_related_user:0:entity:display-name] has applied for an account.\r\n\r\n[easy_email:field_related_user:0:entity:edit-url]"
 generateBodyPlain: false
-attachment: {}
+attachment: {  }
 saveAttachment: false
 attachmentScheme: public
 attachmentDirectory: ''

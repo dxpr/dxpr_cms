@@ -60,7 +60,7 @@ settings:
         styles: true
       multiBlock: true
     ckeditor5_sourceEditing:
-      allowed_tags: {}
+      allowed_tags: {  }
 image_upload:
   status: true
   scheme: public

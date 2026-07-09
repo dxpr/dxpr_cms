@@ -144,6 +144,8 @@ drush dxb:page:create page my_template \
 
 ### Reading & Updating Markup
 
+`page:update` preserves the entity's existing text format (e.g. `dxpr_builder_html`). Never set the text format manually when updating -- the command handles it.
+
 ```bash
 # Get current markup
 drush dxb:page:get 42

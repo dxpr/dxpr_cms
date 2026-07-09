@@ -1,6 +1,6 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: user_created_awaiting_approval
 label: 'User: Created - Awaiting Approval'
 module: user

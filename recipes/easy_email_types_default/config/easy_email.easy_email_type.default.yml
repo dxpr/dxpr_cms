@@ -1,12 +1,12 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: default
 label: Default
 key: ''
-recipient: {}
-cc: {}
-bcc: {}
+recipient: {  }
+cc: {  }
+bcc: {  }
 fromName: ''
 fromAddress: ''
 replyToAddress: ''
@@ -17,7 +17,7 @@ bodyHtml:
   format: easy_email
 bodyPlain: ''
 generateBodyPlain: false
-attachment: {}
+attachment: {  }
 saveAttachment: false
 attachmentScheme: private
 attachmentDirectory: ''

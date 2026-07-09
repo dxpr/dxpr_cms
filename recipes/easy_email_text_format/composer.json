@@ -11,6 +11,6 @@
     "source": "https://git.drupalcode.org/project/easy_email_text_format"
   },
   "require": {
-    "drupal/core": "^10.3 || ^11"
+    "drupal/core": "^11"
   }
 }
