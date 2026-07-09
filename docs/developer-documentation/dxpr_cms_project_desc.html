@@ -15,7 +15,7 @@
   </li>
   <li>
     <strong>Enterprise-Grade Foundation</strong>
-    <p>Built on Drupal's proven architecture with modern enhancements including automated security updates, privacy-first compliance tools, and performance optimizations that scale with your business.</p>
+    <p>Built on Drupal's proven architecture with modern enhancements including automated security updates, privacy-first compliance tools, CSS/JS compression, speculative preloading, and performance optimisations that scale with your business.</p>
   </li>
 </ul>
 
@@ -65,10 +65,13 @@
 <p>Google Tag Manager integration with Klaro consent management for GDPR compliance.</p>
 
 <h2>Multilingual Support</h2>
-<p>Built-in multilingual capabilities with automated translation workflows and multilingual SEO.</p>
+<p>Full multilingual capabilities supporting all Drupal languages. The multilingual recipe ships pre-translated demo content, configures translation fallback hierarchies so regional variants (e.g. Belgian Dutch) fall back to their parent language for untranslated content, and provides a compact language switcher dropdown.</p>
 
-<h3>Translation Management</h3>
-<p>TMGMT integration with DXPR AI Platform automation for efficient multilingual content management.</p>
+<h3>AI-Powered Translation</h3>
+<p>TMGMT integration with AI Translate and AI TMGMT modules provides automated translation jobs through the DXPR AI platform, covering both content and configuration translation.</p>
+
+<h2>HTML Email</h2>
+<p>Easy Email replaces all plain-text core emails with themeable, responsive HTML email templates out of the box. No configuration needed; the Easy Email Express recipe handles the setup automatically.</p>
 
 <h3>User Management</h3>
 <p>Role-based permissions with Content Editor, Content Administrator, and Site Builder roles.</p>
@@ -209,37 +212,52 @@ ddev drush recipe ../recipes/dxpr_cms_forms
 ddev drush recipe ../recipes/dxpr_cms_news
 ddev drush recipe ../recipes/dxpr_cms_multilingual
 ddev drush recipe ../recipes/dxpr_cms_google_analytics
-ddev drush recipe ../recipes/dxpr_cms_seo_tools</code></pre>
+ddev drush recipe ../recipes/dxpr_cms_seo_tools
+ddev drush recipe ../recipes/easy_email_express</code></pre>
 
 <h3>Advanced: multilingual installation</h3>
-<p>When including the Multilingual recipe via command line, specify additional languages with their language codes:</p>
+<p>When including the Multilingual recipe via command line, specify additional languages with their language codes. The multilingual recipe ships pre-translated demo content and configures translation fallback hierarchies (e.g. regional variants fall back to their parent language) via <a href="https://www.drupal.org/project/language_hierarchy">language_hierarchy</a>:</p>
 <pre><code>ddev drush site-install dxpr_cms_installer \
   "installer_recipes_form.add_ons=Multilingual" \
   "dxpr_cms_installer_multilingual_configuration.additional_languages.nl=nl" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.de=de" \
+  "dxpr_cms_installer_multilingual_configuration.additional_languages.fr=fr" \
   "dxpr_cms_installer_multilingual_configuration.additional_languages.ar=ar" \
   dxpr_cms_installer_keys.dxpr_key='YOUR_DXPR_API_KEY' -y</code></pre>
 
 <h2>Complete Module Reference</h2>
-<p>DXPR CMS includes 88 carefully selected Drupal modules organized by functionality to provide comprehensive capabilities out of the box:</p>
+<p>DXPR CMS includes 90+ carefully selected Drupal modules organised by functionality to provide comprehensive capabilities out of the box:</p>
 
 <h3>AI Modules</h3>
 <ul>
 <li><a href="https://drupal.org/project/ai"><strong>ai</strong></a> - Core AI framework providing infrastructure for AI integrations including content generation and analysis</li>
 <li><a href="https://drupal.org/project/ai_agents"><strong>ai_agents</strong></a> - AI agents framework enabling autonomous AI assistants for content creation and management tasks</li>
 <li><a href="https://drupal.org/project/ai_checklist"><strong>ai_checklist</strong></a> - Interactive AI-powered checklists for guiding content creation and ensuring quality standards</li>
-<li><a href="https://drupal.org/project/ai_content_strategy"><strong>ai_content_strategy</strong></a> - AI-powered content strategy tools for planning, optimizing and analyzing content effectiveness and engagement</li>
-<li><a href="https://drupal.org/project/ai_social_posts"><strong>ai_social_posts</strong></a> - AI-powered social media post generation for content promotion</li>
-<li><strong>ai_social_posts_linkedin</strong> - LinkedIn-specific AI social post generation capabilities with specialized formatting and engagement optimization (submodule of <a href="https://drupal.org/project/ai_social_posts">ai_social_posts</a>)</li>
-<li><strong>ai_social_posts_linkedin_article</strong> - Generate LinkedIn article posts using AI for long-form professional content (submodule of <a href="https://drupal.org/project/ai_social_posts">ai_social_posts</a>)</li>
-<li><a href="https://drupal.org/project/rl_sorting"><strong>rl_sorting</strong></a> - Reinforcement learning content sorting and prioritization based on relevance and engagement potential</li>
+<li><a href="https://drupal.org/project/ai_content_strategy"><strong>ai_content_strategy</strong></a> - AI-powered content strategy tools for planning, optimising and analysing content effectiveness and engagement</li>
 <li><a href="https://drupal.org/project/ai_image_alt_text"><strong>ai_image_alt_text</strong></a> - Automatically generates accessible alt text for images using AI image recognition and analysis</li>
 <li><a href="https://drupal.org/project/ai_provider_dxpr"><strong>ai_provider_dxpr</strong></a> - DXPR AI provider integration offering free access to multiple AI models including OpenAI, Claude, Gemini, and others through DXPR's unified API</li>
-<li><a href="https://drupal.org/project/analyze_ai_brand_voice"><strong>analyze_ai_brand_voice</strong></a> - AI-powered brand voice analysis ensuring content consistency with organizational tone and messaging guidelines</li>
-<li><a href="https://drupal.org/project/analyze_ai_content_marketing_audit"><strong>analyze_ai_content_marketing_audit</strong></a> - AI-powered content marketing audit analyzing effectiveness, engagement potential, and optimization opportunities</li>
+<li><a href="https://drupal.org/project/ai_social_posts"><strong>ai_social_posts</strong></a> - AI-powered social media post generation for content promotion</li>
+<li><a href="https://drupal.org/project/ai_translate"><strong>ai_translate</strong></a> - AI-powered translation using configurable language models for high-quality automated content translation</li>
+<li><a href="https://drupal.org/project/ai_tmgmt"><strong>ai_tmgmt</strong></a> - AI translation provider for TMGMT enabling automated translation jobs through the AI framework</li>
+<li><a href="https://drupal.org/project/analyze_ai_brand_voice"><strong>analyze_ai_brand_voice</strong></a> - AI-powered brand voice analysis ensuring content consistency with organisational tone and messaging guidelines</li>
+<li><a href="https://drupal.org/project/analyze_ai_content_marketing_audit"><strong>analyze_ai_content_marketing_audit</strong></a> - AI-powered content marketing audit analysing effectiveness, engagement potential, and optimisation opportunities</li>
 <li><a href="https://drupal.org/project/analyze_ai_content_security_audit"><strong>analyze_ai_content_security_audit</strong></a> - AI-powered security audit scanning content for potential security vulnerabilities and compliance issues</li>
-<li><a href="https://drupal.org/project/analyze_ai_sentiments"><strong>analyze_ai_sentiments</strong></a> - Sentiments analysis using AI to evaluate emotional tone and reader perception of content</li>
+<li><a href="https://drupal.org/project/analyze_ai_sentiments"><strong>analyze_ai_sentiments</strong></a> - Sentiment analysis using AI to evaluate emotional tone and reader perception of content</li>
 <li><a href="https://drupal.org/project/ckeditor_ai_agent"><strong>ckeditor_ai_agent</strong></a> - AI assistant integrated into CKEditor for real-time writing suggestions and content improvements</li>
-<li><a href="https://drupal.org/project/rl"><strong>rl</strong></a> - Reinforcement Learning module providing machine learning capabilities for content optimization</li>
+<li><a href="https://drupal.org/project/rl"><strong>rl</strong></a> - Reinforcement Learning module providing machine learning capabilities for content optimisation</li>
+<li><a href="https://drupal.org/project/rl_sorting"><strong>rl_sorting</strong></a> - Reinforcement learning content sorting and prioritisation based on relevance and engagement potential</li>
+</ul>
+
+<h3>Multilingual Modules</h3>
+<ul>
+<li><a href="https://drupal.org/project/tmgmt"><strong>tmgmt</strong></a> - Translation Management Tool for managing translation workflows with translator assignment and review</li>
+<li><a href="https://drupal.org/project/lang_dropdown"><strong>lang_dropdown</strong></a> - Language switcher as a compact select dropdown widget</li>
+<li><a href="https://drupal.org/project/language_hierarchy"><strong>language_hierarchy</strong></a> - Defines parent/child relationships between languages so regional variants fall back to their parent language for untranslated content</li>
+</ul>
+
+<h3>Email</h3>
+<ul>
+<li><a href="https://drupal.org/project/easy_email"><strong>easy_email</strong></a> - HTML email framework replacing plain-text core emails with themeable, responsive HTML email templates</li>
 </ul>
 
 <p><a href="https://project.pages.drupalcode.org/dxpr_cms/modules">FULL MODULES LIST</a></p>
