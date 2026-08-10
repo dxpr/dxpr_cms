@@ -25,11 +25,11 @@ default:
         <div class="row">
         <div class="col-12 col-md-6">
         <img src="/-files-directory-/dxpr-logo.svg" alt="DXPR logo" class="mb-2" width="100" height="38">
-        <p class="text-muted small">&copy; 2026 DXPR. All rights reserved.</p>
+        <p >&copy; 2026 DXPR. All rights reserved.</p>
         </div>
                 <div class="col-12 col-md-6">
-        <p class="fw-semibold mb-1">Contact</p>
-        <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-muted text-decoration-none">Contact us</a></p>
+        <p class="mb-1">Contact</p>
+        <p class="mb-1"><a href="/contact-us" data-entity-type="node" data-entity-uuid="8764d205-a20a-4b92-992c-755bbed154a9" class="text-decoration-none">Contact us</a></p>
         </div>
         </div>
         </div>
