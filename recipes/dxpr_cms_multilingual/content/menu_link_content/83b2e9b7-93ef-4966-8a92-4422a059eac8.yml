@@ -47,7 +47,7 @@ translations:
   en-gb:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -56,7 +56,7 @@ translations:
   de:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -65,7 +65,7 @@ translations:
   fr:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -74,7 +74,7 @@ translations:
   it:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -83,7 +83,7 @@ translations:
   pl:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -92,7 +92,7 @@ translations:
   sv:
     title:
       -
-        value:"Blogg"
+        value: "Blogg"
     link:
       -
         uri: 'internal:/blog'
@@ -101,7 +101,7 @@ translations:
   da:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -110,7 +110,7 @@ translations:
   nb:
     title:
       -
-        value:"Blogg"
+        value: "Blogg"
     link:
       -
         uri: 'internal:/blog'
@@ -119,7 +119,7 @@ translations:
   fi:
     title:
       -
-        value:"Blogi"
+        value: "Blogi"
     link:
       -
         uri: 'internal:/blog'
@@ -128,7 +128,7 @@ translations:
   pt-pt:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -137,7 +137,7 @@ translations:
   ja:
     title:
       -
-        value:"ブログ"
+        value: "ブログ"
     link:
       -
         uri: 'internal:/blog'
@@ -146,7 +146,7 @@ translations:
   ar:
     title:
       -
-        value:"المدونة"
+        value: "المدونة"
     link:
       -
         uri: 'internal:/blog'
@@ -155,7 +155,7 @@ translations:
   cs:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -164,7 +164,7 @@ translations:
   ro:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -173,7 +173,7 @@ translations:
   tr:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -182,7 +182,7 @@ translations:
   ko:
     title:
       -
-        value:"블로그"
+        value: "블로그"
     link:
       -
         uri: 'internal:/blog'
@@ -191,7 +191,7 @@ translations:
   id:
     title:
       -
-        value:"Blog"
+        value: "Blog"
     link:
       -
         uri: 'internal:/blog'
@@ -200,7 +200,7 @@ translations:
   zh-hans:
     title:
       -
-        value:"博客"
+        value: "博客"
     link:
       -
         uri: 'internal:/blog'
