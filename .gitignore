@@ -14,3 +14,8 @@ eca.model.*.yml
 .idea/
 /tmp
 /db
+# Claude Code
+.claude/*
+!.claude/skills/
+!.claude/settings.json
+!.claude/settings.local.json
