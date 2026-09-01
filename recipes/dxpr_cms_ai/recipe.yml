@@ -16,6 +16,9 @@ install:
   - analyze_ai_sentiments
   - analyze_ai_content_marketing_audit
   - analyze_ai_content_security_audit
+  - analyze_aio
+  - analyze_broken_links
+  - analyze_seo
   - analyze_basic_content_info
   - analyze_page_views
   - rl_sorting
@@ -64,6 +67,9 @@ config:
     analyze_ai_brand_voice: '*'
     analyze_ai_content_marketing_audit: '*'
     analyze_ai_content_security_audit: '*'
+    analyze_aio: '*'
+    analyze_broken_links: '*'
+    analyze_seo: '*'
     analyze_basic_content_info: '*'
     analyze_page_views: '*'
     ckeditor_ai_agent:
