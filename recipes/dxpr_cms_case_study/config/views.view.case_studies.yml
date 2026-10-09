@@ -453,6 +453,7 @@ display:
           plugin_id: add_content_by_bundle
           label: 'Add a case study'
           empty: true
+          type: node
           bundle: case_study
           class: 'btn btn-outline-primary my-3 btn-lg'
           target: ''

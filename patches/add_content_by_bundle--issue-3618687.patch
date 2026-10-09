@@ -1,0 +1,14 @@
+diff --git a/src/Plugin/views/area/AddContentByBundle.php b/src/Plugin/views/area/AddContentByBundle.php
+index 9c6fe9687098a8d493be0fe68319de8735eace08..193694bf15c862194c7170fd268a00b67fcac56e 100644
+--- a/src/Plugin/views/area/AddContentByBundle.php
++++ b/src/Plugin/views/area/AddContentByBundle.php
+@@ -347,7 +347,8 @@ class AddContentByBundle extends AreaPluginBase {
+    */
+   public function render($empty = FALSE) {
+     $account = $this->currentUser;
+-    if ($empty) {
++    // Hide if empty and "Show on empty" is not enabled:
++    if ($empty && empty($this->options['empty'])) {
+       return [];
+     }
+ 

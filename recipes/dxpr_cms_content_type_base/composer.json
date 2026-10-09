@@ -20,7 +20,7 @@
         "drupal/trash": "^3.0.13",
         "drupal/scheduler": "^2.2",
         "drupal/scheduler_content_moderation_integration": "^3.0.4",
-        "drupal/tagify": "^1.2",
+        "drupal/tagify": "^2.0",
         "drupal/views_bootstrap": "^5.5@RC"
     },
     "version": "1.0.0-beta1"

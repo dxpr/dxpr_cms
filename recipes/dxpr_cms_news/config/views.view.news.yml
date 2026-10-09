@@ -302,6 +302,7 @@ display:
           plugin_id: add_content_by_bundle
           label: 'Add a news item'
           empty: true
+          type: node
           bundle: news
           class: 'btn btn-outline-primary my-3 btn-lg'
           target: ''
