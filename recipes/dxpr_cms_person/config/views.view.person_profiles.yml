@@ -190,6 +190,7 @@ display:
           plugin_id: add_content_by_bundle
           label: 'Add a person profile'
           empty: true
+          type: node
           bundle: person
           class: button
           target: ''

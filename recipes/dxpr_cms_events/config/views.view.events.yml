@@ -270,6 +270,7 @@ display:
           plugin_id: add_content_by_bundle
           label: 'Add an event'
           empty: true
+          type: node
           bundle: event
           class: button
           target: ''
@@ -474,6 +475,7 @@ display:
           plugin_id: add_content_by_bundle
           label: 'Add a new event'
           empty: false
+          type: node
           bundle: event
           class: 'btn btn-outline-primary my-3 btn-lg'
           target: ''

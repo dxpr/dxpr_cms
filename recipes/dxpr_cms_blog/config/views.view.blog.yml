@@ -388,6 +388,7 @@ display:
           plugin_id: add_content_by_bundle
           label: 'Add a new post'
           empty: true
+          type: node
           bundle: blog
           class: 'btn btn-outline-primary my-3 btn-lg'
           target: ''

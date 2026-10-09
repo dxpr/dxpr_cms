@@ -53,6 +53,23 @@ jobs:
           ddev drush user:login --name=admin --uri=$(ddev describe | grep "Primary URL" | awk '{print $3}')
           echo "DXPR CMS installation completed successfully!"
 
+      - name: Test contrib integrations
+        run: |
+          SITE_URL=http://dxpr-cms.ddev.site
+          # Log in as admin with a one-time login link and keep the session.
+          rm -f cookies.txt
+          LOGIN_URL=$(ddev drush user:login --name=admin --no-browser --uri=$SITE_URL)
+          curl -fsSL -c cookies.txt -b cookies.txt -o /dev/null "$LOGIN_URL"
+          # Add Content by Bundle renders the add link in the blog listing header.
+          BLOG_HTML=$(curl -fsS -b cookies.txt "$SITE_URL/blog")
+          grep -q 'href="/node/add/blog?destination=/blog"' <<< "$BLOG_HTML" || { echo "FAIL: Blog listing missing add content link"; exit 1; }
+          # Tagify renders the tags widget on the blog form.
+          FORM_HTML=$(curl -fsS -b cookies.txt "$SITE_URL/node/add/blog")
+          grep -q 'tagify-widget' <<< "$FORM_HTML" || { echo "FAIL: Blog form missing Tagify widget"; exit 1; }
+          # Ace Editor finds the library that Composer installs.
+          curl -fsS -o /dev/null "$SITE_URL/libraries/ace/src-min-noconflict/ace.js" || { echo "FAIL: Ace library not served"; exit 1; }
+          echo "Contrib integrations verified."
+
       - name: Show site status
         run: |
           ddev drush status

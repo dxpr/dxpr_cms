@@ -121,7 +121,7 @@
     "require": {
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2.0.0-beta2",
-        "drupal/ace_editor": "2.0.2",
+        "drupal/ace_editor": "^2.0.6",
         "drupal/admin_toolbar": "^3.6",
         "drupal/ai_provider_dxpr": "^1.0",
         "drupal/bpmn_io": "^3.0",
@@ -246,8 +246,8 @@
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patches": {
-            "drupal/ace_editor": {
-                "Fix profile detection for recipe-based installations  ": "patches/ace_editor_no_profile.patch"
+            "drupal/add_content_by_bundle": {
+                "Show the link on empty views when configured to (#3618687)": "patches/add_content_by_bundle--issue-3618687.patch"
             },
 "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
