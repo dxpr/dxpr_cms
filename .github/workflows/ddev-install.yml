@@ -62,10 +62,10 @@ jobs:
           curl -fsSL -c cookies.txt -b cookies.txt -o /dev/null "$LOGIN_URL"
           # Add Content by Bundle renders the add link in the blog listing header.
           BLOG_HTML=$(curl -fsS -b cookies.txt "$SITE_URL/blog")
-          echo "$BLOG_HTML" | grep -q 'href="/node/add/blog?destination=/blog"' || { echo "FAIL: Blog listing missing add content link"; exit 1; }
+          grep -q 'href="/node/add/blog?destination=/blog"' <<< "$BLOG_HTML" || { echo "FAIL: Blog listing missing add content link"; exit 1; }
           # Tagify renders the tags widget on the blog form.
           FORM_HTML=$(curl -fsS -b cookies.txt "$SITE_URL/node/add/blog")
-          echo "$FORM_HTML" | grep -q 'tagify-widget' || { echo "FAIL: Blog form missing Tagify widget"; exit 1; }
+          grep -q 'tagify-widget' <<< "$FORM_HTML" || { echo "FAIL: Blog form missing Tagify widget"; exit 1; }
           # Ace Editor finds the library that Composer installs.
           curl -fsS -o /dev/null "$SITE_URL/libraries/ace/src-min-noconflict/ace.js" || { echo "FAIL: Ace library not served"; exit 1; }
           echo "Contrib integrations verified."
