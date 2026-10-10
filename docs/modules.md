@@ -19,8 +19,11 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 - **[analyze_ai_content_security_audit](https://drupal.org/project/analyze_ai_content_security_audit)** - AI-powered security audit scanning content for potential security vulnerabilities and compliance issues
 - **[analyze_ai_sentiments](https://drupal.org/project/analyze_ai_sentiments)** - Sentiments analysis using AI to evaluate emotional tone and reader perception of content
 - **[analyze](https://drupal.org/project/analyze)** - Core framework for content analysis providing extensible analysis capabilities
+- **[analyze_aio](https://drupal.org/project/analyze_aio)** - AI optimisation readiness analysis: heading structure, structured data, semantic HTML, link density, and optional AI-powered citation and tone checks
 - **analyze_basic_content_info** - Basic content information analysis including readability, word count, and structure metrics (submodule of [analyze](https://drupal.org/project/analyze))
+- **[analyze_broken_links](https://drupal.org/project/analyze_broken_links)** - Checks content for broken internal and external links with health gauge reporting
 - **analyze_page_views** - Page view analytics integration for analyzing content performance and engagement (submodule of [analyze](https://drupal.org/project/analyze))
+- **[analyze_seo](https://drupal.org/project/analyze_seo)** - Traditional SEO analysis: title tags, meta descriptions, heading hierarchy, image alt text, link profile, and optional AI-powered readability checks
 - **[ckeditor_ai_agent](https://drupal.org/project/ckeditor_ai_agent)** - AI assistant integrated into CKEditor for real-time writing suggestions and content improvements
 - **[diff](https://drupal.org/project/diff)** - Shows differences between content revisions with visual comparison tools
 - **[key](https://drupal.org/project/key)** - Key management framework for securely storing API keys and credentials
@@ -151,4 +154,4 @@ DXPR CMS comes pre-configured with a comprehensive collection of Drupal modules 
 
 *This comprehensive list includes all modules pre-configured in DXPR CMS, organised by functionality to help you understand the platform's capabilities.*
 
-*Last updated: July 2026*
+*Last updated: September 2026*
