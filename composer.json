@@ -246,9 +246,6 @@
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patches": {
-            "drupal/add_content_by_bundle": {
-                "Show the link on empty views when configured to (#3618687)": "patches/add_content_by_bundle--issue-3618687.patch"
-            },
 "drupal/tmgmt": {
                 "Same Job processed/checkout twice by the JobCheckoutManager": "patches/tmgmt--issue-3198609.patch"
             },

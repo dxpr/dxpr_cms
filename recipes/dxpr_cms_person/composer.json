@@ -5,7 +5,7 @@
     "license": ["GPL-2.0-or-later"],
     "require": {
         "drupal/core": "^11.3",
-        "drupal/add_content_by_bundle": "^2.0",
+        "drupal/add_content_by_bundle": "^2.0.2",
         "drupal/dxpr_cms_page": "*"
     },
     "version": "1.0.0-beta1"
