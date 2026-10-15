@@ -40,8 +40,14 @@
 <h3>Intelligent Sentiment Analysis</h3>
 <p>The AI Sentiment Analysis module automatically evaluates the emotional tone and reader perception of your content. This intelligent analysis ensures your messaging resonates with your target audience while identifying content that may need tone adjustments for optimal engagement.</p>
 
+<h3>SEO and AIO Analysis</h3>
+<p>The Analyze SEO module checks title tags, meta descriptions, heading hierarchy, image alt text, and link profiles. The Analyze AIO module evaluates AI optimisation readiness including structured data, semantic HTML, and citation quality. Both provide optional AI-powered checks for deeper analysis.</p>
+
+<h3>Broken Link Detection</h3>
+<p>The Analyze Broken Links module automatically scans content for broken internal and external links, reporting issues with a health gauge so editors can fix problems before they affect visitors or search rankings.</p>
+
 <h3>Security and Marketing Audits</h3>
-<p>Automated Content Security Audit and Content Marketing Audit modules provide continuous analysis of your content strategy. These tools identify potential security vulnerabilities, optimization opportunities, and engagement improvements without manual intervention.</p>
+<p>Automated Content Security Audit and Content Marketing Audit modules provide continuous analysis of your content strategy. These tools identify potential security vulnerabilities, optimisation opportunities, and engagement improvements without manual intervention.</p>
 
 <h2>Theme System</h2>
 <p>DXPR Theme provides customizable design foundation with global branding controls, color management, and typography settings.</p>
@@ -241,10 +247,16 @@ ddev drush recipe ../recipes/easy_email_express</code></pre>
 <li><strong>ai_social_posts_linkedin_article</strong> - Generate LinkedIn article posts using AI for long-form professional content (submodule of <a href="https://drupal.org/project/ai_social_posts">ai_social_posts</a>)</li>
 <li><a href="https://drupal.org/project/ai_translate"><strong>ai_translate</strong></a> - AI-powered translation using configurable language models for high-quality automated content translation</li>
 <li><a href="https://drupal.org/project/ai_tmgmt"><strong>ai_tmgmt</strong></a> - AI translation provider for TMGMT enabling automated translation jobs through the AI framework</li>
+<li><a href="https://drupal.org/project/analyze"><strong>analyze</strong></a> - Unified content analysis framework adding an Analyze tab to every entity with pluggable analysis modules, summary gauges, and detailed reports</li>
 <li><a href="https://drupal.org/project/analyze_ai_brand_voice"><strong>analyze_ai_brand_voice</strong></a> - AI-powered brand voice analysis ensuring content consistency with organisational tone and messaging guidelines</li>
 <li><a href="https://drupal.org/project/analyze_ai_content_marketing_audit"><strong>analyze_ai_content_marketing_audit</strong></a> - AI-powered content marketing audit analysing effectiveness, engagement potential, and optimisation opportunities</li>
 <li><a href="https://drupal.org/project/analyze_ai_content_security_audit"><strong>analyze_ai_content_security_audit</strong></a> - AI-powered security audit scanning content for potential security vulnerabilities and compliance issues</li>
 <li><a href="https://drupal.org/project/analyze_ai_sentiments"><strong>analyze_ai_sentiments</strong></a> - Sentiment analysis using AI to evaluate emotional tone and reader perception of content</li>
+<li><a href="https://drupal.org/project/analyze_aio"><strong>analyze_aio</strong></a> - AI optimisation readiness analysis: heading structure, structured data, semantic HTML, link density, and optional AI-powered citation and tone checks</li>
+<li><a href="https://drupal.org/project/analyze_broken_links"><strong>analyze_broken_links</strong></a> - Checks content for broken internal and external links with health gauge reporting</li>
+<li><a href="https://drupal.org/project/analyze_posthog"><strong>analyze_posthog</strong></a> - PostHog analytics integration showing pageviews, visitors, sessions, and bounce rate per entity in the Analyze tab</li>
+<li><a href="https://drupal.org/project/analyze_search_console"><strong>analyze_search_console</strong></a> - Google Search Console integration showing clicks, impressions, CTR, and position per entity in the Analyze tab</li>
+<li><a href="https://drupal.org/project/analyze_seo"><strong>analyze_seo</strong></a> - Traditional SEO analysis: title tags, meta descriptions, heading hierarchy, image alt text, link profile, and optional AI-powered readability checks</li>
 <li><a href="https://drupal.org/project/ckeditor_ai_agent"><strong>ckeditor_ai_agent</strong></a> - AI assistant integrated into CKEditor for real-time writing suggestions and content improvements</li>
 <li><a href="https://drupal.org/project/rl"><strong>rl</strong></a> - Reinforcement Learning module providing machine learning capabilities for content optimisation</li>
 <li><a href="https://drupal.org/project/rl_sorting"><strong>rl_sorting</strong></a> - Reinforcement learning content sorting and prioritisation based on relevance and engagement potential</li>
@@ -260,6 +272,33 @@ ddev drush recipe ../recipes/easy_email_express</code></pre>
 <h3>Email</h3>
 <ul>
 <li><a href="https://drupal.org/project/easy_email"><strong>easy_email</strong></a> - HTML email framework replacing plain-text core emails with themeable, responsive HTML email templates</li>
+</ul>
+
+<h3>DXPR Core</h3>
+<ul>
+<li><a href="https://drupal.org/project/dxpr_builder"><strong>dxpr_builder</strong></a> - AI-powered drag-and-drop page builder with multi-provider AI content generation, competitor page cloning, and instant translation</li>
+<li><a href="https://drupal.org/project/dxpr_theme"><strong>dxpr_theme</strong></a> - Professional Drupal theme with 200+ customisation settings, responsive design, and AI-powered colour palette generation</li>
+<li><a href="https://drupal.org/project/dxpr_theme_helper"><strong>dxpr_theme_helper</strong></a> - Helper module for DXPR Theme providing theme settings form handling, per-node theme control, full-screen search block, and AI colour palette generation</li>
+</ul>
+
+<h3>Site Management</h3>
+<ul>
+<li><a href="https://drupal.org/project/drush_webmaster"><strong>drush_webmaster</strong></a> - Comprehensive Drush commands (wm:*) for AI-assisted site management: query, create, edit, and inspect entities, views, menus, and translations via structured YAML output</li>
+</ul>
+
+<h3>Media</h3>
+<ul>
+<li><a href="https://drupal.org/project/toast_image_editor"><strong>toast_image_editor</strong></a> - Professional in-browser image editing with crop, flip, rotate, draw, text overlay, and filters; creates proper media revisions</li>
+</ul>
+
+<h3>Performance</h3>
+<ul>
+<li><a href="https://drupal.org/project/speculative_loading"><strong>speculative_loading</strong></a> - Browser-level page prefetching and prerendering using the Speculation Rules API for near-instant navigation</li>
+</ul>
+
+<h3>Views</h3>
+<ul>
+<li><a href="https://drupal.org/project/views_color_scales"><strong>views_color_scales</strong></a> - Excel-style colour scaling for numeric Views fields with smooth gradient backgrounds and automatic contrast</li>
 </ul>
 
 <p><a href="https://project.pages.drupalcode.org/dxpr_cms/modules">FULL MODULES LIST</a></p>
