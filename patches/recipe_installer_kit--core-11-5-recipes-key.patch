@@ -1,0 +1,15 @@
+--- a/src/Hooks.php
++++ b/src/Hooks.php
+@@ -338,7 +338,11 @@
+       return [];
+     }
+ 
+-    $batch = install_profile_modules($install_state);
++    // Core 11.5 applies a flat list in the profile's `recipes` key by itself. Ours is
++    // keyed (required, optional), so hide it from core and apply it below.
++    $core_state = $install_state;
++    unset($core_state['profile_info']['recipes']);
++    $batch = install_profile_modules($core_state);
+ 
+     $recipe_operations = [];
+     foreach ($recipes_to_apply as $name) {

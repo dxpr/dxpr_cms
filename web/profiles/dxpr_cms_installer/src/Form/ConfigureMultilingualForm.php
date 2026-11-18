@@ -2,6 +2,7 @@
 
 namespace Drupal\dxpr_cms_installer\Form;
 
+use Drupal\Component\Utility\Environment;
 use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\RecipeKit\Installer\FormInterface as InstallerFormInterface;
 use Drupal\Core\Form\FormBase;
@@ -81,6 +82,9 @@ class ConfigureMultilingualForm extends FormBase implements InstallerFormInterfa
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
   public static function addLanguage(string $language_code): void {
+    // Package Manager sets a 120 second limit and never resets it, which adding
+    // many languages in one process exceeds.
+    Environment::setTimeLimit(0);
     $exists = ConfigurableLanguage::load($language_code);
     if ($exists) {
       return;
