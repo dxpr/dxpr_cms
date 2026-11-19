@@ -5,6 +5,9 @@ status:
       analyze_ai_sentiments_analyzer: true
       analyze_ai_content_marketing_audit_analyzer: true
       analyze_ai_content_security_audit_analyzer: true
+      analyze_aio_readiness: true
+      analyze_broken_links_checker: true
+      analyze_seo_checker: true
       content_info: true
       node_views: true
     page:
@@ -12,6 +15,9 @@ status:
       analyze_ai_sentiments_analyzer: true
       analyze_ai_content_marketing_audit_analyzer: true
       analyze_ai_content_security_audit_analyzer: true
+      analyze_aio_readiness: true
+      analyze_broken_links_checker: true
+      analyze_seo_checker: true
       content_info: true
       node_views: true
     landing_page:
@@ -19,6 +25,9 @@ status:
       analyze_ai_sentiments_analyzer: true
       analyze_ai_content_marketing_audit_analyzer: true
       analyze_ai_content_security_audit_analyzer: true
+      analyze_aio_readiness: true
+      analyze_broken_links_checker: true
+      analyze_seo_checker: true
       content_info: true
       node_views: true
     case_study:
@@ -26,6 +35,9 @@ status:
       analyze_ai_sentiments_analyzer: true
       analyze_ai_content_marketing_audit_analyzer: true
       analyze_ai_content_security_audit_analyzer: true
+      analyze_aio_readiness: true
+      analyze_broken_links_checker: true
+      analyze_seo_checker: true
       content_info: true
       node_views: true
     news:
@@ -33,6 +45,9 @@ status:
       analyze_ai_sentiments_analyzer: true
       analyze_ai_content_marketing_audit_analyzer: true
       analyze_ai_content_security_audit_analyzer: true
+      analyze_aio_readiness: true
+      analyze_broken_links_checker: true
+      analyze_seo_checker: true
       content_info: true
       node_views: true
     event:
@@ -40,5 +55,8 @@ status:
       analyze_ai_sentiments_analyzer: true
       analyze_ai_content_marketing_audit_analyzer: true
       analyze_ai_content_security_audit_analyzer: true
+      analyze_aio_readiness: true
+      analyze_broken_links_checker: true
+      analyze_seo_checker: true
       content_info: true
       node_views: true
