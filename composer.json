@@ -125,10 +125,10 @@
         "drupal/admin_toolbar": "^3.6",
         "drupal/ai_provider_dxpr": "^1.0",
         "drupal/bpmn_io": "^3.0",
-        "drupal/core-composer-scaffold": "^11@stable",
-        "drupal/core-dev": "^11@stable",
-        "drupal/core-project-message": "^11@stable",
-        "drupal/core-recommended": "^11@stable",
+        "drupal/core-composer-scaffold": "^11@stable || ^12@beta",
+        "drupal/core-dev": "^11@stable || ^12@beta",
+        "drupal/core-project-message": "^11@stable || ^12@beta",
+        "drupal/core-recommended": "^11@stable || ^12@beta",
         "drupal/drush_webmaster": "^1.0",
         "drupal/dxpr_cms_ai": "*",
         "drupal/dxpr_cms_ai_linkedin_posts": "*",
@@ -149,7 +149,7 @@
         "drupal/language_hierarchy": "^2.0",
         "drupal/project_browser": "^2.1",
         "drupal/recipe_installer_kit": "^1.0",
-        "drush/drush": "^13"
+        "drush/drush": "^13 || ^14@dev"
     },
     "require-dev": {
         "drupal/default_content": "^2"
