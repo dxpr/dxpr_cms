@@ -11,7 +11,7 @@
     "source": "https://git.drupalcode.org/project/easy_email_types_default"
   },
   "require": {
-    "drupal/core": "^10.3 || ^11",
+    "drupal/core": "^10.3 || ^11 || ^12",
     "drupal/easy_email": "^3.0.2",
     "drupal/easy_email_text_format": "^1.0.2"
   }
