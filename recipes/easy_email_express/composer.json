@@ -11,7 +11,7 @@
     "source": "https://git.drupalcode.org/project/easy_email_express"
   },
   "require": {
-    "drupal/core": "^10.3 || ^11",
+    "drupal/core": "^10.3 || ^11 || ^12",
     "drupal/easy_email_standard": "^1.0.2",
     "drupal/easy_email_types_core": "^1.0.3",
     "drupal/easy_email_types_default": "^1.0.1"
